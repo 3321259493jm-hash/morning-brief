@@ -6,6 +6,7 @@ github-pages-*.js
 .github-publish.json
 .upload-manifest.jsonl
 reference-*
+check-*.js
 server*.log
 tunnel*.log
 tools/
