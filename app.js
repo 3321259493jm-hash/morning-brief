@@ -79,22 +79,22 @@ function pendingBanner() {
 
 function newsCard(item, index) {
   const source = item.source || {};
-  return `<article class="news-card ${index === 0 && item.featured ? "featured" : ""}">
-    <div>
-      <span class="card-tag">${escapeHtml(item.category || "更新")}</span>
-      <h3>${escapeHtml(item.event)}</h3>
-      <div class="meta"><span>${escapeHtml(source.name || "官方来源")}</span><span>${escapeHtml(source.published || "")}</span></div>
-      ${item.summary ? `<p class="card-summary">${escapeHtml(item.summary)}</p>` : ""}
-    </div>
-    <div>
-      <dl class="facts">
-        <div class="fact-row"><dt>学生有什么用</dt><dd>${escapeHtml(item.impact)}</dd></div>
-        <div class="fact-row"><dt>怎么使用</dt><dd>${escapeHtml(item.howTo)}</dd></div>
-        <div class="fact-row"><dt>费用 / 限制</dt><dd>${escapeHtml(item.free)}</dd></div>
-      </dl>
-      <div class="source-line"><span>原始出处</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">查看官方来源 ↗</a></div>
-    </div>
+  return `<article class="news-card compact-news-card">
+    <header class="compact-card-head">
+      <span class="news-number">${index + 1}</span>
+      <div><h3>${escapeHtml(item.event)}</h3><span class="card-tag">${escapeHtml(item.category || "今日更新")}</span></div>
+    </header>
+    <dl class="compact-facts">
+      <div class="compact-fact"><dt>📰 新发布</dt><dd>${escapeHtml(item.summary || item.event)} 来源：<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.name || "官方来源")}（${escapeHtml(source.published || "")}) ↗</a></dd></div>
+      <div class="compact-fact"><dt>🛠️ 怎么用</dt><dd>${escapeHtml(item.howTo)}</dd></div>
+      <div class="compact-fact"><dt>🎁 对你的帮助</dt><dd>${escapeHtml(item.impact)} <span class="cost-note">${escapeHtml(item.free)}</span></dd></div>
+    </dl>
   </article>`;
+}
+
+function dealRow(item) {
+  const source = item.source || {};
+  return `<div class="deal-row"><strong>${escapeHtml(item.event)}</strong><span>${escapeHtml(item.free)} · ${escapeHtml(item.howTo)}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">领取 / 查看 ↗</a></div>`;
 }
 
 function renderAi(issue) {
@@ -107,29 +107,34 @@ function renderAi(issue) {
   return `
     <section class="section-block" id="updates">
       <div class="section-heading"><h2>今天 AI 更新了什么</h2><span>只收录今天能实际尝试的新内容</span></div>
-      <div class="news-grid">${updates.length ? updates.map(newsCard).join("") : empty("⌁", "今天暂无已核验的新内容", "没有值得学生立刻尝试的可靠新增时，本栏目不会为了凑数加入旧闻或推测。")}</div>
+      <div class="news-list">${updates.length ? updates.map(newsCard).join("") : empty("⌁", "今天暂无已核验的新内容", "没有值得学生立刻尝试的可靠新增时，本栏目不会为了凑数加入旧闻或推测。")}</div>
     </section>
     <section class="section-block deals-section" id="deals">
       <div class="section-heading"><h2>今日 AI 薅羊毛</h2><span>免费额度 · 学生优惠 · 限时活动</span></div>
-      <div class="news-grid deals-grid">${deals.length ? deals.map(newsCard).join("") : empty("¥", "今天暂无可靠优惠", "仅展示能核实领取入口、适用地区、截止时间和免费限制的活动。")}</div>
+      <div class="deal-panel"><strong class="deal-panel-title">学生专属 / 限免 / 免费额度</strong>${deals.length ? deals.map(dealRow).join("") : `<p class="deal-empty">今天没有找到能同时核验领取入口、适用资格、截止时间和免费限制的新活动，宁缺毋滥。</p>`}</div>
     </section>`;
 }
 
 function readingCard(article, index) {
-  const vocab = (article.vocabulary || []).map(v => `<span class="vocab"><strong>${escapeHtml(v.word)}</strong> · ${escapeHtml(v.translation)}</span>`).join("");
-  const sentence = article.sentence || {};
+  const vocab = (article.vocabulary || []).map(v => `<tr><td><strong>${escapeHtml(v.word)}</strong>${v.phonetic ? `<span class="phonetic">${escapeHtml(v.phonetic)}</span>` : ""}</td><td>${escapeHtml(v.part || "")}</td><td>${escapeHtml(v.translation)}</td></tr>`).join("");
+  const sentences = article.sentences || (article.sentence ? [article.sentence] : []);
+  const sentenceBlocks = sentences.map((sentence, sentenceIndex) => `<section class="sentence-block">
+    <h5>🔍 难句 ${sentenceIndex + 1}</h5>
+    <blockquote>${escapeHtml(sentence.original)}</blockquote>
+    <div class="grammar-analysis"><strong>语法分析</strong>${Array.isArray(sentence.analysis) ? `<ul>${sentence.analysis.map(line => `<li>${escapeHtml(line)}</li>`).join("")}</ul>` : `<p>${escapeHtml(sentence.analysis)}</p>`}</div>
+    <div class="sentence-translation"><strong>译文</strong> ${escapeHtml(sentence.translation)}</div>
+  </section>`).join("");
+  const reasons = Array.isArray(article.reason) ? article.reason : [article.reason];
   return `<article class="reading-card">
     <div class="reading-index">0${index + 1}</div>
     <div>
       <h3>${escapeHtml(article.title)}</h3>
-      <span class="source-badge">${escapeHtml(article.source)}</span><span class="source-badge">${escapeHtml(article.published)}</span><span class="source-badge">约 ${escapeHtml(article.readingTime)} 分钟</span>
-      <p><strong>核心内容：</strong>${escapeHtml(article.summary)}</p>
-      <p><strong>推荐理由：</strong>${escapeHtml(article.reason)}</p>
-      <div class="analysis-grid">
-        <div class="analysis-box"><h4>重点词汇</h4><div class="vocab-list">${vocab}</div></div>
-        <div class="analysis-box"><h4>长难句精析</h4><p class="sentence">${escapeHtml(sentence.original)}</p><p class="translation">${escapeHtml(sentence.analysis)}<br><strong>译文：</strong>${escapeHtml(sentence.translation)}</p></div>
-      </div>
-      <a class="read-original" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">免费阅读原文 ↗</a>
+      <span class="source-badge">${escapeHtml(article.source)}</span><span class="source-badge">${escapeHtml(article.published)}</span><span class="source-badge">约 ${escapeHtml(article.readingTime)} 分钟</span><span class="source-badge">${escapeHtml(article.topic || "英语二阅读")}</span>
+      <p class="original-link"><strong>原文：</strong><a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(article.url)}</a></p>
+      <section class="reading-section"><h4>📖 核心内容</h4><p>${escapeHtml(article.summary)}</p></section>
+      <section class="reading-section"><h4>💡 推荐理由</h4><ul class="reason-list">${reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join("")}</ul></section>
+      <section class="reading-section"><h4>📝 重点词汇（${(article.vocabulary || []).length} 个）</h4><div class="vocab-table-wrap"><table class="vocab-table"><thead><tr><th>单词</th><th>词性</th><th>释义</th></tr></thead><tbody>${vocab}</tbody></table></div></section>
+      <section class="reading-section"><h4>🔍 长难句精析</h4>${sentenceBlocks}</section>
     </div>
   </article>`;
 }
