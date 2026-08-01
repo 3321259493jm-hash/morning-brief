@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4eee4" />
+    <meta name="description" content="每天北京时间上午 8 点更新的 AI 与科技生活简报和考研英语阅读。" />
+    <title>晨间新知 · AI 与考研英语简报</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="paper-grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#/" aria-label="返回首页">
+        <span class="brand-mark">晨</span>
+        <span>晨间新知</span>
+      </a>
+      <nav class="top-nav" aria-label="主导航">
+        <a class="home-link" href="#/" data-route-link="home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+          首页
+        </a>
+        <span class="beijing-time" id="beijing-time">北京时间 · --:--</span>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <span>晨间新知</span>
+      <span>只采用可核验来源 · 页面保留最近 7 天</span>
+    </footer>
+
+    <script src="data/issues.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
