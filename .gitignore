@@ -1,6 +1,10 @@
 .runtime.json
 PUBLIC_URL.txt
 public-check.html
+github-pages-*.html
+github-pages-*.js
+.github-publish.json
+.upload-manifest.jsonl
 server*.log
 tunnel*.log
 tools/
