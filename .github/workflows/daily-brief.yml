@@ -39,6 +39,7 @@ jobs:
             --allow-tool='shell(*)' \
             --allow-tool=read \
             --allow-tool=write \
+            --allow-all-urls \
             --no-ask-user
 
       - name: Validate generated data
