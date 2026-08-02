@@ -36,9 +36,7 @@ jobs:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
           copilot -p "$(cat automation/daily-prompt.md)" \
-            --allow-tool='shell(*)' \
-            --allow-tool=read \
-            --allow-tool=write \
+            --allow-all-tools \
             --allow-all-urls \
             --no-ask-user
 
