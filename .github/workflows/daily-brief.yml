@@ -1,0 +1,59 @@
+name: Daily AI and English briefing
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub schedules use UTC. 23:40 UTC is 07:40 in Beijing.
+    - cron: "40 23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Install GitHub Copilot CLI
+        run: npm install --global @github/copilot
+
+      - name: Generate and verify today's issue
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+        run: |
+          copilot -p "$(cat automation/daily-prompt.md)" \
+            --allow-tool='shell(*)' \
+            --allow-tool=read \
+            --allow-tool=write \
+            --no-ask-user
+
+      - name: Validate generated data
+        run: |
+          node --check data/issues.js
+          node automation/validate-issue.mjs
+
+      - name: Commit update
+        run: |
+          if git diff --quiet -- data/issues.js; then
+            echo "No data change was produced."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/issues.js
+          git commit -m "Update daily briefing $(TZ=Asia/Shanghai date +%F)"
+          git push
