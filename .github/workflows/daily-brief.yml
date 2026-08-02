@@ -3,8 +3,8 @@ name: Daily AI and English briefing
 on:
   workflow_dispatch:
   schedule:
-    # GitHub schedules use UTC. 23:40 UTC is 07:40 in Beijing.
-    - cron: "40 23 * * *"
+    # GitHub schedules use UTC. Start at 07:20 Beijing to publish before 08:00.
+    - cron: "20 23 * * *"
 
 permissions:
   contents: write
