@@ -11,7 +11,7 @@ Technical rules:
 - Fetch every selected URL and confirm it is accessible. Prefer HTTP 200. Do not use search-result URLs.
 
 AI updates (`ai.updates`):
-- Select 3-6 genuinely new releases or changes from yesterday through today that a student can try or needs to know.
+- First search yesterday through today. If fewer than 3 items can be verified, widen the window only as far as the previous 7 days and clearly retain each source's real publication date. Select 3-6 genuinely new releases or changes that a student can try or needs to know.
 - Prioritize official product announcements for ChatGPT/OpenAI, Gemini, Claude, Grok, Meta AI, Copilot, Perplexity, Midjourney, Cursor, GitHub Copilot, Notion AI, Canva AI, Adobe AI, Qwen, DeepSeek, Zhipu, Kimi, Doubao, Tencent Yuanbao, and Baidu ERNIE.
 - Exclude funding gossip, vague industry analysis, unsupported benchmark claims, and recycled old news.
 - Each item needs: event, summary, howTo, impact, free, category, source{name,published,url}.
