@@ -59,9 +59,7 @@ jobs:
         run: |
           prompt="$(cat automation/daily-prompt.md)"
           if [[ "${{ inputs.force_refresh }}" == "true" ]]; then
-            prompt="$prompt
-
-FORCE REFRESH: Today's issue already exists but is known to be defective. You must materially replace today's english.articles with 2-3 newly researched articles whose titles and URLs have never appeared in any earlier issue. Do not merely change updatedAt. Preserve the other sections when they remain valid."
+            prompt="$prompt"$'\n\nFORCE REFRESH: Today\'s issue already exists but is known to be defective. You must materially replace today\'s english.articles with 2-3 newly researched articles whose titles and URLs have never appeared in any earlier issue. Do not merely change updatedAt. Preserve the other sections when they remain valid.'
           fi
           copilot -p "$prompt" \
             --allow-all-tools \
