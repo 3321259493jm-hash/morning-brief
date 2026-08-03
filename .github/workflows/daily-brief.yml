@@ -2,6 +2,12 @@ name: Daily AI and English briefing
 
 on:
   workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: Replace today's issue even when it is already ready
+        required: false
+        default: false
+        type: boolean
   schedule:
     # GitHub schedules can be delayed or dropped, so use three off-peak retries.
     - cron: "5 23 * * *"  # 07:05 Beijing
@@ -36,6 +42,10 @@ jobs:
       - name: Check whether today's issue is already ready
         id: freshness
         run: |
+          if [[ "${{ inputs.force_refresh }}" == "true" ]]; then
+            echo "needs_update=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           if node automation/validate-issue.mjs; then
             echo "needs_update=false" >> "$GITHUB_OUTPUT"
           else
