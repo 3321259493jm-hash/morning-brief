@@ -30,9 +30,10 @@ Free AI resources (`ai.deals`):
 - Exclude expired offers, items that require payment before use, unclear credit-card trials, or inaccessible sources.
 
 English reading (`english.articles`):
+- Before selecting articles, collect every English article URL and normalized title from all existing issues other than today's issue. Today's articles must not reuse any of those URLs or titles. Replacing today's issue does not exempt it from this rule.
 - Select 2-3 articles published within the last 14 days, or with compelling current relevance, that are fully readable for free without subscription login.
 - Prioritize sources commonly used by or stylistically close to Chinese postgraduate English exams: The Economist, The Atlantic, The New York Times, The Guardian, BBC, Scientific American, Nature, National Geographic, Harvard Business Review, and NPR.
-- Select varied sources and topics. Topics are limited to society, economics, business, technology trends, education, culture, environment, and health. Avoid highly specialized AI, semiconductor, or engineering papers.
+- Select varied sources and topics. Prefer media and themes not used in the previous 2 issues when suitable alternatives exist. Topics are limited to society, economics, business, technology trends, education, culture, environment, and health. Avoid highly specialized AI, semiconductor, or engineering papers.
 - Difficulty should approximate postgraduate English II: useful abstract vocabulary, layered sentences, and clear argumentative structure.
 - Each article needs: title, source, published, url, readingTime, topic, summary, reason, vocabulary, sentences.
 - `summary`: a substantial Chinese overview of the article's main claim, evidence, structure and conclusion.
