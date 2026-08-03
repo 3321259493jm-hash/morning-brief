@@ -3,8 +3,10 @@ name: Daily AI and English briefing
 on:
   workflow_dispatch:
   schedule:
-    # GitHub schedules use UTC. Start at 07:20 Beijing to publish before 08:00.
-    - cron: "20 23 * * *"
+    # GitHub schedules can be delayed or dropped, so use three off-peak retries.
+    - cron: "5 23 * * *"  # 07:05 Beijing
+    - cron: "25 23 * * *" # 07:25 Beijing
+    - cron: "45 23 * * *" # 07:45 Beijing
 
 permissions:
   contents: write
@@ -31,7 +33,17 @@ jobs:
       - name: Install GitHub Copilot CLI
         run: npm install --global @github/copilot
 
+      - name: Check whether today's issue is already ready
+        id: freshness
+        run: |
+          if node automation/validate-issue.mjs; then
+            echo "needs_update=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needs_update=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Generate and verify today's issue
+        if: steps.freshness.outputs.needs_update == 'true'
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
@@ -41,11 +53,13 @@ jobs:
             --no-ask-user
 
       - name: Validate generated data
+        if: steps.freshness.outputs.needs_update == 'true'
         run: |
           node --check data/issues.js
           node automation/validate-issue.mjs
 
       - name: Commit update
+        if: steps.freshness.outputs.needs_update == 'true'
         run: |
           if git diff --quiet -- data/issues.js; then
             echo "No data change was produced."
