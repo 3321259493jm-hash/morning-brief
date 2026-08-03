@@ -33,10 +33,37 @@ for (const item of [...issue.ai.updates, ...issue.ai.deals]) {
   }
   urls.push(item.source.url);
 }
+const normalizeTitle = value => value.trim().toLowerCase().replace(/\s+/g, " ");
+const normalizeUrl = value => {
+  const url = new URL(value);
+  url.hash = "";
+  return url.href.replace(/\/$/, "");
+};
+const previousArticleUrls = new Set();
+const previousArticleTitles = new Set();
+for (const previousIssue of data.issues.filter(item => item.date !== today)) {
+  for (const article of previousIssue.english?.articles || []) {
+    if (article.url) previousArticleUrls.add(normalizeUrl(article.url));
+    if (article.title) previousArticleTitles.add(normalizeTitle(article.title));
+  }
+}
+const todayArticleUrls = new Set();
+const todayArticleTitles = new Set();
+
 for (const article of issue.english.articles) {
   if (!article.url || !Array.isArray(article.reason) || article.reason.length < 4) {
     throw new Error(`Incomplete article: ${article.title || "unknown"}`);
   }
+  const normalizedUrl = normalizeUrl(article.url);
+  const normalizedTitle = normalizeTitle(article.title || "");
+  if (previousArticleUrls.has(normalizedUrl) || previousArticleTitles.has(normalizedTitle)) {
+    throw new Error(`English article was used on an earlier date: ${article.title}`);
+  }
+  if (todayArticleUrls.has(normalizedUrl) || todayArticleTitles.has(normalizedTitle)) {
+    throw new Error(`Duplicate English article in today's issue: ${article.title}`);
+  }
+  todayArticleUrls.add(normalizedUrl);
+  todayArticleTitles.add(normalizedTitle);
   if (!Array.isArray(article.vocabulary) || article.vocabulary.length < 8) {
     throw new Error(`Not enough vocabulary: ${article.title}`);
   }
