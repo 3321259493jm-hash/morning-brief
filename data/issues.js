@@ -3,7 +3,7 @@
  * Every factual item must include a directly verifiable source URL.
  */
 window.BRIEFING_DATA = {
-  updatedAt: "2026-08-03T13:12:56+08:00",
+  updatedAt: "2026-08-03T13:33:05+08:00",
   issues: [
     {
       date: "2026-08-03",
@@ -100,122 +100,116 @@ window.BRIEFING_DATA = {
         intro: "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
         articles: [
           {
-            title: "Students created AI rules they hope schools will adopt",
-            source: "NPR · Education",
-            published: "2026-07-30",
-            url: "https://www.npr.org/2026/07/30/nx-s1-5853571/students-set-ai-policy",
-            readingTime: "10",
-            topic: "教育 / AI 素养 / 校园规则",
-            summary: "98 名高中生在仿制的参议院会议厅中起草并通过‘Students First Act’，建议尽早教授 AI 素养、禁止计分考试使用 AI、并在怀疑不当使用时允许口头答辩；文章讨论了资源不均、检测误判与政策可行性。",
+            title: "Find out what’s new in the Gemini app in July's Gemini Drop.",
+            source: "Google Blog · Product",
+            published: "2026-07-31",
+            url: "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
+            readingTime: "6",
+            topic: "Technology / AI / Product updates",
+            summary: "Google 在 2026-07-31 的 Gemini Drop 中汇总了 Gemini App 的产品更新，包含 Gemini Spark 在 Chrome 中的集成、模型选择器与更快的 Flash 模型等改进；文章既概述功能也指出地域可用性的限制与逐步推送策略。",
             reason: [
-              "主题贴近英语二教育与社会类考题，非常适合作为议论文素材。",
-              "叙述结构为事件报道 + 引语 + 条款列举，便于训练信息定位与推理题。",
-              "包含 legislation、consensus、provision 等抽象名词，有助积累学术词汇。",
-              "长句结构丰富，含定语从句、what 从句与让步结构，利于拆句练习。"
+              "主题涉及产品功能与可用性，适合作为技术类阅读材料并训练信息提取题。",
+              "结构为要点汇总 + 使用场景示例，便于练习段落归纳与语篇衔接。",
+              "包含 integrate、rollout、model 等技术词汇，有利于扩展科技类词汇量。",
+              "长句多用并列与同位结构，适合考研英语长难句拆解训练。"
             ],
             vocabulary: [
-              { word: "legislation", phonetic: "/ˌledʒɪsˈleɪʃn/", part: "n.", translation: "立法；法规" },
-              { word: "navigate", phonetic: "/ˈnævɪɡeɪt/", part: "v.", translation: "应对；设法处理" },
-              { word: "literacy", phonetic: "/ˈlɪtərəsi/", part: "n.", translation: "素养；读写能力" },
-              { word: "consensus", phonetic: "/kənˈsensəs/", part: "n.", translation: "共识；一致意见" },
-              { word: "provision", phonetic: "/prəˈvɪʒn/", part: "n.", translation: "条款；规定" },
-              { word: "coherent", phonetic: "/kəʊˈhɪərənt/", part: "adj.", translation: "连贯的；有条理的" },
-              { word: "contentious", phonetic: "/kənˈtenʃəs/", part: "adj.", translation: "有争议的" },
-              { word: "inequity", phonetic: "/ɪnˈekwəti/", part: "n.", translation: "不公平；不平等" }
+              { word: "integrate", phonetic: "/ˈɪntɪɡreɪt/", part: "v.", translation: "整合；使成为一体" },
+              { word: "rollout", phonetic: "/ˈrəʊlaʊt/", part: "n.", translation: "(新版/服务) 推出；部署" },
+              { word: "feature", phonetic: "/ˈfiːtʃər/", part: "n.", translation: "功能；特性" },
+              { word: "model", phonetic: "/ˈmɒdl/", part: "n.", translation: "模型；范式" },
+              { word: "availability", phonetic: "/əˌveɪləˈbɪlɪti/", part: "n.", translation: "可用性；可获得性" },
+              { word: "prompt", phonetic: "/prɒmpt/", part: "n./v.", translation: "提示；提示词/提示" },
+              { word: "preview", phonetic: "/ˈpriːvjuː/", part: "n.", translation: "预览；试用版" },
+              { word: "compatibility", phonetic: "/kəmˌpætɪˈbɪləti/", part: "n.", translation: "兼容性" }
             ],
             sentences: [
               {
-                original: "The students, most of them high school juniors and seniors, gathered in a precise replica of the U.S. Senate chamber and attempted what the real, adult Congress has largely failed to do: draft and pass legislation to help the nation's K-12 schools navigate the questions and chaos created by artificial intelligence.",
+                original: "Gemini Spark now integrates with Chrome",
                 analysis: [
-                  "主干：The students gathered ... and attempted ...，两个并列谓语。",
-                  "most of them high school juniors and seniors 是对 students 的补充说明。",
-                  "what the real, adult Congress has largely failed to do 为宾语从句，作 attempted 的宾语。",
-                  "冒号后 draft and pass legislation 具体列举 what 的内容。",
-                  "created by artificial intelligence 是过去分词短语，后置修饰 questions and chaos。"
+                  "主干：Gemini Spark now integrates with Chrome，simple present 表示当前可用或已推出的功能。",
+                  "Gemini Spark 为主语，now 强调时间信息，with Chrome 作地点/工具状语。",
+                  "integrates 为及物/连系动词，用法侧重‘整合进’的动作。",
+                  "该句可用于训练主谓信息定位与功能性短语的理解。"
                 ],
-                translation: "这些学生——其中大多数是高中十一、十二年级学生——聚集在一间精确仿制的美国参议院议事厅里，尝试完成真正的成年国会基本未能做到的事：起草并通过立法，帮助美国中小学应对人工智能带来的问题与混乱。"
+                translation: "Gemini Spark 现在已与 Chrome 集成。"
               },
               {
-                original: "At times during the weekend, where NPR was able to watch the events unfold, the bill seemed doomed, only to be revived by a flurry of student-led negotiation, old-fashioned compromises and some spirited speeches.",
+                original: "Gemini Drops is our regular monthly update on how to get the most out of the Gemini app.",
                 analysis: [
-                  "主干：the bill seemed doomed，seem 后接形容词作表语。",
-                  "where NPR was able to watch the events unfold 是非限制性定语从句，补充说明现场。",
-                  "only to be revived 表示出乎意料的结果。",
-                  "by 后并列短语说明法案被挽救的方式。",
-                  "含有短语结构 flurry of ... 适合仿写训练。"
+                  "主干：Gemini Drops is our regular monthly update，is 后接表语说明性质。",
+                  "on how to get the most out of the Gemini app 是介词短语，说明 update 的内容与目的。",
+                  "包含不定式短语 to get the most out of，适合练习动词短语搭配。",
+                  "句式清晰，适合训练主旨句的识别与段落功能分析。"
                 ],
-                translation: "周末期间，NPR 得以在现场观察事态发展；这项法案有时看起来注定失败，却又因一连串由学生主导的谈判、传统式妥协和几场充满激情的演讲而重新获得生机。"
+                translation: "Gemini Drops 是我们每月定期发布的更新，告诉你如何最大化使用 Gemini 应用。"
               },
               {
-                original: "While the Students First Act isn't actually law, any more than the teens are actually senators, AASA plans to send the text to its members, many of whom are right now crafting their own AI rules in the absence of regulation.",
+                original: "Find out what’s new in the Gemini app in July's Gemini Drop.",
                 analysis: [
-                  "While 引导让步状语从句，意为‘尽管’。",
-                  "any more than the teens are actually senators 构成类比否定。",
-                  "主句：AASA plans to send the text to its members。",
-                  "many of whom 引导非限制性定语从句，先行词为 members。",
-                  "in the absence of regulation 表示‘在缺乏监管的情况下’。"
+                  "命令句式，Find out 为祈使句动词短语，强调行动建议。",
+                  "what’s new 引导名词性从句，作 Find out 的宾语，便于练习从句功能。",
+                  "in July's Gemini Drop 提供时间/来源信息，为地点状语性短语。",
+                  "句子短小，适合练习信息定位与主题句提取。"
                 ],
-                translation: "尽管《学生优先法案》并不是真正的法律——正如这些青少年也不是真正的参议员——AASA 仍计划把文本发给其成员，而其中许多人眼下正因缺乏统一监管而自行制定 AI 规则。"
+                translation: "来看看七月的 Gemini Drop 中 Gemini 应用有哪些新变化。"
               }
             ]
           },
           {
-            title: "From Felix the Cat to MTV: MoMA explores a century of animation",
-            source: "The Guardian · Culture",
+            title: "Try Glanceboard, a vibe-coded way to organize your day",
+            source: "Google Blog · Innovation and AI",
             published: "2026-07-31",
-            url: "https://www.theguardian.com/artanddesign/2026/jul/31/moma-animation-exhibition-its-alive",
+            url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/",
             readingTime: "8",
-            topic: "文化 / 艺术 / 媒介史",
-            summary: "MoMA 的展览 It's Alive! 回顾近百年的动画发展，讨论早期角色动画、战后独立创作者、实验电影与数字时代的演变，并解释展览为何采用无声放映以突出视觉语言。",
+            topic: "Technology / Practical project",
+            summary: "Glanceboard 是 Google 工程师构建的示例项目：每天读取日历与天气，用 Gemini 3.6 Flash 与图像模型生成一张个性化的 e-ink 卡片并推送到显示设备。文章开源了示例代码并说明了硬件与本地服务器的基本实现方式。",
             reason: [
-              "文化艺术与媒介史适合作为英语二人文主题。",
-              "文章通过历史线索与展览策展人引语推进，利于训练主旨与论证结构分析。",
-              "包含 anthropomorphic、manifesto 等高阶词汇。",
-              "长句含并列、定语与分词结构，适合拆句训练。"
+              "以项目为线索的说明文，适合作为课程示例材料或任务驱动写作练习。",
+              "结构为问题背景 + 实现步骤 + 开源资源，便于训练过程类信息的梳理题。",
+              "包含 open-source、local server、e-ink 等实用词汇，利于技术项目写作素材积累。",
+              "文章短而具体，适合从示例中抽取步骤描述与因果关系题型练习。"
             ],
             vocabulary: [
-              { word: "anthropomorphic", phonetic: "/ˌænθrəpəˈmɔːfɪk/", part: "adj.", translation: "拟人化的" },
-              { word: "outlandish", phonetic: "/aʊtˈlændɪʃ/", part: "adj.", translation: "古怪夸张的" },
-              { word: "manifesto", phonetic: "/ˌmænɪˈfestəʊ/", part: "n.", translation: "宣言" },
-              { word: "invigorate", phonetic: "/ɪnˈvɪɡəreɪt/", part: "v.", translation: "使振兴；激励" },
-              { word: "aspire", phonetic: "/əˈspaɪər/", part: "v.", translation: "渴望；立志" },
-              { word: "profound", phonetic: "/prəˈfaʊnd/", part: "adj.", translation: "深刻的；深远的" },
-              { word: "inherent", phonetic: "/ɪnˈhɪərənt/", part: "adj.", translation: "内在的；固有的" },
-              { word: "prominence", phonetic: "/ˈprɒmɪnəns/", part: "n.", translation: "重要地位；显著" }
+              { word: "open-source", phonetic: "/ˈəʊpən sɔːrs/", part: "adj.", translation: "开源的" },
+              { word: "e-ink", phonetic: "/ˌiː ˈɪŋk/", part: "n.", translation: "电子墨水屏；e-ink 显示器" },
+              { word: "local server", phonetic: "/ˈloʊkəl ˈsɜːrvər/", part: "n.", translation: "本地服务器" },
+              { word: "illustration", phonetic: "/ˌɪləˈstreɪʃn/", part: "n.", translation: "插图；示意图" },
+              { word: "calendar", phonetic: "/ˈkælɪndər/", part: "n.", translation: "日历；日程表" },
+              { word: "serene", phonetic: "/səˈriːn/", part: "adj.", translation: "宁静的；平静的" },
+              { word: "deploy", phonetic: "/dɪˈplɔɪ/", part: "v.", translation: "部署；上线" },
+              { word: "prototype", phonetic: "/ˈprəʊtətaɪp/", part: "n.", translation: "原型；样机" }
             ],
             sentences: [
               {
-                original: "Although the word ‘animation’ may bring to mind rascally, anthropomorphic bunnies, cats and ducks doing outlandish things, the truth of the medium's diversity goes far beyond these few recognizable brands.",
+                original: "Every morning, Glanceboard checks Raph’s family Google Calendar and the local weather.",
                 analysis: [
-                  "Although 引导让步状语从句，主句为 the truth ... goes far beyond ...。",
-                  "bring to mind 意为‘使人想到’。",
-                  "doing outlandish things 是现在分词短语，后置修饰 bunnies, cats and ducks。",
-                  "the truth of the medium's diversity 是抽象名词主语，强调多样性。",
-                  "go far beyond 表示远远超出固有认知。"
+                  "主干：Glanceboard checks Raph’s family Google Calendar and the local weather，checks 为谓语。",
+                  "Every morning 为时间状语，强调动作频率。",
+                  "并列宾语结构，连接 calendar 和 the local weather。",
+                  "句式简单明了，适合练习主谓宾信息提取与时态语义（习惯性动作）。"
                 ],
-                translation: "尽管‘动画’这个词可能让人想到调皮的拟人兔子、猫和鸭子做着夸张离奇的事情，但这种媒介真正的多样性远远超出了这些少数为人熟知的品牌形象。"
+                translation: "每天早上，Glanceboard 会查看 Raph 一家人的 Google 日历和当地天气。"
               },
               {
-                original: "Invigorated by the creative demands of the second world war – and buoyed by his work creating an animated film to promote Franklin Roosevelt in the 1944 election – Hubley aspired to animation that was driven by independent-minded creators who could engage deeply with important social issues and profound artistic questions.",
+                original: "Glanceboard operates on a lightweight local server — no cloud accounts or bright screens required — offering a serene and personalized way to stay organized.",
                 analysis: [
-                  "主干：Hubley aspired to animation。",
-                  "Invigorated by ... 与 buoyed by ... 是并列过去分词短语，说明动机。",
-                  "creating an animated film 是现在分词短语，修饰 his work。",
-                  "that was driven by ... 是定语从句，修饰 animation。",
-                  "who could engage deeply with ... 是定语从句，修饰 creators。"
+                  "主干：Glanceboard operates on a lightweight local server，后半句是破折号插入的说明。",
+                  "— no cloud accounts or bright screens required — 为插入语，补充说明实现方式的好处。",
+                  "offering a serene and personalized way to stay organized 为现在分词短语，表示结果/用途。",
+                  "句子结构复杂，适合练习插入语、并列与非谓语短语的识别与翻译。"
                 ],
-                translation: "在第二次世界大战带来的创作需求激励下，又因曾为罗斯福 1944 年大选制作宣传动画而受到鼓舞，休布利向往一种由独立创作者推动的动画，这些创作者能够深入介入重要社会议题和深刻的艺术问题。"
+                translation: "Glanceboard 在轻量的本地服务器上运行——不需要云账号或明亮的屏幕——为保持日常条理提供了一种宁静且个性化的方式。"
               },
               {
-                original: "In an effort to make the artistry behind these films more accessible to audiences, It's Alive! will screen 20 films within the gallery space, offering viewers a chance to get a closeup view of these striking sights.",
+                original: "Want to try Glanceboard yourself? We’re open-sourcing the code so you can ask Google Antigravity to make you one, too.",
                 analysis: [
-                  "In an effort to do 表示目的。",
-                  "make + 宾语 + 形容词 构成使役结构：make the artistry more accessible。",
-                  "主句：It's Alive! will screen 20 films。",
-                  "within the gallery space 是地点状语。",
-                  "offering viewers ... 是现在分词伴随结构，表示结果/附带效果。"
+                  "Want to try ...? 为祈使/疑问句，鼓励读者动手尝试。",
+                  "We’re open-sourcing the code 为主动句，说明行动（开源）。",
+                  "so 引导结果状语从句，说明开源的目的或效果。",
+                  "包含口语化表达，适合训练书面与口语风格的对比分析。"
                 ],
-                translation: "为了让观众更容易理解这些影片背后的艺术性，《它活了！》将在展厅内放映 20 部影片，让观众有机会近距离观看这些引人注目的影像。"
+                translation: "想自己试试 Glanceboard 吗？我们把代码开源了，这样你也可以让 Google Antigravity 帮你做一个。"
               }
             ]
           }
