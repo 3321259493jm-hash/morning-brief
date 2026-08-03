@@ -8,6 +8,7 @@ Technical rules:
 - Add or replace today's issue, set `status: "ready"`, sort newest first, and keep only the newest 7 issues.
 - Change no file other than `data/issues.js`.
 - Use plain valid JavaScript, UTF-8, and run `node --check data/issues.js` before finishing.
+- Run `node automation/validate-issue.mjs` before finishing. If it fails, keep researching and editing until it passes; never stop after only changing `updatedAt`.
 - Fetch every selected URL and confirm it is accessible. Prefer HTTP 200. Do not use search-result URLs.
 
 AI updates (`ai.updates`):
@@ -31,6 +32,7 @@ Free AI resources (`ai.deals`):
 
 English reading (`english.articles`):
 - Before selecting articles, collect every English article URL and normalized title from all existing issues other than today's issue. Today's articles must not reuse any of those URLs or titles. Replacing today's issue does not exempt it from this rule.
+- If today's issue already exists, materially replace its `english.articles` array with newly researched non-repeated articles. Updating only metadata such as `updatedAt` is not an acceptable result.
 - Select 2-3 articles published within the last 14 days, or with compelling current relevance, that are fully readable for free without subscription login.
 - Prioritize sources commonly used by or stylistically close to Chinese postgraduate English exams: The Economist, The Atlantic, The New York Times, The Guardian, BBC, Scientific American, Nature, National Geographic, Harvard Business Review, and NPR.
 - Select varied sources and topics. Prefer media and themes not used in the previous 2 issues when suitable alternatives exist. Topics are limited to society, economics, business, technology trends, education, culture, environment, and health. Avoid highly specialized AI, semiconductor, or engineering papers.
