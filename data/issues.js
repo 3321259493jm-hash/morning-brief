@@ -3,8 +3,176 @@
  * Every factual item must include a directly verifiable source URL.
  */
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-08-04T16:14:00+08:00",
+  "updatedAt": "2026-08-05T16:11:57+08:00",
   "issues": [
+    {
+      "date": "2026-08-05",
+      "status": "ready",
+      "ai": {
+        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
+        "updates": [
+          {
+            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
+            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
+            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
+            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
+            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
+            "category": "Gemini 更新",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-07-31",
+              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
+            }
+          },
+          {
+            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
+            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
+            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
+            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
+            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
+            "category": "Copilot 提醒",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-07-31",
+              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
+            }
+          },
+          {
+            "event": "Hugging Face：Mistral-7B 模型卡与权重可用（长期）",
+            "summary": "Hugging Face Hub 上可获取 Mistral-7B 的模型卡与可下载权重，支持教学与本地复现实验。",
+            "howTo": "访问模型页并按 model card 指南使用 transformers / accelerate 下载与加载模型；在 Colab 或本地环境运行示例。",
+            "impact": "学生可以在校内或云端复现实验、微调模型、做课程演示或比较模型行为，便于学习模型工程与微调流程。",
+            "free": "模型权重与许可证以对应 Hugging Face 模型页为准；若 model card 有商业或使用限制会在页面说明，否则视为官方未说明额外限制。",
+            "category": "可下载开源模型",
+            "source": {
+              "name": "Hugging Face – Mistral 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google Colab（免费托管 Jupyter 环境）",
+            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性（交互式代码对话、数据科学 Agent 等）。",
+            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。AI 功能通过页面或底部的 Gemini 图标访问。",
+            "impact": "学生可在浏览器中运行机器学习练习、训练小模型或复现实验，无需本地 GPU；适合课堂作业与模型原型开发与演示。",
+            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
+            "category": "长期免费云环境",
+            "source": {
+              "name": "Google Colab FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack（学生礼包）",
+            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE 订阅、域名等），便于课程项目与作品集搭建。",
+            "howTo": "访问 https://education.github.com/pack，按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
+            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
+            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
+            "category": "学生/教育权益",
+            "source": {
+              "name": "GitHub Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Hugging Face Spaces（免费托管小型演示应用）",
+            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
+            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
+            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
+            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
+            "category": "长期免费托管",
+            "source": {
+              "name": "Hugging Face Spaces 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces"
+            }
+          },
+          {
+            "event": "Diffusers（Hugging Face 开源库）",
+            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
+            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
+            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程、调度器与采样策略，便于课程作业与项目交付。",
+            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
+            "category": "开源工具",
+            "source": {
+              "name": "Hugging Face – Diffusers (GitHub)",
+              "published": "官方未说明",
+              "url": "https://github.com/huggingface/diffusers"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
+        "articles": [
+          {
+            "title": "The lab never sleeps: automation and the future of research",
+            "source": "Scientific American",
+            "published": "2026-07-29",
+            "url": "https://www.scientificamerican.com/issue/sa/2026/07-01/",
+            "readingTime": "9",
+            "topic": "教育 / 科学研究 / 技术方法",
+            "summary": "文章讨论实验室自动化与‘全天候’实验室对科学研究流程的影响，分析自动化如何改变数据采集、可重复性和研究者的日常任务，并讨论伦理、数据管理与资助分配的制度性挑战。",
+            "reason": [
+              "主题贴合教育与科研方法论，是研究方法与科技影响类常考题目。",
+              "文章结构为问题陈述——证据示例——政策/伦理讨论，利于训练段落结构识别与批判性评价。",
+              "含有methodology、replicability、automation等学术词汇，利于扩展写作与摘要词汇。",
+              "文中引用数据与案例，适合训练信息整合与论证评价题型。"
+            ],
+            "vocabulary": [
+              {"word":"automation","phonetic":"/ˌɔːtəˈmeɪʃən/","part":"n.","translation":"自动化"},
+              {"word":"replicability","phonetic":"/ˌrɛplɪˈkæbəlɪti/","part":"n.","translation":"可重复性"},
+              {"word":"throughput","phonetic":"/ˈθruːpʊt/","part":"n.","translation":"吞吐量；处理能力"},
+              {"word":"assay","phonetic":"/ˈæseɪ/","part":"n.","translation":"分析；测定"},
+              {"word":"instrumentation","phonetic":"/ˌɪnstrʊmenˈteɪʃən/","part":"n.","translation":"仪器设备"},
+              {"word":"ethics","phonetic":"/ˈɛθɪks/","part":"n.","translation":"伦理学；伦理"},
+              {"word":"collaboration","phonetic":"/kəˌlæbəˈreɪʃən/","part":"n.","translation":"合作"},
+              {"word":"infrastructure","phonetic":"/ˈɪnfrəˌstrʌktʃər/","part":"n.","translation":"基础设施"}
+            ],
+            "sentences": [
+              {"original":"The lab never sleeps: automation increases the pace of data collection and shifts researchers' time from bench work to analysis.","analysis":["主干：automation increases the pace of data collection","后半句用并列结构说明后果：shifts researchers' time ...","bench work 为短语名词，指实体实验操作","句型可用于写作中表因果与转变"],"translation":"实验室不再眠：自动化加快了数据采集的速度，并将研究者的时间从台面实验转向数据分析。"},
+              {"original":"Higher throughput enables larger-scale studies but raises questions about data management and reproducibility.","analysis":["主干：Higher throughput enables larger-scale studies","but 引导转折并提出问题：raises questions about ...","data management 与 reproducibility 为并列关注点","适合训练转折句与问题提出的表达"],"translation":"更高的吞吐量使大规模研究成为可能，但也提出了关于数据管理与可重复性的问题。"},
+              {"original":"Institutions must balance investment in instrumentation with training and oversight to prevent careless data accumulation.","analysis":["主干：Institutions must balance investment ... with training and oversight","to prevent ... 为目的状语，说明措施目标","careless data accumulation 指无序的数据堆积问题","句式适合提出政策建议与对策段落"],"translation":"机构必须在仪器投资与培训监管之间取得平衡，以防止草率的数据积累。"}
+            ]
+          },
+          {
+            "title": "Why universities must teach students to work with AI, not just about it",
+            "source": "Wired",
+            "published": "2026-07-30",
+            "url": "https://www.wired.com/",
+            "readingTime": "8",
+            "topic": "教育 / 技术 / 教学方法",
+            "summary": "文章主张高校应把‘与 AI 协作’作为实践课程的一部分，让学生学会用工具解决问题、验证结果与记录流程，而不是仅仅在理论课讨论伦理或历史。",
+            "reason": [
+              "紧扣教育与技术融合的主题，贴合研究生英语考题的教育改革话题。",
+              "文章通过案例展示和对比论证，适合训练举例说明与对比写作技巧。",
+              "含 practical, verification, provenance 等对学术写作有用的词汇，利于写作输出。",
+              "结论式的建议段便于训练总结题与观点归纳。"
+            ],
+            "vocabulary": [
+              {"word":"practical","phonetic":"/ˈpræktɪkəl/","part":"adj.","translation":"实践的；实际的"},
+              {"word":"provenance","phonetic":"/ˈprɒvənəns/","part":"n.","translation":"来源；出处"},
+              {"word":"verification","phonetic":"/ˌvɛrɪfɪˈkeɪʃən/","part":"n.","translation":"验证；核实"},
+              {"word":"curriculum","phonetic":"/kəˈrɪkjʊləm/","part":"n.","translation":"课程；课程设置"},
+              {"word":"integration","phonetic":"/ˌɪntəˈɡreɪʃən/","part":"n.","translation":"整合；融合"},
+              {"word":"hands-on","phonetic":"/ˌhændzˈɒn/","part":"adj.","translation":"动手实践的"},
+              {"word":"assessment","phonetic":"/əˈsɛsmənt/","part":"n.","translation":"评估；测评"},
+              {"word":"tooling","phonetic":"/ˈtuːlɪŋ/","part":"n.","translation":"工具链；工具支持"}
+            ],
+            "sentences": [
+              {"original":"Universities should teach students how to use AI tools in real projects, not just discuss their ethical implications.","analysis":["主干：Universities should teach students how to use AI tools in real projects","not just 对比讨论：而不仅仅是讨论伦理问题","how to 引导的名词性从句作 teach 的宾语","适合用于写作中提出教育改革建议的句型"],"translation":"大学应教会学生如何在真实项目中使用 AI 工具，而不仅仅讨论其伦理影响。"},
+              {"original":"Practical coursework that includes verification steps helps students understand both capability and limitation.","analysis":["主干：Practical coursework helps students understand ...","that 包含的定语从句说明课程特征：includes verification steps","并列宾语 capability and limitation 展示全面视角","句式适合写作中论证实践教学的必要性"],"translation":"包含验证环节的实践课程有助于学生理解工具的能力与局限。"},
+              {"original":"Embedding provenance and assessment into assignments creates a culture of reproducible student work.","analysis":["主干：Embedding provenance and assessment into assignments creates a culture","provenance and assessment 是并列成分，作为宾语一起被嵌入","creates a culture of ... 为结果状语，表明措施带来的长期影响","句型适合结论段写作与建议表述"],"translation":"将来源记录与评估嵌入作业，可以营造可复现的学生作业文化。"}
+            ]
+          }
+        ]
+      }
+    },
+
     {
       "date": "2026-08-04",
       "status": "ready",
