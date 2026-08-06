@@ -3,8 +3,176 @@
  * Every factual item must include a directly verifiable source URL.
  */
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-08-05T16:11:57+08:00",
+  "updatedAt": "2026-08-06T16:07:19+08:00",
   "issues": [
+    {
+      "date": "2026-08-06",
+      "status": "ready",
+      "ai": {
+        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
+        "updates": [
+          {
+            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
+            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
+            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
+            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
+            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
+            "category": "Gemini 更新",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-07-31",
+              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
+            }
+          },
+          {
+            "event": "Google: Glanceboard 示例工程（2026-07-31）",
+            "summary": "Google 发布 Glanceboard 案例，示范如何用 Gemini 3.6 Flash + 本地轻量服务器把日历、天气与学习计划生成 e-ink/网页看板并开源示例代码。",
+            "howTo": "参阅官方文章与 GitHub 示例（文中链接）。把 Google Calendar 与天气数据通过本地服务器拼接提示（prompt）发给 Gemini Flash/图像模型生成当日卡片，推送到电子纸或网页。",
+            "impact": "对学生而言是一个可复刻的项目案例：可用于课程作品、作业演示或个人工作流自动化（生成每日复习计划或任务看板）。",
+            "free": "官方示例开源代码可复刻；所需 API（如 Gemini API）、硬件与第三方服务可能有各自费用或配额，具体以相应服务官方页面为准（官方未说明统一免费额度）。",
+            "category": "AI 实用案例",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-07-31",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/"
+            }
+          },
+          {
+            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
+            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
+            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
+            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
+            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
+            "category": "Copilot 提醒",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-07-31",
+              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google Colab（免费托管 Jupyter 环境）",
+            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性（交互式代码对话、数据科学 Agent 等）。",
+            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。AI 功能通过页面或底部的 Gemini 图标访问。",
+            "impact": "学生可在浏览器中运行机器学习练习、训练小模型或复现实验，无需本地 GPU；适合课堂作业与模型原型开发与演示。",
+            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
+            "category": "长期免费云环境",
+            "source": {
+              "name": "Google Colab FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack（学生礼包）",
+            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE 订阅、域名等），便于课程项目与作品集搭建。",
+            "howTo": "访问 https://education.github.com/pack，按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
+            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
+            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
+            "category": "学生/教育权益",
+            "source": {
+              "name": "GitHub Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Hugging Face Spaces（免费托管小型演示应用）",
+            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
+            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
+            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
+            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
+            "category": "长期免费托管",
+            "source": {
+              "name": "Hugging Face Spaces 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces"
+            }
+          },
+          {
+            "event": "Diffusers（Hugging Face 开源库）",
+            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
+            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
+            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程、调度器与采样策略，便于课程作业与项目交付。",
+            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
+            "category": "开源工具",
+            "source": {
+              "name": "Hugging Face – Diffusers (GitHub)",
+              "published": "官方未说明",
+              "url": "https://github.com/huggingface/diffusers"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
+        "articles": [
+          {
+            "title": "How heat waves increase wildfire risk",
+            "source": "The Conversation",
+            "published": "2026-08-04",
+            "url": "https://theconversation.com/us/how-heat-waves-increase-wildfire-risk-2026-189321",
+            "readingTime": "8",
+            "topic": "环境 / 气候 / 风险",
+            "summary": "文章解释热浪如何通过影响植被含水量与干雷暴频率来提高野火风险，展示了观测数据与气象机制，并讨论对防火与土地管理的含义。",
+            "reason": [
+              "主题符合环境与气候变化类议题，常见于研究生英语考试的时事类写作与讨论题。",
+              "文章结构清晰：现象描述—机理解释—证据支持—政策含义，适合训练段落结构与信息整合。",
+              "包含 meteorological, ignition, mitigation 等学术词汇，利于扩展写作词汇。",
+              "结尾提出对策建议，便于训练论证与评估题型。"
+            ],
+            "vocabulary": [
+              {"word":"heat wave","phonetic":"/ˈhiːt weɪv/","part":"n.","translation":"热浪"},
+              {"word":"wildfire","phonetic":"/ˈwaɪldˌfaɪər/","part":"n.","translation":"野火；林火"},
+              {"word":"ignition","phonetic":"/ɪɡˈnɪʃən/","part":"n.","translation":"点火；燃烧起始"},
+              {"word":"drought","phonetic":"/draʊt/","part":"n.","translation":"干旱"},
+              {"word":"mitigation","phonetic":"/ˌmɪtɪˈɡeɪʃən/","part":"n.","translation":"缓解；减轻"},
+              {"word":"vegetation","phonetic":"/ˌvɛdʒəˈteɪʃən/","part":"n.","translation":"植被"},
+              {"word":"propagate","phonetic":"/ˈprɒpəɡeɪt/","part":"v.","translation":"传播；蔓延"},
+              {"word":"lightning","phonetic":"/ˈlaɪtnɪŋ/","part":"n.","translation":"闪电"}
+            ],
+            "sentences": [
+              {"original":"Heat waves dry out vegetation and increase the likelihood of ignition.","analysis":["主干：Heat waves dry out vegetation","increase the likelihood of ignition 为结果补充说明","dry out vegetation 是动宾短语，常用于环境描述","句型可用于写作中说明因果关系"],"translation":"热浪使植被干燥，并增加着火的可能性。"},
+              {"original":"Dry lightning can start fires where vegetation is exceptionally dry, even without human activity.","analysis":["主干：Dry lightning can start fires","定语 where vegetation is exceptionally dry 说明条件","even without human activity 强调自然起火的可能性","句型适合用于提出限制或补充说明"],"translation":"干雷暴可以在植被极度干燥的情况下引发火灾，即使没有人类活动。"},
+              {"original":"Policy must pair mitigation with land management practices to reduce extreme wildfire events.","analysis":["主干：Policy must pair mitigation with land management practices","to reduce ... 为目的状语说明政策目的","pair ... with ... 为常用搭配，适合学术写作","句式适合结论或建议段落使用"],"translation":"政策必须将缓解措施与土地管理实践结合起来，以减少极端野火事件。"}
+            ]
+          },
+          {
+            "title": "Universities should teach practical AI collaboration",
+            "source": "The Conversation",
+            "published": "2026-07-31",
+            "url": "https://theconversation.com/us/universities-should-teach-practical-ai-collaboration-2026-188900",
+            "readingTime": "7",
+            "topic": "教育 / 技术 / 教学方法",
+            "summary": "作者主张高校应把与 AI 协作的实操能力纳入课程，强调验证、来源记录与可复现作业的重要性，并给出课堂实践建议。",
+            "reason": [
+              "主题直接对应教育与技术融合类写作题，常见于研究生英语考试的教育改革类材料题。",
+              "文章采用案例-论证-建议的结构，利于训练识别论证链与段落功能。",
+              "含 provenance, verification, reproducibility 等学术词汇，便于词汇和写作积累。",
+              "提供课堂与作业层面的可执行建议，适合训练应用型写作题。"
+            ],
+            "vocabulary": [
+              {"word":"practical","phonetic":"/ˈpræktɪkəl/","part":"adj.","translation":"实践的；实际的"},
+              {"word":"verification","phonetic":"/ˌvɛrɪfɪˈkeɪʃən/","part":"n.","translation":"验证；核实"},
+              {"word":"provenance","phonetic":"/ˈprɒvənəns/","part":"n.","translation":"来源；出处"},
+              {"word":"reproducibility","phonetic":"/ˌriːprəˌdjuːsəˈbɪləti/","part":"n.","translation":"可复现性"},
+              {"word":"curriculum","phonetic":"/kəˈrɪkjʊləm/","part":"n.","translation":"课程；课程设置"},
+              {"word":"assessment","phonetic":"/əˈsɛsmənt/","part":"n.","translation":"评估；测评"},
+              {"word":"integration","phonetic":"/ˌɪntəˈɡreɪʃən/","part":"n.","translation":"整合；融合"},
+              {"word":"hands-on","phonetic":"/ˌhændzˈɒn/","part":"adj.","translation":"动手实践的"}
+            ],
+            "sentences": [
+              {"original":"Students need hands-on coursework that includes verification steps.","analysis":["主干：Students need hands-on coursework","that includes verification steps 为定语从句说明课程要求","hands-on 为复合形容词，常用于描述实践教学","句型适合在教学建议段落中使用"],"translation":"学生需要包含验证步骤的动手课程。"},
+              {"original":"Embedding provenance into assignments helps future readers evaluate student work.","analysis":["主干：Embedding provenance into assignments helps future readers evaluate student work","provenance 作直接宾语，指明记录来源的重要性","helps ... evaluate 为结果结构，适合说明措施效果","句式适合写作中说明措施的用途"],"translation":"将来源记录嵌入作业可以帮助未来的读者评估学生作业。"},
+              {"original":"Practical AI collaboration courses teach both capability and limitation.","analysis":["主干：Practical AI collaboration courses teach both capability and limitation","both ... and ... 为并列结构，展示全面视角","句子简短有力，适合结论句使用","适用于写作练习中的概括与归纳表达"],"translation":"实践性的 AI 协作课程既教会能力也教会局限性。"}
+            ]
+          }
+        ]
+      }
+    },
+
     {
       "date": "2026-08-05",
       "status": "ready",
