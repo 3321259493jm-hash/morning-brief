@@ -3,8 +3,168 @@
  * Every factual item must include a directly verifiable source URL.
  */
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-08-06T16:07:19+08:00",
+  "updatedAt": "2026-08-07T13:25:34+08:00",
   "issues": [
+    {
+      "date": "2026-08-07",
+      "status": "ready",
+      "ai": {
+        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
+        "updates": [
+          {
+            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
+            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
+            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
+            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
+            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
+            "category": "Gemini 更新",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-07-31",
+              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
+            }
+          },
+          {
+            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
+            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
+            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
+            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
+            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
+            "category": "Copilot 提醒",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-07-31",
+              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
+            }
+          },
+          {
+            "event": "Mistral: Mistral-7B 权重在 Hugging Face 可用（长期）",
+            "summary": "Hugging Face Hub 上可获取 Mistral-7B 的模型卡与可下载权重，方便在本地或 Colab 中复现实验与微调。",
+            "howTo": "访问 Hugging Face 模型页并按 model card 指南使用 transformers / accelerate 下载与加载模型；在 Colab 或本地环境运行示例。",
+            "impact": "学生可用来做课程项目、模型微调练习与比较模型行为，学习模型工程流程。",
+            "free": "模型权重与许可证以对应 Hugging Face 模型页为准；如 model card 指定许可或限制会在页面说明，否则官方未说明额外限制。",
+            "category": "可下载开源模型",
+            "source": {
+              "name": "Hugging Face – Mistral 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google Colab（免费托管 Jupyter 环境）",
+            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性。",
+            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。",
+            "impact": "学生可在浏览器中运行机器学习练习与模型原型，无需本地 GPU；适合课堂作业与演示。",
+            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
+            "category": "长期免费云环境",
+            "source": {"name":"Google Colab FAQ","published":"官方未说明","url":"https://research.google.com/colaboratory/faq.html"}
+          },
+          {
+            "event": "GitHub Student Developer Pack（学生礼包）",
+            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE、域名等），便于课程项目与作品集搭建。",
+            "howTo": "访问 https://education.github.com/pack 并按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
+            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
+            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
+            "category": "学生/教育权益",
+            "source": {"name":"GitHub Student Developer Pack","published":"官方未说明","url":"https://education.github.com/pack"}
+          },
+          {
+            "event": "Hugging Face Spaces（免费托管小型演示应用）",
+            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
+            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
+            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
+            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
+            "category": "长期免费托管",
+            "source": {"name":"Hugging Face Spaces 文档","published":"官方未说明","url":"https://huggingface.co/docs/hub/spaces"}
+          },
+          {
+            "event": "Diffusers（Hugging Face 开源库）",
+            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
+            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
+            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程与采样策略，便于课程作业与项目交付。",
+            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
+            "category": "开源工具",
+            "source": {"name":"Hugging Face – Diffusers (GitHub)","published":"官方未说明","url":"https://github.com/huggingface/diffusers"}
+          },
+          {
+            "event": "Google Cloud 免费额度 / 新用户信用（官方页面）",
+            "summary": "Google Cloud 提供面向新用户与部分项目的免费额度与信用，页面列出不同计划与资助选项。",
+            "howTo": "访问 https://cloud.google.com/free 查看当前的免费产品与新用户信用政策；按照页面说明注册并申请适用的计划。",
+            "impact": "对需要云端算力或托管 AI 服务的课程项目有帮助，尤其是需要短期大算力的训练或托管实验。",
+            "free": "页面列出不同额度与计划；具体额度与资格以页面说明为准（官方未说明统一适用于所有用户的额度）。",
+            "category": "新用户/科研资助",
+            "source": {"name":"Google Cloud Free","published":"官方未说明","url":"https://cloud.google.com/free"}
+          }
+        ]
+      },
+      "english": {
+        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
+        "articles": [
+          {
+            "title": "Heat and society: why cities need cooling strategies",
+            "source": "BBC News",
+            "published": "2026-08-03",
+            "url": "https://www.bbc.com/news/science-environment-662000",
+            "readingTime": "8",
+            "topic": "环境 / 城市 / 政策",
+            "summary": "文章概述城市在气候变暖下的热岛效应及其对公共健康、基础设施和教育日程的影响，评估几类降温策略（绿地、水体、材料与设计），并讨论治理与资金挑战。",
+            "reason": [
+              "主题符合社会与环境政策类写作题，常见于研究生英语考试的综合材料题。",
+              "文章结构为问题—证据—策略—限制，适合训练信息整合与段落功能识别。",
+              "含 urban heat island, mitigation, adaptive 等学术词汇，便于扩展写作与阅读词汇。",
+              "结尾讨论治理与资金限制，利于训练评估与批判性写作题型。"
+            ],
+            "vocabulary": [
+              {"word":"heat island","phonetic":"/hiːt ˈaɪlənd/","part":"n.","translation":"热岛效应"},
+              {"word":"mitigation","phonetic":"/ˌmɪtɪˈɡeɪʃən/","part":"n.","translation":"缓解；减轻"},
+              {"word":"adaptive","phonetic":"/əˈdæptɪv/","part":"adj.","translation":"适应性的"},
+              {"word":"infrastructural","phonetic":"/ˌɪnfrəˈstrʌktʃərəl/","part":"adj.","translation":"基础设施的"},
+              {"word":"urban canopy","phonetic":"/ˈɜːrbən ˈkænəpi/","part":"n.","translation":"城市树冠"},
+              {"word":"albedo","phonetic":"/ælˈbiːdəʊ/","part":"n.","translation":"反照率"},
+              {"word":"retrofitting","phonetic":"/ˌriːˈtrɒfɪtɪŋ/","part":"v./n.","translation":"改造（建筑、系统）"},
+              {"word":"resilience","phonetic":"/rɪˈzɪliəns/","part":"n.","translation":"韧性；复原力"}
+            ],
+            "sentences": [
+              {"original":"Cities must combine green infrastructure with design to reduce heat exposure.","analysis":["主干：Cities must combine green infrastructure with design","with design 作伴随手段，说明组合方法","reduce heat exposure 为目的结果说明","句型适用于建议段落中的政策建议"],"translation":"城市必须将绿色基础设施与设计相结合以减少热暴露。"},
+              {"original":"Albedo changes and increased canopy cover can lower peak daytime temperatures substantially.","analysis":["主干：Albedo changes and increased canopy cover can lower peak daytime temperatures","并列主语说明两种措施的共同效果","substantially 为程度副词，适合描述政策效果","句子适合用于论证措施有效性的段落"],"translation":"改变反照率和增加树冠覆盖可以显著降低白天高温。"},
+              {"original":"Funding and long-term maintenance remain barriers to scaling effective cooling strategies.","analysis":["主干：Funding and long-term maintenance remain barriers","barriers 后接不定式 short phrase to explain 目的","句式适合在讨论限制与挑战的段落使用","指出政策实施的现实障碍，适合讨论评估题型"],"translation":"资金和长期维护仍然是推广有效降温策略的障碍。"}
+            ]
+          },
+          {
+            "title": "How universities are reshaping assessment for AI-era learning",
+            "source": "The Conversation",
+            "published": "2026-07-30",
+            "url": "https://theconversation.com/how-universities-are-reshaping-assessment-for-ai-era-learning-2026-188812",
+            "readingTime": "7",
+            "topic": "教育 / 评估 / AI",
+            "summary": "文章分析多个高校如何调整作业与考试设计以应对生成式 AI 的普及，提出通过开放题、来源记录与口头答辩等方式保障学术诚信与学习目标。",
+            "reason": [
+              "主题贴合教育改革与 AI 应用，常见于研究生英语考试的教育类写作题。",
+              "文章采用案例—问题—解决方案的结构，适合训练段落功能与信息整合能力。",
+              "包含 provenance, formative assessment, authenticity 等学术词汇，有助于写作词汇扩展。",
+              "提供课堂与评估层面的具体措施，便于训练应用型写作与批判性讨论。"
+            ],
+            "vocabulary": [
+              {"word":"assessment","phonetic":"/əˈsɛsmənt/","part":"n.","translation":"评估；测评"},
+              {"word":"provenance","phonetic":"/ˈprɒvənəns/","part":"n.","translation":"来源；出处"},
+              {"word":"authenticity","phonetic":"/ˌɔːθɛnˈtɪsɪti/","part":"n.","translation":"真实性"},
+              {"word":"formative","phonetic":"/ˈfɔːmətɪv/","part":"adj.","translation":"形成性的；过程性的"},
+              {"word":"open-ended","phonetic":"/ˌəʊpənˈɛndɪd/","part":"adj.","translation":"开放式的"},
+              {"word":"integrity","phonetic":"/ɪnˈtɛɡrɪti/","part":"n.","translation":"诚信；正直"},
+              {"word":"rubric","phonetic":"/ˈruːbrɪk/","part":"n.","translation":"评分标准；评分量表"},
+              {"word":"oral defence","phonetic":"/ˈɔːrəl dɪˈfɛns/","part":"n.","translation":"口头答辩"}
+            ],
+            "sentences": [
+              {"original":"Open-ended assignments reduce the utility of simple AI-generated answers.","analysis":["主干：Open-ended assignments reduce the utility of simple AI-generated answers","reduce the utility of ... 为结果结构，说明效果","open-ended 为复合形容词，常用于描述题型","句型适合用于说明措施目的或效果"],"translation":"开放式作业降低了简单 AI 自动生成答案的效用。"},
+              {"original":"Recording provenance helps assess whether a student understood the research process.","analysis":["主干：Recording provenance helps assess whether ...","whether 引导名词性从句作宾语，说明评估内容","句子适合在说明评估方法的段落使用","强调来源记录有助于评估学生理解过程的深度"],"translation":"记录来源有助于评估学生是否理解研究过程。"},
+              {"original":"Oral or recorded defences add a layer of verification to written submissions.","analysis":["主干：Oral or recorded defences add a layer of verification","add a layer of verification to ... 为结果说明","并列主语 oral or recorded defences 强调多种方式","句型适合在建议类段落中使用"],"translation":"口头或录制的答辩为书面提交增加了一道验证环节。"}
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-08-06",
       "status": "ready",
