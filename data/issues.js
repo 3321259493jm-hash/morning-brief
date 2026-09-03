@@ -1,58 +1,45 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-02T08:56:09+08:00",
+  "updatedAt": "2026-09-03T09:02:05+08:00",
   "issues": [
     {
-      "date": "2026-09-02",
+      "date": "2026-09-03",
       "status": "ready",
       "ai": {
-        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
+        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
         "updates": [
           {
-            "event": "Google: Gemini 新增 agentic video understanding（2026-09-01）",
-            "summary": "Google 在 2026-09-01 官方博客宣布，最新 Gemini 模型新增 agentic video understanding，可在视频内容上进行更稳健的多步理解与回答，目标是提高准确性并降低成本与 token 使用。",
-            "howTo": "登录 Google AI Studio 或 Gemini 应用并打开支持的视频理解能力；上传视频或链接现有视频片段，直接询问事件、时序或推理问题。不同模型与入口的可用性以账户和地区为准。",
-            "impact": "学生能用它做课程复盘、案例视频分析、论文资料归纳和演讲拆解；对需要从录屏、实验录像、课堂演示中提取关键信息的场景特别有帮助。",
-            "free": "Google 官方博客说明该能力面向最新 Gemini 模型，并强调提高准确性和降低成本；是否免费、额度和地区覆盖以对应产品页与账户权限为准，官方未说明统一免费配额。",
-            "category": "Gemini 更新",
+            "event": "Google：Gemini API 上线 agentic video understanding（2026-09-03）",
+            "summary": "Google 官方宣布，Gemini 3.7 Flash、3.6 Flash 和 3.5 Flash-Lite 现在支持 agentic video understanding：模型会动态搜索、扫描并检查视频片段，结合画面、音频和文字稿完成更精细的分析；官方称在其基准中成本最多降低 66%、token 消耗最多降低 88%，准确率最多提高 7%。",
+            "howTo": "打开 Google AI Studio，使用 Gemini API 的视频理解能力，上传视频或提供 YouTube 视频，再询问时间点、异常、计数或事件顺序；该能力也可在 Gemini Enterprise Agent Platform 使用。",
+            "impact": "学生可把课程录屏、实验录像和讲座视频交给模型，定位关键片段、整理时间线或核对演示步骤，减少手动拖动视频和逐帧记录的时间。",
+            "free": "官方页面说明功能可通过 Google AI Studio 使用，但没有为该视频能力单独说明统一免费额度、账号资格或地区范围；Gemini API 的免费层只覆盖“部分模型”，具体以定价页和账户显示为准。",
+            "category": "Gemini API 更新",
             "source": {
               "name": "Google 官方博客",
-              "published": "2026-09-01",
+              "published": "2026-09-03",
               "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
             }
           },
           {
-            "event": "Google: Gemini Notebook 新增更灵活用量限制（2026-08-28）",
-            "summary": "Google 在 2026-08-28 公布 Gemini Notebook 引入更灵活、按计算资源划分的用量限制，以支持更可控的实验和长期项目。",
-            "howTo": "在 Google AI Studio / Gemini Notebook 中创建项目并检查当前的 usage limits 设置；根据任务类型选择更适合的计算资源层级，必要时调整会话长度或运行任务规模。",
-            "impact": "学生可在课程项目和研究型作业中更稳定地运行多轮分析、代码与文档协作，而不必被单一固定额度卡住；更适合期末项目和实验复现。",
-            "free": "Google 官方说明是“灵活的 compute-specific usage limits”；是否免费、每月额度和地区适用以账户和产品页面为准，官方未说明统一免费配额。",
+            "event": "Google：Gemini Notebook 改为每五小时刷新一次的灵活用量限制（2026-09-02）",
+            "summary": "Google 官方说明，Gemini Notebook 引入按计算资源划分的灵活用量限制：限制会根据提示复杂度、对话长度、来源数量和所用功能计算，并由每天刷新改为每五小时刷新。达到限制时，Video Overviews 或 Slide Decks 等输出可以延后自动生成。",
+            "howTo": "在 Gemini Notebook 的网页或移动端创建笔记本并观察用量提示；若某项输出超过当前限制，选择延后生成并开启通知，待系统自动完成。该更新从 2026-09-02 起向消费者账号逐步推送。",
+            "impact": "学生做文献综述、课程资料整理或期末项目时，可以更好安排长对话和多来源任务，也能把较重的音频概览或幻灯片生成留到额度刷新后。",
+            "free": "官方只说明从 2026-09-02 起向消费者账号的网页和移动端逐步推出，没有说明统一免费额度、地区覆盖或每个账号的具体计算上限；官方未说明。",
             "category": "Gemini Notebook",
             "source": {
               "name": "Google 官方博客",
-              "published": "2026-08-28",
+              "published": "2026-09-02",
               "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
             }
           },
           {
-            "event": "Google: Expert Intelligence 进入 Gemini Notebook（2026-08-27）",
-            "summary": "Google 在 2026-08-27 公布 Expert Intelligence，允许用户把可信来源，如从 Google Play Books 购买的电子书，直接加入 Gemini Notebook 作为参考背景。",
-            "howTo": "在 Gemini Notebook 中打开“Expert Intelligence”或参考资料入口，选择已加入的电子书或可信来源，再继续提问与写作。具体入口以当前产品版本和账户权限为准。",
-            "impact": "学生适合做文献综述、课程阅读笔记和研究计划撰写：可把教材和指定阅读直接带入对话中，以减少跳转和手工整理。",
-            "free": "官方文案强调“Google Play Books 购买的电子书等来源”可直接接入；是否免费、是否限流和地区覆盖以实际账户与产品页面为准，官方未说明统一免费额度。",
-            "category": "Gemini Notebook",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-08-27",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/expert-intelligence-leading-sources/"
-            }
-          },
-          {
             "event": "GitHub Copilot：Claude Fable 5.1 正式可用（2026-09-01）",
-            "summary": "GitHub 在 2026-09-01 的 changelog 中宣布，Anthropic 的 Claude Fable 5.1 已在 GitHub Copilot 中正式可用。该模型面向长期、自治式编码与知识工作任务设计。",
-            "howTo": "在 GitHub Copilot 的模型选择器切换到 Claude Fable 5.1；若你使用 VS Code、GitHub App 或企业组织环境，需确认组织策略与权限允许该模型。",
-            "impact": "对学生开发者、课程项目和代码审查任务很有用：长任务、多文件理解与跨代码库检索更容易稳定完成，适合研究项目和作业脚本开发。",
-            "free": "官方未说明新增免费额度；是否可用和配额由你的 Copilot 计划、组织政策和模型权限决定。",
-            "category": "Copilot 订阅",
+            "summary": "GitHub changelog 宣布 Anthropic 的 Claude Fable 5.1 在 GitHub Copilot 中可用，定位是长期、自主的编码和知识工作任务。它按 provider list pricing 计费；企业使用时默认需要数据保留以运行 Anthropic 安全分类器。",
+            "howTo": "在 Copilot 的模型选择器中选择 Claude Fable 5.1；支持入口包括 VS Code、Visual Studio、Copilot CLI、coding agent、github.com、移动端和多种 IDE。Business 或 Enterprise 管理员还要在 Copilot 设置中开启该策略，且 rollout 是渐进式的。",
+            "impact": "学生开发者可以用它做跨文件代码理解、持续调试、复杂功能开发和代码库研究；同时应避免把不适合保留的数据放入默认配置的会话。",
+            "free": "官方说明该模型面向 Copilot Pro+、Max、Business 和 Enterprise 用户，并按用量计费；没有宣布新增免费额度。Business/Enterprise 的策略默认关闭，具体配额、价格和 rollout 以计划与组织设置为准。",
+            "category": "Copilot 模型",
             "source": {
               "name": "GitHub 官方更新日志",
               "published": "2026-09-01",
@@ -60,11 +47,11 @@ window.BRIEFING_DATA = {
             }
           },
           {
-            "event": "GitHub Copilot in VS Code：2026 年 8 月更新（2026-08-31）",
-            "summary": "GitHub 在 2026-08-31 的 changelog 中总结了 VS Code 1.132 到 1.135 间的 Copilot 更新，重点改进了代理会话整理、变更审查和长对话导航。",
-            "howTo": "更新 VS Code 与 GitHub Copilot 扩展，并在编辑器中打开 Copilot Chat / Agent 功能；对长项目和多步骤任务使用会话整理和变更审查功能。",
-            "impact": "学生做开源项目、作业修订和代码审查时，更容易在大量上下文中定位关键改动，减少“上下文丢失”带来的返工。",
-            "free": "GitHub 官方更新日志未宣布新增免费额度；配额和可用性仍由你的订阅、组织设置与扩展权限决定。",
+            "event": "GitHub Copilot in VS Code：代理会话与审查工作流更新（2026-08-31）",
+            "summary": "GitHub 对 VS Code 1.132 至 1.135 的 Copilot 更新包括并排安排聊天、用 /btw 开启共享上下文的旁支对话、按提示时间线定位改动、跨应用继续代理会话，以及在完整聊天记录中搜索文本；模型响应页脚还可查看 token 用量。",
+            "howTo": "更新 VS Code 和 Copilot 扩展，在 Agents 窗口使用并排布局或提示时间线；需要临时讨论时输入 /btw，需要回看长对话时使用聊天搜索，并在响应页脚悬停查看 token 用量。",
+            "impact": "学生维护课程项目或开源仓库时，可以把主任务、旁支问题和变更审查分开管理，在长对话中快速找回上下文，便于复盘 AI 生成的代码。",
+            "free": "该 changelog 没有宣布新增免费额度；Copilot 功能的可用性和用量仍取决于账号计划、组织策略与扩展权限，官方未说明统一免费配额。",
             "category": "VS Code / Copilot",
             "source": {
               "name": "GitHub 官方更新日志",
@@ -75,298 +62,274 @@ window.BRIEFING_DATA = {
         ],
         "deals": [
           {
-            "event": "Google Colab（免费托管 Jupyter 环境）",
-            "summary": "Colab 提供免费托管的 Jupyter 笔记本，供学生和研究者在浏览器中运行 Python 代码、数据实验与基础机器学习任务。",
-            "howTo": "访问 https://colab.research.google.com 并用 Google 账号登录；新建笔记本后在 Runtime 菜单选择 GPU / TPU（资源按使用情况与优先级分配）。",
-            "impact": "学生可以在不自备本地 GPU 的情况下完成课程作业、模型原型和小规模实验，尤其适合数据科学和 AI 课程。",
-            "free": "Colab 说明其免费使用方式，但资源并非固定保证，具体 GPU/TPU 类型、时长和分配优先级以官方 FAQ 和账户状态为准。",
+            "event": "Google Colab 免费托管 Jupyter 环境",
+            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务，官方 FAQ 明确提供免费计算资源，包括 GPU 和 TPU，适合机器学习、数据科学与教育。",
+            "howTo": "打开 https://colab.research.google.com，用 Google 账号新建或加载笔记本，在单元格中运行 Python；笔记本可存放在 Google Drive 或从 GitHub 加载。",
+            "impact": "学生可以直接运行课程代码、数据处理和小型机器学习实验，不必先配置本地 Python 环境或购买 GPU。",
+            "free": "官方明确免费；资源不保证且不无限，使用上限会波动，免费托管运行时禁止挖矿、代理等滥用行为，并优先支持正在笔记本中编程的用户。",
             "category": "长期免费云环境",
             "source": {
-              "name": "Google Colab FAQ",
+              "name": "Google Colab 官方 FAQ",
               "published": "官方未说明",
               "url": "https://research.google.com/colaboratory/faq.html"
             }
           },
           {
-            "event": "GitHub Student Developer Pack（学生权益）",
-            "summary": "GitHub 教育包为学生提供大量厂商赞助的开发工具、云资源与学生专属优惠，方便课程项目、作品集和创业实验。",
-            "howTo": "访问 https://education.github.com/pack 并按页面说明使用学校邮箱或学生凭证完成验证与申请。",
-            "impact": "学生可通过该计划接触更多开发者工具和云资源，既能搭建作品集，也能在课题项目中获得更好的开发环境。",
-            "free": "各项优惠的资格与额度由供应商决定；总体页面列出每项福利详情，具体优惠的免费额度和申请条件以相应服务条款为准。",
-            "category": "学生/教育权益",
+            "event": "Gemini API 免费层与 Google AI Studio",
+            "summary": "Google Gemini API 官方定价页提供免费层，包含部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问；页面同时提醒免费层的模型范围并非全部模型。",
+            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型开始实验；正式接入前查看 Gemini API Pricing 页面对应模型、地区和当前限额。",
+            "impact": "学生可以低成本做 API 原型、课程演示和提示词实验，再根据实际用量决定是否升级到付费层。",
+            "free": "官方明确存在免费层，但只写明“部分模型”和免费输入/输出 token，没有在该页面给出适用于所有用户的统一固定额度或地区清单；内容可能用于改进产品，具体以条款为准。",
+            "category": "免费 API / 开发者资源",
             "source": {
-              "name": "GitHub Student Developer Pack",
+              "name": "Google Gemini API 官方定价页",
               "published": "官方未说明",
-              "url": "https://education.github.com/pack"
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
             }
           },
           {
-            "event": "Hugging Face Spaces（免费托管演示应用）",
-            "summary": "Hugging Face Spaces 允许用户免费发布 Gradio / Streamlit / 静态小型演示，便于直接展示模型和项目成果。",
-            "howTo": "访问 https://huggingface.co/spaces，创建一个 Space，选择对应 SDK 并按文档说明上传代码与依赖。",
-            "impact": "学生可以把课程作业、原型模型和实验结果部署成交互式页面，便于展示、评审和远程演示。",
-            "free": "官方文档说明基础 Spaces 可免费创建；GPU / 专用算力与私有化部署可能需要额外付费，具体配额以官方文档说明为准。",
+            "event": "Hugging Face Spaces 免费发布机器学习演示",
+            "summary": "Hugging Face 官方文档说明 Spaces 可把机器学习演示应用直接托管在个人或组织主页，支持 Gradio、Docker 和静态 HTML/JavaScript，适合展示项目与协作。",
+            "howTo": "进入 Hugging Face Spaces，创建 Space，选择 Gradio、Docker 或静态 SDK，上传代码与依赖并发布；需要 GPU 或其他加速硬件时再查看相应升级文档。",
+            "impact": "学生能把模型作业、交互式数据分析或课程原型变成可分享的网页，方便答辩、作品集展示和同伴测试。",
+            "free": "官方文档支持创建和托管 Space，但没有在该页面说明统一免费算力、存储或地区额度；GPU/加速硬件是另列的升级能力，具体费用和配额官方未说明。",
             "category": "长期免费托管",
             "source": {
-              "name": "Hugging Face Spaces 文档",
+              "name": "Hugging Face Spaces 官方文档",
               "published": "官方未说明",
               "url": "https://huggingface.co/docs/hub/spaces"
             }
           },
           {
-            "event": "Diffusers（Hugging Face 开源图像生成工具箱）",
-            "summary": "Diffusers 是 Hugging Face 提供的开源扩散模型工具箱，便于在教学和研究中实现图像生成、微调与实验复现。",
-            "howTo": "访问 https://github.com/huggingface/diffusers，按 README 和示例代码安装依赖、加载模型并运行简单生成任务。",
-            "impact": "学生可以在课程项目中复现实验、比较生成参数与采样逻辑，适合研究型作业和学习扩散模型基础概念。",
-            "free": "GitHub 仓库本身是开源且可免费使用；若调用托管算力或第三方 API，则可能另行产生费用，官方未说明统一免费配额。",
-            "category": "开源工具",
+            "event": "GitHub Student Developer Pack 学生开发者权益",
+            "summary": "GitHub Education 官方页面为经过资格验证的学生汇总开发工具、云资源和学生优惠，适合课程项目、作品集和开发环境搭建。",
+            "howTo": "打开 GitHub Student Developer Pack，按官方流程使用学校邮箱或学生证明申请 GitHub Education 验证，再逐项查看合作方权益和兑换条件。",
+            "impact": "学生可以集中获取开发工具和云服务权益，减少搭建作品集、部署课程项目和学习新技术时的初始成本。",
+            "free": "该页面展示学生权益，但每项福利的资格、额度、地区和有效期由对应合作方决定；统一免费额度官方未说明，申请前需逐项核对。",
+            "category": "学生/教育权益",
             "source": {
-              "name": "Hugging Face – Diffusers (GitHub)",
+              "name": "GitHub Student Developer Pack 官方页面",
               "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
+              "url": "https://education.github.com/pack"
             }
           },
           {
-            "event": "Google AI Studio 免费层（官方定价页）",
-            "summary": "Google AI Studio 的定价页说明其提供 free tier，并列出按模型与用量计费的层级与说明。这类资源可支持学生实验 API 调用与原型构建。",
-            "howTo": "访问 https://aistudio.google.com/ 或 https://ai.google.dev/gemini-api/docs/pricing，登录 Google 账号后按页面说明选择适用模型并查看当前定价层。",
-            "impact": "学生可在不投入高成本前提下试用生成式 AI API，适合期末项目、课程演示与小规模 API 集成实验。",
-            "free": "Google 官方定价页明确有免费层；具体使用额度、地区适用和模型覆盖以定价页与各模型文档说明为准，官方未说明统一适用于所有用户的固定额度。",
-            "category": "免费 API / 开发者资源",
+            "event": "Hugging Face Diffusers 开源扩散模型工具箱",
+            "summary": "Hugging Face 的官方 GitHub 仓库提供 Diffusers 开源工具箱，用于使用和实验扩散模型，仓库包含安装说明、示例和模型加载方式。",
+            "howTo": "打开官方 GitHub 仓库，按 README 安装依赖，选择可用模型并运行示例；本地算力不足时，可结合 Colab 或其他合法计算环境。",
+            "impact": "学生可以复现图像生成实验、比较采样参数并理解扩散模型工作流，适合课程作业和研究原型。",
+            "free": "官方仓库以开源代码形式提供，代码使用许可见仓库 LICENSE；模型权重各自有许可证，托管 GPU、云环境和部分模型可能产生费用，统一免费额度官方未说明。",
+            "category": "开源工具",
             "source": {
-              "name": "Google AI Studio Pricing",
+              "name": "Hugging Face Diffusers 官方 GitHub",
               "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+              "url": "https://github.com/huggingface/diffusers"
             }
           }
         ]
       },
       "english": {
-        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
+        "intro": "精选可免费阅读全文的英语材料，侧重社会、政治与文化议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
         "articles": [
           {
-            "title": "Macquarie University swaps in-person psychology classes with AI chatbot for two subjects",
-            "source": "The Guardian",
+            "title": "How Trump Lost Asia",
+            "source": "The Atlantic",
             "published": "2026-09-02",
-            "url": "https://www.theguardian.com/technology/2026/sep/02/macquarie-university-using-ai-chatbot-tutorials",
-            "readingTime": "8",
-            "topic": "教育 / AI / 学术劳动",
-            "summary": "文章聚焦澳大利亚麦考瑞大学将 AI 聊天机器人引入两门心理学课程的尝试，说明高校正在把部分教学、辅导和反馈流程自动化，并由此引发学术劳动、教师角色和课堂质量的争议。文章既呈现创新的教学实验，也延伸到对“高校是否在用 AI 代替思想工作”的深层担忧。",
+            "url": "https://www.theatlantic.com/podcasts/2026/09/david-frum-show-malcolm-turnbull-australia-pacific-china/688500/",
+            "readingTime": "10",
+            "topic": "国际关系 / 政治传播",
+            "summary": "这期 The Atlantic 播客文字稿先讨论总统财富、政治权力与民主问责之间的关系，随后转向美国在印度洋—太平洋地区的盟友关系。作者通过澳大利亚前总理 Malcolm Turnbull 的访谈，把美国政策的可信度、盟友对安全承诺的判断以及地区战略联系起来；结尾又回到历史与政治读物，形成“现实问题—访谈证据—历史解释”的结构。核心结论是，政策选择不仅影响短期外交，也会改变盟友对美国可靠性的长期预期。",
             "reason": [
-              "主题贴合教育与 AI 变革，濒临考研英语阅读中高频的“技术与教学”题材。",
-              "文章采用“案例—争议—反思”的结构，便于训练中心句、观点与反例的识别。",
-              "涉及 chatbot、tutorial、faculty、pedagogy 等词汇，适合写作与口头表达扩展。",
-              "文章既关注课堂实践，也讨论政策与教师劳动价值，适合作为论述型写作的素材。",
-              "语篇长度适中，句子多包含褒贬对比与因果逻辑，非常适合精读。"
+              "主题涉及盟友、信誉与国际秩序，是考研阅读常见的政治与全球化议题。",
+              "结构由主持人引入、嘉宾访谈和书籍讨论组成，适合练习段落功能与论证层次。",
+              "可训练识别“not only...but also...”式递进、因果和让步关系。",
+              "词汇覆盖 dependable、reputation、strategic、accountability 等抽象表达。",
+              "材料适合积累关于国家形象、外交承诺和制度信任的写作论据。"
             ],
             "vocabulary": [
               {
-                "word": "chatbot",
-                "phonetic": "/ˈtʃæt.bɒt/",
-                "part": "n.",
-                "translation": "聊天机器人"
-              },
-              {
-                "word": "tutorial",
-                "phonetic": "/tjuːˈtɔːriəl/",
-                "part": "n.",
-                "translation": "教程；辅导课"
-              },
-              {
-                "word": "faculty",
-                "phonetic": "/ˈfækəlti/",
-                "part": "n.",
-                "translation": "教师队伍；教职员工"
-              },
-              {
-                "word": "pedagogy",
-                "phonetic": "/ˈpedəɡɒdʒi/",
-                "part": "n.",
-                "translation": "教育学；教学法"
-              },
-              {
-                "word": "automation",
-                "phonetic": "/ˌɔːtəˈmeɪʃən/",
-                "part": "n.",
-                "translation": "自动化"
-              },
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsesmənt/",
-                "part": "n.",
-                "translation": "评估"
-              },
-              {
-                "word": "trajectory",
-                "phonetic": "/trəˈdʒektəri/",
-                "part": "n.",
-                "translation": "发展轨迹；走向"
-              },
-              {
-                "word": "critical",
-                "phonetic": "/ˈkrɪtɪkəl/",
+                "word": "dependable",
+                "phonetic": "/dɪˈpendəbl/",
                 "part": "adj.",
-                "translation": "批判性的"
+                "translation": "可靠的"
               },
               {
-                "word": "workload",
-                "phonetic": "/ˈwɜːkloʊd/",
+                "word": "ally",
+                "phonetic": "/ˈælaɪ/",
                 "part": "n.",
-                "translation": "工作量"
+                "translation": "盟友"
               },
               {
-                "word": "staff cuts",
-                "phonetic": "/stɑːf kʌts/",
-                "part": "n. phr.",
-                "translation": "裁员；裁减人员"
+                "word": "reputation",
+                "phonetic": "/ˌrepjuˈteɪʃn/",
+                "part": "n.",
+                "translation": "声誉；名声"
+              },
+              {
+                "word": "strategic",
+                "phonetic": "/strəˈtiːdʒɪk/",
+                "part": "adj.",
+                "translation": "战略性的"
+              },
+              {
+                "word": "presidency",
+                "phonetic": "/ˈprezɪdənsi/",
+                "part": "n.",
+                "translation": "总统任期；总统职位"
+              },
+              {
+                "word": "accountability",
+                "phonetic": "/əˌkaʊntəˈbɪləti/",
+                "part": "n.",
+                "translation": "问责；责任制"
+              },
+              {
+                "word": "deterioration",
+                "phonetic": "/dɪˌtɪəriəˈreɪʃn/",
+                "part": "n.",
+                "translation": "恶化"
+              },
+              {
+                "word": "circumstance",
+                "phonetic": "/ˈsɜːkəmstæns/",
+                "part": "n.",
+                "translation": "情况；环境"
               }
             ],
             "sentences": [
               {
-                "original": "The university’s move is part of a trend that critics within academia say will lead to further staff cuts and a loss of everything that makes the job worth doing.",
+                "original": "The United States—not by accident or circumstance, but by design—has become a less dependable ally.",
                 "analysis": [
-                  "主干是 The university’s move is part of a trend。",
-                  "that critics within academia say 是定语从句，修饰 trend。",
-                  "lead to further staff cuts and a loss of ... 是结果说明。",
-                  "everything that makes the job worth doing 是抽象名词短语，体现价值判断。",
-                  "这句高度适合讨论教育变革与教师劳动价值的写作。"
+                  "主干是 The United States has become an ally。",
+                  "not by...but by... 构成否定与转折对照。",
+                  "less dependable 是比较级，表示可靠程度下降。",
+                  "破折号插入原因判断，强调这是有意选择而非偶然。"
                 ],
-                "translation": "该校的举动属于一种趋势，而学术界内的批评者认为，这种趋势将导致进一步的裁员，以及“让这份工作值得做”的一切价值的丧失。"
+                "translation": "美国成为一个不那么可靠的盟友，并非出于偶然或环境所致，而是有意为之。"
               },
               {
-                "original": "For some educators, the real concern is not whether AI can tutor students, but whether the technology can do so without eroding the human conditions that make teaching meaningful.",
+                "original": "The strategic and economic position of the Western democracies has deteriorated.",
                 "analysis": [
-                  "主干是 the real concern is not ... but ...。",
-                  "whether AI can tutor students 与 whether the technology can do so ... 是并列的名词性从句。",
-                  "without eroding ... 属于介词短语说明条件或后果。",
-                  "human conditions 处于核心词性位置，概括教育的本质问题。",
-                  "此句适合用于讨论 AI 与教育伦理的论证段落。"
+                  "主干是 position has deteriorated。",
+                  "strategic and economic 是并列形容词作前置修饰。",
+                  "of the Western democracies 表示所属范围。",
+                  "deteriorate 是描述局势恶化的正式动词。"
                 ],
-                "translation": "对一些教育工作者而言，真正担心的不是 AI 能否辅导学生，而是该技术能否在不削弱让教学有意义的人性条件的前提下发挥作用。"
+                "translation": "西方民主国家的战略和经济地位已经恶化。"
               },
               {
-                "original": "The shift may save time, but it risks turning education into a transaction rather than a relationship.",
+                "original": "Americans are not accustomed to learning lessons about democracy from other countries.",
                 "analysis": [
-                  "主干是 The shift may save time, but it risks turning ...。",
-                  "may save time 与 risks turning ... 是并列的语义对比。",
-                  "rather than a relationship 是对照结构，反映教育价值的转变。",
-                  "transaction 和 relationship 形成鲜明对比，适合议论文写作。",
-                  "整句短小有力，适合直接从文章中提炼用于句型训练。"
+                  "主干是 Americans are not accustomed to learning lessons。",
+                  "be accustomed to 后接动名词 learning。",
+                  "about democracy 修饰 lessons，说明经验主题。",
+                  "from other countries 表示经验来源，形成跨国比较视角。"
                 ],
-                "translation": "这种转变可能节省时间，但也可能把教育变成交易，而不是关系。"
+                "translation": "美国人并不习惯从其他国家学习有关民主的教训。"
               }
             ]
           },
           {
-            "title": "AI could cause global economic downturn, Andrew Bailey warns G20",
-            "source": "BBC News",
-            "published": "2026-09-01",
-            "url": "https://www.bbc.co.uk/news/articles/c99dym3prl1o",
-            "readingTime": "7",
-            "topic": "经济 / AI / 金融",
-            "summary": "BBC 报道英国央行行长安德鲁·贝利在 G20 场合警告，人工智能可能带来“波动性”，并由能源冲击等外部因素放大，进而引发全球经济下行风险。文章不仅讨论 AI 对劳动市场和生产率的影响，也强调金融稳定和政策设计的重要性。",
+            "title": "Reclaiming stolen wealth can strengthen democracy—but only if institutions endure",
+            "source": "The Atlantic",
+            "published": "2026-08-29",
+            "url": "https://www.theatlantic.com/ideas/2026/08/reclaim-wealth-trump-corruption/688435/",
+            "readingTime": "9",
+            "topic": "社会 / 民主制度 / 公共治理",
+            "summary": "文章比较秘鲁、菲律宾和尼日利亚追缴前统治者及其家族不当财富的经历，论证资产追回既可能带来正义、恢复法治，也可能因机构薄弱、财富再度被掠夺或家族政治复兴而产生反效果。作者先以跨国案例展示制度如何追踪、冻结和返还资产，再指出追赃需要专门机构、国际合作和长期监督，最后把问题提升到民主自我防卫：如果不处理不当财富，它可能继续转化为政治影响力。",
             "reason": [
-              "题材兼具经济、科技和金融政策，符合研究生英语常见“社会经济与技术关系”写作方向。",
-              "文章以官员发言为主线，典型地体现“观点—论证—政策建议”的结构。",
-              "economic downturn、volatility、energy shocks 等词汇富有定量与政策价值。",
-              "内容兼顾宏观治理与个人影响，适合作为比较型论证或政策讨论素材。",
-              "新闻语体简洁，长句较多，但核心逻辑清晰，适合快速提炼主题句。"
+              "主题集中于制度建设、腐败治理和民主韧性，适合社会科学类阅读。",
+              "论证采用“提出风险—跨国案例—归纳条件—回到现实”的递进结构。",
+              "题目可围绕主旨、例证作用、作者态度和条件关系设置。",
+              "词汇具有较强写作迁移价值，如 reclaim、institution、authoritarian、vulnerability。",
+              "文章适合积累“制度必须持续运作才能产生长期效果”的议论文表达。"
             ],
             "vocabulary": [
               {
-                "word": "downturn",
-                "phonetic": "/ˈdaʊntɜːn/",
-                "part": "n.",
-                "translation": "经济衰退；下滑"
+                "word": "reclaim",
+                "phonetic": "/rɪˈkleɪm/",
+                "part": "v.",
+                "translation": "追回；收回"
               },
               {
-                "word": "volatility",
-                "phonetic": "/ˌvɒləˈtɪləti/",
-                "part": "n.",
-                "translation": "波动性"
+                "word": "authoritarian",
+                "phonetic": "/ɔːˌθɒrəˈteəriən/",
+                "part": "adj.",
+                "translation": "威权的"
               },
               {
-                "word": "governor",
-                "phonetic": "/ˈɡʌvənər/",
+                "word": "institution",
+                "phonetic": "/ˌɪnstɪˈtjuːʃn/",
                 "part": "n.",
-                "translation": "行长；总督"
+                "translation": "制度；机构"
               },
               {
-                "word": "shock",
-                "phonetic": "/ʃɒk/",
-                "part": "n.",
-                "translation": "冲击；震荡"
+                "word": "misappropriated",
+                "phonetic": "/ˌmɪsəˈprəʊprieɪtɪd/",
+                "part": "adj.",
+                "translation": "被挪用的"
               },
               {
-                "word": "regulation",
-                "phonetic": "/ˌreɡjuˈleɪʃən/",
+                "word": "dynasty",
+                "phonetic": "/ˈdaɪnəsti/",
                 "part": "n.",
-                "translation": "监管"
+                "translation": "王朝；家族统治"
               },
               {
-                "word": "productivity",
-                "phonetic": "/ˌprɒdʌkˈtɪvɪti/",
+                "word": "vulnerability",
+                "phonetic": "/ˌvʌlnərəˈbɪləti/",
                 "part": "n.",
-                "translation": "生产率；生产力"
+                "translation": "脆弱性；易受攻击"
               },
               {
-                "word": "stability",
-                "phonetic": "/stəˈbɪləti/",
-                "part": "n.",
-                "translation": "稳定性"
+                "word": "permanent",
+                "phonetic": "/ˈpɜːmənənt/",
+                "part": "adj.",
+                "translation": "长期的；永久的"
               },
               {
-                "word": "employment",
-                "phonetic": "/ɪmˈplɔɪmənt/",
+                "word": "cooperation",
+                "phonetic": "/kəʊˌɒpəˈreɪʃn/",
                 "part": "n.",
-                "translation": "就业"
+                "translation": "合作"
               },
               {
-                "word": "policy",
-                "phonetic": "/ˈpɒləsi/",
-                "part": "n.",
-                "translation": "政策"
-              },
-              {
-                "word": "inflation",
-                "phonetic": "/ɪnˈfleɪʃən/",
-                "part": "n.",
-                "translation": "通胀"
+                "word": "corruptly",
+                "phonetic": "/ˈkərʌptli/",
+                "part": "adv.",
+                "translation": "以腐败方式"
               }
             ],
             "sentences": [
               {
-                "original": "The governor of the Bank of England warned of AI’s “volatility” caused by energy shocks from the US-Iran war.",
+                "original": "Done right, this work can deliver justice and strengthen democratic institutions for the long run.",
                 "analysis": [
-                  "主干是 The governor ... warned of AI’s volatility。",
-                  "caused by energy shocks ... 是过去分词短语，修饰 volatility。",
-                  "from the US-Iran war 是介词短语说明冲击来源。",
-                  "volatility 作为名词高度概括金融与技术风险。",
-                  "这句兼具事件背景与宏观概念，适合分析新闻语体。"
+                  "Done right 是省略条件结构，完整含义是 if done right。",
+                  "主干是 this work can deliver justice and strengthen institutions。",
+                  "两个并列动词说明资产追回的双重效果。",
+                  "for the long run 表示影响具有长期性。"
                 ],
-                "translation": "英格兰银行行长警告说，人工智能可能带来由美伊战争所引发的能源冲击造成的“波动性”。"
+                "translation": "如果做得恰当，这项工作能够实现正义，并长期强化民主制度。"
               },
               {
-                "original": "The concern is not simply that machines will replace workers, but that AI may reshape productivity and labour markets in uneven ways.",
+                "original": "But cleaning up after a corrupt regime also comes with serious challenges and hazards.",
                 "analysis": [
-                  "主干是 The concern is not simply ... but ...。",
-                  "that machines will replace workers 与 that AI may reshape ... 是并列的名词性从句。",
-                  "uneven ways 是重要结果补充，强调不均衡的影响。",
-                  "not simply ... but ... 结构适合写作中提出核心判断。",
-                  "labour markets 是典型的经济学表达。"
+                  "But 引出与前句收益相反的限制。",
+                  "cleaning up after... 是动名词短语作主语。",
+                  "come with 表示“伴随、带来”。",
+                  "serious challenges and hazards 是并列宾语，概括治理成本与风险。"
                 ],
-                "translation": "担忧并不只是机器会取代工人，而是人工智能可能以不均衡的方式重塑生产率和劳动力市场。"
+                "translation": "但清理腐败政权留下的问题也伴随着严峻的挑战和危险。"
               },
               {
-                "original": "In other words, the question is no longer whether AI is powerful, but how governments and institutions can steer it responsibly.",
+                "original": "This work demands permanent institutions specifically tasked to investigate and prosecute, and broad international cooperation.",
                 "analysis": [
-                  "In other words 引导总结句，方便转入政策讨论。",
-                  "the question is no longer whether ... but how ... 结构非常规范。",
-                  "whether AI is powerful 与 how ... can steer it responsibly 形成鲜明层次。",
-                  "responsibly 体现治理视角，适合考试中写作的“方法/建议”段落。",
-                  "整句可以作为结尾句或过渡句。"
+                  "主干是 This work demands institutions and cooperation。",
+                  "specifically tasked to... 是过去分词短语修饰 institutions。",
+                  "to investigate and prosecute 是并列不定式，说明机构职责。",
+                  "and 连接两项必要条件，突出长期机构与国际合作缺一不可。"
                 ],
-                "translation": "换句话说，问题不再是人工智能是否强大，而是各国政府和机构如何负责任地引导它。"
+                "translation": "这项工作需要专门负责调查和起诉的长期机构，也需要广泛的国际合作。"
               }
             ]
           }
