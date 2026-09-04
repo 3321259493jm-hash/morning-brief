@@ -1,6 +1,246 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-03T09:02:05+08:00",
+  "updatedAt": "2026-09-04T08:53:08+08:00",
   "issues": [
+    {
+      "date": "2026-09-04",
+      "status": "ready",
+      "ai": {
+        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
+        "updates": [
+          {
+            "event": "GitHub Copilot：Gemini 3.8 Flash 上线（2026-09-03）",
+            "summary": "GitHub 官方宣布 Google 的 Gemini 3.8 Flash 已加入 GitHub Copilot，可用于复杂终端编码任务，并采用 provider pricing 的用量计费。",
+            "howTo": "更新支持的 Copilot 客户端，在 VS Code、Visual Studio、Copilot CLI、云端 coding agent、Copilot app 或其他列出的 IDE 中打开模型选择器，选择 Gemini 3.8 Flash；如果尚未显示，等待渐进式 rollout。",
+            "impact": "学生可用它检查课程项目的终端操作、跨文件修改和失败恢复；做实验时应保留测试输出，核对模型建议而不是直接提交。",
+            "free": "官方说明可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，按用量计费，2026-12-31 前为 introductory provider pricing；没有宣布统一免费额度，企业管理员还可通过模型策略控制访问。",
+            "category": "Copilot 模型",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+            }
+          },
+          {
+            "event": "GitHub Copilot：四个模型将于 10 月 2 日弃用（2026-09-03）",
+            "summary": "GitHub 公布 2026-10-02 的 Copilot 模型弃用计划：Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 将被移除，并分别建议迁移到 Gemini 3.8 Flash、Kimi K3 或 Claude Opus 5。",
+            "howTo": "在 Copilot Chat、inline edits、ask/agent 模式或代码补全的工作流中盘点旧模型；在组织或企业 Copilot 模型设置中确认替代模型已启用，再通过模型选择器切换并重新运行测试。",
+            "impact": "学生维护课程仓库或个人工具时，可提前固定替代模型并比较输出，避免作业截止日前因模型消失导致提示词和结果变化。",
+            "free": "这是一项模型可用性变更，不是新优惠；官方未说明替代模型的统一免费额度、地区范围或个人计划的具体用量影响。企业和 Business 管理员可能需要手动启用替代模型。",
+            "category": "Copilot 模型生命周期",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
+            }
+          },
+          {
+            "event": "GitHub：逐步重新开放 Copilot Business 和 Enterprise 注册（2026-09-03）",
+            "summary": "GitHub 表示，面向使用信用卡或 PayPal 付款的 Copilot Business 与 Enterprise 客户，注册将在未来数周逐步重新开放；同时加强账户审核并更新计费流程。",
+            "howTo": "打开 GitHub Copilot 计划页选择 Business 或 Enterprise；若首选方案暂不可用，稍后重试。组织管理员应在购买前检查座席预付、下一计费周期和超出包含用量后的付款规则。",
+            "impact": "学生团队或实验室若由组织统一购买 Copilot，可据此安排座席开通和预算；个人学习者不应把组织计划的规则当作个人免费权益。",
+            "free": "官方说明新座席在获得访问前需先付款，超出包含用量可能还需付款；计划价格和座席按比例计费方式不变。该公告没有提供免费计划、免费额度或地区清单。",
+            "category": "Copilot 订阅与计费",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini API 免费层与 Google AI Studio",
+            "summary": "Google Gemini API 官方定价页提供免费层，包括部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问。",
+            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型进行提示词和 API 原型实验；使用前查看定价页的模型范围和当前账户限制。",
+            "impact": "学生可用它做课程演示、文本处理原型和 API 调试，不必先为输入输出 token 付费。",
+            "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 和 AI Studio；没有在该页给出所有用户统一固定额度或地区清单，且免费层内容可用于改进产品。",
+            "category": "免费 API / 开发者资源",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Google Colab 免费托管 Jupyter 环境",
+            "summary": "Google Colab 官方 FAQ 说明，这是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，面向机器学习、数据科学和教育。",
+            "howTo": "打开 Colab，用 Google 账号新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并保存到 Drive 或从 GitHub 加载。",
+            "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置和硬件门槛。",
+            "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费托管运行时限制代理、挖矿、绕过 UI 等滥用行为，并优先支持正在 notebook 中编程的用户。",
+            "category": "长期免费云环境",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Qwen3-0.6B 开放权重模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B：0.6B 参数、32,768 上下文长度，并支持在 thinking 与 non-thinking 模式间切换；页面给出 Transformers、vLLM 和本地工具的运行方式。",
+            "howTo": "在 Hugging Face 打开 Qwen/Qwen3-0.6B，按模型卡安装最新版 Transformers，下载 tokenizer 与模型后运行示例；也可按官方说明使用 Ollama、LM Studio、llama.cpp 或其他支持工具。",
+            "impact": "学生可在本地或 Colab 做轻量推理、提示词对比和多语言实验，理解模型部署而不必调用付费云 API。",
+            "free": "模型权重可从 Hugging Face 页面下载，具体许可证应以模型卡当前显示为准；本地软件、算力和存储可能产生费用，统一免费 API 配额、账号资格和地区范围官方未说明。",
+            "category": "开放模型权重",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+            }
+          },
+          {
+            "event": "Hugging Face Spaces 免费发布机器学习演示",
+            "summary": "Hugging Face 官方文档说明 Spaces 可将机器学习 demo 直接托管到个人或组织主页，支持 Gradio、Docker 以及静态 HTML/JavaScript。",
+            "howTo": "进入 Hugging Face Spaces 创建 Space，选择 Gradio、Docker 或静态 SDK，上传代码和依赖并发布；需要 GPU 或其他加速硬件时再查看官方升级文档。",
+            "impact": "学生能把模型作业、交互式数据分析或课程原型变成可分享网页，便于答辩和同伴测试。",
+            "free": "官方文档说明可创建和托管 Space，但没有在该页说明统一免费算力、存储或地区额度；GPU/加速硬件属于另列的升级能力，费用和配额官方未说明。",
+            "category": "长期免费托管",
+            "source": {
+              "name": "Hugging Face Spaces 官方文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack 中的 Azure 学生权益",
+            "summary": "GitHub Education 官方权益页列出 Microsoft Azure 学生 offer：18 岁以上学生可获得 25+ 项 Azure 云服务的免费访问及 100 美元 Azure credit，且页面写明无需信用卡。",
+            "howTo": "打开 GitHub Student Developer Pack，完成 GitHub Education 学生资格验证，在 Microsoft Azure offer 处按页面入口兑换；使用前核对自己的年龄、地区和账户提示。",
+            "impact": "学生可用云资源部署课程 API、运行小型实验或学习云平台，而不必先绑定信用卡；应设置预算并记录 credit 消耗。",
+            "free": "官方页面写明资格为 18 岁以上学生，权益包括 25+ 项免费 Azure 服务和 100 美元 credit，且无需信用卡；其他地区、有效期和用量细节以兑换页面为准，官方未说明。",
+            "category": "学生/教育权益",
+            "source": {
+              "name": "GitHub Education Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "精选可免费阅读全文的英语材料，侧重社会、文化、健康与公共议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
+        "articles": [
+          {
+            "title": "The Bayeux tapestry: a stupefying, thrilling, horrifying masterpiece that shakes the earth",
+            "source": "The Guardian",
+            "published": "2026-09-03",
+            "url": "https://www.theguardian.com/artanddesign/2026/sep/03/the-bayeux-tapestry-british-museum-london",
+            "readingTime": "10",
+            "topic": "文化 / 艺术史",
+            "summary": "文章以作者在大英博物馆观看贝叶挂毯的体验开篇，先写展陈、色彩和观看节奏，再回溯 1066 年诺曼征服的历史背景。作者把挂毯中央的战斗叙事与上下边框的怪兽、农民和宇宙意象并置，说明作品既有清晰的运动感，也把统治者的战争和普通人的生活放在同一画面中。文章最后认为，挂毯的真实暴力、死亡后果和复杂视角使它超越中世纪遗物，成为关于战争疯狂的普遍表达。",
+            "reason": [
+              "艺术与历史记忆结合，适合考研文化类阅读主题。",
+              "结构是现场观感、历史说明、细节分析和价值判断，便于练习段落功能。",
+              "可训练识别转折、举例、时间顺序和由细节推导主旨。",
+              "词汇覆盖 masterpiece、depict、momentum、consequence 等正式表达。",
+              "适合积累描述文化遗产、叙事视角和公共记忆的写作论据。"
+            ],
+            "vocabulary": [
+              {"word": "stupefying", "phonetic": "/ˈstjuːpɪfaɪɪŋ/", "part": "adj.", "translation": "令人震撼的"},
+              {"word": "masterpiece", "phonetic": "/ˈmɑːstəpiːs/", "part": "n.", "translation": "杰作"},
+              {"word": "depict", "phonetic": "/dɪˈpɪkt/", "part": "v.", "translation": "描绘"},
+              {"word": "definitive", "phonetic": "/dɪˈfɪnətɪv/", "part": "adj.", "translation": "明确的；决定性的"},
+              {"word": "mounting", "phonetic": "/ˈmaʊntɪŋ/", "part": "adj.", "translation": "逐渐增强的"},
+              {"word": "momentum", "phonetic": "/məˈmentəm/", "part": "n.", "translation": "势头；动量"},
+              {"word": "marginal", "phonetic": "/ˈmɑːdʒɪnl/", "part": "adj.", "translation": "边缘的"},
+              {"word": "transcend", "phonetic": "/trænˈsend/", "part": "v.", "translation": "超越"},
+              {"word": "consequence", "phonetic": "/ˈkɒnsɪkwəns/", "part": "n.", "translation": "后果"},
+              {"word": "universal", "phonetic": "/ˌjuːnɪˈvɜːsl/", "part": "adj.", "translation": "普遍的"}
+            ],
+            "sentences": [
+              {
+                "original": "This is pacy art: it hurtles along.",
+                "analysis": [
+                  "主句 This is pacy art 用系动词说明艺术风格。",
+                  "冒号后 it hurtles along 对前句作解释和强化。",
+                  "pacy 是非正式但有画面感的形容词，表示节奏快。",
+                  "hurtle along 用动态动词把观看体验写成高速推进。"
+                ],
+                "translation": "这是一种节奏飞快的艺术：它一路疾驰向前。"
+              },
+              {
+                "original": "The great thing about a border is that you can break it.",
+                "analysis": [
+                  "主干是 The great thing is that...。",
+                  "about a border 是介词短语，限定讨论对象。",
+                  "that 引导表语从句，说明 great thing 的具体内容。",
+                  "break it 既指突破边框也形成字面与比喻双关。"
+                ],
+                "translation": "边框最妙之处在于，你可以打破它。"
+              },
+              {
+                "original": "It’s that honesty that makes this not just a fascinating medieval relic but a universal depiction of the madness that is war.",
+                "analysis": [
+                  "It’s...that... 是强调句，强调 honesty。",
+                  "make A not just B but C 表示递进并列。",
+                  "that is war 是定语从句，修饰 madness。",
+                  "句子从具体作品评价推进到关于战争的普遍判断。"
+                ],
+                "translation": "正是这种诚实，使它不仅是迷人的中世纪遗物，更是对战争疯狂的普遍描绘。"
+              }
+            ]
+          },
+          {
+            "title": "A kidney transplanted from a pig has worked inside a patient for 271 days",
+            "source": "BBC",
+            "published": "2026-09-03",
+            "url": "https://www.bbc.co.uk/news/articles/c305qn2jeggo",
+            "readingTime": "8",
+            "topic": "健康 / 医学伦理",
+            "summary": "BBC 报道美国医生称，一枚移植自猪的肾脏在患者体内工作了 271 天，创下纪录。文章先以患者 Tim Andrews 的经历说明移植让他暂时摆脱透析并获得等待人类供体的时间，再解释猪器官最终失效、器官被取出以及患者后来获得供体肾脏的过程。报道随后把个案放入异种移植的公共背景：美国约有 10 万人等待肾脏，而每年移植数量远少于需求，因此猪器官可能成为等待人类移植的桥梁，但仍不能替代长期安全性和供体分配问题。",
+            "reason": [
+              "医学创新与公共资源短缺结合，是健康和社会议题的交叉主题。",
+              "文章按个案、结果、技术解释、数据背景展开，适合识别新闻论证结构。",
+              "可训练区分事实陈述、患者引语和医生对意义的解释。",
+              "词汇涵盖 transplant、dialysis、shortage、xenotransplantation 等健康表达。",
+              "适合写科技进步伴随伦理审慎、资源公平与希望的议论文。"
+            ],
+            "vocabulary": [
+              {"word": "transplant", "phonetic": "/ˈtrænsplɑːnt/", "part": "n./v.", "translation": "移植"},
+              {"word": "dialysis", "phonetic": "/daɪˈæləsɪs/", "part": "n.", "translation": "透析"},
+              {"word": "bridge", "phonetic": "/brɪdʒ/", "part": "n.", "translation": "过渡手段；桥梁"},
+              {"word": "eventually", "phonetic": "/ɪˈventʃuəli/", "part": "adv.", "translation": "最终"},
+              {"word": "shortage", "phonetic": "/ˈʃɔːtɪdʒ/", "part": "n.", "translation": "短缺"},
+              {"word": "explore", "phonetic": "/ɪkˈsplɔːr/", "part": "v.", "translation": "探索"},
+              {"word": "species", "phonetic": "/ˈspiːʃiːz/", "part": "n.", "translation": "物种"},
+              {"word": "average", "phonetic": "/ˈævərɪdʒ/", "part": "n./adj.", "translation": "平均数；平均的"},
+              {"word": "depressing", "phonetic": "/dɪˈpresɪŋ/", "part": "adj.", "translation": "令人沮丧的"},
+              {"word": "available", "phonetic": "/əˈveɪləbl/", "part": "adj.", "translation": "可获得的"}
+            ],
+            "sentences": [
+              {
+                "original": "The transplant gave Tim Andrews hope.",
+                "analysis": [
+                  "主干是 The transplant gave Andrews hope。",
+                  "give + 人 + 抽象名词构成双宾语结构。",
+                  "过去时 gave 概括已经发生的医疗结果。",
+                  "hope 是报道中的情感结果，为后文患者引语铺垫。"
+                ],
+                "translation": "这次移植给了蒂姆·安德鲁斯希望。"
+              },
+              {
+                "original": "The team say their work shows pig organs can be used as a bridge until a human transplant becomes available.",
+                "analysis": [
+                  "主干是 The team say...，引出医疗团队的判断。",
+                  "their work shows 后接省略 that 的宾语从句。",
+                  "pig organs can be used as a bridge 是被动语态和比喻表达。",
+                  "until 引导时间状语从句，说明过渡作用的终点。"
+                ],
+                "translation": "团队表示，他们的工作显示，猪器官可以在人类移植供体出现前发挥过渡作用。"
+              },
+              {
+                "original": "Doctors and scientists are exploring xenotransplantation – using organs from other species – due to shortages of organs for transplants.",
+                "analysis": [
+                  "主干是 Doctors and scientists are exploring xenotransplantation。",
+                  "using organs from other species 是破折号中的同位解释。",
+                  "due to 引导原因，说明技术探索的现实驱动。",
+                  "shortages of organs for transplants 是名词短语，指向供体不足。"
+                ],
+                "translation": "由于移植器官短缺，医生和科学家正在探索异种移植——使用其他物种的器官。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-09-03",
       "status": "ready",
@@ -2449,5 +2689,5 @@ window.BRIEFING_DATA = {
         ]
       }
     }
-  ]
+  ].slice(0, 7)
 };
