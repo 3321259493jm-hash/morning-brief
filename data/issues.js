@@ -1,6 +1,350 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-04T08:53:08+08:00",
+  "updatedAt": "2026-09-05T08:47:24+08:00",
   "issues": [
+    {
+      "date": "2026-09-05",
+      "status": "ready",
+      "ai": {
+        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
+        "updates": [
+          {
+            "event": "GitHub Copilot：Gemini 3.8 Flash 上线（2026-09-03）",
+            "summary": "GitHub 官方宣布 Google 的 Gemini 3.8 Flash 已加入 GitHub Copilot，面向复杂终端编码任务，并采用按用量计费的 provider pricing。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、云端 coding agent、Copilot app、JetBrains IDE、Xcode 或 Eclipse 中打开模型选择器，选择 Gemini 3.8 Flash；这是渐进式 rollout，暂时看不到时稍后再试。",
+            "impact": "学生可用它检查课程项目的终端操作、跨文件修改和失败恢复；实验时保留测试输出并人工核对建议，不要直接提交生成代码。",
+            "free": "官方列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise；该模型在 2026-12-31 前采用 introductory provider pricing 的按用量计费，未宣布统一免费额度，Business/Enterprise 管理员还可控制模型访问。",
+            "category": "Copilot 模型",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+            }
+          },
+          {
+            "event": "GitHub Copilot：四个模型将于 10 月 2 日弃用（2026-09-03）",
+            "summary": "GitHub 公布 2026-10-02 的模型弃用计划：Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 将从所有 Copilot 体验中移除，并分别建议迁移到 Gemini 3.8 Flash、Kimi K3 或 Claude Opus 5。",
+            "howTo": "盘点 Copilot Chat、inline edits、ask/agent 模式和代码补全中的旧模型；组织或企业管理员在 Copilot 模型设置中启用替代模型，个人用户通过模型选择器切换后重新运行项目测试。",
+            "impact": "维护课程仓库或个人工具的学生可以提前固定替代模型并比较输出，避免作业截止日前因模型下线造成提示词和结果变化。",
+            "free": "这是模型可用性变更而非优惠；官方未说明替代模型的统一免费额度、地区范围或个人计划的具体用量影响，Business/Enterprise 管理员可能需要手动启用替代模型。",
+            "category": "Copilot 模型生命周期",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
+            }
+          },
+          {
+            "event": "GitHub：逐步重新开放 Copilot Business 和 Enterprise 注册（2026-09-03）",
+            "summary": "GitHub 表示，使用信用卡或 PayPal 付款的 Copilot Business 与 Enterprise 客户将在未来数周逐步重新开放注册，并加强账户审核、更新计费体验。",
+            "howTo": "打开 GitHub Copilot 计划页选择 Business 或 Enterprise；若首选方案尚未开放，稍后重试。组织管理员在购买前检查座席预付、下一计费周期和超出包含用量后的付款规则。",
+            "impact": "学生团队或实验室若由组织统一购买 Copilot，可据此安排座席开通和预算；个人学习者不应把组织计划的规则当作个人免费权益。",
+            "free": "官方说明新座席在获得访问前需先付款，超出包含用量可能还需付款；计划价格和座席按比例计费方式不变。该公告没有提供免费计划、免费额度或地区清单。",
+            "category": "Copilot 订阅与计费",
+            "source": {
+              "name": "GitHub 官方更新日志",
+              "published": "2026-09-03",
+              "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google Gemini API 免费层与 AI Studio",
+            "summary": "Google 官方定价页提供 Gemini API 免费层：部分模型有限访问、免费输入和输出 token，并可访问 Google AI Studio。",
+            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型做提示词或 API 原型；开始前查看定价页的模型范围和账户限制。",
+            "impact": "学生可以用它做课程演示、文本处理原型和 API 调试，不必先为免费层的输入输出 token 付费。",
+            "free": "官方明确免费层包括有限模型访问、免费输入/输出 token 和 AI Studio；页面没有给出所有用户统一固定额度或地区清单，免费层内容可用于改进 Google 产品。",
+            "category": "免费 API / 开发者资源",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Google Colab 免费托管 Jupyter 环境",
+            "summary": "Google Colab 官方 FAQ 说明，Colab 是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+            "howTo": "打开 Colab，新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+            "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置与硬件门槛。",
+            "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费运行时限制代理、挖矿和绕过 UI 等行为，并优先支持正在 notebook 中编程的用户。",
+            "category": "长期免费云环境",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Qwen3-0.6B 开放权重模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B：0.6B 参数、32,768 上下文长度，并支持在 thinking 与 non-thinking 模式间切换；模型卡给出 Transformers、vLLM 和本地工具的运行方式。",
+            "howTo": "打开 Hugging Face 的 Qwen/Qwen3-0.6B，按模型卡安装最新版 Transformers，下载 tokenizer 与模型后运行示例；也可按官方说明使用 Ollama、LM Studio、MLX-LM 或 llama.cpp。",
+            "impact": "学生可在本地或 Colab 做轻量推理、提示词对比和多语言实验，理解模型部署而不必调用付费云 API。",
+            "free": "模型权重可从 Hugging Face 页面下载；本地软件、算力和存储可能产生费用，统一免费 API 配额、账号资格和地区范围官方未说明。",
+            "category": "开放模型权重",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+            }
+          },
+          {
+            "event": "Notion AI 免费/Plus 计划试用响应",
+            "summary": "Notion 官方 FAQ 说明，Free 和 Plus 计划用户可获得有限数量的 complimentary AI responses；完整 Notion AI 主要面向 Business 与 Enterprise 计划。",
+            "howTo": "登录 Notion，在页面中选中文本或按空格呼出 AI，尝试总结、改写或翻译；在免费额度用完后查看工作区计划和官方提示，不要默认可无限使用。",
+            "impact": "学生可先用少量响应整理课堂笔记、生成提纲或检查英文表达，再决定是否需要付费计划。",
+            "free": "官方确认 Free 和 Plus 有限免费响应，但未在该 FAQ 统一说明响应总数、地区和重置周期；AI 图片生成的 10 次/24 小时、30 次/30 天限制仅适用于 Business/Enterprise beta。",
+            "category": "长期免费应用功能",
+            "source": {
+              "name": "Notion 官方 AI FAQ",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/help/notion-ai-faqs"
+            }
+          },
+          {
+            "event": "GitHub Education Student Developer Pack：Copilot Student",
+            "summary": "GitHub Education 官方权益页列出经验证学生可使用 GitHub Copilot Student，包含 unlimited code completions、GitHub AI Credits 配额，以及仅限 auto model selection 的有限 chat 和 agent 使用。",
+            "howTo": "打开 GitHub Student Developer Pack，完成学生资格验证，在 GitHub Copilot 权益处按入口开通；开通后在编辑器中使用补全，并在账户页面查看 AI Credits 和 chat/agent 限制。",
+            "impact": "学生可用代码补全辅助课程项目和重复性样板代码，同时保留测试与人工审查，避免把 AI 输出当作未经验证的答案。",
+            "free": "官方权益页写明 Copilot Student 面向 verified students，代码补全 unlimited，并含 AI Credits；chat 和 agent 为 limited，模型仅 auto model selection，其他地区和资格细节以验证页面为准。",
+            "category": "学生/教育权益",
+            "source": {
+              "name": "GitHub Education Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "精选可免费阅读全文的英语材料，侧重健康、社会与公共议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
+        "articles": [
+          {
+            "title": "How the hunger for a new weight loss drug is feeding an industry of fakes",
+            "source": "BBC",
+            "published": "2026-09-04",
+            "url": "https://www.bbc.co.uk/news/articles/cwyz7lrwqdyo",
+            "readingTime": "8",
+            "topic": "健康 / 药品监管",
+            "summary": "文章从一名使用假冒 retatrutide 的女性经历切入，说明这种仍在临床试验中的减重药如何进入黑市，以及使用者报告的恶心、腹泻、脑雾等风险。报道随后转向医生、制药公司和英国监管机构的行动：Eli Lilly 表示已举报超过 14,000 个涉嫌非法营销的网站、广告和社交媒体帖子，监管机构也开展突袭和查扣。结尾把个体对减重药的需求与监管现实并置：GLP-1 药物可能是肥胖治疗的重要进步，但 retatrutide 在美国最早也要到 2027 年底才可能合法上市，未经批准的网络产品不能被当作安全药物。",
+            "reason": [
+              "健康创新、消费者风险与药品监管结合，适合考研健康和社会议题。",
+              "结构由个案体验推进到副作用、企业行动、监管回应和上市时间，新闻层次清楚。",
+              "可训练区分患者主观感受、医生警告、企业声明和可核查事实。",
+              "词汇覆盖 counterfeit、clinical trial、side effect、regulatory 等正式表达。",
+              "适合积累‘技术有潜力但必须经过监管验证’的议论文论据。"
+            ],
+            "vocabulary": [
+              {
+                "word": "counterfeit",
+                "phonetic": "/ˈkaʊntəfɪt/",
+                "part": "adj./n.",
+                "translation": "假冒的；仿制品"
+              },
+              {
+                "word": "retatrutide",
+                "phonetic": "/ˌretəˈtruːtaɪd/",
+                "part": "n.",
+                "translation": "retatrutide（减重药候选物）"
+              },
+              {
+                "word": "clinical trial",
+                "phonetic": "/ˈklɪnɪkl traɪəl/",
+                "part": "n.",
+                "translation": "临床试验"
+              },
+              {
+                "word": "side effect",
+                "phonetic": "/ˈsaɪd ɪfekt/",
+                "part": "n.",
+                "translation": "副作用"
+              },
+              {
+                "word": "disclose",
+                "phonetic": "/dɪˈskləʊz/",
+                "part": "v.",
+                "translation": "透露；披露"
+              },
+              {
+                "word": "curb",
+                "phonetic": "/kɜːb/",
+                "part": "v.",
+                "translation": "抑制；遏制"
+              },
+              {
+                "word": "unapproved",
+                "phonetic": "/ˌʌnəˈpruːvd/",
+                "part": "adj.",
+                "translation": "未经批准的"
+              },
+              {
+                "word": "regulatory",
+                "phonetic": "/ˈreɡjələtəri/",
+                "part": "adj.",
+                "translation": "监管的；规章的"
+              },
+              {
+                "word": "legally",
+                "phonetic": "/ˈliːɡəli/",
+                "part": "adv.",
+                "translation": "合法地；法律上"
+              },
+              {
+                "word": "at the earliest",
+                "phonetic": "/æt ði ˈɜːliɪst/",
+                "part": "phr.",
+                "translation": "最早"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "But retatrutide is still in trials.",
+                "analysis": [
+                  "But 构成转折，纠正前文对药物效果的乐观印象。",
+                  "主干是 retatrutide is still in trials。",
+                  "still 强调试验状态截至报道时仍未改变。",
+                  "in trials 是介词短语作表语，简洁表达研发阶段。"
+                ],
+                "translation": "但 retatrutide 仍处于试验阶段。"
+              },
+              {
+                "original": "Doctors are becoming increasingly worried about the side effects they are seeing amongst users of these counterfeit weight-loss drugs.",
+                "analysis": [
+                  "主干是 Doctors are becoming increasingly worried。",
+                  "become + worried 表示状态逐渐变化，increasingly 强化趋势。",
+                  "about the side effects 是介词短语，说明担忧对象。",
+                  "they are seeing amongst users 是定语从句，修饰 side effects。",
+                  "these counterfeit weight-loss drugs 是名词短语，点明问题来源。"
+                ],
+                "translation": "医生越来越担心在这些假冒减重药使用者身上看到的副作用。"
+              },
+              {
+                "original": "For now, there is still a long way to go before retatrutide gets approval anywhere.",
+                "analysis": [
+                  "For now 是时间状语，限定结论适用于目前阶段。",
+                  "there is still a long way to go 是存在句和隐喻表达，表示距离目标尚远。",
+                  "before 引导时间状语从句，说明获得批准是尚未实现的节点。",
+                  "anywhere 放在句末，扩大否定范围，强调尚无任何地区批准。"
+                ],
+                "translation": "目前，retatrutide 要在任何地方获批仍有很长的路要走。"
+              }
+            ]
+          },
+          {
+            "title": "The U.N. backs a new world map showing Africa in its true relative size",
+            "source": "NPR",
+            "published": "2026-09-04",
+            "url": "https://www.npr.org/2026/09/04/nx-s1-5958611/africa-world-map-un-vote",
+            "readingTime": "7",
+            "topic": "社会 / 教育 / 文化",
+            "summary": "NPR 报道联合国大会以 164 票赞成、1 票反对、6 票弃权通过‘Correct the Map’决议，鼓励更广泛使用能够显示真实面积比例的等积投影，例如 Equal Earth。文章先解释决议并不具有法律约束力，也不会要求各国放弃用于导航的 Mercator 投影，再说明地图不仅呈现地理，还会影响教育、想象和集体认知。Mercator 投影保留形状却夸大高纬度地区的面积，使非洲等赤道附近地区看起来更小；支持者因此希望学校、媒体和国际机构采用更公平的视觉表达，而美国则认为该倡议带有意识形态色彩并投了反对票。",
+            "reason": [
+              "地图、教育与集体认知结合，适合社会文化类考研阅读。",
+              "文章先报票决，再解释投影技术，最后呈现支持者与反对者立场，论证结构完整。",
+              "可训练识别让步、因果、对比和‘事实—解释—评价’的段落功能。",
+              "词汇覆盖 resolution、projection、distort、proportionally 等抽象表达。",
+              "适合写视觉呈现如何影响知识、公共叙事与公平意识。"
+            ],
+            "vocabulary": [
+              {
+                "word": "resolution",
+                "phonetic": "/ˌrezəˈluːʃn/",
+                "part": "n.",
+                "translation": "决议"
+              },
+              {
+                "word": "representation",
+                "phonetic": "/ˌreprɪzenˈteɪʃn/",
+                "part": "n.",
+                "translation": "表现；呈现"
+              },
+              {
+                "word": "projection",
+                "phonetic": "/prəˈdʒekʃn/",
+                "part": "n.",
+                "translation": "投影（地图制作法）"
+              },
+              {
+                "word": "legally binding",
+                "phonetic": "/ˈliːɡəli ˈbaɪndɪŋ/",
+                "part": "adj.",
+                "translation": "具有法律约束力的"
+              },
+              {
+                "word": "distort",
+                "phonetic": "/dɪˈstɔːt/",
+                "part": "v.",
+                "translation": "扭曲；使失真"
+              },
+              {
+                "word": "proportionally",
+                "phonetic": "/prəˈpɔːʃənəli/",
+                "part": "adv.",
+                "translation": "按比例地"
+              },
+              {
+                "word": "misleading",
+                "phonetic": "/ˌmɪsˈliːdɪŋ/",
+                "part": "adj.",
+                "translation": "误导性的"
+              },
+              {
+                "word": "collective perception",
+                "phonetic": "/kəˈlektɪv pəˈsepʃn/",
+                "part": "n.",
+                "translation": "集体认知"
+              },
+              {
+                "word": "adopt",
+                "phonetic": "/əˈdɒpt/",
+                "part": "v.",
+                "translation": "采用；采纳"
+              },
+              {
+                "word": "ideological",
+                "phonetic": "/ˌaɪdiəˈlɒdʒɪkl/",
+                "part": "adj.",
+                "translation": "意识形态的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Maps shape our understanding of the world.",
+                "analysis": [
+                  "主干是 Maps shape our understanding。",
+                  "shape 在这里是使形成、塑造的及物动词。",
+                  "our understanding of the world 是宾语名词短语。",
+                  "句子用一般现在时表达具有普遍性的观点。",
+                  "短句把技术工具与认知结果直接连接，适合作为段落主旨。"
+                ],
+                "translation": "地图塑造着我们对世界的理解。"
+              },
+              {
+                "original": "The resolution is not legally binding and does not require countries or institutions to abandon the centuries-old Mercator projection.",
+                "analysis": [
+                  "主干由两个并列谓语 is not 和 does not require 构成。",
+                  "not legally binding 说明决议的法律效力有限。",
+                  "require + 宾语 + to do 表示要求某人做某事，本句用否定形式。",
+                  "to abandon ... 是不定式补足语，Mercator projection 是 abandon 的宾语。",
+                  "centuries-old 是复合形容词，压缩了历史背景信息。"
+                ],
+                "translation": "该决议不具有法律约束力，也不要求各国或机构放弃使用了数百年的墨卡托投影。"
+              },
+              {
+                "original": "That contrasts with the traditional Mercator projection.",
+                "analysis": [
+                  "That 指代前文 Equal Earth 等积投影的面积优势。",
+                  "contrast with 表示与另一对象形成对比。",
+                  "the traditional Mercator projection 是介词 with 的宾语。",
+                  "短句承担转折功能，引出下一段对墨卡托投影的解释。",
+                  "一般现在时使对比成为稳定的知识性判断。"
+                ],
+                "translation": "这与传统的墨卡托投影形成对比。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-09-04",
       "status": "ready",
