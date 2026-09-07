@@ -1,3 +1,240 @@
+const todaysIssue = {
+  "date": "2026-09-07",
+  "status": "ready",
+  "ai": {
+    "intro": "本期优先收录 9 月 3—4 日官方发布的可操作更新，并把免费条件与尚未说明的限制分开写明。",
+    "updates": [
+      {
+        "event": "Gemini 应用与 API 上线 Lyria 3.5 音乐生成（2026-09-04）",
+        "summary": "Google 官方宣布 Lyria 3.5 已进入 Gemini app 和 Gemini API，主打更具表现力的人声、更丰富的编曲和更高保真度；Gemini app 新增流派选择/描述、模板以及短曲或长曲选择。",
+        "howTo": "在 Gemini 网页或移动端描述歌曲主题，选择流派和人声/器乐并选模板；开发者可进入 Google AI Studio 的 Lyria 3.5 入口或阅读 Gemini API 音乐生成文档。官方称网页和移动端全球可用。",
+        "impact": "学生可以为课程展示、短视频或语言学习制作背景音乐和铃声，也可把不同提示词、曲式和时长记录成可复现实验；发布前应核对平台的使用条款和输出权利。",
+        "free": "官方公告确认全球网页和移动端可用，但未说明 Gemini app、AI Studio、API 各自的免费额度、账号资格、地区例外或生成次数；API 使用条件应以官方定价和文档为准。",
+        "category": "AI 音乐生成",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-04",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
+        }
+      },
+      {
+        "event": "Google Translate 更新后台实时翻译与 iOS 听筒模式（2026-09-04）",
+        "summary": "Google 官方称 Android 用户现在可在后台继续运行实时翻译，甚至锁屏；iOS 用户可在全球范围通过手机听筒直接听实时翻译。公告同时说明 Live Translate 覆盖 70 多种语言。",
+        "howTo": "在 Android 或 iOS 的 Google Translate 中打开 Live Translate；Android 可切到其他应用或锁屏继续，iOS 在没有耳机时把手机贴近耳朵收听。具体语言组合以应用当前界面为准。",
+        "impact": "学生参加国际讲座、旅行调研或跨语言访谈时，可以减少盯屏时间；重要术语仍应结合原音、讲义和人工复核，不能把机器翻译当作正式引用。",
+        "free": "官方公告没有说明该功能的价格、账号要求、逐日/逐月配额或全部语言组合限制；仅明确 Android 后台功能和 iOS 听筒功能的上述可用范围。",
+        "category": "AI 翻译",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-04",
+          "url": "https://blog.google/products-and-platforms/products/translate/google-translate-ios-android-upgrades/"
+        }
+      },
+      {
+        "event": "Google AI Educator Series 增加月度模块与 9 月 19 日 Badge-a-thon（2026-09-03）",
+        "summary": "Google 官方宣布面向 K-12 教育者的 Google AI Educator Series 增加新内容：每月第一个星期三更新模块，并介绍 Gemini Guided Learning、Deep Research 和互动式学习活动；系列为免费、按需学习，短课时少于 15 分钟。",
+        "howTo": "打开 Google AI Educator Series，按模块学习并完成理解检查；教育者还可参加 9 月 19 日的线上 Badge-a-thon。研究生可参考其中关于 Deep Research 的 inquiry 模块，再把检索结果与原始文献逐条核对。",
+        "impact": "学生可把课程当作 AI 素养与研究流程的入门材料，练习把问题拆成研究计划、证据和可审计的结论；教师可借鉴自动化通知、个性化辅导和互动活动的课堂设计。",
+        "free": "官方明确系列为 no cost、按需学习，Badge-a-thon 日期为 2026-09-19；公告面向 K-12 教育者，未说明所有地区的报名资格、证书数量或后续模块的其他限制。",
+        "category": "AI 教育与学习",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-03",
+          "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+        }
+      },
+      {
+        "event": "GitHub 新增隐私安全的仓库 star history REST API（2026-09-04）",
+        "summary": "GitHub 官方更新日志宣布新的 star history REST API：可以按时间戳取得历史 star 数，而不暴露单个 stargazer 身份，用来替代受隐私限制影响的逐个 stargazer 列表场景。",
+        "howTo": "阅读 GitHub REST API 的 Get repository star history 文档，在仓库、组织或企业的工具中调用该 endpoint；把旧的身份列表依赖改为只保存时间序列统计，并根据文档配置认证和权限。",
+        "impact": "学生做开源项目分析时可以绘制增长曲线、比较发布节点与关注度，而不收集个人身份；课程报告应说明数据是聚合计数，并记录抓取时间与仓库。",
+        "free": "公告未说明该 endpoint 的请求价格、配额、地区或所有认证方式；可用权限和限流应以链接的 GitHub REST API 文档为准。",
+        "category": "开发者 API 与隐私",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-04",
+          "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Gemini API 免费层与 Google AI Studio",
+        "summary": "Google 官方定价页列出免费层：有限访问部分模型、免费输入与输出 token，并可使用 Google AI Studio。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型做提示词或 API 原型；调用前查看当前模型对应的限额和条款。",
+        "impact": "学生可以用免费层做文本处理、课程演示和 API 调试，先验证原型再决定是否需要付费吞吐。",
+        "free": "官方明确免费层含有限模型访问、免费输入/输出 token 和 AI Studio；固定请求额度、地区清单和重置周期官方未说明，免费层内容可用于改进 Google 产品。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Google Colab 官方 FAQ 说明，Colab 是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置与硬件门槛。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费运行时限制绕过 UI、远程控制、挖矿等行为，并优先支持正在 notebook 中编程的用户。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education 的 Copilot Student 学生权益",
+        "summary": "GitHub Education 官方权益页列出，经验证学生可使用 GitHub Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅限 auto model selection 的有限 chat 和 agent 使用。",
+        "howTo": "打开 GitHub Student Developer Pack，完成学生资格验证，在 GitHub Copilot 权益入口开通；开通后在编辑器使用补全，并在账户页面查看 AI Credits 与 chat/agent 限制。",
+        "impact": "学生可用代码补全辅助课程项目和重复性样板代码，同时保留测试和人工审查，不把 AI 输出当作未经验证的答案。",
+        "free": "官方权益页说明 Copilot Student 面向 verified students，代码补全 unlimited，并含 AI Credits；chat 和 agent 为 limited，模型仅 auto model selection，其他资格细节以验证页面为准。",
+        "category": "学生/教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 的公开模型卡与下载入口，列出 80B 总参数、3B 激活参数和原生 262,144 token 上下文，并给出 Transformers 等运行方向。",
+        "howTo": "打开 Qwen 官方模型卡，按其 Quickstart 安装 Transformers 主分支，或选择模型卡列出的 vLLM、Ollama、LM Studio、MLX-LM 和 llama.cpp 方向；先用短输入测试本地资源。",
+        "impact": "有 GPU 或云端 notebook 的学生可以研究稀疏 MoE、长上下文和本地推理，把模型卡指标与自己的显存、速度和质量实测分开记录。",
+        "free": "模型卡提供公开权重入口，但本地软件、GPU、存储和网络可能产生成本；官方模型卡未说明统一免费 API 配额、账号资格、地区范围或服务保证。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选近两周免费可读材料，覆盖劳动与产业、家庭分工、文化遗产；每篇提供考研英语二风格的结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "Minister to meet Jaguar Land Rover boss as thousands of job cuts expected",
+        "source": "BBC",
+        "published": "2026-09-06",
+        "url": "https://www.bbc.co.uk/news/articles/crer948xq00o",
+        "readingTime": "7",
+        "topic": "经济 / 产业与就业",
+        "summary": "文章报道英国商业大臣将与 Jaguar Land Rover 负责人会面，而公司正因关税影响和此前网络攻击的后果面临大规模裁员预期。报道先交代企业宣布的自愿裁员计划及工会对汽车业“完美风暴”的判断，再解释政府对电动车销售目标的调整讨论。后文补充 JLR 英国与海外员工规模、2025 年网络攻击造成的停产、产量下降和损失估计，最后把当前裁员放回企业削减成本、恢复韧性与产业政策的交叉背景中。",
+        "reason": [
+          "就业、产业政策、网络风险和电动车转型相互作用，适合经济类考研阅读。",
+          "结构由最新决定推进到工会反应，再转入政策解释和历史数据，便于判断段落功能。",
+          "可训练区分公司发言、工会观点、部长解释和报道事实。",
+          "词汇集中在 voluntary redundancy、resilience、mitigate、regulation 等正式表达。",
+          "适合写作中论证技术冲击如何通过企业成本传导到就业。"
+        ],
+        "vocabulary": [
+          {"word": "voluntary redundancy", "phonetic": "/ˌvɒləntəri rɪˈdʌndənsi/", "part": "n.", "translation": "自愿裁员"},
+          {"word": "resilience", "phonetic": "/rɪˈzɪliəns/", "part": "n.", "translation": "韧性；恢复力"},
+          {"word": "mitigate", "phonetic": "/ˈmɪtɪɡeɪt/", "part": "v.", "translation": "缓解；减轻"},
+          {"word": "regulation", "phonetic": "/ˌreɡjuˈleɪʃən/", "part": "n.", "translation": "规章；监管"},
+          {"word": "tariff", "phonetic": "/ˈtærɪf/", "part": "n.", "translation": "关税"},
+          {"word": "manufacturing", "phonetic": "/ˌmænjʊˈfæktʃərɪŋ/", "part": "n.", "translation": "制造业；生产"},
+          {"word": "subsequent", "phonetic": "/ˈsʌbsɪkwənt/", "part": "adj.", "translation": "随后的"},
+          {"word": "consultation", "phonetic": "/ˌkɒnsəlˈteɪʃən/", "part": "n.", "translation": "磋商；咨询"}
+        ],
+        "sentences": [
+          {
+            "original": "It did not rule out the prospect of some compulsory redundancies as part of the plans.",
+            "analysis": [
+              "主干是 It did not rule out the prospect。",
+              "rule out 表示排除可能性，否定形式保留了未来不确定性。",
+              "of some compulsory redundancies 作 prospect 的后置限定。",
+              "as part of the plans 是介词短语，说明该可能性属于整体方案。"
+            ],
+            "translation": "公司没有排除计划中包含部分强制裁员的可能性。"
+          },
+          {
+            "original": "The cyber attack in September 2025 led to the shut down of all manufacturing at JLR for several weeks.",
+            "analysis": [
+              "主干是 The cyber attack led to the shut down。",
+              "in September 2025 是时间后置修饰，限定攻击发生时间。",
+              "of all manufacturing at JLR 说明停摆对象和地点。",
+              "for several weeks 表示结果持续时间，适合分析因果链。"
+            ],
+            "translation": "2025 年 9 月的网络攻击导致 JLR 全部生产停摆数周。"
+          },
+          {
+            "original": "That led to a 27% drop in overall production at the company, which is one of the West Midlands' biggest employers.",
+            "analysis": [
+              "That 指代前句停产，构成清晰的指代与因果衔接。",
+              "led to a 27% drop 是核心因果结构。",
+              "which 引导非限制性定语从句，补充公司在当地就业中的重要性。",
+              "数字事实与背景说明并列，增强报道的论证力度。"
+            ],
+            "translation": "这导致该公司总产量下降 27%；该公司是西米德兰兹最大的雇主之一。"
+          }
+        ]
+      },
+      {
+        "title": "Why more women carry the 'mental load' - and how couples can share it",
+        "source": "BBC",
+        "published": "2026-09-05",
+        "url": "https://www.bbc.co.uk/news/articles/c24j1r45r49o",
+        "readingTime": "7",
+        "topic": "社会 / 家庭与性别分工",
+        "summary": "文章讨论家庭中的 mental load，即计划、记忆和组织日常事务的持续性认知负担为何常由女性承担，以及伴侣如何分担。报道先用受访者经历说明产假长度差异如何让女性早早成为“default parent”，再比较英国家庭法定产假与陪产假，并转向工作场所能够采取的示范和沟通措施。后半部分用一位父亲从“询问晚饭吃什么”改为先查看冰箱、提出选项的例子，说明真正分担不仅是执行任务，也包括承担决策责任。",
+        "reason": [
+          "家庭劳动、职场制度与性别角色结合，主题贴近社会议题写作。",
+          "文章按概念解释、制度背景、职场建议、个人案例递进，适合概括段落关系。",
+          "可训练识别受访者引语、统计式制度信息和案例论证的证据功能。",
+          "词汇覆盖 disparity、default parent、statutory、disproportionately 等抽象表达。",
+          "案例把抽象的 mental load 转化为可观察行为，适合积累举例论证方式。"
+        ],
+        "vocabulary": [
+          {"word": "mental load", "phonetic": "/ˈmentl ləʊd/", "part": "n.", "translation": "心理负担；认知负荷"},
+          {"word": "disparity", "phonetic": "/dɪˈspærəti/", "part": "n.", "translation": "差距；不平等"},
+          {"word": "maternity leave", "phonetic": "/məˈtɜːnəti liːv/", "part": "n.", "translation": "产假"},
+          {"word": "paternity leave", "phonetic": "/pəˈtɜːnəti liːv/", "part": "n.", "translation": "陪产假"},
+          {"word": "statutory", "phonetic": "/ˈstætʃətəri/", "part": "adj.", "translation": "法定的"},
+          {"word": "disproportionately", "phonetic": "/ˌdɪsprəˈpɔːʃənətli/", "part": "adv.", "translation": "不成比例地"},
+          {"word": "default parent", "phonetic": "/dɪˈfɔːlt ˈpeərənt/", "part": "n.", "translation": "默认主要照护者"},
+          {"word": "opt out", "phonetic": "/ɒpt aʊt/", "part": "phr.v.", "translation": "选择不参加；退出"}
+        ],
+        "sentences": [
+          {
+            "original": "If you become the person who knows everything, everybody starts coming to you for everything.",
+            "analysis": [
+              "If 引导条件从句，主句说明条件成立后的持续结果。",
+              "the person who knows everything 中 who 从句限定 person。",
+              "starts coming to you 是主句谓语，to you 表示求助对象。",
+              "everything 的重复形成强调，展示 mental load 的全面性。"
+            ],
+            "translation": "如果你成了那个什么都知道的人，大家就会开始什么事都来找你。"
+          },
+          {
+            "original": "Some employers offer extra parental leave to their workers, but most people earn less when on maternity or paternity leave.",
+            "analysis": [
+              "but 连接两个分句，形成福利存在与收入代价之间的转折。",
+              "offer extra parental leave 是前半句核心谓语。",
+              "when on maternity or paternity leave 是省略主语和 be 的时间状语。",
+              "most people earn less 把制度安排与实际选择成本联系起来。"
+            ],
+            "translation": "一些雇主向员工提供额外育儿假，但多数人在休产假或陪产假时收入会减少。"
+          },
+          {
+            "original": "He learned he could come to her with options for dinner, having already looked in the fridge.",
+            "analysis": [
+              "主干是 He learned，后接省略 that 的宾语从句。",
+              "could come to her with options 表示带着已准备好的方案来沟通。",
+              "having already looked in the fridge 是完成式分词短语，说明先行动作。",
+              "该句用具体动作展示如何把决策责任而非单一任务分担出去。"
+            ],
+            "translation": "他意识到自己可以先查看冰箱，再带着晚餐选项去和妻子商量。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 window.BRIEFING_DATA = {
   "updatedAt": "2026-09-06T08:46:00+08:00",
   "issues": [
@@ -2336,3 +2573,8 @@ window.BRIEFING_DATA = {
     }
   ]
 };
+
+window.BRIEFING_DATA.updatedAt = "2026-09-07T08:49:00+08:00";
+window.BRIEFING_DATA.issues = [todaysIssue, ...window.BRIEFING_DATA.issues]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 7);
