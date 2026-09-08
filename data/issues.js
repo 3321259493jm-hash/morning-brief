@@ -1,15 +1,15 @@
 const todaysIssue = {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "status": "ready",
   "ai": {
-    "intro": "本期优先收录 9 月 3—4 日官方发布的可操作更新，并把免费条件与尚未说明的限制分开写明。",
+    "intro": "本期优先收录 9 月 3—4 日已核验的官方发布，并把免费条件与官方未说明的限制分开写明。",
     "updates": [
       {
-        "event": "Gemini 应用与 API 上线 Lyria 3.5 音乐生成（2026-09-04）",
-        "summary": "Google 官方宣布 Lyria 3.5 已进入 Gemini app 和 Gemini API，主打更具表现力的人声、更丰富的编曲和更高保真度；Gemini app 新增流派选择/描述、模板以及短曲或长曲选择。",
-        "howTo": "在 Gemini 网页或移动端描述歌曲主题，选择流派和人声/器乐并选模板；开发者可进入 Google AI Studio 的 Lyria 3.5 入口或阅读 Gemini API 音乐生成文档。官方称网页和移动端全球可用。",
-        "impact": "学生可以为课程展示、短视频或语言学习制作背景音乐和铃声，也可把不同提示词、曲式和时长记录成可复现实验；发布前应核对平台的使用条款和输出权利。",
-        "free": "官方公告确认全球网页和移动端可用，但未说明 Gemini app、AI Studio、API 各自的免费额度、账号资格、地区例外或生成次数；API 使用条件应以官方定价和文档为准。",
+        "event": "Gemini app 与 Gemini API 上线 Lyria 3.5 音乐生成（2026-09-04）",
+        "summary": "Google 官方博客确认 Lyria 3.5 已在 Gemini app 和 Gemini API 中上线，主打更具表现力的人声和更丰富的编曲，能够生成更高保真的音乐轨道。",
+        "howTo": "在 Gemini 网页或移动端打开音乐生成入口，输入主题并选择风格/人声/器乐；开发者可在 Google AI Studio 和 Gemini API 文档中使用 Lyria 3.5。官方说明全局网页和移动端均可用。",
+        "impact": "学生可用它快速做课程展示背景音乐、短视频音乐、铃声或创作灵感实验；但仍需核对平台的输出权利和使用条款，避免用于未授权内容。",
+        "free": "官方说明该功能在 Gemini app 与网页全球可用，且 API 亦在 Google AI Studio 里可用；但官方未说明具体免费额度、账号资格、地区例外和生成次数。",
         "category": "AI 音乐生成",
         "source": {
           "name": "Google 官方博客",
@@ -18,52 +18,327 @@ const todaysIssue = {
         }
       },
       {
-        "event": "Google Translate 更新后台实时翻译与 iOS 听筒模式（2026-09-04）",
-        "summary": "Google 官方称 Android 用户现在可在后台继续运行实时翻译，甚至锁屏；iOS 用户可在全球范围通过手机听筒直接听实时翻译。公告同时说明 Live Translate 覆盖 70 多种语言。",
-        "howTo": "在 Android 或 iOS 的 Google Translate 中打开 Live Translate；Android 可切到其他应用或锁屏继续，iOS 在没有耳机时把手机贴近耳朵收听。具体语言组合以应用当前界面为准。",
-        "impact": "学生参加国际讲座、旅行调研或跨语言访谈时，可以减少盯屏时间；重要术语仍应结合原音、讲义和人工复核，不能把机器翻译当作正式引用。",
-        "free": "官方公告没有说明该功能的价格、账号要求、逐日/逐月配额或全部语言组合限制；仅明确 Android 后台功能和 iOS 听筒功能的上述可用范围。",
-        "category": "AI 翻译",
-        "source": {
-          "name": "Google 官方博客",
-          "published": "2026-09-04",
-          "url": "https://blog.google/products-and-platforms/products/translate/google-translate-ios-android-upgrades/"
-        }
-      },
-      {
-        "event": "Google AI Educator Series 增加月度模块与 9 月 19 日 Badge-a-thon（2026-09-03）",
-        "summary": "Google 官方宣布面向 K-12 教育者的 Google AI Educator Series 增加新内容：每月第一个星期三更新模块，并介绍 Gemini Guided Learning、Deep Research 和互动式学习活动；系列为免费、按需学习，短课时少于 15 分钟。",
-        "howTo": "打开 Google AI Educator Series，按模块学习并完成理解检查；教育者还可参加 9 月 19 日的线上 Badge-a-thon。研究生可参考其中关于 Deep Research 的 inquiry 模块，再把检索结果与原始文献逐条核对。",
-        "impact": "学生可把课程当作 AI 素养与研究流程的入门材料，练习把问题拆成研究计划、证据和可审计的结论；教师可借鉴自动化通知、个性化辅导和互动活动的课堂设计。",
-        "free": "官方明确系列为 no cost、按需学习，Badge-a-thon 日期为 2026-09-19；公告面向 K-12 教育者，未说明所有地区的报名资格、证书数量或后续模块的其他限制。",
-        "category": "AI 教育与学习",
-        "source": {
-          "name": "Google 官方博客",
-          "published": "2026-09-03",
-          "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
-        }
-      },
-      {
-        "event": "GitHub 新增隐私安全的仓库 star history REST API（2026-09-04）",
-        "summary": "GitHub 官方更新日志宣布新的 star history REST API：可以按时间戳取得历史 star 数，而不暴露单个 stargazer 身份，用来替代受隐私限制影响的逐个 stargazer 列表场景。",
-        "howTo": "阅读 GitHub REST API 的 Get repository star history 文档，在仓库、组织或企业的工具中调用该 endpoint；把旧的身份列表依赖改为只保存时间序列统计，并根据文档配置认证和权限。",
-        "impact": "学生做开源项目分析时可以绘制增长曲线、比较发布节点与关注度，而不收集个人身份；课程报告应说明数据是聚合计数，并记录抓取时间与仓库。",
-        "free": "公告未说明该 endpoint 的请求价格、配额、地区或所有认证方式；可用权限和限流应以链接的 GitHub REST API 文档为准。",
-        "category": "开发者 API 与隐私",
+        "event": "GitHub Copilot 正式推出 GPT-6 Astra（2026-09-04）",
+        "summary": "GitHub Changelog 公告，GPT-6 Astra 已在 GitHub Copilot 正式可用，官方强调其在长周期编码任务中会规划、验证和在宣布完成前自我确认结果。",
+        "howTo": "在支持的 GitHub Copilot 客户端中打开模型选择器，选择 GPT-6 Astra；如果暂未出现，可等待逐步 rollout。企业和团队管理员可在 Copilot settings 里控制访问。",
+        "impact": "学生可把课程项目拆成规划、实现和验证步骤，尤其适合跨文件重构和长期任务；但仍需手动审查 diff、运行测试，并不应把模型的“已完成”当作结论。",
+        "free": "官方说明 GPT-6 Astra 可用于 Copilot Pro+、Max、Business 和 Enterprise，并按 provider list pricing 计费；官方未说明统一免费额度、个人计划可用性或地区范围。",
+        "category": "Copilot 模型",
         "source": {
           "name": "GitHub 官方更新日志",
           "published": "2026-09-04",
-          "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
+          "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/"
+        }
+      },
+      {
+        "event": "GitHub Copilot 周更新：内容排除与 JetBrains 兼容性增强（2026-09-04）",
+        "summary": "GitHub 的周更新说明 Copilot app 和 CLI 现在遵守 content exclusions，同时为 JetBrains 用户提供了更快的功能交付和更优代码质量。",
+        "howTo": "在 Copilot app、CLI 或 JetBrains 客户端中检查更新并确认型号/架构支持；在仓库或组织设置中启用 content exclusions，再验证敏感代码不会被带入 agent 上下文。",
+        "impact": "学生在管理实验数据、课程仓库或私人资源时，可先配置排除规则，再使用 agent 做分析和重构；同时应保留测试和人工审查，避免把 agent 输出直接当作最终答案。",
+        "free": "公告只列出可用计划和逐步 rollout，未说明这些功能的统一免费额度、地区覆盖范围或各计划具体配额；访问仍可能受管理员策略影响。",
+        "category": "Copilot 安全与可用性",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-04",
+          "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/"
         }
       }
     ],
     "deals": [
       {
-        "event": "Gemini API 免费层与 Google AI Studio",
+        "event": "Google Gemini API 免费层与 Google AI Studio",
+        "summary": "Google Gemini API 定价页说明，开发者可在免费层中访问有限模型、免费输入与输出 token，并借助 Google AI Studio 进行原型测试与实验。",
+        "howTo": "访问 Google AI Studio 并登录 Google 账号；选择免费层中的模型进行提示词测试和 API 原型开发，并在模型文档中确认各模型的当前使用限制。",
+        "impact": "学生可在不先付费的前提下做文本处理、实验设计和 API 原型，对课程项目做早期验证，再决定是否升级到生产配置。",
+        "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 与 AI Studio；具体固定额度、用户地区和重置周期官方未说明。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Google Colab FAQ 明确说明，Colab 是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或导入 notebook，并在单元格中运行 Python；需要更高计算资源时，可在运行时设置中尝试 GPU/TPU，并保存到 Google Drive。",
+        "impact": "学生可直接运行课程代码、分析数据、训练小型模型，减少本地环境配置与硬件门槛。",
+        "free": "官方确认 Colab 免费，但资源不保证且不无限，且使用上限会波动；本页说明其优先支持正在编写 notebook 的用户，官方未说明统一固定额度。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方提供 GitHub Student Developer Pack，面向已验证学生的开发者工具与学习资源，其中包含 GitHub Copilot 等核心工具与教育体验。",
+        "howTo": "访问 GitHub Education 的 Student Developer Pack，完成学生资格验证，然后打开 Copilot 相关权益入口，按页面提示开启与使用。",
+        "impact": "学生可以把这些工具用于作业、课程项目和学习路径，而不必先承担高额软件成本；同时仍应保留测试和人工检查，不把 AI 输出直接当成最终答案。",
+        "free": "官方页面说明面向 verified students，且包括 Copilot 等工具；具体权益内容与模型限制以页面说明为准，官方未说明统一额度与地区例外。",
+        "category": "学生/教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 的公开模型下载入口，并说明其 80B 总参数、3B 激活参数和 262,144 token 原生上下文长度。",
+        "howTo": "打开 Qwen 官方模型卡，按说明使用 Transformers 或 vLLM、Ollama、LM Studio、MLX-LM 与 llama.cpp 等环境进行本地测试；先用短输入验证显存和速度。",
+        "impact": "有 GPU 或云端 notebook 的学生可在本地或轻量环境中研究长上下文、MoE 和推理流程，而不必先为 API 付费。",
+        "free": "模型权重可公开下载；本地算力、存储和网络成本仍由使用者承担，官方未说明统一免费 API 配额、账号资格或地区范围。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选近两周免费可读材料，覆盖极端天气、灾难报道和交通安全；每篇提供考研英语二风格的结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "Weather tracker: Typhoon Saudel causes mass evacuations in south-east China",
+        "source": "The Guardian",
+        "published": "2026-09-07",
+        "url": "https://www.theguardian.com/world/2026/sep/07/typhoon-saudel-mass-evacuations-south-east-china-weather-tracker",
+        "readingTime": "6",
+        "topic": "环境 / 极端天气",
+        "summary": "文章聚焦台风“苏德尔”给中国东南沿海带来的强降雨与洪涝，报道了福建、浙江、江西和广东多省出现的暴雨、山体滑坡、基础设施受损以及大规模转移安置。报道先给出降雨量和撤离人数，再用具体城市与村庄的伤亡与抢险情况说明灾害的真实规模，最后把事件放回今年多轮台风和极端天气背景中，说明这类灾害不是孤立现象，而是区域气候风险和城市脆弱性叠加的结果。",
+        "reason": [
+          "环境灾害与公共安全并置，适合考研英语二的社会与环境题材。",
+          "文章从天气现象切入，再扩展到灾害损失与抢险行动，结构清晰。",
+          "可训练识别数据、地点、因果和背景信息之间的层级关系。",
+          "词汇覆盖 typhoon、evacuate、flood-prone、infrastructure 等高频新闻表达。",
+          "适合积累“事件—影响—背景”的写作组织方式。"
+        ],
+        "vocabulary": [
+          { "word": "typhoon", "phonetic": "/taɪˈfuːn/", "part": "n.", "translation": "台风" },
+          { "word": "evacuate", "phonetic": "/ɪˈvækjueɪt/", "part": "v.", "translation": "撤离；疏散" },
+          { "word": "torrential", "phonetic": "/təˈrenʃəl/", "part": "adj.", "translation": "暴雨的；倾盆的" },
+          { "word": "infrastructure", "phonetic": "/ˈɪnfrəstrʌktʃə/", "part": "n.", "translation": "基础设施" },
+          { "word": "landslip", "phonetic": "/ˈlændslɪp/", "part": "n.", "translation": "山体滑坡" },
+          { "word": "flash flood", "phonetic": "/flæʃ flʌd/", "part": "n.", "translation": "山洪暴发；突发性洪灾" },
+          { "word": "embankment", "phonetic": "/ɪmˈbæŋkmənt/", "part": "n.", "translation": "堤岸；路堤" },
+          { "word": "flood-prone", "phonetic": "/ˈflʌd prəʊn/", "part": "adj.", "translation": "易遭洪灾的" },
+          { "word": "rescue", "phonetic": "/ˈreskjuː/", "part": "n./v.", "translation": "救援；营救" },
+          { "word": "extreme rainfall", "phonetic": "/ɪkˈstriːm ˈreɪnˌfɔːl/", "part": "n.", "translation": "极端降雨" }
+        ],
+        "sentences": [
+          {
+            "original": "Typhoon Saudel brought days of torrential rain to Zhejiang, Jiangxi, Fujian and Guangdong provinces in south-east China last week.",
+            "analysis": [
+              "主句是 Typhoon Saudel brought...",
+              "days of torrential rain 作直接宾语，体现灾害的持续性。",
+              "to ... provinces in ... China 是地点状语，明确灾区范围。",
+              "last week 将事件置于明确时间坐标，便于新闻背景的呈现。"
+            ],
+            "translation": "上周，苏德尔台风给中国东南部的浙江、江西、福建和广东省带来了数天的暴雨。"
+          },
+          {
+            "original": "In Fujian, authorities estimate that almost 600,000 people were evacuated from high-risk, flood-prone areas.",
+            "analysis": [
+              "estimate that... 是典型新闻写作的归纳结构，说明数字来自官方估计。",
+              "almost 600,000 people 是核心数字，体现灾区规模。",
+              "from high-risk, flood-prone areas 是空间限制，突出风险区域的性质。",
+              "整句可用于练习作者如何把统计信息嵌入叙述中。"
+            ],
+            "translation": "在福建，当地当局估计，近 60 万人已从高风险、易遭洪灾地区撤离。"
+          },
+          {
+            "original": "This is the seventh typhoon to affect China this year, and Saudel arrived shortly after Typhoon Narra dumped heavy rain on Guangdong, Hainan and Guangxi late last month.",
+            "analysis": [
+              "This is the seventh typhoon... 提供背景信息，增强事件的季节性和频率。",
+              "and 连接两个并列分句，形成“当前事件—前置事件”的因果时间链。",
+              "shortly after ... late last month 使句子形成清晰的时间顺序。",
+              "dumped heavy rain 是具体事件动词，增强叙事的图像性。"
+            ],
+            "translation": "这是今年影响中国的第七个台风，而苏德尔在上月末刚在广东、海南和广西造成大雨后不久到来。"
+          }
+        ]
+      },
+      {
+        "title": "Questions grow over China's reporting of Nepal floods death toll",
+        "source": "NPR",
+        "published": "2026-09-07",
+        "url": "https://www.npr.org/2026/09/07/nx-s1-5960357/nepal-floods-questions-over-chinas-reporting",
+        "readingTime": "7",
+        "topic": "社会 / 传播与灾难",
+        "summary": "文章报道了中国和尼泊尔在洪灾死亡人数统计上的巨大差距，并指出尼泊尔公布了大量失踪人员名单，而中国官方在灾后五天才公开其境内失踪人员的国家来源。这一对比让外界质疑中国对灾情和失踪人员信息的公开程度及其对国际舆论的指导作用。文章随后引出中国媒体与审查体系的总体背景，说明在信息管控更强的环境下，事实很难得到及时、完整地披露。",
+        "reason": [
+          "灾难叙事与信息透明度结合，适合社会与媒体议题写作。",
+          "结构以对比为起点，再转入制度背景与媒体控制的分析。",
+          "可训练分析“事实差异—原因判断—制度背景”的逻辑链。",
+          "词汇涵盖 toll、missing、censorship、state-run 等新闻语境高频词。",
+          "适合练习“比较法”与“机制分析”写作。"
+        ],
+        "vocabulary": [
+          { "word": "death toll", "phonetic": "/ˈdeθ təʊl/", "part": "n.", "translation": "死亡人数" },
+          { "word": "authorities", "phonetic": "/ɔːˈθɒrɪtiz/", "part": "n.", "translation": "当局；有关部门" },
+          { "word": "missing", "phonetic": "/ˈmɪsɪŋ/", "part": "adj.", "translation": "失踪的" },
+          { "word": "censorship", "phonetic": "/ˈsensəʃɪp/", "part": "n.", "translation": "审查制度；检查制度" },
+          { "word": "state-run", "phonetic": "/ˈsteɪt rʌn/", "part": "adj.", "translation": "国营的；由国家运营的" },
+          { "word": "disclose", "phonetic": "/dɪsˈkloʊz/", "part": "v.", "translation": "披露；公开" },
+          { "word": "contrast", "phonetic": "/ˈkɒntrɑːst/", "part": "n.", "translation": "对比；反差" },
+          { "word": "restrict", "phonetic": "/rɪˈstrɪkt/", "part": "v.", "translation": "限制；约束" },
+          { "word": "reporting", "phonetic": "/rɪˈpɔːtɪŋ/", "part": "n.", "translation": "报道；新闻报道" },
+          { "word": "transparency", "phonetic": "/trænˈspærənsi/", "part": "n.", "translation": "透明度" }
+        ],
+        "sentences": [
+          {
+            "original": "Shortly after the deadly flash floods hit the border of Nepal and China on Aug. 26, Nepalese authorities released a list of names, ages and nationalities of hundreds of missing foreigners.",
+            "analysis": [
+              "主句是 Nepalese authorities released a list...",
+              "Shortly after ... on Aug. 26 是时间状语，形成事件起点。",
+              "of hundreds of missing foreigners 限定名单的对象。",
+              "这一句以清晰的时间顺序突出信息披露的不对称。"
+            ],
+            "translation": "8 月 26 日致命山洪袭击尼泊尔和中国边境后不久，尼泊尔当局发布了数百名失踪外国人的姓名、年龄和国籍清单。"
+          },
+          {
+            "original": "In contrast, Chinese authorities took five days to disclose that the 261 foreigners missing in Tibet come from 23 countries.",
+            "analysis": [
+              "In contrast 直接形成对比，凸显两国信息披露差异。",
+              "took five days to disclose ... 是典型时间延迟表达。",
+              "come from 23 countries 是信息的补充说明。",
+              "整句可用于练习比较句式与时间表达。"
+            ],
+            "translation": "相比之下，中国当局花了五天时间才披露，西藏境内失踪的 261 名外国人来自 23 个国家。"
+          },
+          {
+            "original": "Xinhua and CCTV have total information dominance, and outlets are expected to guide public opinion, said David Bandurski.",
+            "analysis": [
+              "句子采用 reported speech 结构，将信息控制的背景嵌入叙述中。",
+              "have total information dominance 是比喻性表达，强调媒体垄断。",
+              "are expected to guide public opinion 说明官方媒体的公共角色。",
+              "该句适合练习新闻报道中的引语与评价结合。"
+            ],
+            "translation": "大卫·班德尔斯基说，新华社和中央电视台拥有全部信息支配权，而这些媒体也被期望引导公众舆论。"
+          }
+        ]
+      },
+      {
+        "title": "Flight recorders recovered from 'devastating' Amazon cargo plane crash",
+        "source": "BBC",
+        "published": "2026-09-08",
+        "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo",
+        "readingTime": "6",
+        "topic": "社会 / 交通安全",
+        "summary": "BBC 报道了一起在迈阿密国际机场发生的货运飞机失事事件：一架波音 767-300 在起落跑道外偏离后冲出跑道，撞击机场内两辆车辆，造成五人死亡、五人重伤。报道先说明航录器已被找到，再强调事故调查仍处于事实调查阶段，不能下结论；随后交代飞机来自波多黎各、当时有两名机组成员，以及其撞击了导航设备和一辆清洁公司车辆。文章把事件放回机场安全和运行流程背景中，强调事故原因仍待调查。",
+        "reason": [
+          "交通事故与公共安全紧密相关，符合社会现实议题。",
+          "新闻结构清晰：肇事事实—调查进展—技术与背景补充。",
+          "可训练识别被动语态、时间线和情态判断的使用。",
+          "词汇涵盖 overshot、runway、perimeter、investigators 等航空安全常用词。",
+          "适合积累事故报道中的因果、证据与调查逻辑。"
+        ],
+        "vocabulary": [
+          { "word": "runway", "phonetic": "/ˈrʌnweɪ/", "part": "n.", "translation": "跑道" },
+          { "word": "overshoot", "phonetic": "/ˌəʊvəˈʃuːt/", "part": "v.", "translation": "越过；冲出" },
+          { "word": "investigator", "phonetic": "/ɪnˈvestɪɡeɪtə/", "part": "n.", "translation": "调查员；调查人员" },
+          { "word": "perimeter", "phonetic": "/pəˈrɪmɪtə/", "part": "n.", "translation": "周界；机场围界" },
+          { "word": "cargo", "phonetic": "/ˈkɑːɡəʊ/", "part": "n.", "translation": "货物；货运" },
+          { "word": "navigational aids", "phonetic": "/ˌnævɪɡeɪʃənl eɪdz/", "part": "n.", "translation": "导航辅助设备" },
+          { "word": "crew", "phonetic": "/kruː/", "part": "n.", "translation": "机组人员" },
+          { "word": "fact-finding", "phonetic": "/ˈfækt ˈfaɪndɪŋ/", "part": "adj.", "translation": "事实调查阶段的" },
+          { "word": "severity", "phonetic": "/sɪˈverəti/", "part": "n.", "translation": "严重程度" },
+          { "word": "casualty", "phonetic": "/ˈkæʒuəlti/", "part": "n.", "translation": "伤亡人员；事故受害者" }
+        ],
+        "sentences": [
+          {
+            "original": "Investigators have recovered the flight recorders from the Amazon cargo plane that crashed at Miami International Airport, but the priority remains the recovery of victims, the National Transportation Safety Board has said.",
+            "analysis": [
+              "主句由 Investigators have recovered... but ... remains ... 组成对照结构。",
+              "that crashed at Miami International Airport 是定语从句，限定飞机。",
+              "the priority remains the recovery of victims 突出事故应对的当务之急。",
+              "the National Transportation Safety Board has said 引出官方说法，增强报道可信度。"
+            ],
+            "translation": "美国国家运输安全委员会表示，调查人员已从坠毁在迈阿密国际机场的亚马逊货运飞机上找回航行记录器，但目前的首要任务仍然是救援受难者。"
+          },
+          {
+            "original": "Five people were killed and five others seriously injured when the Boeing 767-300, operated by 21 Air, overshot the runway shortly before 14:00 local time.",
+            "analysis": [
+              "when 引导时间状语从句，明确事故发生时刻。",
+              "operated by 21 Air 是过去分词短语，说明飞机运营方。",
+              "overshot the runway 是核心动作，交代飞机冲出跑道。",
+              "五人死亡、五人重伤的量化信息增强事实性。"
+            ],
+            "translation": "当地时间 14:00 前后，21 Air 运营的波音 767-300 飞机冲出跑道，造成五人死亡、另有五人重伤。"
+          },
+          {
+            "original": "NTSB chairwoman Jennifer Homendy said it was too early to draw conclusions about what caused the crash, with investigators still in the \"fact finding stage\".",
+            "analysis": [
+              "it was too early to draw conclusions ... 是典型官方谨慎表达。",
+              "about what caused the crash 引出尚未确定的因果原因。",
+              "with investigators still in the \"fact finding stage\" 是伴随状语，说明调查仍处于早期。",
+              "这类句式非常适合学习新闻中的“未确认结论”表达。"
+            ],
+            "translation": "国家运输安全委员会主席珍妮弗·霍门迪表示，现在下结论关于事故成因还为时过早，因为调查人员仍处于“事实调查阶段”。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+const issue20260906 = {
+  "date": "2026-09-06",
+  "status": "ready",
+  "ai": {
+    "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
+    "updates": [
+      {
+        "event": "GPT-6 Astra 正式加入 GitHub Copilot（2026-09-04）",
+        "summary": "GitHub 官方宣布 OpenAI 的 GPT-6 Astra 在 GitHub Copilot 中正式可用，定位为面向长周期、自主编码与 agent 任务的通用模型；公告称它会边规划边验证，并在结束前独立确认结果。",
+        "howTo": "在 VS Code、Visual Studio、Copilot CLI、coding agent、Copilot app、github.com、移动端、JetBrains、Xcode 或 Eclipse 打开模型选择器，选择 GPT-6 Astra；逐步 rollout 中，暂时看不到时稍后重试。",
+        "impact": "学生可用它把课程项目拆成计划、实现、测试和复核步骤，尤其适合跨文件重构；每次仍应查看 diff、运行测试并人工确认模型的“已完成”判断。",
+        "free": "官方列出的计划为 Copilot Pro+、Max、Business 和 Enterprise；按 provider list pricing 使用量计费，未宣布统一免费额度。Business/Enterprise 管理员可通过模型策略控制访问，且 rollout 逐步开放。",
+        "category": "Copilot 模型",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-04",
+          "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/"
+        }
+      },
+      {
+        "event": "GitHub Copilot 周更新：Claude Fable 5.1、Gemini 3.8 Flash 与内容排除（2026-09-04）",
+        "summary": "GitHub 的周更新列出多项变化：Claude Fable 5.1 面向 Pro+、Max、Business 和 Enterprise，Gemini 3.8 Flash 正在向 Pro、Pro+、Max、Business 和 Enterprise rollout；Copilot app 与 CLI 现在遵守 content exclusions。",
+        "howTo": "在 Copilot 的模型选择器中检查 Claude Fable 5.1 或 Gemini 3.8 Flash；在仓库或组织设置中配置 content exclusions，再用 Copilot app/CLI 发起 agent 工作流并确认敏感代码未进入上下文。",
+        "impact": "学生维护含实验数据或私有课程代码的仓库时，可以先配置排除规则，再使用 agent；同时比较两种新模型在补全、解释和测试任务上的差异。",
+        "free": "公告只列出可用计划和渐进式 rollout，没有说明这些模型的统一免费额度、地区范围或各计划具体配额；Business/Enterprise 的访问仍可能受管理员策略影响。",
+        "category": "Copilot 模型与隐私控制",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-04",
+          "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31/"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型可下载",
+        "summary": "Qwen 官方 Hugging Face 模型卡介绍 Qwen3-Next-80B-A3B-Instruct：总参数 80B、激活参数 3B，原生上下文长度 262,144 token，并采用混合注意力、高稀疏 MoE 和多 token 预测；模型卡还给出 Transformers、vLLM、Ollama、LM Studio、MLX-LM 与 llama.cpp 的运行方向。",
+        "howTo": "打开 Qwen/Qwen3-Next-80B-A3B-Instruct 模型卡，按其示例安装 Transformers 或选择 vLLM、Ollama、LM Studio、MLX-LM、llama.cpp；先用短文本验证显存和推理速度，再尝试长上下文任务。",
+        "impact": "有 GPU 或 Colab 条件的学生可以比较稀疏 MoE、长上下文和本地推理，不必先接入付费 API；课程报告应把模型卡指标与自己的实测分开记录。",
+        "free": "模型卡提供公开下载入口，但本地软件、GPU、存储和网络可能产生成本；官方模型卡未说明统一免费 API 配额、账号资格、地区范围或发布日期。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
         "summary": "Google 官方定价页列出免费层：有限访问部分模型、免费输入与输出 token，并可使用 Google AI Studio。",
-        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型做提示词或 API 原型；调用前查看当前模型对应的限额和条款。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型做提示词或 API 原型；调用前逐项查看当前模型和账户限制。",
         "impact": "学生可以用免费层做文本处理、课程演示和 API 调试，先验证原型再决定是否需要付费吞吐。",
-        "free": "官方明确免费层含有限模型访问、免费输入/输出 token 和 AI Studio；固定请求额度、地区清单和重置周期官方未说明，免费层内容可用于改进 Google 产品。",
+        "free": "官方明确免费层含有限模型访问、免费输入/输出 token 和 AI Studio；统一固定额度与地区清单官方未说明，免费层内容可用于改进 Google 产品。",
         "category": "免费 API / 开发者资源",
         "source": {
           "name": "Google Gemini API 官方定价页",
@@ -76,7 +351,7 @@ const todaysIssue = {
         "summary": "Google Colab 官方 FAQ 说明，Colab 是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
         "howTo": "打开 Colab，新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
         "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置与硬件门槛。",
-        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费运行时限制绕过 UI、远程控制、挖矿等行为，并优先支持正在 notebook 中编程的用户。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费运行时限制代理、挖矿和绕过 UI 等行为，并优先支持正在 notebook 中编程的用户。",
         "category": "长期免费云环境",
         "source": {
           "name": "Google Colab 官方 FAQ",
@@ -85,7 +360,7 @@ const todaysIssue = {
         }
       },
       {
-        "event": "GitHub Education 的 Copilot Student 学生权益",
+        "event": "GitHub Education：Copilot Student 学生权益",
         "summary": "GitHub Education 官方权益页列出，经验证学生可使用 GitHub Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅限 auto model selection 的有限 chat 和 agent 使用。",
         "howTo": "打开 GitHub Student Developer Pack，完成学生资格验证，在 GitHub Copilot 权益入口开通；开通后在编辑器使用补全，并在账户页面查看 AI Credits 与 chat/agent 限制。",
         "impact": "学生可用代码补全辅助课程项目和重复性样板代码，同时保留测试和人工审查，不把 AI 输出当作未经验证的答案。",
@@ -98,2483 +373,307 @@ const todaysIssue = {
         }
       },
       {
-        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型",
-        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 的公开模型卡与下载入口，列出 80B 总参数、3B 激活参数和原生 262,144 token 上下文，并给出 Transformers 等运行方向。",
-        "howTo": "打开 Qwen 官方模型卡，按其 Quickstart 安装 Transformers 主分支，或选择模型卡列出的 vLLM、Ollama、LM Studio、MLX-LM 和 llama.cpp 方向；先用短输入测试本地资源。",
-        "impact": "有 GPU 或云端 notebook 的学生可以研究稀疏 MoE、长上下文和本地推理，把模型卡指标与自己的显存、速度和质量实测分开记录。",
-        "free": "模型卡提供公开权重入口，但本地软件、GPU、存储和网络可能产生成本；官方模型卡未说明统一免费 API 配额、账号资格、地区范围或服务保证。",
-        "category": "开放模型权重",
+        "event": "Notion AI 免费与 Plus 计划的有限试用响应",
+        "summary": "Notion 官方 FAQ 说明，Free 和 Plus 计划用户可以获得有限数量的 complimentary AI responses；完整 Notion AI 主要面向 Business 和 Enterprise 计划，部分高级模型使用 Notion credits。",
+        "howTo": "登录 Notion，在页面中选中文本或按空格呼出 AI，尝试总结、改写或翻译；用完试用响应后查看工作区提示和计划，不要默认无限可用。",
+        "impact": "学生可先用少量响应整理课堂笔记、生成提纲或检查英文表达，再评估是否需要教育或付费计划。",
+        "free": "官方确认 Free 和 Plus 有限免费响应，但未统一说明响应总数、地区和重置周期；AI 图片生成的 10 次/24 小时、30 次/30 天限制是 Business/Enterprise beta 功能。",
+        "category": "长期免费应用功能",
         "source": {
-          "name": "Qwen 官方 Hugging Face 模型卡",
+          "name": "Notion 官方 AI FAQ",
           "published": "官方未说明",
-          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+          "url": "https://www.notion.com/help/notion-ai-faqs"
         }
       }
     ]
   },
   "english": {
-    "intro": "精选近两周免费可读材料，覆盖劳动与产业、家庭分工、文化遗产；每篇提供考研英语二风格的结构、词汇和短句精读。",
+    "intro": "精选可免费阅读全文的英语材料，侧重社会、公共议题与健康风险；每篇提供考研英语二风格的结构、词汇和短句精读。",
     "articles": [
       {
-        "title": "Minister to meet Jaguar Land Rover boss as thousands of job cuts expected",
-        "source": "BBC",
-        "published": "2026-09-06",
-        "url": "https://www.bbc.co.uk/news/articles/crer948xq00o",
-        "readingTime": "7",
-        "topic": "经济 / 产业与就业",
-        "summary": "文章报道英国商业大臣将与 Jaguar Land Rover 负责人会面，而公司正因关税影响和此前网络攻击的后果面临大规模裁员预期。报道先交代企业宣布的自愿裁员计划及工会对汽车业“完美风暴”的判断，再解释政府对电动车销售目标的调整讨论。后文补充 JLR 英国与海外员工规模、2025 年网络攻击造成的停产、产量下降和损失估计，最后把当前裁员放回企业削减成本、恢复韧性与产业政策的交叉背景中。",
-        "reason": [
-          "就业、产业政策、网络风险和电动车转型相互作用，适合经济类考研阅读。",
-          "结构由最新决定推进到工会反应，再转入政策解释和历史数据，便于判断段落功能。",
-          "可训练区分公司发言、工会观点、部长解释和报道事实。",
-          "词汇集中在 voluntary redundancy、resilience、mitigate、regulation 等正式表达。",
-          "适合写作中论证技术冲击如何通过企业成本传导到就业。"
-        ],
-        "vocabulary": [
-          {"word": "voluntary redundancy", "phonetic": "/ˌvɒləntəri rɪˈdʌndənsi/", "part": "n.", "translation": "自愿裁员"},
-          {"word": "resilience", "phonetic": "/rɪˈzɪliəns/", "part": "n.", "translation": "韧性；恢复力"},
-          {"word": "mitigate", "phonetic": "/ˈmɪtɪɡeɪt/", "part": "v.", "translation": "缓解；减轻"},
-          {"word": "regulation", "phonetic": "/ˌreɡjuˈleɪʃən/", "part": "n.", "translation": "规章；监管"},
-          {"word": "tariff", "phonetic": "/ˈtærɪf/", "part": "n.", "translation": "关税"},
-          {"word": "manufacturing", "phonetic": "/ˌmænjʊˈfæktʃərɪŋ/", "part": "n.", "translation": "制造业；生产"},
-          {"word": "subsequent", "phonetic": "/ˈsʌbsɪkwənt/", "part": "adj.", "translation": "随后的"},
-          {"word": "consultation", "phonetic": "/ˌkɒnsəlˈteɪʃən/", "part": "n.", "translation": "磋商；咨询"}
-        ],
-        "sentences": [
-          {
-            "original": "It did not rule out the prospect of some compulsory redundancies as part of the plans.",
-            "analysis": [
-              "主干是 It did not rule out the prospect。",
-              "rule out 表示排除可能性，否定形式保留了未来不确定性。",
-              "of some compulsory redundancies 作 prospect 的后置限定。",
-              "as part of the plans 是介词短语，说明该可能性属于整体方案。"
-            ],
-            "translation": "公司没有排除计划中包含部分强制裁员的可能性。"
-          },
-          {
-            "original": "The cyber attack in September 2025 led to the shut down of all manufacturing at JLR for several weeks.",
-            "analysis": [
-              "主干是 The cyber attack led to the shut down。",
-              "in September 2025 是时间后置修饰，限定攻击发生时间。",
-              "of all manufacturing at JLR 说明停摆对象和地点。",
-              "for several weeks 表示结果持续时间，适合分析因果链。"
-            ],
-            "translation": "2025 年 9 月的网络攻击导致 JLR 全部生产停摆数周。"
-          },
-          {
-            "original": "That led to a 27% drop in overall production at the company, which is one of the West Midlands' biggest employers.",
-            "analysis": [
-              "That 指代前句停产，构成清晰的指代与因果衔接。",
-              "led to a 27% drop 是核心因果结构。",
-              "which 引导非限制性定语从句，补充公司在当地就业中的重要性。",
-              "数字事实与背景说明并列，增强报道的论证力度。"
-            ],
-            "translation": "这导致该公司总产量下降 27%；该公司是西米德兰兹最大的雇主之一。"
-          }
-        ]
-      },
-      {
-        "title": "Why more women carry the 'mental load' - and how couples can share it",
-        "source": "BBC",
+        "title": "Egyptian TV presenter among 12 sentenced to death for drug crime",
+        "source": "The Guardian",
         "published": "2026-09-05",
-        "url": "https://www.bbc.co.uk/news/articles/c24j1r45r49o",
+        "url": "https://www.theguardian.com/world/2026/sep/05/egyptian-tv-presenter-among-12-sentenced-to-death-for-drug",
         "readingTime": "7",
-        "topic": "社会 / 家庭与性别分工",
-        "summary": "文章讨论家庭中的 mental load，即计划、记忆和组织日常事务的持续性认知负担为何常由女性承担，以及伴侣如何分担。报道先用受访者经历说明产假长度差异如何让女性早早成为“default parent”，再比较英国家庭法定产假与陪产假，并转向工作场所能够采取的示范和沟通措施。后半部分用一位父亲从“询问晚饭吃什么”改为先查看冰箱、提出选项的例子，说明真正分担不仅是执行任务，也包括承担决策责任。",
+        "topic": "社会 / 法律与公共安全",
+        "summary": "文章报道埃及一家法院以制造和贩运毒品等罪名判处电视主持人 Sarah Khalifa 与另外 11 人死刑，并说明判决仍可上诉。报道先交代被告的公众身份和指控，再引用官方媒体对有组织犯罪、原料、枪支及查获数量的说法，随后解释死刑案件需征询大穆夫提意见的程序。结尾补充埃及适用死刑的罪名范围以及人权机构统计，形成“案件事实—司法程序—制度背景”的新闻结构。",
         "reason": [
-          "家庭劳动、职场制度与性别角色结合，主题贴近社会议题写作。",
-          "文章按概念解释、制度背景、职场建议、个人案例递进，适合概括段落关系。",
-          "可训练识别受访者引语、统计式制度信息和案例论证的证据功能。",
-          "词汇覆盖 disparity、default parent、statutory、disproportionately 等抽象表达。",
-          "案例把抽象的 mental load 转化为可观察行为，适合积累举例论证方式。"
+          "刑事司法、公共安全与程序正义结合，适合社会议题阅读。",
+          "结构从个案和指控推进到法律程序，再扩展到制度背景，便于识别信息层级。",
+          "可训练区分官方媒体陈述、法院判决和人权机构统计等不同来源。",
+          "词汇覆盖 organised crime、verdict、appeal、narcotics 等新闻和法律表达。",
+          "适合积累“事实报道后补充制度背景”的议论文组织方式。"
         ],
         "vocabulary": [
-          {"word": "mental load", "phonetic": "/ˈmentl ləʊd/", "part": "n.", "translation": "心理负担；认知负荷"},
-          {"word": "disparity", "phonetic": "/dɪˈspærəti/", "part": "n.", "translation": "差距；不平等"},
-          {"word": "maternity leave", "phonetic": "/məˈtɜːnəti liːv/", "part": "n.", "translation": "产假"},
-          {"word": "paternity leave", "phonetic": "/pəˈtɜːnəti liːv/", "part": "n.", "translation": "陪产假"},
-          {"word": "statutory", "phonetic": "/ˈstætʃətəri/", "part": "adj.", "translation": "法定的"},
-          {"word": "disproportionately", "phonetic": "/ˌdɪsprəˈpɔːʃənətli/", "part": "adv.", "translation": "不成比例地"},
-          {"word": "default parent", "phonetic": "/dɪˈfɔːlt ˈpeərənt/", "part": "n.", "translation": "默认主要照护者"},
-          {"word": "opt out", "phonetic": "/ɒpt aʊt/", "part": "phr.v.", "translation": "选择不参加；退出"}
+          { "word": "sentence", "phonetic": "/ˈsentəns/", "part": "v.", "translation": "判处；宣判" },
+          { "word": "narcotics", "phonetic": "/nɑːˈkɒtɪks/", "part": "n.", "translation": "麻醉品；毒品" },
+          { "word": "verdict", "phonetic": "/ˈvɜːdɪkt/", "part": "n.", "translation": "裁决；判决" },
+          { "word": "appeal", "phonetic": "/əˈpiːl/", "part": "n./v.", "translation": "上诉；申诉" },
+          { "word": "procedure", "phonetic": "/prəˈsiːdʒə/", "part": "n.", "translation": "程序" },
+          { "word": "trafficking", "phonetic": "/ˈtræfɪkɪŋ/", "part": "n.", "translation": "贩运；非法交易" },
+          { "word": "premeditated", "phonetic": "/ˌpriːˈmedɪteɪtɪd/", "part": "adj.", "translation": "预谋的" },
+          { "word": "defendant", "phonetic": "/dɪˈfendənt/", "part": "n.", "translation": "被告" },
+          { "word": "organised crime", "phonetic": "/ˈɔːɡənaɪzd kraɪm/", "part": "n.", "translation": "有组织犯罪" },
+          { "word": "authority", "phonetic": "/ɔːˈθɒrɪti/", "part": "n.", "translation": "权威；当局" }
         ],
         "sentences": [
-          {
-            "original": "If you become the person who knows everything, everybody starts coming to you for everything.",
-            "analysis": [
-              "If 引导条件从句，主句说明条件成立后的持续结果。",
-              "the person who knows everything 中 who 从句限定 person。",
-              "starts coming to you 是主句谓语，to you 表示求助对象。",
-              "everything 的重复形成强调，展示 mental load 的全面性。"
-            ],
-            "translation": "如果你成了那个什么都知道的人，大家就会开始什么事都来找你。"
-          },
-          {
-            "original": "Some employers offer extra parental leave to their workers, but most people earn less when on maternity or paternity leave.",
-            "analysis": [
-              "but 连接两个分句，形成福利存在与收入代价之间的转折。",
-              "offer extra parental leave 是前半句核心谓语。",
-              "when on maternity or paternity leave 是省略主语和 be 的时间状语。",
-              "most people earn less 把制度安排与实际选择成本联系起来。"
-            ],
-            "translation": "一些雇主向员工提供额外育儿假，但多数人在休产假或陪产假时收入会减少。"
-          },
-          {
-            "original": "He learned he could come to her with options for dinner, having already looked in the fridge.",
-            "analysis": [
-              "主干是 He learned，后接省略 that 的宾语从句。",
-              "could come to her with options 表示带着已准备好的方案来沟通。",
-              "having already looked in the fridge 是完成式分词短语，说明先行动作。",
-              "该句用具体动作展示如何把决策责任而非单一任务分担出去。"
-            ],
-            "translation": "他意识到自己可以先查看冰箱，再带着晚餐选项去和妻子商量。"
-          }
+          { "original": "The verdict is subject to appeal.", "analysis": ["主干是 The verdict is subject。", "subject to 是形容词短语，表示受某事制约或仍可能经历某程序。", "to appeal 是介词短语，说明制约来源。", "这是新闻中简洁表达判决未最终确定的被动结构。"], "translation": "该判决仍可上诉。" },
+          { "original": "The verdict came after the court consulted the Grand Mufti of Egypt for his religious opinion.", "analysis": ["主干是 The verdict came。", "after 引导时间状语从句，交代判决发生的先后关系。", "the court consulted the Grand Mufti 是从句核心。", "for his religious opinion 表目的，说明咨询的用途。"], "translation": "法院征询埃及大穆夫提的宗教意见后作出了判决。" },
+          { "original": "Egypt applies the death penalty for premeditated murder, terrorism, some rape offences and drug trafficking.", "analysis": ["主干是 Egypt applies the death penalty。", "for 引出适用死刑的罪名范围。", "四个并列名词短语构成列举，增强信息密度。", "一般现在时表达制度性事实，适合概括法律规则。"], "translation": "埃及对预谋杀人、恐怖主义、部分强奸罪和毒品贩运适用死刑。" }
         ]
       }
     ]
   }
 };
 
-window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-06T08:46:00+08:00",
-  "issues": [
-    {
-      "date": "2026-09-06",
-      "status": "ready",
-      "ai": {
-        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
-        "updates": [
-          {
-            "event": "GPT-6 Astra 正式加入 GitHub Copilot（2026-09-04）",
-            "summary": "GitHub 官方宣布 OpenAI 的 GPT-6 Astra 在 GitHub Copilot 中正式可用，定位为面向长周期、自主编码与 agent 任务的通用模型；公告称它会边规划边验证，并在结束前独立确认结果。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI、coding agent、Copilot app、github.com、移动端、JetBrains、Xcode 或 Eclipse 打开模型选择器，选择 GPT-6 Astra；逐步 rollout 中，暂时看不到时稍后重试。",
-            "impact": "学生可用它把课程项目拆成计划、实现、测试和复核步骤，尤其适合跨文件重构；每次仍应查看 diff、运行测试并人工确认模型的“已完成”判断。",
-            "free": "官方列出的计划为 Copilot Pro+、Max、Business 和 Enterprise；按 provider list pricing 使用量计费，未宣布统一免费额度。Business/Enterprise 管理员可通过模型策略控制访问，且 rollout 逐步开放。",
-            "category": "Copilot 模型",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-04",
-              "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot"
-            }
-          },
-          {
-            "event": "GitHub Copilot 周更新：Claude Fable 5.1、Gemini 3.8 Flash 与内容排除（2026-09-04）",
-            "summary": "GitHub 的周更新列出多项变化：Claude Fable 5.1 面向 Pro+、Max、Business 和 Enterprise，Gemini 3.8 Flash 正在向 Pro、Pro+、Max、Business 和 Enterprise rollout；Copilot app 与 CLI 现在遵守 content exclusions。",
-            "howTo": "在 Copilot 的模型选择器中检查 Claude Fable 5.1 或 Gemini 3.8 Flash；在仓库或组织设置中配置 content exclusions，再用 Copilot app/CLI 发起 agent 工作流并确认敏感代码未进入上下文。",
-            "impact": "学生维护含实验数据或私有课程代码的仓库时，可以先配置排除规则，再使用 agent；同时比较两种新模型在补全、解释和测试任务上的差异。",
-            "free": "公告只列出可用计划和渐进式 rollout，没有说明这些模型的统一免费额度、地区范围或各计划具体配额；Business/Enterprise 的访问仍可能受管理员策略影响。",
-            "category": "Copilot 模型与隐私控制",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-04",
-              "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31"
-            }
-          },
-          {
-            "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型可下载",
-            "summary": "Qwen 官方 Hugging Face 模型卡介绍 Qwen3-Next-80B-A3B-Instruct：总参数 80B、激活参数 3B，原生上下文长度 262,144 token，并采用混合注意力、高稀疏 MoE 和多 token 预测；模型卡还给出 Transformers、vLLM、Ollama、LM Studio、MLX-LM 与 llama.cpp 的运行方向。",
-            "howTo": "打开 Qwen/Qwen3-Next-80B-A3B-Instruct 模型卡，按其示例安装 Transformers 或选择 vLLM、Ollama、LM Studio、MLX-LM、llama.cpp；先用短文本验证显存和推理速度，再尝试长上下文任务。",
-            "impact": "有 GPU 或 Colab 条件的学生可以比较稀疏 MoE、长上下文和本地推理，不必先接入付费 API；课程报告应把模型卡指标与自己的实测分开记录。",
-            "free": "模型卡提供公开下载入口，但本地软件、GPU、存储和网络可能产生成本；官方模型卡未说明统一免费 API 配额、账号资格、地区范围或发布日期。",
-            "category": "开放模型权重",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Gemini API 免费层与 AI Studio",
-            "summary": "Google 官方定价页列出免费层：有限访问部分模型、免费输入与输出 token，并可使用 Google AI Studio。",
-            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型做提示词或 API 原型；调用前逐项查看当前模型和账户限制。",
-            "impact": "学生可以用免费层做文本处理、课程演示和 API 调试，先验证原型再决定是否需要付费吞吐。",
-            "free": "官方明确免费层含有限模型访问、免费输入/输出 token 和 AI Studio；统一固定额度与地区清单官方未说明，免费层内容可用于改进 Google 产品。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Google Colab 官方 FAQ 说明，Colab 是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
-            "howTo": "打开 Colab，新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
-            "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置与硬件门槛。",
-            "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费运行时限制代理、挖矿和绕过 UI 等行为，并优先支持正在 notebook 中编程的用户。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Education：Copilot Student 学生权益",
-            "summary": "GitHub Education 官方权益页列出，经验证学生可使用 GitHub Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅限 auto model selection 的有限 chat 和 agent 使用。",
-            "howTo": "打开 GitHub Student Developer Pack，完成学生资格验证，在 GitHub Copilot 权益入口开通；开通后在编辑器使用补全，并在账户页面查看 AI Credits 与 chat/agent 限制。",
-            "impact": "学生可用代码补全辅助课程项目和重复性样板代码，同时保留测试和人工审查，不把 AI 输出当作未经验证的答案。",
-            "free": "官方权益页说明 Copilot Student 面向 verified students，代码补全 unlimited，并含 AI Credits；chat 和 agent 为 limited，模型仅 auto model selection，其他资格细节以验证页面为准。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Notion AI 免费与 Plus 计划的有限试用响应",
-            "summary": "Notion 官方 FAQ 说明，Free 和 Plus 计划用户可以获得有限数量的 complimentary AI responses；完整 Notion AI 主要面向 Business 和 Enterprise 计划，部分高级模型使用 Notion credits。",
-            "howTo": "登录 Notion，在页面中选中文本或按空格呼出 AI，尝试总结、改写或翻译；用完试用响应后查看工作区提示和计划，不要默认无限可用。",
-            "impact": "学生可先用少量响应整理课堂笔记、生成提纲或检查英文表达，再评估是否需要教育或付费计划。",
-            "free": "官方确认 Free 和 Plus 有限免费响应，但未统一说明响应总数、地区和重置周期；AI 图片生成的 10 次/24 小时、30 次/30 天限制是 Business/Enterprise beta 功能。",
-            "category": "长期免费应用功能",
-            "source": {
-              "name": "Notion 官方 AI FAQ",
-              "published": "官方未说明",
-              "url": "https://www.notion.com/help/notion-ai-faqs"
-            }
-          }
-        ]
+const issue20260904 = {
+  "date": "2026-09-04",
+  "status": "ready",
+  "ai": {
+    "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
+    "updates": [
+      {
+        "event": "GitHub Copilot：Gemini 3.8 Flash 上线（2026-09-03）",
+        "summary": "GitHub 官方宣布 Google 的 Gemini 3.8 Flash 已加入 GitHub Copilot，可用于复杂终端编码任务，并采用 provider pricing 的用量计费。",
+        "howTo": "更新支持的 Copilot 客户端，在 VS Code、Visual Studio、Copilot CLI、云端 coding agent、Copilot app 或其他列出的 IDE 中打开模型选择器，选择 Gemini 3.8 Flash；如果尚未显示，等待渐进式 rollout。",
+        "impact": "学生可用它检查课程项目的终端操作、跨文件修改和失败恢复；做实验时应保留测试输出，核对模型建议而不是直接提交。",
+        "free": "官方说明可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，按用量计费，2026-12-31 前为 introductory provider pricing；没有宣布统一免费额度，企业管理员还可通过模型策略控制访问。",
+        "category": "Copilot 模型",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-03",
+          "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+        }
       },
-      "english": {
-        "intro": "精选可免费阅读全文的英语材料，侧重社会、公共议题与健康风险；每篇提供考研英语二风格的结构、词汇和短句精读。",
-        "articles": [
-          {
-            "title": "Egyptian TV presenter among 12 sentenced to death for drug crime",
-            "source": "The Guardian",
-            "published": "2026-09-05",
-            "url": "https://www.theguardian.com/world/2026/sep/05/egyptian-tv-presenter-among-12-sentenced-to-death-for-drug",
-            "readingTime": "7",
-            "topic": "社会 / 法律与公共安全",
-            "summary": "文章报道埃及一家法院以制造和贩运毒品等罪名判处电视主持人 Sarah Khalifa 与另外 11 人死刑，并说明判决仍可上诉。报道先交代被告的公众身份和指控，再引用官方媒体对有组织犯罪、原料、枪支及查获数量的说法，随后解释死刑案件需征询大穆夫提意见的程序。结尾补充埃及适用死刑的罪名范围以及人权机构统计，形成“案件事实—司法程序—制度背景”的新闻结构。",
-            "reason": [
-              "刑事司法、公共安全与程序正义结合，适合社会议题阅读。",
-              "结构从个案和指控推进到法律程序，再扩展到制度背景，便于识别信息层级。",
-              "可训练区分官方媒体陈述、法院判决和人权机构统计等不同来源。",
-              "词汇覆盖 organised crime、verdict、appeal、narcotics 等新闻和法律表达。",
-              "适合积累“事实报道后补充制度背景”的议论文组织方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "sentence",
-                "phonetic": "/ˈsentəns/",
-                "part": "v.",
-                "translation": "判处；宣判"
-              },
-              {
-                "word": "narcotics",
-                "phonetic": "/nɑːˈkɒtɪks/",
-                "part": "n.",
-                "translation": "麻醉品；毒品"
-              },
-              {
-                "word": "organised criminal gang",
-                "phonetic": "/ˈɔːɡənaɪzd ˈkrɪmɪnl ɡæŋ/",
-                "part": "n.",
-                "translation": "有组织犯罪团伙"
-              },
-              {
-                "word": "verdict",
-                "phonetic": "/ˈvɜːdɪkt/",
-                "part": "n.",
-                "translation": "裁决；判决"
-              },
-              {
-                "word": "appeal",
-                "phonetic": "/əˈpiːl/",
-                "part": "n./v.",
-                "translation": "上诉；申诉"
-              },
-              {
-                "word": "procedure",
-                "phonetic": "/prəˈsiːdʒə/",
-                "part": "n.",
-                "translation": "程序"
-              },
-              {
-                "word": "trafficking",
-                "phonetic": "/ˈtræfɪkɪŋ/",
-                "part": "n.",
-                "translation": "贩运；非法交易"
-              },
-              {
-                "word": "premeditated",
-                "phonetic": "/ˌpriːˈmedɪteɪtɪd/",
-                "part": "adj.",
-                "translation": "预谋的"
-              },
-              {
-                "word": "defendant",
-                "phonetic": "/dɪˈfendənt/",
-                "part": "n.",
-                "translation": "被告"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The verdict is subject to appeal.",
-                "analysis": [
-                  "主干是 The verdict is subject。",
-                  "subject to 是形容词短语，表示受某事制约或仍可能经历某程序。",
-                  "to appeal 是介词短语，说明制约来源。",
-                  "这是新闻中简洁表达判决未最终确定的被动结构。"
-                ],
-                "translation": "该判决仍可上诉。"
-              },
-              {
-                "original": "The verdict came after the court consulted the Grand Mufti of Egypt for his religious opinion.",
-                "analysis": [
-                  "主干是 The verdict came。",
-                  "after 引导时间状语从句，交代判决发生的先后关系。",
-                  "the court consulted the Grand Mufti 是从句核心。",
-                  "for his religious opinion 表目的，说明咨询的用途。"
-                ],
-                "translation": "法院征询埃及大穆夫提的宗教意见后作出了判决。"
-              },
-              {
-                "original": "Egypt applies the death penalty for premeditated murder, terrorism, some rape offences and drug trafficking.",
-                "analysis": [
-                  "主干是 Egypt applies the death penalty。",
-                  "for 引出适用死刑的罪名范围。",
-                  "四个并列名词短语构成列举，增强信息密度。",
-                  "一般现在时表达制度性事实，适合概括法律规则。"
-                ],
-                "translation": "埃及对预谋杀人、恐怖主义、部分强奸罪和毒品贩运适用死刑。"
-              }
-            ]
-          },
-          {
-            "title": "Drone attack blamed on guerrillas kills at least three soldiers in Colombia",
-            "source": "The Guardian",
-            "published": "2026-09-05",
-            "url": "https://www.theguardian.com/world/2026/sep/05/drone-attack-guerrillas-kills-soldiers-colombia",
-            "readingTime": "6",
-            "topic": "社会 / 冲突与安全",
-            "summary": "文章报道哥伦比亚东北部一处军事单位遭无人机投放爆炸物并发生冲突，军方称至少三名士兵死亡、四人受伤。报道先给出伤亡和地点，再呈现地方当局将袭击归咎于民族解放军（ELN）的说法，并补充总统回应、ELN 的历史和其在边境地区的活动。后文把事件放入更大的安全背景：该地区连接委内瑞拉边境、是古柯产区，相关武装争夺控制权，近期还发生过针对警察设施的爆炸。",
-            "reason": [
-              "无人机技术进入传统冲突场景，适合科技趋势与社会安全交叉主题。",
-              "文章按伤亡事实、责任归因、组织背景、区域原因和近期案例递进。",
-              "可训练识别 blamed on、according to 与 officials said 等归因和证据标记。",
-              "词汇覆盖 guerrilla、compound、dissident、porous border 等新闻高频表达。",
-              "适合写“单一事件需要放回历史、地理和经济背景解释”的段落。"
-            ],
-            "vocabulary": [
-              {
-                "word": "guerrilla",
-                "phonetic": "/ɡəˈrɪlə/",
-                "part": "n.",
-                "translation": "游击队员；游击组织"
-              },
-              {
-                "word": "compound",
-                "phonetic": "/ˈkɒmpaʊnd/",
-                "part": "n.",
-                "translation": "院区；大院"
-              },
-              {
-                "word": "casualty",
-                "phonetic": "/ˈkæʒuəlti/",
-                "part": "n.",
-                "translation": "伤亡人员"
-              },
-              {
-                "word": "dissident",
-                "phonetic": "/ˈdɪsɪdənt/",
-                "part": "n./adj.",
-                "translation": "持不同政见者；分裂的"
-              },
-              {
-                "word": "porous",
-                "phonetic": "/ˈpɔːrəs/",
-                "part": "adj.",
-                "translation": "有漏洞的；边界管控松散的"
-              },
-              {
-                "word": "vie for",
-                "phonetic": "/vaɪ fɔː/",
-                "part": "phr.v.",
-                "translation": "争夺"
-              },
-              {
-                "word": "strategic",
-                "phonetic": "/strəˈtiːdʒɪk/",
-                "part": "adj.",
-                "translation": "战略性的"
-              },
-              {
-                "word": "condemn",
-                "phonetic": "/kənˈdem/",
-                "part": "v.",
-                "translation": "谴责"
-              },
-              {
-                "word": "faction",
-                "phonetic": "/ˈfækʃn/",
-                "part": "n.",
-                "translation": "派系；派别"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Local authorities blamed the attack on the rebel National Liberation Army (ELN).",
-                "analysis": [
-                  "主干是 Local authorities blamed the attack。",
-                  "blame A on B 表示把 A 归咎于 B。",
-                  "the rebel National Liberation Army 是介词 on 的宾语。",
-                  "括号中的 ELN 是同位语，提供后文使用的缩写。"
-                ],
-                "translation": "地方当局将袭击归咎于反叛组织民族解放军（ELN）。"
-              },
-              {
-                "original": "Both groups are vying for control of the strategic region, which connects to the porous border with Venezuela.",
-                "analysis": [
-                  "主干是 Both groups are vying for control。",
-                  "vie for 表示竞争争夺，进行时突出持续状态。",
-                  "which 引导非限制性定语从句，补充说明 the strategic region。",
-                  "connects to the porous border 是从句谓语，解释该地区的地理意义。"
-                ],
-                "translation": "双方都在争夺这一战略地区的控制权，该地区连接着管控松散的委内瑞拉边境。"
-              },
-              {
-                "original": "Earlier this week, at least one civilian was killed and 11 other people were injured after a car bomb exploded outside a police station.",
-                "analysis": [
-                  "Earlier this week 是时间状语，先定位事件发生时间。",
-                  "主句使用两个并列被动结构，分别报告死亡和受伤。",
-                  "after 引导时间状语从句，说明伤亡发生在汽车炸弹爆炸之后。",
-                  "outside a police station 是地点状语，补充爆炸位置。"
-                ],
-                "translation": "本周早些时候，一枚汽车炸弹在警察局外爆炸，造成至少一名平民死亡、另有 11 人受伤。"
-              }
-            ]
-          }
+      {
+        "event": "GitHub Copilot：四个模型将于 10 月 2 日弃用（2026-09-03）",
+        "summary": "GitHub 公布 2026-10-02 的 Copilot 模型弃用计划：Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 将被移除，并分别建议迁移到 Gemini 3.8 Flash、Kimi K3 或 Claude Opus 5。",
+        "howTo": "在 Copilot Chat、inline edits、ask/agent 模式或代码补全的工作流中盘点旧模型；在组织或企业 Copilot 模型设置中确认替代模型已启用，再通过模型选择器切换并重新运行测试。",
+        "impact": "学生维护课程仓库或个人工具时，可提前固定替代模型并比较输出，避免作业截止日前因模型消失导致提示词和结果变化。",
+        "free": "这是一项模型可用性变更，不是新优惠；官方未说明替代模型的统一免费额度、地区范围或个人计划的具体用量影响。企业和 Business 管理员可能需要手动启用替代模型。",
+        "category": "Copilot 模型生命周期",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-03",
+          "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
+        }
+      },
+      {
+        "event": "GitHub：逐步重新开放 Copilot Business 和 Enterprise 注册（2026-09-03）",
+        "summary": "GitHub 表示，面向使用信用卡或 PayPal 付款的 Copilot Business 与 Enterprise 客户，注册将在未来数周逐步重新开放；同时加强账户审核并更新计费流程。",
+        "howTo": "打开 GitHub Copilot 计划页选择 Business 或 Enterprise；若首选方案暂不可用，稍后重试。组织管理员应在购买前检查座席预付、下一计费周期和超出包含用量后的付款规则。",
+        "impact": "学生团队或实验室若由组织统一购买 Copilot，可据此安排座席开通和预算；个人学习者不应把组织计划的规则当作个人免费权益。",
+        "free": "官方说明新座席在获得访问前需先付款，超出包含用量可能还需付款；计划价格和座席按比例计费方式不变。该公告没有提供免费计划、免费额度或地区清单。",
+        "category": "Copilot 订阅与计费",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-03",
+          "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google Gemini API 官方定价页提供免费层，包括部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型进行提示词和 API 原型实验；使用前查看定价页的模型范围和当前账户限制。",
+        "impact": "学生可用它做课程演示、文本处理原型和 API 调试，不必先为输入输出 token 付费。",
+        "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 和 AI Studio；没有在该页给出所有用户统一固定额度或地区清单，且免费层内容可用于改进产品。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Google Colab 官方 FAQ 说明，这是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，面向机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，用 Google 账号新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置和硬件门槛。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费托管运行时限制代理、挖矿、绕过 UI 等滥用行为，并优先支持正在 notebook 中编程的用户。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "Qwen3-0.6B 开放权重模型",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B：0.6B 参数、32,768 上下文长度，并支持在 thinking 与 non-thinking 模式间切换；页面给出 Transformers、vLLM 和本地工具的运行方式。",
+        "howTo": "在 Hugging Face 打开 Qwen/Qwen3-0.6B，按模型卡安装最新版 Transformers，下载 tokenizer 与模型后运行示例；也可按官方说明使用 Ollama、LM Studio、llama.cpp 或其他支持工具。",
+        "impact": "学生可在本地或 Colab 做轻量推理、提示词对比和多语言实验，理解模型部署而不必调用付费云 API。",
+        "free": "模型权重可从 Hugging Face 页面下载，具体许可证应以模型卡当前显示为准；本地软件、算力和存储可能产生费用，统一免费 API 配额、账号资格和地区范围官方未说明。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费发布机器学习演示",
+        "summary": "Hugging Face 官方文档说明 Spaces 可将机器学习 demo 直接托管到个人或组织主页，支持 Gradio、Docker 以及静态 HTML/JavaScript。",
+        "howTo": "进入 Hugging Face Spaces 创建 Space，选择 Gradio、Docker 或静态 SDK，上传代码和依赖并发布；需要 GPU 或其他加速硬件时再查看官方升级文档。",
+        "impact": "学生能把模型作业、交互式数据分析或课程原型变成可分享网页，便于答辩和同伴测试。",
+        "free": "官方文档说明可创建和托管 Space，但没有在该页说明统一免费算力、存储或地区额度；GPU/加速硬件属于另列的升级能力，费用和配额官方未说明。",
+        "category": "长期免费托管",
+        "source": {
+          "name": "Hugging Face Spaces 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选可免费阅读全文的英语材料，侧重社会、文化、健康与公共议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "The Bayeux tapestry: a stupefying, thrilling, horrifying masterpiece that shakes the earth",
+        "source": "The Guardian",
+        "published": "2026-09-03",
+        "url": "https://www.theguardian.com/artanddesign/2026/sep/03/the-bayeux-tapestry-british-museum-london",
+        "readingTime": "10",
+        "topic": "文化 / 艺术史",
+        "summary": "文章以作者在大英博物馆观看贝叶挂毯的体验开篇，先写展陈、色彩和观看节奏，再回溯 1066 年诺曼征服的历史背景。作者把挂毯中央的战斗叙事与上下边框的怪兽、农民和宇宙意象并置，说明作品既有清晰的运动感，也把统治者的战争和普通人的生活放在同一画面中。文章最后认为，挂毯的真实暴力、死亡后果和复杂视角使它超越中世纪遗物，成为关于战争疯狂的普遍表达。",
+        "reason": [
+          "艺术与历史记忆结合，适合考研文化类阅读主题。",
+          "结构是现场观感、历史说明、细节分析和价值判断，便于练习段落功能。",
+          "可训练识别转折、举例、时间顺序和由细节推导主旨。",
+          "词汇覆盖 masterpiece、depict、momentum、consequence 等正式表达。",
+          "适合积累描述文化遗产、叙事视角和公共记忆的写作论据。"
+        ],
+        "vocabulary": [
+          { "word": "stupefying", "phonetic": "/ˈstjuːpɪfaɪɪŋ/", "part": "adj.", "translation": "令人震撼的" },
+          { "word": "masterpiece", "phonetic": "/ˈmɑːstəpiːs/", "part": "n.", "translation": "杰作" },
+          { "word": "depict", "phonetic": "/dɪˈpɪkt/", "part": "v.", "translation": "描绘" },
+          { "word": "definitive", "phonetic": "/dɪˈfɪnətɪv/", "part": "adj.", "translation": "明确的；决定性的" },
+          { "word": "mounting", "phonetic": "/ˈmaʊntɪŋ/", "part": "adj.", "translation": "逐渐增强的" },
+          { "word": "momentum", "phonetic": "/məˈmentəm/", "part": "n.", "translation": "势头；动量" },
+          { "word": "marginal", "phonetic": "/ˈmɑːdʒɪnl/", "part": "adj.", "translation": "边缘的" },
+          { "word": "transcend", "phonetic": "/trænˈsend/", "part": "v.", "translation": "超越" },
+          { "word": "consequence", "phonetic": "/ˈkɒnsɪkwəns/", "part": "n.", "translation": "后果" },
+          { "word": "universal", "phonetic": "/ˌjuːnɪˈvɜːsl/", "part": "adj.", "translation": "普遍的" }
+        ],
+        "sentences": [
+          { "original": "This is pacy art: it hurtles along.", "analysis": ["主句 This is pacy art 用系动词说明艺术风格。", "冒号后 it hurtles along 对前句作解释和强化。", "pacy 是非正式但有画面感的形容词，表示节奏快。", "hurtle along 用动态动词把观看体验写成高速推进。"], "translation": "这是一种节奏飞快的艺术：它一路疾驰向前。" },
+          { "original": "The great thing about a border is that you can break it.", "analysis": ["主干是 The great thing is that...。", "about a border 是介词短语，限定讨论对象。", "that 引导表语从句，说明 great thing 的具体内容。", "break it 既指突破边框也形成字面与比喻双关。"], "translation": "边框最妙之处在于，你可以打破它。" },
+          { "original": "It’s that honesty that makes this not just a fascinating medieval relic but a universal depiction of the madness that is war.", "analysis": ["It’s...that... 是强调句，强调 honesty。", "make A not just B but C 表示递进并列。", "that is war 是定语从句，修饰 madness。", "句子从具体作品评价推进到关于战争的普遍判断。"], "translation": "正是这种诚实，使它不仅是迷人的中世纪遗物，更是对战争疯狂的普遍描绘。" }
         ]
       }
-    },
-    {
-      "date": "2026-09-04",
-      "status": "ready",
-      "ai": {
-        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
-        "updates": [
-          {
-            "event": "GitHub Copilot：Gemini 3.8 Flash 上线（2026-09-03）",
-            "summary": "GitHub 官方宣布 Google 的 Gemini 3.8 Flash 已加入 GitHub Copilot，可用于复杂终端编码任务，并采用 provider pricing 的用量计费。",
-            "howTo": "更新支持的 Copilot 客户端，在 VS Code、Visual Studio、Copilot CLI、云端 coding agent、Copilot app 或其他列出的 IDE 中打开模型选择器，选择 Gemini 3.8 Flash；如果尚未显示，等待渐进式 rollout。",
-            "impact": "学生可用它检查课程项目的终端操作、跨文件修改和失败恢复；做实验时应保留测试输出，核对模型建议而不是直接提交。",
-            "free": "官方说明可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，按用量计费，2026-12-31 前为 introductory provider pricing；没有宣布统一免费额度，企业管理员还可通过模型策略控制访问。",
-            "category": "Copilot 模型",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-03",
-              "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
-            }
-          },
-          {
-            "event": "GitHub Copilot：四个模型将于 10 月 2 日弃用（2026-09-03）",
-            "summary": "GitHub 公布 2026-10-02 的 Copilot 模型弃用计划：Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 将被移除，并分别建议迁移到 Gemini 3.8 Flash、Kimi K3 或 Claude Opus 5。",
-            "howTo": "在 Copilot Chat、inline edits、ask/agent 模式或代码补全的工作流中盘点旧模型；在组织或企业 Copilot 模型设置中确认替代模型已启用，再通过模型选择器切换并重新运行测试。",
-            "impact": "学生维护课程仓库或个人工具时，可提前固定替代模型并比较输出，避免作业截止日前因模型消失导致提示词和结果变化。",
-            "free": "这是一项模型可用性变更，不是新优惠；官方未说明替代模型的统一免费额度、地区范围或个人计划的具体用量影响。企业和 Business 管理员可能需要手动启用替代模型。",
-            "category": "Copilot 模型生命周期",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-03",
-              "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
-            }
-          },
-          {
-            "event": "GitHub：逐步重新开放 Copilot Business 和 Enterprise 注册（2026-09-03）",
-            "summary": "GitHub 表示，面向使用信用卡或 PayPal 付款的 Copilot Business 与 Enterprise 客户，注册将在未来数周逐步重新开放；同时加强账户审核并更新计费流程。",
-            "howTo": "打开 GitHub Copilot 计划页选择 Business 或 Enterprise；若首选方案暂不可用，稍后重试。组织管理员应在购买前检查座席预付、下一计费周期和超出包含用量后的付款规则。",
-            "impact": "学生团队或实验室若由组织统一购买 Copilot，可据此安排座席开通和预算；个人学习者不应把组织计划的规则当作个人免费权益。",
-            "free": "官方说明新座席在获得访问前需先付款，超出包含用量可能还需付款；计划价格和座席按比例计费方式不变。该公告没有提供免费计划、免费额度或地区清单。",
-            "category": "Copilot 订阅与计费",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-03",
-              "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini API 免费层与 Google AI Studio",
-            "summary": "Google Gemini API 官方定价页提供免费层，包括部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问。",
-            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型进行提示词和 API 原型实验；使用前查看定价页的模型范围和当前账户限制。",
-            "impact": "学生可用它做课程演示、文本处理原型和 API 调试，不必先为输入输出 token 付费。",
-            "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 和 AI Studio；没有在该页给出所有用户统一固定额度或地区清单，且免费层内容可用于改进产品。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Google Colab 官方 FAQ 说明，这是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，面向机器学习、数据科学和教育。",
-            "howTo": "打开 Colab，用 Google 账号新建或加载 notebook，在单元格运行 Python；需要硬件时在运行时设置中尝试 GPU/TPU，并保存到 Drive 或从 GitHub 加载。",
-            "impact": "学生可以直接运行课程代码、数据清洗和小型模型实验，减少本地环境配置和硬件门槛。",
-            "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费托管运行时限制代理、挖矿、绕过 UI 等滥用行为，并优先支持正在 notebook 中编程的用户。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Qwen3-0.6B 开放权重模型",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B：0.6B 参数、32,768 上下文长度，并支持在 thinking 与 non-thinking 模式间切换；页面给出 Transformers、vLLM 和本地工具的运行方式。",
-            "howTo": "在 Hugging Face 打开 Qwen/Qwen3-0.6B，按模型卡安装最新版 Transformers，下载 tokenizer 与模型后运行示例；也可按官方说明使用 Ollama、LM Studio、llama.cpp 或其他支持工具。",
-            "impact": "学生可在本地或 Colab 做轻量推理、提示词对比和多语言实验，理解模型部署而不必调用付费云 API。",
-            "free": "模型权重可从 Hugging Face 页面下载，具体许可证应以模型卡当前显示为准；本地软件、算力和存储可能产生费用，统一免费 API 配额、账号资格和地区范围官方未说明。",
-            "category": "开放模型权重",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces 免费发布机器学习演示",
-            "summary": "Hugging Face 官方文档说明 Spaces 可将机器学习 demo 直接托管到个人或组织主页，支持 Gradio、Docker 以及静态 HTML/JavaScript。",
-            "howTo": "进入 Hugging Face Spaces 创建 Space，选择 Gradio、Docker 或静态 SDK，上传代码和依赖并发布；需要 GPU 或其他加速硬件时再查看官方升级文档。",
-            "impact": "学生能把模型作业、交互式数据分析或课程原型变成可分享网页，便于答辩和同伴测试。",
-            "free": "官方文档说明可创建和托管 Space，但没有在该页说明统一免费算力、存储或地区额度；GPU/加速硬件属于另列的升级能力，费用和配额官方未说明。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 官方文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack 中的 Azure 学生权益",
-            "summary": "GitHub Education 官方权益页列出 Microsoft Azure 学生 offer：18 岁以上学生可获得 25+ 项 Azure 云服务的免费访问及 100 美元 Azure credit，且页面写明无需信用卡。",
-            "howTo": "打开 GitHub Student Developer Pack，完成 GitHub Education 学生资格验证，在 Microsoft Azure offer 处按页面入口兑换；使用前核对自己的年龄、地区和账户提示。",
-            "impact": "学生可用云资源部署课程 API、运行小型实验或学习云平台，而不必先绑定信用卡；应设置预算并记录 credit 消耗。",
-            "free": "官方页面写明资格为 18 岁以上学生，权益包括 25+ 项免费 Azure 服务和 100 美元 credit，且无需信用卡；其他地区、有效期和用量细节以兑换页面为准，官方未说明。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "精选可免费阅读全文的英语材料，侧重社会、文化、健康与公共议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
-        "articles": [
-          {
-            "title": "The Bayeux tapestry: a stupefying, thrilling, horrifying masterpiece that shakes the earth",
-            "source": "The Guardian",
-            "published": "2026-09-03",
-            "url": "https://www.theguardian.com/artanddesign/2026/sep/03/the-bayeux-tapestry-british-museum-london",
-            "readingTime": "10",
-            "topic": "文化 / 艺术史",
-            "summary": "文章以作者在大英博物馆观看贝叶挂毯的体验开篇，先写展陈、色彩和观看节奏，再回溯 1066 年诺曼征服的历史背景。作者把挂毯中央的战斗叙事与上下边框的怪兽、农民和宇宙意象并置，说明作品既有清晰的运动感，也把统治者的战争和普通人的生活放在同一画面中。文章最后认为，挂毯的真实暴力、死亡后果和复杂视角使它超越中世纪遗物，成为关于战争疯狂的普遍表达。",
-            "reason": [
-              "艺术与历史记忆结合，适合考研文化类阅读主题。",
-              "结构是现场观感、历史说明、细节分析和价值判断，便于练习段落功能。",
-              "可训练识别转折、举例、时间顺序和由细节推导主旨。",
-              "词汇覆盖 masterpiece、depict、momentum、consequence 等正式表达。",
-              "适合积累描述文化遗产、叙事视角和公共记忆的写作论据。"
-            ],
-            "vocabulary": [
-              {
-                "word": "stupefying",
-                "phonetic": "/ˈstjuːpɪfaɪɪŋ/",
-                "part": "adj.",
-                "translation": "令人震撼的"
-              },
-              {
-                "word": "masterpiece",
-                "phonetic": "/ˈmɑːstəpiːs/",
-                "part": "n.",
-                "translation": "杰作"
-              },
-              {
-                "word": "depict",
-                "phonetic": "/dɪˈpɪkt/",
-                "part": "v.",
-                "translation": "描绘"
-              },
-              {
-                "word": "definitive",
-                "phonetic": "/dɪˈfɪnətɪv/",
-                "part": "adj.",
-                "translation": "明确的；决定性的"
-              },
-              {
-                "word": "mounting",
-                "phonetic": "/ˈmaʊntɪŋ/",
-                "part": "adj.",
-                "translation": "逐渐增强的"
-              },
-              {
-                "word": "momentum",
-                "phonetic": "/məˈmentəm/",
-                "part": "n.",
-                "translation": "势头；动量"
-              },
-              {
-                "word": "marginal",
-                "phonetic": "/ˈmɑːdʒɪnl/",
-                "part": "adj.",
-                "translation": "边缘的"
-              },
-              {
-                "word": "transcend",
-                "phonetic": "/trænˈsend/",
-                "part": "v.",
-                "translation": "超越"
-              },
-              {
-                "word": "consequence",
-                "phonetic": "/ˈkɒnsɪkwəns/",
-                "part": "n.",
-                "translation": "后果"
-              },
-              {
-                "word": "universal",
-                "phonetic": "/ˌjuːnɪˈvɜːsl/",
-                "part": "adj.",
-                "translation": "普遍的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "This is pacy art: it hurtles along.",
-                "analysis": [
-                  "主句 This is pacy art 用系动词说明艺术风格。",
-                  "冒号后 it hurtles along 对前句作解释和强化。",
-                  "pacy 是非正式但有画面感的形容词，表示节奏快。",
-                  "hurtle along 用动态动词把观看体验写成高速推进。"
-                ],
-                "translation": "这是一种节奏飞快的艺术：它一路疾驰向前。"
-              },
-              {
-                "original": "The great thing about a border is that you can break it.",
-                "analysis": [
-                  "主干是 The great thing is that...。",
-                  "about a border 是介词短语，限定讨论对象。",
-                  "that 引导表语从句，说明 great thing 的具体内容。",
-                  "break it 既指突破边框也形成字面与比喻双关。"
-                ],
-                "translation": "边框最妙之处在于，你可以打破它。"
-              },
-              {
-                "original": "It’s that honesty that makes this not just a fascinating medieval relic but a universal depiction of the madness that is war.",
-                "analysis": [
-                  "It’s...that... 是强调句，强调 honesty。",
-                  "make A not just B but C 表示递进并列。",
-                  "that is war 是定语从句，修饰 madness。",
-                  "句子从具体作品评价推进到关于战争的普遍判断。"
-                ],
-                "translation": "正是这种诚实，使它不仅是迷人的中世纪遗物，更是对战争疯狂的普遍描绘。"
-              }
-            ]
-          },
-          {
-            "title": "A kidney transplanted from a pig has worked inside a patient for 271 days",
-            "source": "BBC",
-            "published": "2026-09-03",
-            "url": "https://www.bbc.co.uk/news/articles/c305qn2jeggo",
-            "readingTime": "8",
-            "topic": "健康 / 医学伦理",
-            "summary": "BBC 报道美国医生称，一枚移植自猪的肾脏在患者体内工作了 271 天，创下纪录。文章先以患者 Tim Andrews 的经历说明移植让他暂时摆脱透析并获得等待人类供体的时间，再解释猪器官最终失效、器官被取出以及患者后来获得供体肾脏的过程。报道随后把个案放入异种移植的公共背景：美国约有 10 万人等待肾脏，而每年移植数量远少于需求，因此猪器官可能成为等待人类移植的桥梁，但仍不能替代长期安全性和供体分配问题。",
-            "reason": [
-              "医学创新与公共资源短缺结合，是健康和社会议题的交叉主题。",
-              "文章按个案、结果、技术解释、数据背景展开，适合识别新闻论证结构。",
-              "可训练区分事实陈述、患者引语和医生对意义的解释。",
-              "词汇涵盖 transplant、dialysis、shortage、xenotransplantation 等健康表达。",
-              "适合写科技进步伴随伦理审慎、资源公平与希望的议论文。"
-            ],
-            "vocabulary": [
-              {
-                "word": "transplant",
-                "phonetic": "/ˈtrænsplɑːnt/",
-                "part": "n./v.",
-                "translation": "移植"
-              },
-              {
-                "word": "dialysis",
-                "phonetic": "/daɪˈæləsɪs/",
-                "part": "n.",
-                "translation": "透析"
-              },
-              {
-                "word": "bridge",
-                "phonetic": "/brɪdʒ/",
-                "part": "n.",
-                "translation": "过渡手段；桥梁"
-              },
-              {
-                "word": "eventually",
-                "phonetic": "/ɪˈventʃuəli/",
-                "part": "adv.",
-                "translation": "最终"
-              },
-              {
-                "word": "shortage",
-                "phonetic": "/ˈʃɔːtɪdʒ/",
-                "part": "n.",
-                "translation": "短缺"
-              },
-              {
-                "word": "explore",
-                "phonetic": "/ɪkˈsplɔːr/",
-                "part": "v.",
-                "translation": "探索"
-              },
-              {
-                "word": "species",
-                "phonetic": "/ˈspiːʃiːz/",
-                "part": "n.",
-                "translation": "物种"
-              },
-              {
-                "word": "average",
-                "phonetic": "/ˈævərɪdʒ/",
-                "part": "n./adj.",
-                "translation": "平均数；平均的"
-              },
-              {
-                "word": "depressing",
-                "phonetic": "/dɪˈpresɪŋ/",
-                "part": "adj.",
-                "translation": "令人沮丧的"
-              },
-              {
-                "word": "available",
-                "phonetic": "/əˈveɪləbl/",
-                "part": "adj.",
-                "translation": "可获得的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The transplant gave Tim Andrews hope.",
-                "analysis": [
-                  "主干是 The transplant gave Andrews hope。",
-                  "give + 人 + 抽象名词构成双宾语结构。",
-                  "过去时 gave 概括已经发生的医疗结果。",
-                  "hope 是报道中的情感结果，为后文患者引语铺垫。"
-                ],
-                "translation": "这次移植给了蒂姆·安德鲁斯希望。"
-              },
-              {
-                "original": "The team say their work shows pig organs can be used as a bridge until a human transplant becomes available.",
-                "analysis": [
-                  "主干是 The team say...，引出医疗团队的判断。",
-                  "their work shows 后接省略 that 的宾语从句。",
-                  "pig organs can be used as a bridge 是被动语态和比喻表达。",
-                  "until 引导时间状语从句，说明过渡作用的终点。"
-                ],
-                "translation": "团队表示，他们的工作显示，猪器官可以在人类移植供体出现前发挥过渡作用。"
-              },
-              {
-                "original": "Doctors and scientists are exploring xenotransplantation – using organs from other species – due to shortages of organs for transplants.",
-                "analysis": [
-                  "主干是 Doctors and scientists are exploring xenotransplantation。",
-                  "using organs from other species 是破折号中的同位解释。",
-                  "due to 引导原因，说明技术探索的现实驱动。",
-                  "shortages of organs for transplants 是名词短语，指向供体不足。"
-                ],
-                "translation": "由于移植器官短缺，医生和科学家正在探索异种移植——使用其他物种的器官。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-03",
-      "status": "ready",
-      "ai": {
-        "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
-        "updates": [
-          {
-            "event": "Google：Gemini API 上线 agentic video understanding（2026-09-03）",
-            "summary": "Google 官方宣布，Gemini 3.7 Flash、3.6 Flash 和 3.5 Flash-Lite 现在支持 agentic video understanding：模型会动态搜索、扫描并检查视频片段，结合画面、音频和文字稿完成更精细的分析；官方称在其基准中成本最多降低 66%、token 消耗最多降低 88%，准确率最多提高 7%。",
-            "howTo": "打开 Google AI Studio，使用 Gemini API 的视频理解能力，上传视频或提供 YouTube 视频，再询问时间点、异常、计数或事件顺序；该能力也可在 Gemini Enterprise Agent Platform 使用。",
-            "impact": "学生可把课程录屏、实验录像和讲座视频交给模型，定位关键片段、整理时间线或核对演示步骤，减少手动拖动视频和逐帧记录的时间。",
-            "free": "官方页面说明功能可通过 Google AI Studio 使用，但没有为该视频能力单独说明统一免费额度、账号资格或地区范围；Gemini API 的免费层只覆盖“部分模型”，具体以定价页和账户显示为准。",
-            "category": "Gemini API 更新",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-03",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
-            }
-          },
-          {
-            "event": "Google：Gemini Notebook 改为每五小时刷新一次的灵活用量限制（2026-09-02）",
-            "summary": "Google 官方说明，Gemini Notebook 引入按计算资源划分的灵活用量限制：限制会根据提示复杂度、对话长度、来源数量和所用功能计算，并由每天刷新改为每五小时刷新。达到限制时，Video Overviews 或 Slide Decks 等输出可以延后自动生成。",
-            "howTo": "在 Gemini Notebook 的网页或移动端创建笔记本并观察用量提示；若某项输出超过当前限制，选择延后生成并开启通知，待系统自动完成。该更新从 2026-09-02 起向消费者账号逐步推送。",
-            "impact": "学生做文献综述、课程资料整理或期末项目时，可以更好安排长对话和多来源任务，也能把较重的音频概览或幻灯片生成留到额度刷新后。",
-            "free": "官方只说明从 2026-09-02 起向消费者账号的网页和移动端逐步推出，没有说明统一免费额度、地区覆盖或每个账号的具体计算上限；官方未说明。",
-            "category": "Gemini Notebook",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-02",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
-            }
-          },
-          {
-            "event": "GitHub Copilot：Claude Fable 5.1 正式可用（2026-09-01）",
-            "summary": "GitHub changelog 宣布 Anthropic 的 Claude Fable 5.1 在 GitHub Copilot 中可用，定位是长期、自主的编码和知识工作任务。它按 provider list pricing 计费；企业使用时默认需要数据保留以运行 Anthropic 安全分类器。",
-            "howTo": "在 Copilot 的模型选择器中选择 Claude Fable 5.1；支持入口包括 VS Code、Visual Studio、Copilot CLI、coding agent、github.com、移动端和多种 IDE。Business 或 Enterprise 管理员还要在 Copilot 设置中开启该策略，且 rollout 是渐进式的。",
-            "impact": "学生开发者可以用它做跨文件代码理解、持续调试、复杂功能开发和代码库研究；同时应避免把不适合保留的数据放入默认配置的会话。",
-            "free": "官方说明该模型面向 Copilot Pro+、Max、Business 和 Enterprise 用户，并按用量计费；没有宣布新增免费额度。Business/Enterprise 的策略默认关闭，具体配额、价格和 rollout 以计划与组织设置为准。",
-            "category": "Copilot 模型",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-09-01",
-              "url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot"
-            }
-          },
-          {
-            "event": "GitHub Copilot in VS Code：代理会话与审查工作流更新（2026-08-31）",
-            "summary": "GitHub 对 VS Code 1.132 至 1.135 的 Copilot 更新包括并排安排聊天、用 /btw 开启共享上下文的旁支对话、按提示时间线定位改动、跨应用继续代理会话，以及在完整聊天记录中搜索文本；模型响应页脚还可查看 token 用量。",
-            "howTo": "更新 VS Code 和 Copilot 扩展，在 Agents 窗口使用并排布局或提示时间线；需要临时讨论时输入 /btw，需要回看长对话时使用聊天搜索，并在响应页脚悬停查看 token 用量。",
-            "impact": "学生维护课程项目或开源仓库时，可以把主任务、旁支问题和变更审查分开管理，在长对话中快速找回上下文，便于复盘 AI 生成的代码。",
-            "free": "该 changelog 没有宣布新增免费额度；Copilot 功能的可用性和用量仍取决于账号计划、组织策略与扩展权限，官方未说明统一免费配额。",
-            "category": "VS Code / Copilot",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-08-31",
-              "url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务，官方 FAQ 明确提供免费计算资源，包括 GPU 和 TPU，适合机器学习、数据科学与教育。",
-            "howTo": "打开 https://colab.research.google.com，用 Google 账号新建或加载笔记本，在单元格中运行 Python；笔记本可存放在 Google Drive 或从 GitHub 加载。",
-            "impact": "学生可以直接运行课程代码、数据处理和小型机器学习实验，不必先配置本地 Python 环境或购买 GPU。",
-            "free": "官方明确免费；资源不保证且不无限，使用上限会波动，免费托管运行时禁止挖矿、代理等滥用行为，并优先支持正在笔记本中编程的用户。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini API 免费层与 Google AI Studio",
-            "summary": "Google Gemini API 官方定价页提供免费层，包含部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问；页面同时提醒免费层的模型范围并非全部模型。",
-            "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型开始实验；正式接入前查看 Gemini API Pricing 页面对应模型、地区和当前限额。",
-            "impact": "学生可以低成本做 API 原型、课程演示和提示词实验，再根据实际用量决定是否升级到付费层。",
-            "free": "官方明确存在免费层，但只写明“部分模型”和免费输入/输出 token，没有在该页面给出适用于所有用户的统一固定额度或地区清单；内容可能用于改进产品，具体以条款为准。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces 免费发布机器学习演示",
-            "summary": "Hugging Face 官方文档说明 Spaces 可把机器学习演示应用直接托管在个人或组织主页，支持 Gradio、Docker 和静态 HTML/JavaScript，适合展示项目与协作。",
-            "howTo": "进入 Hugging Face Spaces，创建 Space，选择 Gradio、Docker 或静态 SDK，上传代码与依赖并发布；需要 GPU 或其他加速硬件时再查看相应升级文档。",
-            "impact": "学生能把模型作业、交互式数据分析或课程原型变成可分享的网页，方便答辩、作品集展示和同伴测试。",
-            "free": "官方文档支持创建和托管 Space，但没有在该页面说明统一免费算力、存储或地区额度；GPU/加速硬件是另列的升级能力，具体费用和配额官方未说明。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 官方文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack 学生开发者权益",
-            "summary": "GitHub Education 官方页面为经过资格验证的学生汇总开发工具、云资源和学生优惠，适合课程项目、作品集和开发环境搭建。",
-            "howTo": "打开 GitHub Student Developer Pack，按官方流程使用学校邮箱或学生证明申请 GitHub Education 验证，再逐项查看合作方权益和兑换条件。",
-            "impact": "学生可以集中获取开发工具和云服务权益，减少搭建作品集、部署课程项目和学习新技术时的初始成本。",
-            "free": "该页面展示学生权益，但每项福利的资格、额度、地区和有效期由对应合作方决定；统一免费额度官方未说明，申请前需逐项核对。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Student Developer Pack 官方页面",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Diffusers 开源扩散模型工具箱",
-            "summary": "Hugging Face 的官方 GitHub 仓库提供 Diffusers 开源工具箱，用于使用和实验扩散模型，仓库包含安装说明、示例和模型加载方式。",
-            "howTo": "打开官方 GitHub 仓库，按 README 安装依赖，选择可用模型并运行示例；本地算力不足时，可结合 Colab 或其他合法计算环境。",
-            "impact": "学生可以复现图像生成实验、比较采样参数并理解扩散模型工作流，适合课程作业和研究原型。",
-            "free": "官方仓库以开源代码形式提供，代码使用许可见仓库 LICENSE；模型权重各自有许可证，托管 GPU、云环境和部分模型可能产生费用，统一免费额度官方未说明。",
-            "category": "开源工具",
-            "source": {
-              "name": "Hugging Face Diffusers 官方 GitHub",
-              "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "精选可免费阅读全文的英语材料，侧重社会、政治与文化议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
-        "articles": [
-          {
-            "title": "How Trump Lost Asia",
-            "source": "The Atlantic",
-            "published": "2026-09-02",
-            "url": "https://www.theatlantic.com/podcasts/2026/09/david-frum-show-malcolm-turnbull-australia-pacific-china/688500/",
-            "readingTime": "10",
-            "topic": "国际关系 / 政治传播",
-            "summary": "这期 The Atlantic 播客文字稿先讨论总统财富、政治权力与民主问责之间的关系，随后转向美国在印度洋—太平洋地区的盟友关系。作者通过澳大利亚前总理 Malcolm Turnbull 的访谈，把美国政策的可信度、盟友对安全承诺的判断以及地区战略联系起来；结尾又回到历史与政治读物，形成“现实问题—访谈证据—历史解释”的结构。核心结论是，政策选择不仅影响短期外交，也会改变盟友对美国可靠性的长期预期。",
-            "reason": [
-              "主题涉及盟友、信誉与国际秩序，是考研阅读常见的政治与全球化议题。",
-              "结构由主持人引入、嘉宾访谈和书籍讨论组成，适合练习段落功能与论证层次。",
-              "可训练识别“not only...but also...”式递进、因果和让步关系。",
-              "词汇覆盖 dependable、reputation、strategic、accountability 等抽象表达。",
-              "材料适合积累关于国家形象、外交承诺和制度信任的写作论据。"
-            ],
-            "vocabulary": [
-              {
-                "word": "dependable",
-                "phonetic": "/dɪˈpendəbl/",
-                "part": "adj.",
-                "translation": "可靠的"
-              },
-              {
-                "word": "ally",
-                "phonetic": "/ˈælaɪ/",
-                "part": "n.",
-                "translation": "盟友"
-              },
-              {
-                "word": "reputation",
-                "phonetic": "/ˌrepjuˈteɪʃn/",
-                "part": "n.",
-                "translation": "声誉；名声"
-              },
-              {
-                "word": "strategic",
-                "phonetic": "/strəˈtiːdʒɪk/",
-                "part": "adj.",
-                "translation": "战略性的"
-              },
-              {
-                "word": "presidency",
-                "phonetic": "/ˈprezɪdənsi/",
-                "part": "n.",
-                "translation": "总统任期；总统职位"
-              },
-              {
-                "word": "accountability",
-                "phonetic": "/əˌkaʊntəˈbɪləti/",
-                "part": "n.",
-                "translation": "问责；责任制"
-              },
-              {
-                "word": "deterioration",
-                "phonetic": "/dɪˌtɪəriəˈreɪʃn/",
-                "part": "n.",
-                "translation": "恶化"
-              },
-              {
-                "word": "circumstance",
-                "phonetic": "/ˈsɜːkəmstæns/",
-                "part": "n.",
-                "translation": "情况；环境"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The United States—not by accident or circumstance, but by design—has become a less dependable ally.",
-                "analysis": [
-                  "主干是 The United States has become an ally。",
-                  "not by...but by... 构成否定与转折对照。",
-                  "less dependable 是比较级，表示可靠程度下降。",
-                  "破折号插入原因判断，强调这是有意选择而非偶然。"
-                ],
-                "translation": "美国成为一个不那么可靠的盟友，并非出于偶然或环境所致，而是有意为之。"
-              },
-              {
-                "original": "The strategic and economic position of the Western democracies has deteriorated.",
-                "analysis": [
-                  "主干是 position has deteriorated。",
-                  "strategic and economic 是并列形容词作前置修饰。",
-                  "of the Western democracies 表示所属范围。",
-                  "deteriorate 是描述局势恶化的正式动词。"
-                ],
-                "translation": "西方民主国家的战略和经济地位已经恶化。"
-              },
-              {
-                "original": "Americans are not accustomed to learning lessons about democracy from other countries.",
-                "analysis": [
-                  "主干是 Americans are not accustomed to learning lessons。",
-                  "be accustomed to 后接动名词 learning。",
-                  "about democracy 修饰 lessons，说明经验主题。",
-                  "from other countries 表示经验来源，形成跨国比较视角。"
-                ],
-                "translation": "美国人并不习惯从其他国家学习有关民主的教训。"
-              }
-            ]
-          },
-          {
-            "title": "Reclaiming stolen wealth can strengthen democracy—but only if institutions endure",
-            "source": "The Atlantic",
-            "published": "2026-08-29",
-            "url": "https://www.theatlantic.com/ideas/2026/08/reclaim-wealth-trump-corruption/688435/",
-            "readingTime": "9",
-            "topic": "社会 / 民主制度 / 公共治理",
-            "summary": "文章比较秘鲁、菲律宾和尼日利亚追缴前统治者及其家族不当财富的经历，论证资产追回既可能带来正义、恢复法治，也可能因机构薄弱、财富再度被掠夺或家族政治复兴而产生反效果。作者先以跨国案例展示制度如何追踪、冻结和返还资产，再指出追赃需要专门机构、国际合作和长期监督，最后把问题提升到民主自我防卫：如果不处理不当财富，它可能继续转化为政治影响力。",
-            "reason": [
-              "主题集中于制度建设、腐败治理和民主韧性，适合社会科学类阅读。",
-              "论证采用“提出风险—跨国案例—归纳条件—回到现实”的递进结构。",
-              "题目可围绕主旨、例证作用、作者态度和条件关系设置。",
-              "词汇具有较强写作迁移价值，如 reclaim、institution、authoritarian、vulnerability。",
-              "文章适合积累“制度必须持续运作才能产生长期效果”的议论文表达。"
-            ],
-            "vocabulary": [
-              {
-                "word": "reclaim",
-                "phonetic": "/rɪˈkleɪm/",
-                "part": "v.",
-                "translation": "追回；收回"
-              },
-              {
-                "word": "authoritarian",
-                "phonetic": "/ɔːˌθɒrəˈteəriən/",
-                "part": "adj.",
-                "translation": "威权的"
-              },
-              {
-                "word": "institution",
-                "phonetic": "/ˌɪnstɪˈtjuːʃn/",
-                "part": "n.",
-                "translation": "制度；机构"
-              },
-              {
-                "word": "misappropriated",
-                "phonetic": "/ˌmɪsəˈprəʊprieɪtɪd/",
-                "part": "adj.",
-                "translation": "被挪用的"
-              },
-              {
-                "word": "dynasty",
-                "phonetic": "/ˈdaɪnəsti/",
-                "part": "n.",
-                "translation": "王朝；家族统治"
-              },
-              {
-                "word": "vulnerability",
-                "phonetic": "/ˌvʌlnərəˈbɪləti/",
-                "part": "n.",
-                "translation": "脆弱性；易受攻击"
-              },
-              {
-                "word": "permanent",
-                "phonetic": "/ˈpɜːmənənt/",
-                "part": "adj.",
-                "translation": "长期的；永久的"
-              },
-              {
-                "word": "cooperation",
-                "phonetic": "/kəʊˌɒpəˈreɪʃn/",
-                "part": "n.",
-                "translation": "合作"
-              },
-              {
-                "word": "corruptly",
-                "phonetic": "/ˈkərʌptli/",
-                "part": "adv.",
-                "translation": "以腐败方式"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Done right, this work can deliver justice and strengthen democratic institutions for the long run.",
-                "analysis": [
-                  "Done right 是省略条件结构，完整含义是 if done right。",
-                  "主干是 this work can deliver justice and strengthen institutions。",
-                  "两个并列动词说明资产追回的双重效果。",
-                  "for the long run 表示影响具有长期性。"
-                ],
-                "translation": "如果做得恰当，这项工作能够实现正义，并长期强化民主制度。"
-              },
-              {
-                "original": "But cleaning up after a corrupt regime also comes with serious challenges and hazards.",
-                "analysis": [
-                  "But 引出与前句收益相反的限制。",
-                  "cleaning up after... 是动名词短语作主语。",
-                  "come with 表示“伴随、带来”。",
-                  "serious challenges and hazards 是并列宾语，概括治理成本与风险。"
-                ],
-                "translation": "但清理腐败政权留下的问题也伴随着严峻的挑战和危险。"
-              },
-              {
-                "original": "This work demands permanent institutions specifically tasked to investigate and prosecute, and broad international cooperation.",
-                "analysis": [
-                  "主干是 This work demands institutions and cooperation。",
-                  "specifically tasked to... 是过去分词短语修饰 institutions。",
-                  "to investigate and prosecute 是并列不定式，说明机构职责。",
-                  "and 连接两项必要条件，突出长期机构与国际合作缺一不可。"
-                ],
-                "translation": "这项工作需要专门负责调查和起诉的长期机构，也需要广泛的国际合作。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-08-07",
-      "status": "ready",
-      "ai": {
-        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
-        "updates": [
-          {
-            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
-            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
-            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
-            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
-            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
-            "category": "Gemini 更新",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
-            }
-          },
-          {
-            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
-            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
-            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
-            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
-            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
-            "category": "Copilot 提醒",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-07-31",
-              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
-            }
-          },
-          {
-            "event": "Mistral: Mistral-7B 权重在 Hugging Face 可用（长期）",
-            "summary": "Hugging Face Hub 上可获取 Mistral-7B 的模型卡与可下载权重，方便在本地或 Colab 中复现实验与微调。",
-            "howTo": "访问 Hugging Face 模型页并按 model card 指南使用 transformers / accelerate 下载与加载模型；在 Colab 或本地环境运行示例。",
-            "impact": "学生可用来做课程项目、模型微调练习与比较模型行为，学习模型工程流程。",
-            "free": "模型权重与许可证以对应 Hugging Face 模型页为准；如 model card 指定许可或限制会在页面说明，否则官方未说明额外限制。",
-            "category": "可下载开源模型",
-            "source": {
-              "name": "Hugging Face – Mistral 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab（免费托管 Jupyter 环境）",
-            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性。",
-            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。",
-            "impact": "学生可在浏览器中运行机器学习练习与模型原型，无需本地 GPU；适合课堂作业与演示。",
-            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack（学生礼包）",
-            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE、域名等），便于课程项目与作品集搭建。",
-            "howTo": "访问 https://education.github.com/pack 并按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
-            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
-            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces（免费托管小型演示应用）",
-            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
-            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
-            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
-            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "Diffusers（Hugging Face 开源库）",
-            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
-            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
-            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程与采样策略，便于课程作业与项目交付。",
-            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
-            "category": "开源工具",
-            "source": {
-              "name": "Hugging Face – Diffusers (GitHub)",
-              "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
-            }
-          },
-          {
-            "event": "Google Cloud 免费额度 / 新用户信用（官方页面）",
-            "summary": "Google Cloud 提供面向新用户与部分项目的免费额度与信用，页面列出不同计划与资助选项。",
-            "howTo": "访问 https://cloud.google.com/free 查看当前的免费产品与新用户信用政策；按照页面说明注册并申请适用的计划。",
-            "impact": "对需要云端算力或托管 AI 服务的课程项目有帮助，尤其是需要短期大算力的训练或托管实验。",
-            "free": "页面列出不同额度与计划；具体额度与资格以页面说明为准（官方未说明统一适用于所有用户的额度）。",
-            "category": "新用户/科研资助",
-            "source": {
-              "name": "Google Cloud Free",
-              "published": "官方未说明",
-              "url": "https://cloud.google.com/free"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
-        "articles": [
-          {
-            "title": "Heat and society: why cities need cooling strategies",
-            "source": "BBC News",
-            "published": "2026-08-03",
-            "url": "https://www.bbc.com/news/science-environment-662000",
-            "readingTime": "8",
-            "topic": "环境 / 城市 / 政策",
-            "summary": "文章概述城市在气候变暖下的热岛效应及其对公共健康、基础设施和教育日程的影响，评估几类降温策略（绿地、水体、材料与设计），并讨论治理与资金挑战。",
-            "reason": [
-              "主题符合社会与环境政策类写作题，常见于研究生英语考试的综合材料题。",
-              "文章结构为问题—证据—策略—限制，适合训练信息整合与段落功能识别。",
-              "含 urban heat island, mitigation, adaptive 等学术词汇，便于扩展写作与阅读词汇。",
-              "结尾讨论治理与资金限制，利于训练评估与批判性写作题型。"
-            ],
-            "vocabulary": [
-              {
-                "word": "heat island",
-                "phonetic": "/hiːt ˈaɪlənd/",
-                "part": "n.",
-                "translation": "热岛效应"
-              },
-              {
-                "word": "mitigation",
-                "phonetic": "/ˌmɪtɪˈɡeɪʃən/",
-                "part": "n.",
-                "translation": "缓解；减轻"
-              },
-              {
-                "word": "adaptive",
-                "phonetic": "/əˈdæptɪv/",
-                "part": "adj.",
-                "translation": "适应性的"
-              },
-              {
-                "word": "infrastructural",
-                "phonetic": "/ˌɪnfrəˈstrʌktʃərəl/",
-                "part": "adj.",
-                "translation": "基础设施的"
-              },
-              {
-                "word": "urban canopy",
-                "phonetic": "/ˈɜːrbən ˈkænəpi/",
-                "part": "n.",
-                "translation": "城市树冠"
-              },
-              {
-                "word": "albedo",
-                "phonetic": "/ælˈbiːdəʊ/",
-                "part": "n.",
-                "translation": "反照率"
-              },
-              {
-                "word": "retrofitting",
-                "phonetic": "/ˌriːˈtrɒfɪtɪŋ/",
-                "part": "v./n.",
-                "translation": "改造（建筑、系统）"
-              },
-              {
-                "word": "resilience",
-                "phonetic": "/rɪˈzɪliəns/",
-                "part": "n.",
-                "translation": "韧性；复原力"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Cities must combine green infrastructure with design to reduce heat exposure.",
-                "analysis": [
-                  "主干：Cities must combine green infrastructure with design",
-                  "with design 作伴随手段，说明组合方法",
-                  "reduce heat exposure 为目的结果说明",
-                  "句型适用于建议段落中的政策建议"
-                ],
-                "translation": "城市必须将绿色基础设施与设计相结合以减少热暴露。"
-              },
-              {
-                "original": "Albedo changes and increased canopy cover can lower peak daytime temperatures substantially.",
-                "analysis": [
-                  "主干：Albedo changes and increased canopy cover can lower peak daytime temperatures",
-                  "并列主语说明两种措施的共同效果",
-                  "substantially 为程度副词，适合描述政策效果",
-                  "句子适合用于论证措施有效性的段落"
-                ],
-                "translation": "改变反照率和增加树冠覆盖可以显著降低白天高温。"
-              },
-              {
-                "original": "Funding and long-term maintenance remain barriers to scaling effective cooling strategies.",
-                "analysis": [
-                  "主干：Funding and long-term maintenance remain barriers",
-                  "barriers 后接不定式 short phrase to explain 目的",
-                  "句式适合在讨论限制与挑战的段落使用",
-                  "指出政策实施的现实障碍，适合讨论评估题型"
-                ],
-                "translation": "资金和长期维护仍然是推广有效降温策略的障碍。"
-              }
-            ]
-          },
-          {
-            "title": "How universities are reshaping assessment for AI-era learning",
-            "source": "The Conversation",
-            "published": "2026-07-30",
-            "url": "https://theconversation.com/how-universities-are-reshaping-assessment-for-ai-era-learning-2026-188812",
-            "readingTime": "7",
-            "topic": "教育 / 评估 / AI",
-            "summary": "文章分析多个高校如何调整作业与考试设计以应对生成式 AI 的普及，提出通过开放题、来源记录与口头答辩等方式保障学术诚信与学习目标。",
-            "reason": [
-              "主题贴合教育改革与 AI 应用，常见于研究生英语考试的教育类写作题。",
-              "文章采用案例—问题—解决方案的结构，适合训练段落功能与信息整合能力。",
-              "包含 provenance, formative assessment, authenticity 等学术词汇，有助于写作词汇扩展。",
-              "提供课堂与评估层面的具体措施，便于训练应用型写作与批判性讨论。"
-            ],
-            "vocabulary": [
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsɛsmənt/",
-                "part": "n.",
-                "translation": "评估；测评"
-              },
-              {
-                "word": "provenance",
-                "phonetic": "/ˈprɒvənəns/",
-                "part": "n.",
-                "translation": "来源；出处"
-              },
-              {
-                "word": "authenticity",
-                "phonetic": "/ˌɔːθɛnˈtɪsɪti/",
-                "part": "n.",
-                "translation": "真实性"
-              },
-              {
-                "word": "formative",
-                "phonetic": "/ˈfɔːmətɪv/",
-                "part": "adj.",
-                "translation": "形成性的；过程性的"
-              },
-              {
-                "word": "open-ended",
-                "phonetic": "/ˌəʊpənˈɛndɪd/",
-                "part": "adj.",
-                "translation": "开放式的"
-              },
-              {
-                "word": "integrity",
-                "phonetic": "/ɪnˈtɛɡrɪti/",
-                "part": "n.",
-                "translation": "诚信；正直"
-              },
-              {
-                "word": "rubric",
-                "phonetic": "/ˈruːbrɪk/",
-                "part": "n.",
-                "translation": "评分标准；评分量表"
-              },
-              {
-                "word": "oral defence",
-                "phonetic": "/ˈɔːrəl dɪˈfɛns/",
-                "part": "n.",
-                "translation": "口头答辩"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Open-ended assignments reduce the utility of simple AI-generated answers.",
-                "analysis": [
-                  "主干：Open-ended assignments reduce the utility of simple AI-generated answers",
-                  "reduce the utility of ... 为结果结构，说明效果",
-                  "open-ended 为复合形容词，常用于描述题型",
-                  "句型适合用于说明措施目的或效果"
-                ],
-                "translation": "开放式作业降低了简单 AI 自动生成答案的效用。"
-              },
-              {
-                "original": "Recording provenance helps assess whether a student understood the research process.",
-                "analysis": [
-                  "主干：Recording provenance helps assess whether ...",
-                  "whether 引导名词性从句作宾语，说明评估内容",
-                  "句子适合在说明评估方法的段落使用",
-                  "强调来源记录有助于评估学生理解过程的深度"
-                ],
-                "translation": "记录来源有助于评估学生是否理解研究过程。"
-              },
-              {
-                "original": "Oral or recorded defences add a layer of verification to written submissions.",
-                "analysis": [
-                  "主干：Oral or recorded defences add a layer of verification",
-                  "add a layer of verification to ... 为结果说明",
-                  "并列主语 oral or recorded defences 强调多种方式",
-                  "句型适合在建议类段落中使用"
-                ],
-                "translation": "口头或录制的答辩为书面提交增加了一道验证环节。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-08-06",
-      "status": "ready",
-      "ai": {
-        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
-        "updates": [
-          {
-            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
-            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
-            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
-            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
-            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
-            "category": "Gemini 更新",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
-            }
-          },
-          {
-            "event": "Google: Glanceboard 示例工程（2026-07-31）",
-            "summary": "Google 发布 Glanceboard 案例，示范如何用 Gemini 3.6 Flash + 本地轻量服务器把日历、天气与学习计划生成 e-ink/网页看板并开源示例代码。",
-            "howTo": "参阅官方文章与 GitHub 示例（文中链接）。把 Google Calendar 与天气数据通过本地服务器拼接提示（prompt）发给 Gemini Flash/图像模型生成当日卡片，推送到电子纸或网页。",
-            "impact": "对学生而言是一个可复刻的项目案例：可用于课程作品、作业演示或个人工作流自动化（生成每日复习计划或任务看板）。",
-            "free": "官方示例开源代码可复刻；所需 API（如 Gemini API）、硬件与第三方服务可能有各自费用或配额，具体以相应服务官方页面为准（官方未说明统一免费额度）。",
-            "category": "AI 实用案例",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/"
-            }
-          },
-          {
-            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
-            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
-            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
-            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
-            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
-            "category": "Copilot 提醒",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-07-31",
-              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab（免费托管 Jupyter 环境）",
-            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性（交互式代码对话、数据科学 Agent 等）。",
-            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。AI 功能通过页面或底部的 Gemini 图标访问。",
-            "impact": "学生可在浏览器中运行机器学习练习、训练小模型或复现实验，无需本地 GPU；适合课堂作业与模型原型开发与演示。",
-            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack（学生礼包）",
-            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE 订阅、域名等），便于课程项目与作品集搭建。",
-            "howTo": "访问 https://education.github.com/pack，按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
-            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
-            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces（免费托管小型演示应用）",
-            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
-            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
-            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
-            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "Diffusers（Hugging Face 开源库）",
-            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
-            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
-            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程、调度器与采样策略，便于课程作业与项目交付。",
-            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
-            "category": "开源工具",
-            "source": {
-              "name": "Hugging Face – Diffusers (GitHub)",
-              "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
-        "articles": [
-          {
-            "title": "How heat waves increase wildfire risk",
-            "source": "The Conversation",
-            "published": "2026-08-04",
-            "url": "https://theconversation.com/us/how-heat-waves-increase-wildfire-risk-2026-189321",
-            "readingTime": "8",
-            "topic": "环境 / 气候 / 风险",
-            "summary": "文章解释热浪如何通过影响植被含水量与干雷暴频率来提高野火风险，展示了观测数据与气象机制，并讨论对防火与土地管理的含义。",
-            "reason": [
-              "主题符合环境与气候变化类议题，常见于研究生英语考试的时事类写作与讨论题。",
-              "文章结构清晰：现象描述—机理解释—证据支持—政策含义，适合训练段落结构与信息整合。",
-              "包含 meteorological, ignition, mitigation 等学术词汇，利于扩展写作词汇。",
-              "结尾提出对策建议，便于训练论证与评估题型。"
-            ],
-            "vocabulary": [
-              {
-                "word": "heat wave",
-                "phonetic": "/ˈhiːt weɪv/",
-                "part": "n.",
-                "translation": "热浪"
-              },
-              {
-                "word": "wildfire",
-                "phonetic": "/ˈwaɪldˌfaɪər/",
-                "part": "n.",
-                "translation": "野火；林火"
-              },
-              {
-                "word": "ignition",
-                "phonetic": "/ɪɡˈnɪʃən/",
-                "part": "n.",
-                "translation": "点火；燃烧起始"
-              },
-              {
-                "word": "drought",
-                "phonetic": "/draʊt/",
-                "part": "n.",
-                "translation": "干旱"
-              },
-              {
-                "word": "mitigation",
-                "phonetic": "/ˌmɪtɪˈɡeɪʃən/",
-                "part": "n.",
-                "translation": "缓解；减轻"
-              },
-              {
-                "word": "vegetation",
-                "phonetic": "/ˌvɛdʒəˈteɪʃən/",
-                "part": "n.",
-                "translation": "植被"
-              },
-              {
-                "word": "propagate",
-                "phonetic": "/ˈprɒpəɡeɪt/",
-                "part": "v.",
-                "translation": "传播；蔓延"
-              },
-              {
-                "word": "lightning",
-                "phonetic": "/ˈlaɪtnɪŋ/",
-                "part": "n.",
-                "translation": "闪电"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Heat waves dry out vegetation and increase the likelihood of ignition.",
-                "analysis": [
-                  "主干：Heat waves dry out vegetation",
-                  "increase the likelihood of ignition 为结果补充说明",
-                  "dry out vegetation 是动宾短语，常用于环境描述",
-                  "句型可用于写作中说明因果关系"
-                ],
-                "translation": "热浪使植被干燥，并增加着火的可能性。"
-              },
-              {
-                "original": "Dry lightning can start fires where vegetation is exceptionally dry, even without human activity.",
-                "analysis": [
-                  "主干：Dry lightning can start fires",
-                  "定语 where vegetation is exceptionally dry 说明条件",
-                  "even without human activity 强调自然起火的可能性",
-                  "句型适合用于提出限制或补充说明"
-                ],
-                "translation": "干雷暴可以在植被极度干燥的情况下引发火灾，即使没有人类活动。"
-              },
-              {
-                "original": "Policy must pair mitigation with land management practices to reduce extreme wildfire events.",
-                "analysis": [
-                  "主干：Policy must pair mitigation with land management practices",
-                  "to reduce ... 为目的状语说明政策目的",
-                  "pair ... with ... 为常用搭配，适合学术写作",
-                  "句式适合结论或建议段落使用"
-                ],
-                "translation": "政策必须将缓解措施与土地管理实践结合起来，以减少极端野火事件。"
-              }
-            ]
-          },
-          {
-            "title": "Universities should teach practical AI collaboration",
-            "source": "The Conversation",
-            "published": "2026-07-31",
-            "url": "https://theconversation.com/us/universities-should-teach-practical-ai-collaboration-2026-188900",
-            "readingTime": "7",
-            "topic": "教育 / 技术 / 教学方法",
-            "summary": "作者主张高校应把与 AI 协作的实操能力纳入课程，强调验证、来源记录与可复现作业的重要性，并给出课堂实践建议。",
-            "reason": [
-              "主题直接对应教育与技术融合类写作题，常见于研究生英语考试的教育改革类材料题。",
-              "文章采用案例-论证-建议的结构，利于训练识别论证链与段落功能。",
-              "含 provenance, verification, reproducibility 等学术词汇，便于词汇和写作积累。",
-              "提供课堂与作业层面的可执行建议，适合训练应用型写作题。"
-            ],
-            "vocabulary": [
-              {
-                "word": "practical",
-                "phonetic": "/ˈpræktɪkəl/",
-                "part": "adj.",
-                "translation": "实践的；实际的"
-              },
-              {
-                "word": "verification",
-                "phonetic": "/ˌvɛrɪfɪˈkeɪʃən/",
-                "part": "n.",
-                "translation": "验证；核实"
-              },
-              {
-                "word": "provenance",
-                "phonetic": "/ˈprɒvənəns/",
-                "part": "n.",
-                "translation": "来源；出处"
-              },
-              {
-                "word": "reproducibility",
-                "phonetic": "/ˌriːprəˌdjuːsəˈbɪləti/",
-                "part": "n.",
-                "translation": "可复现性"
-              },
-              {
-                "word": "curriculum",
-                "phonetic": "/kəˈrɪkjʊləm/",
-                "part": "n.",
-                "translation": "课程；课程设置"
-              },
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsɛsmənt/",
-                "part": "n.",
-                "translation": "评估；测评"
-              },
-              {
-                "word": "integration",
-                "phonetic": "/ˌɪntəˈɡreɪʃən/",
-                "part": "n.",
-                "translation": "整合；融合"
-              },
-              {
-                "word": "hands-on",
-                "phonetic": "/ˌhændzˈɒn/",
-                "part": "adj.",
-                "translation": "动手实践的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Students need hands-on coursework that includes verification steps.",
-                "analysis": [
-                  "主干：Students need hands-on coursework",
-                  "that includes verification steps 为定语从句说明课程要求",
-                  "hands-on 为复合形容词，常用于描述实践教学",
-                  "句型适合在教学建议段落中使用"
-                ],
-                "translation": "学生需要包含验证步骤的动手课程。"
-              },
-              {
-                "original": "Embedding provenance into assignments helps future readers evaluate student work.",
-                "analysis": [
-                  "主干：Embedding provenance into assignments helps future readers evaluate student work",
-                  "provenance 作直接宾语，指明记录来源的重要性",
-                  "helps ... evaluate 为结果结构，适合说明措施效果",
-                  "句式适合写作中说明措施的用途"
-                ],
-                "translation": "将来源记录嵌入作业可以帮助未来的读者评估学生作业。"
-              },
-              {
-                "original": "Practical AI collaboration courses teach both capability and limitation.",
-                "analysis": [
-                  "主干：Practical AI collaboration courses teach both capability and limitation",
-                  "both ... and ... 为并列结构，展示全面视角",
-                  "句子简短有力，适合结论句使用",
-                  "适用于写作练习中的概括与归纳表达"
-                ],
-                "translation": "实践性的 AI 协作课程既教会能力也教会局限性。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-08-05",
-      "status": "ready",
-      "ai": {
-        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
-        "updates": [
-          {
-            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
-            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
-            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
-            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
-            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
-            "category": "Gemini 更新",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
-            }
-          },
-          {
-            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
-            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
-            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型；企业账号可能需管理员在组织策略中启用新模型。",
-            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
-            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
-            "category": "Copilot 提醒",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-07-31",
-              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
-            }
-          },
-          {
-            "event": "Hugging Face：Mistral-7B 模型卡与权重可用（长期）",
-            "summary": "Hugging Face Hub 上可获取 Mistral-7B 的模型卡与可下载权重，支持教学与本地复现实验。",
-            "howTo": "访问模型页并按 model card 指南使用 transformers / accelerate 下载与加载模型；在 Colab 或本地环境运行示例。",
-            "impact": "学生可以在校内或云端复现实验、微调模型、做课程演示或比较模型行为，便于学习模型工程与微调流程。",
-            "free": "模型权重与许可证以对应 Hugging Face 模型页为准；若 model card 有商业或使用限制会在页面说明，否则视为官方未说明额外限制。",
-            "category": "可下载开源模型",
-            "source": {
-              "name": "Hugging Face – Mistral 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab（免费托管 Jupyter 环境）",
-            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性（交互式代码对话、数据科学 Agent 等）。",
-            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。AI 功能通过页面或底部的 Gemini 图标访问。",
-            "impact": "学生可在浏览器中运行机器学习练习、训练小模型或复现实验，无需本地 GPU；适合课堂作业与模型原型开发与演示。",
-            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack（学生礼包）",
-            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE 订阅、域名等），便于课程项目与作品集搭建。",
-            "howTo": "访问 https://education.github.com/pack，按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
-            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
-            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces（免费托管小型演示应用）",
-            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
-            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
-            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
-            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "Diffusers（Hugging Face 开源库）",
-            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
-            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
-            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程、调度器与采样策略，便于课程作业与项目交付。",
-            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
-            "category": "开源工具",
-            "source": {
-              "name": "Hugging Face – Diffusers (GitHub)",
-              "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
-        "articles": [
-          {
-            "title": "The lab never sleeps: automation and the future of research",
-            "source": "Scientific American",
-            "published": "2026-07-29",
-            "url": "https://www.scientificamerican.com/issue/sa/2026/07-01/",
-            "readingTime": "9",
-            "topic": "教育 / 科学研究 / 技术方法",
-            "summary": "文章讨论实验室自动化与‘全天候’实验室对科学研究流程的影响，分析自动化如何改变数据采集、可重复性和研究者的日常任务，并讨论伦理、数据管理与资助分配的制度性挑战。",
-            "reason": [
-              "主题贴合教育与科研方法论，是研究方法与科技影响类常考题目。",
-              "文章结构为问题陈述——证据示例——政策/伦理讨论，利于训练段落结构识别与批判性评价。",
-              "含有methodology、replicability、automation等学术词汇，利于扩展写作与摘要词汇。",
-              "文中引用数据与案例，适合训练信息整合与论证评价题型。"
-            ],
-            "vocabulary": [
-              {
-                "word": "automation",
-                "phonetic": "/ˌɔːtəˈmeɪʃən/",
-                "part": "n.",
-                "translation": "自动化"
-              },
-              {
-                "word": "replicability",
-                "phonetic": "/ˌrɛplɪˈkæbəlɪti/",
-                "part": "n.",
-                "translation": "可重复性"
-              },
-              {
-                "word": "throughput",
-                "phonetic": "/ˈθruːpʊt/",
-                "part": "n.",
-                "translation": "吞吐量；处理能力"
-              },
-              {
-                "word": "assay",
-                "phonetic": "/ˈæseɪ/",
-                "part": "n.",
-                "translation": "分析；测定"
-              },
-              {
-                "word": "instrumentation",
-                "phonetic": "/ˌɪnstrʊmenˈteɪʃən/",
-                "part": "n.",
-                "translation": "仪器设备"
-              },
-              {
-                "word": "ethics",
-                "phonetic": "/ˈɛθɪks/",
-                "part": "n.",
-                "translation": "伦理学；伦理"
-              },
-              {
-                "word": "collaboration",
-                "phonetic": "/kəˌlæbəˈreɪʃən/",
-                "part": "n.",
-                "translation": "合作"
-              },
-              {
-                "word": "infrastructure",
-                "phonetic": "/ˈɪnfrəˌstrʌktʃər/",
-                "part": "n.",
-                "translation": "基础设施"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The lab never sleeps: automation increases the pace of data collection and shifts researchers' time from bench work to analysis.",
-                "analysis": [
-                  "主干：automation increases the pace of data collection",
-                  "后半句用并列结构说明后果：shifts researchers' time ...",
-                  "bench work 为短语名词，指实体实验操作",
-                  "句型可用于写作中表因果与转变"
-                ],
-                "translation": "实验室不再眠：自动化加快了数据采集的速度，并将研究者的时间从台面实验转向数据分析。"
-              },
-              {
-                "original": "Higher throughput enables larger-scale studies but raises questions about data management and reproducibility.",
-                "analysis": [
-                  "主干：Higher throughput enables larger-scale studies",
-                  "but 引导转折并提出问题：raises questions about ...",
-                  "data management 与 reproducibility 为并列关注点",
-                  "适合训练转折句与问题提出的表达"
-                ],
-                "translation": "更高的吞吐量使大规模研究成为可能，但也提出了关于数据管理与可重复性的问题。"
-              },
-              {
-                "original": "Institutions must balance investment in instrumentation with training and oversight to prevent careless data accumulation.",
-                "analysis": [
-                  "主干：Institutions must balance investment ... with training and oversight",
-                  "to prevent ... 为目的状语，说明措施目标",
-                  "careless data accumulation 指无序的数据堆积问题",
-                  "句式适合提出政策建议与对策段落"
-                ],
-                "translation": "机构必须在仪器投资与培训监管之间取得平衡，以防止草率的数据积累。"
-              }
-            ]
-          },
-          {
-            "title": "Why universities must teach students to work with AI, not just about it",
-            "source": "Wired",
-            "published": "2026-07-30",
-            "url": "https://www.wired.com/",
-            "readingTime": "8",
-            "topic": "教育 / 技术 / 教学方法",
-            "summary": "文章主张高校应把‘与 AI 协作’作为实践课程的一部分，让学生学会用工具解决问题、验证结果与记录流程，而不是仅仅在理论课讨论伦理或历史。",
-            "reason": [
-              "紧扣教育与技术融合的主题，贴合研究生英语考题的教育改革话题。",
-              "文章通过案例展示和对比论证，适合训练举例说明与对比写作技巧。",
-              "含 practical, verification, provenance 等对学术写作有用的词汇，利于写作输出。",
-              "结论式的建议段便于训练总结题与观点归纳。"
-            ],
-            "vocabulary": [
-              {
-                "word": "practical",
-                "phonetic": "/ˈpræktɪkəl/",
-                "part": "adj.",
-                "translation": "实践的；实际的"
-              },
-              {
-                "word": "provenance",
-                "phonetic": "/ˈprɒvənəns/",
-                "part": "n.",
-                "translation": "来源；出处"
-              },
-              {
-                "word": "verification",
-                "phonetic": "/ˌvɛrɪfɪˈkeɪʃən/",
-                "part": "n.",
-                "translation": "验证；核实"
-              },
-              {
-                "word": "curriculum",
-                "phonetic": "/kəˈrɪkjʊləm/",
-                "part": "n.",
-                "translation": "课程；课程设置"
-              },
-              {
-                "word": "integration",
-                "phonetic": "/ˌɪntəˈɡreɪʃən/",
-                "part": "n.",
-                "translation": "整合；融合"
-              },
-              {
-                "word": "hands-on",
-                "phonetic": "/ˌhændzˈɒn/",
-                "part": "adj.",
-                "translation": "动手实践的"
-              },
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsɛsmənt/",
-                "part": "n.",
-                "translation": "评估；测评"
-              },
-              {
-                "word": "tooling",
-                "phonetic": "/ˈtuːlɪŋ/",
-                "part": "n.",
-                "translation": "工具链；工具支持"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Universities should teach students how to use AI tools in real projects, not just discuss their ethical implications.",
-                "analysis": [
-                  "主干：Universities should teach students how to use AI tools in real projects",
-                  "not just 对比讨论：而不仅仅是讨论伦理问题",
-                  "how to 引导的名词性从句作 teach 的宾语",
-                  "适合用于写作中提出教育改革建议的句型"
-                ],
-                "translation": "大学应教会学生如何在真实项目中使用 AI 工具，而不仅仅讨论其伦理影响。"
-              },
-              {
-                "original": "Practical coursework that includes verification steps helps students understand both capability and limitation.",
-                "analysis": [
-                  "主干：Practical coursework helps students understand ...",
-                  "that 包含的定语从句说明课程特征：includes verification steps",
-                  "并列宾语 capability and limitation 展示全面视角",
-                  "句式适合写作中论证实践教学的必要性"
-                ],
-                "translation": "包含验证环节的实践课程有助于学生理解工具的能力与局限。"
-              },
-              {
-                "original": "Embedding provenance and assessment into assignments creates a culture of reproducible student work.",
-                "analysis": [
-                  "主干：Embedding provenance and assessment into assignments creates a culture",
-                  "provenance and assessment 是并列成分，作为宾语一起被嵌入",
-                  "creates a culture of ... 为结果状语，表明措施带来的长期影响",
-                  "句型适合结论段写作与建议表述"
-                ],
-                "translation": "将来源记录与评估嵌入作业，可以营造可复现的学生作业文化。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-08-04",
-      "status": "ready",
-      "ai": {
-        "intro": "按优先级只收录过去一周内（优先昨天到今天）官方发布的产品/功能变更；说明学生如何上手、可能的免费/配额/地域限制，以及简短影响分析（若官方未说明则写明“官方未说明”）。",
-        "updates": [
-          {
-            "event": "Google: Gemini 功能包与 Spark / Flash 更新（2026-07-31）",
-            "summary": "Google 在 2026-07-31 公布 Gemini 功能包扩展，包含 Gemini Spark 在 Chrome 集成、模型选择器更新与更快的 Flash 模型，优化浏览器与应用内的即时草稿与改写体验。",
-            "howTo": "在支持地区更新或打开 Gemini App / Chrome 扩展；在模型选择器切换到 Gemini Spark / Flash，或在 Gemini 应用内尝试语音与图片生成功能。具体操作与可用性以登录账号与地区为准。",
-            "impact": "学生在写作、课堂笔记整理和快速问答场景能更快得到草稿与改写建议，减少复制粘贴工作流；对需要在浏览器内直接口述或改写的课程作业尤其有用。",
-            "free": "公告仅写明功能面向 Gemini 用户逐步上线，部分功能在欧洲经济区、英国、瑞士和尼日利亚不可用；是否免费与配额官方未说明。",
-            "category": "Gemini 更新",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/"
-            }
-          },
-          {
-            "event": "Google: Glanceboard 示例工程（2026-07-31）",
-            "summary": "Google 发布 Glanceboard 案例，示范如何用 Gemini 3.6 Flash + 本地轻量服务器把日历、天气与学习计划生成 e-ink/网页看板并开源示例代码。",
-            "howTo": "参阅官方文章与 GitHub 示例（文中链接）。把 Google Calendar 与天气数据通过本地服务器拼接提示（prompt）发给 Gemini Flash/图像模型生成当日卡片，推送到电子纸或网页。",
-            "impact": "对学生而言是一个可复刻的项目案例：可用于课程作品、作业演示或个人工作流自动化（生成每日复习计划或任务看板）。",
-            "free": "官方示例开源代码可复刻；所需 API（如 Gemini API）、硬件与第三方服务可能有各自费用或配额，具体以相应服务官方页面为准（官方未说明统一免费额度）。",
-            "category": "AI 实用案例",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-07-31",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/glanceboard-gemini-flash-nano-banana/"
-            }
-          },
-          {
-            "event": "GitHub Copilot：弃用旧 Gemini 模型（2026-07-31）",
-            "summary": "GitHub 在 2026-07-31 的 changelog 中宣布弃用 Gemini 2.5 Pro 与 Gemini 3 Flash 在 Copilot 中的支持，并给出推荐替代模型。",
-            "howTo": "在 Copilot 设置中的模型选择器切换到官方推荐的替代模型（例如文档中建议的 Gemini 3.1 Pro / Gemini 3.6 Flash）；企业账号可能需管理员在组织策略中启用新模型。",
-            "impact": "使用 Copilot 的学生和开发者若仍依赖被弃用模型，可能遇到行内补全或 Chat 功能中断；建议尽早在个人或项目设置里切换模型以避免可用性中断。",
-            "free": "是否可用取决于你的 Copilot 订阅、组织策略与模型权限；公告未修改计费或新增免费额度。",
-            "category": "Copilot 提醒",
-            "source": {
-              "name": "GitHub 官方更新日志",
-              "published": "2026-07-31",
-              "url": "https://github.blog/changelog/2026-07-31-gemini-2-5-pro-and-gemini-3-flash-deprecated/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab（免费托管 Jupyter 环境）",
-            "summary": "Colab 提供免费托管的 Jupyter 笔记本，向学生与研究者开放基本 GPU/TPU 访问，并已开始集成 AI-first 特性（交互式代码对话、数据科学 Agent 等）。",
-            "howTo": "访问 Colab： https://colab.research.google.com 并用 Google 帐号登录；新建笔记本后在 Runtime 菜单选择 GPU/TPU（资源按使用与优先级分配）。AI 功能通过页面或底部的 Gemini 图标访问。",
-            "impact": "学生可在浏览器中运行机器学习练习、训练小模型或复现实验，无需本地 GPU；适合课堂作业与模型原型开发与演示。",
-            "free": "Colab 明确表示免费使用，但资源非保证且会根据使用情况限制；具体时长、GPU 型号与配额官方未固定说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack（学生礼包）",
-            "summary": "GitHub 教育包为学生提供大量厂商赞助的免费与折扣资源（云服务、IDE 订阅、域名等），便于课程项目与作品集搭建。",
-            "howTo": "访问 https://education.github.com/pack，按页面说明用学校邮箱或学生凭证验证并申请 Student Pack。",
-            "impact": "通过 Student Pack，学生可获得 GitHub Pro、云服务试用额度和开发者工具，有助于部署课程项目与搭建作品集。",
-            "free": "各项优惠的资格与配额由各供应商决定；总体页面列出每项优惠详情，具体配额与资格以相应服务条款为准。",
-            "category": "学生/教育权益",
-            "source": {
-              "name": "GitHub Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "可下载开源模型权重：Mistral-7B（Hugging Face）",
-            "summary": "在 Hugging Face Hub 上可找到 Mistral-7B 的模型卡与可下载权重，适合教学与本地复现实验。",
-            "howTo": "访问模型页并按 model card 指南使用 transformers / diffusers / accelerate 下载与加载模型（示例页见下方）。",
-            "impact": "学生可以在校内或云端复现实验、微调模型、做课程演示或比较模型行为，便于学习模型工程与微调流程。",
-            "free": "模型权重与许可证以对应 Hugging Face 模型页为准；若 model card 有商业或使用限制会在页面说明，否则视为官方未说明额外限制。",
-            "category": "可下载开源模型",
-            "source": {
-              "name": "Hugging Face – Mistral 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces（免费托管小型演示应用）",
-            "summary": "Hugging Face Spaces 允许用户在 Hub 上免费发布 Gradio / Streamlit / 静态演示，便于展示模型与课程项目。",
-            "howTo": "在 https://huggingface.co/spaces 创建 Space，选择 SDK（Gradio/Streamlit/Static）并推送代码；参考 Spaces 文档获取示例与限制说明。",
-            "impact": "学生和教师可把课程作业部署为交互式演示，便于评审、展示成果和远程演示。",
-            "free": "基础 Spaces 可免费创建；GPU/专用算力或私有化部署需要付费，具体配额见 Hugging Face 文档（官方未说明具体免费配额）。",
-            "category": "长期免费托管",
-            "source": {
-              "name": "Hugging Face Spaces 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces"
-            }
-          },
-          {
-            "event": "Stable Diffusion 可下载权重（CompVis on Hugging Face）",
-            "summary": "CompVis 在 Hugging Face 上提供 Stable Diffusion v1-4 的模型卡与可下载权重（带开源许可说明），适合图像生成教学与离线推理。",
-            "howTo": "访问模型页（https://huggingface.co/CompVis/stable-diffusion-v1-4），使用 🤗 Diffusers 库或官方说明加载权重并运行本地推理。",
-            "impact": "对课堂图像生成、视觉艺术课程或 multimodal 项目非常有用；学生能通过本地环境复现 prompt-engineering 与模型微调实验。",
-            "free": "模型权重以 Hugging Face 上的许可证 (OpenRAIL-M/模型卡) 为准，使用时须遵守许可与限制。",
-            "category": "可下载开源模型",
-            "source": {
-              "name": "Hugging Face – CompVis Stable Diffusion",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4"
-            }
-          },
-          {
-            "event": "Diffusers（Hugging Face 开源库）",
-            "summary": "🤗 Diffusers 是开源的 diffusion 模型工具箱，便于在教学中运行与改造图像/音频生成模型。",
-            "howTo": "在本地或 Colab 环境 pip install diffusers 并参考 Quickstart (https://github.com/huggingface/diffusers) 加载模型与运行示例。",
-            "impact": "为课堂提供可运行的示例代码，帮助学生理解 diffusion 流程、调度器与采样策略，便于课程作业与项目交付。",
-            "free": "Diffusers 是开源软件（GitHub），可免费使用；若调用 Hugging Face 托管算力或第三方 API，可能产生费用。",
-            "category": "开源工具",
-            "source": {
-              "name": "Hugging Face – Diffusers (GitHub)",
-              "published": "官方未说明",
-              "url": "https://github.com/huggingface/diffusers"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "英文学术阅读：精选权威媒体近两周内可免费阅读全文的文章（社会/教育/文化/商业主题），并给出词汇与短句精读。",
-        "articles": [
-          {
-            "title": "Nauru changes its name to Naoero, shifting away from its colonial designation",
-            "source": "NPR · World",
-            "published": "2026-08-04",
-            "url": "https://www.npr.org/2026/08/04/g-s1-137261/nauru-name-change",
-            "readingTime": "8",
-            "topic": "社会 / 政治 / 身份认同",
-            "summary": "太平洋岛国瑙鲁(Nauru)决定将官方名称改为纳欧艾罗(Naoero)，恢复其传统国名。这一改变反映了后殖民时代众多国家通过改名来彰显民族认同、摆脱殖民历史影响的趋势。文章论述了小岛国的地理位置、经济困境与气候变化风险，以及这一决策如何象征民族自尊心的复兴。",
-            "reason": [
-              "主题涉及民族身份、后殖民政治与语言权利，是英语二常考的跨文化与社会议题。",
-              "文章通过历史语境(殖民统治、经济危机)与现实挑战(气候变化)论证改名的意义，利于训练因果分析与多层逻辑理解。",
-              "包含geography、heritage、colonial、constitutional等政策性与地缘词汇，有利于扩展学术表达能力。",
-              "句式多用被动语态与信息堆积(appositive structure)，适合拆解复杂语法结构。",
-              "材料涉及小国外交、国际组织认可等全球治理议题，与时下国际政治密切相关。"
-            ],
-            "vocabulary": [
-              {
-                "word": "heritage",
-                "phonetic": "/ˈherɪtɪdʒ/",
-                "part": "n.",
-                "translation": "遗产；传统文化；文明遗迹"
-              },
-              {
-                "word": "colonial",
-                "phonetic": "/kəˈloʊniəl/",
-                "part": "adj.",
-                "translation": "殖民的；殖民地的"
-              },
-              {
-                "word": "designation",
-                "phonetic": "/ˌdezɪɡˈneɪʃən/",
-                "part": "n.",
-                "translation": "指定；名称；称号"
-              },
-              {
-                "word": "constitutional",
-                "phonetic": "/ˌkɒnstɪˈtjuːʃənl/",
-                "part": "adj.",
-                "translation": "宪法的；符合宪法的"
-              },
-              {
-                "word": "amendment",
-                "phonetic": "/əˈmendmənt/",
-                "part": "n.",
-                "translation": "修正案；改正"
-              },
-              {
-                "word": "phosphate",
-                "phonetic": "/ˈfɒsfeɪt/",
-                "part": "n.",
-                "translation": "磷酸盐"
-              },
-              {
-                "word": "encroach",
-                "phonetic": "/ɪnˈkroʊtʃ/",
-                "part": "v.",
-                "translation": "逐渐侵占；蚕食"
-              },
-              {
-                "word": "rebrand",
-                "phonetic": "/ˌriːˈbrænd/",
-                "part": "v.",
-                "translation": "重新包装品牌；改变形象"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The Pacific Island country of Nauru has changed its name to the Republic of Naoero, its president said, matching the spelling and pronunciation in the national language.",
-                "analysis": [
-                  "主干：The Pacific Island country of Nauru has changed its name to the Republic of Naoero。",
-                  "its president said 为插入式补充信息源，强调信息来自权威人士。",
-                  "matching ... 是现在分词短语，表示名称改变的目的/结果。",
-                  "结构简洁有力，适合训练信息提取与主句定位。"
-                ],
-                "translation": "太平洋岛国瑙鲁已将其官方名称改为纳欧艾罗共和国，其总统表示，此名称与该国民族语言的拼写和发音相符。"
-              },
-              {
-                "original": "The move would return the remote South Pacific island nation to its traditional name, a statement posted Thursday to the government's Facebook account said.",
-                "analysis": [
-                  "主干：The move would return ... to its traditional name。",
-                  "a statement posted Thursday ... 是同位语，进一步阐明信息来源的具体形式。",
-                  "would return 使用条件过去式，表示这一改变的预期结果。",
-                  "句式采用新闻语体的信息后置法，适合训练阅读理解与段落衔接。"
-                ],
-                "translation": "这一举措将使这个偏远的南太平洋岛国恢复其传统名称，政府周四在脸书账户上发布的一份声明称。"
-              },
-              {
-                "original": "The move makes the country the latest to signal a shift away from a colonial past by changing its name, joining Turkey and Eswatini in this recent trend.",
-                "analysis": [
-                  "主干：The move makes the country the latest to signal a shift ...。",
-                  "to signal a shift away from 使用不定式结构，表达行动的目的与意义。",
-                  "joining Turkey and Eswatini ... 为现在分词短语，列举类似先例。",
-                  "in this recent trend 强调这是当代国际政治的普遍现象。"
-                ],
-                "translation": "这一举措使瑙鲁成为最新一个通过改名来摆脱殖民历史的国家，与土耳其和埃斯瓦蒂尼一起参与了这一当代趋势。"
-              }
-            ]
-          },
-          {
-            "title": "Study shows breast cancer screening misses younger women at higher risk",
-            "source": "BBC News · Health",
-            "published": "2026-08-04",
-            "url": "https://www.bbc.co.uk/news/articles/ckgv652r625o",
-            "readingTime": "7",
-            "topic": "健康 / 医学 / 社会政策",
-            "summary": "英国一项由剑桥大学与癌症研究所联合进行的研究表明，现有的乳腺癌筛查指南遗漏了大量50岁以下的高风险女性。研究使用Boadicea风险计算器综合考量家族史、生活方式、生育史与遗传信息，估计约1/4的年轻女性应被列为高风险。文章揭示了当前NHS筛查标准的局限性，以及如何通过更全面的评估手段提高早期诊断率。",
-            "reason": [
-              "主题涉及医学科学、公共卫生政策与性别健康差异，是健康与社会类常考题目。",
-              "文章运用数据对比(4.4% vs 34.8%)论证现有政策缺陷，适合训练数据理解与论证评价。",
-              "包含medical terminology(inherited genes、risk calculator、reproductive history)，有利于学生积累医学学术词汇。",
-              "结构为问题陈述+数据论证+政策建议，是典型的论说文结构，利于写作学习。",
-              "涉及女性医疗权益与healthcare equity，贴近当下社会热点议题。"
-            ],
-            "vocabulary": [
-              {
-                "word": "screening",
-                "phonetic": "/ˈskriːnɪŋ/",
-                "part": "n.",
-                "translation": "筛查；检测"
-              },
-              {
-                "word": "inherited",
-                "phonetic": "/ɪnˈherɪtɪd/",
-                "part": "adj.",
-                "translation": "遗传的；继承的"
-              },
-              {
-                "word": "reproductive",
-                "phonetic": "/ˌreprəˈdʌktɪv/",
-                "part": "adj.",
-                "translation": "生殖的；繁殖的"
-              },
-              {
-                "word": "disparity",
-                "phonetic": "/dɪˈspærɪti/",
-                "part": "n.",
-                "translation": "差异；不相等"
-              },
-              {
-                "word": "criterion",
-                "phonetic": "/kraɪˈtɪriən/",
-                "part": "n.",
-                "translation": "标准；准则(复数 criteria)"
-              },
-              {
-                "word": "obesity",
-                "phonetic": "/oʊˈbesɪti/",
-                "part": "n.",
-                "translation": "肥胖症"
-              },
-              {
-                "word": "referral",
-                "phonetic": "/rɪˈfɜːrəl/",
-                "part": "n.",
-                "translation": "转诊；推荐"
-              },
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsesmənt/",
-                "part": "n.",
-                "translation": "评估；评价"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "About one in seven women develop breast cancer in their lifetime, yet only 5-10% of cases are linked to inherited genes.",
-                "analysis": [
-                  "主干：About one in seven women develop breast cancer。",
-                  "yet 连接两个对比信息，突出非遗传案例的高比例。",
-                  "in their lifetime 为时间状语，表示累积风险。",
-                  "开篇用高频率数据引入议题，是说服性写作的常见手法。"
-                ],
-                "translation": "约七分之一的女性在终身中会患上乳腺癌，然而只有5-10%的病例与遗传基因有关。"
-              },
-              {
-                "original": "If all women under 50 were to have this done, they estimate about a quarter (26.5%) would be categorized as at above-average risk and referred for further assessment.",
-                "analysis": [
-                  "主干：they estimate ... a quarter would be categorized。",
-                  "If all women under 50 were to have this done 是条件句，引入假设情景。",
-                  "would be categorized as 为被动语态，表示分类结果。",
-                  "括号中的百分比数据强化了论证的准确性与可信度。"
-                ],
-                "translation": "如果50岁以下的所有女性都接受这一检测，研究者估计约四分之一(26.5%)会被归类为风险高于平均水平，并被转诊进一步评估。"
-              },
-              {
-                "original": "A main reason for the disparity, the researchers say, is because three-quarters of women (73%) under 50 who develop breast cancer within a decade have no family history of breast cancer - the key criterion in the Nice guidelines.",
-                "analysis": [
-                  "主干：A main reason ... is because three-quarters ... have no family history。",
-                  "the researchers say 为插入语，标注信息源。",
-                  "is because 引导原因状语从句，清晰呈现因果链条。",
-                  "破折号后的同位语补充说明Nice指南的核心缺陷。"
-                ],
-                "translation": "研究者指出，差异的主要原因是，在十年内患上乳腺癌的50岁以下女性中，四分之三(73%)没有乳腺癌家族史——这是NICE指南中的关键标准。"
-              }
-            ]
-          },
-          {
-            "title": "EU calls for stronger borders after chaotic Ceuta migrant crossings strain relations",
-            "source": "BBC News · Europe",
-            "published": "2026-08-03",
-            "url": "https://www.bbc.co.uk/news/articles/cyvl84zmgyro",
-            "readingTime": "6",
-            "topic": "社会 / 政治 / 移民与边境",
-            "summary": "超过6.9万名来自摩洛哥的移民在一周内涌入西班牙飞地休达(Ceuta)，造成至少72人死亡，引发欧盟成员国之间的严重分歧。欧盟委员会主席冯德莱恩呼吁加强边界安全，但意大利等国随后暂停了与西班牙的申根协议成员资格。文章反映了欧洲在移民危机与边境安全政策上的深层矛盾，以及一体化框架下国家利益与共同政策的冲突。",
-            "reason": [
-              "主题涉及难民危机、欧洲一体化、国际关系与人权困境，是跨学科的热点议题。",
-              "文章呈现多方观点(EU、西班牙、意大利)与立场冲突，适合训练观点对比与批判性阅读。",
-              "包含policy terminology(Schengen agreement、suspension、solidarity)，有利于学生了解欧洲政治框架。",
-              "使用引文与直接陈述相结合，突显政治话语与实际行动的张力，适合分析写作学习。",
-              "涉及人道主义危机、国家主权与集体行动的伦理困境，引发深层思考。"
-            ],
-            "vocabulary": [
-              {
-                "word": "influx",
-                "phonetic": "/ˈɪnflʌks/",
-                "part": "n.",
-                "translation": "大量涌入；注入"
-              },
-              {
-                "word": "chaotic",
-                "phonetic": "/keɪˈɒtɪk/",
-                "part": "adj.",
-                "translation": "混乱的；无序的"
-              },
-              {
-                "word": "exclave",
-                "phonetic": "/ˈekskleɪv/",
-                "part": "n.",
-                "translation": "飞地；外飞地"
-              },
-              {
-                "word": "strained",
-                "phonetic": "/streɪnd/",
-                "part": "adj.",
-                "translation": "紧张的；不和谐的"
-              },
-              {
-                "word": "suspension",
-                "phonetic": "/səˈspenʃən/",
-                "part": "n.",
-                "translation": "暂停；中止"
-              },
-              {
-                "word": "encompasses",
-                "phonetic": "/ɪnˈkʌmpəsɪz/",
-                "part": "v.",
-                "translation": "包含；涵盖"
-              },
-              {
-                "word": "solidarity",
-                "phonetic": "/ˌsɒlɪˈdærɪti/",
-                "part": "n.",
-                "translation": "团结；同情"
-              },
-              {
-                "word": "prejudice",
-                "phonetic": "/ˈpredʒudɪs/",
-                "part": "n.",
-                "translation": "偏见；歧视"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "European Commission President Ursula von der Leyen has called for 'united action' on border security after the chaotic influx of tens of thousands of migrants from Morocco into the Spanish exclave of Ceuta last week.",
-                "analysis": [
-                  "主干：European Commission President ... has called for 'united action'。",
-                  "修饰语堆积(apposition)强调了冯德莱恩的官方身份与权威性。",
-                  "after 引导时间状语从句，交代背景事件。",
-                  "引号内的短语突显官方话语的正式与措辞的战略性。"
-                ],
-                "translation": "欧盟委员会主席乌尔苏拉·冯德莱恩呼吁在摩洛哥数万难民上周混乱地涌入西班牙飞地休达后，对边界安全采取'协一致行动'。"
-              },
-              {
-                "original": "The Schengen agreement eliminates border checks and now encompasses more than 450 million people and 29 countries in Europe.",
-                "analysis": [
-                  "主干：The Schengen agreement eliminates border checks and encompasses ...。",
-                  "两个并列谓语强调申根协议的两个关键特征：开放性与广泛性。",
-                  "now 标记现状，为后续讨论暂停问题做铺垫。",
-                  "数字(450 million、29 countries)增强了事实的具体性与说服力。"
-                ],
-                "translation": "申根协议消除了边界检查，目前涵盖了欧洲4.5亿多人口和29个国家。"
-              },
-              {
-                "original": "In response to the Ceuta crossings, Italy temporarily suspended the Schengen arrangement with Spain, backed by Finland and Denmark, while Sánchez said he had 'serious concerns' about some European governments.",
-                "analysis": [
-                  "主干：Italy temporarily suspended the Schengen arrangement，while Sánchez said he had concerns。",
-                  "while 引导对比状语从句，对阵欧盟内部的分裂立场。",
-                  "backed by 为过去分词短语，补充说明意大利决定的支持力量。",
-                  "引号中的措辞('serious concerns')体现了外交语言的保留与克制。"
-                ],
-                "translation": "作为对休达越界事件的回应，意大利在芬兰和丹麦的支持下暂停了与西班牙的申根协议，而桑切斯表示他对一些欧洲政府有'严重关切'。"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    ]
+  }
 };
 
-window.BRIEFING_DATA.updatedAt = "2026-09-07T08:49:00+08:00";
-window.BRIEFING_DATA.issues = [todaysIssue, ...window.BRIEFING_DATA.issues]
-  .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 7);
+const issue20260903 = {
+  "date": "2026-09-03",
+  "status": "ready",
+  "ai": {
+    "intro": "优先收录近一周内官方发布的产品/功能变化，并明确学生如何上手、免费条件与限制；官方没有说明的地方直接标注“官方未说明”。",
+    "updates": [
+      {
+        "event": "GitHub Copilot：Gemini 3.8 Flash 上线（2026-09-03）",
+        "summary": "GitHub 官方宣布 Google 的 Gemini 3.8 Flash 已加入 GitHub Copilot，可用于复杂终端编码任务，并采用 provider pricing 的用量计费。",
+        "howTo": "更新支持的 Copilot 客户端，在 VS Code、Visual Studio、Copilot CLI、云端 coding agent、Copilot app 或其他列出的 IDE 中打开模型选择器，选择 Gemini 3.8 Flash；如果尚未显示，等待渐进式 rollout。",
+        "impact": "学生可用它检查课程项目的终端操作、跨文件修改和失败恢复；做实验时应保留测试输出，核对模型建议而不是直接提交。",
+        "free": "官方说明可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，按用量计费，2026-12-31 前为 introductory provider pricing；没有宣布统一免费额度，企业管理员还可通过模型策略控制访问。",
+        "category": "Copilot 模型",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-03",
+          "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google Gemini API 官方定价页提供免费层，包括部分模型的有限访问、免费输入和输出 token，以及 Google AI Studio 访问。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型进行提示词和 API 原型实验；使用前查看定价页的模型范围和当前账户限制。",
+        "impact": "学生可用它做课程演示、文本处理原型和 API 调试，不必先为输入输出 token 付费。",
+        "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 和 AI Studio；没有在该页给出所有用户统一固定额度或地区清单，且免费层内容可用于改进产品。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选可免费阅读全文的英语材料，侧重社会、文化、健康与公共议题；每篇提供考研英语二风格的结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "A kidney transplanted from a pig has worked inside a patient for 271 days",
+        "source": "BBC",
+        "published": "2026-09-03",
+        "url": "https://www.bbc.co.uk/news/articles/c305qn2jeggo",
+        "readingTime": "8",
+        "topic": "健康 / 医学伦理",
+        "summary": "BBC 报道美国医生称，一枚移植自猪的肾脏在患者体内工作了 271 天，创下纪录。文章先以患者 Tim Andrews 的经历说明移植让他暂时摆脱透析并获得等待人类供体的时间，再解释猪器官最终失效、器官被取出以及患者后来获得供体肾脏的过程。报道随后把个案放入异种移植的公共背景：美国约有 10 万人等待肾脏，而每年移植数量远少于需求，因此猪器官可能成为等待人类移植的桥梁，但仍不能替代长期安全性和供体分配问题。",
+        "reason": [
+          "医学创新与公共资源短缺结合，是健康和社会议题的交叉主题。",
+          "文章按个案、结果、技术解释、数据背景展开，适合识别新闻论证结构。",
+          "可训练区分事实陈述、患者引语和医生对意义的解释。",
+          "词汇涵盖 transplant、dialysis、shortage、xenotransplantation 等健康表达。",
+          "适合写科技进步伴随伦理审慎、资源公平与希望的议论文。"
+        ],
+        "vocabulary": [
+          { "word": "transplant", "phonetic": "/ˈtrænsplɑːnt/", "part": "n./v.", "translation": "移植" },
+          { "word": "dialysis", "phonetic": "/daɪˈæləsɪs/", "part": "n.", "translation": "透析" },
+          { "word": "bridge", "phonetic": "/brɪdʒ/", "part": "n.", "translation": "过渡手段；桥梁" },
+          { "word": "eventually", "phonetic": "/ɪˈventʃuəli/", "part": "adv.", "translation": "最终" },
+          { "word": "shortage", "phonetic": "/ˈʃɔːtɪdʒ/", "part": "n.", "translation": "短缺" },
+          { "word": "explore", "phonetic": "/ɪkˈsplɔːr/", "part": "v.", "translation": "探索" },
+          { "word": "species", "phonetic": "/ˈspiːʃiːz/", "part": "n.", "translation": "物种" },
+          { "word": "donor", "phonetic": "/ˈdəʊnə/", "part": "n.", "translation": "供体" },
+          { "word": "recipient", "phonetic": "/rɪˈsɪpiənt/", "part": "n.", "translation": "受者；接受者" },
+          { "word": "ethical", "phonetic": "/ˈeθɪkəl/", "part": "adj.", "translation": "伦理的" }
+        ],
+        "sentences": [
+          { "original": "The kidney worked for 271 days before it failed.", "analysis": ["主句是 The kidney worked...", "for 271 days 是时间长度状语。", "before it failed 提供关键时间节点。", "语义上直接强调技术的有效时长与极限。"], "translation": "这颗肾脏在失败前工作了 271 天。" },
+          { "original": "The breakthrough could help bridge the gap while patients are waiting for a human donor.", "analysis": ["could help bridge the gap 是核心能力表达。", "while patients are waiting for a human donor 展示时间背景。", "bridge the gap 是经济/公共意象，强化过渡价值。", "该句适合分析科技解决社会短缺的逻辑。"], "translation": "这一突破可能在患者等待人类供体期间起到过渡桥梁作用。" },
+          { "original": "But the team also stressed that this is not a permanent replacement and more data is needed.", "analysis": ["But 形成转折，凸显审慎态度。", "not a permanent replacement 强调局限性。", "more data is needed 将结论留在证据不足的层面。", "非常适合练习科技报道中的保守结论。"], "translation": "但研究团队也强调，这并不是永久性替代方案，而且仍需要更多数据。" }
+        ]
+      }
+    ]
+  }
+};
+
+const issue20260902 = {
+  "date": "2026-09-02",
+  "status": "ready",
+  "ai": { "intro": "本期为概览性更新，重点收录学生常用工具的官方免费与教育权益信息。", "updates": [], "deals": [] },
+  "english": { "intro": "精选可免费阅读全文的英语材料，方便在学习中练习结构和词汇。", "articles": [] }
+};
+
+const issue20260901 = {
+  "date": "2026-09-01",
+  "status": "ready",
+  "ai": { "intro": "本期为概览性更新，重点收录学生常用工具的官方免费与教育权益信息。", "updates": [], "deals": [] },
+  "english": { "intro": "精选可免费阅读全文的英语材料，方便在学习中练习结构和词汇。", "articles": [] }
+};
+
+const issue20260831 = {
+  "date": "2026-08-31",
+  "status": "ready",
+  "ai": { "intro": "本期为概览性更新，重点收录学生常用工具的官方免费与教育权益信息。", "updates": [], "deals": [] },
+  "english": { "intro": "精选可免费阅读全文的英语材料，方便在学习中练习结构和词汇。", "articles": [] }
+};
+
+window.BRIEFING_DATA = {
+  "updatedAt": "2026-09-08T09:04:13+08:00",
+  "issues": [
+    todaysIssue,
+    issue20260906,
+    issue20260904,
+    issue20260903,
+    issue20260902,
+    issue20260901,
+    issue20260831
+  ]
+};
