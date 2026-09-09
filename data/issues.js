@@ -1,4 +1,4 @@
-const todaysIssue = {
+const issue20260908 = {
   "date": "2026-09-08",
   "status": "ready",
   "ai": {
@@ -279,6 +279,317 @@ const todaysIssue = {
               "这类句式非常适合学习新闻中的“未确认结论”表达。"
             ],
             "translation": "国家运输安全委员会主席珍妮弗·霍门迪表示，现在下结论关于事故成因还为时过早，因为调查人员仍处于“事实调查阶段”。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+const todaysIssue = {
+  "date": "2026-09-09",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验了 9 月 8 日官方 AI 发布，并补充可立即使用的免费资源；价格、额度、地区和 rollout 以各来源当前说明为准，未说明处明确标注。",
+    "updates": [
+      {
+        "event": "Claude Opus 5 正式发布（2026-09-08）",
+        "summary": "Anthropic 宣布 Claude Opus 5 上线，定位为日常使用的高能力模型，强调编码、知识工作、科学研究和反复验证任务；官方还同步推出对话中途更换工具和 API 自动 fallback 两项 beta 更新。",
+        "howTo": "在 Claude 网页、桌面端、移动端、Claude Code 或 Claude Cowork 中选择 Opus 5；开发者可在 Claude API 使用模型标识 claude-opus-5，并按官方文档配置 mid-conversation tool changes 或 automatic fallbacks。",
+        "impact": "学生可让它先规划再实现课程项目、检查代码并迭代修复，也可在 API 原型中测试工具切换；涉及研究结论时仍要核对原始资料、运行测试并保留人工复核。",
+        "free": "官方说明 Opus 5 在所有平台可用，API 价格为每百万输入 token 5 美元、输出 token 25 美元；网页免费计划的具体消息数没有固定值，受滚动五小时窗口、对话长度、模型和功能影响，官方未说明 Opus 5 的免费专属额度。",
+        "category": "AI 模型发布",
+        "source": {
+          "name": "Anthropic 官方公告",
+          "published": "2026-09-08",
+          "url": "https://www.anthropic.com/news/claude-opus-5"
+        }
+      },
+      {
+        "event": "Claude 文本水印与检测 API 预览（2026-09-08）",
+        "summary": "Anthropic 公布未来 Claude 模型将生成带水印的文本：水印不添加隐藏字符、不增加 token，也不会改变读者可见的内容；同时向符合条件的组织开放检测 API private preview。",
+        "howTo": "继续在 Claude 中正常生成或编辑文本；若属于监管机构、媒体、事实核查、独立研究或教育组织等符合条件的机构，可阅读公告并登记检测 API 访问兴趣。短文本、纯校对和代码中的水印识别能力有限。",
+        "impact": "学生写作时可以把它当作 AI 使用透明度和学术诚信案例，学习区分“可能由 Claude 参与”与“证明由某人生成”；提交作业仍应遵守学校的 AI 使用规定。",
+        "free": "公告称水印不会使模型更慢或更贵，检测 API 当前为符合条件组织的 private preview；个人是否可用、免费额度、地区范围和正式开放时间官方未说明。",
+        "category": "AI 透明度与合规",
+        "source": {
+          "name": "Anthropic 官方公告",
+          "published": "2026-09-08",
+          "url": "https://www.anthropic.com/news/claude-text-watermark"
+        }
+      },
+      {
+        "event": "Anthropic 预览 Model Hardware Standard（2026-09-08）",
+        "summary": "Anthropic 向首批科研实验室和先进制造商开放 Model Hardware Standard 研究预览，这是一套让 AI agent 通过标准化驱动、安全操作显微镜、液体处理器和机械臂等可编程设备的规范。",
+        "howTo": "有相关实验室或制造设备的研究者可阅读 MHS 公告并在 modelhardwarestandard.com 提交研究预览申请；学生可先用公告中的 MCP、CLI 和 API 思路理解设备编排，但不能把研究预览当作公开可用产品。",
+        "impact": "机器人、自动化和实验课题组可据此思考如何让多个仪器共享状态、监测错误并按步骤执行实验；涉及真实设备时必须保留专家监督和物理安全检查。",
+        "free": "官方称当前是面向首批实验室和制造商的 research preview，计划后续开源；申请资格、费用、地区、设备数量和开放时间官方未说明。",
+        "category": "AI agents / 机器人",
+        "source": {
+          "name": "Anthropic 官方公告",
+          "published": "2026-09-08",
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+        }
+      },
+      {
+        "event": "GitHub Enterprise Server 3.22 正式可用并加入 Copilot CLI 技术预览（2026-09-08）",
+        "summary": "GitHub 宣布 GHES 3.22 generally available；企业管理员可在断网或 air-gapped 环境配置 Copilot CLI，企业团队功能正式可用，规则集还新增按用户绕过和 required reviewers 等控制。",
+        "howTo": "企业管理员升级或部署 GHES 3.22，配置一次模型 provider 后让用户用 GHES 凭据运行 Copilot CLI；需要代码治理时，在仓库规则集中配置个人 bypass 或 required reviewers，并按官方文档验证权限。",
+        "impact": "实验室或课程团队可在受控网络中试验 agent，同时用 required reviewers 让数据、SQL 或安全改动经过指定同学/老师审阅；个人用户不能把 GHES 技术预览当作 GitHub.com 的默认功能。",
+        "free": "公告只说明 GHES 中 Copilot CLI 能力为 technical preview，且功能可能变化；GHES 授权、Copilot 计划、模型 provider 费用、地区和免费配额官方未说明。",
+        "category": "Copilot / 企业开发",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-08",
+          "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划覆盖日常问题；网页、桌面端、移动端和 Claude Code 共用同一使用池，限制按滚动五小时窗口计算，并会受对话长度、模型和功能影响。",
+        "howTo": "注册或登录 Claude，使用 Free 计划进行问答、摘要、改写和学习规划；在 Settings > Usage 查看当前状态，达到限制后等待窗口重置，不要把免费计划当作固定消息数服务。",
+        "impact": "学生可以先用免费网页功能整理笔记、生成提纲和解释难点，再根据使用量判断是否需要付费；长文和复杂任务应分段并保留原始材料。",
+        "free": "官方确认 Free 计划可用，但不承诺固定消息数；限制在滚动五小时窗口重置，并可能有其他周/月、模型或功能限制。账号资格、地区例外和统一固定配额官方未说明。",
+        "category": "长期免费应用",
+        "source": {
+          "name": "Claude 官方定价页",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
+        "summary": "Hugging Face 官方文档说明 Static Spaces 对所有人免费；状态良好的免费个人账号还可托管最多 2 个使用 ZeroGPU 的 Gradio Spaces，CPU Basic 默认资源无小时费用。",
+        "howTo": "登录 Hugging Face，创建 Space 并选择 Static HTML；若要运行 Gradio，使用状态良好的免费个人账号创建不超过 2 个 ZeroGPU Spaces，并在设置中检查当前硬件和资源状态。",
+        "impact": "学生可把交互式网页、课程可视化或轻量模型 demo 部署成可分享链接；需要 GPU、Docker 或更高硬件时应先确认是否会进入付费计划。",
+        "free": "官方明确 Static Spaces 免费，免费个人账号最多 2 个 ZeroGPU Gradio Spaces；普通 Gradio/Docker Spaces 的 compute 创建通常需要 Pro、Team 或 Enterprise，地区和 ZeroGPU 排队额度官方未说明。",
+        "category": "免费部署 / 开放模型生态",
+        "source": {
+          "name": "Hugging Face 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces-overview"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google 官方定价页保留免费层，包含对部分模型的有限访问、免费输入与输出 token 以及 Google AI Studio；免费层的内容可用于改进 Google 产品。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层可用模型测试提示词或 API 原型；正式调用前查看当前模型表格和账户限制，并避免把敏感资料直接提交。",
+        "impact": "学生可用免费层做文本分类、课程演示和 API 调试，先验证想法再决定是否购买生产吞吐；实验报告应记录模型、时间和实际限制。",
+        "free": "官方确认免费层含有限模型访问、免费输入/输出 token 和 AI Studio；统一固定额度、地区清单和重置周期官方未说明，免费层内容可用于改进 Google 产品。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费 Jupyter 环境",
+        "summary": "Google Colab FAQ 说明，Colab 无需本地设置即可使用，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或上传 notebook，在单元格运行 Python；需要硬件时尝试运行时设置中的 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可直接运行课程代码、清洗数据和做小型模型实验，减少环境安装成本；分享 notebook 时要检查代码、输出和注释是否包含个人或敏感信息。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；免费托管运行时限制挖矿、代理、绕过 UI 等行为，统一 GPU/TPU 时长官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Student Developer Pack 中的 Copilot Student",
+        "summary": "GitHub Education 官方权益页说明，verified students 可使用 GitHub Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "打开 GitHub Student Developer Pack，完成学生资格验证并开通 Copilot Student；在编辑器使用补全，在账户页面查看 AI Credits 和 chat/agent 限制。",
+        "impact": "学生可用代码补全减少样板代码工作，并把有限 chat/agent 用于解释和测试；所有生成代码仍应运行测试、检查许可证并人工审阅。",
+        "free": "官方权益面向 verified students；代码补全 unlimited，另有 AI Credits，chat 与 agent limited，模型仅 auto model selection。验证材料、地区例外和具体 credits 数量官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 8 日可免费阅读全文的 NPR 材料，避开既有文章，覆盖平台治理、移民政策的经济外溢与经济叙事；每篇提供考研英语二风格精读。",
+    "articles": [
+      {
+        "title": "Australian social media users to be offered choice to opt out of algorithms",
+        "source": "NPR",
+        "published": "2026-09-08",
+        "url": "https://www.npr.org/2026/09/08/g-s1-142311/australian-social-media-users-to-be-offered-choice-to-opt-out-of-algorithms",
+        "readingTime": "6",
+        "topic": "科技趋势 / 平台治理",
+        "summary": "文章报道澳大利亚政府提出的数字照护立法：16 岁以上用户将获得是否使用个性化推荐算法的真实选择，平台还要保护儿童免受促进饮食失调、色情、犯罪、危险特技和严重心理伤害的内容影响。文章先交代政府的政策目标，再解释用户可在算法推荐和只看关注对象之间选择，并补充违反规定可能面临的高额罚款。结尾把提案与澳大利亚此前禁止 16 岁以下儿童持有大型社交平台账号的法律联系起来，呈现“用户选择—儿童保护—平台责任”的递进结构。",
+        "reason": [
+          "算法治理与未成年人保护是科技趋势和公共政策的交叉考点。",
+          "文章先报政策，再解释执行方式，最后补充既有法律背景，层次明确。",
+          "可训练识别 proposed legislation、required to 和 would be able to 等政策语气。",
+          "词汇覆盖 opt out、personalized、penalty、self-esteem 等社会科技表达。",
+          "适合积累“权利选择与平台责任并置”的议论文框架。"
+        ],
+        "vocabulary": [
+          { "word": "opt out", "phonetic": "/ɒpt aʊt/", "part": "phr.v.", "translation": "选择退出" },
+          { "word": "algorithm", "phonetic": "/ˈælɡərɪðəm/", "part": "n.", "translation": "算法" },
+          { "word": "empowerment", "phonetic": "/ɪmˈpaʊəmənt/", "part": "n.", "translation": "赋权；自主权" },
+          { "word": "enduring", "phonetic": "/ɪnˈdjʊərɪŋ/", "part": "adj.", "translation": "持久的" },
+          { "word": "personalized", "phonetic": "/ˈpɜːsənəlaɪzd/", "part": "adj.", "translation": "个性化的" },
+          { "word": "penalty", "phonetic": "/ˈpenəlti/", "part": "n.", "translation": "处罚；罚款" },
+          { "word": "legislation", "phonetic": "/ˌledʒɪˈsleɪʃən/", "part": "n.", "translation": "立法；法律" },
+          { "word": "addictive", "phonetic": "/əˈdɪktɪv/", "part": "adj.", "translation": "使人上瘾的" },
+          { "word": "self-esteem", "phonetic": "/ˌself ɪˈstiːm/", "part": "n.", "translation": "自尊；自尊心" }
+        ],
+        "sentences": [
+          {
+            "original": "Australian social media users would be given a choice to opt out of algorithms.",
+            "analysis": [
+              "主干是 users would be given a choice，使用被动语态突出用户获得的权利。",
+              "to opt out of algorithms 是不定式短语，说明 choice 的具体内容。",
+              "would be given 表示提议或拟议政策，而非已经实施的事实。",
+              "句子适合积累政策新闻中“某群体将被赋予选择”的表达。"
+            ],
+            "translation": "澳大利亚社交媒体用户将获得选择退出算法的权利。"
+          },
+          {
+            "original": "Users would be able to opt in to having their default feed include personalized content.",
+            "analysis": [
+              "would be able to 表示拟议规则下的可能权利。",
+              "opt in to 与前文 opt out 构成反义对照。",
+              "having their default feed include... 是介词后的动名词复合结构。",
+              "personalized content 是 include 的宾语，具体说明算法内容。"
+            ],
+            "translation": "用户将可以选择让默认信息流包含个性化内容。"
+          },
+          {
+            "original": "If they don't follow our laws, they will face significant penalties.",
+            "analysis": [
+              "If 引导真实条件句，说明处罚的触发条件。",
+              "they 指代 social media platforms，代词需要回指上文。",
+              "will face 是主句谓语，直接表达监管后果。",
+              "significant penalties 用形容词加复数名词强调处罚可能很重。"
+            ],
+            "translation": "如果它们不遵守我们的法律，就将面临严厉处罚。"
+          }
+        ]
+      },
+      {
+        "title": "New report shows the economic toll of ICE raids",
+        "source": "NPR",
+        "published": "2026-09-08",
+        "url": "https://www.npr.org/2026/09/08/nx-s1-5955787/new-report-shows-the-economic-toll-of-ice-raids",
+        "readingTime": "7",
+        "topic": "经济 / 社会政策",
+        "summary": "NPR 介绍芝加哥移民执法行动带来的经济影响研究：芝加哥伊利诺伊大学研究者用匿名手机 GPS 数据追踪不同社区之间的流动，发现 2025 年 1 月后零售和餐馆到访量分别下降 9% 和 10%，持续约一年。文章先给出研究方法和消费流动变化，再用估算数字说明当地商家损失约 12.6 亿美元、州税收损失约 1.07 亿美元；随后加入小企业、政府和 ICE 统计等不同声音，最后把芝加哥案例放进其他城市和更广泛研究中，论证政策恐惧会产生超出目标群体的经济外溢。",
+        "reason": [
+          "经济政策的社会外溢效应适合考研英语二的社会经济主题。",
+          "文章按研究方法、数据结果、个案引语和跨城市背景推进。",
+          "可训练辨别 estimate、found、said 等证据来源和语气强弱。",
+          "词汇包含 toll、mobility、consumer、revenue 等经济新闻高频词。",
+          "适合写“政策目标之外的间接成本”这一因果论证。"
+        ],
+        "vocabulary": [
+          { "word": "economic toll", "phonetic": "/ˌiːkəˈnɒmɪk təʊl/", "part": "n.", "translation": "经济代价" },
+          { "word": "crackdown", "phonetic": "/ˈkrækdaʊn/", "part": "n.", "translation": "严厉打击；镇压" },
+          { "word": "anonymous", "phonetic": "/əˈnɒnɪməs/", "part": "adj.", "translation": "匿名的" },
+          { "word": "mobility", "phonetic": "/məʊˈbɪləti/", "part": "n.", "translation": "流动；流动性" },
+          { "word": "retail", "phonetic": "/ˈriːteɪl/", "part": "n.", "translation": "零售业" },
+          { "word": "revenue", "phonetic": "/ˈrevənjuː/", "part": "n.", "translation": "收入；收益" },
+          { "word": "persist", "phonetic": "/pəˈsɪst/", "part": "v.", "translation": "持续存在" },
+          { "word": "integrated", "phonetic": "/ˈɪntɪɡreɪtɪd/", "part": "adj.", "translation": "融合的；一体化的" },
+          { "word": "ripple effect", "phonetic": "/ˈrɪpəl ɪˌfekt/", "part": "n.", "translation": "涟漪效应；连锁影响" }
+        ],
+        "sentences": [
+          {
+            "original": "A new study shows that the widespread fear and isolation caused by the immigration crackdowns had a significant economic toll on Chicago commerce.",
+            "analysis": [
+              "主干是 A new study shows that...，that 从句承载研究结论。",
+              "caused by the immigration crackdowns 是过去分词短语，修饰 fear and isolation。",
+              "had a significant economic toll on... 表示抽象社会情绪造成具体经济后果。",
+              "widespread 与 significant 都是程度修饰语，增强结论的范围和影响。"
+            ],
+            "translation": "一项新研究显示，移民严打造成的广泛恐惧和孤立给芝加哥商业带来了重大的经济代价。"
+          },
+          {
+            "original": "Researchers found that the routine back-and-forth between these areas collapsed almost immediately.",
+            "analysis": [
+              "Researchers found that... 是报道研究发现的常见引述结构。",
+              "the routine back-and-forth 是名词化表达，指社区间日常往返。",
+              "between these areas 限定 movement 的空间范围。",
+              "collapsed almost immediately 用动词和副词突出变化迅速且幅度大。"
+            ],
+            "translation": "研究人员发现，这些地区之间的日常往返几乎立即崩塌。"
+          },
+          {
+            "original": "People's behavior systematically changed after January 20, 2025.",
+            "analysis": [
+              "People's behavior 是主语，systematically changed 是核心谓语。",
+              "systematically 表示变化并非偶然个案，而是有规律的整体转变。",
+              "after January 20, 2025 明确给出政策冲击后的时间起点。",
+              "短句用一般过去时概括持续观察到的行为变化。"
+            ],
+            "translation": "2025 年 1 月 20 日之后，人们的行为发生了系统性变化。"
+          }
+        ]
+      },
+      {
+        "title": "Has the economy gone C-shaped?",
+        "source": "NPR Planet Money",
+        "published": "2026-09-08",
+        "url": "https://www.npr.org/2026/09/08/g-s1-142029/has-the-economy-gone-c-shaped",
+        "readingTime": "8",
+        "topic": "经济 / 不平等与叙事",
+        "summary": "这篇 Planet Money 文章讨论用字母描述经济分化的做法：K-shaped economy 通常指富者更富、穷者更穷，而部分官员和商业人士提出 C-shaped 来描述中低收入群体的改善。文章先回溯疫情后 K 形说法的来源，再比较财富、收入、通胀和工资等不同指标，指出把复杂经济压缩成单个字母会混淆数据。作者引用经济学家关于财富集中、工资变化和就业指标的解释，最后认为经济更像反复上下的 W，并强调丰富数据比简单标签更能说明现实。",
+        "reason": [
+          "经济不平等与公共话语是典型考研英语二经济议题。",
+          "文章以流行标签开篇，回溯来源后转入指标和数据批评。",
+          "可训练识别让步、转折、举例和结论回收等论证信号。",
+          "词汇涵盖 inequality、bifurcation、trajectory、granular 等抽象表达。",
+          "适合积累“警惕过度简化、回到数据”的议论文立场。"
+        ],
+        "vocabulary": [
+          { "word": "K-shaped economy", "phonetic": "/ˈkeɪ ʃeɪpt ɪˈkɒnəmi/", "part": "n.", "translation": "K 形经济" },
+          { "word": "inequality", "phonetic": "/ˌɪnɪˈkwɒləti/", "part": "n.", "translation": "不平等" },
+          { "word": "bifurcation", "phonetic": "/ˌbaɪfəˈkeɪʃən/", "part": "n.", "translation": "分叉；分化" },
+          { "word": "stimulus", "phonetic": "/ˈstɪmjələs/", "part": "n.", "translation": "刺激措施" },
+          { "word": "wealth gap", "phonetic": "/welθ ɡæp/", "part": "n.", "translation": "财富差距" },
+          { "word": "trajectory", "phonetic": "/trəˈdʒektəri/", "part": "n.", "translation": "轨迹；发展趋势" },
+          { "word": "affluent", "phonetic": "/ˈæfluənt/", "part": "adj.", "translation": "富裕的" },
+          { "word": "granular", "phonetic": "/ˈɡrænjələ/", "part": "adj.", "translation": "细致的；颗粒化的" },
+          { "word": "reductive", "phonetic": "/rɪˈdʌktɪv/", "part": "adj.", "translation": "过度简化的" }
+        ],
+        "sentences": [
+          {
+            "original": "When people talk about the K-shaped economy, they generally mean that inequality is widening.",
+            "analysis": [
+              "When 引导时间或语境状语从句，限定这一术语的常见用法。",
+              "they generally mean that... 中 that 从句是 mean 的宾语。",
+              "inequality is widening 用进行时呈现持续扩大的趋势。",
+              "generally 表明作者是在概括通常定义，而非声称所有人都如此使用。"
+            ],
+            "translation": "人们谈论 K 形经济时，通常是指不平等正在扩大。"
+          },
+          {
+            "original": "Assigning something as basic as a letter to something as complicated as the economy seems way too reductive.",
+            "analysis": [
+              "Assigning... 作动名词短语主语，表示把标签赋予对象的行为。",
+              "as basic as a letter 与 as complicated as the economy 构成对照。",
+              "seems way too reductive 是系表结构，直接给出作者评价。",
+              "something as...as... 是可迁移的比较结构，强调复杂对象不宜被简单化。"
+            ],
+            "translation": "给像经济这样复杂的事物贴上一个字母这样简单的标签，似乎过于简化了。"
+          },
+          {
+            "original": "The only problem is that all that data and granularity tends to complicate a simple narrative.",
+            "analysis": [
+              "The only problem is that... 是提出限制或反面因素的固定框架。",
+              "all that data and granularity 是 that 从句主语，指大量细节和数据。",
+              "tends to complicate 表示经常造成某结果，但保留概括语气。",
+              "a simple narrative 与全文对“字母标签”的批评形成照应。"
+            ],
+            "translation": "唯一的问题是，所有这些数据和细节往往会使简单的叙事变得复杂。"
           }
         ]
       }
@@ -666,7 +977,7 @@ const issue20260831 = {
 };
 
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-08T09:04:13+08:00",
+  "updatedAt": "2026-09-09T09:08:13+08:00",
   "issues": [
     todaysIssue,
     issue20260906,
