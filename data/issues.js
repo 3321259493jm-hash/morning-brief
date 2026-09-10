@@ -976,15 +976,240 @@ const issue20260831 = {
   "english": { "intro": "精选可免费阅读全文的英语材料，方便在学习中练习结构和词汇。", "articles": [] }
 };
 
+const issue20260910 = {
+ "date": "2026-09-10",
+ "status": "ready",
+ "ai": {
+   "intro": "本期收录 9 月 9 日的官方 AI 产品更新，并复核可立即使用的免费资源；未在来源中写明的额度、地区或资格均标为官方未说明。",
+   "updates": [
+     {
+       "event": "GitHub Copilot 企业托管 Agent 操作权限（2026-09-09）",
+       "summary": "GitHub Changelog 宣布 Copilot Business 和 Enterprise 管理员现在可以集中控制 agent 的 shell 命令、文件读写和网络域名操作：阻止、要求人工批准或允许无提示执行。",
+       "howTo": "管理员在企业 Copilot managed settings 中配置各类操作的 deny、ask 或 allow，并可按团队制定策略；在 Copilot app、Copilot CLI 或使用 Agent Host 的 VS Code 会话中验证策略。",
+       "impact": "课程团队可把读取数据、改文件和联网分别设为审批级别，降低 agent 误操作实验代码或敏感资料的风险；个人仍应审阅命令和 diff。",
+       "free": "官方仅说明该功能面向 Copilot Business 和 Enterprise 且已在相关客户端 generally available；个人计划价格、免费额度和地区限制官方未说明。",
+       "category": "AI 编程 / 安全控制",
+       "source": {
+         "name": "GitHub Changelog",
+         "published": "2026-09-09",
+         "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations"
+       }
+     },
+     {
+       "event": "GitHub Code Quality 支持 Agentic Autofix 批量修复（2026-09-09）",
+       "summary": "GitHub 宣布代码质量页面可一次选中最多 25 个 standard findings 并交给 Copilot：agent 在分支上修复、验证改动并创建 pull request，供人审查和合并。",
+       "howTo": "在启用 GitHub Code Quality 的仓库打开 findings 页面，选择最多 25 个 standard findings，点击 Assign to Copilot；检查其分支、验证结果和 pull request 后再决定是否合并。",
+       "impact": "学生可将课程项目中的一批质量问题交给 agent 做初步修复，再把测试、审查和合并保留在人手中；批量修复会消耗 AI credits，应先小批量试用。",
+       "free": "官方说明该能力适用于 GitHub Team 和 GitHub Enterprise Cloud 的 Code Quality 仓库，且会消耗 AI credits；具体 credits 价格、免费额度和地区限制官方未说明。",
+       "category": "AI 编程 / 代码质量",
+       "source": {
+         "name": "GitHub Changelog",
+         "published": "2026-09-09",
+         "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix"
+       }
+     },
+     {
+       "event": "Anthropic 预览 Model Hardware Standard（2026-09-09）",
+       "summary": "Anthropic 开放 Model Hardware Standard 研究预览：用标准化 driver 和 read/write 等 primitives，让 AI agent 通过 MCP、CLI 或 API 协调显微镜、液体处理器和机械臂等可编程设备。",
+       "howTo": "在 Model Hardware Standard 官网提交 research preview interest；有可编程实验设备的团队可按 Anthropic 说明申请，并用标准 driver 描述设备能力、可调参数和安全限制。",
+       "impact": "科研学生可把多台仪器的控制接口统一起来，尝试自动化实验编排、实时调整参数和故障检测；官方强调物理推理仍有限，必须由专家监督。",
+       "free": "这是面向合作方的 research preview，官方未说明费用、名额、地区、开放时间或普通个人账号资格；标准尚未开源，官方表示将继续与伙伴完善后再开源。",
+       "category": "AI 科研与机器人",
+       "source": {
+         "name": "Anthropic News",
+         "published": "2026-09-09",
+         "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+       }
+     }
+   ],
+   "deals": [
+     {
+       "event": "Gemini API 免费层与 Google AI Studio",
+       "summary": "Google Gemini API 官方定价页列出免费层：可访问部分模型、获得免费输入和输出 token，并使用 Google AI Studio 开始开发。",
+       "howTo": "登录 Google AI Studio，选择免费层可用模型做提示词或 API 原型；上线前查看对应模型的当前定价和速率限制。",
+       "impact": "学生可先做文本处理、课程项目原型和 API 调试，而无需先付费；涉及隐私资料时要注意免费层内容使用条款。",
+       "free": "官方明确免费层包含 limited access、free input/output tokens 和 AI Studio；具体 token 配额、账号资格、地区和重置周期官方未说明。",
+       "category": "免费 API / 开发者资源",
+       "source": {
+         "name": "Google Gemini API 官方定价",
+         "published": "官方未说明",
+         "url": "https://ai.google.dev/gemini-api/docs/pricing"
+       }
+     },
+     {
+       "event": "Google Colab 免费 Jupyter 环境",
+       "summary": "Colab 官方 FAQ 说明，Colab 是无需本地设置的托管 Jupyter 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+       "howTo": "打开 Colab，新建或导入 notebook，直接运行 Python；需要时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或 GitHub。",
+       "impact": "学生可直接运行课程代码、处理数据和做小型模型实验，避免先配置本地环境；资源不保证且可能因使用限制提前终止。",
+       "free": "官方确认免费，但资源不保证、不无限，使用上限会波动；免费层优先支持正在 notebook 中编程的用户，固定配额和统一重置时间官方未说明。",
+       "category": "长期免费云环境",
+       "source": {
+         "name": "Google Colab 官方 FAQ",
+         "published": "官方未说明",
+         "url": "https://research.google.com/colaboratory/faq.html"
+       }
+     },
+     {
+       "event": "GitHub Copilot Student 学生权益",
+       "summary": "GitHub Education 官方权益页说明，verified students 可使用 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
+       "howTo": "打开 Student Developer Pack，完成学生资格验证并开通 Copilot Student；在编辑器使用补全，在 GitHub 账户中查看 AI Credits 与 chat/agent 可用情况。",
+       "impact": "学生可用补全减少样板代码工作，并把有限 chat/agent 用于解释、测试和学习；生成代码仍需测试、审查许可证并人工检查。",
+       "free": "官方权益面向 verified students；补全 unlimited，另有 AI Credits，chat 和 agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+       "category": "学生 / 教育权益",
+       "source": {
+         "name": "GitHub Education Student Developer Pack",
+         "published": "官方未说明",
+         "url": "https://education.github.com/pack"
+       }
+     },
+     {
+       "event": "Qwen3-Next-80B-A3B-Instruct 开放权重",
+       "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 下载与 Transformers 快速开始，列出 80B 总参数、3B 激活参数和 262,144 原生上下文长度。",
+       "howTo": "打开官方模型卡，按 Quickstart 安装 Transformers 并加载 Qwen/Qwen3-Next-80B-A3B-Instruct；先用短提示测试显存、速度和上下文，再决定本地或云端部署。",
+       "impact": "有 GPU 或云端算力的学生可研究 MoE、长上下文和本地推理，不必先购买 API；下载模型不等于免费获得算力。",
+       "free": "官方模型卡提供公开下载入口；本地显卡、存储和网络成本由使用者承担，免费 API 配额、账号资格、地区和固定许可期限官方未说明。",
+       "category": "开放模型权重",
+       "source": {
+         "name": "Qwen 官方 Hugging Face 模型卡",
+         "published": "官方未说明",
+         "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+       }
+     }
+   ]
+ },
+ "english": {
+   "intro": "精选 9 月 9 日可直接阅读的 BBC 与 Guardian 文章，避开全部既有 URL 和标题，覆盖健康、治理与科技伦理；每篇按考研英语二方向精读。",
+   "articles": [
+     {
+       "title": "Should you sync your workouts to your period?",
+       "source": "BBC",
+       "published": "2026-09-09",
+       "url": "https://www.bbc.com/news/articles/c5y7k9n7exyo",
+       "readingTime": "6",
+       "topic": "健康 / 科学传播",
+       "summary": "文章从社交媒体上流行的“按月经周期安排训练”建议切入，指出月经周期具有高度个体差异，不能把网络流行说法直接套用于所有人。论述先说明为什么这类建议吸引人，再转向研究者对证据、个体差异和过度概括的提醒，最后把结论落在应根据个人感受和可靠信息调整运动，而不是追逐统一日历。文章的核心不是否定记录周期，而是要求把相关性、经验和可推广证据区分开。",
+       "reason": [
+         "运动与健康信息的证据边界，适合科学素养类考研主题。",
+         "文章由流行建议转入研究者提醒，再回到个体化实践，转折结构清楚。",
+         "可训练识别 blanket advice、individual difference 与 evidence 等限定表达。",
+         "适合出主旨题、态度题，也可考查作者对社交媒体健康建议的谨慎态度。",
+         "“不能一刀切”可迁移到健康、教育和公共政策写作。"
+       ],
+       "vocabulary": [
+         { "word": "sync", "phonetic": "/sɪŋk/", "part": "v.", "translation": "同步；协调" },
+         { "word": "workout", "phonetic": "/ˈwɜːkaʊt/", "part": "n.", "translation": "锻炼；训练" },
+         { "word": "menstrual cycle", "phonetic": "/ˈmenstruəl ˈsaɪkəl/", "part": "n.", "translation": "月经周期" },
+         { "word": "individual", "phonetic": "/ˌɪndɪˈvɪdʒuəl/", "part": "adj.", "translation": "个体的；各自的" },
+         { "word": "blanket", "phonetic": "/ˈblæŋkɪt/", "part": "adj.", "translation": "一概而论的" },
+         { "word": "evidence", "phonetic": "/ˈevɪdəns/", "part": "n.", "translation": "证据" },
+         { "word": "researcher", "phonetic": "/rɪˈsɜːtʃə/", "part": "n.", "translation": "研究人员" },
+         { "word": "apply", "phonetic": "/əˈplaɪ/", "part": "v.", "translation": "应用；适用" }
+       ],
+       "sentences": [
+         {
+           "original": "Menstrual cycles are highly individual.",
+           "analysis": [
+             "主干是 cycles are individual，系动词连接主语和表语。",
+             "highly 修饰 individual，强调差异程度而非简单存在差异。",
+             "该短句为全文限定范围，提醒读者不要假定统一规律。",
+             "适合积累科学说明文中先提出关键限定的写法。"
+           ],
+           "translation": "月经周期具有很强的个体差异。"
+         },
+         {
+           "original": "Blanket advice found on social media can be difficult to apply.",
+           "analysis": [
+             "主干是 advice can be difficult to apply。",
+             "found on social media 是过去分词短语，后置修饰 advice。",
+             "to apply 是 be difficult 的不定式补足语。",
+             "句子把信息来源与实际适用性连接起来，体现审慎态度。"
+           ],
+           "translation": "社交媒体上的一概而论建议可能很难实际适用。"
+         },
+         {
+           "original": "Researchers say the advice cannot be applied to everyone.",
+           "analysis": [
+             "Researchers say 引出研究者观点，主句后接宾语从句。",
+             "cannot be applied 使用被动语态，强调建议的适用范围受限。",
+             "to everyone 是介词短语，指出不能推广到所有人。",
+             "该结构可用于写作中引述专家并表达谨慎结论。"
+           ],
+           "translation": "研究人员表示，这些建议不能套用于每个人。"
+         }
+       ]
+     },
+     {
+       "title": "Singapore ministers receive one-off salary boost of more than 60%",
+       "source": "The Guardian",
+       "published": "2026-09-09",
+       "url": "https://www.theguardian.com/world/2026/sep/09/singapore-pm-ministers-salary-pay-rise",
+       "readingTime": "7",
+       "topic": "社会 / 公共治理",
+       "summary": "文章报道新加坡政府一次性大幅提高部长薪酬：总理基准年薪从 220 万新元升至 360 万新元，部长薪酬也按职位提高。报道先给出涨幅与具体数字，再解释政府以吸引人才和保证良好治理为理由，同时呈现公众因收入差距而产生的敏感与审视。总理表示会把自己的加薪全部捐给合适的公益事业；文章最后补充，现任官员不会立即达到新基准，而是从 10 月 15 日起按个人情况获得最高 9% 的一次性调整。",
+       "reason": [
+         "公共部门薪酬、人才激励与收入公平是社会治理类高频议题。",
+         "文章按数字事实—政府理由—公众疑虑—执行细节推进，信息层次适合定位。",
+         "可训练比较级、数字表达、benchmark salary 与 politically sensitive 等词组。",
+         "题目可考作者如何平衡官方解释与社会争议，而非只问涨薪事实。",
+         "适合积累“政策目标与分配争议并置”的议论文结构。"
+       ],
+       "vocabulary": [
+         { "word": "one-off", "phonetic": "/ˌwʌn ˈɒf/", "part": "adj.", "translation": "一次性的" },
+         { "word": "salary boost", "phonetic": "/ˈsæləri buːst/", "part": "n.", "translation": "薪资增长" },
+         { "word": "benchmark", "phonetic": "/ˈbentʃmɑːk/", "part": "n.", "translation": "基准" },
+         { "word": "affluent", "phonetic": "/ˈæfluənt/", "part": "adj.", "translation": "富裕的" },
+         { "word": "justify", "phonetic": "/ˈdʒʌstɪfaɪ/", "part": "v.", "translation": "为……辩护；证明合理" },
+         { "word": "talent", "phonetic": "/ˈtælənt/", "part": "n.", "translation": "人才" },
+         { "word": "governance", "phonetic": "/ˈɡʌvənəns/", "part": "n.", "translation": "治理" },
+         { "word": "scrutinise", "phonetic": "/ˈskruːtənaɪz/", "part": "v.", "translation": "仔细审视" },
+         { "word": "seniority", "phonetic": "/ˌsiːniˈɒrəti/", "part": "n.", "translation": "资历；级别" }
+       ],
+       "sentences": [
+         {
+           "original": "Singapore has justified high-end salaries for its political leaders.",
+           "analysis": [
+             "主干是 Singapore has justified salaries，使用现在完成时连接政策背景与当前结果。",
+             "high-end 修饰 salaries，表达高水平而非单纯高低比较。",
+             "for its political leaders 指明薪酬对象。",
+             "该句可作为“政府为争议政策提供理由”的概括句。"
+           ],
+           "translation": "新加坡为其政治领导人的高额薪酬作出了辩护。"
+         },
+         {
+           "original": "The issue is nevertheless politically sensitive.",
+           "analysis": [
+             "nevertheless 是让步副词，承接官方理由并引出反面考量。",
+             "主干是 the issue is sensitive。",
+             "politically 修饰 sensitive，限定敏感性发生在政治层面。",
+             "短句用最少信息明确标记文章的争议转折。"
+           ],
+           "translation": "然而，这一问题在政治上仍然敏感。"
+         },
+         {
+           "original": "Good government depends on good leadership.",
+           "analysis": [
+             "主干是 good government depends on good leadership。",
+             "depend on 表示条件或因果依赖关系。",
+             "两个 good 构成平行结构，增强格言式论断的对称性。",
+             "该句体现政府为薪酬政策提出的核心价值判断。"
+           ],
+           "translation": "良好的政府取决于良好的领导。"
+         }
+       ]
+     }
+   ]
+ }
+};
+
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-09T09:08:13+08:00",
-  "issues": [
-    todaysIssue,
-    issue20260906,
-    issue20260904,
-    issue20260903,
-    issue20260902,
-    issue20260901,
-    issue20260831
-  ]
+ "updatedAt": "2026-09-10T09:08:13+08:00",
+ "issues": [
+   issue20260910,
+   todaysIssue,
+   issue20260906,
+   issue20260904,
+   issue20260903,
+   issue20260902,
+   issue20260901
+ ]
 };
