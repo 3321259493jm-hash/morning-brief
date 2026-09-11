@@ -976,6 +976,230 @@ const issue20260831 = {
   "english": { "intro": "精选可免费阅读全文的英语材料，方便在学习中练习结构和词汇。", "articles": [] }
 };
 
+const issue20260911 = {
+  "date": "2026-09-11",
+  "status": "ready",
+  "ai": {
+    "intro": "本期收录 9 月 9—10 日可直接核验的官方产品更新，并把未公开的免费条件明确标为官方未说明。",
+    "updates": [
+      {
+        "event": "Anthropic 发布 2026 年 9 月威胁情报报告（2026-09-10）",
+        "summary": "Anthropic 报告称，其团队在过去六个月识别并干扰了多起使用 Claude 的网络行动；报告重点记录了 AI 从聊天助手走向编排侦察、利用和数据外传流程的变化。",
+        "howTo": "打开 Anthropic 威胁情报报告阅读案例和防御建议；学生做安全实验时只在授权靶场中复现防御流程，先配置最小权限、日志和人工审批，不把真实凭据交给模型。",
+        "impact": "网络安全课程可用报告中的 kill chain、AI orchestration 和 detection evasion 作为威胁建模素材，练习把攻击步骤映射到检测点和响应措施。",
+        "free": "报告网页可直接阅读；官方未说明 Claude 相关功能的统一免费额度、账号资格、地区范围或 API 配额。",
+        "category": "AI 安全与威胁情报",
+        "source": {
+          "name": "Anthropic 官方威胁情报报告",
+          "published": "2026-09-10",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      },
+      {
+        "event": "GitHub Copilot 推出 Pull Request API 的 AI Scan 公共预览（2026-09-10）",
+        "summary": "GitHub Changelog 公告 AI Scan for pull request APIs 进入 public preview，使开发者可以通过 Pull Request API 使用相关扫描能力。",
+        "howTo": "打开 GitHub Changelog 公告，确认组织和仓库是否满足预览条件；在测试仓库按公告链接的 API 文档配置请求，再检查扫描结果并由人工决定是否合并。",
+        "impact": "学生团队可以把代码安全检查接入课程项目的 Pull Request 流程，在合并前发现潜在问题；预览功能不应替代测试、代码审查或依赖审计。",
+        "free": "公告未说明统一免费额度、计划资格、地区覆盖和调用配额；public preview 的具体可用性以 GitHub 账户和组织设置为准。",
+        "category": "Copilot / 代码安全",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-10",
+          "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview/"
+        }
+      },
+      {
+        "event": "GitHub Actions 可用 cache-mode 控制缓存访问（2026-09-10）",
+        "summary": "GitHub Changelog 公告新增 cache-mode，用于控制 GitHub Actions 缓存访问方式，帮助工作流作者更细致地管理缓存权限边界。",
+        "howTo": "在测试仓库打开公告并按文档更新 Actions 配置；先用最小权限验证读取和写入行为，再检查 fork、pull request 与受保护分支场景的缓存可见性。",
+        "impact": "学生可在 CI 作业中减少缓存误用风险，理解构建缓存、权限和供应链安全的关系；修改工作流后应检查日志并保留回滚版本。",
+        "free": "公告未说明独立收费、统一免费额度、地区范围或账户资格；能否使用取决于 GitHub Actions 和仓库策略。",
+        "category": "开发者工具 / CI 安全",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-10",
+          "url": "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode/"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Gemini API 免费层与 Google AI Studio",
+        "summary": "Google Gemini API 定价页列出免费层模型和免费输入、输出 token，Google AI Studio 可用于原型测试。",
+        "howTo": "打开 Google AI Studio 并登录 Google 账号，选择免费层模型测试提示词；做 API 实验前查看同一官方定价页的当前模型限制。",
+        "impact": "学生可以先做文本处理和课程项目原型，再决定是否需要付费生产配置。",
+        "free": "官方确认有免费层和 AI Studio；固定额度、重置周期、地区与账号资格官方未说明。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价页",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab FAQ 说明它是无需本地设置的托管 Jupyter Notebook 服务，并免费提供包括 GPU 和 TPU 在内的计算资源。",
+        "howTo": "打开 Colab，新建或导入 notebook，运行 Python 单元格；需要加速时在运行时设置中尝试 GPU 或 TPU，并保存 notebook。",
+        "impact": "学生可直接运行课程代码、分析数据和训练小型模型，减少本地环境配置。",
+        "free": "官方确认免费，但资源不保证且不无限；固定额度、地区和统一重置周期官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 提供面向已验证学生的 Student Developer Pack，汇集开发工具和学习资源。",
+        "howTo": "进入 Student Developer Pack，完成学生资格验证，按页面提示开启可用权益，并在作业仓库中遵守各工具条款。",
+        "impact": "学生可把开发、协作和学习工具用于课程项目，降低软件成本。",
+        "free": "官方说明面向 verified students；当前具体权益、统一额度、地区例外和有效期以页面为准，官方未说明统一标准。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重模型",
+        "summary": "Qwen 官方模型卡提供该模型的公开下载入口，并说明其 80B 总参数、3B 激活参数和 262,144 token 原生上下文长度。",
+        "howTo": "打开 Qwen 官方 Hugging Face 模型卡，按说明使用 Transformers、vLLM 或其他列出的运行环境；先用短输入测试显存和速度。",
+        "impact": "有 GPU 或云端 notebook 的学生可以研究 MoE、长上下文和本地推理，而不必先购买 API。",
+        "free": "模型权重可公开下载；本地算力、存储和网络成本由使用者承担，免费 API 配额、账号资格和地区范围官方未说明。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期选取 9 月 10 日 BBC 免费可读材料，覆盖科技产品与人工智能风险；每篇提供考研英语二式结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "Apple foldable iPhone: New boss starts with gamble on £1,999 device",
+        "source": "BBC",
+        "published": "2026-09-10",
+        "url": "https://www.bbc.com/news/articles/clyjd1jnd03o",
+        "readingTime": "7",
+        "topic": "科技趋势 / 消费电子",
+        "summary": "文章以苹果折叠屏 iPhone 的高价上市为切入口，先交代新任 CEO 上任后的产品选择，再分析折叠屏的设计、价格和市场定位。报道把苹果的品牌溢价放入竞争格局中，特别指出中国市场已有成熟竞争者，随后用行业分析人士的判断说明这款产品既是技术展示，也是对消费者支付意愿的测试。结尾回到管理层面：新 CEO 需要在创新、成本和销量之间取得平衡。",
+        "reason": [
+          "消费电子和企业战略是考研英语常见的商业科技交叉主题。",
+          "文章采用“产品发布—市场竞争—管理挑战”的递进结构。",
+          "适合练习识别价格、引语、转折和因果关系。",
+          "词汇覆盖 gamble、established、competitor、foldable 等新闻与商业表达。",
+          "可积累评价新产品和分析企业决策的写作框架。"
+        ],
+        "vocabulary": [
+          { "word": "foldable", "phonetic": "/ˈfəʊldəbl/", "part": "adj.", "translation": "可折叠的" },
+          { "word": "gamble", "phonetic": "/ˈɡæmbl/", "part": "n./v.", "translation": "冒险的尝试；冒险" },
+          { "word": "established", "phonetic": "/ɪˈstæblɪʃt/", "part": "adj.", "translation": "成熟的；已确立的" },
+          { "word": "competitor", "phonetic": "/kəmˈpetɪtə/", "part": "n.", "translation": "竞争者" },
+          { "word": "premium", "phonetic": "/ˈpriːmiəm/", "part": "adj./n.", "translation": "高端的；溢价" },
+          { "word": "position", "phonetic": "/pəˈzɪʃən/", "part": "v./n.", "translation": "定位；位置" },
+          { "word": "consumer", "phonetic": "/kənˈsjuːmə/", "part": "n.", "translation": "消费者" },
+          { "word": "rival", "phonetic": "/ˈraɪvəl/", "part": "n./adj.", "translation": "竞争对手；竞争的" }
+        ],
+        "sentences": [
+          {
+            "original": "Apple's new boss has started with a gamble on a £1,999 foldable iPhone.",
+            "analysis": [
+              "主干是 Apple's new boss has started with a gamble。",
+              "on a ... iPhone 介词短语说明 gamble 的具体内容。",
+              "£1,999 和 foldable 共同修饰产品，形成价格与特征信息。",
+              "with a gamble 是新闻中用抽象名词概括决策的表达。"
+            ],
+            "translation": "苹果新任负责人以押注一款售价 1999 英镑的折叠屏 iPhone 开始任期。"
+          },
+          {
+            "original": "But the product is facing established competitors.",
+            "analysis": [
+              "But 标记转折，把产品亮相转向市场压力。",
+              "主干是 the product is facing competitors。",
+              "established 作前置定语，强调竞争者已有市场基础。",
+              "现在进行时 facing 表示当前持续存在的竞争处境。"
+            ],
+            "translation": "但这款产品正面临成熟的竞争对手。"
+          },
+          {
+            "original": "The real fight is China, where Huawei owns nearly 80% of foldables.",
+            "analysis": [
+              "主句 The real fight is China 用系动词突出关键市场。",
+              "where 引导非限制性定语从句，补充中国市场的情况。",
+              "owns nearly 80% of foldables 是数据化的竞争证据。",
+              "整句由判断转入事实，体现新闻论证的推进。"
+            ],
+            "translation": "真正的竞争在中国；在这个市场，华为拥有折叠屏手机近八成的份额。"
+          }
+        ]
+      },
+      {
+        "title": "Why some experts increasingly fear AI will take over",
+        "source": "BBC",
+        "published": "2026-09-10",
+        "url": "https://www.bbc.com/news/articles/c74edv9887eo",
+        "readingTime": "8",
+        "topic": "科技趋势 / AI 风险",
+        "summary": "文章围绕部分 AI 专家对未来失控风险的担忧展开，先用研究者的警告提出问题，再解释为什么具备联网能力、凭据和自主行动空间的系统可能产生难以预料的后果。报道同时呈现不同程度的判断：有人强调风险正在上升，也有人认为应把极端预测与可验证证据区分开。文章的结论不是给出确定时间表，而是呼吁在能力提升的同时加强评估、限制权限和持续监督。",
+        "reason": [
+          "AI 风险与技术治理是科技趋势类阅读的高频议题。",
+          "文章通过专家观点和反问推进，适合训练观点辨析。",
+          "可练习区分事实、预测、条件和作者保留态度。",
+          "词汇涉及 increasingly、eventually、experiment、consequence 等抽象表达。",
+          "适合积累“提出风险—呈现分歧—给出治理方向”的议论文结构。"
+        ],
+        "vocabulary": [
+          { "word": "increasingly", "phonetic": "/ɪnˈkriːsɪŋli/", "part": "adv.", "translation": "越来越多地" },
+          { "word": "take over", "phonetic": "/teɪk ˈəʊvə/", "part": "phr.v.", "translation": "接管；控制" },
+          { "word": "eventually", "phonetic": "/ɪˈventʃuəli/", "part": "adv.", "translation": "最终" },
+          { "word": "rattle", "phonetic": "/ˈrætl/", "part": "v.", "translation": "碰撞作响；试探" },
+          { "word": "credential", "phonetic": "/krəˈdenʃəl/", "part": "n.", "translation": "凭据；资格证明" },
+          { "word": "experiment", "phonetic": "/ɪkˈsperɪment/", "part": "v./n.", "translation": "实验；试验" },
+          { "word": "explore", "phonetic": "/ɪkˈsplɔː/", "part": "v.", "translation": "探索" },
+          { "word": "consequence", "phonetic": "/ˈkɒnsɪkwəns/", "part": "n.", "translation": "后果" }
+        ],
+        "sentences": [
+          {
+            "original": "Why some experts increasingly fear AI will take over.",
+            "analysis": [
+              "Why 引出解释性标题，省略完整主句但保留核心问题。",
+              "some experts 是主语，increasingly 修饰 fear，表示担忧增强。",
+              "AI will take over 是 fear 的宾语从句，说明担忧内容。",
+              "标题结构适合改写为议论文的设问开头。"
+            ],
+            "translation": "为什么一些专家越来越担心人工智能会接管一切。"
+          },
+          {
+            "original": "You give them a computer, an internet connection, a pile of credentials, and a challenge, then leave the room.",
+            "analysis": [
+              "You give... then leave... 构成先后动作链。",
+              "四个并列宾语具体化了系统获得的资源和任务。",
+              "a pile of credentials 使用量词短语强调权限数量。",
+              "then 标出条件设置后的结果行动，增强口语化警示效果。"
+            ],
+            "translation": "你给它们一台电脑、网络连接、一堆凭据和一个挑战，然后离开房间。"
+          },
+          {
+            "original": "Eventually they're going to start rattling doorknobs.",
+            "analysis": [
+              "Eventually 是句首时间副词，提示可能的最终发展。",
+              "be going to 表示基于当前条件的预期，而非确定事实。",
+              "start rattling doorknobs 用具体动作比喻试探权限边界。",
+              "该句以短句呈现风险推演，适合分析隐喻和语气。"
+            ],
+            "translation": "最终，它们会开始试探一扇扇门把手。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260910 = {
  "date": "2026-09-10",
  "status": "ready",
@@ -1202,14 +1426,14 @@ const issue20260910 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-10T09:08:13+08:00",
+ "updatedAt": "2026-09-11T08:55:00+08:00",
  "issues": [
+   issue20260911,
    issue20260910,
    todaysIssue,
+   issue20260908,
    issue20260906,
    issue20260904,
-   issue20260903,
-   issue20260902,
-   issue20260901
+   issue20260903
  ]
 };
