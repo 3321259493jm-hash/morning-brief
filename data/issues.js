@@ -1425,12 +1425,294 @@ const issue20260910 = {
  }
 };
 
+const issue20260912 = {
+  "date": "2026-09-12",
+  "status": "ready",
+  "ai": {
+    "intro": "本期优先核验 9 月 9—11 日的官方 AI 更新，并复核可立即使用的免费资源；来源未说明的价格、额度、地区或资格明确标为官方未说明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 企业托管 Agent 操作权限正式可用（2026-09-11）",
+        "summary": "GitHub 宣布 Copilot Business 和 Enterprise 管理员现在可以集中控制 agent 的 shell 命令、文件读取与编辑、网络域名操作：每类操作可阻止、要求人工批准或允许无提示执行。",
+        "howTo": "管理员打开 enterprise managed settings，为 shell、文件和网络域名分别设置 deny、ask 或 allow，并可按团队配置策略；在 Copilot app、Copilot CLI 或使用 Agent Host 的 VS Code 会话中验证策略。",
+        "impact": "课程团队可把读取数据、改文件和联网分开设为审批级别，降低 agent 误操作实验代码或敏感资料的风险；个人仍应审阅命令和 diff。",
+        "free": "官方说明该能力面向 Copilot Business 和 Enterprise，且在 Copilot app、CLI 和 Agent Host VS Code 会话中 generally available；个人计划价格、免费额度和地区限制官方未说明。",
+        "category": "AI 编程 / 安全控制",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-11",
+          "url": "https://github.blog/changelog/2026-09-11-enterprise-managed-permissions-for-github-copilot-agent-operations"
+        }
+      },
+      {
+        "event": "GitHub Code Quality 支持 Agentic Autofix 批量修复（2026-09-09）",
+        "summary": "GitHub Code Quality 页面现在可一次选择最多 25 个 standard findings 并交给 Copilot：agent 在分支上修复、验证改动，然后创建 pull request 供人审查和合并。",
+        "howTo": "在已启用 GitHub Code Quality 的仓库打开 findings 页面，选择最多 25 个 standard findings，点击 Assign to Copilot；检查分支、验证结果和 pull request 后再决定是否合并。",
+        "impact": "学生可把课程项目中的一批质量问题交给 agent 做初步修复，再把测试、审查和合并保留在人手中；批量操作会消耗 AI credits，应先小批量试用。",
+        "free": "官方说明该能力适用于启用 Code Quality 的 GitHub Team 和 GitHub Enterprise Cloud 仓库，且会消耗 AI credits；具体 credits 价格、免费额度和地区限制官方未说明。",
+        "category": "AI 编程 / 代码质量",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-09",
+          "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix"
+        }
+      },
+      {
+        "event": "Anthropic 预览 Model Hardware Standard（2026-09-09）",
+        "summary": "Anthropic 向首批科研实验室和先进制造商开放 Model Hardware Standard 研究预览：标准化 driver 用 read/write 等 primitives 让 agent 通过 MCP、CLI 或 API 协调显微镜、液体处理器和机械臂等可编程设备。",
+        "howTo": "有可编程实验设备的团队阅读 MHS 公告并在 modelhardwarestandard.com 提交 research preview interest；学生可按公告理解设备发现、参数调整和安全限制，但不能把研究预览当作普通公开产品。",
+        "impact": "科研学生可据此设计多仪器实验编排、实时调参和故障检测原型；真实设备仍需专家监督，因为官方明确说明模型的物理推理存在局限。",
+        "free": "官方称这是面向首批实验室和制造商的 research preview，未来计划开源；申请资格、费用、地区、设备数量和开放时间官方未说明。",
+        "category": "AI 科研与机器人",
+        "source": {
+          "name": "Anthropic News",
+          "published": "2026-09-09",
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google 官方定价页列出免费层：可有限访问部分模型、获得免费输入和输出 token，并使用 Google AI Studio 开始开发；免费层内容可用于改进 Google 产品。",
+        "howTo": "登录 Google AI Studio，选择免费层可用模型测试提示词或 API 原型；正式调用前查看当前模型表格和账户限制，避免提交敏感资料。",
+        "impact": "学生可先做文本处理、课程演示和 API 调试而无需先付费，再决定是否购买生产吞吐；实验报告应记录模型和实际限制。",
+        "free": "官方明确免费层包含有限模型访问、免费输入/输出 token 和 AI Studio；统一固定额度、账号资格、地区清单和重置周期官方未说明。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 说明它是无需本地设置的托管 Jupyter 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中尝试 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可直接运行课程代码、清洗数据和做小型模型实验，避免先配置本地环境；分享 notebook 前应检查输出和注释是否含敏感信息。",
+        "free": "官方确认免费，但资源不保证、不无限，使用上限会波动；统一 GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Copilot Student 学生权益",
+        "summary": "GitHub Education 权益页说明 verified students 可使用 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "打开 Student Developer Pack，完成学生资格验证并开通 Copilot Student；在编辑器使用补全，在 GitHub 账户中查看 AI Credits 与 chat/agent 可用情况。",
+        "impact": "学生可用补全减少样板代码工作，并把有限 chat/agent 用于解释、测试和学习；生成代码仍需测试、审查许可证并人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，另有 AI Credits，chat 和 agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供公开下载入口，说明该模型总参数 80B、激活参数 3B，原生上下文长度 262,144 tokens，并支持 instruct（非 thinking）模式。",
+        "howTo": "打开官方模型卡，按 Quickstart 使用 Transformers、vLLM、Ollama 或其他列出的环境加载模型；先用短输入测试本地显存、速度和上下文。",
+        "impact": "有 GPU 或云端算力的学生可研究 MoE、长上下文和本地推理，不必先购买 API；下载权重不等于免费获得算力。",
+        "free": "官方提供公开模型权重下载入口；本地显卡、存储和网络成本由使用者承担，免费 API 配额、账号资格、地区和固定许可期限官方未说明。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 11—12 日可直接阅读的 BBC、The Guardian 与 NPR 文章，避开全部既有 URL 和标题，覆盖健康政策、全球健康与经济冲击；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "MPs vote against fresh attempt to legalise assisted dying",
+        "source": "BBC",
+        "published": "2026-09-12",
+        "url": "https://www.bbc.co.uk/news/articles/c17j91jenr8o",
+        "readingTime": "7",
+        "topic": "健康 / 公共政策",
+        "summary": "文章报道英国议员否决再次推动安乐死合法化的议案。报道先交代投票结果和议案支持者认为现行法律残酷、不公的理由，再呈现反对者对安全性、可操作性以及医疗和临终照护准备不足的担忧，最后补充支持者仍可能在未来重提立法。全文不是单向评论，而是把议会决定、医学专业意见、临终患者处境和后续政治路径并置，结论是争议并未消失。",
+        "reason": [
+          "安乐死、医疗照护和立法争议是健康政策类高频阅读主题。",
+          "文章按投票结果—正反理由—后续可能性推进，适合梳理论证层次。",
+          "可训练 distinguish、workability、palliative care 等政策与医学词汇。",
+          "题目可考作者如何呈现双方立场、投票意味着什么以及争议是否结束。",
+          "适合写作中使用“法律改变前需先补足公共服务”的让步论证。"
+        ],
+        "vocabulary": [
+          { "word": "assisted dying", "phonetic": "/əˌsɪstɪd ˈdaɪɪŋ/", "part": "n.", "translation": "协助死亡" },
+          { "word": "legalise", "phonetic": "/ˈliːɡəlaɪz/", "part": "v.", "translation": "使合法化" },
+          { "word": "legislation", "phonetic": "/ˌledʒɪˈsleɪʃən/", "part": "n.", "translation": "立法" },
+          { "word": "conscience", "phonetic": "/ˈkɒnʃəns/", "part": "n.", "translation": "良知；内心" },
+          { "word": "unworkable", "phonetic": "/ʌnˈwɜːkəbl/", "part": "adj.", "translation": "不可行的" },
+          { "word": "palliative care", "phonetic": "/ˈpæliətɪv keə/", "part": "n.", "translation": "姑息治疗；临终关怀" },
+          { "word": "terminally ill", "phonetic": "/ˈtɜːmɪnəli ɪl/", "part": "adj.", "translation": "患绝症的" },
+          { "word": "inevitable", "phonetic": "/ɪnˈevɪtəbl/", "part": "adj.", "translation": "不可避免的" }
+        ],
+        "sentences": [
+          {
+            "original": "MPs vote against fresh attempt to legalise assisted dying.",
+            "analysis": [
+              "主干是 MPs vote against...，against 引出反对对象。",
+              "fresh attempt to legalise... 中不定式说明 attempt 的目标。",
+              "标题使用一般现在时报道刚发生的议会动作。",
+              "该句适合积累新闻标题中压缩信息和省略冠词的写法。"
+            ],
+            "translation": "英国议员投票反对再次推动安乐死合法化。"
+          },
+          {
+            "original": "The issue was clearly not going away.",
+            "analysis": [
+              "主干是 the issue was not going away，过去进行式语义表示持续存在。",
+              "clearly 是态度副词，强调判断的确定程度。",
+              "go away 在此不是离开，而是问题消失。",
+              "该句把一次投票与后续公共争论连接起来。"
+            ],
+            "translation": "这一问题显然不会消失。"
+          },
+          {
+            "original": "There was a need to fix our NHS and sort out social and palliative care.",
+            "analysis": [
+              "There was a need to... 是提出政策优先级的存在句。",
+              "两个并列不定式 fix 和 sort out 说明需要采取的行动。",
+              "social and palliative care 并列限定照护体系的范围。",
+              "该结构可用于写作中提出改革先后顺序。"
+            ],
+            "translation": "有必要先修复国民保健服务并解决社会照护和临终关怀问题。"
+          }
+        ]
+      },
+      {
+        "title": "A $15.5m fund aims to create ‘unstoppable momentum’ to end FGM worldwide",
+        "source": "The Guardian",
+        "published": "2026-09-11",
+        "url": "https://www.theguardian.com/global-development/2026/sep/11/15m-fund-launched-to-create-unstoppable-momentum-to-end-fgm-worldwide",
+        "readingTime": "7",
+        "topic": "全球健康 / 社会",
+        "summary": "文章报道 Her Horizon Fund 获得 1550 万美元启动资金，目标是为消除女性生殖器切割筹集 1 亿美元。报道先说明该基金和基层倡导者的意义，再指出捐助下降、法律保护受到挑战以及联合国 2030 年目标进展不够快的背景，随后用 UNFPA 与 UNICEF 联合项目资金下降的数据说明资源压力，最后引入幸存者和基金顾问的观点，强调持久改变应由当地幸存者和前线组织主导。文章的结论是资金本身不是终点，但直接、长期的基层资源可能成为扩大行动的催化剂。",
+        "reason": [
+          "全球健康、性别平等和慈善资金是社会议题的复合型考点。",
+          "结构从基金事实转向资金缺口，再回到基层行动者的解决方案。",
+          "可训练 funding decline、frontline、fragile 和 catalytic 等抽象词。",
+          "题目可考数字证据、作者态度以及为什么强调 survivor-led work。",
+          "适合写“国际目标需要地方组织和稳定资源落实”的因果论证。"
+        ],
+        "vocabulary": [
+          { "word": "female genital mutilation", "phonetic": "/ˌfiːmeɪl ˈdʒenɪtl ˌmjuːtɪˈleɪʃən/", "part": "n.", "translation": "女性生殖器切割" },
+          { "word": "philanthropic", "phonetic": "/ˌfɪlənˈθrɒpɪk/", "part": "adj.", "translation": "慈善的" },
+          { "word": "elimination", "phonetic": "/ɪˌlɪmɪˈneɪʃən/", "part": "n.", "translation": "消除" },
+          { "word": "frontline", "phonetic": "/ˈfrʌntlaɪn/", "part": "adj.", "translation": "一线的" },
+          { "word": "survivor", "phonetic": "/səˈvaɪvə/", "part": "n.", "translation": "幸存者" },
+          { "word": "prevalence", "phonetic": "/ˈprevələns/", "part": "n.", "translation": "流行率；普遍程度" },
+          { "word": "fragile", "phonetic": "/ˈfrædʒaɪl/", "part": "adj.", "translation": "脆弱的" },
+          { "word": "catalytic", "phonetic": "/ˌkætəˈlɪtɪk/", "part": "adj.", "translation": "催化性的" }
+        ],
+        "sentences": [
+          {
+            "original": "Frontline activists and leaders have welcomed an unprecedented fund.",
+            "analysis": [
+              "主干是 activists and leaders have welcomed a fund。",
+              "Frontline 置于名词前，限定这些行动者来自一线社区。",
+              "现在完成时把基金发布与当前反应连接起来。",
+              "unprecedented 表示规模或性质前所未有，带有评价色彩。"
+            ],
+            "translation": "一线行动者和领导者欢迎这项前所未有的基金。"
+          },
+          {
+            "original": "Progress is not on track as funding declines and legal protections are challenged.",
+            "analysis": [
+              "主干是 progress is not on track，表达偏离目标的判断。",
+              "as 引导背景原因，同时连接 funding declines 与 protections are challenged。",
+              "两个并列分句呈现资金和法律两重压力。",
+              "被动语态 are challenged 突出法律保护所承受的外部挑战。"
+            ],
+            "translation": "随着资金减少、法律保护受到挑战，进展没有按计划推进。"
+          },
+          {
+            "original": "Lasting change must be led by the frontline.",
+            "analysis": [
+              "主干是 change must be led，情态动词表达必要性。",
+              "被动语态把 lasting change 置于主语位置，突出结果。",
+              "by the frontline 指明行动主体，而不是抽象地说“改变发生”。",
+              "该句可直接迁移到关于地方参与和政策执行的写作。"
+            ],
+            "translation": "持久的改变必须由一线群体领导。"
+          }
+        ]
+      },
+      {
+        "title": "Iran's collapsing economy is unraveling livelihoods and putting lives on hold",
+        "source": "NPR",
+        "published": "2026-09-11",
+        "url": "https://www.npr.org/2026/09/11/g-s1-142935/iran-us-war-jobs-economy",
+        "readingTime": "8",
+        "topic": "经济 / 社会",
+        "summary": "NPR 通过德黑兰工程师和材料工程师的经历，报道战争与制裁如何冲击伊朗就业、运输和家庭计划。文章先以一个本想靠网约车应急的工程师切入，再用通胀、燃油和房租上涨以及求职网站简历提交量增加等信息扩展到整体经济，随后解释网络限制、供应链中断和霍尔木兹海峡运输受阻如何让企业失去订单，最后回到个人只能依靠家庭储蓄或亲属维持生活的处境。文章的核心是宏观冲突通过就业和日常成本传导，令普通人的未来计划被迫暂停。",
+        "reason": [
+          "战争对就业、通胀和家庭生活的外溢影响是经济社会类重点主题。",
+          "文章采用人物故事—统计背景—机制解释—人物回收的倒金字塔叙事。",
+          "可训练 livelihood、unemployment、disruption 和 supply chain 等词汇。",
+          "题目可考个案为何能代表整体趋势、经济冲击的传导链和作者证据来源。",
+          "适合写“宏观政策成本最终由普通家庭承担”的论证。"
+        ],
+        "vocabulary": [
+          { "word": "livelihood", "phonetic": "/ˈlaɪvlihʊd/", "part": "n.", "translation": "生计" },
+          { "word": "inflation", "phonetic": "/ɪnˈfleɪʃən/", "part": "n.", "translation": "通货膨胀" },
+          { "word": "unemployment", "phonetic": "/ˌʌnɪmˈplɔɪmənt/", "part": "n.", "translation": "失业" },
+          { "word": "desperation", "phonetic": "/ˌdespəˈreɪʃən/", "part": "n.", "translation": "绝望；迫切" },
+          { "word": "disruption", "phonetic": "/dɪsˈrʌpʃən/", "part": "n.", "translation": "中断；扰乱" },
+          { "word": "transit", "phonetic": "/ˈtrænzɪt/", "part": "n.", "translation": "运输；通行" },
+          { "word": "blockade", "phonetic": "/blɒˈkeɪd/", "part": "n.", "translation": "封锁" },
+          { "word": "shelve", "phonetic": "/ʃelv/", "part": "v.", "translation": "暂缓；搁置" }
+        ],
+        "sentences": [
+          {
+            "original": "Ordinary Iranians have borne the brunt of a collapsing economy.",
+            "analysis": [
+              "主干是 ordinary Iranians have borne the brunt。",
+              "现在完成时强调冲击从过去延续到现在。",
+              "of a collapsing economy 说明承受打击的来源。",
+              "bear the brunt 是固定搭配，表示承受最严重的部分。"
+            ],
+            "translation": "普通伊朗人承受了经济崩溃的主要冲击。"
+          },
+          {
+            "original": "The desperation for work is palpable.",
+            "analysis": [
+              "主干是 desperation is palpable，系动词连接抽象主语与表语。",
+              "for work 限定 desperation 的具体对象。",
+              "palpable 把难以量化的社会情绪写成明显可感的状态。",
+              "短句在数据段落后强化作者对就业危机的判断。"
+            ],
+            "translation": "人们对工作的绝望显而易见。"
+          },
+          {
+            "original": "With clients unable to place orders, the business collapsed.",
+            "analysis": [
+              "With 复合结构引出伴随条件，clients 是逻辑主语。",
+              "unable to place orders 说明客户无法下单的状态。",
+              "主句 the business collapsed 给出直接结果。",
+              "该句把供应链受阻与企业倒闭压缩成清晰的因果链。"
+            ],
+            "translation": "由于客户无法下订单，这家企业倒闭了。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-11T08:55:00+08:00",
+ "updatedAt": "2026-09-12T09:00:00+08:00",
  "issues": [
+   issue20260912,
    issue20260911,
    issue20260910,
-   todaysIssue,
    issue20260908,
    issue20260906,
    issue20260904,
