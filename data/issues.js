@@ -1425,6 +1425,243 @@ const issue20260910 = {
  }
 };
 
+const issue20260913 = {
+  "date": "2026-09-13",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 10—11 日的官方 AI 更新，并复核今天仍可使用的免费资源；价格、额度、地区和资格未被官方明确的地方均标为官方未说明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 使用指标新增 VS Code Agents 数据（2026-09-11）",
+        "summary": "GitHub 宣布 Copilot usage metrics 现已一般可用地纳入 VS Code Agents 窗口的数据：企业和组织报告可查看每日活跃用户、会话数与用户消息数，用户级报告可查看是否使用该窗口及其会话统计。",
+        "howTo": "在启用 Copilot usage metrics policy 的组织或企业中，由 enterprise owner、billing manager、organization owner 或具备 View Copilot Metrics 权限的角色调用 usage metrics 报告；区分 VS Code Agents 窗口与 editor Agent Mode 的数据。",
+        "impact": "课程团队可比较 agent 窗口的采用率和活跃度，决定培训或代码审查资源投放；学生个人不能把组织统计当作代码质量证明，仍需检查生成结果。",
+        "free": "官方说明该能力面向具备相应组织或企业权限的 Copilot 管理场景；个人计划价格、免费额度、地区和报告保留期官方未说明。",
+        "category": "AI 编程 / 使用分析",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-11",
+          "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics"
+        }
+      },
+      {
+        "event": "Copilot Code Review 自动解决已处理评论并加深 Lite 分析（2026-09-11）",
+        "summary": "GitHub 更新 Copilot code review：后续提交解决原评论后，评论可在重新审查时自动标记为已解决；应用修复建议时会生成更具体的提交信息，Lite effort level 还使用多 agent ensemble 和更多 shell 工具验证代码。",
+        "howTo": "让 Copilot review 分支后推送修复提交，重新审查时检查已自动解决和仍开放的评论；应用建议前审阅 diff 与智能提交信息，并在自己的环境运行测试。",
+        "impact": "学生做课程项目时可减少手动关闭过时评论的整理工作，把注意力放在仍未解决的反馈上；更深的 agent 验证不能替代本地测试、人工审查和依赖安全检查。",
+        "free": "官方公告未说明该更新的独立价格、免费额度、账号资格或地区限制；Copilot code review 的可用性和消耗应以账户当前计划为准。",
+        "category": "AI 编程 / 代码审查",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-11",
+          "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review"
+        }
+      },
+      {
+        "event": "Anthropic 发布 2026 年 9 月威胁情报报告（2026-09-10）",
+        "summary": "Anthropic 报告称其威胁情报团队在过去六个月识别并阻断了一系列使用 Claude 的网络行动，案例涉及疑似国家支持团体、经济犯罪者和政治行动者，并指出 AI 已从问答助手扩展到协调侦察、利用和数据外传的多 agent 工作流。",
+        "howTo": "阅读报告中的趋势和案例，把“模型能做什么”与“攻击者实际如何编排工具”分开记录；做安全实验时只在授权环境使用防守型样例，并保留人工审批和日志。",
+        "impact": "安全、计算机和社会科学学生可用案例练习威胁建模、攻击链拆解和防御优先级排序；报告同时说明案例中的 Claude Haiku、Sonnet、Opus 与安全措施，不能据此推断所有模型或用户都会产生同样结果。",
+        "free": "报告网页可直接阅读；官方未说明阅读需要账号、费用、地区资格或 API 配额，报告本身也不是免费攻击服务。",
+        "category": "AI 安全 / 威胁情报",
+        "source": {
+          "name": "Anthropic Threat Intelligence",
+          "published": "2026-09-10",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude 免费计划",
+        "summary": "Claude 官方定价页列出 Free 计划用于日常问题，并说明所有计划都有按滚动五小时会话窗口重置的使用限制；官方不提供固定消息数，因为限制取决于对话长度、模型和功能。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划进行问答；在 Settings > Usage 查看当前使用情况，达到限制后等待重置，不要把网页免费计划当作 API 额度。",
+        "impact": "学生可用它做资料提纲、语言改写和概念解释的低成本初稿，再自行核对事实和引用；长文或高频实验前应先观察实际限制。",
+        "free": "官方确认 Free 覆盖日常问题，并说明滚动五小时窗口限制；固定消息数、地区资格、是否需要手机号以及 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层",
+        "summary": "Google 官方定价页列出部分 Gemini 模型的 Free tier，并将免费输入/输出 token 与 AI Studio 开发入口分开列示；官方限流文档说明限制按 RPM、TPM 和 RPD 等维度计算，且按项目而非 API key 应用。",
+        "howTo": "在 Google AI Studio 创建或选择项目，查看当前模型的 Free tier 与 active rate limits，再用小批量请求测试；把 RPD 按太平洋时间午夜重置这一官方说明纳入实验记录。",
+        "impact": "学生可先做摘要、分类和 API 原型，按项目监测请求、token 和每日用量，避免把免费层误当作无限吞吐。",
+        "free": "官方确认有免费层，但可用模型、RPM/TPM/RPD 数值会随模型和账户变化；账号资格、地区清单和固定免费额度官方未统一说明。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价与限流",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 说明它是无需本地设置的托管 Jupyter 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适用于机器学习、数据科学和教育。",
+        "howTo": "打开 Colab 新建或导入 notebook，运行 Python；需要时在运行时设置中尝试 GPU 或 TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可直接运行课程代码、清洗数据和做小型模型实验，减少环境配置时间；分享前应移除密钥、个人数据和不必要的输出。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Copilot Student 学生权益",
+        "summary": "GitHub Education Student Developer Pack 说明 verified students 可使用 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "打开 Student Developer Pack，完成学生资格验证并开通 Copilot Student；在编辑器使用补全，在 GitHub 账户中查看 AI Credits 与 chat/agent 的当前可用情况。",
+        "impact": "学生可用补全减少样板代码工作，并把有限 chat/agent 用于解释、测试和学习；生成代码仍需测试、审查许可证并人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，另有 AI Credits，chat 和 agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-Next-80B-A3B-Instruct 开放权重",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供公开下载入口，说明该模型总参数 80B、激活参数 3B，原生上下文长度 262,144 tokens，并支持 instruct（非 thinking）模式。",
+        "howTo": "打开官方模型卡，按 Quickstart 使用 Transformers、vLLM、Ollama 或其他列出的环境加载模型；先用短输入测试本地显存、速度和上下文。",
+        "impact": "有 GPU 或云端算力的学生可研究 MoE、长上下文和本地推理，不必先购买 API；下载权重不等于免费获得算力。",
+        "free": "官方提供公开模型权重下载入口；本地显卡、存储和网络成本由使用者承担，免费 API 配额、账号资格、地区和固定许可期限官方未说明。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 12 日新发布的 BBC 与 The Guardian 文章，避开全部既有 URL 和标题，覆盖气候与政治经济；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "France lifts alcohol content limit on champagne after record heatwaves",
+        "source": "BBC",
+        "published": "2026-09-12",
+        "url": "https://www.bbc.com/news/articles/cvgydvrlep1o",
+        "readingTime": "7",
+        "topic": "环境 / 经济",
+        "summary": "文章从法国经历创纪录热浪后调整香槟酒精含量上限写起，说明气候条件已经改变葡萄成熟和酿酒决策。报道先交代监管变化，再引用生产者对地中海气候向北移动的判断，随后把一次行业规则调整放入更长的气候周期和农业适应背景中。文章的重点不是把单一年份等同于永久趋势，而是展示极端高温如何通过原料、生产标准和市场产品传导到传统产业。",
+        "reason": [
+          "气候变化如何影响农业、监管与产业适应，是环境经济类常见考研主题。",
+          "文章按规则变化—生产者证言—气候背景推进，适合识别事实与推断的边界。",
+          "可积累 alcohol content、limit、record heatwaves、producer 等新闻和产业词汇。",
+          "题目可考为何修改上限、引语在论证中的作用以及作者是否宣称每年都会重演。",
+          "适合写作中论证气候适应需要行业规则与长期监测配合。"
+        ],
+        "vocabulary": [
+          { "word": "lift a limit", "phonetic": "/lɪft ə ˈlɪmɪt/", "part": "v.", "translation": "取消或放宽限制" },
+          { "word": "alcohol content", "phonetic": "/ˈælkəhɒl ˌkɒntent/", "part": "n.", "translation": "酒精含量" },
+          { "word": "champagne", "phonetic": "/ʃæmˈpeɪn/", "part": "n.", "translation": "香槟" },
+          { "word": "record heatwave", "phonetic": "/ˈrekɔːd ˈhiːtweɪv/", "part": "n.", "translation": "创纪录热浪" },
+          { "word": "producer", "phonetic": "/prəˈdjuːsə/", "part": "n.", "translation": "生产者；制片人" },
+          { "word": "Mediterranean climate", "phonetic": "/ˌmedɪtəˈreɪniən ˈklaɪmət/", "part": "n.", "translation": "地中海气候" },
+          { "word": "cycle", "phonetic": "/ˈsaɪkl/", "part": "n.", "translation": "周期" },
+          { "word": "unlikely", "phonetic": "/ʌnˈlaɪkli/", "part": "adj.", "translation": "不太可能的" }
+        ],
+        "sentences": [
+          {
+            "original": "France lifts alcohol content limit on champagne after record heatwaves.",
+            "analysis": [
+              "主干是 France lifts limit，after 短语补充时间和背景。",
+              "alcohol content 作前置定语，限定被放宽的 limit。",
+              "一般现在时是新闻标题常用的压缩时态。",
+              "标题把政策动作与极端天气直接并置，暗示因果线索。"
+            ],
+            "translation": "创纪录热浪过后，法国放宽了香槟酒精含量上限。"
+          },
+          {
+            "original": "The Mediterranean climate is moving north.",
+            "analysis": [
+              "主干是 climate is moving，进行时呈现正在发生的变化。",
+              "Mediterranean 作定语，明确气候类型。",
+              "north 是方向副词，说明变化的空间方向。",
+              "短句来自生产者引语，承担把个案连接到气候趋势的作用。"
+            ],
+            "translation": "地中海气候正在向北移动。"
+          },
+          {
+            "original": "It's unlikely to be every year, but it will happen again.",
+            "analysis": [
+              "前半句是 It is unlikely to...，it 指前文所述现象。",
+              "to be every year 表示对发生频率的判断。",
+              "but 连接限制性判断与未来预测，形成让步转折。",
+              "will happen again 保留不确定性中的重复可能，避免绝对化。"
+            ],
+            "translation": "这不太可能每年发生，但还会再次出现。"
+          }
+        ]
+      },
+      {
+        "title": "Donations of £72m make Reform’s prospects both rosier and riskier",
+        "source": "The Guardian",
+        "published": "2026-09-12",
+        "url": "https://www.theguardian.com/politics/2026/sep/12/reform-uk-billionaire-donations-analysis",
+        "readingTime": "8",
+        "topic": "政治经济 / 商业",
+        "summary": "文章分析英国 Reform UK 获得两笔各 3600 万英镑捐款后的双重效果。开头承认大额资金能扩大选举机器，随后用与 2024 年主要政党支出的比较说明资源优势，再转向两个风险：巨额捐款会强化政党代表富有捐助者而非普通人的批评，也会把领导人的财务和捐款合规问题重新置于聚光灯下。结尾回到英国单席多数制和民调，指出钱可以购买广告，却未必能消除“脱离选民”和不可信的观感。",
+        "reason": [
+          "政党筹资、政治传播和选举制度构成商业与公共政策交叉主题。",
+          "文章采用资金事实—潜在收益—两项风险—制度与民调结论的分析结构。",
+          "可训练 war chest、windfall、electoral machine、scrutiny 等抽象词。",
+          "题目可考数字比较、作者为何使用 both...and... 以及资金为何可能带来反效果。",
+          "适合写作中论证资源增加并不自动等于公众信任增加。"
+        ],
+        "vocabulary": [
+          { "word": "war chest", "phonetic": "/ˈwɔː tʃest/", "part": "n.", "translation": "竞选资金储备" },
+          { "word": "windfall", "phonetic": "/ˈwɪndfɔːl/", "part": "n.", "translation": "意外之财；突然获得的巨款" },
+          { "word": "electoral machine", "phonetic": "/ɪˈlektərəl məˈʃiːn/", "part": "n.", "translation": "选举机器；竞选组织" },
+          { "word": "unprecedented", "phonetic": "/ʌnˈpresɪdentɪd/", "part": "adj.", "translation": "前所未有的" },
+          { "word": "downside", "phonetic": "/ˈdaʊnsaɪd/", "part": "n.", "translation": "不利面；缺点" },
+          { "word": "disconnected", "phonetic": "/ˌdɪskəˈnektɪd/", "part": "adj.", "translation": "脱离联系的" },
+          { "word": "scrutiny", "phonetic": "/ˈskruːtəni/", "part": "n.", "translation": "仔细审查；关注" },
+          { "word": "first-past-the-post", "phonetic": "/ˌfɜːst pɑːst ðə ˈpəʊst/", "part": "adj.", "translation": "得票最多者当选的" }
+        ],
+        "sentences": [
+          {
+            "original": "All things being equal, pretty much any political strategist would welcome a £72m war chest.",
+            "analysis": [
+              "All things being equal 是独立分词结构，表示在其他条件相同的假设下。",
+              "主干是 any strategist would welcome a war chest。",
+              "would welcome 表示假设性判断，而非已经发生的动作。",
+              "pretty much any 加强范围，war chest 是政治资金隐喻。"
+            ],
+            "translation": "在其他条件相同的情况下，几乎任何政治策略师都会欢迎一笔7200万英镑的竞选资金。"
+          },
+          {
+            "original": "But all things are not equal, and with such a huge amount comes risk.",
+            "analysis": [
+              "But 转折否定前句的理想化前提。",
+              "with such a huge amount 是伴随背景的介词短语。",
+              "comes risk 是倒装结构，把 risk 放到句末形成强调。",
+              "句子建立“资源增加同时带来风险”的核心论点。"
+            ],
+            "translation": "但情况并非完全相同，如此巨额资金也会带来风险。"
+          },
+          {
+            "original": "Optimistic Reform officials may argue privately that £72m could buy enough advertising to blitz any negative coverage.",
+            "analysis": [
+              "主干是 officials may argue that...，that 从句补充其判断内容。",
+              "may argue 表示作者转述一种可能的立场，并不等于作者认同。",
+              "could buy enough advertising 是情态动词加结果，enough 表示数量达到目的。",
+              "to blitz any negative coverage 是不定式目的结构，说明广告投放意图。"
+            ],
+            "translation": "乐观的 Reform 官员可能会私下认为，7200万英镑足以购买广告来压倒所有负面报道。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260912 = {
   "date": "2026-09-12",
   "status": "ready",
@@ -1708,9 +1945,9 @@ const issue20260912 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-12T09:00:00+08:00",
+ "updatedAt": "2026-09-13T09:00:00+08:00",
  "issues": [
-   issue20260912,
+   issue20260913,
    issue20260911,
    issue20260910,
    issue20260908,
