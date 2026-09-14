@@ -1,3 +1,227 @@
+const issue20260914 = {
+  "date": "2026-09-14",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 10 日官方产品更新，并把可用范围、价格和配额按来源明确区分；免费资源均附官方入口。",
+    "updates": [
+      {
+        "event": "Gemini app 发布 Windows 桌面版（2026-09-10）",
+        "summary": "Google 官方公告称 Gemini app 现已登陆 Windows，可用 Alt + Space 快捷键呼出，并在独立工作区调用 Gemini Spark、Google 应用信息以及 Nano Banana 和 Gemini Omni 的图像/视频能力。",
+        "howTo": "在 Windows 10 或 11 电脑打开官方桌面下载入口，安装 Gemini app；按 Alt + Space 呼出，在工作区选择所需功能，再检查生成内容和 Google 应用权限。",
+        "impact": "学生可在写作、做演示或查资料时不离开当前窗口，快速改标题、整理项目摘要或制作视觉素材；重要事实和引用仍需回到原始资料核对。",
+        "free": "官方说明 Windows 10/11 全球可用并提供下载入口；公告未说明账号资格、价格、地区例外、图像/视频配额或各模型的免费额度。",
+        "category": "AI 助手 / 桌面应用",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-10",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/"
+        }
+      },
+      {
+        "event": "OpenAI 发布 Agents API（2026-09-10）",
+        "summary": "OpenAI 官方文档将 Agents API 定义为由 OpenAI 管理 Codex harness 的托管运行方式，适合长时间任务，并提供自动上下文压缩、多 agent 编排、程序化工具调用和 MCP 服务器支持。",
+        "howTo": "阅读 OpenAI Agents API 快速入门，选择托管 Agents API、由应用控制的 Agents SDK 或 Responses API；先在小型、可审计任务中配置工具和审批，再记录会话状态与用量。",
+        "impact": "有编程基础的学生可把资料整理、代码检查等多步骤任务拆成可复用 agent 流程；涉及文件、网络或外部系统时应限制工具权限并保留人工确认。",
+        "free": "官方文档说明运行环境和能力，但未说明 Agents API 的统一价格、免费额度、账号资格、地区范围或具体模型配额。",
+        "category": "AI agent / 开发者 API",
+        "source": {
+          "name": "OpenAI 官方公告",
+          "published": "2026-09-10",
+          "url": "https://openai.com/index/introducing-the-agents-api/"
+        }
+      },
+      {
+        "event": "GitHub Copilot 周更新加入 Jira、HydraFusion 与 VS Code Agent 自动化（2026-09-10）",
+        "summary": "GitHub 官方周更新称 Copilot app 可把 Jira issue 带入共享画布，Copilot CLI 的 Project HydraFusion 进入 experimental，可在本地、云端和 compound models 间进行语义路由；VS Code 还预览了定时 agent 任务和实验性语音模式。",
+        "howTo": "更新 Copilot app，在画布中连接 Jira issue；在 Copilot CLI 的模型选择器中启用 /experimental 的 HydraFusion；在 VS Code 1.137 中打开 Agents 窗口，按需试用定时任务并审阅每次改动。",
+        "impact": "学生团队可把 issue、调查、实现和 PR 准备串起来，也可为重复性检查设置定时任务；实验性功能不应直接接触未备份的课程仓库或敏感数据。",
+        "free": "官方更新列出功能入口和 public preview/experimental 状态，但未说明统一价格、免费额度、账号资格、地区范围或 HydraFusion 的具体模型配额。",
+        "category": "AI 编程 / agent 工作流",
+        "source": {
+          "name": "GitHub 官方更新日志",
+          "published": "2026-09-10",
+          "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页列出 Free 计划用于日常问题，并说明所有计划都受滚动五小时会话窗口的使用限制影响。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划进行问答；在 Settings > Usage 查看实际使用情况，达到限制后等待窗口重置。",
+        "impact": "学生可用它做提纲、语言改写和概念解释的初稿，再自行核对事实、引用和计算；不要把网页免费计划当作 API 免费额度。",
+        "free": "官方确认 Free 计划和滚动五小时限制；固定消息数、地区资格、是否需要手机号及 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Gemini API Free tier 与 Google AI Studio",
+        "summary": "Google Gemini API 官方定价页列出部分模型的 Free tier，并提供免费输入/输出 token 和 AI Studio 开发入口；实际可用模型和限流需以当前页面为准。",
+        "howTo": "登录 Google AI Studio，选择当前 Free tier 模型测试提示词或 API 原型；开始实验前查看该模型的 RPM、TPM、RPD 和数据使用说明。",
+        "impact": "学生可先做摘要、分类和课程 API 原型，记录请求量和 token 用量，避免把免费层误当作无限吞吐。",
+        "free": "官方确认存在免费层；统一固定额度、账号资格、地区清单和重置周期官方未说明，限流数值按模型和项目页面为准。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适用于机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中尝试 GPU 或 TPU，并把 notebook 保存到 Drive 或从 GitHub 加载。",
+        "impact": "学生可以直接运行课程代码、清洗数据和做小型模型实验，减少环境配置时间；分享前删除密钥、个人数据和不必要的输出。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Copilot Student 学生权益",
+        "summary": "GitHub Education Student Developer Pack 说明 verified students 可使用 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "打开 Student Developer Pack，完成学生资格验证并开通 Copilot Student；在编辑器使用补全，在 GitHub 账户中查看 AI Credits 与 chat/agent 的当前可用情况。",
+        "impact": "学生可用补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；生成代码仍需测试、许可证审查和人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，chat 和 agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "选取 9 月 13 日可直接阅读的 The Guardian 文章，避开既有 URL 和标题，覆盖 AI 的社会治理与经济结构；按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "‘Too little, too late’: critics perplexed and suspicious of AI leaders’ call for a slowdown",
+        "source": "The Guardian",
+        "published": "2026-09-13",
+        "url": "https://www.theguardian.com/technology/2026/sep/13/too-little-too-late-critics-perplexed-and-suspicious-of-ai-leaders-call-for-a-slowdown",
+        "readingTime": "9",
+        "topic": "科技趋势 / 公共政策",
+        "summary": "文章从一周内 AI 舆论的急转写起：先是前沿模型被当作生活工具推广，随后研究者对失控风险的警告、Anthropic 对模型滥用的披露和政治人物要求刹车，使公众情绪迅速转向。报道接着概括 Anthropic CEO 提出的三点方案：让第三方持续评估、建立共同安全标准并限制无约束的进展速度、让民主国家与中国等国家协调危险用途。文章随后呈现 Russell 等专家对“先放慢再补安全”的反驳，以及政府、产业和独立研究者对方案动机与执行性的怀疑，结尾强调“减速”只有在安全要求、监管独立性和国际协调都更具体时才有说服力。",
+        "reason": [
+          "AI 治理、风险沟通和国际协调属于科技趋势与公共政策的复合型考点。",
+          "文章按舆论转向—三点方案—反对意见—执行难题推进，适合画论证链。",
+          "可积累 existential threat、precautionary、compliance、moratorium 等抽象词。",
+          "题目可考三点方案对应关系、引语的立场功能以及作者为何使用 sceptics。",
+          "写作可借鉴“提出方案后必须说明独立监督、执行条件和反方质疑”的结构。"
+        ],
+        "vocabulary": [
+          { "word": "existential threat", "phonetic": "/ˌeɡzɪˈstenʃəl θret/", "part": "n.", "translation": "生存性威胁" },
+          { "word": "whistleblower", "phonetic": "/ˈwɪsəlbləʊə/", "part": "n.", "translation": "吹哨人；举报者" },
+          { "word": "precautionary", "phonetic": "/prɪˈkɔːʃənəri/", "part": "adj.", "translation": "预防性的" },
+          { "word": "compliance", "phonetic": "/kəmˈplaɪəns/", "part": "n.", "translation": "遵守；合规" },
+          { "word": "frontier", "phonetic": "/ˈfrʌntɪə/", "part": "adj./n.", "translation": "前沿的；前沿" },
+          { "word": "moratorium", "phonetic": "/ˌmɒrəˈtɔːriəm/", "part": "n.", "translation": "暂停；暂缓令" },
+          { "word": "misaligned", "phonetic": "/ˌmɪsəˈlaɪnd/", "part": "adj.", "translation": "与目标不一致的" },
+          { "word": "coordinate", "phonetic": "/kəʊˈɔːdɪneɪt/", "part": "v.", "translation": "协调" }
+        ],
+        "sentences": [
+          {
+            "original": "The safety debate should come with a health warning.",
+            "analysis": [
+              "主干是 the debate should come with a warning，情态动词表达建议。",
+              "safety debate 是名词短语，讨论对象被压缩为定语 safety。",
+              "come with 在此表示“伴随”，不是字面上的到来。",
+              "health warning 是隐喻，提示后文会出现意外副作用或风险。"
+            ],
+            "translation": "这场安全争论应该附带一则健康警告。"
+          },
+          {
+            "original": "In signs that a coordinated slowdown might not be just talk, some ideas quickly attracted backing.",
+            "analysis": [
+              "句首 In signs that... 是介词短语，提供判断依据。",
+              "that 从句修饰 signs，说明“迹象”的具体内容。",
+              "might not be just talk 使用情态动词保留不确定性。",
+              "主句 some ideas attracted backing，把政策观点拟人化并突出支持扩大。"
+            ],
+            "translation": "有迹象表明，协调减速可能不只是口头说说，一些想法很快获得了支持。"
+          },
+          {
+            "original": "We set the safety requirements and further progress occurs only when they are met.",
+            "analysis": [
+              "and 连接两个并列分句，形成先定标准、后许进展的逻辑。",
+              "only when 引导条件从句，only 将条件限制到必要程度。",
+              "they 指代前面的 safety requirements，避免重复。",
+              "被动结构 are met 突出标准是否达成，而非谁达成标准。"
+            ],
+            "translation": "我们先设定安全要求，只有满足这些要求后才继续推进。"
+          }
+        ]
+      },
+      {
+        "title": "AI will transform capitalism – but how?",
+        "source": "The Guardian",
+        "published": "2026-09-13",
+        "url": "https://www.theguardian.com/technology/2026/sep/13/ai-will-transform-capitalism-but-how",
+        "readingTime": "10",
+        "topic": "经济 / 科技趋势",
+        "summary": "文章以 Aristotle 和 Marx 对自动化的想象开篇，把当代 AI 放入更长的思想史。作者随后比较美国“集中算力、通过网络提供服务”的路径与中国开放模型、允许本地运行的反制路径，认为两者都可能服务于新的全球支配竞争。论证核心转向劳动和资本：语言模型正在承担知识工作，既可能消灭任务和岗位，也可能冲击企业家、创新者和利润之间的联系。结尾不把 AI 自动等同于阶级平等，而是提出公共服务与收入、合作和非营利组织，以及面向公共需要、节省能源的 AI 作为可能的制度选择。",
+        "reason": [
+          "自动化、劳动结构和技术政策是经济与科技趋势类常见考研主题。",
+          "文章采用思想史引入—中美路径比较—就业与资本冲击—规范性方案的递进结构。",
+          "可积累 inaugurate、general-purpose technology、exploitative、co-operative 等高频抽象表达。",
+          "题目可考作者为何引用 Marx、两种 AI 路径差异以及结尾方案的性质。",
+          "写作可借鉴先区分事实判断与价值判断，再提出制度回应的论证方式。"
+        ],
+        "vocabulary": [
+          { "word": "inaugurate", "phonetic": "/ɪˈnɔːɡjureɪt/", "part": "v.", "translation": "开创；开启" },
+          { "word": "classless", "phonetic": "/ˈklɑːsləs/", "part": "adj.", "translation": "无阶级的" },
+          { "word": "general-purpose technology", "phonetic": "/ˌdʒenərəl ˈpɜːpəs tekˈnɒlədʒi/", "part": "n.", "translation": "通用技术" },
+          { "word": "supremacy", "phonetic": "/suːˈpreməsi/", "part": "n.", "translation": "至高地位；霸权" },
+          { "word": "monopoly", "phonetic": "/məˈnɒpəli/", "part": "n.", "translation": "垄断" },
+          { "word": "entrepreneur", "phonetic": "/ˌɒntrəprəˈnɜː/", "part": "n.", "translation": "企业家" },
+          { "word": "emulate", "phonetic": "/ˈemjuleɪt/", "part": "v.", "translation": "仿效；模拟" },
+          { "word": "co-operative", "phonetic": "/kəʊˈɒpərətɪv/", "part": "adj.", "translation": "合作的" }
+        ],
+        "sentences": [
+          {
+            "original": "The dream that automation could inaugurate a classless society is also present in Marx.",
+            "analysis": [
+              "主干是 the dream is present in Marx，that 从句同位说明 dream 内容。",
+              "could inaugurate 表示可能性，语气不是断言。",
+              "a classless society 是不定式宾语，说明自动化被赋予的结果。",
+              "also 把 Marx 与前文 Aristotle 并列，构成思想史证据链。"
+            ],
+            "translation": "自动化能够开启无阶级社会的梦想，在马克思的思想中也存在。"
+          },
+          {
+            "original": "Few can say with confidence that the jobs destroyed will be replaced.",
+            "analysis": [
+              "主干是 Few can say，with confidence 是方式状语。",
+              "that 从句作 say 的宾语，表达对未来的不确定判断。",
+              "the jobs destroyed 中过去分词短语后置修饰 jobs。",
+              "will be replaced 是一般将来时被动，焦点在岗位是否被替代。"
+            ],
+            "translation": "几乎没有人能有把握地说，被消灭的工作会得到替代。"
+          },
+          {
+            "original": "So the rational question is not how Britain builds a sovereign AI.",
+            "analysis": [
+              "So 引出由前文推导出的结论，体现因果推进。",
+              "主干是 the question is not...，not 否定一个问题框架。",
+              "how Britain builds... 是表语从句，说明被否定的具体问题。",
+              "sovereign AI 是名词短语，体现国家自主技术的政策语境。"
+            ],
+            "translation": "因此，真正理性的问题不是英国如何打造自主 AI。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260908 = {
   "date": "2026-09-08",
   "status": "ready",
@@ -1945,14 +2169,14 @@ const issue20260912 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-13T09:00:00+08:00",
+ "updatedAt": "2026-09-14T09:00:00+08:00",
  "issues": [
+   issue20260914,
    issue20260913,
    issue20260911,
    issue20260910,
    issue20260908,
    issue20260906,
-   issue20260904,
-   issue20260903
+   issue20260904
  ]
 };
