@@ -2168,15 +2168,298 @@ const issue20260912 = {
   }
 };
 
+const issue20260915 = {
+  "date": "2026-09-15",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 14 日 GitHub 官方更新，并复核 9 月 15 日仍可用的免费资源；所有价格、额度和地区说明均按官方来源写明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot auto model selection 支持 cost/quality 分层（2026-09-14）",
+        "summary": "GitHub 官方 changelog 说明 Copilot auto model selection 现提供 efficiency、balance 和 intelligence 三个档位，可按每次 prompt 在成本、质量和响应时间之间取舍；系统会根据任务类型自动选择最合适模型。",
+        "howTo": "在 VS Code、Copilot CLI 或 GitHub Copilot app 中打开模型选择器，选择 Efficiency / Balance / Intelligence，根据任务性质切换；简单任务可选 Efficiency，复杂规划任务可选 Intelligence，再检查生成结果与成本变化。",
+        "impact": "学生可把简单代码补全和重复性任务控制在更低成本，同时把复杂分析和代码结构任务放到更高 intelligence 层；但仍需自行验证测试、依赖和代码安全。",
+        "free": "官方说明该功能当前在 VS Code、CLI 和 app 中逐步推出，且使用量按实际选择的模型计费；付费订阅用户继续享受 10% 折扣。官方未说明所有计划的独立免费额度、地区差异和是否有固定免费量，因此应以当前账户计划与模型页面为准。",
+        "category": "AI 编程 / 模型选择",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-14",
+          "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection"
+        }
+      },
+      {
+        "event": "GitHub AI Scan for pull request APIs 进入 public preview（2026-09-10）",
+        "summary": "GitHub 官方 changelog 说明 AI Scan for pull request 现在可通过组织和仓库级 REST API 批量管理启用状态，方便团队在选定仓库启用 AI powered security detections，而无需逐个在 UI 中配置。",
+        "howTo": "在 GitHub.com 或组织管理页面使用 /orgs/{org}/code-scanning/ai-scan 与 /repos/{owner}/{repo}/code-scanning/ai-scan 接口读取或更新状态；先在组织级启用，再按仓库开启或关闭，确保组织级禁用不会被单仓库设置覆盖。",
+        "impact": "学生团队在课程项目或科研仓库中可批量开关 security 检测，减少手动配置工作；这不应替代手工审查、依赖扫描和安全评估。",
+        "free": "官方说明这是 GitHub Advanced Security 客户的 public preview，并且 GitHub Enterprise Server 不支持此版本。官方未说明该能力的统一价格、个人或学生免费额度、地区资格和自由使用细则，因此需以 GitHub Advanced Security 计划与当前组织设置为准。",
+        "category": "AI 安全 / 代码扫描",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-10",
+          "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview"
+        }
+      },
+      {
+        "event": "GitHub 仓库 Pull Requests 列表页刷新进入 public preview（2026-09-10）",
+        "summary": "GitHub 官方更新称仓库级 Pull requests 列表页实现刷新，加入更强筛选和搜索、收起侧边栏、紧凑模式以及读未读状态和状态检查计数等信息摘要，使团队更容易管理 review 流程。",
+        "howTo": "访问任意仓库的 Pull requests 页面，点击页面顶部 Preview badge，试用新筛选器和高级搜索；按 “Authored by me” 或 “Involves me” 快速筛选，再切回 classic experience 以对比。",
+        "impact": "学生在团队作业、开源协作和期末项目中更容易找到需要 review 的请求并跟踪状态；新界面仍有已知限制，例如未显示 milestone、无法 bulk update、部分 label emoji 可能异常，因此仍需按需核对细节。",
+        "free": "官方说明这是 all GitHub users 的 public preview，未列出单独价格或计划门槛；项目中未说明学生、个人或企业账户的额外资格和地区限制，因此应按当前 GitHub 账号权限和预览状态判断。",
+        "category": "AI 编程 / 代码协作",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-10",
+          "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划适用于日常提问，并指出所有计划都受 rolling five-hour session window 影响；页面明确说明没有固定消息数，实际可用量取决于会话长度、模型和功能。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前会话窗口和使用状态，达到限制后等待重置或升级方案。",
+        "impact": "学生可用来梳理提纲、概念解释与语言润色，再自行核对事实、引用和计算；不要把 Free 计划和 API 免费额度混为一谈。",
+        "free": "官方确认 Free 计划适用于日常问题，并说明 rolling five-hour session 限制；固定消息数、是否需要手机号和地区资格官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google AI Studio 官方定价页明确列出 Gemini API 的 Free tier，并说明免费输入/输出 token 与 AI Studio 入口可同时使用；页面同时区分不同模型的 Free tier 与付费 tier。",
+        "howTo": "在 Google AI Studio 创建项目，选择当前支持的 Free tier 模型并发起小规模实验；在模型页面查看 RPM、TPM、RPD 等 limit，并将这些值纳入实验记录。",
+        "impact": "学生可先做摘要、归类、课堂 API 原型和小实验，并记录请求次数与 token 用量；不要把 free tier 当作无限吞吐或长期稳定生产环境。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需设置的托管 Jupyter Notebook 服务，并提供免费计算资源，包括 GPU 与 TPU，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab 新建或导入 notebook，运行 Python；必要时在运行时设置中切换 GPU/TPU，并将 notebook 保存到 Drive 或从 GitHub 导入。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；但共享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
+        "free": "官方确认免费；资源不保证且使用上限会波动，GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Copilot Student 学生权益",
+        "summary": "GitHub Education Student Developer Pack 明确说明 verified students 可获得 Copilot Student，包含 unlimited code completions、GitHub AI Credits 以及 limited chat 和 agent usage，模型仅通过 auto model selection 提供。",
+        "howTo": "打开 GitHub Education Pack，完成学生资格验证并启用 Copilot Student；在支持的编辑器中使用补全，查看 GitHub 账户中的 AI Credits 和 chat/agent 可用情况。",
+        "impact": "学生可通过补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；生成代码仍需本地测试、许可证审核和人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 和 chat/agent 仅有限提供，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 13—14 日可直接阅读的 BBC/NPR 文章，避开全部既有 URL 和标题，覆盖能源成本、教育政策与家庭支出；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "Petrol and diesel prices hit highest since 2022",
+        "source": "BBC",
+        "published": "2026-09-14",
+        "url": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o",
+        "readingTime": "8",
+        "topic": "经济 / 能源",
+        "summary": "文章从国际油价波动入手，解释原油、炼油能力和需求如何共同推高汽油和柴油价格，并指出全球冲突和和平前景交替影响油价走势。文章随后把这个宏观因素落到“加油站”这一日常场景，说明每 10 美元/桶的油价涨幅大致会让汽油价格上升约 7p/L，强调价格变化如何通过家庭通勤和物流链同时传导到日常消费。结论是，油价拉升并非孤立事件，而是地缘风险、供应链和市场预期共同作用的结果。",
+        "reason": [
+          "能源价格、通胀和市场传导属于经济学与社会议题的经典命题。",
+          "文章从原油价格—炼油—加油站的链条展开，思路清晰，适合梳理因果结构。",
+          "可积累 crude oil、refining capacity、volatility、benchmark 等经济与能源词汇。",
+          "题目可考宏观因素如何传导到个人消费，以及作者如何使用数据说明影响。",
+          "写作上可借鉴“宏观变量 → 市场机制 → 个人体验”的论证顺序。"
+        ],
+        "vocabulary": [
+          { "word": "crude oil", "phonetic": "/kruːd ˈɔɪl/", "part": "n.", "translation": "原油" },
+          { "word": "petrol", "phonetic": "/ˈpetrəl/", "part": "n.", "translation": "汽油" },
+          { "word": "diesel", "phonetic": "/ˈdiːzəl/", "part": "n.", "translation": "柴油" },
+          { "word": "refining capacity", "phonetic": "/rɪˈfaɪnɪŋ kəˈpæsəti/", "part": "n.", "translation": "炼油能力" },
+          { "word": "volatile", "phonetic": "/ˈvɒlətaɪl/", "part": "adj.", "translation": "波动的；不稳定的" },
+          { "word": "benchmark", "phonetic": "/ˈbentʃmɑːk/", "part": "n.", "translation": "基准" },
+          { "word": "escalation", "phonetic": "/ˌeskəˈleɪʃən/", "part": "n.", "translation": "升级；加剧" },
+          { "word": "hostilities", "phonetic": "/hɒˈstɪlɪtiz/", "part": "n.", "translation": "敌对行动；冲突" },
+          { "word": "pump price", "phonetic": "/pʌmp praɪs/", "part": "n.", "translation": "加油站价格" }
+        ],
+        "sentences": [
+          {
+            "original": "Crude oil is a key ingredient in petrol and diesel, which means that higher wholesale costs make filling up a car more expensive.",
+            "analysis": [
+              "主干是 crude oil is a key ingredient, 后面 which means 引导非限定性定语从句，解释结果。",
+              "key ingredient 体现定语缩减的新闻写法，信息密度高。",
+              "higher wholesale costs 是原因，make filling up a car more expensive 是直接后果。",
+              "该句为全文建立了能源价格传导的核心逻辑。"
+            ],
+            "translation": "原油是汽油和柴油的关键成分，这意味着更高的批发成本会让给汽车加油变得更贵。"
+          },
+          {
+            "original": "Analysts say every $10 per barrel increase in the oil price pushes up pump prices by roughly 7p a litre.",
+            "analysis": [
+              "主干是 analysts say，后接宾语从句说明定量关系。",
+              "every $10 per barrel increase 是具体量化指标，利于读者形成感知。",
+              "pushes up pump prices by roughly 7p a litre 是结果表达，清晰说明传导幅度。",
+              "该句适合作为数据支撑段落的典型例子。"
+            ],
+            "translation": "分析人士表示，原油价格每上涨 10 美元/桶，便会使加油站价格大约上升每升 7 便士。"
+          },
+          {
+            "original": "Generally speaking, news of further conflict drives the price up while hopes of an end to the war pushes the price down.",
+            "analysis": [
+              "Generally speaking 为话语标记句，提示作者转入概括性判断。",
+              "while 连接两个并列分句，形成冲突与和平预期的反向作用。",
+              "drives ... up / pushes ... down 是强对比词组，结构简洁。",
+              "该句总结了地缘风险如何改变市场预期。"
+            ],
+            "translation": "一般来说，冲突升级的消息会推高油价，而结束战争的希望则会压低油价。"
+          }
+        ]
+      },
+      {
+        "title": "Deep-fried food banned under new school dinner rules in England",
+        "source": "BBC",
+        "published": "2026-09-14",
+        "url": "https://www.bbc.co.uk/news/articles/cy4zrepw78eo",
+        "readingTime": "7",
+        "topic": "教育 / 健康",
+        "summary": "文章报道英国教育部拟定新校餐规则，要求学校减少高脂高糖食品，并把深炸薯条改为烤制，同时要求每周至少一次的面食中含有 50% 全麦成分，并增加高纤维面包。报道指出这一措施的目的在于改善学生营养、支持课堂专注力和整体健康。作者也纳入校长和教师代表的反馈，说明政策的实施需要更充足的餐饮设施和培训资源，而不是仅靠简单命令。文章最终把规则落到学校日常经营与财政安排上，体现政策改革既要有标准又要有执行支撑。",
+        "reason": [
+          "教育、健康与政策执行是教育社会类常见题材。",
+          "文章用“政策—目的—反响—执行条件”的结构推进，适合观察论证链。",
+          "可积累 childhood obesity、nutrition、concentration、wellbeing 等公共健康词汇。",
+          "题目可考政策目的、实施难点和作者如何平衡目标与现实。",
+          "适合写作中谈“健康政策需要资源支持”，也可用作社会政策议论文范例。"
+        ],
+        "vocabulary": [
+          { "word": "childhood obesity", "phonetic": "/ˈtʃaɪldhʊd əˈbiːsəti/", "part": "n.", "translation": "儿童肥胖" },
+          { "word": "nutrition", "phonetic": "/njuːˈtrɪʃən/", "part": "n.", "translation": "营养" },
+          { "word": "wellbeing", "phonetic": "/ˈwɛlbiːɪŋ/", "part": "n.", "translation": "健康；福祉" },
+          { "word": "enforcement", "phonetic": "/ɪnˈfɔːs.mənt/", "part": "n.", "translation": "执行；强制落实" },
+          { "word": "reassured", "phonetic": "/ˌriːəˈʃʊəd/", "part": "adj.", "translation": "安心的；放心的" },
+          { "word": "investment", "phonetic": "/ɪnˈvestmənt/", "part": "n.", "translation": "投资；投入" },
+          { "word": "catering", "phonetic": "/ˈkeɪtərɪŋ/", "part": "n.", "translation": "餐饮服务" },
+          { "word": "affordably", "phonetic": "/əˈfɔːdəblɪ/", "part": "adv.", "translation": "负担得起地；可承受地" }
+        ],
+        "sentences": [
+          {
+            "original": "The Department for Education said it hoped the reforms would tackle childhood obesity, improve nutrition and support children's concentration, learning and wellbeing.",
+            "analysis": [
+              "主干是 The Department for Education said，后接宾语从句说明政策目的。",
+              "would tackle ... improve ... and support ... 是并列动词短语，形成目标层级。",
+              "children's concentration, learning and wellbeing 形成三元并列，体现面向学生整体发展。",
+              "该句可作为政策价值判断的概括总结。"
+            ],
+            "translation": "教育部表示，它希望这些改革能解决儿童肥胖问题，改善营养，并支持儿童的注意力、学习和福祉。"
+          },
+          {
+            "original": "But on plans for enforcement, he added: 'None of us would consider ourselves experts in health and nutrition.'",
+            "analysis": [
+              "but 连接前后两个相反的立场，形成转折。",
+              "on plans for enforcement 直接说明焦点在执行机制。",
+              "he added 引出引语，是典型新闻写法中的引述。",
+              "None of us would consider ourselves experts ... 既是谦逊，也弱化政策制定者的权威。"
+            ],
+            "translation": "但在执行方案上，他补充道：‘我们谁都不会自认为是健康与营养方面的专家。’"
+          },
+          {
+            "original": "She said the government was 'absolutely determined to support schools' to redesign their menus affordably.",
+            "analysis": [
+              "主句是 She said, 后接直接引语，增加新闻真实性。",
+              "absolutely determined 强调政府决心，使用情态加强语气。",
+              "to redesign their menus affordably 指明目标是低成本调整菜单。",
+              "该句允许作者在政策和财政约束之间保留平衡空间。"
+            ],
+            "translation": "她说，政府‘绝对有决心支持学校’以可承受的方式重新设计菜单。"
+          }
+        ]
+      },
+      {
+        "title": "Forecast says families will spend more to heat their homes this winter",
+        "source": "NPR",
+        "published": "2026-09-14",
+        "url": "https://www.npr.org/2026/09/14/nx-s1-5966663/forecast-says-families-will-spend-more-to-heat-their-homes-this-winter",
+        "readingTime": "8",
+        "topic": "社会 / 能源 / 家庭成本",
+        "summary": "文章通过一位能源援助官员与记者对话，说明尽管天气可能相对温和，家庭冬季取暖支出仍可能高于去年，因为天然气和电力价格上涨，且东北地区使用取暖油的家庭可能暴露出更大涨幅。文章指出，低收入家庭往往把可支配收入的很大一部分用于水电暖，相关援助资金却多年持平，削弱了帮助的效果。报道最后把焦点放回家庭生活：高成本不只影响燃料支出，还会改变人们计划和调度，形成更深层次的消费压力。",
+        "reason": [
+          "能源价格与家庭负担是社会经济类高频议题，适合考察政策与生活的连接。",
+          "文章以天气预报切入，再转向能源成本，反常识地说明“温暖冬天不等于更低账单”。",
+          "可积累 utility bills, heating oil, low-income families, assistance 等公共经济词汇。",
+          "题目可考宏观成本如何通过能源市场传导到个人家庭，以及媒体如何设置对比。",
+          "写作中可以借用“背景—机制—影响—政策回应”的结构。"
+        ],
+        "vocabulary": [
+          { "word": "utility bill", "phonetic": "/juːˈtɪlɪti bɪl/", "part": "n.", "translation": "水电暖账单" },
+          { "word": "heating oil", "phonetic": "/ˈhiːtɪŋ ɔɪl/", "part": "n.", "translation": "取暖油" },
+          { "word": "low-income", "phonetic": "/ˌləʊ ˈɪnkʌm/", "part": "adj.", "translation": "低收入的" },
+          { "word": "assistance", "phonetic": "/əˈsɪstəns/", "part": "n.", "translation": "援助" },
+          { "word": "forecast", "phonetic": "/ˈfɔːkɑːst/", "part": "n.", "translation": "预测；预报" },
+          { "word": "inflation", "phonetic": "/ɪnˈfleɪʃən/", "part": "n.", "translation": "通货膨胀" },
+          { "word": "demand", "phonetic": "/dɪˈmɑːnd/", "part": "n.", "translation": "需求" },
+          { "word": "hardship", "phonetic": "/ˈhɑːdʃɪp/", "part": "n.", "translation": "困苦；经济困难" }
+        ],
+        "sentences": [
+          {
+            "original": "The cost of staying warm this winter could give some people the chills.",
+            "analysis": [
+              "主干是 The cost could give some people the chills，属于比喻表达。",
+              "staying warm this winter 具体化了成本场景。",
+              "give someone the chills 用作比喻，说明费用带来的心理压力。",
+              "该句在开头就攫取情绪关注，适合新闻导语。"
+            ],
+            "translation": "今年冬天保持温暖的成本可能会让一些人不寒而栗。"
+          },
+          {
+            "original": "Even though people may not need to run their furnaces as much this year, their heating bills could still be higher than last year just because fuel is more expensive.",
+            "analysis": [
+              "Even though 引导让步状语从句，形成反常识表述。",
+              "run their furnaces as much 形成对气温的反向逻辑。",
+              "just because 用来强调直接原因，具有说服力。",
+              "该句很好地说明“天气温和不一定意味着账单下降”。"
+            ],
+            "translation": "尽管人们今年可能不需要让取暖炉运转那么多，但他们的取暖账单仍可能高于去年，仅仅因为燃料更贵。"
+          },
+          {
+            "original": "It's toughest on those families that can least afford it.",
+            "analysis": [
+              "主干是 It is toughest on those families，使用形容词最高级强调受影响程度。",
+              "that can least afford it 是定语从句，明确指向最贫困群体。",
+              "该句是家长式政策报道中常见的“弱者最受冲击”总结。",
+              "适合扩写为论证“高成本与社会公平”的写作素材。"
+            ],
+            "translation": "对那些最无法承受的人来说，这种冲击最为严峻。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-14T09:00:00+08:00",
+ "updatedAt": "2026-09-15T09:00:00+08:00",
  "issues": [
+   issue20260915,
    issue20260914,
    issue20260913,
    issue20260911,
    issue20260910,
    issue20260908,
-   issue20260906,
-   issue20260904
+   issue20260906
  ]
 };
