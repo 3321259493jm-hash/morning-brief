@@ -1,3 +1,244 @@
+const issue20260916 = {
+  "date": "2026-09-16",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 15 日 GitHub 官方更新，并复核 9 月 16 日仍可用的免费资源；所有价格、额度、账号资格与地区说明均按官方来源写明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 建议自定义属性定义值（2026-09-15）",
+        "summary": "GitHub 官方 changelog 说明，Copilot 现在可在组织或企业级创建自定义属性时建议可选值，帮助管理员更快建立统一的仓库治理元数据，并减少不同仓库字段不一致的问题。",
+        "howTo": "在组织或企业级进入 Repository custom property 管理页，创建新的属性定义；Copilot 会基于属性名建议相关的 allowed values，审阅后可一键接受。组织或企业 owner 可在 settings 中控制这一建议功能是否可用。",
+        "impact": "学生团队可用这一功能快速为课程仓库和研究项目建立统一标签，例如合规、环境、公开/内部等元数据；仍需人工检查标签是否准确，并保留治理规则与仓库权限的最终审查。",
+        "free": "官方说明此功能处于 public preview，且仅面向 GitHub Copilot Business 和 Copilot Enterprise；具体价格、固定免费额度、账号资格和地区例外官方未说明。",
+        "category": "AI 编程 / 仓库治理",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-15",
+          "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions"
+        }
+      },
+      {
+        "event": "GitHub Advanced Security 配置支持强制执行（2026-09-15）",
+        "summary": "GitHub 官方 changelog 宣布，企业管理员现在可以在 security configuration 中强制执行 GitHub Advanced Security 设置，防止组织和仓库管理员覆盖企业级安全策略。",
+        "howTo": "登录 GitHub Enterprise 管理页，打开 Security configuration，选择 Enforcement 下拉菜单中的 Don’t enforce / Enforce for repository owners / Enforce for repository and organization owners；验证配置后，让团队在受控仓库中遵循统一策略。",
+        "impact": "学生团队和实验室在共享仓库中更容易统一启用代码扫描和安全治理，降低因个人设置不同导致的安全盲区；但这不替代代码审查、依赖检查和人工风险评估。",
+        "free": "官方说明这是企业管理能力，且需要相应的 GitHub Advanced Security 配置；统一价格、个人或学生免费额度、地区资格和具体计划门槛官方未说明。",
+        "category": "AI 安全 / 企业治理",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-15",
+          "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations"
+        }
+      },
+      {
+        "event": "GitHub HTTPS SHA-1 证书支持退出（2026-09-15）",
+        "summary": "GitHub 官方 changelog 公告，GitHub 将逐步停用 HTTPS 上的 SHA-1 兼容支持，旨在提升连接与证书安全性，旧客户端或遗留系统需要升级以避免断连。",
+        "howTo": "检查本地 Git、浏览器和开发工具是否仍在使用 SHA-1 兼容配置；优先升级到 OpenSSL、Git、浏览器和系统组件的受支持版本，并在 CI/CD、内部服务和脚本中确认证书链与 TLS 配置符合当前要求。",
+        "impact": "学生开发者在课程项目、实验室服务器和 GitHub 访问中应尽早更新日志和工具链，避免在旧环境下突然出现 HTTPS 连接失败；也正是一个典型的安全更新，需要在系统升级前备份和测试。",
+        "free": "官方公告说明这是安全升级，不涉及新功能门槛；具体地域与版本兼容政策以当前系统与客户端说明为准，官方未统一说明免费额度或学生权益。",
+        "category": "安全 / 开发者运维",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-15",
+          "url": "https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划适用于日常提问，并在页面中明确写出所有计划都受 rolling five-hour session window 影响，且没有固定消息数。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前会话窗口和使用状态，达到限制后等待重置，不要把网页免费计划与 API 免费额度混为一谈。",
+        "impact": "学生可用来整理提纲、概念解释和语言润色，再自行核对事实、引用和计算；长文和高频分析前应先观察当前实际限制。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session 限制；固定消息数、是否需要手机号、地区资格和 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API Free tier 与 AI Studio",
+        "summary": "Google AI Studio 官方定价页列出 Gemini API 的免费层，并说明其可在有限模型与免费输入/输出 token 上使用，开发者可以在 AI Studio 中发起原型实验。",
+        "howTo": "登录 Google AI Studio，创建或选择项目，确认当前支持的 Free tier 模型；使用小规模请求测试提示词和 API 原型，并在模型页面查看 RPM、TPM、RPD 等限制。",
+        "impact": "学生可用它做摘要、分类、课程演示和功能原型，并记录请求次数和 token 用量；不要把 Free tier 当作长期无限吞吐或生产环境。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中切换 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 导入。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；分享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方权益页说明，verified students 可获得 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "访问 Student Developer Pack，完成学生资格验证并启用 Copilot Student；在支持的编辑器中使用补全，并在 GitHub 账户中查看 AI Credits 和 chat/agent 可用情况。",
+        "impact": "学生可用补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；所有生成代码仍需本地测试、许可证审核和人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
+        "summary": "Hugging Face 官方文档说明 Static Spaces 对所有人免费；状态良好的免费个人账号还可托管最多 2 个使用 ZeroGPU 的 Gradio Spaces，CPU Basic 默认资源无小时费用。",
+        "howTo": "登录 Hugging Face，创建 Space 并选择 Static HTML；若要运行 Gradio，使用状态良好的免费个人账号创建不超过 2 个 ZeroGPU Spaces，并在设置中检查当前硬件和资源状态。",
+        "impact": "学生可把交互式网页、课程可视化或轻量模型 demo 部署成可分享链接；需要 GPU、Docker 或更高硬件时应先确认是否会进入付费计划。",
+        "free": "官方明确 Static Spaces 免费，免费个人账号最多 2 个 ZeroGPU Gradio Spaces；普通 Gradio/Docker Spaces 的 compute 创建通常需要 Pro、Team 或 Enterprise，地区和 ZeroGPU 排队额度官方未说明。",
+        "category": "免费部署 / 开放模型生态",
+        "source": {
+          "name": "Hugging Face 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces-overview"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 15 日可免费阅读全文的 BBC 与 NPR 文章，避开全部既有 URL 和标题，覆盖 AI 安全治理与经济不平等；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "OpenAI boss says world 'right to be afraid' but 'should trust' AI firms",
+        "source": "BBC",
+        "published": "2026-09-15",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o",
+        "readingTime": "7",
+        "topic": "科技趋势 / 公共治理",
+        "summary": "BBC 报道了 OpenAI CEO Sam Altman 在旧金山会议上的发言：他承认公众对 AI 的恐惧是合理的，因为模型能力增长很快，且“它不需要太多想象力”就能想到失控可能性；但他同时认为世界应相信 AI 公司会做正确的事，因为安全责任和工程规范应当属于行业自我约束。文章随后把焦点放回 AI 监管：在美国缺乏明确规则的情况下，Altman 和英伟达 CEO 黄仁勋都主张让行业自己拿出安全标准，而不是依赖外部立法。整篇材料自然体现了“理性恐惧—行业自证—监管争议”的逻辑，适合写作与议论文的抽象表达练习。",
+        "reason": [
+          "AI 安全、技术治理及行业自律是科技趋势与公共政策的复合型考点。",
+          "文章围绕“害怕是否合理—企业自我约束—监管是否必要”展开，论证链清晰。",
+          "可积累 trust, alignment, capabilities, regulation, scrutiny 等具抽象内容的词汇。",
+          "题目可考作者如何平衡风险认知与企业立场，判断文章对创新速度与安全边界的处理。",
+          "写作可借鉴“先承认风险，再提出行业自证、最后引出监管争议”的结构。"
+        ],
+        "vocabulary": [
+          { "word": "regulation", "phonetic": "/ˌreɡjʊˈleɪʃən/", "part": "n.", "translation": "监管；规则" },
+          { "word": "scrutiny", "phonetic": "/ˈskruːtəni/", "part": "n.", "translation": "审查；密切关注" },
+          { "word": "capability", "phonetic": "/ˌkeɪpəˈbɪləti/", "part": "n.", "translation": "能力；性能" },
+          { "word": "alignment", "phonetic": "/əˈlaɪnmənt/", "part": "n.", "translation": "一致性；对齐" },
+          { "word": "governance", "phonetic": "/ˈɡʌvənəns/", "part": "n.", "translation": "治理；管理" },
+          { "word": "innovation", "phonetic": "/ˌɪnəˈveɪʃən/", "part": "n.", "translation": "创新" },
+          { "word": "prompt", "phonetic": "/prɒmpt/", "part": "n./v.", "translation": "提示；促使" },
+          { "word": "self-regulate", "phonetic": "/ˌself ˈreɡjʊleɪt/", "part": "v.", "translation": "自我监管" },
+          { "word": "hype", "phonetic": "/haɪp/", "part": "n.", "translation": "炒作；夸大宣传" },
+          { "word": "vulnerable", "phonetic": "/ˈvʌlnərəbəl/", "part": "adj.", "translation": "易受攻击的；脆弱的" }
+        ],
+        "sentences": [
+          {
+            "original": "The world should trust that we are going to do the right thing because it's the right thing and we feel the magnitude of this.",
+            "analysis": [
+              "主干是 the world should trust that ...，that 引导宾语从句承接 trust 内容。",
+              "because it's the right thing and we feel the magnitude of this 形成两个并列原因，增强说服力。",
+              "the magnitude of this 是抽象名词短语，强调 AI 风险的重大程度。",
+              "该句既有信任表达，又有行业责任的价值判断，适合析出作者的立场。"
+            ],
+            "translation": "世界应相信，我们会因为这是正确的事而做正确的事，因为我们也清楚这一问题的严重程度。"
+          },
+          {
+            "original": "It doesn't take as much imagination as it used to for us to imagine how this could go wrong.",
+            "analysis": [
+              "This is a comparative structure with as much imagination as it used to，体现技术风险的直观化。",
+              "for us to imagine how this could go wrong 是带有不定式的真实主语结构。",
+              "go wrong 是简洁的动词短语，突出潜在失控。",
+              "整句强调风险不再只是抽象推测，而是现实可想象。"
+            ],
+            "translation": "我们不需要像过去那样发挥太多想象力，就能想象这会如何失控。"
+          },
+          {
+            "original": "I think the world is right to be afraid of this.",
+            "analysis": [
+              "主干是 I think the world is right to be afraid of this，I think 标记作者直接表态。",
+              "be afraid of this 是抽象名词的情绪表达，形成核心结论。",
+              "right to be afraid 强调公众的恐惧并非无根据。",
+              "句子可用于分析作者如何在让步中保留对风险的合理承认。"
+            ],
+            "translation": "我认为世界对这一问题抱有恐惧是合理的。"
+          }
+        ]
+      },
+      {
+        "title": "Family income rose and poverty fell in 2025 — but safety net cuts could erase gains",
+        "source": "NPR",
+        "published": "2026-09-15",
+        "url": "https://www.npr.org/2026/09/15/nx-s1-5968648/census-poverty-income-health-insurance-report",
+        "readingTime": "8",
+        "topic": "经济 / 社会政策",
+        "summary": "NPR 文章依据美国人口普查局报告指出，2025 年平均家庭收入有所上升，贫困率略降，医保覆盖率基本稳定；但这并不意味着经济改善足以维持，因为高通胀、战争带来的成本压力仍在，且社会安全网裁减可能很快吞掉这些收益。文章把“家庭收入改善”与“社会福利削减”放在同一叙事中，强调个体生活状况与公共政策之间强相关。它的结论不是经济已经稳定，而是改善在很大程度上依赖政府支出和保障机制，任何削减都可能使短期进步消失。",
+        "reason": [
+          "经济增长、贫困变化和社会保障的关系是典型的社会经济议题。",
+          "文章以新数据开头，再转入“收益可能被安全网削减抵消”的反论证，结构严谨。",
+          "可积累 poverty rate、safety net、inflation、purchasing power 等高频经济词汇。",
+          "题目可考数据变化与政策风险的并列关系，以及为什么作者用 gains 和 erase 来形成反衬。",
+          "写作上可借鉴“先说事实，再指出风险，再提政策后果”的层次结构。"
+        ],
+        "vocabulary": [
+          { "word": "poverty", "phonetic": "/ˈpɒvəti/", "part": "n.", "translation": "贫困" },
+          { "word": "inflation", "phonetic": "/ɪnˈfleɪʃən/", "part": "n.", "translation": "通货膨胀" },
+          { "word": "safety net", "phonetic": "/ˈseɪfti net/", "part": "n.", "translation": "安全网" },
+          { "word": "purchasing power", "phonetic": "/ˈpɜːtʃəsɪŋ ˈpaʊə/", "part": "n.", "translation": "购买力" },
+          { "word": "subsidy", "phonetic": "/ˈsʌbsɪdi/", "part": "n.", "translation": "补贴；津贴" },
+          { "word": "coverage", "phonetic": "/ˈkʌvərɪdʒ/", "part": "n.", "translation": "覆盖范围；保险覆盖" },
+          { "word": "erode", "phonetic": "/ɪˈrəʊd/", "part": "v.", "translation": "侵蚀；削弱" },
+          { "word": "median", "phonetic": "/ˈmiːdiən/", "part": "adj.", "translation": "中位数的" },
+          { "word": "household", "phonetic": "/ˈhaʊshəʊld/", "part": "n.", "translation": "家庭；住户" },
+          { "word": "snapshot", "phonetic": "/ˈsnæpʃɒt/", "part": "n.", "translation": "快照；简要概况" }
+        ],
+        "sentences": [
+          {
+            "original": "The average American family made more money last year than in 2024, while the number of people living in poverty fell slightly.",
+            "analysis": [
+              "主干是 the average American family made more money ... while the number ... fell slightly，形成对比并列。",
+              "while 连接两个并列事实，突出“收入上升—贫困下降”共存。",
+              "slightly 修饰 fell，表示改善幅度有限。",
+              "该句适合统计事实型写作中的数据起步表达。"
+            ],
+            "translation": "去年，美国平均家庭收入比 2024 年更高，同时生活在贫困中的人数略有下降。"
+          },
+          {
+            "original": "In 2025, by contrast, families saw real improvements in their purchasing power.",
+            "analysis": [
+              "by contrast 强调前后比较，转入不同维度的变化。",
+              "saw real improvements 是记叙简洁且具动感的表述。",
+              "purchasing power 是经济学高频词，说明收入增长的实际意义。",
+              "整句适合作为“名义增长转为实际改善”的转折点。"
+            ],
+            "translation": "相比之下，2025 年家庭在购买力方面确实有了实质改善。"
+          },
+          {
+            "original": "Analysts say those gains could be eroded by cuts to the social safety net.",
+            "analysis": [
+              "Analysts say 是新闻报道中典型的引述结构。",
+              "those gains 指代前文收入和贫困改善的成果。",
+              "could be eroded 采用被动语态，突出政策变化可能造成的损耗。",
+              "safety net 是核心概念，强调福利制度在维持收益中的作用。"
+            ],
+            "translation": "分析人士表示，这些收益可能会被削减社会安全网的政策侵蚀。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260914 = {
   "date": "2026-09-14",
   "status": "ready",
@@ -2452,14 +2693,14 @@ const issue20260915 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-15T09:00:00+08:00",
+ "updatedAt": "2026-09-16T09:14:43+08:00",
  "issues": [
+   issue20260916,
    issue20260915,
    issue20260914,
    issue20260913,
    issue20260911,
    issue20260910,
-   issue20260908,
-   issue20260906
+   issue20260908
  ]
 };
