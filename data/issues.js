@@ -2692,15 +2692,256 @@ const issue20260915 = {
   }
 };
 
+const issue20260917 = {
+  "date": "2026-09-17",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 15 日至 16 日官方 AI 发布，并复核仍可用的免费资源；价格、额度、地区和 rollout 以各官方页面当前说明为准，未说明处明确标注。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 预算申请增加功能正式 GA（2026-09-16）",
+        "summary": "GitHub 官方 changelog 宣布，Copilot 成员在 AI credits 用尽后可以直接发起额外预算申请，组织或企业管理员可在设置中审核、批准、调整或拒绝申请，并在批准后立即恢复访问。",
+        "howTo": "组织管理员或企业管理员进入 Copilot settings 中的 budget 或 requests from members 页面，查看待审批的成员额度申请；可设置新的额度并点击 Approve and increase。成员在额度超额后可在同一入口发起预算申请，并等待管理员操作。",
+        "impact": "学生团队在课程项目和实验室中更容易按需扩展 Copilot 的 AI credits，而不用在仓库里反复重置或临时切换工具；但预算审批仍需管理员审核，并且仅适用于 Copilot Business/Enterprise 的 usage-based billing。",
+        "free": "官方说明该功能适用于 GitHub Copilot Business 和 Enterprise 的 usage-based billing；个人计划、统一免费额度、地区覆盖范围和学生资格官方未说明。",
+        "category": "AI 编程 / 成本管理",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-16",
+          "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available"
+        }
+      },
+      {
+        "event": "GitHub AI Scan 不再要求 CodeQL 默认安装（2026-09-16）",
+        "summary": "GitHub 官方 changelog 公告，AI Scan for pull requests 现在即使仓库没有开启 CodeQL default setup 也可运行，扩大了适用范围，并不要求改变现有安全配置层级。",
+        "howTo": "在组织或仓库中确认 GitHub code scanning 与 AI Scan 已开启，确保仓库、组织或企业级权限一致；之后对 eligible 仓库提交 pull request 时，AI Scan 会在不依赖 CodeQL default setup 的情况下运行。",
+        "impact": "学生团队可在更广的课程仓库中启用 AI 扫描，提高代码审查效率；但仍需要人工审查严重性、修复优先级和依赖漏洞，不应把扫描结果视为已修复结论。",
+        "free": "官方说明这是 GitHub Advanced Security 客户的 public preview，且仅支持 github.com 上的组织和个人仓库；GitHub Enterprise Server 暂不支持，且没有说明统一免费额度、个人账户资格和地区覆盖范围。",
+        "category": "AI 安全 / 代码扫描",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-16",
+          "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup"
+        }
+      },
+      {
+        "event": "Google 发布 Gemini 3.8 Live 与 Live Extended Thinking（2026-09-15）",
+        "summary": "Google 官方博客宣布 Gemini 3.8 Live 和 Gemini 3.8 Live Extended Thinking 上线，目标是为更实时的语音 agent 和更智能对话提供更强的推理与多步任务处理能力。",
+        "howTo": "开发者可在 Gemini app、Google Workspace 和 Search 相关入口中测试语音协作能力；想做实时语音应用的开发者则可参考 Google 官方开发者文档，并结合 Gemini 3.5 Transcribe 等语音能力搭建流程。",
+        "impact": "学生可以原型化语音助手、实时会议摘要和课程问答助手，但仍需测试稳定性、语音延迟和事实核验，不能把实时 AI 对话直接视为可靠的主导决策工具。",
+        "free": "官方博客重点介绍了模型能力和价格相对竞争力，但未说明统一免费层、账号资格、个人用户额度或地区覆盖范围。",
+        "category": "AI 语音 / agent",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-15",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明，所有计划都存在 rolling five-hour session window 使用限制，Free 计划适合日常提问；付费计划会在此基础上增加更高的会话额度和更大容量。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划使用；在 Settings > Usage 查看当前会话窗口和模型/功能使用情况，达到限制后等待重置，或在付费计划中使用 usage credits。",
+        "impact": "学生可以把 Claude 用于概念解释、写作润色、研究提纲和代码审阅的初稿，但长文和高频工作前要先确认当前窗口是否已耗尽。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session window；固定消息数、账号资格、地区范围和 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google AI Studio 官方定价页说明，Gemini API 提供 Free tier，包含有限模型访问、免费输入和输出 tokens，以及 Google AI Studio 访问入口。",
+        "howTo": "登录 Google AI Studio，创建项目并选择当前 Free tier 可用模型；先在小规模实验中验证提示词与 API 调用，然后再判断是否需要付费生产配置。",
+        "impact": "学生可用来做课程演示、文本摘要、工作流原型和 API 调试，不需要先为 token 付费；但不能把免费层当作稳定的生产级承诺。",
+        "free": "官方确认存在 Free tier；具体模型、固定额度、重置周期、账号资格和地区说明官方未统一说明，需按当前模型与项目页面查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明，它是无需本地配置的托管 Jupyter Notebook 服务，并提供免费访问 GPU、TPU 等计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，用 Google 账号新建或导入 notebook；按需在运行时设置中切换 GPU 或 TPU，并把 notebook 保存到 Drive 或从 GitHub 导入。",
+        "impact": "学生可以直接运行课程代码、分析数据和训练小型模型，减少本地环境搭建和硬件门槛；但须注意免费 tier 资源不保证并且会受到使用限制。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；GPU/TPU 时长、地区例外和统一额度官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方页面说明，verified students 可以获得 GitHub Copilot Student 等学习和开发权益，包含无限代码补全、GitHub AI Credits 和受限的 chat/agent 使用。",
+        "howTo": "访问 Student Developer Pack 并完成学生资格验证，然后在 GitHub Education 页面按提示启用 GitHub Copilot Student；在支持的编辑器中使用代码补全，并在账户中查看 AI credits 和 chat/agent 状态。",
+        "impact": "学生可以把这些权益用于作业、课程项目和学习路径，同时减少样板代码工作；但输出仍需运行测试、保留代码审查和人工复核。",
+        "free": "官方说明面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
+        "summary": "Hugging Face 官方文档说明，Static Spaces 对所有人免费；free personal accounts in good standing 仍可托管最多两个运行在 ZeroGPU 上的 Gradio Spaces，CPU Basic 无需付费。",
+        "howTo": "登录 Hugging Face，打开 Spaces 页面选择 Create new Space；若希望托管静态页面，选择 static HTML 即可；若需 Gradio demo，确保账号处于 good standing，并控制在最多两个 ZeroGPU Spaces。",
+        "impact": "学生可以把课程演示、轻量模型 demo、作业网页和交互式展示部署成可分享链接，便于答辩和同伴测试；若需要 GPU 或 Docker compute，则需升级到付费计划。",
+        "free": "官方明确 Static Spaces 免费，且 free personal accounts 可托管最多两个 ZeroGPU Gradio Spaces；CPU Basic 免费，GPU/compute upgrade 价格与配额按官方 pricing page 为准，地区和配额细则官方未说明。",
+        "category": "免费部署 / 开放模型生态",
+        "source": {
+          "name": "Hugging Face 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces-overview"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期选取 2026 年 9 月 16 日可直接免费阅读的 NPR 与 BBC 文章，覆盖 AI 监管与金融政策；每篇提供考研英语二式结构、词汇和短句精读。",
+    "articles": [
+      {
+        "title": "Congress is under pressure to act on AI — here's what that could look like",
+        "source": "NPR",
+        "published": "2026-09-16",
+        "url": "https://www.npr.org/2026/09/16/nx-s1-5969933/congress-ai-regulation",
+        "readingTime": "8",
+        "topic": "科技趋势 / 公共治理",
+        "summary": "NPR 报道指出，尽管美国国会在这周突然加快 AI 监管压力，但真正难点不在是否需要监管，而在于如何监管、由谁监管，以及何时能形成共识。文章以众议院共和党与民主党领导人就 AI 安全的不同表态为切入点，强调 AI 监管已被摆到国家安全、儿童保护和州政府权力边界等议题中。报道接着回顾多年来国会的试探性立法与州层面争议，最终将焦点放在联邦规则和州法规的“预emption”冲突，以及 AI 竞争与安全之间的平衡问题。",
+        "reason": [
+          "AI 监管与公共政策是科技趋势类高频考点，议题直接且具社会性。",
+          "文章用“压力增加—观点分歧—制度冲突—未来路径”推进，论证结构完整。",
+          "可积累 regulation, governance, preemption, competitiveness, frontier 等抽象词汇。",
+          "题目可考国家安全、州政府权力与联邦监管之间的关系，以及政策推动为何困难。",
+          "写作上可借鉴“提出争议—比较不同立场—落到制度冲突—回归治理路径”的层次。"
+        ],
+        "vocabulary": [
+          { "word": "regulation", "phonetic": "/ˌreɡjʊˈleɪʃən/", "part": "n.", "translation": "监管；规则" },
+          { "word": "governance", "phonetic": "/ˈɡʌvənəns/", "part": "n.", "translation": "治理；管理" },
+          { "word": "frontier", "phonetic": "/ˈfrʌntɪə/", "part": "adj./n.", "translation": "前沿的；前沿" },
+          { "word": "moratorium", "phonetic": "/ˌmɒrəˈtɔːriəm/", "part": "n.", "translation": "暂停；暂缓令" },
+          { "word": "preempt", "phonetic": "/ˌpriːˈempt/", "part": "v.", "translation": "先发制人地阻止；取代" },
+          { "word": "competitiveness", "phonetic": "/kəmˈpetɪtɪv.nəs/", "part": "n.", "translation": "竞争力" },
+          { "word": "alignment", "phonetic": "/əˈlaɪnmənt/", "part": "n.", "translation": "一致性；对齐" },
+          { "word": "restrict", "phonetic": "/rɪˈstrɪkt/", "part": "v.", "translation": "限制；约束" },
+          { "word": "existential", "phonetic": "/ˌeɡzɪˈstenʃəl/", "part": "adj.", "translation": "生存性的；存在论的" },
+          { "word": "consensus", "phonetic": "/kənˈsen.səs/", "part": "n.", "translation": "共识" }
+        ],
+        "sentences": [
+          {
+            "original": "The real fight, she said, is what governance looks like.",
+            "analysis": [
+              "主干是 The real fight is ...，she said 作引语标记，突出作者引用说法。",
+              "what governance looks like 是名词性从句，承接 fight 的具体内容。",
+              "为一个典型的“论题转向”句式，把争论从何时做转到怎样做。",
+              "该句适合练习名词从句和引语在议论文中的用法。"
+            ],
+            "translation": "她说，真正的争论在于治理框架究竟是什么样。"
+          },
+          {
+            "original": "They don't need the government to tell them to slow it down.",
+            "analysis": [
+              "主干是 They don't need ... to tell them ...，体现诉求与利益逻辑。",
+              "slow it down 是短语动词，体现政策中的风险管理表达。",
+              "句中使用 they 指代 frontier AI labs，简洁且有代表性。",
+              "此句适合分析“自由市场—行业自律—国家监管”的议题张力。"
+            ],
+            "translation": "他们不需要政府来告诉他们减速。"
+          },
+          {
+            "original": "We are in an AI race against China and the Chinese government is viewing AI as an existential race to win.",
+            "analysis": [
+              "We are in an AI race... 是整个句子的核心判断，语气直接。",
+              "against China 置于 race 之后，突出国家竞争的语境。",
+              "as an existential race to win 把 AI 比作生存性的竞争，强化安全和战略语境。",
+              "句子可用于练习抽象概念与国家战略叙事的结合。"
+            ],
+            "translation": "我们正处于一场与中国的 AI 竞赛中，而中国政府正在将 AI 视为一场关乎生存的争夺战。"
+          }
+        ]
+      },
+      {
+        "title": "US interest rates raised for first time in three years",
+        "source": "BBC",
+        "published": "2026-09-17",
+        "url": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o",
+        "readingTime": "6",
+        "topic": "经济 / 金融政策",
+        "summary": "BBC 报道了美国联邦储备委员会在近期加息的决定，并指出这是三年来首次上调利率，背后是通胀压力仍存、地缘政治和市场预期对政策的共同影响。文章先交代特朗普此前对降息的持续施压，再说明联储内部多数官员倾向于继续上调或维持高利率，并强调这一举动会提高贷款成本、压缩家庭支出和影响购房决策。整体上，这篇报道既是金融新闻，也是一则关于政策独立性与政治压力的典型议题。",
+        "reason": [
+          "金融政策和宏观经济是考研英语二中最常见的社会经济主题。",
+          "文章用“政治压力—政策决定—市场影响”的顺序展开，结构清晰。",
+          "可积累 inflation、mortgage、refinance、policy rate、rate hike 等高频词。",
+          "题目可考作者如何把货币政策与政治互动联系起来，并分析利率变化对家庭与消费的影响。",
+          "写作上可借鉴“先说明事实，再转入负面影响，再指出未来不确定性”的逻辑。"
+        ],
+        "vocabulary": [
+          { "word": "rate hike", "phonetic": "/reɪt haɪk/", "part": "n.", "translation": "加息" },
+          { "word": "inflation", "phonetic": "/ɪnˈfleɪʃən/", "part": "n.", "translation": "通货膨胀" },
+          { "word": "mortgage", "phonetic": "/ˈmɔːɡɪdʒ/", "part": "n.", "translation": "抵押贷款；房贷" },
+          { "word": "refinance", "phonetic": "/ˌriːˈfaɪnæns/", "part": "v.", "translation": "再融资；重贷" },
+          { "word": "debt", "phonetic": "/det/", "part": "n.", "translation": "债务" },
+          { "word": "forecast", "phonetic": "/ˈfɔːrkɑːst/", "part": "n./v.", "translation": "预测；预报" },
+          { "word": "policymaker", "phonetic": "/ˈpɒlɪsiˌmeɪkə/", "part": "n.", "translation": "政策制定者" },
+          { "word": "prime lending rate", "phonetic": "/praɪm ˈlɛndɪŋ reɪt/", "part": "n.", "translation": "优先贷款利率" },
+          { "word": "borrower", "phonetic": "/ˈbɒrəʊər/", "part": "n.", "translation": "借款人" },
+          { "word": "policy rate", "phonetic": "/ˈpɒlɪsi reɪt/", "part": "n.", "translation": "政策利率" }
+        ],
+        "sentences": [
+          {
+            "original": "The Fed's hike is the first rate move in any direction since they were cut in December 2025.",
+            "analysis": [
+              "主干是 The Fed's hike is the first rate move ...，且设置了明确的时间基准。",
+              "since they were cut in December 2025 形成时间比较，强化这是三年后的首次上调。",
+              "rate move in any direction 是新闻用语，说明政策方向的变化。",
+              "这个句子适合分析“事实 + 时间背景 + 变化方向”的新闻写法。"
+            ],
+            "translation": "联储的加息是自 2025 年 12 月降息以来首次出现任何方向的利率调整。"
+          },
+          {
+            "original": "The increase could help push up mortgage rates for home buyers and lead to Americans paying more on other types of debt.",
+            "analysis": [
+              "主句包含 could help push up ... and lead to ...，形成两个并列结果。",
+              "mortgage rates and other types of debt 把影响范围扩展到住房和消费信贷。",
+              "lead to Americans paying more ... 是典型因果链表达。",
+              "该句适合练习“政策变化—家庭成本—连带影响”的衔接。"
+            ],
+            "translation": "此次加息可能会推高购房者的抵押贷款利率，并使美国人在其他类型债务上的支出增加。"
+          },
+          {
+            "original": "The forecast suggested price rises will ease in the coming years, with inflation predicted to fall steadily to the Fed's target by 2029.",
+            "analysis": [
+              "主句 The forecast suggested ...，体现报道对未来的判断与预测。",
+              "with inflation predicted to fall steadily ... 是伴随状语，说明控制通胀的路径。",
+              "by 2029 明确了时间节点，增强政策逻辑的连续性。",
+              "句子适合练习“预测 + 时间线 + 通胀目标”的写作结构。"
+            ],
+            "translation": "预期显示，未来几年价格上涨将会缓和，通胀预计会稳步降到联储到 2029 年的目标水平。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-16T09:14:43+08:00",
+ "updatedAt": "2026-09-17T09:14:55+08:00",
  "issues": [
+   issue20260917,
    issue20260916,
    issue20260915,
    issue20260914,
    issue20260913,
    issue20260911,
-   issue20260910,
-   issue20260908
+   issue20260910
  ]
 };
