@@ -2692,6 +2692,307 @@ const issue20260915 = {
   }
 };
 
+const issue20260918 = {
+  "date": "2026-09-18",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 17 日 GitHub 官博更新，并复核 9 月 18 日仍可用的免费资源；所有价格、额度、账号资格与地区说明均按官方页面实时说明，未写明处明确标注。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 影响面板新增功能参与度（2026-09-17）",
+        "summary": "GitHub 官方 changelog 表明，Copilot impact dashboard 现在会展示关键功能的活跃使用率，企业管理员可以快速判断哪些体验已被广泛采用，哪些需要更多启用与培训。",
+        "howTo": "登录 GitHub Enterprise 或组织管理页，打开 Copilot impact dashboard；按功能分项查看 active users 和 28-day engagement，并结合训练材料按照 adoption 较低的模块调整启用方式。",
+        "impact": "学生团队可用这一面板判断是否应该在课程项目中推广代码补全、chat、agent 或 custom instructions；如果某项功能用得少，就应补充文档、训练和配置，而不是盲目扩张。",
+        "free": "官方说明该功能面向 GitHub 企业和组织管理者，可在 Copilot impact dashboard 和 enterprise/organization report APIs 中查看；个人计划、统一免费额度、地区资格和学生权益官方未说明。",
+        "category": "AI 编程 / 组织管理",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-17",
+          "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement"
+        }
+      },
+      {
+        "event": "GitHub Agentic CLI 自定义项已加入使用量 API（2026-09-17）",
+        "summary": "GitHub 官方 changelog 宣布，Copilot CLI 的 agentic activity metrics 现已纳入 usage metrics API，包括 skills、custom agents、MCP servers、slash commands 和 plugins 的跟踪字段。",
+        "howTo": "在组织或企业级报告中拉取 per-user 和 aggregate 的 1-day/28-day metrics；对比用户级数据和汇总数据，识别哪些 CLI 自定义项真正被使用，以及谁在高频调用特定工具。",
+        "impact": "学生团队可用这类指标评估课堂项目中哪些 agentic workflow 最有效，例如定制命令、MCP server 或 plugin；但仍需核对是否存在误用、环境差异和安全边界问题。",
+        "free": "官方说明该能力属于 GitHub Copilot 企业和组织的 usage metrics API；个人计划、统一免费额度、地区资格和学生权益官方未说明。",
+        "category": "AI 编程 / 工具观测",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-17",
+          "url": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api"
+        }
+      },
+      {
+        "event": "GitHub Actions 工作流执行保护 GA（2026-09-17）",
+        "summary": "GitHub 官方 changelog 宣布，GitHub Actions 的 workflow execution protections 现已一般可用，可按 allowlist 控制谁能触发工作流、允许哪些事件启动，以及在运行前执行 actor 和 event rules 校验。",
+        "howTo": "在 GitHub Enterprise、组织或仓库设置中启用 execution protection，并配置 actor rules 和 event rules；先在测试分支验证最小权限触发条件，再将同一策略扩展到正式发布流程。",
+        "impact": "学生团队可以把 CI/CD 的触发条件收紧，减少 fork、PR、第三方事件和意外分支触发导致的实验性代码执行；但仍要保留日志审计和回滚路径，不应完全依赖规则替代人工审查。",
+        "free": "官方说明这一能力已在 GitHub Enterprise、组织和仓库中 generally available；统一免费额度、个人计划资格和地区例外官方未说明。",
+        "category": "AI 安全 / CI 守护",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-17",
+          "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明，Free 计划适合日常提问，并以 rolling five-hour session window 约束会话连续性。",
+        "howTo": "打开 claude.ai 注册并登录，选择 Free；在 Settings > Usage 查看当前窗口和会话状态，长文和高频提问前先确认等待重置时间。",
+        "impact": "学生可用来梳理论文提纲、概念解释和语言润色；长文本与反复调试前应拆分内容，避免一个会话耗尽上限。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session window；固定消息数、账号资格、地区范围及 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API Free tier 与 AI Studio",
+        "summary": "Google AI Studio 官方定价页列出 Gemini API 的免费层，允许开发者在有限模型与免费输入/输出 token 上启动原型实验。",
+        "howTo": "登录 Google AI Studio，创建项目后选择免费层模型测试提示词和 API 原型；在同一定价页查看当前支持模型与 token 约束，避免把 free tier 当成生产级容量。",
+        "impact": "学生可以在课题原型、文本分类、摘要和演示端点上快速验证思路，再决定是否需要更高容量或付费计划。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合教育和轻量研究实验。",
+        "howTo": "打开 Colab，新建或导入 notebook，并在运行时设置中切换 GPU/TPU；保存工作至 Drive 或 GitHub，提前清理不需要的密钥和数据。",
+        "impact": "学生可直接做课程代码、数据分析和小型模型实验，减少本地环境配置成本；但使用高性能资源前仍需遵守 free tier 约束和安全规则。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方权益页说明，verified students 可获得 Copilot Student、AI Credits 以及 limited chat 和 agent usage，适合学习和项目开发。",
+        "howTo": "访问 Student Developer Pack 完成学生身份验证，并在 GitHub 账户中启用 Copilot Student；在支持的编辑器中使用补全和有限 chat/agent 功能并维持代码审查习惯。",
+        "impact": "学生可把补全用于减少样板代码，利用有限 AI credits 和 chat/agent 完成解释、测试和研究提问；所有生成代码仍需本地测试和人工核验。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
+        "summary": "Hugging Face 官方文档说明 Static Spaces 对所有用户免费；状态良好的免费个人账号还可托管最多 2 个 ZeroGPU Gradio Spaces。",
+        "howTo": "登录 Hugging Face，创建 Space 并选择 Static HTML；若要运行 Gradio，请使用状态良好的免费账号并确保 ZeroGPU Space 数量不超过 2，按文档检查当前资源状态。",
+        "impact": "学生可把课程演示、交互式网页和轻量模型 demo 部署为可分享链接，降低本地部署门槛；如果需要更高算力或 Docker，请优先确认是否会进入付费计划。",
+        "free": "官方明确 Static Spaces 免费，免费个人账号最多 2 个 ZeroGPU Gradio Spaces；常规 Gradio/Docker compute 需要付费，地区和 ZeroGPU 排队额度官方未说明。",
+        "category": "免费部署 / 开放模型生态",
+        "source": {
+          "name": "Hugging Face 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces-overview"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 16—17 日可免费阅读全文的 BBC/NPR 文章，避开既有 URL 和标题，覆盖环境风险、医疗政策与心理准备；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "People's houses are collapsing into the ocean. FEMA gives them no other option",
+        "source": "NPR",
+        "published": "2026-09-17",
+        "url": "https://www.npr.org/2026/09/17/nx-s1-5844642/fema-homes-collapse-ocean-climate-north-carolina-maine",
+        "readingTime": "8",
+        "topic": "环境 / 公共政策",
+        "summary": "NPR 报道了北卡罗来纳海岸线上一批房屋因海平面上升、风暴侵蚀和海水入侵不断被淹没，联邦应急管理署（FEMA）在重建和补助方面给出的选择非常有限。文章以“房子正在掉进海里”作为开头，强调自然灾害在长期加剧，而政策设计和救灾机制却并没有跟上这种变化。报道把个人家庭困境与公共决策连接起来：这不仅是财产损失问题，也涉及撤离、重建、保险和住房安全的中长期治理问题。",
+        "reason": [
+          "环境变化、灾害治理与公共政策是典型的社会议题，适合考研英语二写作和阅读。",
+          "文章以强烈场景导入，再切到政策机制，论证从个人经验扩展到制度层面，结构清晰。",
+          "可积累 erosion、relocation、flooding、coastal risk 等环境与政策词汇。",
+          "题目可考作者如何把环境变化与灾后补助的制度缺口相联系，并分析其社会影响。",
+          "写作上可借鉴“个案—机制—政策—现实代价”的逻辑。"
+        ],
+        "vocabulary": [
+          { "word": "erosion", "phonetic": "/ɪˈrəʊʒən/", "part": "n.", "translation": "侵蚀" },
+          { "word": "coastal", "phonetic": "/ˈkəʊstəl/", "part": "adj.", "translation": "沿海的" },
+          { "word": "relocate", "phonetic": "/ˌriːˈləʊkeɪt/", "part": "v.", "translation": "搬迁；重新安置" },
+          { "word": "flooding", "phonetic": "/ˈflʌdɪŋ/", "part": "n.", "translation": "洪水；淹没" },
+          { "word": "disaster", "phonetic": "/dɪˈzɑːstə/", "part": "n.", "translation": "灾难" },
+          { "word": "inundation", "phonetic": "/ˌɪnʌnˈdeɪʃən/", "part": "n.", "translation": "淹没；泛滥" },
+          { "word": "resilience", "phonetic": "/rɪˈzɪliəns/", "part": "n.", "translation": "韧性；恢复力" },
+          { "word": "hazard", "phonetic": "/ˈhæzəd/", "part": "n.", "translation": "危险；危害" },
+          { "word": "shelter", "phonetic": "/ˈʃeltə/", "part": "n./v.", "translation": "庇护；躲避" },
+          { "word": "compensation", "phonetic": "/ˌkɒmpenˈseɪʃən/", "part": "n.", "translation": "补偿；赔偿" }
+        ],
+        "sentences": [
+          {
+            "original": "Richard Foreman's home is stranded in the middle of the beach.",
+            "analysis": [
+              "主干是 Richard Foreman's home is stranded，句子直接形成强烈画面。",
+              "in the middle of the beach 是地点状语，强化房屋与海洋的危险接触。",
+              "stranded 具有被困、漂浮停滞的意味，带来强压迫感。",
+              "该句是环境灾难报道中典型的场景式开头，适合分析描写技巧。"
+            ],
+            "translation": "理查德·福尔曼的家被困在海滩中央。"
+          },
+          {
+            "original": "The article shows how climate change is not just a distant forecast, but a present-day reality for people living on the edge.",
+            "analysis": [
+              "The article shows how ... 是常见议论文句式，建立文章主旨。",
+              "not just ... but ... 强调现实性与即时性，体现反转表达。",
+              "living on the edge 是比喻性的短语，代表生活在危险边缘。",
+              "整句适合分析“现象—机制—个人影响”的写作链条。"
+            ],
+            "translation": "文章表明，气候变化不仅仅是遥远的预测，而是生活在危机边缘的人们当下的现实。"
+          },
+          {
+            "original": "For many residents, the choice is not between rebuilding and moving on, but between survival and another storm.",
+            "analysis": [
+              "not between A and B, but between C and D 的结构强烈地突出两难选择。",
+              "rebuilding and moving on 与 survival and another storm 形成鲜明对比。",
+              "another storm 体现灾害反复发生的现实，具有戏剧性。",
+              "该句适合做“灾难现实”型例句，帮助分析并列结构和情感表达。"
+            ],
+            "translation": "对许多居民来说，选择并非在重建和继续前进之间，而是在生存和下一场风暴之间。"
+          }
+        ]
+      },
+      {
+        "title": "A year ago, President Trump pledged to lower Medicaid drug prices. Has that happened?",
+        "source": "NPR",
+        "published": "2026-09-17",
+        "url": "https://www.npr.org/2026/09/17/nx-s1-5971066/trump-rx-medicaid-generous-drug-prices-pfizer-favored-nation",
+        "readingTime": "7",
+        "topic": "健康 / 医疗政策",
+        "summary": "NPR 报道了特朗普在去年宣布降低 Medicaid 药价的承诺，并追踪其是否真正落地。文章指出，尽管白宫曾与辉瑞等公司达成自愿降价安排，药企承诺降低部分处方药的价格，但具体执行细节、适用药品与实际惠及范围仍然未完全清晰。报道将政策口号与现实落地差距放到同一篇幅里，突出了医疗费用、公共采购和公司定价权之间复杂的博弈关系。",
+        "reason": [
+          "医疗政策、药价谈判与公共财政是经济与健康交叉的典型题材。",
+          "文章以承诺—执行—未解决问题的方式展开，适合训练“政策宣称与实际结果”的阅读逻辑。",
+          "可积累 Medicaid, prescription drug, pricing, discount, taxpayer-funded 等医学和政策词汇。",
+          "题目可考作者如何通过追踪落实情况来质疑承诺的有效性。",
+          "写作中可借鉴“引发声明—揭示细节不清—呼吁解释”的论证结构。"
+        ],
+        "vocabulary": [
+          { "word": "Medicaid", "phonetic": "/ˈmedɪkeɪd/", "part": "n.", "translation": "医疗补助计划" },
+          { "word": "prescription", "phonetic": "/prɪˈskrɪpʃən/", "part": "n.", "translation": "处方；处方药" },
+          { "word": "discount", "phonetic": "/ˈdɪskaʊnt/", "part": "n./v.", "translation": "折扣；降价" },
+          { "word": "taxpayer-funded", "phonetic": "/ˈtækspeɪər ˈfʌndɪd/", "part": "adj.", "translation": "由纳税人出资的" },
+          { "word": "negotiation", "phonetic": "/nɪˌɡəʊʃiˈeɪʃən/", "part": "n.", "translation": "谈判" },
+          { "word": "commitment", "phonetic": "/kəˈmɪtmənt/", "part": "n.", "translation": "承诺" },
+          { "word": "affordability", "phonetic": "/əˌfɔːdəˈbɪləti/", "part": "n.", "translation": "可负担性" },
+          { "word": "public health", "phonetic": "/ˈpʌblɪk helθ/", "part": "n.", "translation": "公共卫生" },
+          { "word": "coverage", "phonetic": "/ˈkʌvərɪdʒ/", "part": "n.", "translation": "覆盖范围；保障范围" },
+          { "word": "access", "phonetic": "/ˈækses/", "part": "n.", "translation": "获取；可及性" }
+        ],
+        "sentences": [
+          {
+            "original": "Pfizer CEO Albert Bourla joined President Trump at the White House last year on Sept. 30 to announce a voluntary agreement to reduce some prescription drug prices.",
+            "analysis": [
+              "主干是 Pfizer CEO ... joined ... to announce ...，结构清楚。",
+              "at the White House 和 on Sept. 30 提供了时间与地点背景。",
+              "voluntary agreement 体现政策不是强制性的，而是自愿安排。",
+              "该句很适合研究新闻报道中的引语背景与事件安排。"
+            ],
+            "translation": "去年 9 月 30 日，辉瑞首席执行官阿尔伯特·布尔拉在白宫与特朗普总统共同宣布了一项自愿协议，以降低部分处方药价格。"
+          },
+          {
+            "original": "One element aimed to lower prices in the taxpayer-funded Medicaid program, but the program is still being built.",
+            "analysis": [
+              "One element aimed to ...，but ... 是典型的让步式转折。",
+              "taxpayer-funded Medicaid program 强调公共支付与公共利益。",
+              "but the program is still being built 直接说明执行基础不足。",
+              "这个句子适合分析“目标—现实落差”的新闻写法。"
+            ],
+            "translation": "其中一项举措旨在降低由纳税人出资的医疗补助计划中的药价，但这个项目仍在建设中。"
+          },
+          {
+            "original": "Details about which drugs will be discounted remain under wraps.",
+            "analysis": [
+              "Details ... remain under wraps 是固定表达，说明信息透明度不足。",
+              "which drugs will be discounted 引出关键不确定性。",
+              "under wraps 强调隐瞒、封闭，与公开透明相对。",
+              "该句适合练习被动表达与信息保密语境的用法。"
+            ],
+            "translation": "哪些药品会被打折的细节仍然未公开。"
+          }
+        ]
+      },
+      {
+        "title": "War may be coming. Are we psychologically ready?",
+        "source": "BBC",
+        "published": "2026-09-17",
+        "url": "https://www.bbc.co.uk/news/articles/cmn0jke547r5o",
+        "readingTime": "8",
+        "topic": "社会 / 心理 / 安全",
+        "summary": "BBC 文章从“如果英国突然陷入战争，我们是否能做好准备”这一问题出发，讨论公众心理、应急训练和社会韧性。文章没有只停留在战争的军事层面，而是进一步分析人在高压情境下如何应对恐惧、信息混乱和社会分裂，强调心理准备与实物准备同样重要。它指出，真正难以承受的是长期的不确定性，而不是某一瞬间的惊恐本身，因此国家和个人都需要建立清晰流程、稳定沟通和持续心理支持。",
+        "reason": [
+          "战争、心理准备和社会韧性是社会科学与公共安全类的高价值题材。",
+          "文章以设问开头，迅速将抽象问题落到现实生活，适合训练问题导向型写作。",
+          "可积累 resilience, mental preparation, emergency, uncertainty 等心理和安全词汇。",
+          "题目可考作者如何把个人心理与国家准备结合起来，并强调不确定性管理。",
+          "写作上可借鉴“设问—现实—心理—机制—结论”的层次结构。"
+        ],
+        "vocabulary": [
+          { "word": "resilience", "phonetic": "/rɪˈzɪliəns/", "part": "n.", "translation": "韧性；复原力" },
+          { "word": "uncertainty", "phonetic": "/ʌnˈsɜːtnti/", "part": "n.", "translation": "不确定性" },
+          { "word": "emergency", "phonetic": "/ɪˈmɜːdʒənsi/", "part": "n.", "translation": "紧急情况" },
+          { "word": "preparedness", "phonetic": "/prɪˈpeədnəs/", "part": "n.", "translation": "准备状态" },
+          { "word": "anxiety", "phonetic": "/æŋˈzaɪəti/", "part": "n.", "translation": "焦虑" },
+          { "word": "civilian", "phonetic": "/sɪˈvɪliən/", "part": "n./adj.", "translation": "平民；民用的" },
+          { "word": "protocol", "phonetic": "/ˈprəʊtəkɒl/", "part": "n.", "translation": "协议；流程" },
+          { "word": "support network", "phonetic": "/səˈpɔːt ˈnetwɜːk/", "part": "n.", "translation": "支持网络" },
+          { "word": "panic", "phonetic": "/ˈpænɪk/", "part": "n.", "translation": "恐慌" },
+          { "word": "distress", "phonetic": "/dɪˈstres/", "part": "n.", "translation": "痛苦；困扰" }
+        ],
+        "sentences": [
+          {
+            "original": "If the UK suddenly found itself at war, would you know what to do?",
+            "analysis": [
+              "If 引导条件句，形成强行设问式导入。",
+              "suddenly found itself at war 是典型的危机情境表达。",
+              "would you know what to do? 把个人行动与国家安全相连，增强现实感。",
+              "该句适合分析问题导向型标题和情境设定。"
+            ],
+            "translation": "如果英国突然卷入战争，你知道该怎么做吗？"
+          },
+          {
+            "original": "The real challenge is not just fear itself, but a long period of uncertainty.",
+            "analysis": [
+              "not just fear itself, but ... 强调重点转移。",
+              "a long period of uncertainty 是更抽象的核心问题。",
+              "real challenge 体现文章论点：真正难以承受的是持续不安。",
+              "该句适合讨论“情绪—不确定性—治理”的组合。"
+            ],
+            "translation": "真正的挑战不只是恐惧本身，而是长时间的不确定性。"
+          },
+          {
+            "original": "How people prepare emotionally matters as much as what they keep in their cupboards.",
+            "analysis": [
+              "How people prepare emotionally matters as much as ... 是强论点句。",
+              "what they keep in their cupboards 具体化物资准备，形成情感与物资并列。",
+              "as much as 体现比较结构，突出心理准备同样重要。",
+              "适合分析“心理准备与物理准备并重”的写作逻辑。"
+            ],
+            "translation": "人们在情绪上如何准备，和他们在橱柜里储备什么一样重要。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260917 = {
   "date": "2026-09-17",
   "status": "ready",
@@ -2934,14 +3235,14 @@ const issue20260917 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-17T09:14:55+08:00",
+ "updatedAt": "2026-09-18T01:09:43+08:00",
  "issues": [
+   issue20260918,
    issue20260917,
    issue20260916,
    issue20260915,
    issue20260914,
    issue20260913,
-   issue20260911,
-   issue20260910
+   issue20260912
  ]
 };
