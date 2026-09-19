@@ -2692,6 +2692,234 @@ const issue20260915 = {
   }
 };
 
+const issue20260919 = {
+  "date": "2026-09-19",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 17–18 日 GitHub 官方更新，并复核 9 月 19 日仍可用的免费资源；价格、额度、标准、账号资格和地区说明全部按官方来源写明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot code review 改进 review experience（2026-09-18）",
+        "summary": "GitHub 官方 changelog 说明，Copilot code review 现在会更清晰地展示 review 的进展状态：Open、Resolved since last review、Previously missed findings，并在批量接受建议时生成更有用的 commit message，同时改进了自动解决已处理评论的规则。",
+        "howTo": "在 GitHub pull request 页面请求 Copilot review；查看 review overview 中的 Open / Resolved since last review / Previously missed 分类，再在批量建议对话框中接受建议并检查生成的 commit title 和 description。",
+        "impact": "学生在课程项目、实验室 PR 和作业评审时，更容易看到哪些问题已修复、哪些仍待人工核验；这减少了重复阅读代码与 review 上下文的耗时，也有助于在提交前更顺畅地给出更清楚的提交说明。",
+        "free": "官方说明该能力现在 generally available，并面向 GitHub Copilot 用户；统一价格、个人或学生免费额度、地区差异和计划门槛官方未说明。",
+        "category": "AI 编程 / 代码评审",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-18",
+          "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience"
+        }
+      },
+      {
+        "event": "Copilot impact dashboard 现显示 feature engagement（2026-09-17）",
+        "summary": "GitHub 官方 changelog 宣布，Copilot impact dashboard 现在会统计活跃用户在 28 天窗口中是否定期使用关键 Copilot 功能；此外 enterprise 和 organization 28-day aggregate report 新增 feature engagement 和 AI adoption phase 统计。",
+        "howTo": "企业 owner 或 billing manager 在 GitHub Copilot usage metrics API 或 dashboard 中查看 feature engagement，按 code completion、agent edit、passive/active Copilot code review、Copilot cloud agent、Copilot CLI 和 Copilot app 维度筛选，再决定培训或配置重点。",
+        "impact": "学生实验室和课程团队可据此判断哪些 Copilot 功能真的在团队里被常态化使用，而不是只看是否开通；这帮助团队更精准地决定培训内容和组织级策略。",
+        "free": "官方明确该功能面向 enterprise 和 organization 28-day aggregate report，并要求 View Copilot Metrics 权限；具体免费额度、地区差异、个人计划可用性和账号资格官方未说明。",
+        "category": "AI 编程 / 团队采纳",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-17",
+          "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement"
+        }
+      },
+      {
+        "event": "GitHub Copilot weekly releases：auto model selection 和 Sentry 集成（2026-09-18）",
+        "summary": "GitHub 官方 weekly changelog 说明，本周 Copilot 新增 auto model selection 的 efficiency / balance / intelligence 三档、代码 review 的 shell tools 与 Lite review 合并、Sentry 集成，以及 VS Code agents 在本地 Dev Containers 和 PR 创建上的改进。",
+        "howTo": "在 VS Code、Copilot CLI 或 Copilot app 中打开模型选择器，按任务难度切换 Efficiency / Balance / Intelligence；在 Copilot app 中连接 Sentry canvas，从 crash report 跳转到代码修复；在 Agents 窗口启用本地 Dev Containers 并创建 pull request。",
+        "impact": "学生可把简单任务放在低成本模式，把复杂评审和修复任务切到更强能力档位，并利用 Sentry 从真实报错出发修复问题；但仍需人工复核 diff、测试和安全检查。",
+        "free": "官方说明功能在不同客户端逐步 rollout，并按实际选择的模型计费；统一免费额度、个人计划可用性、地区例外和具体账户资格官方未说明。",
+        "category": "AI 编程 / 生产力工具",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-18",
+          "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划适用于日常提问，并明确写出所有计划都受 rolling five-hour session window 影响，没有固定消息数。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始使用；在 Settings > Usage 中查看当前会话窗口和使用状态，达到限制后等待重置，不要把网页免费计划与 API 免费额度混为一谈。",
+        "impact": "学生可用于整理提纲、概念解释和语言润色，再自行核对事实、引用和计算；长文和高频研究前先检查正在使用的 session 限制。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session 限制；固定消息数、是否需要手机号、地区资格和 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API Free tier 与 AI Studio",
+        "summary": "Google AI Studio 官方定价页列出 Gemini API 的 Free tier，并说明开发者可以在有限模型和免费输入/输出 token 上构建原型实验。",
+        "howTo": "登录 Google AI Studio，创建或选择项目，确认当前支持的 Free tier 模型；用小规模请求测试提示词和 API 原型，并在模型页面查看 RPM、TPM、RPD 等限制。",
+        "impact": "学生可用它做摘要、分类、课程演示和功能原型，并记录请求次数与 token 用量；不要把 Free tier 当作长期无限吞吐或生产环境。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中切换 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 导入。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；分享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方权益页说明，verified students 可获得 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及通过 auto model selection 提供的有限 chat 和 agent 使用。",
+        "howTo": "访问 Student Developer Pack，完成学生资格验证并启用 Copilot Student；在支持的编辑器中使用补全，并在 GitHub 账户中查看 AI Credits 和 chat/agent 可用情况。",
+        "impact": "学生可用补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；生成代码仍需测试、许可证检查和人工核对。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期精选 9 月 17–18 日 BBC 与 The Guardian 可免费阅读全文的文章，避开全部既有 URL 和标题，覆盖 AI 风险、治理与技术监管；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "Why are there concerns AI could threaten humanity, and how real are they?",
+        "source": "BBC",
+        "published": "2026-09-17",
+        "url": "https://www.bbc.co.uk/news/articles/c790xvnzgnno",
+        "readingTime": "7",
+        "topic": "科技趋势 / AI 风险",
+        "summary": "BBC 报道围绕“AI 是否真的可能威胁人类”展开，先交代研究者、专家和企业高管为何担忧：随着系统能力提升，智能体可能获得更强自主性，进而在网络、国家安全和生物威胁等领域产生难以控制的后果。文章同时指出，这类警告有时基于假设和极端情景，而非已发生的实证事实；真正值得关注的，可能是现有的深度伪造、网络攻击、信息操纵和安全治理缺口。整篇文章把 existential risk 和现实威胁并置，强调在讨论人工智能的“未来风险”时，不能完全忽略当下已经出现的现实伤害。",
+        "reason": [
+          "AI 风险、监管与现实威胁是科技趋势类高频考点，适合做议论文阅读。",
+          "文章用“假设风险—现实风险—治理建议”的顺序展开，论证层次清楚。",
+          "可积累 existential risk、hyperbole、autonomy、cyber-attack 等高频抽象和安全词。",
+          "题目可考作者对极端威胁和现实威胁的区分，以及它们对公众认知和政策讨论的影响。",
+          "写作上可借鉴“先承认风险，再强调证据边界，再谈治理价值”的结构。"
+        ],
+        "vocabulary": [
+          { "word": "endanger", "phonetic": "/ɪnˈdeɪndʒə/", "part": "v.", "translation": "危及；使处于危险中" },
+          { "word": "autonomy", "phonetic": "/ɔːˈtɒnəmi/", "part": "n.", "translation": "自主性；自决权" },
+          { "word": "espionage", "phonetic": "/ˈespiəˌnɑːʒ/", "part": "n.", "translation": "间谍活动；间谍行为" },
+          { "word": "hyperbole", "phonetic": "/haɪˈpɜːbəli/", "part": "n.", "translation": "夸张；夸大之词" },
+          { "word": "deepfake", "phonetic": "/ˈdiːpfeɪk/", "part": "n.", "translation": "深度伪造" },
+          { "word": "misinform", "phonetic": "/ˌmɪsɪnˈfɔːm/", "part": "v.", "translation": "误导；提供错误信息" },
+          { "word": "prophetic", "phonetic": "/prəˈfetik/", "part": "adj.", "translation": "预言性的；先知般的" },
+          { "word": "scenario", "phonetic": "/səˈnɑːriəʊ/", "part": "n.", "translation": "情景；设想" },
+          { "word": "regulation", "phonetic": "/ˌreɡjʊˈleɪʃən/", "part": "n.", "translation": "监管；规则" },
+          { "word": "threat", "phonetic": "/θret/", "part": "n.", "translation": "威胁" }
+        ],
+        "sentences": [
+          {
+            "original": "AI researchers, experts and bosses worried about the technology's potential to endanger humanity have outlined unsettling scenarios.",
+            "analysis": [
+              "主干是 experts and bosses have outlined scenarios，前置定语说明担心对象。",
+              "worried about ... 是过去分词短语，修饰主语，说明他们的立场和焦虑来源。",
+              "potential to endanger humanity 提出未来风险的抽象层次，适合分析“潜在威胁”的表达。",
+              "unsettling scenarios 形容词和名词搭配，强调情景的不安和严重性。"
+            ],
+            "translation": "担心该技术可能危及人类的 AI 研究者、专家和企业高管已勾勒出令人不安的各种情景。"
+          },
+          {
+            "original": "These are tools given the ability to execute tasks and actions independently.",
+            "analysis": [
+              "主干是 These are tools，后置分词短语 given ... independently 修饰 tools。",
+              "given the ability to execute tasks and actions independently 强调自主执行能力。",
+              "independently 突出智能体分离人类控制的关键特征。",
+              "该句适合分析“工具被赋予更高自主性”这一技术变化的表述方式。"
+            ],
+            "translation": "这些是被赋予独立执行任务和行动能力的工具。"
+          },
+          {
+            "original": "However, such warnings are prophetic, hypothetical and, for some, complete hyperbole.",
+            "analysis": [
+              "However 起到转折作用，表示作者将把风险分析转向更现实的层面。",
+              "are prophetic, hypothetical and ... 形成三个并列表语，分别说明 warning 的特征。",
+              "for some 是插入语，说明不同群体对这些警示的接受程度不同。",
+              "complete hyperbole 很强的评价性表达，体现批评式立场，适合做词义辨析。"
+            ],
+            "translation": "然而，这种警告在某些人看来既带有预言性质，也具有假设性，甚至完全夸大其词。"
+          }
+        ]
+      },
+      {
+        "title": "‘A critical moment’: concern UK is not up to speed in acting on AI risks",
+        "source": "The Guardian",
+        "published": "2026-09-18",
+        "url": "https://www.theguardian.com/technology/2026/sep/18/a-critical-moment-concern-uk-is-not-up-to-speed-in-acting-on-ai-risks",
+        "readingTime": "10",
+        "topic": "科技趋势 / 公共治理",
+        "summary": "The Guardian 报道英国政府在 AI 安全治理方面存在“制度断层”：前政府曾推进立法与安全评估，但新任政府更关注国内财政与生活成本，部分官员担心 AI 风险已经从政策议程中淡出。文章从人工智能可能造成的灾难性风险切入，追溯英国此前在 AI 安全领域的国际协调与研究投入，再展示政界与产业之间对于监管权威和制度速度的分歧。结论不是否定创新，而是强调英国若想保持与美国、中国等国家竞争，不得不在安全标准和国际合作上更快行动。",
+        "reason": [
+          "AI 安全、国家治理和国际合作是技术政策中的关键议题，适合考研英语二阅读。",
+          "文章从“政策停滞”出发，回到历史脉络，再落到国际协作与监管不足，论证链很完整。",
+          "可积累 existential threat、regulation、safety institute、coordination 等高阶表达。",
+          "题目与结构适合考主旨、因果、作者态度和政策建议的题型。",
+          "写作上可借鉴“问题提出—历史背景—现实焦虑—政策需求”的层次。"
+        ],
+        "vocabulary": [
+          { "word": "existential threat", "phonetic": "/ˌeɡzɪˈstenʃəl θret/", "part": "n.", "translation": "生存性威胁" },
+          { "word": "regulate", "phonetic": "/ˈreɡjʊleɪt/", "part": "v.", "translation": "监管；约束" },
+          { "word": "coordination", "phonetic": "/kəʊˌɔːdɪˈneɪʃən/", "part": "n.", "translation": "协调；协同" },
+          { "word": "frontier", "phonetic": "/ˈfrʌntɪə/", "part": "adj./n.", "translation": "前沿的；前沿" },
+          { "word": "safety regime", "phonetic": "/ˈseɪfti reɪˌʒiːm/", "part": "n.", "translation": "安全制度；监管体系" },
+          { "word": "legislate", "phonetic": "/ˈledʒɪsleɪt/", "part": "v.", "translation": "立法" },
+          { "word": "compliance", "phonetic": "/kəmˈplaɪəns/", "part": "n.", "translation": "遵守；合规" },
+          { "word": "fragmentation", "phonetic": "/ˌfræɡmənˈteɪʃən/", "part": "n.", "translation": "碎片化；分散" },
+          { "word": "convene", "phonetic": "/kənˈviːn/", "part": "v.", "translation": "召开；召集" },
+          { "word": "dilemma", "phonetic": "/dɪˈlemə/", "part": "n.", "translation": "困境；进退两难" }
+        ],
+        "sentences": [
+          {
+            "original": "The first duty of government is to keep people safe.",
+            "analysis": [
+              "主干是 The first duty of government is to keep people safe，属于经典的政策伦理句型。",
+              "first duty 强调政府职责的优先级与责任归属。",
+              "keep people safe 是高度概括的价值判断，适合分析政府职责表达。",
+              "该句能直接用于论证型写作中的“职责—价值—行动”逻辑。"
+            ],
+            "translation": "政府的首要职责是保障人民安全。"
+          },
+          {
+            "original": "The government’s response to an existential threat cannot be to throw its hands up in the air and say there is nothing we can do.",
+            "analysis": [
+              "主干是 The government’s response cannot be...，否定判断很强。",
+              "to throw its hands up in the air and say there is nothing we can do 是对被否定行为的具体描述。",
+              "existential threat 提升议题层次，暗含超越普通风险的国际性威胁。",
+              "句中用 and 连接两个动作，形成僵化无作为的形象化描述。"
+            ],
+            "translation": "面对生存性威胁，政府不能只是束手无策地说我们无能为力。"
+          },
+          {
+            "original": "If the US and China do not figure this out, the UK is unlikely to deliver a safe environment on its own.",
+            "analysis": [
+              "If 条件句引出国际环境与国家能力之间的关系。",
+              "figure this out 是口语化但熟悉的表述，强调共同解决问题的必要。",
+              "the UK is unlikely to deliver a safe environment on its own 表达国家单边能力有限。",
+              "句子适合分析条件句的因果逻辑与国际协作的必要性。"
+            ],
+            "translation": "如果美国和中国都无法解决这个问题，英国就不太可能单独打造一个安全环境。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260918 = {
   "date": "2026-09-18",
   "status": "ready",
@@ -3235,14 +3463,14 @@ const issue20260917 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-18T01:09:43+08:00",
+ "updatedAt": "2026-09-19T09:04:18+08:00",
  "issues": [
+   issue20260919,
    issue20260918,
    issue20260917,
    issue20260916,
    issue20260915,
    issue20260914,
-   issue20260913,
-   issue20260912
+   issue20260913
  ]
 };
