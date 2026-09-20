@@ -2692,6 +2692,307 @@ const issue20260915 = {
   }
 };
 
+const issue20260920 = {
+  "date": "2026-09-20",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 9 月 17–18 日 GitHub 官方更新，并复核 9 月 20 日仍可用的免费资源；所有价格、额度、地区和 rollout 说明均按官方来源写明，未说明处显式注明。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 代码审查改进 review experience（2026-09-18）",
+        "summary": "GitHub 官方 changelog 说明，Copilot code review 现在会更清晰地展示 review 的进展状态：Open、Resolved since last review、Previously missed findings，并在批量接受建议时生成更有用的 commit message，同时改进了自动解决已处理评论的规则。",
+        "howTo": "在 GitHub pull request 页面请求 Copilot review；查看 review overview 中的 Open / Resolved since last review / Previously missed 分类，再在批量建议对话框中接受建议并检查生成的 commit title 和 description。",
+        "impact": "学生在课程项目、实验室 PR 和作业评审时，更容易看到哪些问题已修复、哪些仍待人工核验；这减少了重复阅读代码与 review 上下文的耗时，也让提交前更容易产出更清楚的提交说明。",
+        "free": "官方说明该能力现在 generally available，并面向 GitHub Copilot 用户；统一价格、个人或学生免费额度、地区差异和计划门槛官方未说明。",
+        "category": "AI 编程 / 代码评审",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-18",
+          "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience"
+        }
+      },
+      {
+        "event": "GitHub Copilot 周更新：模型选择、Sentry 集成与 VS Code agents（2026-09-18）",
+        "summary": "GitHub 官方周更新列出三类关键改动：auto model selection 新增 efficiency / balance / intelligence 三个权衡层级；Copilot app 新增 Sentry canvas，可从 crash report 进入代码修复；VS Code Agents 窗口也新增本地 Dev Container 与 PR 创建体验。",
+        "howTo": "在 VS Code、Copilot CLI 或 Copilot app 中打开模型选择器，选择 auto model selection 的 efficiency / balance / intelligence；在 Copilot app 中连接 Sentry 并开始从 crash report 到修复的工作流；如需本地容器代理，确认 Docker 与支持的 Dev Container 配置已启用。",
+        "impact": "学生可更快比较不同模型在成本、质量和速度上的权衡，也能在修复程序崩溃时保持更短的迭代闭环；但仍需保留人工测试和代码审查，而不是直接信任 agent 的“已修复”结论。",
+        "free": "官方说明这些能力面向不同客户端和计划；统一免费额度、学生资格、地区范围和所有功能的费用细则官方未说明。",
+        "category": "AI 编程 / 生产力工具",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-18",
+          "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14"
+        }
+      },
+      {
+        "event": "GitHub Copilot 选定模型将于 2026-10-19 停用（2026-09-18）",
+        "summary": "GitHub 官方 changelog 公布，多个 Copilot 模型将在 2026-10-19 停用，名单包括 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5；官方建议迁移到对应替代模型。",
+        "howTo": "在 Copilot Chat、inline edits、ask/agent 模式和代码补全的工作流中检查当前使用的模型；在组织或企业的 Copilot model policy 中确认替代模型已启用，再在模型选择器中切换到建议的备选。",
+        "impact": "学生和实验室若在课程项目中依赖这些老模型，应提前替换并在截止前重新验证工作流，避免作业和脚本因模型下线而输出差异增大。",
+        "free": "这是模型生命周期更新，不是新优惠；官方未说明个人或学生计划、统一免费额度和地区范围，且企业/Business 管理员需自行控制替代模型启用状态。",
+        "category": "AI 模型 / 生命周期",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-18",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Microsoft Copilot 免费网页 / 应用访问",
+        "summary": "Microsoft Copilot 官方入口展示了免费使用的网页和应用入口，学生可在不付费的前提下直接体验常规 AI 问答、总结和写作辅助。",
+        "howTo": "打开 copilot.microsoft.com，使用 Microsoft 账户登录或继续以访客方式试用；在聊天界面输入任务或要求生成摘要、解释和草案，然后按需要复核答案。",
+        "impact": "学生可以快速做笔记整理、课程概念解释、邮件草稿和资料总结，降低信息检索和写作起步成本；但大规模文档处理或高频使用需先确认当前功能和账号限制。",
+        "free": "官方站点提供免费入口；具体高级功能、地区限制、额度与账号资格官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Microsoft Copilot 官方入口",
+          "published": "官方未说明",
+          "url": "https://copilot.microsoft.com/"
+        }
+      },
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划可用于日常提问，并在页面中写明所有计划都受 rolling five-hour session window 影响。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前会话窗口状态，达到限制后等待重置。",
+        "impact": "学生可用它做提纲、概念解释、语言润色和研究问题初步判断；长文和高频分析前应注意当前窗口是否已耗尽。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session window；固定消息数、是否需要手机号、地区资格和 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      },
+      {
+        "event": "Google Gemini API Free tier 与 AI Studio",
+        "summary": "Google AI Studio 官方定价页列出 Gemini API 的免费层，并说明可用模型和免费输入/输出 token 由当前页面所列为准。",
+        "howTo": "登录 Google AI Studio，创建或选择项目后，选择当前支持的 Free tier 模型测试提示词和 API 原型；开始前查看模型页中的 RPM、TPM 和 RPD 限制。",
+        "impact": "学生可用它做摘要、文本处理、课程演示和 API 原型，而无需先付费；但不要把免费层误当作长期无限吞吐。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明，它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU、TPU 等计算资源，适合机器学习、数据科学和教育。",
+        "howTo": "打开 Colab，用 Google 账号新建或导入 notebook；需要时在运行时设置中切换 GPU/TPU，并将 notebook 保存到 Drive 或从 GitHub 导入。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；分享前应检查输出、密钥和个人数据，避免无意泄露敏感信息。",
+        "free": "官方确认免费，但资源不保证且不无限，使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方页面说明，verified students 可获得 Copilot Student、GitHub AI Credits 与有限的 chat/agent 权益，并能在支持的编辑器中使用代码补全。",
+        "howTo": "访问 Student Developer Pack，完成学生资格验证并启用 Copilot Student；在支持编辑器中使用代码补全，并在 GitHub 账户中查看 AI Credits 和 chat/agent 的可用状态。",
+        "impact": "学生可以把这些权益用于课程项目、作业和学习路径，减少样板代码工作；生成代码仍需本地测试、许可证审查和人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，且仅通过 auto model selection 提供。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "精选 9 月 18–19 日可免费阅读全文的 BBC、The Guardian 与 NPR 文章，避开全部既有 URL 和标题，覆盖 AI 政策、公共预算与媒体自由；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar",
+        "source": "BBC",
+        "published": "2026-09-19",
+        "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o",
+        "readingTime": "7",
+        "topic": "科技趋势 / 公共治理",
+        "summary": "BBC 报道了美国政府围绕 AI 安全和监管展开的新一轮争论：一方面，AI 研究者和企业高管警告超级智能与安全风险，另一方面，特朗普政府正在考虑建立更集中、以国家安全为导向的 AI 统筹机制。文章以“AI Force”和“AI tsar”提出政策方向，说明国家治理并不只是增加监管，而是要协调军事、技术和政治利益，确保 AI 能力发展不脱离公共责任。它还强调人工智能更快发展所带来的治理滞后问题，适合用于讨论国家能力、法规边界与技术信任之间的关系。",
+        "reason": [
+          "AI 安全、国家治理和公共政策是科技趋势类高频主题。",
+          "文章由研究者警告—企业回应—政策回应的链条展开，论证层次清晰。",
+          "可积累 regulation、super intelligence、oversight、legislation 等抽象词。",
+          "题目可考美国治理范式、监管滞后和企业信任之间的张力。",
+          "写作上可借鉴“事实风险—政策回应—制度争议”的结构。"
+        ],
+        "vocabulary": [
+          { "word": "regulation", "phonetic": "/ˌreɡjʊˈleɪʃən/", "part": "n.", "translation": "监管" },
+          { "word": "oversight", "phonetic": "/ˈəʊvəsaɪt/", "part": "n.", "translation": "监督；监管" },
+          { "word": "super intelligence", "phonetic": "/ˈsuːpər ɪnˈtɛlɪdʒəns/", "part": "n.", "translation": "超级智能" },
+          { "word": "legislation", "phonetic": "/ˌledʒɪˈsleɪʃən/", "part": "n.", "translation": "立法" },
+          { "word": "malicious activity", "phonetic": "/məˈlɪʃəs ækˈtɪvəti/", "part": "n.", "translation": "恶意活动" },
+          { "word": "keep pace", "phonetic": "/kiːp peɪs/", "part": "phr.", "translation": "跟上步伐" },
+          { "word": "mandatory", "phonetic": "/ˈmændətəri/", "part": "adj.", "translation": "强制性的" },
+          { "word": "monitoring", "phonetic": "/ˈmɒnɪtərɪŋ/", "part": "n.", "translation": "监测" },
+          { "word": "governance", "phonetic": "/ˈɡʌvənəns/", "part": "n.", "translation": "治理" },
+          { "word": "safety", "phonetic": "/ˈseɪfti/", "part": "n.", "translation": "安全" }
+        ],
+        "sentences": [
+          {
+            "original": "The warnings have prompted US lawmakers to propose legislation around the technology.",
+            "analysis": [
+              "主干是 The warnings have prompted lawmakers to propose legislation。",
+              "around the technology 修饰 legislation，说明立法对象是 AI 相关领域。",
+              "prompted 表明外部警示导致政策动作，体现因果逻辑。",
+              "该句适合分析“风险—立法—回应”的新闻表达。"
+            ],
+            "translation": "这些警告促使美国立法者提议围绕该技术制定立法。"
+          },
+          {
+            "original": "The world should trust that we are going to do the right thing because it's the right thing and we feel the magnitude of this.",
+            "analysis": [
+              "是典型的价值判断句，that 从句承接 trust 的内容。",
+              "because it's the right thing and we feel the magnitude of this 形成双重理由。",
+              "magnitude of this 是高度抽象的名词短语，强调风险与责任的重大性。",
+              "该句适合练习作者立场与价值论证的表达。"
+            ],
+            "translation": "世界应相信，我们会因为这是正确的事而做正确的事，因为我们也清楚这一问题的严重程度。"
+          },
+          {
+            "original": "Major AI companies have been racing to develop better systems, including creating what they call super intelligence.",
+            "analysis": [
+              "主干是 companies have been racing to develop better systems。",
+              "including creating what they call super intelligence 是现在分词结构补充说明。",
+              "what they call super intelligence 体现记者对术语的准确认同。",
+              "该句强调 AI 发展与企业竞赛的速度特征。"
+            ],
+            "translation": "大型 AI 公司一直在竞相开发更强的系统，其中包括创造他们称之为超级智能的技术。"
+          }
+        ]
+      },
+      {
+        "title": "Brazil’s Lula announces higher welfare payments and free weight-loss jabs ahead of election",
+        "source": "The Guardian",
+        "published": "2026-09-18",
+        "url": "https://www.theguardian.com/world/2026/sep/18/brazil-lula-welfare-payments-weight-loss-jabs-election",
+        "readingTime": "7",
+        "topic": "经济 / 政治 / 公共健康",
+        "summary": "The Guardian 报道了巴西总统卢拉在大选前推出的社会保障调整：一方面提高主要现金转移计划的金额，另一方面承诺为民众提供免费减重针剂。文章通过对比反对派批评与支持者辩护，展示了公共福利、选举政治和预算责任之间的复杂关系。它不只关注政策本身，也讨论这些举措是否符合法律、是否会改变选民意愿，以及相似政策在此前曾被如何评价，这使本文兼具经济、政治和制度分析价值。",
+        "reason": [
+          "社会福利、预算与选举政治是常见的经济社会热点。",
+          "文章采用争论—背景—类比—制度评论的结构，论证链条完整。",
+          "可积累 welfare、cash-transfer、inflation、incumbent、electoral 等高频词。",
+          "题目可考判断政策如何与选举政治结合，以及作者如何平衡事实与批评。",
+          "写作上适合练习从政策措施入手，转向利益冲突与法律界限。"
+        ],
+        "vocabulary": [
+          { "word": "welfare", "phonetic": "/ˈwelfeə/", "part": "n.", "translation": "福利" },
+          { "word": "cash-transfer", "phonetic": "/kæʃ ˈtrænsfɜː/", "part": "n.", "translation": "现金转移计划" },
+          { "word": "inflation", "phonetic": "/ɪnˈfleɪʃən/", "part": "n.", "translation": "通货膨胀" },
+          { "word": "incumbent", "phonetic": "/ɪnˈkʌmbənt/", "part": "n.", "translation": "在任者" },
+          { "word": "runoff", "phonetic": "/ˈrʌnɒf/", "part": "n.", "translation": "决选；第二轮投票" },
+          { "word": "eligible", "phonetic": "/ˈelɪdʒəbl/", "part": "adj.", "translation": "符合资格的" },
+          { "word": "electoral", "phonetic": "/ɪˈlɛktərəl/", "part": "adj.", "translation": "选举的" },
+          { "word": "vulnerable", "phonetic": "/ˈvʌlnərəbəl/", "part": "adj.", "translation": "弱势的；脆弱的" },
+          { "word": "purchasing power", "phonetic": "/ˈpɜːtʃəsɪŋ ˈpaʊər/", "part": "n.", "translation": "购买力" },
+          { "word": "budgetary", "phonetic": "/bʌdʒɪˈtɛri/", "part": "adj.", "translation": "预算的" }
+        ],
+        "sentences": [
+          {
+            "original": "The rise in the monthly payment, from about £98 to £113, that he announced on Thursday is due to take effect on 19 October, just before the likely runoff vote on 25 October.",
+            "analysis": [
+              "主干是 The rise ... is due to take effect on 19 October。",
+              "from about £98 to £113 说明增幅和基数，增添数量信息。",
+              "that he announced on Thursday 是定语从句修饰 payment。",
+              "just before the likely runoff vote... 把政策与选举时间准确关联，体现报道的政治脉络。"
+            ],
+            "translation": "他周四宣布的月度补贴将从约 98 英镑提高到 113 英镑，并将于 10 月 19 日生效，恰好在 10 月 25 日可能举行的第二轮投票前。"
+          },
+          {
+            "original": "Lula said it was not really an increase, but an adjustment in line with inflation to 'protect the purchasing power of the most vulnerable families'.",
+            "analysis": [
+              "not really an increase, but ... 是典型的辩解结构。",
+              "in line with inflation 明确说明调整理由，强调政策依据。",
+              "protect the purchasing power ... 是价值判断型措辞，强化政策正当性。",
+              "该句适合分析“政策理由—价值表达—政治防御”的交织。"
+            ],
+            "translation": "卢拉表示，这并不是真正的涨幅，而是与通胀保持一致的调整，用来“保护最弱势家庭的购买力”。"
+          },
+          {
+            "original": "He said that although Lula, like his predecessor, is also being criticised for unveiling a package of benefits on the eve of the election...",
+            "analysis": [
+              "该句使用 that 从句表达作者引述的观点。",
+              "although ... is also ... 形成对比，让作者保留对两种情况的区分。",
+              "on the eve of the election 说明举措时间敏感性。",
+              "该句适合分析“前后对比 + 语气保留”的新闻写作。"
+            ],
+            "translation": "他表示，尽管卢拉像前任一样也因在选举前夕发布一整套福利方案而受到批评……"
+          }
+        ]
+      },
+      {
+        "title": "CNN, MS NOW, Politico reporters denied access to White House following Trump ban",
+        "source": "NPR",
+        "published": "2026-09-19",
+        "url": "https://www.npr.org/2026/09/19/nx-s1-5974854/trump-cnn-msnow-politico-ban",
+        "readingTime": "8",
+        "topic": "社会 / 媒体 / 公共治理",
+        "summary": "NPR 报道了特朗普政府对 CNN、MS NOW 和 Politico 记者实施进出白宫禁令的事件，并从新闻自由、宪法原则和政治权力之间的关系展开讨论。文章叙述了禁令生效的过程、媒体机构的反应和 White House Correspondents' Association 的立场，体现出一场关于新闻自由、执政权与美国政治文化的深层冲突。整体上它很适合讨论“政府如何界定报道对象”和“是否能以批评为由剥夺媒体进入权”的议题。",
+        "reason": [
+          "新闻自由、媒体边界和宪法原则是公共治理与社会议题的经典组合。",
+          "文章按“禁令—反应—法律争议—历史类比”推进，结构非常清晰。",
+          "可积累 access、First Amendment、arbitrary、scrutinize、democracy 等词。",
+          "题目可考作者如何用事实与法律来评估政府权力边界。",
+          "写作上适合练习“事件—反应—法律判断—历史例证”的组织方式。"
+        ],
+        "vocabulary": [
+          { "word": "access", "phonetic": "/ˈækses/", "part": "n.", "translation": "进入权；获取" },
+          { "word": "First Amendment", "phonetic": "/fɜːst əˈmɛndmənt/", "part": "n.", "translation": "美国宪法第一修正案" },
+          { "word": "arbitrary", "phonetic": "/ˈɑːbɪtrəri/", "part": "adj.", "translation": "任意的；武断的" },
+          { "word": "scrutinize", "phonetic": "/ˈskruːtɪnaɪz/", "part": "v.", "translation": "仔细审查" },
+          { "word": "coverage", "phonetic": "/ˈkʌvərɪdʒ/", "part": "n.", "translation": "报道；覆盖" },
+          { "word": "journalism", "phonetic": "/ˈdʒɜːnəlɪzəm/", "part": "n.", "translation": "新闻业；新闻报道" },
+          { "word": "intimidate", "phonetic": "/ɪnˈtɪmɪdeɪt/", "part": "v.", "translation": "威胁；恐吓" },
+          { "word": "democracy", "phonetic": "/dɪˈmɒkrəsi/", "part": "n.", "translation": "民主" },
+          { "word": "press conference", "phonetic": "/pres ˈkɒnfərəns/", "part": "n.", "translation": "新闻发布会" },
+          { "word": "constitution", "phonetic": "/ˌkɒnstɪˈtjuːʃən/", "part": "n.", "translation": "宪法" }
+        ],
+        "sentences": [
+          {
+            "original": "Trump said in a Truth Social post on Friday he was banning these outlets from the White House, citing negative coverage of his administration.",
+            "analysis": [
+              "主干是 Trump said ... he was banning ...。",
+              "in a Truth Social post on Friday 提供了时间和传播渠道背景。",
+              "citing negative coverage of his administration 正说明禁令的理由。",
+              "该句兼具事实与归因，适合分析新闻中的“动机—行为—证据”结构。"
+            ],
+            "translation": "特朗普在周五的 Truth Social 帖文中表示，他正在禁止这些媒体进入白宫，并以其对政府的负面报道为由。"
+          },
+          {
+            "original": "The American people, through a free and independent press, must be able to scrutinize those elected to power.",
+            "analysis": [
+              "The American people, through a free and independent press, 是句子主语。",
+              "must be able to scrutinize ... 强调新闻自由与公众监督的必要性。",
+              "those elected to power 是对政治权力的概括，突出监督对象。",
+              "适合练习“原则—公众责任—政治权力”三段式。"
+            ],
+            "translation": "通过自由独立的新闻界，美国人民必须能够监督那些被选举上台的人。"
+          },
+          {
+            "original": "The ban is, on its face, unconstitutional.",
+            "analysis": [
+              "主干是 The ban is unconstitutional。",
+              "on its face 是固定表达，表示从表面上看。",
+              "unconstitutional 直接触发法理讨论，强化了争议性质。",
+              "这是一句短而重的法律判断，适合写作中总结观点。"
+            ],
+            "translation": "从表面上看，这项禁令违宪。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260919 = {
   "date": "2026-09-19",
   "status": "ready",
@@ -3463,14 +3764,14 @@ const issue20260917 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-19T09:04:18+08:00",
+ "updatedAt": "2026-09-20T08:54:32+08:00",
  "issues": [
+   issue20260920,
    issue20260919,
    issue20260918,
    issue20260917,
    issue20260916,
    issue20260915,
-   issue20260914,
-   issue20260913
+   issue20260914
  ]
 };
