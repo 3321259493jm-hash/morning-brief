@@ -1,3 +1,304 @@
+const issue20260923 = {
+  "date": "2026-09-23",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 2026-09-22 至 2026-09-23 的官方 GitHub Copilot 更新，并复核仍可用的免费资源；所有价格、额度、账号资格与地区说明均按官方页面所写。",
+    "updates": [
+      {
+        "event": "OpenAI 的 GPT-6 Sol 与 GPT-6 Luna 已在 GitHub Copilot 中推出（2026-09-22）",
+        "summary": "GitHub 官方 changelog 说明，OpenAI 的 GPT-6 系列在 GitHub Copilot 中新增 GPT-6 Sol 和 GPT-6 Luna，接续此前推出的 GPT-6 Astra，可在更长周期、多步骤任务中提供更灵活的模型选择。",
+        "howTo": "在支持的 GitHub Copilot 客户端中打开模型选择器，选择 GPT-6 Sol 或 GPT-6 Luna；如果尚未出现，请等待逐步 rollout。若需要在团队环境中标准化模型选择，可在组织或企业的 model policy 中统一控制可见性。",
+        "impact": "学生可把它们放在复杂研究、跨文件脚本整理和代码重构等任务中试用，尤其适合需要较长上下文和更强推理的方案设计；不过仍需保留测试输出和人工检视，避免直接把模型判断当成结论。",
+        "free": "官方说明这两个模型已在 GitHub Copilot 中推出；具体可用计划、免费额度、账号资格和地区适配信息未在 changelog 中统一列明，需以当前 Copilot 计划和模型策略为准。",
+        "category": "AI 编程 / 模型",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available"
+        }
+      },
+      {
+        "event": "Claude Opus 5.5 已在 GitHub Copilot 中推出（2026-09-22）",
+        "summary": "GitHub 官方 changelog 说明，Anthropic 的 Claude Opus 5.5 现已在 GitHub Copilot 中可用，定位为 agentic coding、长任务代理与知识工作场景的高端模型，适合复杂分析和多步骤计划执行。",
+        "howTo": "在支持的 GitHub Copilot 客户端中打开模型选择器，选择 Claude Opus 5.5；若你的组织或企业启用了模型策略，确保它在允许列表中。对复杂任务建议先建立小范围验证，再统一执行更大范围的梳理与修改。",
+        "impact": "学生可用它处理大规模代码阅读、需求分解和研究笔记整合，但对关键决策、代码安全和论文结论仍需人工复核，尤其在需要严格事实核对时更应谨慎。",
+        "free": "官方 changelog 说明该模型在 GitHub Copilot 中可用，但未写明统一免费额度、学生资格、地区例外以及各计划的使用限制；需以当前 Copilot 计划、模型策略和 provider pricing 为准。",
+        "category": "AI 编程 / 模型",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot"
+        }
+      },
+      {
+        "event": "Copilot for JetBrains 1.18.0 新增审批、组织共享技能与更强代理体验（2026-09-22）",
+        "summary": "GitHub 官方 changelog 表示，Copilot for JetBrains 1.18.0 重点更新了 AI-assisted tool approvals、对 agent conversation 的更多控制，以及组织级共享 skills 和 instructions；同时更新了计划复核体验，便于在 JetBrains IDE 中更清楚地审查 agent 方案。",
+        "howTo": "在 JetBrains IDE 中更新 Copilot 插件到 1.18.0，打开 agent 会话和 plan review；在组织级设置中共享 skills 或 instructions，并在 tool approval 中批准或拒绝敏感操作；对多步骤任务，优先做小规模验证后再放大执行。",
+        "impact": "学生和团队可以在 Java/Kotlin、Spring 等项目中更顺畅地让 Copilot 审核计划、调用工具和管理上下文，同时把共享指令沉淀为可复用的项目规范；但敏感操作和外部网络调用仍应保留人工批准。",
+        "free": "官方 changelog 说明这是 Copilot for JetBrains 的更新，不是单独的新免费计划；具体免费额度、个人/学生资格、地区例外和各计划限制官方未统一说明。",
+        "category": "AI 编程 / IDE",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Microsoft Copilot Free 网页版免费访问",
+        "summary": "Microsoft 官方 Copilot 网站说明 Copilot 可在网页和移动端免费使用，适合日常对话、研究整理和基础创作；自由版的具体功能边界以当前 app 说明为准。",
+        "howTo": "打开 https://copilot.microsoft.com/ 并使用 Microsoft 账号登录；在聊天页输入研究问题、概念解释或写作草稿，并在页面顶部查看是否展示付费升级提示与功能限制。",
+        "impact": "学生可以用于概念解释、论文提纲整理、英文润色和日程规划；但大规模生成、长期深度研究和高强度工作流仍应留意功能上限与计费提示。",
+        "free": "官方页面明确提供免费入口；具体消息数、生成次数、地区范围和付费升级条件官方未在页面中统一列明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Microsoft Copilot 官方应用页",
+          "published": "官方未说明",
+          "url": "https://copilot.microsoft.com/"
+        }
+      },
+      {
+        "event": "Google Gemini API Free tier 与 AI Studio",
+        "summary": "Google AI Studio 官方定价页说明 Gemini API 提供免费层，并可在 AI Studio 中进行原型测试；用户可在受限模型和免费输入/输出 token 范围内开展项目探索。",
+        "howTo": "登录 Google AI Studio，创建项目并在模型列表中查看当前可用的 Free tier 模型；用小规模请求测试提示词、摘要和 API 原型，并在模型页查看 RPM、TPM、RPD 等限制。",
+        "impact": "学生可以用它做摘要、课程演示、文本结构分析和 API 原型验证；但不要把免费层当作无限吞吐或生产环境。",
+        "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合机器学习、数据科学和教育场景。",
+        "howTo": "打开 Colab，新建或导入 notebook；在运行时设置中切换 GPU 或 TPU，并将 notebook 保存到 Google Drive 或从 GitHub 导入。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；在分享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
+        "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方权益页说明，verified students 可获得 Copilot Student，包含 unlimited code completion、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 与 agent 使用。",
+        "howTo": "访问 Student Developer Pack 完成学生资格验证；验证后在 GitHub 上启用 Copilot Student，并在支持的编辑器中使用补全和 chat/agent 入口。",
+        "impact": "学生可用代码补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；所有生成代码仍需本地测试、许可证审核和人工检查。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Qwen3-0.6B 开放权重模型可本地下载",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B：0.6B 参数、32,768 上下文长度，并支持 thinking 和 non-thinking 模式切换；页面给出 Transformers、vLLM 和本地工具的运行方式。",
+        "howTo": "在 Hugging Face 打开 Qwen/Qwen3-0.6B，按模型卡安装最新版 Transformers，下载 tokenizer 和模型后运行示例；也可用 Ollama、LM Studio 或 llama.cpp 进行本地推理。",
+        "impact": "学生可在本地或 Colab 里做轻量推理、对比提示词和多语言实验，对模型部署和资源约束有更直观理解，而不必先调用付费 API。",
+        "free": "模型权重可从官方 Hugging Face 页面下载；本地软件、GPU、存储和网络可能产生费用，统一免费 API 配额、账号资格和地区范围官方未说明。",
+        "category": "开放模型权重",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期精选 2026-09-11 至 2026-09-23 可免费阅读全文的 Guardian/NPR 文章，覆盖教育、住房和数据中心增长；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "Why has university become such a scam?",
+        "source": "The Guardian",
+        "published": "2026-09-14",
+        "url": "https://www.theguardian.com/commentisfree/2026/sep/14/why-has-university-become-such-a-scam",
+        "readingTime": "8",
+        "topic": "教育 / 高等教育与经济",
+        "summary": "这篇文章以“大学为什么变成了如此大的骗局”作为标题，直接指出一代毕业生背负巨额学费与债务，却面对越来越少的稳定入门岗位。作者先用大量数据和现实例子强调，毕业生不只是工作起步较晚，而是实际收入难以覆盖债务压力，家庭依赖和返家现象也因此更普遍。文章随后回溯 2012 年学费上调时的政策逻辑：当时政府承诺高学位可换来更高收入，但现实证明这种“债务会被未来收入抵消”的承诺并没有成立。最后作者将问题总结为一个更尖锐的社会判断：这不是对年轻人的简单忽视，而是制造了一个大量人被迫承受长期负担，却几乎没有获得相应回报的制度。",
+        "reason": [
+          "教育、青年就业与负债问题是高频社会经济议题，且具现实冲击力。",
+          "文章用“骗局”作为标题，再用数据与行文层层拆解制度逻辑，论证结构明显。",
+          "可积累 debt, tuition, entry-level jobs, earning capacity 等高频抽象词。",
+          "写作适合分析“政策承诺—现实偏差—制度失效”的逻辑链。",
+          "句子和论证都适合练习“提出问题—反驳假设—形成批判结论”的议论文框架。"
+        ],
+        "vocabulary": [
+          { "word": "tuition", "phonetic": "/tjuːˈɪʃən/", "part": "n.", "translation": "学费" },
+          { "word": "debt", "phonetic": "/det/", "part": "n.", "translation": "债务" },
+          { "word": "entry-level", "phonetic": "/ˈɛntriː ˈlevəl/", "part": "adj.", "translation": "入门级的" },
+          { "word": "earning capacity", "phonetic": "/ˈɜːnɪŋ kəˈpæsəti/", "part": "n.", "translation": "挣钱能力" },
+          { "word": "offset", "phonetic": "/ˈɒfset/", "part": "v.", "translation": "抵消；补偿" },
+          { "word": "plummet", "phonetic": "/ˈplʌmɪt/", "part": "v.", "translation": "骤降；暴跌" },
+          { "word": "repayment", "phonetic": "/rɪˈpeɪmənt/", "part": "n.", "translation": "还款" },
+          { "word": "incoherent", "phonetic": "/ˌɪnkəʊˈhɪərənt/", "part": "adj.", "translation": "不连贯的；混乱的" },
+          { "word": "remiss", "phonetic": "/rɪˈmɪs/", "part": "adj.", "translation": "失职的；疏忽的" },
+          { "word": "headway", "phonetic": "/ˈhedweɪ/", "part": "n.", "translation": "进展；进步" }
+        ],
+        "sentences": [
+          {
+            "original": "Graduates are leaving with an average debt of £53,000 – while entry-level jobs plummet.",
+            "analysis": [
+              "主干是 Graduates are leaving with an average debt... while entry-level jobs plummet。",
+              "with an average debt of £53,000 是伴随状态，强调毕业生负担之重。",
+              "while 引导对比关系，形成“债务在涨—岗位在跌”的鲜明冲突。",
+              "该句适合抓住文章的核心冲突，便于做题时定位问题的严重性。"
+            ],
+            "translation": "毕业生离校时平均背负 53,000 英镑的债务，而入门级岗位却在暴跌。"
+          },
+          {
+            "original": "The students themselves were almost a side issue in this debate: the promise was that the debt would be more than offset by their increased earning capacity, once they had a degree.",
+            "analysis": [
+              "主干是 The students ... were almost a side issue，后面说明政策辩论的核心是 debt 与 earning capacity 的关系。",
+              "the promise was that ... 是典型的“承诺—现实反例”写法。",
+              "more than offset 形成强烈的经济学语境，适合分析宏观政策和个人成本之间的误判。",
+              "冒号后展开具体承诺，便于训练“总述—解释—细化”的结构。"
+            ],
+            "translation": "在这场辩论中，学生本人几乎成了旁支：其承诺是，毕业后他们的收入提升将足以抵消债务。"
+          },
+          {
+            "original": "It’s one thing to deprioritise the younger generation, it’s another to straight up scam them.",
+            "analysis": [
+              "It’s one thing ... it’s another to ... 是典型的对比句式，强化观点尖锐度。",
+              "deprioritise 与 scam 形成强烈语义对比，说明作者从“忽视”升级到“欺骗”。",
+              "straight up 是口语化表达，增强文章批评语气，适合用于写作中进一步强调立场。",
+              "整句总结了文章最极端但最强烈的价值判断。"
+            ],
+            "translation": "忽视年轻一代是一回事，直接欺骗他们则是另一回事。"
+          }
+        ]
+      },
+      {
+        "title": "Pay rent, eat or keep warm? Growing numbers face hard choices as housing benefit gap grows",
+        "source": "The Guardian",
+        "published": "2026-09-23",
+        "url": "https://www.theguardian.com/business/2026/sep/23/pay-rent-eat-or-keep-warm-growing-numbers-face-hard-choices-as-housing-benefit-gap-grows",
+        "readingTime": "7",
+        "topic": "经济 / 住房与生活成本",
+        "summary": "这篇文章以一位在威尔士地区抚养孩子的单身母亲为例，说明住房补贴在面对实际房租上涨时日益捉襟见肘。作者写道，许多低收入租房者不得不在支付房租、买食物和保持温暖之间做出难以承受的选择，甚至必须转向食物银行。文章的核心论证是，住房补贴并未跟上本地租金上涨的速度，因此贫困不只是“支付能力差”，而是底层生活被迫被不断压缩：餐食变差、燃气减少、睡眠受影响，最终影响家庭心理健康和育儿表现。它以个人故事切入，再扩展到全社会的公共政策问题，形成了“生活困境—制度缺口—政策回应”的结构。",
+        "reason": [
+          "住房成本、社保与生活质量是典型的社会经济议题，题材现实且有广泛讨论价值。",
+          "文章从一个家庭故事切入，再扩展到更大范围的住房补贴缺口，叙事层层推进。",
+          "可积累 rent gap, housing allowance, food bank, cost of living, mental health 等词汇。",
+          "适合分析“个人困境—制度性问题—政策必要性”的论证链。",
+          "语篇既有生活细节，也有政策讨论，适合练习议论文中的案例论证。"
+        ],
+        "vocabulary": [
+          { "word": "housing allowance", "phonetic": "/ˈhaʊzɪŋ əˈlaʊəns/", "part": "n.", "translation": "住房补贴" },
+          { "word": "rent gap", "phonetic": "/rent ɡæp/", "part": "n.", "translation": "租金差额" },
+          { "word": "food bank", "phonetic": "/fuːd bæŋk/", "part": "n.", "translation": "食物银行" },
+          { "word": "improvise", "phonetic": "/ˈɪmprəvaɪz/", "part": "v.", "translation": "临时应付；凑合" },
+          { "word": "juggle", "phonetic": "/ˈdʒʌɡəl/", "part": "v.", "translation": "勉强应付；腾挪" },
+          { "word": "housing benefit", "phonetic": "/ˈhaʊzɪŋ ˈbenɪfɪt/", "part": "n.", "translation": "住房福利" },
+          { "word": "local authority", "phonetic": "/ˈləʊkəl ɔːˈθɒrəti/", "part": "n.", "translation": "地方政府机构" },
+          { "word": "budget", "phonetic": "/ˈbʌdʒɪt/", "part": "n.", "translation": "预算" },
+          { "word": "mental health", "phonetic": "/ˈmentəl helθ/", "part": "n.", "translation": "心理健康" },
+          { "word": "cost of living", "phonetic": "/kɒst əv ˈlɪvɪŋ/", "part": "n.", "translation": "生活成本" }
+        ],
+        "sentences": [
+          {
+            "original": "Do you prioritise paying the rent, putting food on the table or keeping the house warm in winter?",
+            "analysis": [
+              "这是一个典型的三选一问题句，直接把读者带入生活困境。",
+              "prioritise ... or ... or ... 形成并列结构，展示压力的多重性。",
+              "keeping the house warm in winter 强调季节性压力，增强现实感。",
+              "可用于分析标题式问句如何迅速建立情境和衝突。"
+            ],
+            "translation": "你会优先支付房租、填饱肚子，还是在冬天时让房子保持温暖？"
+          },
+          {
+            "original": "She pays her landlord £550 a month, but receives £425 in housing allowance, leaving her to make up a £125 'rent gap' out of her grocery and heating budgets.",
+            "analysis": [
+              "主干是 She pays ... but receives ...，形成形成强烈的数额对比。",
+              "leaving her to make up a £125 'rent gap' 是现在分词结构，说明结果。",
+              "out of her grocery and heating budgets 强调生活必需品与住房支出之间的挤压。",
+              "这句非常适合练习“事实数字 + 结论引导”的写法。"
+            ],
+            "translation": "她每月向房东支付 550 英镑，但只收到 425 英镑住房补贴，结果她必须从食品和取暖预算中补上 125 英镑的“租金差额”。"
+          },
+          {
+            "original": "It’s hard, she reflects, and the stress can affect her mental health.",
+            "analysis": [
+              "It’s hard ... and ... 是典型的心理感受与现实后果并列连接。",
+              "she reflects 是插入语，增强叙述的现实感。",
+              "the stress can affect her mental health 把个人困境提升到心理健康层面。",
+              "整句适合分析“生活压力—心理影响”的逻辑链。"
+            ],
+            "translation": "她反思道，事情很艰难，而压力会影响她的心理健康。"
+          }
+        ]
+      },
+      {
+        "title": "As data centers spread, not all U.S. housing markets react the same way",
+        "source": "NPR",
+        "published": "2026-09-11",
+        "url": "https://www.npr.org/2026/09/11/nx-s1-5964912/data-centers-growing-footprint-have-a-varying-effect-on-property-values",
+        "readingTime": "8",
+        "topic": "科技趋势 / 经济与房地产",
+        "summary": "NPR 报道指出，随着美国大型数据中心扩张，地方房地产市场受到的影响并不一致。文章指出，真实的影响取决于地区经济基础、供需关系、土地价值和能源系统的承载能力，而不是简单地把数据中心视为一个统一的“增长引擎”。这篇报道引用了全国地产经纪人协会的一项研究：该研究把 1,500 个数据中心的位置、房价、房屋销售和人口数据整合起来，结果发现数据中心在不同州、不同县的影响差异极大，既可能带来新增就业和消费，也可能带来能源压力和社区纷争。文章最后强调，房产市场不是“数据中心越多越好”，而是取决于地方是否具备合适的基础设施和治理能力。",
+        "reason": [
+          "AI 与数据中心扩张是当下科技趋势和经济地理的重要议题。",
+          "文章通过“并非同一类别”这一判断，形成强烈的反常识论证，结构鲜明。",
+          "可积累 data center, housing market, infrastructure, energy supply 等经济与科技词。",
+          "适合分析“局部案例—整体概括—结论转折”的写作逻辑。",
+          "题材兼具技术与房地产，是典型的社会经济跨界话题。"
+        ],
+        "vocabulary": [
+          { "word": "data center", "phonetic": "/ˈdeɪtə ˈsentə/", "part": "n.", "translation": "数据中心" },
+          { "word": "housing market", "phonetic": "/ˈhaʊzɪŋ ˈmɑːkɪt/", "part": "n.", "translation": "房地产市场" },
+          { "word": "footprint", "phonetic": "/ˈfʊtprɪnt/", "part": "n.", "translation": "占地面积；足迹" },
+          { "word": "infrastructure", "phonetic": "/ˈɪnfrəstrʌktʃə/", "part": "n.", "translation": "基础设施" },
+          { "word": "energy supply", "phonetic": "/ˈɛnədʒi səˈplaɪ/", "part": "n.", "translation": "能源供应" },
+          { "word": "commission", "phonetic": "/kəˈmɪʃən/", "part": "v.", "translation": "委托；安排" },
+          { "word": "real estate", "phonetic": "/ˌrɪəl ɪˈsteɪt/", "part": "n.", "translation": "房地产" },
+          { "word": "location", "phonetic": "/ləʊˈkeɪʃən/", "part": "n.", "translation": "位置；地理位置" },
+          { "word": "demographic", "phonetic": "/ˌdeməˈɡræfɪk/", "part": "adj.", "translation": "人口统计的" },
+          { "word": "varying", "phonetic": "/ˈveəriɪŋ/", "part": "adj.", "translation": "不同的；多变的" }
+        ],
+        "sentences": [
+          {
+            "original": "We talk about data centers as though they are one category, and they are not.",
+            "analysis": [
+              "这是文章最有冲击力的观点句，主干结构简单但结论强烈。",
+              "as though they are one category 是比较句式，突出“错误归类”问题。",
+              "and they are not 是简洁的反驳，语气压迫感强。",
+              "适合练习“概念批判式”的论证开头。"
+            ],
+            "translation": "我们谈论数据中心时，似乎把它们当成同一类事物，但它们并不是。"
+          },
+          {
+            "original": "While some data center-rich counties have shown signs of economic growth, others have experienced strain on their energy supply.",
+            "analysis": [
+              "While 引导让步对比，体现不同地区效果的差异。",
+              "some ... others ... 是典型的分组对比结构。",
+              "strain on their energy supply 把经济增长和基础设施压力并列，增强论证深度。",
+              "适合分析“对比句 + 结论性词汇”的写法。"
+            ],
+            "translation": "一些数据中心密集的县出现了经济增长的征兆，而另一些则经历了能源供应压力。"
+          },
+          {
+            "original": "The study found that data centers' effects differ dramatically from place to place.",
+            "analysis": [
+              "主干是 The study found that ...，采用标准研究报告句式。",
+              "differ dramatically from place to place 表示效果差异非常显著。",
+              "主题由“数据中心”转回“地区差异”，形成文章总结效应。",
+              "适合用于整合观点并作结论性落点。"
+            ],
+            "translation": "研究发现，数据中心的影响在不同地区之间差异极大。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260922 = {
   "date": "2026-09-22",
   "status": "ready",
@@ -4363,14 +4664,14 @@ const issue20260921 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-22T09:32:07+08:00",
+ "updatedAt": "2026-09-23T09:21:54+08:00",
  "issues": [
+   issue20260923,
    issue20260922,
    issue20260921,
    issue20260920,
    issue20260919,
    issue20260918,
-   issue20260917,
-   issue20260916
+   issue20260917
  ]
 };
