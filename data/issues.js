@@ -1,3 +1,304 @@
+const issue20260924 = {
+  "date": "2026-09-24",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 2026-09-22 至 2026-09-23 的官方 GitHub Copilot 更新，并复核仍可用的免费 AI 资源；所有价格、额度、账号资格与地区说明均按官方页面所写。",
+    "updates": [
+      {
+        "event": "OpenAI 的 GPT-6 Sol 与 GPT-6 Luna 已在 GitHub Copilot 中推出（2026-09-22）",
+        "summary": "GitHub 官方 changelog 说明，OpenAI 的 GPT-6 系列新增 GPT-6 Sol 和 GPT-6 Luna，加入此前已发布的 GPT-6 Astra；它们分别适用于更平衡的 agentic coding 和更轻量、更低成本的日常工作流。",
+        "howTo": "在支持的 GitHub Copilot 客户端中打开模型选择器，选择 GPT-6 Sol 或 GPT-6 Luna；如未见，请等待逐步 rollout。若你的组织启用了模型策略，可在 Copilot settings 中确认管理员是否允许该模型进入默认列表。",
+        "impact": "学生可将它们用于跨文件编码、需求拆解和多步骤调试任务；对于代码修订和研究整理，仍需保留测试输出与人工审查，避免把模型结论当定论。",
+        "free": "官方说明这两个模型按 usage-based billing 计费，并给出 Copilot 模型与请求 pricing 链接；官方未在 changelog 中统一说明个人/学生免费额度、地区适配和详细配额。",
+        "category": "AI 编程 / 模型",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available"
+        }
+      },
+      {
+        "event": "Claude Opus 5.5 已在 GitHub Copilot 中推出（2026-09-22）",
+        "summary": "GitHub 官方 changelog 说明，Anthropic 的 Claude Opus 5.5 已在 GitHub Copilot 中可用，定位于 agentic coding、长任务代理和知识工作。官方称它在早期测试中可以用更少的步骤和 token 完成与 Opus 5 相近的任务，并能更快从多步错误中恢复。",
+        "howTo": "在支持的 GitHub Copilot 客户端中打开模型选择器，选择 Claude Opus 5.5；若你的组织或企业启用了模型策略，确保它在允许列表中。复杂任务建议先做小范围验证，再扩展到更大范围的代码和文档整理。",
+        "impact": "学生可用它处理大规模代码阅读、研究笔记整合和复杂方案分解；但对关键论文判断、代码安全和最终结论仍需人工复核，尤其在需要严格事实核对时更应谨慎。",
+        "free": "官方说明该模型按 provider list pricing 计费，并其文本输出带水印，不会新增 token 或成本；官方未统一说明个人/学生免费额度、地区例外和各计划的具体限制。",
+        "category": "AI 编程 / 模型",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot"
+        }
+      },
+      {
+        "event": "Copilot for JetBrains 1.18.0 新增审批、组织共享技能与更强代理体验（2026-09-22）",
+        "summary": "GitHub 官方 changelog 表示，JetBrains 插件 1.18.0 带来 AI-assisted tool approvals、对 agent conversations 的更多控制、组织共享 skills 和 custom instructions，以及 plan review 和 MCP tool 管理更新，提升了 multi-step agent 任务的可控性。",
+        "howTo": "在 IntelliJ / JetBrains IDE 中更新插件到 1.18.0，打开 agent session 和 plan review；在组织设置中配置 shared skills 或 instructions，并在 tool approval 中批准/拒绝高风险操作。对于复杂任务，优先做小规模测试后再放大执行。",
+        "impact": "学生和团队可在 Java/Kotlin、Spring 等项目中更顺畅地进行计划评审、MCP 工具控制和会话重编辑，同时把共享指令沉淀为可复用规范；但敏感操作和网络调用仍应保留人工批准。",
+        "free": "官方说明这是插件更新，不是单独新的免费计划；具体个人/学生免费额度、地区例外和各计划限制未统一说明，需以当前 Copilot 账户和组织策略为准。",
+        "category": "AI 编程 / IDE",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-22",
+          "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Microsoft Copilot Free 网页版与移动端免费访问",
+        "summary": "Microsoft 官方 Copilot 页面提供免费入口，适合日常对话、研究整理和基础创作；页面说明是按当前 app / 功能边界提供免费使用，付费升级内容会在界面中提示。",
+        "howTo": "打开 https://copilot.microsoft.com/，使用 Microsoft 账号登录；在聊天页输入研究问题、概念解释或写作草稿，并查看页面顶部是否显示付费升级与功能限制提示。",
+        "impact": "学生可用于概念解释、论文提纲整理、英文润色和日程规划；但大规模生成、长期深度研究和高强度工作流仍要留意功能上限与付费提示。",
+        "free": "官方页面明确提供免费入口；具体消息数、生成次数、地区范围和付费升级条件页面未统一说明，需以当前 app 提示为准。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Microsoft Copilot 官方应用页",
+          "published": "官方未说明",
+          "url": "https://copilot.microsoft.com/"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google AI Studio 官方定价页说明 Gemini API 提供免费的 Free 层，支持有限访问部分模型和免费输入/输出 token，并能在 Google AI Studio 中使用原型工具。",
+        "howTo": "登录 Google AI Studio，创建项目后在模型列表中选择当前可用的 Free tier 模型；先用小规模请求测试提示词、摘要和 API 原型，并查看模型页中的 RPM、TPM、RPD 等限制。",
+        "impact": "学生可以用于课程演示、文本摘要、API 原型和小型实验；但不要把其 free tier 当作无限吞吐或长期稳定生产环境。",
+        "free": "官方确认存在 Free tier；具体模型、RPM/TPM/RPD、账号资格和地区清单官方未统一说明，需按当前模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费托管 Jupyter 环境",
+        "summary": "Colab 官方 FAQ 明确说明它是无需设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，尤其适合机器学习、数据科学和教育场景。",
+        "howTo": "打开 Colab，新建或导入 notebook，并在运行时设置中切换 GPU/TPU；保存工作到 Google Drive 或从 GitHub 导入，并在分享前清理密钥和不必要输出。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置与硬件门槛；但使用高性能资源前仍需遵守 free tier 约束与安全规则。",
+        "free": "官方确认免费；资源不保证且使用上限会波动，GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "GitHub Education Student Developer Pack 学生权益",
+        "summary": "GitHub Education 官方权益页说明，verified students 可获得 GitHub Copilot Student，包含 unlimited code completions 和 GitHub AI Credits，并通过 auto model selection 提供 limited chat 与 agent usage。",
+        "howTo": "访问 GitHub Education Pack 完成学生资格验证，并在 GitHub 账户中启用 GitHub Copilot Student；在支持的编辑器中使用补全，并在账户页面查看 AI Credits 和 chat/agent 的可用情况。",
+        "impact": "学生可用代码补全减少样板代码工作，把有限 AI Credits 和 chat/agent 用于解释、测试和项目提问；所有生成代码仍需本地测试与人工检视。",
+        "free": "官方权益面向 verified students；补全 unlimited，AI Credits 和 chat/agent limited，模型仅 auto model selection。具体 Credits 数量、验证材料和地区例外官方未说明。",
+        "category": "学生 / 教育权益",
+        "source": {
+          "name": "GitHub Education Student Developer Pack",
+          "published": "官方未说明",
+          "url": "https://education.github.com/pack"
+        }
+      },
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明，Free 计划适合日常提问，并以 rolling five-hour session window 约束会话连续性；页面同时说明 paid plans 会在更高使用量下扩大 5 小时会话窗口。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前 session window 和使用状态，长文或高频提问前先确认等待重置时间。",
+        "impact": "学生可以用它梳理论文提纲、概念释义和语言润色，再自行核对事实、引用和计算；不要把 Free 计划和 API 免费额度混为一谈。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session window；固定消息数、账号资格、地区范围及 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期精选 2026-09-23 可免费阅读全文的 NPR/BBC 文章，覆盖住房负担、媒体自由和西班牙住房危机；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "It’s getting harder to afford rent in the U.S., even for middle-income families",
+        "source": "NPR",
+        "published": "2026-09-23",
+        "url": "https://www.npr.org/2026/09/23/nx-s1-5977022/rent-affordability-middle-income",
+        "readingTime": "8",
+        "topic": "经济 / 住房与负担",
+        "summary": "NPR 报道了 Urban Institute 的最新研究，说明美国中产收入家庭也越来越难以负担房租，甚至更多人出现迟交租金、部分付款或丢失房租支付的情况。文章先指出低收入租房者长期承受住房成本压力，但研究显示中等收入群体的困境也在迅速扩大，说明住房可负担性并非只属于底层，而是广泛蔓延到中产阶层。作者随后分析了日常生活必需品价格上涨和高昂租金如何使家庭在“支付药品、食品和房租”之间做出选择，最后强调这可能进一步增加流向无家可归的风险。",
+        "reason": [
+          "住房成本与中产负担是典型社会经济议题，适合考研英语二的社会经济主题。",
+          "文章从低收入群体扩展到中等收入家庭，呈现“问题扩大化”的论证结构。",
+          "易考句型包括比较、因果和引述，适合分析图表数据与采访评论的转换。",
+          "词汇涵盖 affordability、housing cost-burden、eviction、vulnerable 等高频抽象词。",
+          "写作上可借鉴“现象—数据—解释—风险”的逻辑链。"
+        ],
+        "vocabulary": [
+          { "word": "affordability", "phonetic": "/əˌfɔːdəˈbɪləti/", "part": "n.", "translation": "可负担性" },
+          { "word": "defaulting", "phonetic": "/dɪˈfɔːltɪŋ/", "part": "n.", "translation": "拖欠；违约" },
+          { "word": "housing cost-burden", "phonetic": "/ˈhaʊzɪŋ kɒst ˈbɜːdən/", "part": "n.", "translation": "住房成本负担" },
+          { "word": "eviction", "phonetic": "/ɪˈvɪkʃən/", "part": "n.", "translation": "驱逐；赶出住房" },
+          { "word": "vulnerable", "phonetic": "/ˈvʌlnərəbəl/", "part": "adj.", "translation": "脆弱的；易受伤的" },
+          { "word": "outsize share", "phonetic": "/aʊtˈsaɪz ʃeə/", "part": "n.", "translation": "过大份额" },
+          { "word": "essential", "phonetic": "/ɪˈsenʃəl/", "part": "adj.", "translation": "必要的；基本的" },
+          { "word": "basic needs", "phonetic": "/ˈbeɪsɪk niːdz/", "part": "n.", "translation": "基本需求" },
+          { "word": "homelessness", "phonetic": "/ˈhəʊmləsnəs/", "part": "n.", "translation": "无家可归" },
+          { "word": "inflow", "phonetic": "/ˈɪnfləʊ/", "part": "n.", "translation": "流入；涌入" }
+        ],
+        "sentences": [
+          {
+            "original": "A growing number of renters in the U.S. are struggling to pay for housing each month.",
+            "analysis": [
+              "主干是 A growing number ... are struggling to pay。",
+              "in the U.S. 是地点状语，限定范围。",
+              "to pay for housing each month 强调持续性和现实压力。",
+              "该句适合作为文章主题句，直接概括社会问题。"
+            ],
+            "translation": "越来越多的美国租房者正为每月住房费用苦苦挣扎。"
+          },
+          {
+            "original": "We have historically observed that low-income renters experience high rates of housing cost-burdens.",
+            "analysis": [
+              "主干是 We have observed that ...，属于新闻报道中的研究总结句。",
+              "historically observed 强调这是长期趋势而非偶发现象。",
+              "that 从句承载研究结论，并形成对比基准。",
+              "该句适合训练“已知事实—新现象”的论证写法。"
+            ],
+            "translation": "我们过去一直观察到，低收入租房者承受着高比例的住房成本负担。"
+          },
+          {
+            "original": "When we see a family reporting having had a late payment or a partial payment or a missing rent payment, we're seeing those choices happen in real time.",
+            "analysis": [
+              "When 引导时间条件句，体现家庭在困境中的现实选择。",
+              "late payment / partial payment / missing rent payment 是并列名词短语，说明压力的多样性。",
+              "we're seeing ... in real time 强调生活决策直接发生于当前时刻。",
+              "该句适合分析数据转化为生活经验的写法。"
+            ],
+            "translation": "当我们看到一个家庭曾出现逾期付款、部分付款或未支付房租时，我们看到这些选择正在实时发生。"
+          }
+        ]
+      },
+      {
+        "title": "Judge considers restoring journalists' access to White House after Trump's ban",
+        "source": "NPR",
+        "published": "2026-09-23",
+        "url": "https://www.npr.org/2026/09/23/nx-s1-5979101/federal-judge-hearing-trump-ban-cnn-ms-now-politico",
+        "readingTime": "7",
+        "topic": "社会 / 媒体 / 公共治理",
+        "summary": "NPR 报道了美国联邦法官在听证会上倾向于恢复 CNN、Politico 和 MS NOW 记者的白宫通行证，评论称这场禁令可能违反正当程序和宪法保障。文章从事件出发，先交代禁令发生的背景和诉讼进程，再引出律师与司法部对“是否赋予媒体进入权”的激烈争辩，最终把问题上升到新闻自由、观点歧视和公共利益的法理层面。它的核心不是单个媒体事件，而是政府是否可因批评性报道剥夺记者进入权。",
+        "reason": [
+          "新闻自由、媒体权利和宪法原则是公共治理与社会议题的经典组合。",
+          "文章按“禁令—诉讼—争议—法理判断”的顺序推进，结构清晰。",
+          "可考的题型包括因果分析、法理判断和作者立场判断。",
+          "词汇丰富：press passes, due process, retaliation, viewpoint discrimination 等。",
+          "适合练习“单一事件—制度意义—公共利益”的议论文组织方式。"
+        ],
+        "vocabulary": [
+          { "word": "press pass", "phonetic": "/pres pæs/", "part": "n.", "translation": "记者证；新闻通行证" },
+          { "word": "due process", "phonetic": "/djuː ˈprəʊses/", "part": "n.", "translation": "正当程序" },
+          { "word": "retaliation", "phonetic": "/rɪˌtælɪˈeɪʃən/", "part": "n.", "translation": "报复； retaliation" },
+          { "word": "viewpoint discrimination", "phonetic": "/ˈvjuːpɔɪnt dɪˌskrɪmɪˈneɪʃən/", "part": "n.", "translation": "观点歧视" },
+          { "word": "irreparable harm", "phonetic": "/ɪˈrepərəbəl hɑːm/", "part": "n.", "translation": "无法挽回的损害" },
+          { "word": "constitutional", "phonetic": "/ˌkɒnstɪˈtjuːʃənəl/", "part": "adj.", "translation": "宪法的" },
+          { "word": "public interest", "phonetic": "/ˈpʌblɪk ˈɪntrəst/", "part": "n.", "translation": "公共利益" },
+          { "word": "access", "phonetic": "/ˈækses/", "part": "n.", "translation": "进入权；使用权" },
+          { "word": "legal filing", "phonetic": "/ˈliːɡəl ˈfaɪlɪŋ/", "part": "n.", "translation": "法律文件；诉讼材料" },
+          { "word": "national security", "phonetic": "/ˈnæʃənəl sɪˈkjʊərəti/", "part": "n.", "translation": "国家安全" }
+        ],
+        "sentences": [
+          {
+            "original": "A federal judge appeared inclined to order the White House to restore — at least temporarily — the press passes of journalists for CNN, Politico and MS NOW.",
+            "analysis": [
+              "主干是 A federal judge appeared inclined to order ...。",
+              "at least temporarily 是插入式修饰语，强调是临时性救济。",
+              "the press passes ... 是 order 的直接宾语，明确争议焦点。",
+              "该句适合分析“法官态度 + 事件对象 + 诉讼结果”的新闻写法。"
+            ],
+            "translation": "一名联邦法官似乎倾向于命令白宫至少暂时恢复 CNN、Politico 和 MS NOW 记者的新闻通行证。"
+          },
+          {
+            "original": "Theodore J. Boutrous, a lawyer representing the three news outlets, said the White House ban took place 'without a semblance of due process.'",
+            "analysis": [
+              "主干是 Theodore J. Boutrous said ...。",
+              "a lawyer representing ... 是同位语，交代发言人的身份。",
+              "without a semblance of due process 是直接引语中的法律核心概念。",
+              "该句适合分析“引述 + 法律标准 + 争议立场”的组合。"
+            ],
+            "translation": "代表三家新闻媒体的律师西奥多·J·布特罗斯说，白宫的禁令发生在“没有任何正当程序痕迹”的情况下。"
+          },
+          {
+            "original": "The constitutional violation is against the public interest, he said.",
+            "analysis": [
+              "The constitutional violation is ... 是中心判断句。",
+              "against the public interest 将法理问题提升到公共利益层面。",
+              "he said 作为引述尾巴，保留了新闻写作的客观语气。",
+              "该句适合练习“判定+理由+引述”的简短论证。"
+            ],
+            "translation": "他表示，这种违宪行为损害了公众利益。"
+          }
+        ]
+      },
+      {
+        "title": "Dramatic eviction of woman aged 87 highlights Spain's housing shortage",
+        "source": "BBC",
+        "published": "2026-09-23",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgy55lm8z1o?at_medium=RSS&at_campaign=rss",
+        "readingTime": "7",
+        "topic": "社会 / 住房 / 公共政策",
+        "summary": "BBC 报道了西班牙马德里一名 87 岁老妇人被强制搬离其祖传住宅的事件，揭示出住房短缺和租金暴涨对老年人和低收入家庭的巨大压力。文章先以她在家中生活了七十年、租金被房产投资公司大幅抬高为切入点，说明法律漏洞、租赁制度和房产投资机制共同造成了这一冲突。随后报道引用了支持者和社会活动者的呼吁，说明这并非个案，而是一场关于住房权、养老和城市供给失衡的更大议题。",
+        "reason": [
+          "住房短缺、租房权与社会公平是考研英语二常见经济社会议题。",
+          "文章从“个案”切入，再扩展到“制度漏洞”和“社会冲突”，层次清晰。",
+          "可积累 eviction, tenancy, rent cap, pension, housing crisis 等词汇。",
+          "适合分析“社会冲突—法律漏洞—公共议题”的逻辑链。",
+          "写作上可借鉴“个人故事 + 结构性问题”的论证方式。"
+        ],
+        "vocabulary": [
+          { "word": "eviction", "phonetic": "/ɪˈvɪkʃən/", "part": "n.", "translation": "驱逐；搬离" },
+          { "word": "tenant", "phonetic": "/ˈtenənt/", "part": "n.", "translation": "租户" },
+          { "word": "rent cap", "phonetic": "/rent kæp/", "part": "n.", "translation": "租金上限" },
+          { "word": "investment firm", "phonetic": "/ɪnˈvestmənt fɜːm/", "part": "n.", "translation": "投资公司" },
+          { "word": "pension", "phonetic": "/ˈpenʃən/", "part": "n.", "translation": "养老金" },
+          { "word": "housing crisis", "phonetic": "/ˈhaʊzɪŋ ˈkraɪsɪs/", "part": "n.", "translation": "住房危机" },
+          { "word": "supporter", "phonetic": "/səˈpɔːtə/", "part": "n.", "translation": "支持者" },
+          { "word": "activist", "phonetic": "/ˈæktɪvɪst/", "part": "n.", "translation": "活动人士" },
+          { "word": "legal glitch", "phonetic": "/ˈliːɡəl ɡlɪtʃ/", "part": "n.", "translation": "法律漏洞" },
+          { "word": "campaign", "phonetic": "/kæmˈpeɪn/", "part": "n.", "translation": "运动；抗议活动" }
+        ],
+        "sentences": [
+          {
+            "original": "The dramatic eviction of an 87-year-old woman from the home in Madrid where she lived for seven decades has drawn attention to the depth of Spain's housing crisis.",
+            "analysis": [
+              "主干是 The eviction ... has drawn attention。",
+              "of an 87-year-old woman ... 是介词短语修饰 eviction。",
+              "where she lived for seven decades 强调长期居住与情感联系。",
+              "该句适合分析“个案 + 空间背景 + 社会问题”的新闻写法。"
+            ],
+            "translation": "一名 87 岁老妇人从在马德里生活了七十年的房子中被强制驱逐，这一事件引起了人们对西班牙住房危机深度的关注。"
+          },
+          {
+            "original": "Maricarmen's father first rented the property in 1956 and she continued as the tenant after her parents died, during which time there was a cap on the rent.",
+            "analysis": [
+              "主干是 Maricarmen's father first rented ... and she continued ...。",
+              "during which time there was a cap on the rent 是时间状语从句，说明制度背景。",
+              "first rented ... and continue as the tenant 体现代际居住。",
+              "该句适合分析“历史背景—代际长期居住—制度变化”的逻辑。"
+            ],
+            "translation": "马里卡门的父亲于 1956 年首次租下这处房产，父母去世后她继续作为租户居住，在此期间房租受到上限限制。"
+          },
+          {
+            "original": "Supporters of Maricarmen camped outside the building on Tuesday night, joined by celebrities including Javier Bardem's brother, Carlos, and the singer Ana Belén.",
+            "analysis": [
+              "主干是 Supporters ... camped outside the building。",
+              "joined by celebrities ... 是过去分词短语，补充事件参与者。",
+              "including ... 例举名人支持者的社会影响。",
+              "整句非常适合分析公共议题如何借由名人支持放大传播效果。"
+            ],
+            "translation": "马里卡门的支持者在周二晚上在大楼外露宿，并有包括哈维尔·巴尔登姆兄弟卡洛斯和歌手安娜·贝伦在内的名人加入支持。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260923 = {
   "date": "2026-09-23",
   "status": "ready",
@@ -4664,14 +4965,14 @@ const issue20260921 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-23T09:21:54+08:00",
+ "updatedAt": "2026-09-24T09:16:16+08:00",
  "issues": [
+   issue20260924,
    issue20260923,
    issue20260922,
    issue20260921,
    issue20260920,
    issue20260919,
-   issue20260918,
-   issue20260917
+   issue20260918
  ]
 };
