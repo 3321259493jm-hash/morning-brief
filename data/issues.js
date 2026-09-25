@@ -4964,15 +4964,269 @@ const issue20260921 = {
   }
 };
 
+const issue20260925 = {
+  "date": "2026-09-25",
+  "status": "ready",
+  "ai": {
+    "intro": "本期核验 2026-09-23 至 2026-09-24 的官方 AI 更新，并复核仍可用的免费 AI 资源；价格、额度、账号资格与地区说明均按官方页面所写。",
+    "updates": [
+      {
+        "event": "GitHub Copilot code review 新增个人与企业默认设置（2026-09-23）",
+        "summary": "GitHub Changelog 说明，Copilot code review 现在为更多 Copilot 计划提供独立的个人设置页，并支持企业级默认 review effort 配置。用户可以在个人或组织层面控制 automatic review 的触发条件和默认评审强度。",
+        "howTo": "在 GitHub 个人设置中进入 Copilot → Code review，打开 automatic review，并设置默认 review effort（Lite 或 Balanced）；企业管理员可在企业设置中设置全局默认值，并允许组织/仓库覆盖。",
+        "impact": "学生在团队项目、课程作业和开源贡献中可更稳定地接收 AI 代码评审；但仍需保留人工判定，尤其在安全、合规和架构层面不能只看自动评审。",
+        "free": "官方说明此为 Copilot code review 功能增强，并在多个 Copilot 计划中统一提供个人设置入口；官方未统一说明个人/学生免费额度、地区适配和每个计划的具体限制。",
+        "category": "AI 编程 / 代码评审",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-23",
+          "url": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews/"
+        }
+      },
+      {
+        "event": "GitHub Copilot app 本地沙箱（sandboxing）公开预览（2026-09-23）",
+        "summary": "GitHub 官方更新说明，Copilot app 现在支持本地 sandboxing，限制应用对本机文件、网络资源和凭证的访问，以降低意外命令造成的影响。",
+        "howTo": "打开 GitHub Copilot app 设置，选择项目后启用 Sandbox new sessions；若要为当前会话启用，输入 /sandbox on 即可。修改文件系统、网络和凭证配置后，需重启会话或新建会话才会生效。",
+        "impact": "学生在本地实验、代码运行和调试时，可更安心地试验 agentic workflow，而不必过度担心命令误触发系统级改动；但仍应保留手动检查和代码测试。",
+        "free": "官方说明这是 public preview，且配置策略可能变化；它不是新增免费计划，个人/学生免费额度、地区适配和具体配额官方未统一说明。",
+        "category": "AI 安全 / 本地执行",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-23",
+          "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/"
+        }
+      },
+      {
+        "event": "Google Gemini 3.8 Live with Live Avatar 发布（2026-09-24）",
+        "summary": "Google Blog 宣布 Gemini 3.8 Live with Live Avatar，支持基于参考图像生成带品牌一致性的动画 avatar，并通过 SynthID 水印帮助区分 AI 生成内容与真实视频。",
+        "howTo": "在 Gemini Enterprise / Live API 相关入口中启动 Gemini 3.8 Live，并上传参考图像生成定制 avatar；开发者可在 Google 文档中参考 Live API 与企业 allowlisting 说明。",
+        "impact": "学生可用它做演示、讲解、作品展示和创意内容原型，但定制 avatar 目前主要面向企业 allowlisting，且肖像合成和真实性问题仍须人工审查。",
+        "free": "官方说明此功能目前面向 Gemini Enterprise 与相关 API；个人免费额度、地区覆盖和公开可用时间官方未统一说明，需以当前 Gemini / Workspace 计划为准。",
+        "category": "AI 创作 / 多模态",
+        "source": {
+          "name": "Google Blog",
+          "published": "2026-09-24",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/"
+        }
+      },
+      {
+        "event": "Google Vids 中 Gemini Omni 1.1 支持 1080p HD 视频生成（2026-09-23）",
+        "summary": "Google Blog 介绍，Google Vids 中的 Omni 1.1 可直接控制镜头切换、时长和转场，并支持 1080p HD 生成；同时为每条 AI 生成视频嵌入 SynthID 数字水印。",
+        "howTo": "登录 Google 或 Google Workspace 账号，打开 Google Vids 开始新项目；从模板或提示词创建视频，设置场景长度和叙述后导出即可，也可在更多 AI 计划中查看容量和管理权限。",
+        "impact": "学生可用它做课程展示、项目汇报、社群宣传和小型作品创作，快速生成高质量视频；但最终稿件仍需检查事实准确性、音频和字幕是否符合学术/项目要求。",
+        "free": "官方说明任何 Google 或 Google Workspace 账号都可在 Google Vids 中开始使用 Omni 1.1；详细容量、计划差异和生成池限制官方未统一说明，需以当前 Google AI plans / Workspace 计划页面为准。",
+        "category": "AI 视频 / 生产力",
+        "source": {
+          "name": "Google Blog",
+          "published": "2026-09-23",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Microsoft Copilot 免费网页版与移动端",
+        "summary": "Microsoft 官方 Copilot 页面提供免费入口，适合日常对话、研究整理和基础创作；页面明确提示有付费升级，但不要求先付费即可使用。",
+        "howTo": "打开 https://copilot.microsoft.com/，使用 Microsoft 账号登录，输入研究问题、概念解释和写作草稿，并查看页面顶部是否显示付费升级与功能限制提示。",
+        "impact": "学生可用于概念解释、论文提纲整理、英文润色和日程规划；但大规模生成、长期深度研究和高强度工作流仍要留意功能上限与付费提示。",
+        "free": "官方页面明确提供免费入口；具体消息数、生成次数、地区范围和付费升级条件页面未统一说明，需以当前 app 提示为准。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Microsoft Copilot 官方应用页",
+          "published": "官方未说明",
+          "url": "https://copilot.microsoft.com/"
+        }
+      },
+      {
+        "event": "Google Gemini API 免费层与 AI Studio",
+        "summary": "Google AI Studio 官方定价页说明 Gemini API 提供免费的 Free 层，支持有限访问部分模型和免费输入/输出 token，并能在 AI Studio 中试验原型工具。",
+        "howTo": "登录 Google AI Studio，创建项目后在模型列表中选择当前可用的 Free tier 模型；先用小规模请求测试提示词、摘要和 API 原型，并查看模型页中的 RPM / TPM / RPD 等限制。",
+        "impact": "学生可用于课程演示、文本摘要、API 原型和小型实验；但不要把 free tier 当作无限吞吐或长期稳定生产环境。",
+        "free": "官方确认存在 Free tier，且可用部分模型和免费输入/输出 token；具体模型、RPM/TPM/RPD、账号资格和地区清单官方未统一说明，需按当前模型和项目页面实时查看。",
+        "category": "免费 API / 开发者资源",
+        "source": {
+          "name": "Google Gemini API 官方定价",
+          "published": "官方未说明",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        }
+      },
+      {
+        "event": "Google Colab 免费 Jupyter 环境",
+        "summary": "Google Colab FAQ 明确说明它是无需设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，尤其适合机器学习、数据科学和教育场景。",
+        "howTo": "打开 Colab，新建或导入 notebook，并在运行时设置中切换 GPU/TPU；保存工作到 Google Drive 或从 GitHub 导入，并在分享前清理敏感数据和不必要输出。",
+        "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置与硬件门槛；但高性能资源不保证且使用上限会波动，需遵守 Colab 的 free tier 规则。",
+        "free": "官方确认免费；资源不保证且使用上限会波动，GPU/TPU 时长、账号资格和地区例外官方未说明。",
+        "category": "长期免费云环境",
+        "source": {
+          "name": "Google Colab 官方 FAQ",
+          "published": "官方未说明",
+          "url": "https://research.google.com/colaboratory/faq.html"
+        }
+      },
+      {
+        "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
+        "summary": "Hugging Face 官方文档说明 Static Spaces 对所有人免费；状态良好的免费个人账号还可托管最多 2 个 ZeroGPU 的 Gradio Spaces，CPU Basic 默认资源无小时费用。",
+        "howTo": "登录 Hugging Face，创建 Space 并选择 Static HTML；若要运行 Gradio，使用状态良好的免费个人账号创建不超过 2 个 ZeroGPU Spaces，并在设置中检查当前硬件和资源状态。",
+        "impact": "学生可把交互式网页、课程可视化或轻量模型 demo 部署成可分享链接；需要更高 GPU、Docker 或更多容量时，需先确认是否会触发付费计划。",
+        "free": "官方明确 Static Spaces 免费，免费个人账号最多 2 个 ZeroGPU Gradio Spaces；普通 Gradio / Docker Spaces 的 compute 创建需要 PRO、Team 或 Enterprise，地区和 ZeroGPU 排队额度官方未说明。",
+        "category": "免费部署 / 开放模型生态",
+        "source": {
+          "name": "Hugging Face 官方文档",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/docs/hub/spaces-overview"
+        }
+      },
+      {
+        "event": "Claude Free 免费计划",
+        "summary": "Claude 官方定价页说明 Free 计划适合日常提问，并以 rolling five-hour session window 约束会话连续性；页面同时说明 paid plans 会在更高使用量下扩大 5 小时会话窗口。",
+        "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前 session window 和用量状态，长文或高频提问前先确认等待重置时间。",
+        "impact": "学生可以用它梳理论文提纲、概念释义和语言润色，再自行核对事实、引用和计算；不要把 Free 计划和 API 免费额度混为一谈。",
+        "free": "官方确认 Free 计划存在，并说明 rolling five-hour session window；固定消息数、账号资格、地区范围及 API 免费额度官方未说明。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Claude 官方定价",
+          "published": "官方未说明",
+          "url": "https://claude.com/pricing"
+        }
+      }
+    ]
+  },
+  "english": {
+    "intro": "本期精选 2026-09-24 可免费阅读全文的 BBC/Guardian 文章，覆盖健康技术与中美关系；每篇按考研英语二方向精读。",
+    "articles": [
+      {
+        "title": "From weeks to hours - the rapid new test transforming brain tumour diagnosis",
+        "source": "BBC",
+        "published": "2026-09-24",
+        "url": "https://www.bbc.co.uk/news/articles/cr3wj04d88ywo?at_medium=RSS&at_campaign=rss",
+        "readingTime": "6",
+        "topic": "健康 / 医学技术",
+        "summary": "BBC 报道了英国 NHS 开始使用的新型脑肿瘤基因检测手段，这项测试可把原来长达 6 至 8 周的肿瘤分型分析压缩到手术中仅需约 2 小时。文章以患者 Steve Palmer 的病例为例，说明快速基因检测不仅能帮助医生决定手术幅度，也能帮助患者尽早开始放疗和化疗，减少长时间不确定性。报道同时解释了脑肿瘤类型差异对治疗方案的影响，强调分子与遗传分析在现代神经外科中的核心价值。",
+        "reason": [
+          "医学技术与公共健康是典型社会议题，适合考研英语二的科技与健康主题。",
+          "文章以一个具体病例切入，再扩展到整体诊断流程与治疗影响，结构清晰。",
+          "可考句型包括时间变化、比较结构和因果关系，适合练习议论文中的例证法。",
+          "词汇涵盖 genomic、radiotherapy、chemotherapy、aggressive 等高频医学词。",
+          "写作上可借鉴“问题—技术—案例—影响”的逻辑链。"
+        ],
+        "vocabulary": [
+          { "word": "tumour", "phonetic": "/ˈtjuːmər/", "part": "n.", "translation": "肿瘤" },
+          { "word": "genomic", "phonetic": "/dʒɪˈnɒmɪk/", "part": "adj.", "translation": "基因组的" },
+          { "word": "diagnosis", "phonetic": "/ˌdaɪəɡˈnəʊsɪs/", "part": "n.", "translation": "诊断" },
+          { "word": "radiotherapy", "phonetic": "/ˌreɪdiəʊˈθerəpi/", "part": "n.", "translation": "放射治疗" },
+          { "word": "chemotherapy", "phonetic": "/ˌkiːməʊˈθerəpi/", "part": "n.", "translation": "化学治疗" },
+          { "word": "aggressive", "phonetic": "/əˈɡresɪv/", "part": "adj.", "translation": "侵袭性的； aggressive 的" },
+          { "word": "molecular", "phonetic": "/məˈlekjʊlə/", "part": "adj.", "translation": "分子的" },
+          { "word": "uncertainty", "phonetic": "/ʌnˈsɜːtnti/", "part": "n.", "translation": "不确定性" },
+          { "word": "surgeon", "phonetic": "/ˈsɜːdʒən/", "part": "n.", "translation": "外科医生" },
+          { "word": "genetic", "phonetic": "/dʒəˈnetɪk/", "part": "adj.", "translation": "遗传的" }
+        ],
+        "sentences": [
+          {
+            "original": "A rapid new test for brain tumours that the NHS has started using can slash the time it takes for an accurate diagnosis from up to eight weeks to two hours.",
+            "analysis": [
+              "主干是 A rapid new test ... can slash the time ...",
+              "that the NHS has started using 是定语从句，说明测试的使用场景。",
+              "from up to eight weeks to two hours 展示时间压缩的巨大幅度。",
+              "该句适合训练“转折性时间比较”的新闻写法。"
+            ],
+            "translation": "英国国家医疗服务体系已经开始使用的一项新型脑肿瘤检测方法，可以将准确诊断所需时间从最多八周压缩到两小时。"
+          },
+          {
+            "original": "The test, which is used by doctors to diagnose which type of tumour a patient has, should mean patients can start treatment including radiotherapy and chemotherapy sooner, and are spared weeks of uncertainty.",
+            "analysis": [
+              "which is used by doctors to diagnose ... 是非限制性定语从句，补充测试作用。",
+              "including radiotherapy and chemotherapy 说明治疗范围和速度。",
+              "and are spared weeks of uncertainty 形成明确结果——减少焦虑。",
+              "该句适合练习“方法—结果—价值”的并列结构。"
+            ],
+            "translation": "这项测试被医生用来识别患者肿瘤的类型，因此意味着患者可更早开始包括放射治疗和化疗在内的治疗，并减少数周的不确定性。"
+          },
+          {
+            "original": "Diagnosing the type of tumour while the patient is still on the operating table could impact how surgeons operate.",
+            "analysis": [
+              "Diagnosing ... while ... 是动名词短语作主语，突出时间紧迫性。",
+              "while the patient is still on the operating table 强调手术中即时决策。",
+              "could impact how surgeons operate 将技术应用放回临床操作层面。",
+              "该句适合分析“主语 + 时间状语 + 结果句”的医学报道语法。"
+            ],
+            "translation": "在患者仍在手术台上的时候就确定肿瘤类型，可能会影响外科医生的操作方式。"
+          }
+        ]
+      },
+      {
+        "title": "Xi Jinping lays out terms to avoid US-China military conflict",
+        "source": "The Guardian",
+        "published": "2026-09-24",
+        "url": "https://www.theguardian.com/us-news/2026/sep/24/xi-jinping-trump-china-cooperation-thucydides-trap",
+        "readingTime": "7",
+        "topic": "国际关系 / 政治经济",
+        "summary": "The Guardian 报道了习近平在白宫峰会前后提出的中美合作条件，强调两国应通过沟通、和平共处和危机沟通机制避免“修昔底德陷阱”。文章把中美竞争放回人工智能、贸易和台湾问题的更大背景，说明即便双边关系表面和缓，双方仍面临芯片出口管制、关税摩擦和战略稳定性的现实挑战。它的核心论证，是“避免冲突”需要制度性沟通，而不是仅靠个人关系或短期表态。",
+        "reason": [
+          "中美关系与国际政治是典型大语境题材，适合考研英语二的国际政治专题。",
+          "文章开头概念化“Thucydides trap”，随后展开双方条件与现实约束，论证结构清晰。",
+          "可考句型包括引语、条件句和对比句，适合分析长句中主从复合结构。",
+          "词汇涵盖 cooperation、collision course、mutual trust、crisis communication 等抽象名词。",
+          "写作上可借鉴“概念—争端—政策—挑战”的议论结构。"
+        ],
+        "vocabulary": [
+          { "word": "cooperation", "phonetic": "/kəʊˌɒpəˈreɪʃən/", "part": "n.", "translation": "合作" },
+          { "word": "collision course", "phonetic": "/kəˈlɪʒən kɔːs/", "part": "n.", "translation": "冲突路线；碰撞轨道" },
+          { "word": "mutual trust", "phonetic": "/ˈmjuːtʃuəl trʌst/", "part": "n.", "translation": "相互信任" },
+          { "word": "crisis communication", "phonetic": "/ˈkraɪsɪs kəˌmjuːnɪˈkeɪʃən/", "part": "n.", "translation": "危机沟通" },
+          { "word": "dominance", "phonetic": "/ˈdɒmɪnəns/", "part": "n.", "translation": "主导地位" },
+          { "word": "emerging power", "phonetic": "/ɪˈmɜːdʒɪŋ ˈpaʊə/", "part": "n.", "translation": "新兴大国" },
+          { "word": "tariffs", "phonetic": "/ˈtærɪfs/", "part": "n.", "translation": "关税" },
+          { "word": "trade deficit", "phonetic": "/treɪd ˈdefɪsɪt/", "part": "n.", "translation": "贸易逆差" },
+          { "word": "strategic stability", "phonetic": "/strəˈtiːdʒɪk stəˈbɪləti/", "part": "n.", "translation": "战略稳定" },
+          { "word": "scepticism", "phonetic": "/ˈskeptɪsɪzəm/", "part": "n.", "translation": "怀疑主义；怀疑态度" }
+        ],
+        "sentences": [
+          {
+            "original": "Xi Jinping has called for extensive cooperation with Washington to avoid the 'Thucydides trap' that could put the US and China on a military collision course amid rising tensions over artificial intelligence, trade and Taiwan.",
+            "analysis": [
+              "主干是 Xi Jinping has called for cooperation ...",
+              "to avoid the 'Thucydides trap' 是目的状语，构成核心议题。",
+              "that could put ... on a military collision course 是定语从句，解释冲突风险。",
+              "amid rising tensions ... 为背景条件，说明议题的结构层次。"
+            ],
+            "translation": "习近平呼吁与华盛顿开展广泛合作，以避免“修昔底德陷阱”，在人工智能、贸易和台湾等日益紧张的议题中让中美走向军事冲突的轨道。"
+          },
+          {
+            "original": "We should coexist in peace. China and the United States, as two major countries, stand to gain from cooperation and will both lose in confrontation.",
+            "analysis": [
+              "这是简短但强有力的政策主张句，结构清晰且论点鲜明。",
+              "as two major countries 强调两国地位与责任的对等。",
+              "stand to gain ... and will both lose ... 形成对称因果句型。",
+              "适合训练“政策主张 + 结果预判”的表达。"
+            ],
+            "translation": "我们应和平共处。中美作为两个大国，合作将使双方受益，冲突则会让双方都受损。"
+          },
+          {
+            "original": "Despite the harmonious tone adopted by both leaders, analysts have voiced scepticism about the possibility of longstanding stable arrangements being arrived at over a host of issues.",
+            "analysis": [
+              "Despite 引导让步状语，形成“表面缓和—现实质疑”的反差。",
+              "analysts have voiced scepticism ... 是新闻中常见的专家评论句。",
+              "over a host of issues 强调问题的复杂性和范围之广。",
+              "该句适合分析“对立修辞 + 专家判断”的写作方式。"
+            ],
+            "translation": "尽管两位领导人采取了和谐语气，但分析人士对在一系列问题上达成长期稳定安排的可能性仍持怀疑态度。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-24T09:16:16+08:00",
+ "updatedAt": "2026-09-25T09:19:44+08:00",
  "issues": [
+   issue20260925,
    issue20260924,
    issue20260923,
    issue20260922,
    issue20260921,
    issue20260920,
-   issue20260919,
-   issue20260918
+   issue20260919
  ]
 };
