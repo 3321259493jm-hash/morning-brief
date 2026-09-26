@@ -1,3 +1,249 @@
+const issue20260926 = {
+  "date": "2026-09-26",
+  "status": "ready",
+  "ai": {
+    "intro": "先核验 9 月 25 日 GitHub Copilot 官方更新，再扩展至近 7 日，补充 Google 于 9 月 23 日发布的 Gemini、Vids 与 Flow 功能；免费资源均按官方页面复核。",
+    "updates": [
+      {
+        "event": "GitHub Copilot 在 Slack 和 Microsoft Teams 中增强对话上下文（2026-09-25）",
+        "summary": "GitHub 扩展了 Copilot 在协作工具中可使用的上下文：Slack 支持文件、附件和消息链接；Teams 支持行内图片、转发消息、频道和线程历史。它还会检查相似 issue，并把新建的 GitHub 工作项链接回原讨论。",
+        "howTo": "在 Slack 或 Teams 中先确认组织管理员已启用 Copilot cloud agent（Teams 还需启用 cloud sandboxes），安装或升级 GitHub 应用并关联 GitHub 账号，再在讨论中提及 @GitHub；在 Slack 可为后续消息切换模型。",
+        "impact": "小组项目讨论可以把附件、图片和已有线程作为背景，直接整理成可追踪的 GitHub issue，减少复制上下文和重复建单；创建前仍应核对任务描述和关联仓库。",
+        "free": "官方说明该功能为 public preview，仅向 GitHub Copilot Business 和 Enterprise 组织开放，使用量计入现有 Copilot entitlement，可由 cloud agent budget 管理；部分能力逐步推出。个人/学生计划、具体配额和地区范围官方未说明。",
+        "category": "AI 协作 / 编程代理",
+        "source": {
+          "name": "GitHub Changelog",
+          "published": "2026-09-25",
+          "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams"
+        }
+      },
+      {
+        "event": "Google Vids 开放 Gemini Omni 视频生成功能并新增精细控制（2026-09-23）",
+        "summary": "Google 在 Vids 中推出 Omni 1.1，可延长场景并保持画面元素连贯、指定生成片段时长、生成 1080p 视频或放大已有 AI 片段；生成片段带有 SynthID 水印。",
+        "howTo": "用 Google 或 Google Workspace 账号登录 Google Vids，在项目中选择 Omni 1.1 生成视频片段；按旁白节奏设置片段时长，必要时延长场景或将片段升至 1080p，再导出用于演示或社团活动。",
+        "impact": "学生可把课程展示、研究汇报或校园活动脚本制作成带连贯镜头的短片，并按旁白调整长度；提交前应检查生成画面与事实是否一致，并保留其 AI 生成标识。",
+        "free": "Google 官方称任何 Google 或 Google Workspace 账号均可免费开始使用；个人账号可通过 Google AI 计划获得更多生成权限，Workspace Business/Enterprise 有扩展生成池。具体免费配额及地区适用范围官方未说明。",
+        "category": "AI 视频 / 免费创作",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-23",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
+        }
+      },
+      {
+        "event": "Gemini 开始接入更多第三方 Connected Apps（2026-09-23）",
+        "summary": "Gemini 开始逐步接入 Airtable、Linear、monday.com、Adobe、Picsart、Squarespace、Webflow、Peloton 等新应用，覆盖项目管理、创意制作和生活规划等场景。",
+        "howTo": "打开 Gemini 设置连接所需应用，按页面提示完成授权；也可在 Gemini 对话中用 @ 提及已连接的应用，或直接提出任务。只授权完成任务必需的应用，并检查生成或修改的内容。",
+        "impact": "学生可在同一对话中整理项目数据库、规划分工，或把设计需求交给已连接的创意工具，减少在多个标签页间搬运信息；涉及账号资料或共享文件时应先核实授权范围。",
+        "free": "官方公告称功能从 2026-09-23 起逐步推出，但未说明免费/付费计划资格、各地区开放时间或使用配额；具体可用应用以 Gemini 设置中的实际列表为准。",
+        "category": "AI 助手 / 应用连接",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-23",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
+        }
+      },
+      {
+        "event": "Google Flow 发布六款可用自然语言搭建工作流的新工具（2026-09-23）",
+        "summary": "Google 在 Flow 中发布六款新工具，面向电影制作、建筑、声音设计和数字内容等创作流程；公告介绍，用户可通过描述需求来构建自定义工作流。",
+        "howTo": "打开 Google Flow，描述希望重复完成的创作步骤并按界面提示搭建工作流，再用自己的素材试跑并检查输出；适合先从课程短片、声音或视觉素材整理等小任务开始。",
+        "impact": "学生可将重复的素材整理和创意制作步骤转成可复用工作流，用于课程视频或展示原型；不同项目的输入和输出应逐项核查，不要默认自动生成内容准确。",
+        "free": "官方公告确认六款工具已发布到 Flow，但未说明免费计划、账号资格、地区范围或生成额度；是否可用以 Flow 当前产品界面为准。",
+        "category": "AI 创作 / 工作流",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-23",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/six-new-tools-built-by-creatives/"
+        }
+      }
+    ],
+    "deals": [
+      {
+        "event": "Google Vids 免费生成 Omni 1.1 视频片段",
+        "summary": "Google 官方公告称，Google 或 Google Workspace 账号均可免费开始在 Vids 中使用 Omni 1.1 生成视频；较多 AI 视频生成权限需查看 Google AI 计划或 Workspace 扩展生成池。",
+        "howTo": "登录 Google Vids，创建视频项目并使用 Omni 1.1 生成片段；可设置片段长度、生成或放大至 1080p，并在导出前检查内容及 SynthID 标记。",
+        "impact": "适合制作课程展示、研究汇报和活动宣传的短片，免去先购买视频软件或订阅的门槛。",
+        "free": "官方明确称可免费开始使用，账号需为 Google 或 Google Workspace；更多生成权限属于付费计划或 Workspace 扩展池。具体免费配额和地区范围官方未说明。",
+        "category": "长期免费创作 / AI 视频",
+        "source": {
+          "name": "Google 官方博客",
+          "published": "2026-09-23",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
+        }
+      },
+      {
+        "event": "GitHub Copilot Student 免费学生计划",
+        "summary": "GitHub 官方列出免费的 Copilot Student 计划，面向通过验证的学生；计划含不限量代码补全、GitHub AI Credits 额度，以及有限的聊天和 agent 使用。",
+        "howTo": "先在 GitHub Education 验证学生身份，再启用 Copilot Student；在 IDE 中安装 GitHub Copilot 扩展，使用代码补全或自动模型选择下的聊天/agent 功能。",
+        "impact": "可用于课程编程、理解报错、补写测试和探索代码库；提交作业前应运行测试并检查生成代码，避免未经核实地采纳输出。",
+        "free": "官方标示 Copilot Student 免费，要求学生身份通过验证；代码补全不限量，AI Credits 数量及聊天/agent 使用量有限，但具体额度、地区和验证资格细则以账户提示为准，官方计划页未列出统一数值。",
+        "category": "学生教育福利 / AI 编程",
+        "source": {
+          "name": "GitHub Copilot 官方计划说明",
+          "published": "官方未说明",
+          "url": "https://docs.github.com/en/copilot/get-started/plans"
+        }
+      },
+      {
+        "event": "Qwen3-4B Apache-2.0 开放模型权重",
+        "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 权重，并标注 Apache-2.0 许可证；模型卡说明支持 100 多种语言与方言，可用 Transformers 等工具加载。",
+        "howTo": "从 Qwen 官方 Hugging Face 页面下载模型文件，按模型卡安装 Transformers 并运行示例；也可使用模型卡列出的本地推理工具。先核对本机硬件和依赖是否满足模型卡要求。",
+        "impact": "适合在课程项目中测试本地文本生成、多语言翻译或代码辅助，也便于学习模型部署流程；本地运行仍需自行管理算力、存储和输出审查。",
+        "free": "模型卡标注 Apache-2.0 并提供可下载权重；账号、地区、下载配额及具体硬件要求官方未在该卡中统一说明，运行成本取决于本地设备或所选服务。",
+        "category": "开放模型权重 / Apache-2.0",
+        "source": {
+          "name": "Qwen 官方 Hugging Face 模型卡",
+          "published": "官方未说明",
+          "url": "https://huggingface.co/Qwen/Qwen3-4B"
+        }
+      },
+      {
+        "event": "Microsoft Copilot 免费网页与移动端入口",
+        "summary": "Microsoft 官方 Copilot 应用提供免费使用入口，可用于日常提问、研究整理和基础创作；具体功能以登录后的当前页面为准。",
+        "howTo": "打开 Copilot 网页或官方移动应用，按提示登录并提交问题；用于论文或课程任务时，要求它列出可核验来源，再回到原始来源检查关键事实。",
+        "impact": "可作为不需要先订阅的通用问答和头脑风暴工具，辅助解释概念、整理提纲或润色英文草稿；重要结论仍需核对原始资料。",
+        "free": "官方网页提供免费入口；具体消息数、生成次数、账号资格、地区范围及付费升级限制官方未统一说明，以当前应用提示为准。",
+        "category": "长期免费网页访问",
+        "source": {
+          "name": "Microsoft Copilot 官方应用页",
+          "published": "官方未说明",
+          "url": "https://copilot.microsoft.com/"
+        }
+      }
+    ]
+  },
+  "english": {
+    "articles": [
+      {
+        "title": "Why making Americans bet with cash could protect people from gambling problems",
+        "source": "The Conversation",
+        "published": "2026-09-24",
+        "url": "https://theconversation.com/why-making-americans-bet-with-cash-could-protect-people-from-gambling-problems-290131",
+        "readingTime": "8 分钟",
+        "topic": "经济 / 社会政策",
+        "summary": "作者以美国体育投注和预测市场的扩张为背景，提出数字化下注过于便捷，会让人更容易反复下注，并从成瘾、内幕交易和大额下注者影响市场三个角度说明风险。文章先讨论线上市场的监管边界，再以现金下注为核心提出政策建议：要求下注者先取得纸币并亲自到场，以增加操作摩擦、提高大额交易可见度，并为本人及周围人留出思考和提醒的时间。作者也讨论该政策对线下商户的可能影响，最后承认现金要求不能解决所有问题，转而提出现金预存账户等折中设计。",
+        "reason": [
+          "对应经济与公共政策主题，可用于讨论数字服务便利性与消费者保护之间的取舍。",
+          "文章采用“趋势背景—三类风险—政策方案—承认局限并补充折中”的论证结构，适合练习段落功能与论证推进。",
+          "阅读题可考查作者态度、现金方案的作用机制，以及作者为何承认方案无法消除全部风险。",
+          "frictionless、pivotal、bypass 等词汇有助于理解关于技术便利、监管和社会成本的评论文。",
+          "写作可借鉴先提出问题、解释机制、再承认政策边界并提出改良方案的展开方式。"
+        ],
+        "vocabulary": [
+          { "word": "widespread", "phonetic": "/ˈwaɪd.spred/", "part": "adj.", "translation": "广泛的；普遍的" },
+          { "word": "embezzled", "phonetic": "/ɪmˈbez.əld/", "part": "v.", "translation": "挪用；侵吞" },
+          { "word": "pivotal", "phonetic": "/ˈpɪv.ə.təl/", "part": "adj.", "translation": "关键的；起决定作用的" },
+          { "word": "bypassing", "phonetic": "/ˌbaɪˈpɑː.sɪŋ/", "part": "v.", "translation": "绕过；规避" },
+          { "word": "addictive", "phonetic": "/əˈdɪk.tɪv/", "part": "adj.", "translation": "使人上瘾的" },
+          { "word": "anonymous", "phonetic": "/əˈnɒn.ɪ.məs/", "part": "adj.", "translation": "匿名的" },
+          { "word": "frictionless", "phonetic": "/ˈfrɪk.ʃən.ləs/", "part": "adj.", "translation": "无阻碍的；操作顺畅的" },
+          { "word": "wager", "phonetic": "/ˈweɪ.dʒər/", "part": "n.", "translation": "赌注；下注" },
+          { "word": "squander", "phonetic": "/ˈskwɒn.dər/", "part": "v.", "translation": "挥霍；浪费" },
+          { "word": "pre-funding", "phonetic": "/ˌpriːˈfʌn.dɪŋ/", "part": "n.", "translation": "预先注资；预存资金" }
+        ],
+        "sentences": [
+          {
+            "original": "Regrettably, but not unexpectedly, the widespread ability to gamble is also causing major scandals.",
+            "analysis": [
+              "主干是 the ability ... is causing scandals；主语中心词为 ability，谓语为 is causing。",
+              "to gamble 作 ability 的补足成分，说明这种能力具体指什么。",
+              "widespread 修饰 ability；major 修饰 scandals。",
+              "句首 Regrettably 表示遗憾，but not unexpectedly 补充“并不意外”，形成让步式评价。",
+              "可借鉴“评价副词 + but + 对照判断”的句首结构来表达复杂态度。"
+            ],
+            "translation": "令人遗憾但并不意外的是，广泛的赌博机会也正在引发重大丑闻。"
+          },
+          {
+            "original": "When actions are frictionless, people do them more often.",
+            "analysis": [
+              "主句主干为 people do them more often，them 指前文所说的 actions。",
+              "When 引导时间/条件状语从句，说明行为发生的环境特征。",
+              "frictionless 作表语，概括操作过程缺少阻碍这一特点。",
+              "从句给出条件，主句说明频率变化，构成清晰的机制解释。",
+              "When ..., ... 是说明习惯、环境与行为结果关系的常用表达。"
+            ],
+            "translation": "当行为变得毫无阻碍时，人们就会更频繁地去做。"
+          },
+          {
+            "original": "Do I think that using cash would solve all gambling problems? Absolutely not.",
+            "analysis": [
+              "前半句是一般疑问句，主干为 Do I think ...?，that 从句作 think 的宾语。",
+              "using cash 是 that 从句的主语，would solve 是谓语。",
+              "all 修饰 gambling problems，突出“解决所有问题”的强命题。",
+              "后面的 Absolutely not 是省略式回答，直接否定过度推论。",
+              "先提出反问再立即限定结论，体现作者承认政策局限的论证策略。"
+            ],
+            "translation": "我认为使用现金能解决所有赌博问题吗？绝对不能。"
+          }
+        ]
+      },
+      {
+        "title": "Students strike across Germany in protest against military service",
+        "source": "BBC",
+        "published": "2026-09-25",
+        "url": "https://www.bbc.co.uk/news/articles/cxnvlnve52qdo",
+        "readingTime": "5 分钟",
+        "topic": "社会 / 青年与公共政策",
+        "summary": "报道从德国学生抗议可能恢复义务兵役的示威切入，交代新法目前以志愿服役为目标，但在安全形势恶化或志愿者不足时，议会仍可能考虑强制服役。文章说明所有 18 岁青年收到意愿问卷、男性须接受体检的制度，并引述学生对相关安排的反对以及国防部对体检义务适用范围的解释。结尾回顾德国冷战后缩减军队、2011 年结束义务兵役的背景，并列出政府扩充现役和预备役力量的目标，呈现青年选择、法定义务与国防需求之间的张力。",
+        "reason": [
+          "主题连接青年参与、个人选择与国家安全政策，适合社会议题类阅读。",
+          "文章按抗议导入、制度说明、相关方回应、历史背景和兵力目标展开，时间线与因果线索并行。",
+          "可训练细节定位、人物观点辨析，以及对“志愿制与强制服役”对照关系的推断。",
+          "compulsory、questionnaire、obligation、reservist 等词汇常见于制度与公共事务报道。",
+          "写作可借鉴先说明政策变化，再呈现支持或反对理由并补充历史背景的结构。"
+        ],
+        "vocabulary": [
+          { "word": "strike", "phonetic": "/straɪk/", "part": "n.", "translation": "罢课；罢工" },
+          { "word": "protest", "phonetic": "/ˈprəʊ.test/", "part": "v.", "translation": "抗议" },
+          { "word": "reintroduction", "phonetic": "/ˌriː.ɪn.trəˈdʌk.ʃən/", "part": "n.", "translation": "重新引入；恢复" },
+          { "word": "compulsory", "phonetic": "/kəmˈpʌl.sər.i/", "part": "adj.", "translation": "强制的；义务的" },
+          { "word": "voluntary", "phonetic": "/ˈvɒl.ən.tər.i/", "part": "adj.", "translation": "自愿的" },
+          { "word": "questionnaire", "phonetic": "/ˌkwes.tʃəˈneər/", "part": "n.", "translation": "问卷" },
+          { "word": "obligation", "phonetic": "/ˌɒb.lɪˈɡeɪ.ʃən/", "part": "n.", "translation": "义务；责任" },
+          { "word": "recruit", "phonetic": "/rɪˈkruːt/", "part": "v.", "translation": "招募" },
+          { "word": "reservist", "phonetic": "/rɪˈzɜː.vɪst/", "part": "n.", "translation": "预备役军人" },
+          { "word": "armed forces", "phonetic": "/ˌɑːmd ˈfɔː.sɪz/", "part": "n.", "translation": "武装部队" }
+        ],
+        "sentences": [
+          {
+            "original": "School strikes are taking place across Germany to protest against the possible reintroduction of compulsory military service.",
+            "analysis": [
+              "主干为 School strikes are taking place；主语是 School strikes，谓语是现在进行时。",
+              "to protest against ... 是目的状语，说明罢课的原因。",
+              "possible 修饰 reintroduction；compulsory military service 是 protest against 的宾语。",
+              "句子先交代事件，再用不定式补充目的，信息层次清楚。",
+              "to protest against + 名词可用于概括群体行动的诉求。"
+            ],
+            "translation": "德国各地正在发生学生罢课，以抗议可能恢复义务兵役。"
+          },
+          {
+            "original": "A new law introducing voluntary military service came into force in January, with the aim of recruiting volunteers to increase the number of soldiers.",
+            "analysis": [
+              "主干为 A new law came into force；谓语短语 came into force 表示法律生效。",
+              "introducing voluntary military service 是现在分词短语，后置修饰 law。",
+              "with the aim of 引出目的，recruiting 是介词 of 的动名词宾语。",
+              "to increase the number of soldiers 继续说明招募志愿者的目标。",
+              "句子用“法律生效—实施方式—最终目标”逐层补充政策信息。"
+            ],
+            "translation": "一项引入志愿兵役的新法律于 1 月生效，旨在招募志愿者以增加士兵人数。"
+          },
+          {
+            "original": "The questionnaire is mandatory for men and voluntary for women.",
+            "analysis": [
+              "主干由主语 The questionnaire、系动词 is 和两个并列表语构成。",
+              "mandatory for men 与 voluntary for women 通过 and 并列。",
+              "两个形容词形成强制与自愿的对照，分别限定适用对象。",
+              "句子省去重复的系动词，表达简洁，适合政策说明。",
+              "A is mandatory for X and voluntary for Y 可用于清晰比较规则差异。"
+            ],
+            "translation": "男性必须填写这份问卷，女性则自愿填写。"
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const issue20260924 = {
   "date": "2026-09-24",
   "status": "ready",
@@ -5219,14 +5465,14 @@ const issue20260925 = {
 };
 
 window.BRIEFING_DATA = {
- "updatedAt": "2026-09-25T09:19:44+08:00",
+ "updatedAt": "2026-09-26T09:27:32+08:00",
  "issues": [
+   issue20260926,
    issue20260925,
    issue20260924,
    issue20260923,
    issue20260922,
    issue20260921,
-   issue20260920,
-   issue20260919
+   issue20260920
  ]
 };
