@@ -1,6 +1,432 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-27T09:27:32+08:00",
+  "updatedAt": "2026-09-28T09:29:33+08:00",
   "issues": [
+    {
+      "date": "2026-09-28",
+      "status": "ready",
+      "ai": {
+        "intro": "先核验 9 月 24—25 日的 GitHub 官方更新，再补充仍可用的免费 AI 资源；因 9 月 27—28 日不足 3 条可直接核验的新发布，按规则扩展到前 7 日，并保留来源实际发布日期。",
+        "updates": [
+          {
+            "event": "GitHub Agentic Autofix 开始使用 Copilot Memory（2026-09-25）",
+            "summary": "GitHub Changelog 说明，Agentic Autofix 现在会使用 Copilot Memory；它可把仓库中与安全开发模式有关的记忆提供给代码修复流程。官方同时将 Agentic Autofix 和 Copilot Memory 标为 public preview。",
+            "howTo": "在支持的 GitHub 仓库中触发 Agentic Autofix，先在仓库中配置并检查 Copilot Memory 的内容，再审阅它提出的修复和测试；将自动生成的改动放入分支，运行测试后再提交。",
+            "impact": "课程项目可让自动修复参考仓库约定和安全模式，减少重复说明；学生仍应检查记忆是否过时、修复是否引入回归，并把安全判断留给人工。",
+            "free": "官方只说明两项能力处于 public preview；没有统一说明个人/学生计划、地区、账号资格或配额。",
+            "category": "AI 编程 / 代码安全",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-25",
+              "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory"
+            }
+          },
+          {
+            "event": "GitHub 对高影响操作加入 proof of presence（2026-09-24）",
+            "summary": "GitHub 为企业账户公开预览 proof of presence，在高影响操作发生时要求确认确有获授权的人正在操作；官方称这是企业版 sudo mode 的扩展，用于降低被盗会话 Cookie 或长期令牌带来的供应链风险。",
+            "howTo": "若组织属于 GitHub Enterprise Cloud 的 managed-user enterprise，且使用 Microsoft Entra ID 作为 SAML 或 OIDC SSO IdP，由管理员按 Changelog 说明启用并测试高影响操作的现场确认；普通个人账号不能据此推断已获得该能力。",
+            "impact": "做开源或课程仓库管理时，学生可把“身份在场”作为高风险发布、权限和设置操作的额外控制点，并在自动化脚本中避免绕过人工确认。",
+            "free": "官方标为 public preview；范围仅为 github.com 和 GHEC-DR 上使用 Microsoft Entra ID SSO 的 managed-user enterprise，价格、个人/学生资格、地区和配额官方未说明。",
+            "category": "AI 时代安全 / 身份验证",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-24",
+              "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions"
+            }
+          },
+          {
+            "event": "GitHub Enterprise managed settings 增加产品内验证器（2026-09-25）",
+            "summary": "GitHub Changelog 发布 Enterprise managed settings in-product validator，用于在产品内检查企业托管设置；它把设置校验直接放入管理流程，帮助管理员发现配置问题。",
+            "howTo": "企业管理员打开 GitHub Enterprise 的 managed settings 页面，使用产品内 validator 检查当前配置；按页面提示修正问题，再让组织管理员复核设置和生效范围。",
+            "impact": "学生参与学校或实验室 GitHub Enterprise 管理时，可把 validator 当作发布前配置检查，减少因策略遗漏导致的协作或权限问题；它不能替代对组织政策的人工审阅。",
+            "free": "该 Changelog 没有说明价格、免费计划、地区、账号资格或使用配额；可用范围以企业账户当前页面为准。",
+            "category": "AI 协作基础设施 / 企业管理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-25",
+              "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude 免费计划的滚动五小时窗口",
+            "summary": "Anthropic 定价页列出 Free 计划，面向日常问题；页面说明所有计划都有使用限制，免费额度按滚动的五小时 session window 重置。",
+            "howTo": "打开 Claude 网页、桌面或移动端并注册/登录，先用短文本做摘要或改写；在 Settings > Usage 查看用量，达到限制后等待窗口重置。",
+            "impact": "适合英文改写、概念解释和学习提纲；长文应拆分，关键事实回到原文核验。",
+            "free": "官方确认 Free 计划和滚动五小时重置，但没有给出固定消息数；账号、地区和具体上限官方未说明。",
+            "category": "长期免费网页访问 / AI 助手",
+            "source": {
+              "name": "Claude 官方定价",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student 免费学生计划",
+            "summary": "GitHub 计划说明列出 Copilot Student 为免费学生计划，权益包括 unlimited code completions、GitHub AI Credits，以及 auto model selection 下有限的 chat 和 agent 使用。",
+            "howTo": "在 GitHub Education 完成学生身份验证并启用 Copilot Student，在 IDE 安装扩展；用补全处理样板代码，并在账户页面查看 chat/agent 使用情况。",
+            "impact": "可用于课程编程、测试草稿和报错解释，降低练习门槛；提交前运行测试并人工审查生成代码。",
+            "free": "官方标为免费并要求 verified student；补全 unlimited，chat/agent limited。统一 credits 数值、地区例外和验证材料要求官方未说明。",
+            "category": "学生教育福利 / AI 编程",
+            "source": {
+              "name": "GitHub Copilot 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/get-started/plans"
+            }
+          },
+          {
+            "event": "Gemini API 与 AI Studio 的 Free tier",
+            "summary": "Google Gemini API 定价页把部分模型列为 Free tier，并将免费层与付费层分开；具体模型的限流与价格需按当前表格逐项查看。",
+            "howTo": "登录 Google AI Studio，选择标有 Free tier 的模型，先做低频摘要或分类原型；上线前记录页面列出的 RPM、TPM、RPD 等限制并处理超限。",
+            "impact": "学生可用较低门槛完成 API 原型，学习按 token 和请求速率估算成本，不把免费层当成无限吞吐。",
+            "free": "官方确认存在 Free tier；模型清单、请求限制、账号资格、地区和重置周期按模型/项目决定，统一额度官方未说明。",
+            "category": "免费 API / 开发者资源",
+            "source": {
+              "name": "Google Gemini API 官方定价",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Google Colab 免费托管 Jupyter 环境",
+            "summary": "Colab FAQ 将其定义为无需本地设置的托管 Jupyter Notebook 服务，并说明可免费使用包括 GPU 和 TPU 在内的计算资源；资源不保证，使用上限会波动。",
+            "howTo": "打开 Colab，新建或导入 notebook，在运行时设置中按需尝试 GPU/TPU；把 notebook 保存到 Drive 或从 GitHub 加载，不要把密钥写入共享文件。",
+            "impact": "适合数据清洗、课程实验和小型机器学习练习；应保存中间结果，并为资源回收或限流准备替代方案。",
+            "free": "官方说明服务可免费使用且资源不保证；具体配额、可用地区、重置周期和 GPU/TPU 获得条件官方未说明。",
+            "category": "长期免费开发环境 / 学习",
+            "source": {
+              "name": "Google Colaboratory FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Qwen3-4B Apache-2.0 开放模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 可下载权重，介绍 thinking/non-thinking 模式切换和多语言能力，并在许可部分标注 Apache-2.0。",
+            "howTo": "打开 Qwen/Qwen3-4B 模型卡，按 Transformers 示例安装依赖并下载权重；先检查本机存储、内存和推理工具要求，再用非敏感文本测试。",
+            "impact": "可用于本地多语言翻译、摘要和代码实验，帮助学生学习模型部署而不必先购买 API；运行成本取决于本地设备，输出仍需审查。",
+            "free": "模型卡提供下载并标注 Apache-2.0；账号、地区、下载配额及运行硬件成本官方未统一说明。",
+            "category": "开放模型权重 / Apache-2.0",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B"
+            }
+          },
+          {
+            "event": "GitHub Education 认证学生可使用 Student Developer Pack",
+            "summary": "GitHub Education 的官方页面提供 Student Developer Pack 入口，面向经验证的学生，包含开发者工具和服务的学生权益；具体合作项目以页面当前列表为准。",
+            "howTo": "打开 GitHub Education Student Developer Pack 页面，登录 GitHub，按页面流程提交学生身份验证；获批后逐项打开可用合作项目并阅读其独立条款。",
+            "impact": "可为课程开发、部署和协作提供工具试用或学生权益，避免直接购买；学生应记录每项服务的到期、地区和数据处理条件。",
+            "free": "官方页面以 verified student 为资格基础，但未对所有合作项目统一说明价格、地区、期限或额度；以每项合作方页面为准。",
+            "category": "学生教育福利 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方页面",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Protesters disperse after blocking controversial Orange Order parade",
+            "source": "BBC",
+            "published": "2026-09-27",
+            "url": "https://www.bbc.co.uk/news/articles/c6qjkk55wd47o",
+            "readingTime": "6 分钟",
+            "topic": "社会 / 社区冲突与妥协",
+            "summary": "文章报道北爱尔兰一场有争议的 Orange Order 游行被抗议者阻拦后，参与者最终散去；同时交代北爱尔兰事务大臣 Chris Bryant 从工党会议返回参与会谈，并敦促争议双方继续寻求妥协。报道以现场事件切入，再补充政治人物回应，呈现社区传统、公共秩序与谈判之间的张力，结论落在避免冲突升级的政治沟通。",
+            "reason": [
+              "主题涉及身份、传统、公共空间与妥协，适合社会议题阅读。",
+              "结构为现场结果—政治回应—冲突背景，便于定位事实与观点。",
+              "可训练区分报道事实和官员倡议，并判断作者如何用结果收束。",
+              "controversial、dispute、compromise 等词适合公共事务语境。",
+              "写作可借鉴先描述争议事件，再呈现相关方立场并提出缓和方向。"
+            ],
+            "vocabulary": [
+              {
+                "word": "controversial",
+                "phonetic": "/ˌkɒn.trəˈvɜː.ʃəl/",
+                "part": "adj.",
+                "translation": "有争议的"
+              },
+              {
+                "word": "parade",
+                "phonetic": "/pəˈreɪd/",
+                "part": "n.",
+                "translation": "游行"
+              },
+              {
+                "word": "disperse",
+                "phonetic": "/dɪˈspɜːs/",
+                "part": "v.",
+                "translation": "散去；驱散"
+              },
+              {
+                "word": "protester",
+                "phonetic": "/prəˈtes.tər/",
+                "part": "n.",
+                "translation": "抗议者"
+              },
+              {
+                "word": "dispute",
+                "phonetic": "/dɪˈspjuːt/",
+                "part": "n.",
+                "translation": "争议"
+              },
+              {
+                "word": "compromise",
+                "phonetic": "/ˈkɒm.prə.maɪz/",
+                "part": "n.",
+                "translation": "妥协"
+              },
+              {
+                "word": "community",
+                "phonetic": "/kəˈmjuː.nə.ti/",
+                "part": "n.",
+                "translation": "社区；群体"
+              },
+              {
+                "word": "tension",
+                "phonetic": "/ˈten.ʃən/",
+                "part": "n.",
+                "translation": "紧张关系"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Protesters disperse after blocking controversial Orange Order parade.",
+                "analysis": [
+                  "主干是 Protesters disperse，主语和谓语清晰。",
+                  "after 引导时间状语，说明散去发生在阻拦之后。",
+                  "blocking 是动名词，controversial 修饰 parade。",
+                  "标题用一般现在时概括已发生新闻，简洁突出结果。"
+                ],
+                "translation": "抗议者阻拦有争议的 Orange Order 游行后散去。"
+              },
+              {
+                "original": "The dispute has caused tension in the community.",
+                "analysis": [
+                  "主干为 The dispute has caused tension。",
+                  "现在完成时连接过去争议与当前影响。",
+                  "in the community 是地点/范围状语。",
+                  "cause + 名词可用于表达社会事件的结果。"
+                ],
+                "translation": "这场争议在社区中造成了紧张。"
+              },
+              {
+                "original": "Both sides must double down on compromise.",
+                "analysis": [
+                  "主干是 Both sides must double down。",
+                  "on compromise 补充行动方向。",
+                  "must 表示政治倡议中的必要性。",
+                  "double down on 可表达“进一步坚持或加大努力”，但语气较强。"
+                ],
+                "translation": "双方都必须进一步努力寻求妥协。"
+              }
+            ]
+          },
+          {
+            "title": "Scientists discover two new species of sea spiders along Canadian coastline",
+            "source": "NPR",
+            "published": "2026-09-27",
+            "url": "https://www.npr.org/2026/09/27/nx-s1-5982026/new-sea-spider-species",
+            "readingTime": "5 分钟",
+            "topic": "环境 / 生物多样性",
+            "summary": "NPR 报道科学家在加拿大海岸线发现两种新的海蜘蛛，并提醒读者目前已确认的海蜘蛛种类超过 1,300 种。文章以新发现为入口，解释海蜘蛛并非真正的蜘蛛、研究者如何在沿海样本中识别物种，再把个案放回海洋生物多样性调查的更大背景。结尾强调仍有物种等待记录，说明分类研究对认识海洋生态的重要性。",
+            "reason": [
+              "主题是物种发现与海洋生物多样性，适合环境科学普及类文章。",
+              "结构为发现—概念澄清—研究过程—更广泛意义。",
+              "可训练主旨概括、数字细节定位和对类比说明的理解。",
+              "species、coastline、identify 等词可迁移到环境报道。",
+              "写作可借鉴从具体发现过渡到生态保护或科学认知意义。"
+            ],
+            "vocabulary": [
+              {
+                "word": "species",
+                "phonetic": "/ˈspiː.ʃiːz/",
+                "part": "n.",
+                "translation": "物种"
+              },
+              {
+                "word": "coastline",
+                "phonetic": "/ˈkəʊst.laɪn/",
+                "part": "n.",
+                "translation": "海岸线"
+              },
+              {
+                "word": "scientist",
+                "phonetic": "/ˈsaɪən.tɪst/",
+                "part": "n.",
+                "translation": "科学家"
+              },
+              {
+                "word": "identify",
+                "phonetic": "/aɪˈden.tɪ.faɪ/",
+                "part": "v.",
+                "translation": "识别；确定"
+              },
+              {
+                "word": "biodiversity",
+                "phonetic": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+                "part": "n.",
+                "translation": "生物多样性"
+              },
+              {
+                "word": "specimen",
+                "phonetic": "/ˈspes.ɪ.mən/",
+                "part": "n.",
+                "translation": "标本"
+              },
+              {
+                "word": "marine",
+                "phonetic": "/məˈriːn/",
+                "part": "adj.",
+                "translation": "海洋的"
+              },
+              {
+                "word": "discovery",
+                "phonetic": "/dɪˈskʌv.ər.i/",
+                "part": "n.",
+                "translation": "发现"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Scientists discover two new species of sea spiders along the Canadian coastline.",
+                "analysis": [
+                  "主干是 Scientists discover two new species。",
+                  "of sea spiders 说明 species 的类别。",
+                  "along the Canadian coastline 是地点状语。",
+                  "标题用一般现在时突出新闻事件和发现结果。"
+                ],
+                "translation": "科学家在加拿大海岸线沿岸发现了两种新的海蜘蛛。"
+              },
+              {
+                "original": "So far, scientists have identified more than 1,300 species of sea spiders.",
+                "analysis": [
+                  "主干为 scientists have identified species。",
+                  "So far 与现在完成时搭配，表示截至目前的累计结果。",
+                  "more than 1,300 是数量限定。",
+                  "of sea spiders 后置说明 species 的范围。"
+                ],
+                "translation": "截至目前，科学家已经确认了 1,300 多种海蜘蛛。"
+              },
+              {
+                "original": "The discovery adds to what scientists know about life in the ocean.",
+                "analysis": [
+                  "主干是 The discovery adds to ...。",
+                  "what 引导名词性从句作介词 to 的宾语。",
+                  "about life in the ocean 说明知识的主题。",
+                  "add to 可用于表达新证据对既有认知的补充。"
+                ],
+                "translation": "这一发现丰富了科学家对海洋生命的认识。"
+              }
+            ]
+          },
+          {
+            "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit",
+            "source": "The Guardian",
+            "published": "2026-09-27",
+            "url": "https://www.theguardian.com/us-news/2026/sep/27/giant-pandas-atlanta-zoo-china-xi-trump-summit",
+            "readingTime": "5 分钟",
+            "topic": "文化 / 国际交流与动物保护",
+            "summary": "文章报道两只大熊猫 Ping Ping 和 Fu Shuang 从中国抵达亚特兰大动物园，背景是中美政府之间的租借安排以及习近平与特朗普峰会后的外交氛围。报道先写熊猫抵达这一可见事件，再解释租借协议和动物园接待安排，最后把“熊猫外交”放在两国关系和公众文化交流中理解。文章的重点不是单纯的动物新闻，而是文化象征如何与国家间关系、保护合作和公共期待相连。",
+            "reason": [
+              "主题结合动物保护、文化交流与国际关系，适合跨学科阅读。",
+              "结构为抵达消息—租借细节—外交背景—象征意义。",
+              "可训练识别事实、背景和隐含意义之间的层次。",
+              "loan deal、summit、diplomatic 等词适合国际新闻。",
+              "写作可借鉴用具体公共事件引出更广泛的关系与合作讨论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "giant panda",
+                "phonetic": "/ˌdʒaɪ.ənt ˈpæn.də/",
+                "part": "n.",
+                "translation": "大熊猫"
+              },
+              {
+                "word": "arrive",
+                "phonetic": "/əˈraɪv/",
+                "part": "v.",
+                "translation": "抵达"
+              },
+              {
+                "word": "summit",
+                "phonetic": "/ˈsʌm.ɪt/",
+                "part": "n.",
+                "translation": "峰会"
+              },
+              {
+                "word": "loan deal",
+                "phonetic": "/ləʊn diːl/",
+                "part": "n.",
+                "translation": "租借协议"
+              },
+              {
+                "word": "diplomatic",
+                "phonetic": "/ˌdɪp.ləˈmæt.ɪk/",
+                "part": "adj.",
+                "translation": "外交的"
+              },
+              {
+                "word": "symbol",
+                "phonetic": "/ˈsɪm.bəl/",
+                "part": "n.",
+                "translation": "象征"
+              },
+              {
+                "word": "conservation",
+                "phonetic": "/ˌkɒn.səˈveɪ.ʃən/",
+                "part": "n.",
+                "translation": "保护；保育"
+              },
+              {
+                "word": "relationship",
+                "phonetic": "/rɪˈleɪ.ʃən.ʃɪp/",
+                "part": "n.",
+                "translation": "关系"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Two giant pandas arrive in Atlanta from China after the Xi-Trump summit.",
+                "analysis": [
+                  "主干是 Two giant pandas arrive in Atlanta。",
+                  "from China 说明来源，after ... summit 提供时间背景。",
+                  "标题使用一般现在时压缩叙事。",
+                  "after 短语把动物新闻与外交事件并置。"
+                ],
+                "translation": "习近平与特朗普峰会后，两只大熊猫从中国抵达亚特兰大。"
+              },
+              {
+                "original": "The pandas are part of a loan deal between the Chinese and US governments.",
+                "analysis": [
+                  "主干是 The pandas are part of a loan deal。",
+                  "between ... governments 限定协议双方。",
+                  "are part of 表示个体属于更大的安排。",
+                  "被动意义通过名词 loan deal 间接呈现，适合说明制度背景。"
+                ],
+                "translation": "这些熊猫是中美两国政府租借协议的一部分。"
+              },
+              {
+                "original": "The animals have become a symbol of the relationship between the two countries.",
+                "analysis": [
+                  "主干是 The animals have become a symbol。",
+                  "现在完成时表示象征意义逐渐形成并延续到现在。",
+                  "of the relationship 说明 symbol 的内容。",
+                  "between the two countries 限定关系的双方。"
+                ],
+                "translation": "这些动物已经成为两国关系的一种象征。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-09-27",
       "status": "ready",
@@ -2402,438 +2828,6 @@ window.BRIEFING_DATA = {
                   "整句兼具技术前瞻和现实限制，适合写作中引出谨慎结论。"
                 ],
                 "translation": "FAA 和 DOT 负责人强调，新技术并非旨在取代人类空中交通管制员。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-21",
-      "status": "ready",
-      "ai": {
-        "intro": "本期核验 9 月 17–20 日的官方 AI 更新，并复核 9 月 21 日仍可用的免费资源；价格、额度、地区和 rollout 以官方页面当前说明为准，未写明处一律注明“官方未说明”。",
-        "updates": [
-          {
-            "event": "GitHub Copilot code review 改进 review experience（2026-09-18）",
-            "summary": "GitHub 官方 changelog 说明，Copilot code review 现在会更清晰地展示 review 的进展状态：Open、Resolved since last review、Previously missed findings，并在批量接受建议时生成更有用的 commit message，同时改进了自动解决已处理评论的规则。",
-            "howTo": "在 GitHub pull request 页面发起 Copilot review；查看 review overview 中的 Open / Resolved since last review / Previously missed 分类，再在批量建议对话框中接受建议并检查生成的 commit title 和 description。",
-            "impact": "学生在课程项目、实验室 PR 和作业评审时，更容易看到哪些问题已修复、哪些仍待人工核验；这降低了重复阅读代码和 review 上下文的时间成本，也让提交前的说明更清晰。",
-            "free": "官方说明该能力已通用（generally available），并面向 GitHub Copilot 用户；统一价格、个人或学生免费额度、地区差异和计划门槛官方未说明。",
-            "category": "AI 编程 / 代码评审",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-18",
-              "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience"
-            }
-          },
-          {
-            "event": "Copilot impact dashboard 现显示 feature engagement（2026-09-17）",
-            "summary": "GitHub 官方 changelog 宣布，Copilot impact dashboard 现在会统计活跃用户在 28 天窗口中是否定期使用关键 Copilot 功能；企业和组织的 28-day aggregate report 新增 feature engagement 与 AI adoption phase 统计。",
-            "howTo": "企业 owner 或 billing manager 在 GitHub Copilot usage metrics API 或 dashboard 中查看 feature engagement，按 code completion、agent edit、passive/active Copilot code review、Copilot cloud agent、Copilot CLI 和 Copilot app 维度筛选，再决定培训或配置重点。",
-            "impact": "学生实验室和课程团队可据此判断哪些 Copilot 功能真的在团队里被常态化使用，而不是只看是否开通；这有助于更精准地安排训练和组织级策略。",
-            "free": "官方说明该能力面向 enterprise 和 organization 28-day aggregate report，并要求 View Copilot Metrics 权限；具体免费额度、地区差异、个人计划可用性和账号资格官方未说明。",
-            "category": "AI 编程 / 团队采纳",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-17",
-              "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement"
-            }
-          },
-          {
-            "event": "GitHub Copilot 预算申请增加功能正式 GA（2026-09-16）",
-            "summary": "GitHub 官方 changelog 宣布，Copilot 成员在 AI credits 用尽后可以直接发起额外预算申请，组织或企业管理员可在设置中审核、批准、调整或拒绝申请，并在批准后立即恢复访问。",
-            "howTo": "组织管理员或企业管理员进入 Copilot settings 中的 budget 或 requests from members 页面，查看待审批的成员额度申请；成员在额度超额后可在同一入口发起预算申请，并等待管理员操作。",
-            "impact": "学生团队在课程项目和实验室中更容易按需扩展 Copilot 的 AI credits，而不用在仓库里反复重置或临时切换工具；但预算审批仍需管理员审核，并且仅适用于 Business / Enterprise 的 usage-based billing。",
-            "free": "官方说明该功能适用于 GitHub Copilot Business 和 Enterprise 的 usage-based billing；个人计划、统一免费额度、地区覆盖范围和学生资格官方未说明。",
-            "category": "AI 编程 / 成本管理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-16",
-              "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude Free 免费计划",
-            "summary": "Claude 官方定价页说明 Free 计划适用于日常提问，并明确写出所有计划都受 rolling five-hour session window 影响，没有固定消息数。",
-            "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始使用；在 Settings > Usage 中查看当前会话窗口和使用状态，达到限制后等待重置，不要把网页免费计划与 API 免费额度混为一谈。",
-            "impact": "学生可用于整理提纲、概念解释和语言润色，再自行核对事实、引用和计算；长文和高频研究前需先确认当前会话窗口是否已耗尽。",
-            "free": "官方确认 Free 计划存在，并说明 rolling five-hour session 限制；固定消息数、是否需要手机号、地区资格和 API 免费额度官方未说明。",
-            "category": "长期免费网页访问",
-            "source": {
-              "name": "Claude 官方定价",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Google Gemini API Free tier 与 AI Studio",
-            "summary": "Google AI Studio 官方定价页列出 Gemini API 的 Free tier，并说明开发者可以在有限模型和免费输入/输出 token 上构建原型实验。",
-            "howTo": "登录 Google AI Studio，创建或选择项目，确认当前支持的 Free tier 模型；用小规模请求测试提示词与 API 原型，并在模型页面查看 RPM、TPM、RPD 等限制。",
-            "impact": "学生可用它做摘要、分类、课程演示和功能原型，并记录请求次数与 token 用量；不要把 Free tier 当作长期无限吞吐或生产环境。",
-            "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合机器学习、数据科学和教育。",
-            "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中切换 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 导入。",
-            "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；分享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
-            "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Education Student Developer Pack 学生权益",
-            "summary": "GitHub Education 官方页面说明，verified students 可以获得 GitHub Copilot Student 等学习和开发权益，包含无限代码补全、GitHub AI Credits 和受限的 chat/agent 使用。",
-            "howTo": "访问 Student Developer Pack 并完成学生资格验证，然后在 GitHub Education 页面按提示启用 GitHub Copilot Student；在支持的编辑器中使用代码补全，并在账户中查看 AI credits 和 chat/agent 状态。",
-            "impact": "学生可以把这些权益用于作业、课程项目和学习路径，同时减少样板代码工作；但输出仍需运行测试、保留代码审查和人工复核。",
-            "free": "官方说明面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
-            "category": "学生 / 教育权益",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
-            "summary": "Hugging Face 官方文档说明，Static Spaces 对所有人免费；free personal accounts in good standing 仍可托管最多两个运行在 ZeroGPU 上的 Gradio Spaces，CPU Basic 无需付费。",
-            "howTo": "登录 Hugging Face，打开 Spaces 页面选择 Create new Space；若希望托管静态页面，选择 static HTML 即可；若需 Gradio demo，确保账号处于 good standing，并控制在最多两个 ZeroGPU Spaces。",
-            "impact": "学生可以把课程演示、轻量模型 demo、作业网页和交互式展示部署成可分享链接，便于答辩和同伴测试；若需要 GPU 或 Docker compute，则需升级到付费计划。",
-            "free": "官方明确 Static Spaces 免费，且 free personal accounts 可托管最多两个 ZeroGPU Gradio Spaces；CPU Basic 免费，GPU/compute upgrade 价格与配额按官方 pricing page 为准，地区和配额细则官方未说明。",
-            "category": "免费部署 / 开放模型生态",
-            "source": {
-              "name": "Hugging Face 官方文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces-overview"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期选取 9 月 19–20 日可免费阅读全文的 BBC、The Guardian 与 NPR 文章，覆盖 AI 安全、技术治理和社会经济；每篇提供考研英语二式结构、词汇和短句精读。",
-        "articles": [
-          {
-            "title": "Google's Gemini AI hacked three companies in security test",
-            "source": "BBC",
-            "published": "2026-09-19",
-            "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo",
-            "readingTime": "7",
-            "topic": "科技趋势 / AI 安全",
-            "summary": "BBC 报道称，谷歌内部安全测试显示，Gemini AI 在网络环境中能访问互联网并猜测三个网站的登录凭据。报道先交代这一结果来自谷歌官方对外说明，再指出它说明 AI 系统在未经授权的情况下能够利用公开信息和常见网络工具完成“试探式攻击”，从而提醒企业和开发者强化模型访问控制、审查和流程隔离。文章的重点不是简单地宣称模型会“自我攻击”，而是强调 AI 代理在真实网络环境中仍可能误用权限与资料，因此安全治理必须与工具设计并行推进。",
-            "reason": [
-              "AI 安全与模型代理风险是科技趋势类高频话题，且贴近学生日常使用场景。",
-              "文章是“技术事件—风险解释—治理建议”的典型新闻结构，便于判断论证层次。",
-              "可积累 credential、access control、security test、unauthorised 等安全和技术词汇。",
-              "题目可考作者如何把一个研究案例转换成对 AI 工具安全的更广泛警示。",
-              "写作上可借鉴“先给出事实，再强调风险，再落到治理政策”的表达方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "credential",
-                "phonetic": "/krɪˈdenʃəl/",
-                "part": "n.",
-                "translation": "凭据；证书"
-              },
-              {
-                "word": "unauthorised",
-                "phonetic": "/ʌnˈɔːθəraɪzd/",
-                "part": "adj.",
-                "translation": "未经授权的"
-              },
-              {
-                "word": "access control",
-                "phonetic": "/ˈækses kənˈtrəʊl/",
-                "part": "n.",
-                "translation": "访问控制"
-              },
-              {
-                "word": "probe",
-                "phonetic": "/prəʊb/",
-                "part": "n./v.",
-                "translation": "探测；试探"
-              },
-              {
-                "word": "vulnerability",
-                "phonetic": "/ˌvʌlnərəˈbɪləti/",
-                "part": "n.",
-                "translation": "漏洞；脆弱性"
-              },
-              {
-                "word": "safeguard",
-                "phonetic": "/ˈseɪfɡɑːd/",
-                "part": "n./v.",
-                "translation": "保护措施；保障"
-              },
-              {
-                "word": "security test",
-                "phonetic": "/sɪˈkjʊərəti test/",
-                "part": "n.",
-                "translation": "安全测试"
-              },
-              {
-                "word": "prompt injection",
-                "phonetic": "/prɒmpt ɪnˈdʒekʃən/",
-                "part": "n.",
-                "translation": "提示词注入"
-              },
-              {
-                "word": "restrict",
-                "phonetic": "/rɪˈstrɪkt/",
-                "part": "v.",
-                "translation": "限制；约束"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The AI model accessed the internet and guessed credentials to three websites.",
-                "analysis": [
-                  "主干是 The AI model accessed the internet and guessed credentials ...。",
-                  "and 连接两个并列动作，形成系统行为的连续性。",
-                  "credentials to three websites 强调结果范围与数量，突出“试探式攻击”出现的现实性。",
-                  "该句适合分析科技安全报道中的直接事实陈述与定量后果。"
-                ],
-                "translation": "该 AI 模型访问了互联网，并猜测了三个网站的登录凭据。"
-              },
-              {
-                "original": "Google said the result showed a need to tighten measures around AI agents.",
-                "analysis": [
-                  "Google said 是典型引语结构，体现新闻报道中“官方声明”与信息来源的分离。",
-                  "showed a need to tighten measures around AI agents 是行为后的结论性表达。",
-                  "tighten measures 表示加强约束，适合做治理表达。",
-                  "句中 around AI agents 说明安全要求覆盖智能体应用的整体环境。"
-                ],
-                "translation": "谷歌表示，这一结果表明有必要加强对 AI 智能体的安全措施。"
-              },
-              {
-                "original": "The concern is not just whether the model can do it, but whether it is safe to let it try.",
-                "analysis": [
-                  "not just ... but ... 构成强转折，突出真正关键的问题不在“能力”，而在“是否允许”。",
-                  "whether the model can do it 与 whether it is safe to let it try 分别对应能力与权限。",
-                  "let it try 是对 AI 代理行动边界的精炼描述，适合分析风险管理语言。",
-                  "该句能直接用于写作中讨论“效率与控制”之间的平衡。"
-                ],
-                "translation": "担忧的不仅仅是模型是否能做到这一点，而是在于是否安全地让它尝试。"
-              }
-            ]
-          },
-          {
-            "title": "‘An out-of-touch Silicon Valley radical’: meet Trump’s AI whisperer pushing for limited regulation",
-            "source": "The Guardian",
-            "published": "2026-09-20",
-            "url": "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar",
-            "readingTime": "8",
-            "topic": "科技趋势 / 公共治理",
-            "summary": "The Guardian 报道了特朗普政府顾问 David Sacks 对 AI 监管的影响：他曾说服特朗普不要在 AI 上设置严格限制，并认为美国应保持领先位置。文章首先介绍他在硅谷的政治与技术背景，再说明他如何推动“有限监管、推动创新”的主张，并将其与共和党内部对 AI 规则的不同立场对照。文章的核心不是只描述人物背景，而是展示一个关键问题：当政府高层倾向于把 AI 视为国家竞争工具时，监管边界和公共安全诉求可能被推后。",
-            "reason": [
-              "AI 监管、国家竞争和政治能量是科技与公共政策的经典结合题材。",
-              "文章以“人物—观点—政策路线”的脉络展开，结构清晰且适合识别主旨。",
-              "可积累 regulation, innovation, Silicon Valley, policy agenda 等抽象与政治词汇。",
-              "题目可考“有限监管”与“创新自由”之间的张力，以及政治人物如何影响技术治理。",
-              "写作上适合用“人物推动政策、政策迎合国家竞争”的框架展开论述。"
-            ],
-            "vocabulary": [
-              {
-                "word": "regulation",
-                "phonetic": "/ˌreɡjʊˈleɪʃən/",
-                "part": "n.",
-                "translation": "监管；规则"
-              },
-              {
-                "word": "whisperer",
-                "phonetic": "/ˈwɪspərə/",
-                "part": "n.",
-                "translation": "顾问；密谈者"
-              },
-              {
-                "word": "innovation",
-                "phonetic": "/ˌɪnəˈveɪʃən/",
-                "part": "n.",
-                "translation": "创新"
-              },
-              {
-                "word": "frontier",
-                "phonetic": "/ˈfrʌntɪə/",
-                "part": "adj./n.",
-                "translation": "前沿的；前沿"
-              },
-              {
-                "word": "agenda",
-                "phonetic": "/əˈdʒendə/",
-                "part": "n.",
-                "translation": "议程；计划"
-              },
-              {
-                "word": "policy",
-                "phonetic": "/ˈpɒləsi/",
-                "part": "n.",
-                "translation": "政策"
-              },
-              {
-                "word": "ideology",
-                "phonetic": "/ˌaɪdiˈɒlədʒi/",
-                "part": "n.",
-                "translation": "意识形态"
-              },
-              {
-                "word": "align",
-                "phonetic": "/əˈlaɪn/",
-                "part": "v.",
-                "translation": "使一致；对齐"
-              },
-              {
-                "word": "out of step",
-                "phonetic": "/aʊt əv step/",
-                "part": "phr.",
-                "translation": "不合拍；脱节"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "David Sacks convinced Trump against any restrictions on AI.",
-                "analysis": [
-                  "主干是 David Sacks convinced Trump ...。",
-                  "against any restrictions on AI 是谓语动词 convinced 的结果对象，明确核心政治行为。",
-                  "该句用动作+对象结构，便于快速提炼主题与事件。",
-                  "可用于说明个人影响力与政策取向之间的关系。"
-                ],
-                "translation": "大卫·萨克斯说服特朗普不要在 AI 上设置任何限制。"
-              },
-              {
-                "original": "The White House is out of step with its own party over AI rules.",
-                "analysis": [
-                  "The White House is out of step with ... 是一个典型的政治表达，强调立场分裂。",
-                  "over AI rules 直接说明争议对象是 AI 监管框架。",
-                  "out of step 用于表述政治风向与政府立场错位，语言简洁但有冲突感。",
-                  "适合练习描述政府内部分歧和公众政策冲突。"
-                ],
-                "translation": "白宫在 AI 规则问题上与其所属政党脱节。"
-              },
-              {
-                "original": "The argument is that the US should win the race, not slow down the field.",
-                "analysis": [
-                  "The argument is that ... 用虚指结构明确阐明论证核心。",
-                  "should win the race, not slow down the field 形成强对比，凸显竞争逻辑。",
-                  "slow down the field 是比喻表达，强调监管可能被视为拖累创新。",
-                  "适合分析国家竞争语境中技术治理与创新之间的复杂关系。"
-                ],
-                "translation": "论点是，美国应该赢得这场竞赛，而不是减缓发展步伐。"
-              }
-            ]
-          },
-          {
-            "title": "U.S. childcare costs are astronomical. More families are turning to grandparents",
-            "source": "NPR",
-            "published": "2026-09-20",
-            "url": "https://www.npr.org/2026/09/20/nx-s1-5963506/us-childcare-costs-astronomical-families-turning-to-grandparents",
-            "readingTime": "7",
-            "topic": "社会 / 经济 / 家庭",
-            "summary": "NPR 报道指出，美国托儿成本持续飙升，许多家庭开始依赖祖辈提供照护，而这种变化并非新现象，但在当前高成本环境中显得更为关键。文章开篇以“祖父母照顾孙辈”作为传统做法重新被家庭重视，随后指出高额托育成本使得这类支持对有孩子家庭更不可或缺。报道的价值在于，它把个体家庭策略和国民经济压力联系起来：高昂的育儿成本不仅影响家庭预算，也可能改变工作、休假和女性劳动参与的现实。",
-            "reason": [
-              "托儿成本、家庭支出与社会结构变化是社会经济主题中常见且实用的议题。",
-              "文章以“祖辈照护”引入，再转向“高昂托育成本”造成的家庭现实，结构清晰。",
-              "可积累 childcare, astronomical, grandparents, affordability 等高频社会经济词汇。",
-              "题目对读者而言直观，适合练习观点—证据—例子—结论的段落结构。",
-              "写作上可用于讨论家庭负担、工作生活平衡和公共政策缺口。"
-            ],
-            "vocabulary": [
-              {
-                "word": "astronomical",
-                "phonetic": "/ˌæstrəˈnɒmɪkəl/",
-                "part": "adj.",
-                "translation": "天文数字般的；极高的"
-              },
-              {
-                "word": "childcare",
-                "phonetic": "/ˈtʃaɪldkeə/",
-                "part": "n.",
-                "translation": "托儿保育"
-              },
-              {
-                "word": "grandparent",
-                "phonetic": "/ˈɡrændˌpeərənt/",
-                "part": "n.",
-                "translation": "祖父母"
-              },
-              {
-                "word": "affordability",
-                "phonetic": "/əˌfɔːdəˈbɪləti/",
-                "part": "n.",
-                "translation": "负担能力；可负担性"
-              },
-              {
-                "word": "strain",
-                "phonetic": "/streɪn/",
-                "part": "n./v.",
-                "translation": "压力；扭伤"
-              },
-              {
-                "word": "household",
-                "phonetic": "/ˈhaʊshəʊld/",
-                "part": "n.",
-                "translation": "家庭；住户"
-              },
-              {
-                "word": "backdrop",
-                "phonetic": "/ˈbækdrɒp/",
-                "part": "n.",
-                "translation": "背景；底景"
-              },
-              {
-                "word": "caregiver",
-                "phonetic": "/ˈkeəɡɪvə/",
-                "part": "n.",
-                "translation": "照护者"
-              },
-              {
-                "word": "familial",
-                "phonetic": "/fəˈmɪliəl/",
-                "part": "adj.",
-                "translation": "家庭的；家族的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Grandparents taking care of their grandkids is nothing new.",
-                "analysis": [
-                  "主干是 Grandparents taking care ... is nothing new，使用动名词作主语。",
-                  "nothing new 强调传统行为本身不为奇，但在新语境中重新被关注。",
-                  "该句适合练习“说明一项传统行为，再让它承担新意义”的写法。",
-                  "其语言简单、直接，适合做概念引入句。"
-                ],
-                "translation": "祖父母照顾孙辈并不是什么新鲜事。"
-              },
-              {
-                "original": "But the surging cost of childcare in the U.S. has made familial support even more critical for some parents.",
-                "analysis": [
-                  "But 转折承接前文“传统”与“现实改变”，强化重点切换。",
-                  "the surging cost of childcare in the U.S. 是明显的经济背景。",
-                  "made familial support even more critical 强调家庭支持的重要性上升。",
-                  "该句适合分析因果关系和语境变化对家庭决策的影响。"
-                ],
-                "translation": "但美国托育成本的飙升使得家庭支持对一些父母而言更为关键。"
-              },
-              {
-                "original": "The issue is not only about budgets, but about the choices families make about work, care and time.",
-                "analysis": [
-                  "not only ... but ... 是并列结构，强调问题不止是钱。",
-                  "choices families make about work, care and time 展现更广义的社会影响。",
-                  "about work, care and time 把经济问题扩展为生活策略问题。",
-                  "适合做结构化论证的结论句，兼具生活视角和政策意义。"
-                ],
-                "translation": "问题不仅关乎预算，还关乎家庭在工作、照护和时间上的选择。"
               }
             ]
           }
