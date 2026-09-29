@@ -1,6 +1,437 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-09-28T09:29:33+08:00",
+  "updatedAt": "2026-09-29T10:36:46+08:00",
   "issues": [
+    {
+      "date": "2026-09-29",
+      "status": "ready",
+      "ai": {
+        "intro": "9月28日至29日核实到1项官方AI新品，按规则扩展到前7日并保留各来源实际发布日期；免费资源按官方计划页、定价页和模型卡复核。",
+        "updates": [
+          {
+            "event": "Claude Sonnet 5.5 正式加入 GitHub Copilot（2026-09-28）",
+            "summary": "GitHub 宣布 Claude Sonnet 5.5 在 Copilot 正式可用，定位于构建功能、修复 bug 等范围明确的日常开发任务；可在模型选择器中调用。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot app 或其他官方列出的客户端打开模型选择器，选择 Claude Sonnet 5.5；先给它一个边界清楚的小任务，再检查生成改动并运行测试。",
+            "impact": "课程项目可用它起草小功能或定位单个 bug；学生可对比生成的补丁和自己的实现，但应自己核对测试、依赖及改动范围。",
+            "free": "官方列出的可用计划仅为 Copilot Pro、Pro+、Max、Business 和 Enterprise；模型按提供方列表价计费并渐进推出。地区和具体用量官方未说明。",
+            "category": "AI 编程 / 新模型",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-28",
+              "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot"
+            }
+          },
+          {
+            "event": "Copilot 在 Slack 与 Microsoft Teams 增加上下文和模型控制（2026-09-25）",
+            "summary": "GitHub 更新 Copilot 在 Slack 与 Teams 的协作：Slack 可引用支持的文件、附件和消息链接，Teams 可利用行内图片、转发消息及频道/线程历史；两端均可切换模型，Copilot 还会在建 issue 前检查相似问题。",
+            "howTo": "先让组织管理员启用 Copilot cloud agent policy，再安装或升级 GitHub 的 Slack/Teams 应用、关联 GitHub 账号并在对话中提及 @GitHub；分享项目文件或线程上下文后提出具体任务。",
+            "impact": "小组作业可把讨论中的截图、文件和上下文带入 issue 或编码任务，减少重复建单，并能回看任务关联的原始讨论；提交前仍要人工核对结果。",
+            "free": "目前是 Copilot Business 与 Enterprise 组织的 public preview，使用量计入既有 Copilot 权益并受 cloud agent 预算管理；部分功能逐步开放。个人免费资格、地区和独立配额官方未说明。",
+            "category": "AI 协作 / 团队工作流",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-25",
+              "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams"
+            }
+          },
+          {
+            "event": "GitHub Copilot app 预览本地 agent 沙箱（2026-09-25）",
+            "summary": "Copilot app 的 public preview 加入 local sandboxing，可限制 agent 对本地文件、网络和凭据的访问范围。",
+            "howTo": "在 GitHub Copilot app 中试用 public preview 的 local sandboxing，按应用提供的选项限制 agent 可访问的文件、网络和凭据；先用非敏感的课程仓库执行小任务，再检查 agent 活动及改动。",
+            "impact": "学生尝试让 agent 修改项目或运行工具时，可先缩小其本机资源访问范围，降低误操作扩大到无关文件或凭据的风险；沙箱不能代替审阅代码。",
+            "free": "官方将该能力标为 public preview，但未说明价格、适用账号/计划、地区、配额或开放节奏；需使用 GitHub Copilot app。",
+            "category": "AI 编程 / 本地安全",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-09-25",
+              "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude Free 免费网页与应用访问",
+            "summary": "Anthropic 定价页列出面向日常问题的 Free 计划；所有计划的用量限制按滚动五小时窗口重置，网页、桌面端、移动端和 Claude Code 共用额度，且没有固定消息数。",
+            "howTo": "打开 Claude 网页或应用，选择 Free 计划做短文本解释、摘要或改写；在 Settings > Usage 查看用量，达到上限后等待窗口重置。",
+            "impact": "适合用来拆解英文长句、生成复习提纲或比较不同改写；免费额度不是固定消息数，重要事实仍应回到原文核验。",
+            "free": "Free 计划可用；用量依对话长度、模型和功能而异，没有固定消息数，滚动五小时重置。账号资格、地区和具体上限官方未说明。",
+            "category": "长期免费网页/应用访问 / AI 助手",
+            "source": {
+              "name": "Claude 官方定价",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free 每月免费代码补全",
+            "summary": "GitHub 计划页列出 Copilot Free：每月最多 2,000 次代码补全，并提供有限的功能访问和 AI Credits；免费计划的 agent 使用有限。",
+            "howTo": "用个人 GitHub 账号从官方 Copilot Free 页面开始，在支持的 IDE 安装 Copilot 后启用行内补全；到 GitHub 计划/用量页面查看可用功能和剩余额度。",
+            "impact": "适合课程练习中的样板代码补全和小型函数草稿；每月额度有限，生成代码应自行阅读并运行测试。",
+            "free": "官方标价 Free，每月 2,000 次补全，并有未统一列明数值的 AI Credits 和有限 agent 功能；仅适用于没有组织或企业 Copilot 权限的个人开发者。地区可用性和 AI Credits 的具体数值官方未说明。",
+            "category": "长期免费 IDE 访问 / AI 编程",
+            "source": {
+              "name": "GitHub Copilot 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/get-started/plans"
+            }
+          },
+          {
+            "event": "Gemini API / Google AI Studio Free tier",
+            "summary": "Google Gemini API 定价页确认部分模型有 Free tier，提供免费输入与输出 token，并可使用 Google AI Studio；免费层数据按页面说明可能用于改进 Google 产品。",
+            "howTo": "登录 Google AI Studio，选用定价页标明有 Free tier 的模型创建 API key，先做低频摘要或分类原型；上线前按所选模型的速率限制设置重试与用量监控。",
+            "impact": "可用于课程项目的 API 原型和 token 成本估算；免费层适合测试，不应当作不限速的生产服务，也不要提交敏感数据。",
+            "free": "官方确认仅部分模型有免费输入/输出；额度和速率按模型分别列示，没有统一配额。账号资格、地区及重置周期官方未说明；免费层内容可能用于改进产品。",
+            "category": "免费 API / 开发者资源",
+            "source": {
+              "name": "Google Gemini API 官方定价",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Google Colab 免费托管 Jupyter Notebook",
+            "summary": "Colab FAQ 说明它是无需本地设置的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU；资源并非保证或无限，使用限制会波动。",
+            "howTo": "打开 Colab 新建或上传 notebook，运行课程代码；需要时尝试 GPU/TPU 运行时，并把 notebook 保存到 Drive 或 GitHub，避免将密钥放入共享文件。",
+            "impact": "可用于数据清理、课程实验和小型机器学习练习，不必先配置本地环境；应保存中间结果并准备资源受限时的 CPU 方案。",
+            "free": "官方确认免费且可使用 GPU/TPU，但资源不保证、配额会波动；固定额度、地区资格和重置周期官方未说明。免费托管运行时禁止挖矿、远程代理、创建 deepfake 等滥用行为。",
+            "category": "长期免费云端 notebook / 学习计算资源",
+            "source": {
+              "name": "Google Colaboratory FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "DeepSeek-R1-Distill-Qwen-1.5B MIT 开放权重",
+            "summary": "DeepSeek 官方 Hugging Face 模型卡列出可下载的 DeepSeek-R1 蒸馏模型权重，并说明模型权重采用 MIT License，允许商业使用及修改。",
+            "howTo": "打开官方模型卡，在 Distill 模型列表选择 DeepSeek-R1-Distill-Qwen-1.5B，按卡片建议配置本地推理环境并阅读 usage recommendations；用非敏感的题目测试输出。",
+            "impact": "学生可在本地推理环境中观察小型开权重模型的推理输出、尝试提示词并学习模型部署，而不必购买 API token；使用许可仍应按 MIT License 遵守。",
+            "free": "模型卡提供权重下载并标明 MIT License，允许商业使用和修改；账号、地区、下载额度及硬件要求官方未说明，运行需要自行准备推理环境。",
+            "category": "可下载开放模型权重 / MIT License",
+            "source": {
+              "name": "DeepSeek 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Originalism: What it is, what it isn’t and why it’s the most democratic option for the Supreme Court",
+            "source": "The Conversation",
+            "published": "2026-09-28",
+            "url": "https://theconversation.com/originalism-what-it-is-what-it-isnt-and-why-its-the-most-democratic-option-for-the-supreme-court-291115",
+            "readingTime": "7 分钟",
+            "topic": "社会 / 宪法解释与民主",
+            "summary": "作者先把原旨主义界定为按宪法制定时的理解来解释文本，并与允许法官随时代重释的“活宪法”对照；随后回顾这一解释路径的兴衰，并逐一回应“宪法因此不能改变”及“只是保守派法官的借口”等批评。文章也讨论历史材料含糊、法官并非历史学家、原始制宪排斥部分群体等反对理由，再呈现原旨主义者对民主正当性与修宪程序的回应。作者承认原旨主义内部也有分歧、修宪程序负担很重，结尾仍认为它可能是较小的恶。",
+            "reason": [
+              "主题：围绕宪法、民主代表性与司法权展开，适合社会制度、法治与公共议题类阅读。",
+              "结构：先定义概念并对照另一立场，再辨析常见误解，继而列出反对理由和回应，最后回到作者判断。",
+              "题型：可训练概念辨析、段落功能、作者态度及支持/反对论据配对。",
+              "词汇：可积累 interpretation、ambiguous、electorate、supermajority 等抽象议论文词汇。",
+              "写作：可借鉴“提出概念—说明争议—呈现反方—有限度下结论”的平衡论证结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "originalism",
+                "phonetic": "/əˈrɪdʒənəlɪzəm/",
+                "part": "n.",
+                "translation": "原旨主义；按原初含义解释法律的理论"
+              },
+              {
+                "word": "reinterpret",
+                "phonetic": "/ˌriːɪnˈtɜːprɪt/",
+                "part": "v.",
+                "translation": "重新解释"
+              },
+              {
+                "word": "amendment",
+                "phonetic": "/əˈmendmənt/",
+                "part": "n.",
+                "translation": "修正；修正案"
+              },
+              {
+                "word": "detractor",
+                "phonetic": "/dɪˈtræktə/",
+                "part": "n.",
+                "translation": "批评者；贬低者"
+              },
+              {
+                "word": "provision",
+                "phonetic": "/prəˈvɪʒən/",
+                "part": "n.",
+                "translation": "条款；规定"
+              },
+              {
+                "word": "ambiguous",
+                "phonetic": "/æmˈbɪɡjuəs/",
+                "part": "adj.",
+                "translation": "含糊的；有歧义的"
+              },
+              {
+                "word": "electorate",
+                "phonetic": "/ɪˈlektərət/",
+                "part": "n.",
+                "translation": "全体选民"
+              },
+              {
+                "word": "supermajority",
+                "phonetic": "/ˌsuːpəˈmɑːdʒərəti/",
+                "part": "n.",
+                "translation": "特别多数；超多数"
+              },
+              {
+                "word": "burdensome",
+                "phonetic": "/ˈbɜːdnsəm/",
+                "part": "adj.",
+                "translation": "负担沉重的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Originalism is a philosophy of interpreting the U.S. Constitution.",
+                "analysis": [
+                  "主干是 Originalism is a philosophy，系动词 is 把主语与定义性表语连接。",
+                  "of interpreting the U.S. Constitution 是介词短语，说明这种 philosophy 的内容。",
+                  "interpreting 是动名词，后接宾语 the U.S. Constitution。",
+                  "该句先给出术语的简明定义，适合识别说明文中的 topic sentence。"
+                ],
+                "translation": "原旨主义是一种解释美国宪法的思想。"
+              },
+              {
+                "original": "But originalists think the Constitution can change; they just disagree with who can do the changing.",
+                "analysis": [
+                  "But 表示转折，回应“原旨主义认为宪法不能变”的常见误解。",
+                  "前半句主干是 originalists think，后接省略 that 的宾语从句。",
+                  "分号连接两个紧密相关的独立分句，后半句把争议焦点从“能否改变”转到“谁有权改变”。",
+                  "who can do the changing 是介词 with 后的间接疑问从句；do the changing 指实施改变。"
+                ],
+                "translation": "但原旨主义者认为宪法可以改变；他们只是不同意应由谁来改变。"
+              },
+              {
+                "original": "But as more and more people practice originalism, more and more people disagree about how to do it right.",
+                "analysis": [
+                  "But 引出让步和转折，指出该理论流行并未消除其内部争议。",
+                  "as 引导伴随变化的从句，说明原旨主义实践者增加时，分歧也随之增多。",
+                  "主句以 more and more people 作主语，disagree 为谓语，形成与从句呼应的比较结构。",
+                  "about 后的 how to do it right 是间接疑问结构，讨论的是正确实践方法。"
+                ],
+                "translation": "但随着越来越多人实践原旨主义，越来越多人对如何正确实践它产生分歧。"
+              }
+            ]
+          },
+          {
+            "title": "Unis are offering degrees in content creation for £30,000. But are they worth it?",
+            "source": "BBC",
+            "published": "2026-09-28",
+            "url": "https://www.bbc.co.uk/news/articles/c61mvy1emr2zo",
+            "readingTime": "4 分钟",
+            "topic": "教育 / 内容创作与职业教育",
+            "summary": "报道以一名内容创作专业毕业生为切口，介绍课程如何教授视频制作、社交平台受众经营、品牌合作与内容变现；毕业生称课程带来设备、行业联系和就业机会。文章继而列举英国及美国大学的同类项目和学费，提示三年课程可能接近£30,000，并将课程提供的实践技能与高昂学费并置。报道呈现毕业生和校方对课程价值的正面说法，也把是否值得付费留作读者判断。",
+            "reason": [
+              "主题：连接高等教育、就业技能与社交媒体经济，适合教育和青年就业主题。",
+              "结构：先以毕业生经历引入，再说明课程内容与个人收益，最后转向学费和投资回报问题。",
+              "题型：可练习人物案例的论证作用、标题设问、细节信息定位及作者是否给出结论。",
+              "词汇：包含 transferable skills、monetise、audience、annual fee 等职业与商业语汇。",
+              "写作：可借鉴用具体案例引出一般问题，并以成本与收益对照组织议论文。"
+            ],
+            "vocabulary": [
+              {
+                "word": "raise a few eyebrows",
+                "phonetic": "/reɪz ə fjuː ˈaɪbraʊz/",
+                "part": "phr.",
+                "translation": "引起惊讶；引发质疑"
+              },
+              {
+                "word": "transferable",
+                "phonetic": "/trænsˈfɜːrəbl/",
+                "part": "adj.",
+                "translation": "可迁移的；可转用的"
+              },
+              {
+                "word": "entrepreneur",
+                "phonetic": "/ˌɒntrəprəˈnɜː/",
+                "part": "n.",
+                "translation": "创业者"
+              },
+              {
+                "word": "monetise",
+                "phonetic": "/ˈmɒnɪtaɪz/",
+                "part": "v.",
+                "translation": "使……变现"
+              },
+              {
+                "word": "audience",
+                "phonetic": "/ˈɔːdiəns/",
+                "part": "n.",
+                "translation": "受众；观众"
+              },
+              {
+                "word": "hired",
+                "phonetic": "/ˈhaɪəd/",
+                "part": "v.",
+                "translation": "受聘；被雇用"
+              },
+              {
+                "word": "equipment",
+                "phonetic": "/ɪˈkwɪpmənt/",
+                "part": "n.",
+                "translation": "设备；器材"
+              },
+              {
+                "word": "hands-on",
+                "phonetic": "/ˌhændz ˈɒn/",
+                "part": "adj.",
+                "translation": "动手实践的"
+              },
+              {
+                "word": "annual",
+                "phonetic": "/ˈænjuəl/",
+                "part": "adj.",
+                "translation": "每年的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "She says the course gave her access to equipment, technology and industry contacts.",
+                "analysis": [
+                  "主干为 She says，后接省略 that 的宾语从句。",
+                  "从句主干是 the course gave her access，说明课程带来的资源。",
+                  "gave her access 中 her 是间接宾语，access 是直接宾语；to 短语列出资源内容。",
+                  "equipment、technology、industry contacts 并列，体现受访者评价课程价值时的具体依据。"
+                ],
+                "translation": "她说，这门课程让她接触到设备、技术和行业人脉。"
+              },
+              {
+                "original": "Several universities in the UK now offer such courses.",
+                "analysis": [
+                  "主干为 Several universities offer such courses，主语与谓语均为复数形式。",
+                  "in the UK 作后置修饰语，限定这些大学的范围。",
+                  "now 标示当前趋势，such 指代前文介绍的内容创作学位课程。",
+                  "该句从个案过渡到更广泛的教育供给，承担扩展论据的功能。"
+                ],
+                "translation": "英国目前有多所大学开设此类课程。"
+              },
+              {
+                "original": "Yet you’d be paying a lot of money for this.",
+                "analysis": [
+                  "Yet 表示转折，把前文课程的实用性与费用问题对照起来。",
+                  "you’d 在此是 you would，构成假设性语气，提醒读者面对的潜在支出。",
+                  "be paying 是进行体，突出持续承担费用的过程。",
+                  "for this 中 this 指代前文所说的课程；短句将讨论焦点转向成本。"
+                ],
+                "translation": "不过，为此你要花上一大笔钱。"
+              }
+            ]
+          },
+          {
+            "title": "Why fuel prices may go higher still",
+            "source": "The Conversation",
+            "published": "2026-09-28",
+            "url": "https://theconversation.com/why-fuel-prices-may-go-higher-still-292853",
+            "readingTime": "7 分钟",
+            "topic": "经济 / 能源供应与生活成本",
+            "summary": "文章从霍尔木兹海峡运输受阻引出油价上行风险，再追踪沙特替代输油管线受袭、俄罗斯柴油出口受限等供给冲击如何传导到运输、食品和家庭燃料成本。随后比较美国、亚洲和欧洲所受影响，并指出释放战略储备、替代线路等缓冲手段已被大量使用；中国库存及交通电动化曾压低需求，但需求回升可能增加压力。结尾强调冲突持续时政策缓冲空间有限，同时区分油价继续上涨与真正燃料短缺这两种风险。",
+            "reason": [
+              "主题：以能源供应冲击解释燃料和商品成本，适合经济、环境与国际关系交叉主题。",
+              "结构：从运输瓶颈展开因果链，再比较区域影响、政策缓冲措施及中国因素，最后作风险展望。",
+              "题型：适合考查因果推断、例证作用、段落主旨及作者对未来风险的审慎判断。",
+              "词汇：可积累 constrain、ration、stockpile、electrification、blunt 等能源经济词汇。",
+              "写作：可借鉴“供给冲击—成本传导—政策应对—不确定性”的分析框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "hover",
+                "phonetic": "/ˈhɒvə/",
+                "part": "v.",
+                "translation": "徘徊；维持在某一水平附近"
+              },
+              {
+                "word": "exhaust",
+                "phonetic": "/ɪɡˈzɔːst/",
+                "part": "v.",
+                "translation": "耗尽；用尽"
+              },
+              {
+                "word": "pipeline",
+                "phonetic": "/ˈpaɪplaɪn/",
+                "part": "n.",
+                "translation": "输送管道；管线"
+              },
+              {
+                "word": "constrained",
+                "phonetic": "/kənˈstreɪnd/",
+                "part": "adj.",
+                "translation": "受限制的；紧张的"
+              },
+              {
+                "word": "ration",
+                "phonetic": "/ˈræʃn/",
+                "part": "v.",
+                "translation": "定量供应；配给"
+              },
+              {
+                "word": "stockpile",
+                "phonetic": "/ˈstɒkpaɪl/",
+                "part": "n.",
+                "translation": "储备；库存"
+              },
+              {
+                "word": "electrification",
+                "phonetic": "/ɪˌlektrɪfɪˈkeɪʃn/",
+                "part": "n.",
+                "translation": "电气化"
+              },
+              {
+                "word": "blunt",
+                "phonetic": "/blʌnt/",
+                "part": "v.",
+                "translation": "减轻；缓和"
+              },
+              {
+                "word": "shortage",
+                "phonetic": "/ˈʃɔːtɪdʒ/",
+                "part": "n.",
+                "translation": "短缺；不足"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The international community has already taken most of the measures available to curb oil demand and boost its supply.",
+                "analysis": [
+                  "主干是 The international community has taken most of the measures，使用现在完成时总结已采取的行动。",
+                  "available 是后置形容词，修饰 measures，表示可采取的措施。",
+                  "to curb 与 boost 是并列不定式，分别说明措施针对需求和供给的目标。",
+                  "需求端与供给端并列，概括前文政策工具的双向思路。"
+                ],
+                "translation": "国际社会已经采取了大多数可用措施来抑制石油需求并增加供应。"
+              },
+              {
+                "original": "These shocks are even more acute outside the United States, which is the world’s largest energy producer.",
+                "analysis": [
+                  "主句主干为 These shocks are more acute，说明冲击程度更强。",
+                  "even 修饰比较级 more acute，强调程度差异；outside the United States 表示地点范围。",
+                  "which 引导非限制性定语从句，补充说明 the United States。",
+                  "该句把前文讨论从美国扩展到其他地区，并用让步意味提醒读者全球影响不均。"
+                ],
+                "translation": "在美国以外，这些冲击更为严重；美国是世界上最大的能源生产国。"
+              },
+              {
+                "original": "Those moves have reduced the scale of oil price increases, but they did not prevent them entirely.",
+                "analysis": [
+                  "but 连接两个独立分句，构成“有所缓解但未能阻止”的转折关系。",
+                  "前半句使用现在完成时，概括措施至今产生的影响。",
+                  "Those moves 指代前文释放战略储备等行动；them 指代 oil price increases。",
+                  "entirely 限定 prevent，说明措施降低了涨幅，却没有彻底消除涨价。"
+                ],
+                "translation": "这些措施降低了油价上涨的幅度，但并未完全阻止涨价。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-09-28",
       "status": "ready",
@@ -2378,456 +2809,6 @@ window.BRIEFING_DATA = {
                   "适合用于整合观点并作结论性落点。"
                 ],
                 "translation": "研究发现，数据中心的影响在不同地区之间差异极大。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-22",
-      "status": "ready",
-      "ai": {
-        "intro": "本期核验 2026-09-17 至 2026-09-21 的官方 GitHub Copilot 更新，并复核仍可用的免费资源；所有价格、额度、账号资格与地区说明均按官方页面所写。",
-        "updates": [
-          {
-            "event": "Grok 4.7 现已在 GitHub Copilot 中推出（2026-09-21）",
-            "summary": "GitHub 官方 changelog 说明，xAI 的 Grok 4.7 已按逐步 rollout 进入 GitHub Copilot，定位在 agentic coding 与复杂、多步骤工作流中提升推理和执行能力。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot app、JetBrains、Xcode 或 Eclipse 中打开模型选择器，等待 Grok 4.7 逐步显示后选择它；Copilot Business 或 Enterprise 管理员可在 settings 的 model policy 中控制是否启用该模型。",
-            "impact": "学生可把它放在复杂调试、跨文件重构和多步骤规划任务中试用，但仍需保留验证输出和人工检视，避免将模型判断直接当成代码结论。",
-            "free": "官方说明 Grok 4.7 面向 Copilot Pro、Pro+、Max、Business 和 Enterprise，按 usage-based billing 的 provider list pricing 计费；个人或学生统一免费额度、地区例外和具体配额官方未说明。",
-            "category": "AI 编程 / 模型",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-21",
-              "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot"
-            }
-          },
-          {
-            "event": "Copilot Code Review 改进审查体验并支持更清晰跟踪（2026-09-18）",
-            "summary": "GitHub 官方 changelog 披露，Copilot code review 现可按时间维度显示 review 进度、自动解析已修复问题、在批量接受建议时生成更有用的提交说明，并对 findings 进行更清晰分组。",
-            "howTo": "在已开启 code review 的 pull request 页面查看更新后的 overview comment；点击 Open、Resolved since last review 和 Previously missed 等分组，逐项检查 remaining issues；如需批量接收建议，可在建议弹窗中选择一组变更并让 Copilot 生成提交标题与说明。",
-            "impact": "学生团队在课题分支和开源协作中更容易看懂 review 进度、决定哪些问题需要继续处理，以及在合并前把零散修正整理成更易读的提交说明；但仍需人工判断严重性和代码语义。",
-            "free": "官方说明这些更新已 generally available，并仅在支持的 Copilot code review 环境中使用；个人计划价格、统一免费额度、地区覆盖和学生资格官方未说明。",
-            "category": "AI 编程 / 代码评审",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-18",
-              "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience"
-            }
-          },
-          {
-            "event": "Copilot Impact Dashboard 新增功能参与度统计（2026-09-17）",
-            "summary": "GitHub 官方 changelog 宣布，Copilot impact dashboard now shows how many active users regularly use key Copilot features，并让 enterprise and organization 28-day aggregate reports 显示 feature engagement and AI adoption phase data。",
-            "howTo": "企业或组织管理员打开 Copilot usage metrics 页面，查看 active users、feature engagement 以及 28-day phase population；如果需要导出报告，使用 `copilot_feature_engagement` 和 `users_in_phase_28d` 等字段纳入监控与培训计划。",
-            "impact": "学生团队和实验室可以用这一数据看哪些 Copilot 功能真正被开发者常用，并据此调整培训、启用策略和 governance；但数据只是使用情况指标，不替代质量、合规和人员培养评估。",
-            "free": "官方说明此能力可在 enterprise 和 organization 28-day aggregate report 中使用，并要求启用 Copilot usage metrics policy；统一免费额度、学生资格和地区范围官方未说明。",
-            "category": "AI 工具 / 采用度分析",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-17",
-              "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude Free 免费计划",
-            "summary": "Claude 官方定价页说明 Free 计划适用于日常提问，并在页面中明确写出所有计划都受 rolling five-hour session window 影响，且没有固定消息数。",
-            "howTo": "打开 claude.ai 注册或登录，选择 Free 计划开始提问；在 Settings > Usage 查看当前会话窗口和使用状态，达到限制后等待重置，不要把网页免费计划与 API 免费额度混为一谈。",
-            "impact": "学生可用来整理提纲、概念解释和语言润色，再自行核对事实、引用和计算；长文和高频分析前应先观察当前实际限制。",
-            "free": "官方确认 Free 计划存在，并说明 rolling five-hour session 限制；固定消息数、是否需要手机号、地区资格和 API 免费额度官方未说明。",
-            "category": "长期免费网页访问",
-            "source": {
-              "name": "Claude 官方定价",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Google Gemini API Free tier 与 AI Studio",
-            "summary": "Google AI Studio 官方定价页列出 Gemini API 的免费层，并说明其可在有限模型与免费输入/输出 token 上使用，开发者可以在 AI Studio 中发起原型实验。",
-            "howTo": "登录 Google AI Studio，创建或选择项目，确认当前支持的 Free tier 模型；使用小规模请求测试提示词和 API 原型，并在模型页面查看 RPM、TPM、RPD 等限制。",
-            "impact": "学生可用它做摘要、分类、课程演示和功能原型，并记录请求次数和 token 用量；不要把 Free tier 当作长期无限吞吐或生产环境。",
-            "free": "官方确认存在 Free tier；具体可用模型、RPM/TPM/RPD 数值、账号资格和地区清单官方未统一说明，需按模型和项目页面实时查看。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Colab 官方 FAQ 明确说明它是无需本地设置的托管 Jupyter Notebook 服务，免费提供 GPU 和 TPU 等计算资源，适合机器学习、数据科学和教育。",
-            "howTo": "打开 Colab，新建或导入 notebook，运行 Python；需要时在运行时设置中切换 GPU/TPU，并把 notebook 保存到 Drive 或从 GitHub 导入。",
-            "impact": "学生可直接做课程代码、数据清洗和小型模型实验，减少环境配置时间；分享前应删除密钥、个人数据和不必要输出，并注意 free tier 可能受限。",
-            "free": "官方确认免费，但资源不保证且使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
-            "category": "长期免费云环境",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "GitHub Education Student Developer Pack 学生权益",
-            "summary": "GitHub Education 官方权益页说明，verified students 可获得 Copilot Student，包含 unlimited code completions、GitHub AI Credits，以及仅通过 auto model selection 提供的有限 chat 和 agent 使用。",
-            "howTo": "访问 Student Developer Pack，完成学生资格验证并启用 Copilot Student；在支持的编辑器中使用补全，并在 GitHub 账户中查看 AI Credits 和 chat/agent 可用情况。",
-            "impact": "学生可用补全减少样板代码工作，把有限 chat/agent 用于解释、测试和学习；所有生成代码仍需本地测试、许可证审核和人工检查。",
-            "free": "官方权益面向 verified students；补全 unlimited，AI Credits 与 chat/agent limited，模型仅 auto model selection。具体 credits 数量、验证材料和地区例外官方未说明。",
-            "category": "学生 / 教育权益",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Hugging Face Spaces 免费 Static Spaces 与 ZeroGPU",
-            "summary": "Hugging Face 官方文档说明 Static Spaces 对所有人免费；状态良好的免费个人账号还可托管最多 2 个使用 ZeroGPU 的 Gradio Spaces，CPU Basic 默认资源无小时费用。",
-            "howTo": "登录 Hugging Face，创建 Space 并选择 Static HTML；若要运行 Gradio，使用状态良好的免费个人账号创建不超过 2 个 ZeroGPU Spaces，并在设置中检查当前硬件和资源状态。",
-            "impact": "学生可把交互式网页、课程可视化或轻量模型 demo 部署成可分享链接；需要 GPU、Docker 或更高硬件时应先确认是否会进入付费计划。",
-            "free": "官方明确 Static Spaces 免费，免费个人账号最多 2 个 ZeroGPU Gradio Spaces；普通 Gradio/Docker Spaces 的 compute 创建通常需要 Pro、Team 或 Enterprise，地区和 ZeroGPU 排队额度官方未说明。",
-            "category": "免费部署 / 开放模型生态",
-            "source": {
-              "name": "Hugging Face 官方文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces-overview"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期精选 2026-09-20 至 2026-09-21 可免费阅读全文的 BBC/NPR 文章，覆盖心理健康、老年护理与航空 AI；每篇按考研英语二方向精读。",
-        "articles": [
-          {
-            "title": "Young people aren't snowflakes - mental distress is rising, says head of official review",
-            "source": "BBC",
-            "published": "2026-09-21",
-            "url": "https://www.bbc.co.uk/news/articles/cqzrz0z4plk1o",
-            "readingTime": "8",
-            "topic": "社会 / 心理健康",
-            "summary": "BBC 报道了英国一项官方评估报告的负责人 Peter Fonagy 的观点：年轻人的心理困扰并非偶发情绪，而是一个持续加剧的公共健康问题。文章先指出 NHS 在心理健康支持上存在明显“供需断裂”，随后说明排队等待、社交孤立和手机使用带来的睡眠破坏都在加重青年困境。文章的重点不只是诊断问题，而是强调真正的解决方案需要在教育、就业、住房和家庭层面共同响应，最后以“我们可以做点什么”为结论，形成一条清晰的社会治理逻辑。",
-            "reason": [
-              "心理健康、青少年发展与公共政策是社会议题中高频且有现实性的主题。",
-              "文章从“问题存在”到“系统缺陷”再到“社会协同解决”，论证链条清晰。",
-              "可积累 mental distress、loneliness、waiting list、belonging 等抽象社会词汇。",
-              "题目和结构都适合分析因果关系和政策回应的辩证逻辑。",
-              "写作中可借鉴“描述症状—分析原因—呼吁各方行动”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "distress",
-                "phonetic": "/dɪˈstres/",
-                "part": "n.",
-                "translation": "痛苦；困扰"
-              },
-              {
-                "word": "loneliness",
-                "phonetic": "/ˈləʊnlinəs/",
-                "part": "n.",
-                "translation": "孤独感"
-              },
-              {
-                "word": "waiting list",
-                "phonetic": "/ˈweɪtɪŋ lɪst/",
-                "part": "n.",
-                "translation": "等待名单"
-              },
-              {
-                "word": "belonging",
-                "phonetic": "/bɪˈlɒŋɪŋ/",
-                "part": "n.",
-                "translation": "归属感"
-              },
-              {
-                "word": "anxiety",
-                "phonetic": "/æŋˈzaɪəti/",
-                "part": "n.",
-                "translation": "焦虑"
-              },
-              {
-                "word": "depressed",
-                "phonetic": "/dɪˈprest/",
-                "part": "adj.",
-                "translation": "沮丧的"
-              },
-              {
-                "word": "social media",
-                "phonetic": "/ˈsəʊʃəl ˈmiːdiə/",
-                "part": "n.",
-                "translation": "社交媒体"
-              },
-              {
-                "word": "support",
-                "phonetic": "/səˈpɔːt/",
-                "part": "n.",
-                "translation": "支持"
-              },
-              {
-                "word": "participate",
-                "phonetic": "/pɑːˈtɪsɪpeɪt/",
-                "part": "v.",
-                "translation": "参与"
-              },
-              {
-                "word": "resilience",
-                "phonetic": "/rɪˈzɪliəns/",
-                "part": "n.",
-                "translation": "韧性；复原力"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The NHS, he said, was simply 'not fit for purpose'.",
-                "analysis": [
-                  "主干是 The NHS was not fit for purpose，he said 是引语标识。",
-                  "not fit for purpose 是典型的强烈批评表述，语气简洁有力。",
-                  "引号中的直述增强了作者的批判情绪与说服力。",
-                  "这句可用于练习新闻中“引语+定性评价”的结构。"
-                ],
-                "translation": "他说，NHS 简直就是“不能胜任其职责”。"
-              },
-              {
-                "original": "He also said it was striking that loneliness among young people had increased since 2000.",
-                "analysis": [
-                  "主干是 He said it was striking that ...，that 从句作为说法内容。",
-                  "loneliness among young people had increased since 2000 是核心事实判断。",
-                  "striking 强调该现象具有明显性和警示性。",
-                  "句子适合分析“事实—判断—影响”的新闻写法。"
-                ],
-                "translation": "他还表示，令人惊讶的是，自 2000 年以来，年轻人的孤独感不断增加。"
-              },
-              {
-                "original": "We need to have opportunities for them to participate, because participating in things... maintains good mental health.",
-                "analysis": [
-                  "We need to have opportunities ... 是直接呼吁，语气明确。",
-                  "for them to participate 是不定式目的结构，强调主体和行动。",
-                  "because 引导原因，说明参与活动的心理效益。",
-                  "maintains good mental health 是方法论层面的结论句。"
-                ],
-                "translation": "我们需要为他们提供参与的机会，因为参与活动有助于维持良好的心理健康。"
-              }
-            ]
-          },
-          {
-            "title": "Smart beds and motion sensors - is this the future of dementia care?",
-            "source": "BBC",
-            "published": "2026-09-20",
-            "url": "https://www.bbc.co.uk/news/articles/c3056d456gro",
-            "readingTime": "7",
-            "topic": "健康 / 老龄与科技",
-            "summary": "BBC 报道了一项英国的老年痴呆照护试验：研究团队在一对夫妇的家中安装多种智能传感器，用于监测睡眠、走路姿态、活动和进食规律，从而更早发现健康变化并帮助患者维持独立生活。文章的重点不是简单展示“科技多么炫”，而是说明这种监测如何在医疗与日常生活之间搭桥：医生能更早识别感染、跌倒或例行安排变化，患者和家属也能获得更及时的支持。它同时保留了对隐私、依赖和高成本的现实警惕，体现了科技进入养老领域的复杂性。",
-            "reason": [
-              "健康、老龄化与科技应用是典型的社会与生活交叉题材。",
-              "文章从“技术试验”展开，随后转向“日常生活监测”与“健康预警”，结构自然。",
-              "可积累 sensor, monitor, routine, independence, frailty 等医疗和科技词汇。",
-              "题目有明显的议题设置，适合讨论科技如何改善公共健康。",
-              "写作上可借鉴“实验场景—数据收集—实际效益—局限性”的展开方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "sensor",
-                "phonetic": "/ˈsensə/",
-                "part": "n.",
-                "translation": "传感器"
-              },
-              {
-                "word": "monitor",
-                "phonetic": "/ˈmɒnɪtə/",
-                "part": "v.",
-                "translation": "监测；监控"
-              },
-              {
-                "word": "routine",
-                "phonetic": "/ruːˈtiːn/",
-                "part": "n.",
-                "translation": "日常安排；常规"
-              },
-              {
-                "word": "independence",
-                "phonetic": "/ˌɪndɪˈpendəns/",
-                "part": "n.",
-                "translation": "独立性"
-              },
-              {
-                "word": "frailty",
-                "phonetic": "/ˈfreɪlti/",
-                "part": "n.",
-                "translation": "脆弱；虚弱"
-              },
-              {
-                "word": "disturbance",
-                "phonetic": "/dɪˈstɜːbəns/",
-                "part": "n.",
-                "translation": "干扰；失调"
-              },
-              {
-                "word": "gait",
-                "phonetic": "/ɡeɪt/",
-                "part": "n.",
-                "translation": "步态"
-              },
-              {
-                "word": "infection",
-                "phonetic": "/ɪnˈfekʃən/",
-                "part": "n.",
-                "translation": "感染"
-              },
-              {
-                "word": "clinical",
-                "phonetic": "/ˈklɪnɪkəl/",
-                "part": "adj.",
-                "translation": "临床的"
-              },
-              {
-                "word": "care needs",
-                "phonetic": "/keə niːdz/",
-                "part": "n.",
-                "translation": "护理需求"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Their house in west London is now fitted with different sensors, which are connected via the internet, that send data back to a dedicated team of doctors, nurses and other clinical specialists.",
-                "analysis": [
-                  "主干是 Their house is now fitted with different sensors ... that send data back ...。",
-                  "which are connected via the internet 是非限制性修饰成分，强调联网功能。",
-                  "a dedicated team of doctors, nurses and other clinical specialists 具体化了数据使用者。",
-                  "整句体现了高科技与日常居住环境结合的写法。"
-                ],
-                "translation": "他们在伦敦西部的家中现在安装了不同的传感器，这些传感器通过互联网连接，并将数据发送回一支由医生、护士和其他临床专家组成的专门团队。"
-              },
-              {
-                "original": "Door sensors detect if someone leaves in the middle of the night, movement is monitored to check for signs of a fall, while kitchen appliances are fitted with sensors to check whether Jyoti has eaten and is sticking to her daily routine.",
-                "analysis": [
-                  "由多个并列分句组成，信息密度高，适合训练长句拆分。",
-                  "Door sensors detect ...，movement is monitored ...，while... 是层层展开。",
-                  "check whether ...and is sticking to her daily routine 说明功能细节。",
-                  "这类句子很适合分析技术如何嵌入生活动作和护理流程。"
-                ],
-                "translation": "门传感器可检测有人在半夜离开，运动情况会被监测以查看是否有跌倒迹象，同时厨房电器也会安装传感器，检查 Jyoti 是否进食并保持日常规律。"
-              },
-              {
-                "original": "Alongside this trial, Jyoti is also testing out smart socks and a special watch that also contain sensors to monitor her body temperature and keep track of any long-term changes in her gait - indicating frailty.",
-                "analysis": [
-                  "Alongside this trial 是介词短语，提供背景。",
-                  "smart socks and a special watch 是具体设备，行为动词 testing out 展现体验性。",
-                  "that also contain sensors to monitor ... and keep track ... 是定语从句，说明设备功能。",
-                  "indicating frailty 作为结果式补足，体现技术正在识别身体变化。"
-                ],
-                "translation": "除了这项试验，Jyoti 还在测试智能袜子和一块特殊手表，这些设备也配备了传感器，用于监测她的体温并跟踪步态的长期变化，以识别虚弱迹象。"
-              }
-            ]
-          },
-          {
-            "title": "FAA turns to AI to help manage the nation's airspace",
-            "source": "NPR",
-            "published": "2026-09-21",
-            "url": "https://www.npr.org/2026/09/21/nx-s1-5976816/faa-ai-manage-airspace",
-            "readingTime": "8",
-            "topic": "科技趋势 / 公共治理",
-            "summary": "NPR 报道称，美国联邦航空管理局在 2026 年启动了名为 SMART 的新系统，目标是让人工智能辅助航管部门管理全国空域，减少延误、缓解管制员压力并改善效率。文章不仅介绍技术方案，也把它放在美国航空基础设施老化和航管人员短缺的现实背景中：航班延误、设备故障和劳动力不足共同构成复杂系统问题。报道最后强调，AI 被描述为工具而不是替代人工控制员，并提醒它无法单独解决更深层的体系性问题，这使文章兼具技术乐观与现实保守的语气。",
-            "reason": [
-              "AI 在公共管理中的应用是科技趋势与政策治理的经典交叉点。",
-              "文章从“技术升级”切入，再回到基础设施老化和人员短缺，因果链条清晰。",
-              "可积累 airspace, congestion, controller, infrastructure, optimize 等公共治理词汇。",
-              "题目和内容都适合分析“AI + human oversight”这一成熟论证模式。",
-              "写作上可借鉴“新工具—时机背景—现实限制—人类角色”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "airspace",
-                "phonetic": "/ˈeəspeɪs/",
-                "part": "n.",
-                "translation": "空域"
-              },
-              {
-                "word": "controller",
-                "phonetic": "/kənˈtrəʊlə/",
-                "part": "n.",
-                "translation": "管制员"
-              },
-              {
-                "word": "infrastructure",
-                "phonetic": "/ˈɪnfrəstrʌktʃə/",
-                "part": "n.",
-                "translation": "基础设施"
-              },
-              {
-                "word": "congestion",
-                "phonetic": "/kənˈdʒestʃən/",
-                "part": "n.",
-                "translation": "拥堵"
-              },
-              {
-                "word": "outage",
-                "phonetic": "/ˈaʊtɪdʒ/",
-                "part": "n.",
-                "translation": "中断；故障"
-              },
-              {
-                "word": "optimize",
-                "phonetic": "/ˈɒptɪmaɪz/",
-                "part": "v.",
-                "translation": "优化"
-              },
-              {
-                "word": "staffing",
-                "phonetic": "/ˈstæfɪŋ/",
-                "part": "n.",
-                "translation": "人员配置；人手"
-              },
-              {
-                "word": "delays",
-                "phonetic": "/dɪˈleɪz/",
-                "part": "n.",
-                "translation": "延误"
-              },
-              {
-                "word": "efficiency",
-                "phonetic": "/ɪˈfɪʃənsi/",
-                "part": "n.",
-                "translation": "效率"
-              },
-              {
-                "word": "safety",
-                "phonetic": "/ˈseɪfti/",
-                "part": "n.",
-                "translation": "安全"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The federal agency in charge of air traffic control is turning to artificial intelligence to help manage the nation's airspace.",
-                "analysis": [
-                  "主干是 The agency is turning to AI ...，信息直接且概括性强。",
-                  "in charge of air traffic control 说明机构职责范围。",
-                  "to help manage the nation's airspace 是目的短语，明确技术用途。",
-                  "整句适合做标题式引言，迅速呈现问题和方案。"
-                ],
-                "translation": "负责空中交通管制的联邦机构正在转向人工智能，以帮助管理全国的空域。"
-              },
-              {
-                "original": "The new system is known as Strategic Management of Airspace, Routes and Trajectories, or SMART for short.",
-                "analysis": [
-                  "主干是 The new system is known as ...，后面是同位语解释。",
-                  "or SMART for short 是正式名称的缩写说明。",
-                  "这种句式常见于新闻报道，便于读者快速记忆项目名称。",
-                  "适合练习“正式名称—简称”结构。"
-                ],
-                "translation": "这套新系统被称为 Strategic Management of Airspace, Routes and Trajectories，简称 SMART。"
-              },
-              {
-                "original": "FAA and DOT leaders emphasize that the new technology is not intended as a replacement for human air traffic controllers.",
-                "analysis": [
-                  "主干是 leaders emphasize that ...，that 从句表达作者的核心判断。",
-                  "not intended as a replacement for human air traffic controllers 强调人类角色未被替代。",
-                  "该句非常适合分析“技术增强而非替代”的公共治理论述。",
-                  "整句兼具技术前瞻和现实限制，适合写作中引出谨慎结论。"
-                ],
-                "translation": "FAA 和 DOT 负责人强调，新技术并非旨在取代人类空中交通管制员。"
               }
             ]
           }
