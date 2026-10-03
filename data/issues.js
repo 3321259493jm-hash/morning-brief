@@ -1,6 +1,338 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-02T10:06:00+08:00",
+  "updatedAt": "2026-10-03T09:58:03+08:00",
   "issues": [
+    {
+      "date": "2026-10-03",
+      "status": "ready",
+      "ai": {
+        "intro": "截至上海 10 月 3 日，先检索 10 月 2—3 日，符合条件的官方新变化不足三项，因此扩展到此前七天；免费资源按官方页面复核。",
+        "updates": [
+          {
+            "event": "GitHub Copilot CLI 与应用公开预览 computer use（2026-10-01）",
+            "summary": "GitHub 在 Copilot CLI 及 macOS、Windows 版 Copilot app 中开放 computer use 公测。Copilot 可读取应用内容与画面、点击控件、输入和编辑文本、滚动，并跨桌面应用执行流程；控制应用前会请求批准。",
+            "howTo": "在 Copilot CLI 输入 `/computer on` 开启，用 `/computer show` 检查状态、`/computer off` 关闭；Copilot app 则进入 Settings > Computer Use，开启 Enable Computer Use。描述目标、涉及应用和约束，并逐项检查代理准备执行的操作。",
+            "impact": "课程小组可尝试把网页资料整理进演示文稿，或在没有 API、命令行接口的图形软件中重复录入项目数据；先核对操作结果，不要交由代理处理未经核实的信息。macOS 需要授予 Accessibility 和 Screen Recording 权限。",
+            "free": "官方只称 public preview，未说明价格、免费资格、所需订阅、开放地区或使用配额；组织管理员可关闭该功能。",
+            "category": "AI 桌面自动化",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-01",
+              "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
+            }
+          },
+          {
+            "event": "Gemini Live 推出 Guided Vision 实时视觉辅助（2026-10-01）",
+            "summary": "Google 在兼容 Android 设备的 Gemini Live 中推出 Guided Vision。用户分享摄像头后，可语音询问周围环境、物品或文字，Gemini 还能用语音提示调整取景；该功能面向盲人、低视力用户及需要视觉辅助的人群。",
+            "howTo": "在 Gemini 手机应用的个人资料设置中开启 Use Guided Vision in Live，启动 Gemini Live 并分享摄像头；也可在 Android Settings > Accessibility > Vision assistance > Guided Vision 设置快捷方式，或从 TalkBack 菜单启动。",
+            "impact": "可尝试听读包装标签或印刷材料、寻找桌面物品，并获取陌生室内空间的文字描述；生成式 AI 可能出错，官方明确说明它不是导航、避障或白手杖替代品。",
+            "free": "官方称已面向兼容 Android 设备推出，但未说明价格、账号计划、开放地区、完整机型范围或使用配额。",
+            "category": "AI 无障碍 / 实时视觉",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-01",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
+            }
+          },
+          {
+            "event": "GitHub Copilot code review 支持 API 请求并调整审查力度（2026-10-02）",
+            "summary": "Copilot code review 现在可通过 REST 和 GraphQL API 请求，并可为单次审查设置 effort；Default 的默认审查力度改为 Balanced。该功能已向 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划开放。",
+            "howTo": "在目标仓库的拉取请求流程中，通过受支持的 REST 或 GraphQL API 发起 Copilot review，并按需要为该次审查指定力度。个人用户可在头像 > Copilot settings > Copilot > Code review 查看或调整默认值；组织和仓库也可在各自 Copilot 设置中管理。",
+            "impact": "学生团队可把自动审查接入课程仓库的 PR 工作流，减少等待人工初筛的时间；仍需自行阅读建议、运行测试并判断代码是否正确。",
+            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise；未列出 Free 计划。地区、API 调用额度及其他限制官方未说明。",
+            "category": "AI 编程 / 代码审查",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-02",
+              "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Azure for Students：$100 云额度及 Azure AI 学习资源",
+            "summary": "Microsoft 为符合条件的在读大学生提供 Azure for Students：官方页面列出 $100 Azure credit、无需信用卡，并可在教育用途下访问 Azure 产品；页面还明确提到可接触 Azure OpenAI。",
+            "howTo": "从 Microsoft Azure for Students 页面申请学生计划，先阅读 Azure OpenAI 或其他云服务的教育用途条件，再用额度做小型课程原型；部署前查看服务计费与免费额度，避免额度用尽后产生费用。",
+            "impact": "适合在课程中试做文本问答、数据处理或云端 AI 原型；可先用额度验证工作流，而不是直接承担常规 API 账单。",
+            "free": "官方列出全日制大学生资格、无需信用卡及 $100 额度；该额度可在 12 个月内用于大多数 Azure 产品。另有 20 多项常用服务的免费月额度，限新 Azure 客户、最长 12 个月，以及 65 多项始终免费的服务。国家/地区和申请截止日官方未说明。",
+            "category": "学生教育福利 / 云端 AI",
+            "source": {
+              "name": "Microsoft Azure for Students",
+              "published": "官方未说明",
+              "url": "https://azure.microsoft.com/en-us/free/students/"
+            }
+          },
+          {
+            "event": "IBM Granite 3.3 2B Instruct Apache 2.0 开放权重",
+            "summary": "IBM 官方模型卡开放 Granite 3.3 2B Instruct 权重，采用 Apache 2.0 许可；模型有 20 亿参数，支持中文等多种语言，可用于摘要、问答、信息抽取、RAG 和代码相关任务。",
+            "howTo": "打开 IBM 官方 Hugging Face 模型卡，按其示例安装 PyTorch、Accelerate 和 Transformers，再用 `ibm-granite/granite-3.3-2b-instruct` 加载模型；先用短文本测试本机是否有足够的计算资源。",
+            "impact": "可用于练习本地推理、RAG、文本分类或中英双语课程原型；下载开放权重不等于获得托管推理服务，运行仍需自备设备和算力。",
+            "free": "模型权重可按 Apache 2.0 许可下载和使用；官方模型卡未说明托管推理额度、地区或账号要求，也未给出统一硬件成本。",
+            "category": "可下载开放模型权重 / Apache 2.0",
+            "source": {
+              "name": "IBM Granite 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/ibm-granite/granite-3.3-2b-instruct"
+            }
+          },
+          {
+            "event": "Google Colab 免费 Jupyter 笔记本与计算资源",
+            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务，官方 FAQ 确认可免费使用，并提供包括 GPU、TPU 在内的计算资源；免费资源不是保证无限供应。",
+            "howTo": "打开 Colab，新建笔记本或从 Google Drive、GitHub 打开现有 `.ipynb`，运行 Python 单元格；开始前检查当前运行时可用资源，并及时保存笔记本。",
+            "impact": "可用于课程 Python 作业、数据分析和小规模机器学习实验，不必先配置本地开发环境；长时间任务应保存结果，因为虚拟机闲置后会被删除。",
+            "free": "官方确认服务免费，但资源不保证且不无限，使用限制会变化；地区、固定 GPU/TPU 时数和账号资格官方未说明。",
+            "category": "免费云端计算 / 学习开发",
+            "source": {
+              "name": "Google Colaboratory FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Claude Free 免费网页与应用访问",
+            "summary": "Anthropic 的 Claude Free 计划可用于日常问题；免费计划的使用量按滚动五小时窗口重置，实际可用量随对话长度、模型和功能而变，并非固定消息条数。",
+            "howTo": "打开 Claude 官网，选择免费计划并登录；可让它解释课程阅读材料、对论文提纲提出问题或生成练习题，再回到原文和课程资料核对答案。",
+            "impact": "适合临时复习、梳理论点和练习提问；高复杂度对话会更快消耗使用量，重要作业仍要由学生核实事实与引文。",
+            "free": "官方列出 Free 计划，按滚动五小时窗口重置；用量因对话、模型和功能而异，没有固定消息数，且可能另有每周或每月限制。具体地区、资格和额度官方未说明。",
+            "category": "长期免费网页 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Row erupts over Cairo mural depicting Tutankhamun and Nefertiti with dark skin",
+            "source": "The Guardian",
+            "published": "2026-10-02",
+            "url": "https://www.theguardian.com/global-development/2026/oct/02/row-erupts-over-cairo-mural-depicting-tutankhamun-and-nefertiti-with-dark-skin",
+            "readingTime": "5 分钟",
+            "topic": "文化 / 历史表征与人工智能",
+            "summary": "文章从开罗一幅被涂掉的壁画切入：当地志愿者为重要来访制作城市壁画，用 ChatGPT 生成设计，却因图像中图坦卡蒙与娜芙蒂蒂的肤色引发争议，最终在社交媒体舆论升温后被要求重涂。报道交代创作方未咨询考古与艺术专家，也呈现埃及学者对古埃及族群多样性和相关历史主张的不同看法。后半部分把事件放进长期的古埃及身份争论，并引用 AI 研究者及艺术评论者提醒：模型生成内容反映网络上流传的信息，不应替代专业判断或创作者本身。",
+            "reason": [
+              "主题涉及文化遗产、历史叙事与身份认同，可用于文化传播、媒介影响和科技伦理类考题。",
+              "结构由具体事件展开，依次说明争议成因、相关者回应，再回到长期争论及 AI 使用风险。",
+              "可练习主旨归纳、观点辨析和证据判断：区分报道事实、受访者看法与作者组织的论述。",
+              "词汇覆盖 depiction、controversy、oversight、complexion 等文化报道常见表达。",
+              "写作可借鉴“案例—争议—专家意见—审慎结论”的展开方式，论证技术工具应受专业知识约束。"
+            ],
+            "vocabulary": [
+              {
+                "word": "depicting",
+                "phonetic": "/dɪˈpɪktɪŋ/",
+                "part": "v.",
+                "translation": "描绘；刻画"
+              },
+              {
+                "word": "commissioned",
+                "phonetic": "/kəˈmɪʃənd/",
+                "part": "v.",
+                "translation": "委托创作；委任"
+              },
+              {
+                "word": "controversy",
+                "phonetic": "/ˈkɒntrəvɜːsi/",
+                "part": "n.",
+                "translation": "争议"
+              },
+              {
+                "word": "oversight",
+                "phonetic": "/ˈəʊvəsaɪt/",
+                "part": "n.",
+                "translation": "监督；审查"
+              },
+              {
+                "word": "complexion",
+                "phonetic": "/kəmˈplekʃən/",
+                "part": "n.",
+                "translation": "肤色；面色"
+              },
+              {
+                "word": "reignited",
+                "phonetic": "/ˌriːɪɡˈnaɪtɪd/",
+                "part": "v.",
+                "translation": "再次引发；重新点燃"
+              },
+              {
+                "word": "diverse",
+                "phonetic": "/daɪˈvɜːs/",
+                "part": "adj.",
+                "translation": "多样的"
+              },
+              {
+                "word": "reflected",
+                "phonetic": "/rɪˈflektɪd/",
+                "part": "v.",
+                "translation": "反映"
+              },
+              {
+                "word": "factually accurate",
+                "phonetic": "/ˈfæktʃuəli ˈækjərət/",
+                "part": "adj. phr.",
+                "translation": "符合事实的；准确的"
+              },
+              {
+                "word": "substitute",
+                "phonetic": "/ˈsʌbstɪtjuːt/",
+                "part": "v.",
+                "translation": "替代"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The team used the AI programme ChatGPT to generate the designs, which volunteers then painted on to the wall.",
+                "analysis": [
+                  "主干为 The team used the AI programme ChatGPT，to generate the designs 是说明用途的不定式结构。",
+                  "which 引导非限制性定语从句，指代前面的 designs；从句中 volunteers 是主语，painted 是谓语。",
+                  "then 标示先后顺序：先由 AI 生成设计，再由志愿者把设计画到墙上。",
+                  "句子把技术工具与人工执行并列呈现，并未说 AI 直接完成壁画。",
+                  "可借鉴 use A to do B, which... 描述工具、用途及后续结果。"
+                ],
+                "translation": "团队使用 ChatGPT 生成设计，志愿者随后把这些设计画到墙上。"
+              },
+              {
+                "original": "They were built by companies in the US and Europe, he said, and the content they generated could shape how those audiences saw themselves.",
+                "analysis": [
+                  "句子由 and 连接两个并列分句：They were built... 与 the content... could shape...。",
+                  "第一分句用 were built 被动语态，by companies... 引出执行者；he said 是插入的消息来源。",
+                  "第二分句中 they generated 是修饰 content 的定语从句，省略了关系代词 that。",
+                  "how those audiences saw themselves 是宾语从句，作 shape 的宾语；could 表示可能影响。",
+                  "可借鉴被动事实加并列影响的写法，讨论技术来源与社会后果。"
+                ],
+                "translation": "他说，这些工具由美国和欧洲的公司开发，而它们生成的内容可能影响这些受众如何看待自己。"
+              },
+              {
+                "original": "Mostafa Eissa, an art critic, said AI should remain a tool, never a decision-maker in its own right.",
+                "analysis": [
+                  "主干为 Mostafa Eissa said，an art critic 是解释人物身份的同位语。",
+                  "AI should remain a tool 是 said 后的宾语从句，should 表达主张而非既定事实。",
+                  "never a decision-maker 与 a tool 构成省略式对照，补足语义为“而不应成为决策者”。",
+                  "in its own right 强调“本身、独立地”，限定 decision-maker 的角色。",
+                  "可借鉴 remain A, never B 简洁表达某工具应有的边界。"
+                ],
+                "translation": "艺术评论家 Mostafa Eissa 认为，AI 应当只是工具，而不应成为独立的决策者。"
+              }
+            ]
+          },
+          {
+            "title": "The U.S. added only 29,000 jobs in September as job market lacks spark",
+            "source": "NPR",
+            "published": "2026-10-02",
+            "url": "https://www.npr.org/2026/10/02/nx-s1-5989140/jobs-labor-wages-federal-reserve",
+            "readingTime": "4 分钟",
+            "topic": "经济 / 就业数据与实际工资",
+            "summary": "NPR 根据美国劳工部 9 月就业报告指出，雇主仅新增 2.9 万个岗位，低于预期，且 7、8 月数据合计下修 6 万；失业率从 4.1% 升至 4.2%，但主要与劳动力人数增加有关，报告并未显示普遍裁员。文章随后转向工资：平均工资同比增长 3%，近期未能跟上物价上涨，削弱实际购买力。最后联系美联储抑制通胀的利率决策，解释疲弱就业数据为何降低再次加息的可能性，同时指出投资者仍预期年内至少再加息一次。",
+            "reason": [
+              "就业、通胀与利率是常见经济主题，适合练习从数据解释宏观趋势及其个人影响。",
+              "行文先报就业数据，再解释失业率构成与工资变化，最后连接美联储政策和市场反应。",
+              "可考查数字信息定位、因果推断、段落主旨，以及“就业疲软是否意味着普遍裁员”等细节判断。",
+              "文章包含 labor force、revise down、keep pace with、erode 等经济新闻高频表达。",
+              "写作可借鉴先呈现数据、再解释指标含义、最后说明政策后果的论证结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "forecasters",
+                "phonetic": "/ˈfɔːkɑːstəz/",
+                "part": "n.",
+                "translation": "预测者；预测机构"
+              },
+              {
+                "word": "revised down",
+                "phonetic": "/rɪˈvaɪzd daʊn/",
+                "part": "v. phr.",
+                "translation": "向下修正；下调"
+              },
+              {
+                "word": "turnover",
+                "phonetic": "/ˈtɜːnˌəʊvə/",
+                "part": "n.",
+                "translation": "人员流动；周转"
+              },
+              {
+                "word": "shed workers",
+                "phonetic": "/ʃed ˈwɜːkəz/",
+                "part": "v. phr.",
+                "translation": "裁员；减少雇员"
+              },
+              {
+                "word": "keep pace with",
+                "phonetic": "/kiːp peɪs wɪð/",
+                "part": "v. phr.",
+                "translation": "跟上；与……同步"
+              },
+              {
+                "word": "eroded",
+                "phonetic": "/ɪˈrəʊdɪd/",
+                "part": "v.",
+                "translation": "逐渐削弱；侵蚀"
+              },
+              {
+                "word": "benchmark",
+                "phonetic": "/ˈbentʃmɑːk/",
+                "part": "n.",
+                "translation": "基准；基准指标"
+              },
+              {
+                "word": "curb",
+                "phonetic": "/kɜːb/",
+                "part": "v.",
+                "translation": "抑制；控制"
+              },
+              {
+                "word": "lackluster",
+                "phonetic": "/ˈlæklʌstə/",
+                "part": "adj.",
+                "translation": "乏力的；不景气的"
+              },
+              {
+                "word": "inched higher",
+                "phonetic": "/ɪntʃt ˈhaɪə/",
+                "part": "v. phr.",
+                "translation": "小幅上升"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The U.S. job market showed signs of weakness in September as hiring slowed and the unemployment rate inched higher.",
+                "analysis": [
+                  "主干为 The U.S. job market showed signs，of weakness 说明迹象的具体内容。",
+                  "in September 是时间状语，限定报告所描述的时期。",
+                  "as 引导从句，hiring slowed 与 the unemployment rate inched higher 并列呈现两项变化。",
+                  "as 可兼有时间和原因意味，此处把就业放缓与失业率微升作为市场走弱的证据。",
+                  "可借鉴 show signs of... as... 用数据和并列现象概括趋势。"
+                ],
+                "translation": "9 月招聘放缓、失业率小幅上升，美国就业市场显现疲软迹象。"
+              },
+              {
+                "original": "The September report doesn't show widespread job cuts, although financial services and government shed workers.",
+                "analysis": [
+                  "主句主干为 The report does not show job cuts，widespread 修饰 job cuts，限定“普遍裁员”。",
+                  "although 引导让步状语从句，说明金融服务业和政府部门确有裁员。",
+                  "主句否认的是普遍现象，从句补充局部行业情况，二者并不矛盾。",
+                  "shed workers 是 shed 的及物用法，意为裁减员工。",
+                  "可借鉴 not..., although... 避免把局部变化误写成整体趋势。"
+                ],
+                "translation": "9 月报告并未显示普遍裁员，尽管金融服务业和政府部门减少了员工。"
+              },
+              {
+                "original": "Prices have been rising faster than paychecks in recent months, so workers' real buying power is being eroded.",
+                "analysis": [
+                  "前半句主干为 Prices have been rising，使用现在完成进行时强调近期持续上涨。",
+                  "faster than paychecks 是比较结构，省略了重复的 rising，比较价格与工资增长速度。",
+                  "so 连接原因与结果：价格涨得更快，购买力因此受损。",
+                  "后半句用现在进行时被动 is being eroded，突出购买力正在受到侵蚀。",
+                  "可借鉴 faster than... so... 解释生活成本变化带来的结果。"
+                ],
+                "translation": "近几个月物价涨幅快于工资，因此劳动者的实际购买力正在被削弱。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-02",
       "status": "ready",
@@ -333,7 +665,7 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-{
+    {
       "date": "2026-10-01",
       "status": "ready",
       "ai": {
@@ -665,7 +997,7 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-{
+    {
       "date": "2026-09-30",
       "status": "ready",
       "ai": {
@@ -784,16 +1116,66 @@ window.BRIEFING_DATA = {
               "可借鉴用具体账单数字引出弱势群体影响，再提出政策讨论的写作结构。"
             ],
             "vocabulary": [
-              { "word": "forecast", "phonetic": "/ˈfɔːrkæst/", "part": "n./v.", "translation": "预测；预报" },
-              { "word": "soar", "phonetic": "/sɔːr/", "part": "v.", "translation": "猛增；飙升" },
-              { "word": "typical", "phonetic": "/ˈtɪpɪkəl/", "part": "adj.", "translation": "典型的；有代表性的" },
-              { "word": "price cap", "phonetic": "/ˈpraɪs kæp/", "part": "n.", "translation": "价格上限" },
-              { "word": "variable tariff", "phonetic": "/ˈveriəbəl ˈtærɪf/", "part": "n.", "translation": "浮动费率" },
-              { "word": "sustain", "phonetic": "/səˈsteɪn/", "part": "v.", "translation": "维持；持续" },
-              { "word": "disruption", "phonetic": "/dɪsˈrʌpʃən/", "part": "n.", "translation": "中断；扰乱" },
-              { "word": "storage", "phonetic": "/ˈstɔːrɪdʒ/", "part": "n.", "translation": "储存；储备" },
-              { "word": "targeted", "phonetic": "/ˈtɑːrɡɪtɪd/", "part": "adj.", "translation": "有针对性的" },
-              { "word": "unsustainable", "phonetic": "/ˌʌnsəˈsteɪnəbəl/", "part": "adj.", "translation": "不可持续的" }
+              {
+                "word": "forecast",
+                "phonetic": "/ˈfɔːrkæst/",
+                "part": "n./v.",
+                "translation": "预测；预报"
+              },
+              {
+                "word": "soar",
+                "phonetic": "/sɔːr/",
+                "part": "v.",
+                "translation": "猛增；飙升"
+              },
+              {
+                "word": "typical",
+                "phonetic": "/ˈtɪpɪkəl/",
+                "part": "adj.",
+                "translation": "典型的；有代表性的"
+              },
+              {
+                "word": "price cap",
+                "phonetic": "/ˈpraɪs kæp/",
+                "part": "n.",
+                "translation": "价格上限"
+              },
+              {
+                "word": "variable tariff",
+                "phonetic": "/ˈveriəbəl ˈtærɪf/",
+                "part": "n.",
+                "translation": "浮动费率"
+              },
+              {
+                "word": "sustain",
+                "phonetic": "/səˈsteɪn/",
+                "part": "v.",
+                "translation": "维持；持续"
+              },
+              {
+                "word": "disruption",
+                "phonetic": "/dɪsˈrʌpʃən/",
+                "part": "n.",
+                "translation": "中断；扰乱"
+              },
+              {
+                "word": "storage",
+                "phonetic": "/ˈstɔːrɪdʒ/",
+                "part": "n.",
+                "translation": "储存；储备"
+              },
+              {
+                "word": "targeted",
+                "phonetic": "/ˈtɑːrɡɪtɪd/",
+                "part": "adj.",
+                "translation": "有针对性的"
+              },
+              {
+                "word": "unsustainable",
+                "phonetic": "/ˌʌnsəˈsteɪnəbəl/",
+                "part": "adj.",
+                "translation": "不可持续的"
+              }
             ],
             "sentences": [
               {
@@ -847,16 +1229,66 @@ window.BRIEFING_DATA = {
               "建议部分可用于写作中提出分层应对措施，同时注意文章承认时间成本和便利性取舍。"
             ],
             "vocabulary": [
-              { "word": "deliberately", "phonetic": "/dɪˈlɪbərətli/", "part": "adv.", "translation": "故意地；蓄意地" },
-              { "word": "overcharged", "phonetic": "/ˌoʊvərˈtʃɑːrdʒd/", "part": "v. pp.", "translation": "被多收费；被索价过高" },
-              { "word": "geo-location", "phonetic": "/ˌdʒiːoʊloʊˈkeɪʃən/", "part": "n.", "translation": "地理位置数据" },
-              { "word": "personalized", "phonetic": "/ˈpɜːrsənəlaɪzd/", "part": "adj.", "translation": "个性化的；针对个人的" },
-              { "word": "incentive", "phonetic": "/ɪnˈsentɪv/", "part": "n.", "translation": "激励；诱因" },
-              { "word": "retailer", "phonetic": "/ˈriːteɪlər/", "part": "n.", "translation": "零售商" },
-              { "word": "comparison shopping", "phonetic": "/kəmˈpærɪsən ˌʃɑːpɪŋ/", "part": "n.", "translation": "比价购物" },
-              { "word": "incognito", "phonetic": "/ˌɪnkɑːɡˈniːtoʊ/", "part": "adj.", "translation": "隐身浏览的" },
-              { "word": "permission", "phonetic": "/pərˈmɪʃən/", "part": "n.", "translation": "许可；权限" },
-              { "word": "unpredictable", "phonetic": "/ˌʌnprɪˈdɪktəbəl/", "part": "adj.", "translation": "难以预测的" }
+              {
+                "word": "deliberately",
+                "phonetic": "/dɪˈlɪbərətli/",
+                "part": "adv.",
+                "translation": "故意地；蓄意地"
+              },
+              {
+                "word": "overcharged",
+                "phonetic": "/ˌoʊvərˈtʃɑːrdʒd/",
+                "part": "v. pp.",
+                "translation": "被多收费；被索价过高"
+              },
+              {
+                "word": "geo-location",
+                "phonetic": "/ˌdʒiːoʊloʊˈkeɪʃən/",
+                "part": "n.",
+                "translation": "地理位置数据"
+              },
+              {
+                "word": "personalized",
+                "phonetic": "/ˈpɜːrsənəlaɪzd/",
+                "part": "adj.",
+                "translation": "个性化的；针对个人的"
+              },
+              {
+                "word": "incentive",
+                "phonetic": "/ɪnˈsentɪv/",
+                "part": "n.",
+                "translation": "激励；诱因"
+              },
+              {
+                "word": "retailer",
+                "phonetic": "/ˈriːteɪlər/",
+                "part": "n.",
+                "translation": "零售商"
+              },
+              {
+                "word": "comparison shopping",
+                "phonetic": "/kəmˈpærɪsən ˌʃɑːpɪŋ/",
+                "part": "n.",
+                "translation": "比价购物"
+              },
+              {
+                "word": "incognito",
+                "phonetic": "/ˌɪnkɑːɡˈniːtoʊ/",
+                "part": "adj.",
+                "translation": "隐身浏览的"
+              },
+              {
+                "word": "permission",
+                "phonetic": "/pərˈmɪʃən/",
+                "part": "n.",
+                "translation": "许可；权限"
+              },
+              {
+                "word": "unpredictable",
+                "phonetic": "/ˌʌnprɪˈdɪktəbəl/",
+                "part": "adj.",
+                "translation": "难以预测的"
+              }
             ],
             "sentences": [
               {
@@ -910,16 +1342,66 @@ window.BRIEFING_DATA = {
               "可借鉴以案例引出宏观趋势，再用反方迹象和历史参照限定结论的写法。"
             ],
             "vocabulary": [
-              { "word": "distillery", "phonetic": "/dɪˈstɪləri/", "part": "n.", "translation": "酿酒厂；蒸馏厂" },
-              { "word": "slump", "phonetic": "/slʌmp/", "part": "v./n.", "translation": "骤降；低迷" },
-              { "word": "glut", "phonetic": "/ɡlʌt/", "part": "n.", "translation": "供过于求；过剩" },
-              { "word": "maturation", "phonetic": "/ˌmætʃəˈreɪʃən/", "part": "n.", "translation": "成熟；陈酿" },
-              { "word": "navigate", "phonetic": "/ˈnævɪɡeɪt/", "part": "v.", "translation": "应对；设法处理" },
-              { "word": "sustained", "phonetic": "/səˈsteɪnd/", "part": "adj.", "translation": "持续的" },
-              { "word": "tentative", "phonetic": "/ˈtentətɪv/", "part": "adj.", "translation": "试探性的；暂定的" },
-              { "word": "offset", "phonetic": "/ˌɔːfˈset/", "part": "v.", "translation": "抵消；弥补" },
-              { "word": "downturn", "phonetic": "/ˈdaʊntɜːrn/", "part": "n.", "translation": "衰退；下行期" },
-              { "word": "overconfidence", "phonetic": "/ˌoʊvərˈkɑːnfɪdəns/", "part": "n.", "translation": "过度自信" }
+              {
+                "word": "distillery",
+                "phonetic": "/dɪˈstɪləri/",
+                "part": "n.",
+                "translation": "酿酒厂；蒸馏厂"
+              },
+              {
+                "word": "slump",
+                "phonetic": "/slʌmp/",
+                "part": "v./n.",
+                "translation": "骤降；低迷"
+              },
+              {
+                "word": "glut",
+                "phonetic": "/ɡlʌt/",
+                "part": "n.",
+                "translation": "供过于求；过剩"
+              },
+              {
+                "word": "maturation",
+                "phonetic": "/ˌmætʃəˈreɪʃən/",
+                "part": "n.",
+                "translation": "成熟；陈酿"
+              },
+              {
+                "word": "navigate",
+                "phonetic": "/ˈnævɪɡeɪt/",
+                "part": "v.",
+                "translation": "应对；设法处理"
+              },
+              {
+                "word": "sustained",
+                "phonetic": "/səˈsteɪnd/",
+                "part": "adj.",
+                "translation": "持续的"
+              },
+              {
+                "word": "tentative",
+                "phonetic": "/ˈtentətɪv/",
+                "part": "adj.",
+                "translation": "试探性的；暂定的"
+              },
+              {
+                "word": "offset",
+                "phonetic": "/ˌɔːfˈset/",
+                "part": "v.",
+                "translation": "抵消；弥补"
+              },
+              {
+                "word": "downturn",
+                "phonetic": "/ˈdaʊntɜːrn/",
+                "part": "n.",
+                "translation": "衰退；下行期"
+              },
+              {
+                "word": "overconfidence",
+                "phonetic": "/ˌoʊvərˈkɑːnfɪdəns/",
+                "part": "n.",
+                "translation": "过度自信"
+              }
             ],
             "sentences": [
               {
@@ -960,7 +1442,7 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-{
+    {
       "date": "2026-09-29",
       "status": "ready",
       "ai": {
@@ -1391,7 +1873,7 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-{
+    {
       "date": "2026-09-28",
       "status": "ready",
       "ai": {
@@ -1817,7 +2299,7 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-{
+    {
       "date": "2026-09-27",
       "status": "ready",
       "ai": {
@@ -2170,351 +2652,6 @@ window.BRIEFING_DATA = {
                   "be based on + 动名词复合结构可用于谨慎说明研究模型的假设。"
                 ],
                 "translation": "该团队的模型建立在这样的设定上：无人机部署在从现有 AED 地点到消防站和移动重症监护单元等地点。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-{
-      "date": "2026-09-26",
-      "status": "ready",
-      "ai": {
-        "intro": "先核验 9 月 25 日 GitHub Copilot 官方更新，再扩展至近 7 日，补充 Google 于 9 月 23 日发布的 Gemini、Vids 与 Flow 功能；免费资源均按官方页面复核。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 在 Slack 和 Microsoft Teams 中增强对话上下文（2026-09-25）",
-            "summary": "GitHub 扩展了 Copilot 在协作工具中可使用的上下文：Slack 支持文件、附件和消息链接；Teams 支持行内图片、转发消息、频道和线程历史。它还会检查相似 issue，并把新建的 GitHub 工作项链接回原讨论。",
-            "howTo": "在 Slack 或 Teams 中先确认组织管理员已启用 Copilot cloud agent（Teams 还需启用 cloud sandboxes），安装或升级 GitHub 应用并关联 GitHub 账号，再在讨论中提及 @GitHub；在 Slack 可为后续消息切换模型。",
-            "impact": "小组项目讨论可以把附件、图片和已有线程作为背景，直接整理成可追踪的 GitHub issue，减少复制上下文和重复建单；创建前仍应核对任务描述和关联仓库。",
-            "free": "官方说明该功能为 public preview，仅向 GitHub Copilot Business 和 Enterprise 组织开放，使用量计入现有 Copilot entitlement，可由 cloud agent budget 管理；部分能力逐步推出。个人/学生计划、具体配额和地区范围官方未说明。",
-            "category": "AI 协作 / 编程代理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-25",
-              "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams"
-            }
-          },
-          {
-            "event": "Google Vids 开放 Gemini Omni 视频生成功能并新增精细控制（2026-09-23）",
-            "summary": "Google 在 Vids 中推出 Omni 1.1，可延长场景并保持画面元素连贯、指定生成片段时长、生成 1080p 视频或放大已有 AI 片段；生成片段带有 SynthID 水印。",
-            "howTo": "用 Google 或 Google Workspace 账号登录 Google Vids，在项目中选择 Omni 1.1 生成视频片段；按旁白节奏设置片段时长，必要时延长场景或将片段升至 1080p，再导出用于演示或社团活动。",
-            "impact": "学生可把课程展示、研究汇报或校园活动脚本制作成带连贯镜头的短片，并按旁白调整长度；提交前应检查生成画面与事实是否一致，并保留其 AI 生成标识。",
-            "free": "Google 官方称任何 Google 或 Google Workspace 账号均可免费开始使用；个人账号可通过 Google AI 计划获得更多生成权限，Workspace Business/Enterprise 有扩展生成池。具体免费配额及地区适用范围官方未说明。",
-            "category": "AI 视频 / 免费创作",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
-            }
-          },
-          {
-            "event": "Gemini 开始接入更多第三方 Connected Apps（2026-09-23）",
-            "summary": "Gemini 开始逐步接入 Airtable、Linear、monday.com、Adobe、Picsart、Squarespace、Webflow、Peloton 等新应用，覆盖项目管理、创意制作和生活规划等场景。",
-            "howTo": "打开 Gemini 设置连接所需应用，按页面提示完成授权；也可在 Gemini 对话中用 @ 提及已连接的应用，或直接提出任务。只授权完成任务必需的应用，并检查生成或修改的内容。",
-            "impact": "学生可在同一对话中整理项目数据库、规划分工，或把设计需求交给已连接的创意工具，减少在多个标签页间搬运信息；涉及账号资料或共享文件时应先核实授权范围。",
-            "free": "官方公告称功能从 2026-09-23 起逐步推出，但未说明免费/付费计划资格、各地区开放时间或使用配额；具体可用应用以 Gemini 设置中的实际列表为准。",
-            "category": "AI 助手 / 应用连接",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
-            }
-          },
-          {
-            "event": "Google Flow 发布六款可用自然语言搭建工作流的新工具（2026-09-23）",
-            "summary": "Google 在 Flow 中发布六款新工具，面向电影制作、建筑、声音设计和数字内容等创作流程；公告介绍，用户可通过描述需求来构建自定义工作流。",
-            "howTo": "打开 Google Flow，描述希望重复完成的创作步骤并按界面提示搭建工作流，再用自己的素材试跑并检查输出；适合先从课程短片、声音或视觉素材整理等小任务开始。",
-            "impact": "学生可将重复的素材整理和创意制作步骤转成可复用工作流，用于课程视频或展示原型；不同项目的输入和输出应逐项核查，不要默认自动生成内容准确。",
-            "free": "官方公告确认六款工具已发布到 Flow，但未说明免费计划、账号资格、地区范围或生成额度；是否可用以 Flow 当前产品界面为准。",
-            "category": "AI 创作 / 工作流",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/six-new-tools-built-by-creatives/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Vids 免费生成 Omni 1.1 视频片段",
-            "summary": "Google 官方公告称，Google 或 Google Workspace 账号均可免费开始在 Vids 中使用 Omni 1.1 生成视频；较多 AI 视频生成权限需查看 Google AI 计划或 Workspace 扩展生成池。",
-            "howTo": "登录 Google Vids，创建视频项目并使用 Omni 1.1 生成片段；可设置片段长度、生成或放大至 1080p，并在导出前检查内容及 SynthID 标记。",
-            "impact": "适合制作课程展示、研究汇报和活动宣传的短片，免去先购买视频软件或订阅的门槛。",
-            "free": "官方明确称可免费开始使用，账号需为 Google 或 Google Workspace；更多生成权限属于付费计划或 Workspace 扩展池。具体免费配额和地区范围官方未说明。",
-            "category": "长期免费创作 / AI 视频",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student 免费学生计划",
-            "summary": "GitHub 官方列出免费的 Copilot Student 计划，面向通过验证的学生；计划含不限量代码补全、GitHub AI Credits 额度，以及有限的聊天和 agent 使用。",
-            "howTo": "先在 GitHub Education 验证学生身份，再启用 Copilot Student；在 IDE 中安装 GitHub Copilot 扩展，使用代码补全或自动模型选择下的聊天/agent 功能。",
-            "impact": "可用于课程编程、理解报错、补写测试和探索代码库；提交作业前应运行测试并检查生成代码，避免未经核实地采纳输出。",
-            "free": "官方标示 Copilot Student 免费，要求学生身份通过验证；代码补全不限量，AI Credits 数量及聊天/agent 使用量有限，但具体额度、地区和验证资格细则以账户提示为准，官方计划页未列出统一数值。",
-            "category": "学生教育福利 / AI 编程",
-            "source": {
-              "name": "GitHub Copilot 官方计划说明",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "Qwen3-4B Apache-2.0 开放模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 权重，并标注 Apache-2.0 许可证；模型卡说明支持 100 多种语言与方言，可用 Transformers 等工具加载。",
-            "howTo": "从 Qwen 官方 Hugging Face 页面下载模型文件，按模型卡安装 Transformers 并运行示例；也可使用模型卡列出的本地推理工具。先核对本机硬件和依赖是否满足模型卡要求。",
-            "impact": "适合在课程项目中测试本地文本生成、多语言翻译或代码辅助，也便于学习模型部署流程；本地运行仍需自行管理算力、存储和输出审查。",
-            "free": "模型卡标注 Apache-2.0 并提供可下载权重；账号、地区、下载配额及具体硬件要求官方未在该卡中统一说明，运行成本取决于本地设备或所选服务。",
-            "category": "开放模型权重 / Apache-2.0",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B"
-            }
-          },
-          {
-            "event": "Microsoft Copilot 免费网页与移动端入口",
-            "summary": "Microsoft 官方 Copilot 应用提供免费使用入口，可用于日常提问、研究整理和基础创作；具体功能以登录后的当前页面为准。",
-            "howTo": "打开 Copilot 网页或官方移动应用，按提示登录并提交问题；用于论文或课程任务时，要求它列出可核验来源，再回到原始来源检查关键事实。",
-            "impact": "可作为不需要先订阅的通用问答和头脑风暴工具，辅助解释概念、整理提纲或润色英文草稿；重要结论仍需核对原始资料。",
-            "free": "官方网页提供免费入口；具体消息数、生成次数、账号资格、地区范围及付费升级限制官方未统一说明，以当前应用提示为准。",
-            "category": "长期免费网页访问",
-            "source": {
-              "name": "Microsoft Copilot 官方应用页",
-              "published": "官方未说明",
-              "url": "https://copilot.microsoft.com/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Why making Americans bet with cash could protect people from gambling problems",
-            "source": "The Conversation",
-            "published": "2026-09-24",
-            "url": "https://theconversation.com/why-making-americans-bet-with-cash-could-protect-people-from-gambling-problems-290131",
-            "readingTime": "8 分钟",
-            "topic": "经济 / 社会政策",
-            "summary": "作者以美国体育投注和预测市场的扩张为背景，提出数字化下注过于便捷，会让人更容易反复下注，并从成瘾、内幕交易和大额下注者影响市场三个角度说明风险。文章先讨论线上市场的监管边界，再以现金下注为核心提出政策建议：要求下注者先取得纸币并亲自到场，以增加操作摩擦、提高大额交易可见度，并为本人及周围人留出思考和提醒的时间。作者也讨论该政策对线下商户的可能影响，最后承认现金要求不能解决所有问题，转而提出现金预存账户等折中设计。",
-            "reason": [
-              "对应经济与公共政策主题，可用于讨论数字服务便利性与消费者保护之间的取舍。",
-              "文章采用“趋势背景—三类风险—政策方案—承认局限并补充折中”的论证结构，适合练习段落功能与论证推进。",
-              "阅读题可考查作者态度、现金方案的作用机制，以及作者为何承认方案无法消除全部风险。",
-              "frictionless、pivotal、bypass 等词汇有助于理解关于技术便利、监管和社会成本的评论文。",
-              "写作可借鉴先提出问题、解释机制、再承认政策边界并提出改良方案的展开方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "widespread",
-                "phonetic": "/ˈwaɪd.spred/",
-                "part": "adj.",
-                "translation": "广泛的；普遍的"
-              },
-              {
-                "word": "embezzled",
-                "phonetic": "/ɪmˈbez.əld/",
-                "part": "v.",
-                "translation": "挪用；侵吞"
-              },
-              {
-                "word": "pivotal",
-                "phonetic": "/ˈpɪv.ə.təl/",
-                "part": "adj.",
-                "translation": "关键的；起决定作用的"
-              },
-              {
-                "word": "bypassing",
-                "phonetic": "/ˌbaɪˈpɑː.sɪŋ/",
-                "part": "v.",
-                "translation": "绕过；规避"
-              },
-              {
-                "word": "addictive",
-                "phonetic": "/əˈdɪk.tɪv/",
-                "part": "adj.",
-                "translation": "使人上瘾的"
-              },
-              {
-                "word": "anonymous",
-                "phonetic": "/əˈnɒn.ɪ.məs/",
-                "part": "adj.",
-                "translation": "匿名的"
-              },
-              {
-                "word": "frictionless",
-                "phonetic": "/ˈfrɪk.ʃən.ləs/",
-                "part": "adj.",
-                "translation": "无阻碍的；操作顺畅的"
-              },
-              {
-                "word": "wager",
-                "phonetic": "/ˈweɪ.dʒər/",
-                "part": "n.",
-                "translation": "赌注；下注"
-              },
-              {
-                "word": "squander",
-                "phonetic": "/ˈskwɒn.dər/",
-                "part": "v.",
-                "translation": "挥霍；浪费"
-              },
-              {
-                "word": "pre-funding",
-                "phonetic": "/ˌpriːˈfʌn.dɪŋ/",
-                "part": "n.",
-                "translation": "预先注资；预存资金"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Regrettably, but not unexpectedly, the widespread ability to gamble is also causing major scandals.",
-                "analysis": [
-                  "主干是 the ability ... is causing scandals；主语中心词为 ability，谓语为 is causing。",
-                  "to gamble 作 ability 的补足成分，说明这种能力具体指什么。",
-                  "widespread 修饰 ability；major 修饰 scandals。",
-                  "句首 Regrettably 表示遗憾，but not unexpectedly 补充“并不意外”，形成让步式评价。",
-                  "可借鉴“评价副词 + but + 对照判断”的句首结构来表达复杂态度。"
-                ],
-                "translation": "令人遗憾但并不意外的是，广泛的赌博机会也正在引发重大丑闻。"
-              },
-              {
-                "original": "When actions are frictionless, people do them more often.",
-                "analysis": [
-                  "主句主干为 people do them more often，them 指前文所说的 actions。",
-                  "When 引导时间/条件状语从句，说明行为发生的环境特征。",
-                  "frictionless 作表语，概括操作过程缺少阻碍这一特点。",
-                  "从句给出条件，主句说明频率变化，构成清晰的机制解释。",
-                  "When ..., ... 是说明习惯、环境与行为结果关系的常用表达。"
-                ],
-                "translation": "当行为变得毫无阻碍时，人们就会更频繁地去做。"
-              },
-              {
-                "original": "Do I think that using cash would solve all gambling problems? Absolutely not.",
-                "analysis": [
-                  "前半句是一般疑问句，主干为 Do I think ...?，that 从句作 think 的宾语。",
-                  "using cash 是 that 从句的主语，would solve 是谓语。",
-                  "all 修饰 gambling problems，突出“解决所有问题”的强命题。",
-                  "后面的 Absolutely not 是省略式回答，直接否定过度推论。",
-                  "先提出反问再立即限定结论，体现作者承认政策局限的论证策略。"
-                ],
-                "translation": "我认为使用现金能解决所有赌博问题吗？绝对不能。"
-              }
-            ]
-          },
-          {
-            "title": "Students strike across Germany in protest against military service",
-            "source": "BBC",
-            "published": "2026-09-25",
-            "url": "https://www.bbc.co.uk/news/articles/cxnvlnve52qdo",
-            "readingTime": "5 分钟",
-            "topic": "社会 / 青年与公共政策",
-            "summary": "报道从德国学生抗议可能恢复义务兵役的示威切入，交代新法目前以志愿服役为目标，但在安全形势恶化或志愿者不足时，议会仍可能考虑强制服役。文章说明所有 18 岁青年收到意愿问卷、男性须接受体检的制度，并引述学生对相关安排的反对以及国防部对体检义务适用范围的解释。结尾回顾德国冷战后缩减军队、2011 年结束义务兵役的背景，并列出政府扩充现役和预备役力量的目标，呈现青年选择、法定义务与国防需求之间的张力。",
-            "reason": [
-              "主题连接青年参与、个人选择与国家安全政策，适合社会议题类阅读。",
-              "文章按抗议导入、制度说明、相关方回应、历史背景和兵力目标展开，时间线与因果线索并行。",
-              "可训练细节定位、人物观点辨析，以及对“志愿制与强制服役”对照关系的推断。",
-              "compulsory、questionnaire、obligation、reservist 等词汇常见于制度与公共事务报道。",
-              "写作可借鉴先说明政策变化，再呈现支持或反对理由并补充历史背景的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "strike",
-                "phonetic": "/straɪk/",
-                "part": "n.",
-                "translation": "罢课；罢工"
-              },
-              {
-                "word": "protest",
-                "phonetic": "/ˈprəʊ.test/",
-                "part": "v.",
-                "translation": "抗议"
-              },
-              {
-                "word": "reintroduction",
-                "phonetic": "/ˌriː.ɪn.trəˈdʌk.ʃən/",
-                "part": "n.",
-                "translation": "重新引入；恢复"
-              },
-              {
-                "word": "compulsory",
-                "phonetic": "/kəmˈpʌl.sər.i/",
-                "part": "adj.",
-                "translation": "强制的；义务的"
-              },
-              {
-                "word": "voluntary",
-                "phonetic": "/ˈvɒl.ən.tər.i/",
-                "part": "adj.",
-                "translation": "自愿的"
-              },
-              {
-                "word": "questionnaire",
-                "phonetic": "/ˌkwes.tʃəˈneər/",
-                "part": "n.",
-                "translation": "问卷"
-              },
-              {
-                "word": "obligation",
-                "phonetic": "/ˌɒb.lɪˈɡeɪ.ʃən/",
-                "part": "n.",
-                "translation": "义务；责任"
-              },
-              {
-                "word": "recruit",
-                "phonetic": "/rɪˈkruːt/",
-                "part": "v.",
-                "translation": "招募"
-              },
-              {
-                "word": "reservist",
-                "phonetic": "/rɪˈzɜː.vɪst/",
-                "part": "n.",
-                "translation": "预备役军人"
-              },
-              {
-                "word": "armed forces",
-                "phonetic": "/ˌɑːmd ˈfɔː.sɪz/",
-                "part": "n.",
-                "translation": "武装部队"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "School strikes are taking place across Germany to protest against the possible reintroduction of compulsory military service.",
-                "analysis": [
-                  "主干为 School strikes are taking place；主语是 School strikes，谓语是现在进行时。",
-                  "to protest against ... 是目的状语，说明罢课的原因。",
-                  "possible 修饰 reintroduction；compulsory military service 是 protest against 的宾语。",
-                  "句子先交代事件，再用不定式补充目的，信息层次清楚。",
-                  "to protest against + 名词可用于概括群体行动的诉求。"
-                ],
-                "translation": "德国各地正在发生学生罢课，以抗议可能恢复义务兵役。"
-              },
-              {
-                "original": "A new law introducing voluntary military service came into force in January, with the aim of recruiting volunteers to increase the number of soldiers.",
-                "analysis": [
-                  "主干为 A new law came into force；谓语短语 came into force 表示法律生效。",
-                  "introducing voluntary military service 是现在分词短语，后置修饰 law。",
-                  "with the aim of 引出目的，recruiting 是介词 of 的动名词宾语。",
-                  "to increase the number of soldiers 继续说明招募志愿者的目标。",
-                  "句子用“法律生效—实施方式—最终目标”逐层补充政策信息。"
-                ],
-                "translation": "一项引入志愿兵役的新法律于 1 月生效，旨在招募志愿者以增加士兵人数。"
-              },
-              {
-                "original": "The questionnaire is mandatory for men and voluntary for women.",
-                "analysis": [
-                  "主干由主语 The questionnaire、系动词 is 和两个并列表语构成。",
-                  "mandatory for men 与 voluntary for women 通过 and 并列。",
-                  "两个形容词形成强制与自愿的对照，分别限定适用对象。",
-                  "句子省去重复的系动词，表达简洁，适合政策说明。",
-                  "A is mandatory for X and voluntary for Y 可用于清晰比较规则差异。"
-                ],
-                "translation": "男性必须填写这份问卷，女性则自愿填写。"
               }
             ]
           }
