@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-03T09:58:03+08:00",
+  "updatedAt": "2026-10-04T10:38:07+08:00",
   "issues": [
+    {
+      "date": "2026-10-04",
+      "status": "ready",
+      "ai": {
+        "intro": "先检索上海时间 10 月 3—4 日的官方发布，符合要求的新变化不足三项；因此仅扩展至此前七天，按各来源真实发布日期记录。免费资源逐项用官方页面复核。",
+        "updates": [
+          {
+            "event": "Gemini 4 Argon 开始定向预览，面向复杂开发与知识工作（2026-09-30）",
+            "summary": "Google 公布 Gemini 4 Argon，定位为面向复杂软件工程、企业知识工作与网络防御的长流程推理模型。当前仅通过 Fairwind Program 向受信任的网络防御人员定向开放；Google 表示之后会逐步向开发者、企业及消费者开放。",
+            "howTo": "目前普通学生没有已开放的自助试用入口。若属于 Fairwind 受邀测试者，可按该计划参与；其他开发者应等待开放，并留意 Google 后续的 Gemini API 文档或 AI Ultra 入口，公告称将先面向付费 API 客户和 Google AI Ultra 订阅者推出。",
+            "impact": "模型开放后，软件工程学生可评估它处理多步骤调试、代码迁移和长文档任务的表现；现在不应把产品公告误当成可立即免费调用的模型。",
+            "free": "目前是 Fairwind 计划中的定向测试，普通学生尚无免费入口。Google 公布的 API 引导价为每百万输入 token 2 美元、每百万输出 token 10 美元；引导期后分别为 4 美元和 20 美元，缓存输入 token 在引导期按输入价的 95% 折扣。将先向付费 API 客户和 Google AI Ultra 订阅者开放；地区、配额及引导期具体截止日官方未说明。",
+            "category": "AI 模型 / 编程与知识工作",
+            "source": {
+              "name": "Google 官方博客 The Keyword",
+              "published": "2026-09-30",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 在 CLI、应用和 SDK 推出 dynamic workflows（2026-10-01）",
+            "summary": "GitHub 为 Copilot CLI、Copilot 应用和 Copilot SDK 推出 dynamic workflows 公测：用代码定义可重复的流程，把自动化步骤与一个或多个代理组合起来，支持串行或并行执行、传递结构化结果和设置人工检查点。",
+            "howTo": "在 Copilot 应用中直接要求它创建一个可复用流程；CLI 用户先更新到最新版，再以 --experimental 启动，或在交互会话输入 /experimental on，然后描述任务、阶段和检查点。可从先运行测试、再整理失败原因并暂停人工审核的流程开始。",
+            "impact": "课程小组可把重复的代码审查、测试和报告步骤做成固定流程，让每次运行都按相同步骤执行；结构化结果和人工检查点也便于复核代理输出。",
+            "free": "官方称所有 Copilot 计划均可使用；目前为 public preview，功能可能变化。Copilot 应用无需额外设置，CLI 需最新版并显式启用实验功能；地区及各计划的具体调用额度官方未说明。",
+            "category": "AI 编程 / 工作流自动化",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-01",
+              "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app"
+            }
+          },
+          {
+            "event": "Copilot 停止支持四个模型并列出替代项（2026-10-02）",
+            "summary": "GitHub 宣布 Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 已在 Copilot Chat、行内编辑、ask、agent 和代码补全等体验中弃用；官方建议依次改用 Gemini 3.8 Flash、Kimi K3 和 Claude Opus 5.5。",
+            "howTo": "在 Copilot 的模型选择器中检查当前可用模型，并更新个人工作流或集成中的选择；组织用户若看不到替代模型，可请管理员检查 Copilot model policies。公告称无需手动移除已弃用模型。",
+            "impact": "如果课程项目的聊天、代理或编辑流程固定选择了上述旧模型，应改用官方建议的替代项，或重新检查自动模型选择，避免在作业期间才发现该模型无法选择。",
+            "free": "弃用适用于 Copilot 的所有体验；替代模型能否选择取决于账户计划及组织模型政策。公告未说明此次变化的单独价格、地区范围或配额。",
+            "category": "AI 编程 / 模型可用性",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-02",
+              "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Hugging Face Spaces：免费访问公开机器学习演示",
+            "summary": "Hugging Face Spaces 可托管机器学习演示。公开 Space 的源代码与运行中的应用对所有人开放；静态 Space 免费，默认 CPU Basic 硬件没有按小时费用。",
+            "howTo": "打开 Spaces 搜索并运行公开演示；若要自己制作，选择免费的静态 HTML Space，或符合条件的免费个人账户可建立最多两个运行在 ZeroGPU 上的 Gradio Spaces。不要把普通 Gradio/Docker 计算环境误认为免费。",
+            "impact": "学生可直接试用公开模型演示并观察输入、输出与界面流程，也可用静态页面制作课程展示；无需为访问公开演示先租用 GPU。",
+            "free": "公开 Space 可由任何人访问；静态 Space 免费。免费且状态良好的个人账户最多可托管 2 个 Gradio ZeroGPU Spaces；常规 Gradio/Docker Space 需要付费计划，升级硬件另收费。公开演示访问配额、地区及 ZeroGPU 推理额度官方未说明。",
+            "category": "免费 AI 演示 / 开发学习",
+            "source": {
+              "name": "Hugging Face Spaces 官方文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces-overview"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出 Copilot Free，可免费使用受限的 AI 编程功能；行内代码补全每月最多 2,000 次，模型只能自动选择。",
+            "howTo": "用个人 GitHub 账户启用 Copilot Free，并在 IDE 安装 Copilot；先用补全处理样板代码，再用免费计划允许的聊天功能解释报错或起草测试，提交前运行测试并人工核对。",
+            "impact": "适合没有学校 Copilot 权益的学生辅助课程编程、理解代码和补写测试；每月补全上限适合轻量使用，不宜按无限服务规划项目。",
+            "free": "免费计划仅面向无法通过组织或企业访问 Copilot 的个人开发者；行内补全限每月 2,000 次，模型为自动选择。AI Credits 数量、地区限制及具体账号资格例外官方未说明。",
+            "category": "长期免费代码助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/get-started/plans"
+            }
+          },
+          {
+            "event": "Azure for Students：$100 云额度与学生开发工具",
+            "summary": "Microsoft 为符合条件的全日制大学生提供 Azure for Students：$100 Azure credit 可在 12 个月内使用；页面还列出 20 多项服务的免费月额度，以及 65 多项始终免费的服务。",
+            "howTo": "从 Azure for Students 页面申请并按提示验证全日制大学生身份，再通过 Azure Education Hub 获取开发工具；用额度搭建课程演示或小型云端原型前，先核对具体服务是否超出免费额度。",
+            "impact": "适合在课程中试做云端应用、数据科学或 AI 原型，降低初期云资源门槛；部署时应持续查看用量，避免超过额度后产生费用。",
+            "free": "全日制大学生可申请，无需信用卡；$100 额度有效 12 个月。20 多项服务的免费月额度限新 Azure 客户、最长 12 个月，另有 65 多项始终免费的服务。地区可用性及申请期限官方未说明。",
+            "category": "学生教育福利 / 云端 AI",
+            "source": {
+              "name": "Microsoft Azure for Students",
+              "published": "官方未说明",
+              "url": "https://azure.microsoft.com/en-us/free/students/"
+            }
+          },
+          {
+            "event": "Claude Free：免费日常问答与滚动五小时额度",
+            "summary": "Anthropic 定价页列出 Claude Free，定位为日常问题；免费使用量按滚动五小时窗口重置，实际可用量随对话长度、模型和功能而变化。",
+            "howTo": "注册或登录 Claude 免费计划，把课程阅读拆成短段落，请它解释概念、比较论点或生成复习题；在 Settings > Usage 查看当前使用情况，并用原始材料核对事实。",
+            "impact": "可用于课前预习、英语阅读和复习提纲；长上下文与复杂功能会消耗更多额度，不应把模型回答直接当作论文引文。",
+            "free": "Free 计划可免费使用，限制按滚动五小时窗口重置；没有固定消息数，且用量取决于对话、模型和功能，官方也可能设置其他周期上限。具体地区及账号资格官方未说明。",
+            "category": "长期免费网页 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 与浮动计算资源",
+            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务；官方确认可免费使用，并可能提供 GPU、TPU 等计算资源，但免费资源并不保证且不无限。",
+            "howTo": "打开 Colab，新建笔记本或从 Drive、GitHub 导入 .ipynb，运行 Python 单元格；需要加速时查看当前运行时是否提供 GPU/TPU，并及时保存代码和结果。",
+            "impact": "可用于课程 Python 作业、数据分析和小型机器学习练习，省去本地配置；长任务要保存进度，并准备资源不可用时的替代方案。",
+            "free": "Colab 免费使用；资源供应不保证且使用限制会变化，GPU/TPU 时数、地区与账号资格的统一配额官方未说明。",
+            "category": "免费云计算 / 学习开发",
+            "source": {
+              "name": "Google Colaboratory FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "选取两篇可免费阅读全文的近期报道，分别讨论育儿信息过载与社区河流污染监测；已核对所有旧 issue 的文章标题和 URL，均未重复。",
+        "articles": [
+          {
+            "title": "When parenting advice becomes too much",
+            "source": "BBC",
+            "published": "2026-10-04",
+            "url": "https://www.bbc.co.uk/news/articles/cv4g5267jk8yo",
+            "readingTime": "8 分钟",
+            "topic": "社会 / 育儿信息与家庭心理",
+            "summary": "BBC 从一位母亲在网上搜寻育儿建议、却因睡眠安排和幼儿发脾气而不断怀疑自己的经历切入，讨论当代父母面对的建议过量与相互冲突。报道引述政府研究称，约三分之二有年幼子女的父母感到信息过载；随后梳理社交媒体传播的多种育儿风格，并介绍权威型、专制型、宽容型和忽视型等研究框架。受访专家对温和育儿是否等同于放任存在分歧，文章也指出网上存在未经专业训练者提供的错误建议，以及家庭支持和公共服务变化带来的压力。结尾回到个体经验与课程支持，呈现的不是一套万能育儿法，而是信息、边界和父母信心之间的张力。",
+            "reason": [
+              "育儿压力、社交媒体信息与家庭心理健康构成社会生活类议题，适合讨论数字环境对日常决策的影响。",
+              "文章以个人经历开篇，转向调查和历史背景，再比较专家观点，最后回到个人应对，结构层次清楚。",
+              "阅读题可考查数据归属、不同专家对温和育儿的分歧，以及作者如何区分研究结论和受访者看法。",
+              "overwhelmed、conflicting、intuition、misinformation 等词可迁移到信息过载、教育和心理健康话题。",
+              "写作可借鉴“个案—数据—观点对照—有限结论”的展开方式，避免把复杂社会问题归结为单一方案。"
+            ],
+            "vocabulary": [
+              {
+                "word": "overwhelmed",
+                "phonetic": "/ˌəʊvəˈwelmd/",
+                "part": "adj.",
+                "translation": "不堪重负的；应接不暇的"
+              },
+              {
+                "word": "conflicting",
+                "phonetic": "/kənˈflɪktɪŋ/",
+                "part": "adj.",
+                "translation": "相互矛盾的；冲突的"
+              },
+              {
+                "word": "intuition",
+                "phonetic": "/ˌɪntjuˈɪʃən/",
+                "part": "n.",
+                "translation": "直觉"
+              },
+              {
+                "word": "empathy",
+                "phonetic": "/ˈempəθi/",
+                "part": "n.",
+                "translation": "共情；同理心"
+              },
+              {
+                "word": "boundaries",
+                "phonetic": "/ˈbaʊndəriz/",
+                "part": "n.",
+                "translation": "界限；边界"
+              },
+              {
+                "word": "authoritative",
+                "phonetic": "/ɔːˈθɒrətətɪv/",
+                "part": "adj.",
+                "translation": "权威型的；有权威的"
+              },
+              {
+                "word": "permissive",
+                "phonetic": "/pəˈmɪsɪv/",
+                "part": "adj.",
+                "translation": "宽容的；放任的"
+              },
+              {
+                "word": "counter-cultural",
+                "phonetic": "/ˌkaʊntəˈkʌltʃərəl/",
+                "part": "adj.",
+                "translation": "反主流文化的；逆文化潮流的"
+              },
+              {
+                "word": "misinformation",
+                "phonetic": "/ˌmɪsɪnfəˈmeɪʃən/",
+                "part": "n.",
+                "translation": "错误信息；不实信息"
+              },
+              {
+                "word": "burnout",
+                "phonetic": "/ˈbɜːnaʊt/",
+                "part": "n.",
+                "translation": "身心俱疲；倦怠"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Her confidence and intuition were stripped away as she questioned every parenting decision.",
+                "analysis": [
+                  "主句主干是 Her confidence and intuition were stripped away，两个名词并列作主语，谓语使用被动语态。",
+                  "as 引导状语从句，说明她不断质疑育儿决定时，信心与直觉逐渐丧失的伴随过程。",
+                  "every 修饰 decision，强调这种怀疑涉及每一个育儿选择，而非单次事件。",
+                  "strip away 表示逐渐剥夺或去除；were stripped away 突出人物受到的影响。",
+                  "可借鉴 be stripped away as... 描述某种能力或信心在持续过程中被削弱。"
+                ],
+                "translation": "她不断质疑每一个育儿决定，信心和直觉也随之被一点点削弱。"
+              },
+              {
+                "original": "The confusion around the \"right\" way to parent has led some parents to turn to courses for help.",
+                "analysis": [
+                  "主干是 The confusion has led some parents to turn to courses，主语为 confusion，谓语为现在完成时。",
+                  "around the “right” way to parent 修饰 confusion；to parent 是说明方式的动词不定式。",
+                  "has led A to do B 表示某种情况促使某人采取行动，强调已有影响。",
+                  "for help 说明参加课程的目的；引号中的 right 提示“正确方式”是被讨论的观念。",
+                  "可借鉴 confusion around... has led... to... 说明信息不确定如何推动行为改变。"
+                ],
+                "translation": "对“正确”育儿方式的困惑，使一些父母转而参加课程寻求帮助。"
+              },
+              {
+                "original": "Many factors shaping family life remain outside parents' control.",
+                "analysis": [
+                  "句子主干为 Many factors remain outside parents’ control，remain 后接介词短语作表语。",
+                  "shaping family life 是现在分词短语，后置修饰 factors，表示这些因素会影响家庭生活。",
+                  "parents’ 是复数名词所有格，修饰 control；outside 表示不在某人的控制范围内。",
+                  "句意限定了父母能控制的范围，与将家庭结果完全归咎于个人形成逻辑上的制约。",
+                  "可借鉴 factors shaping... remain outside... 表达影响因素复杂且不可完全控制。"
+                ],
+                "translation": "许多影响家庭生活的因素仍不在父母的掌控范围内。"
+              }
+            ]
+          },
+          {
+            "title": "‘It’s shocking really’: Devon community tracks River Dart sewage spills",
+            "source": "The Guardian",
+            "published": "2026-10-03",
+            "url": "https://www.theguardian.com/environment/2026/oct/03/devon-community-platform-river-hub-dart-sewage-spills-overflows",
+            "readingTime": "7 分钟",
+            "topic": "环境 / 污水监测与公民行动",
+            "summary": "报道介绍英国德文郡 Friends of the Dart 团体建立的 River Hub：平台逐次汇集 River Dart 的污水溢流时间、反复污染地点及已计划或尚无计划的改进工程，也解释“干天排放”的分类依据。报道说明部分资料来自公开记录，部分需要通过信息公开申请取得；项目团队承认平台信息仍不完整，也可能有误。文章穿插居民、河流活动从业者、South West Water 与环境监管机构的不同说法，既呈现社区以数据推动问责的做法，也保留了官方回应和证据局限。团队称愿把模式免费提供给其他河流团体，结尾将重点落在把不满转化为可核查资料和社区行动。",
+            "reason": [
+              "河流污染、公共信息透明度和社区参与连接环境保护与公民责任，是常见的社会治理类阅读主题。",
+              "文章从平台功能切入，解释数据来源和方法，再呈现居民经历、机构回应及团队对局限的承认。",
+              "阅读题可考查平台提供的信息类型、公开资料与信息申请的区别，以及不同利益相关方的立场。",
+              "overflow、discharge、tributary、remedial 等词适合环境报道和公共设施话题。",
+              "写作可借鉴以具体平台案例说明数据透明如何支持公共监督，同时主动交代数据不完整和归因边界。"
+            ],
+            "vocabulary": [
+              {
+                "word": "sewage",
+                "phonetic": "/ˈsuːɪdʒ/",
+                "part": "n.",
+                "translation": "污水；生活污水"
+              },
+              {
+                "word": "overflow",
+                "phonetic": "/ˈəʊvəfləʊ/",
+                "part": "n.",
+                "translation": "溢流；溢流口"
+              },
+              {
+                "word": "spill",
+                "phonetic": "/spɪl/",
+                "part": "n.",
+                "translation": "泄漏；溢出"
+              },
+              {
+                "word": "tributary",
+                "phonetic": "/ˈtrɪbjətri/",
+                "part": "n.",
+                "translation": "支流"
+              },
+              {
+                "word": "granular",
+                "phonetic": "/ˈɡrænjələ/",
+                "part": "adj.",
+                "translation": "细致具体的；粒状的"
+              },
+              {
+                "word": "discharge",
+                "phonetic": "/dɪsˈtʃɑːdʒ/",
+                "part": "n.",
+                "translation": "排放；排出物"
+              },
+              {
+                "word": "remedial",
+                "phonetic": "/rɪˈmiːdiəl/",
+                "part": "adj.",
+                "translation": "补救的；矫正的"
+              },
+              {
+                "word": "incomplete",
+                "phonetic": "/ˌɪnkəmˈpliːt/",
+                "part": "adj.",
+                "translation": "不完整的"
+              },
+              {
+                "word": "methodology",
+                "phonetic": "/ˌmeθəˈdɒlədʒi/",
+                "part": "n.",
+                "translation": "方法；方法论"
+              },
+              {
+                "word": "acknowledge",
+                "phonetic": "/əkˈnɒlɪdʒ/",
+                "part": "v.",
+                "translation": "承认；确认"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The hub has a page that people can check to find out where spills are happening right now.",
+                "analysis": [
+                  "主干是 The hub has a page，that 引导定语从句修饰 page。",
+                  "people can check 的宾语是关系代词 that，指代前面的 page。",
+                  "to find out 是目的状语；where spills are happening 是 find out 的宾语从句。",
+                  "right now 限定 spills are happening 的时间，突出平台提供实时信息。",
+                  "可借鉴 a page that... to find out where... 描述数字工具的功能和信息用途。"
+                ],
+                "translation": "这个平台设有页面，供人们查询此刻哪些地方正在发生污水溢流。"
+              },
+              {
+                "original": "The hub concludes that not all do.",
+                "analysis": [
+                  "主干为 The hub concludes，that 引导结论内容的宾语从句。",
+                  "not all 中 all 指代前文提到的污水处理厂，not 表示并非全部。",
+                  "do 是替代动词，省略前文的 have enough capacity to deal with the sewage produced。",
+                  "句子以简短代词结构收束前文问题，读者需回看上下文确定 do 的所指。",
+                  "可借鉴 not all do 避免重复前文动词短语，并准确表达部分否定。"
+                ],
+                "translation": "平台的结论是，并非所有处理厂都有足够能力应对其服务人口产生的污水。"
+              },
+              {
+                "original": "He and the rest of the team are happy to be corrected when they have got something wrong.",
+                "analysis": [
+                  "主干是 He and the rest of the team are happy，两个并列成分共同作主语。",
+                  "to be corrected 是被动不定式，作 happy 的补足成分，说明团队愿意接受纠正。",
+                  "when 引导时间状语从句；have got something wrong 使用现在完成时，表示发现错误的情形。",
+                  "被动形式把重点放在“接受纠正”而不是纠正者身上，传达对资料错误的开放态度。",
+                  "可借鉴 be happy to be corrected when... 表达研究或数据项目的可修正性。"
+                ],
+                "translation": "如果他们有地方弄错了，他和团队其他成员都乐于接受纠正。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-03",
       "status": "ready",
@@ -2293,365 +2639,6 @@ window.BRIEFING_DATA = {
                   "between the two countries 限定关系的双方。"
                 ],
                 "translation": "这些动物已经成为两国关系的一种象征。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-27",
-      "status": "ready",
-      "ai": {
-        "intro": "先核验 9 月 25—27 日的 GitHub、Anthropic 官方更新，再补充近 7 日 Google 功能；免费条件、资格和额度只按来源明确内容表述。",
-        "updates": [
-          {
-            "event": "Anthropic 发布 2026 年 9 月威胁情报报告：Claude 被用于更自主的网络攻击",
-            "summary": "Anthropic 报告称，其团队识别并中断了使用 Claude 的多起网络行动，参与者包括疑似国家支持团体、经济犯罪者和政治动机个人；案例覆盖 2025 年 12 月至 2026 年 8 月，报告特别强调 AI 已从问答助手走向编排侦察、利用和数据外泄流程。",
-            "howTo": "阅读报告的 Trends 和案例部分，给课程项目建立‘侦察—工具开发—利用—数据处理’风险清单；在自己的实验中只使用授权目标，记录人工审批点，并把 API 密钥和个人数据隔离。",
-            "impact": "学生做安全、软件工程或 AI 治理课题时，可用报告区分‘模型能力提升’与‘攻击者实际行为’，并据此设计人工复核、最小权限和日志留存，而不是把聊天机器人风险理解成单一漏洞。",
-            "free": "报告网页可直接阅读；它没有说明 Claude 相关产品的免费计划、账号资格、地区范围或配额。",
-            "category": "AI 安全 / 威胁情报",
-            "source": {
-              "name": "Anthropic Threat Intelligence Report",
-              "published": "2026-09（具体日期官方未说明）",
-              "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
-            }
-          },
-          {
-            "event": "GitHub Copilot 在 Slack 和 Microsoft Teams 中获得更多会话上下文（2026-09-25）",
-            "summary": "GitHub 公告称，Slack 中的文件、附件和消息链接，及 Teams 中的行内图片、转发消息和频道/线程历史，都可作为 Copilot 上下文；它还会检查相似 issue、链接新工作项并保留原讨论链接。",
-            "howTo": "组织管理员先启用 cloud agent 政策；安装或升级 Slack/Teams 的 GitHub 应用，连接 GitHub 账号，在对话中提及 @GitHub。Teams 还要启用 cloud sandboxes；Slack 可为下一条消息切换模型。",
-            "impact": "小组课程项目可从已有讨论和附件直接生成可追踪任务，减少复制上下文；创建 issue 前仍要核对仓库、权限、任务描述和重复项。",
-            "free": "官方标为 public preview，仅面向 GitHub Copilot Business 和 Enterprise 组织；用量计入现有 Copilot entitlement，可由 cloud agent budget 管理，个人/学生计划、地区和统一配额官方未说明，且部分能力逐步推出。",
-            "category": "AI 协作 / 编程代理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-25",
-              "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams"
-            }
-          },
-          {
-            "event": "Google Gemini 开始接入 Airtable、Linear、Adobe 等第三方应用（2026-09-23）",
-            "summary": "Google 公告称 Gemini 开始逐步推出新的连接应用，覆盖生产力工具 Airtable、Linear、monday.com 等，创意工具 Adobe、Picsart、Squarespace、Webflow，以及 Peloton、SeatGeek 等生活服务。",
-            "howTo": "在 Gemini Settings 连接所需应用，按提示授权；也可以在聊天中用 @ 提及应用或直接提出任务。只授权必要应用，并在写入项目、数据库或设计资产后回到原应用核对结果。",
-            "impact": "学生可在一个对话中整理项目数据库、生成网站或设计素材草案，减少来回切换；涉及共享工作区时，应先检查连接应用能读取和修改哪些内容。",
-            "free": "公告只说明从 2026-09-23 起开始 rollout，没有统一说明免费/付费计划、账号资格、地区开放时间或使用配额；实际可用应用以 Gemini 设置为准。",
-            "category": "AI 助手 / 应用连接",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
-            }
-          },
-          {
-            "event": "Google Vids 的 Gemini Omni 1.1 增加延长场景、精确时长和 1080p（2026-09-23）",
-            "summary": "Google 介绍 Omni 1.1 的三项视频控制：延长场景时保持视觉上下文、灯光和角色一致，指定生成片段的精确时长，以及生成全新 1080p 场景或放大已有 AI 片段；每个生成片段含不可见 SynthID 水印。",
-            "howTo": "登录 Google Vids，在项目中用 Omni 1.1 生成片段；根据旁白设置精确时长，必要时延长场景或生成/放大到 1080p，导出前检查镜头连续性并保留 AI 标识。",
-            "impact": "课程展示、研究汇报和社团宣传可以先用脚本生成短片，再按旁白节奏调整镜头；学生应核查画面中的事实、人物和版权素材，不能把连贯画面当成事实证明。",
-            "free": "Google 说任何 Google 或 Google Workspace 账号都可免费开始使用；个人账号的更多访问量和 Workspace 的扩展生成池属于各自计划，具体免费配额和地区范围官方未说明。",
-            "category": "AI 视频 / 创作",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-09-23",
-              "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude 免费版可用于日常问题（滚动五小时窗口）",
-            "summary": "Anthropic 定价页列出 Free 计划，定位为日常问题；所有计划都有使用限制，免费额度按滚动的五小时 session window 重置，实际可用量还取决于对话长度、模型和功能。",
-            "howTo": "在 Claude 网页、桌面或移动端注册/登录，先用短问题、摘要或英文改写测试；在 Settings > Usage 查看当前用量，达到限制后等待窗口重置。",
-            "impact": "适合做英文段落改写、概念解释和学习提纲，但应把关键事实回溯到原始资料，并为长文拆分任务以便控制上下文。",
-            "free": "官方明确 Free 覆盖日常问题，并说明限制按滚动五小时窗口重置；没有给出固定消息数，账号、地区和具体上限官方未说明。",
-            "category": "长期免费网页访问 / AI 助手",
-            "source": {
-              "name": "Claude 官方定价",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student 免费学生计划",
-            "summary": "GitHub 计划页列出 Copilot Student 为免费学生计划；官方同时说明学生权益包含 unlimited code completions、GitHub AI Credits，以及 auto model selection 下有限的 chat 和 agent 使用。",
-            "howTo": "在 GitHub Education 完成学生身份验证并启用 Copilot Student，在 IDE 安装 Copilot 扩展；用补全处理样板代码，用有限 chat/agent 做解释和测试草稿，并检查账户显示的额度。",
-            "impact": "可降低课程编程和调试的工具门槛，适合学习代码结构、补写测试和理解报错；提交前必须运行测试并人工审查生成代码。",
-            "free": "官方标为免费并要求 verified student；补全 unlimited，chat/agent limited。统一 credits 数值、地区例外和验证材料要求官方计划页未说明。",
-            "category": "学生教育福利 / AI 编程",
-            "source": {
-              "name": "GitHub Copilot 官方计划说明",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "Qwen3-4B Apache-2.0 开放模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 的可下载权重，介绍其支持 thinking/non-thinking 模式切换、100 多种语言与方言，并在许可部分标注 Apache-2.0。",
-            "howTo": "打开 Qwen/Qwen3-4B 模型卡，按其 Transformers 示例安装依赖并下载权重；先检查本机内存、存储和推理工具要求，再用非敏感文本测试。",
-            "impact": "可用于本地多语言翻译、摘要和代码实验，帮助学生学习模型部署而不必先购买 API；运行成本取决于本地设备，输出仍需审查。",
-            "free": "模型卡提供下载并标注 Apache-2.0；账号、地区、下载配额及运行硬件成本官方未统一说明。",
-            "category": "开放模型权重 / Apache-2.0",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B"
-            }
-          },
-          {
-            "event": "Google Gemini API 与 AI Studio 的 Free tier",
-            "summary": "Google Gemini API 官方定价页列出部分模型的 Free tier，并将免费层与付费层分开说明；不同模型的输入/输出价格和限流表格需在当前页面逐项查看。",
-            "howTo": "登录 Google AI Studio，选择定价页标有 Free tier 的模型，先做低频摘要或分类原型；上线前记录 RPM、TPM、RPD 等页面列出的限制并处理超限情况。",
-            "impact": "学生可用较低门槛完成课程 API 原型和小规模实验，同时学习按 token 与请求速率估算成本，不把免费层误当作无限吞吐。",
-            "free": "官方确认存在 Free tier，但免费层的模型清单、请求限流、账号资格、地区和重置周期按模型/项目页面决定，统一额度官方未说明。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Colab 官方 FAQ 将其定义为无需本地设置的托管 Jupyter Notebook 服务，并说明可免费使用包括 GPU 和 TPU 在内的计算资源；资源不保证且使用上限会波动。",
-            "howTo": "打开 Colab，新建或导入 notebook，运行课程 Python；需要时在运行时设置中尝试 GPU/TPU，把 notebook 保存到 Drive 或从 GitHub 加载，勿把密钥写入共享文件。",
-            "impact": "适合数据清洗、课程实验和小型机器学习练习，减少环境配置；任务应保存中间结果并预留资源被回收或限流的方案。",
-            "free": "官方确认免费并提醒资源不保证、使用上限会波动；GPU/TPU 时长、账号资格和地区例外官方未说明。",
-            "category": "长期免费云环境 / 学习",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "选取 9 月 26 日可直接阅读的 BBC 与 The Guardian 文章，避开历史 issue 的 URL 和标题；覆盖住房政策与急救技术，按考研英语二方向精读。",
-        "articles": [
-          {
-            "title": "Burnham announces scheme to help first-time buyers on to housing ladder",
-            "source": "BBC",
-            "published": "2026-09-26",
-            "url": "https://www.bbc.co.uk/news/articles/cv8e33gdw17no",
-            "readingTime": "6 分钟",
-            "topic": "经济 / 住房政策",
-            "summary": "报道介绍英国首相 Andy Burnham 提出的 Your First Home 计划：英格兰首次购房者可用 2.5% 首付，政府以新建住房价值 20% 的贷款帮助购房，并设置初始免息期。文章先说明计划针对缺少家庭资助的年轻人，再交代资金可能来自现有预算重排、开发商承担运营成本以及更多细节预计在下月预算中公布。随后报道保守党对增加债务、推高房价的批评，并把方案与 2013 年 Help to Buy 及其评估联系起来；结尾指出年龄限制和房价上限尚未确认，呈现住房可负担性与政策副作用之间的权衡。",
-            "reason": [
-              "住房可负担性、代际支持与政府干预是经济和社会政策类常见考点。",
-              "文章按政策宣布—具体机制—资金安排—反方质疑—历史比较—未决限制展开，信息层次适合画结构图。",
-              "阅读题可考计划资格、贷款机制、反对者担忧以及作者为何回顾 Help to Buy。",
-              "property ladder、equity loan、reprioritising、affordability 等词可迁移到住房和公共政策写作。",
-              "写作可借鉴先给政策数字，再同时呈现预期收益、财政安排和潜在副作用。"
-            ],
-            "vocabulary": [
-              {
-                "word": "first-time buyer",
-                "phonetic": "/ˌfɜːst taɪm ˈbaɪə/",
-                "part": "n.",
-                "translation": "首次购房者"
-              },
-              {
-                "word": "property ladder",
-                "phonetic": "/ˈprɒpəti ˌlædə/",
-                "part": "n.",
-                "translation": "住房阶梯；逐步置业"
-              },
-              {
-                "word": "deposit",
-                "phonetic": "/dɪˈpɒzɪt/",
-                "part": "n.",
-                "translation": "首付；定金"
-              },
-              {
-                "word": "equity loan",
-                "phonetic": "/ˈekwəti ləʊn/",
-                "part": "n.",
-                "translation": "房屋净值贷款"
-              },
-              {
-                "word": "interest-free",
-                "phonetic": "/ˌɪntrəst ˈfriː/",
-                "part": "adj.",
-                "translation": "免息的"
-              },
-              {
-                "word": "reprioritise",
-                "phonetic": "/ˌriːpraɪˈɒrətaɪz/",
-                "part": "v.",
-                "translation": "重新确定优先顺序"
-              },
-              {
-                "word": "developer",
-                "phonetic": "/dɪˈveləpə/",
-                "part": "n.",
-                "translation": "房地产开发商"
-              },
-              {
-                "word": "affordability",
-                "phonetic": "/əˌfɔːdəˈbɪləti/",
-                "part": "n.",
-                "translation": "可负担性"
-              },
-              {
-                "word": "iteration",
-                "phonetic": "/ˌɪtəˈreɪʃən/",
-                "part": "n.",
-                "translation": "一轮；版本"
-              },
-              {
-                "word": "regional-level",
-                "phonetic": "/ˈriːdʒənəl ˌlevəl/",
-                "part": "adj.",
-                "translation": "地区层面的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The \"Your First Home\" scheme would be open to first-time buyers in England with a deposit of 2.5%.",
-                "analysis": [
-                  "主干是 The scheme would be open to buyers，would 表示拟议政策而非已实施事实。",
-                  "with a deposit of 2.5% 是介词短语，补充申请条件。",
-                  "first-time buyers in England 是 open to 的对象并包含地点限定。",
-                  "百分比数字直接呈现政策门槛，是细节题的定位信息。",
-                  "would be open to 可用于说明计划面向哪些人群。"
-                ],
-                "translation": "‘Your First Home’计划将面向在英格兰购房且首付为 2.5% 的首次购房者。"
-              },
-              {
-                "original": "There would be an initial interest-free period for the equity loan, with more details expected in next month's Budget.",
-                "analysis": [
-                  "主干是 There would be a period，there be 结构引出政策安排。",
-                  "interest-free 修饰 period，说明贷款初期的利息条件。",
-                  "for the equity loan 说明该免息期对应的对象。",
-                  "with more details expected 是 with 复合结构，补充信息公布时间。",
-                  "expected in next month's Budget 把当前未决信息与未来预算关联。"
-                ],
-                "translation": "该股权贷款将有一段初始免息期，更多细节预计在下月预算中公布。"
-              },
-              {
-                "original": "The policy is similar to initiatives from previous governments, including the coalition's Help To Buy scheme, introduced in 2013 by then-Chancellor George Osborne.",
-                "analysis": [
-                  "主干是 The policy is similar to initiatives，系表结构进行政策比较。",
-                  "including 引出 previous governments 的具体例子。",
-                  "introduced in 2013 是过去分词短语，后置修饰 Help To Buy scheme。",
-                  "by then-Chancellor George Osborne 标出政策推出者。",
-                  "用比较和历史例证评价新政策，是背景段常见写法。"
-                ],
-                "translation": "这项政策类似于历届政府的举措，包括时任财政大臣乔治·奥斯本于 2013 年推出的 Help To Buy 计划。"
-              }
-            ]
-          },
-          {
-            "title": "Drones could speed up getting defibrillators to people having cardiac arrests, study suggests",
-            "source": "The Guardian",
-            "published": "2026-09-26",
-            "url": "https://www.theguardian.com/society/2026/sep/26/drones-could-speed-up-getting-defibrillators-to-people-having-cardiac-arrests-study-suggests",
-            "readingTime": "8 分钟",
-            "topic": "健康 / 科技应用",
-            "summary": "文章报道一项尚未同行评审、将在欧洲急诊医学大会展示的研究，探讨无人机能否更快把自动体外除颤器送到院外心脏骤停现场。研究团队分析了 2011—2024 年大巴黎地区 28,349 起病例和 1,893 个 AED 的位置，发现只有 30% 病例位于最近固定 AED 的 500 米网络距离内。模型显示，部署 100 个无人机基地并增加 26 个固定 AED，可覆盖超过 97% 的病例；200 个基地和 4 个额外 AED 则可覆盖超过 99%。文章随后解释现有地面取用的时间限制、无人机由调度员和受训飞手监督的实际流程，并提醒成本、封闭场所和模型未涉及真实部署等限制。",
-            "reason": [
-              "急救可及性与无人机应用连接健康、公共服务和技术治理多个考点。",
-              "文章以问题和数据开篇，随后比较固定 AED 与无人机模型，最后补充现实部署和成本限制。",
-              "阅读题可考研究样本、百分比对照、模型结论以及为何不能把模拟结果视为现实效果。",
-              "defibrillator、accessibility、resuscitate、deployment 等词适合科技健康类说明文。",
-              "写作可借鉴用数据说明公共服务缺口，再提出技术方案并主动交代证据边界。"
-            ],
-            "vocabulary": [
-              {
-                "word": "defibrillator",
-                "phonetic": "/dɪˈfɪbrɪleɪtə/",
-                "part": "n.",
-                "translation": "除颤器"
-              },
-              {
-                "word": "cardiac arrest",
-                "phonetic": "/ˈkɑːdiæk əˌrest/",
-                "part": "n.",
-                "translation": "心脏骤停"
-              },
-              {
-                "word": "resuscitate",
-                "phonetic": "/rɪˈsʌsɪteɪt/",
-                "part": "v.",
-                "translation": "使复苏；抢救"
-              },
-              {
-                "word": "accessibility",
-                "phonetic": "/əkˌsesəˈbɪləti/",
-                "part": "n.",
-                "translation": "可获得性；可及性"
-              },
-              {
-                "word": "coverage",
-                "phonetic": "/ˈkʌvərɪdʒ/",
-                "part": "n.",
-                "translation": "覆盖范围"
-              },
-              {
-                "word": "fixed",
-                "phonetic": "/fɪkst/",
-                "part": "adj.",
-                "translation": "固定的"
-              },
-              {
-                "word": "retrieve",
-                "phonetic": "/rɪˈtriːv/",
-                "part": "v.",
-                "translation": "取回；调取"
-              },
-              {
-                "word": "deployment",
-                "phonetic": "/dɪˈplɔɪmənt/",
-                "part": "n.",
-                "translation": "部署；应用"
-              },
-              {
-                "word": "dispatch",
-                "phonetic": "/dɪˈspætʃ/",
-                "part": "v./n.",
-                "translation": "调度；派遣"
-              },
-              {
-                "word": "feasible",
-                "phonetic": "/ˈfiːzəbəl/",
-                "part": "adj.",
-                "translation": "可行的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Drones could help cut the time it takes to get a defibrillator to people experiencing cardiac arrests.",
-                "analysis": [
-                  "主干是 Drones could help cut the time，could 表示研究设想的可能性。",
-                  "it takes to get... 是 time 的定语从句，说明所需时间具体用于什么。",
-                  "to get a defibrillator... 是 cut 的补足结构，说明被缩短的过程。",
-                  "experiencing cardiac arrests 是现在分词短语，修饰 people。",
-                  "help cut the time it takes to... 可用于表达技术改善服务效率。"
-                ],
-                "translation": "研究人员认为，无人机可能帮助缩短把除颤器送到心脏骤停患者身边所需的时间。"
-              },
-              {
-                "original": "The researchers found accessibility of the 1,893 AEDs varied considerably across the area.",
-                "analysis": [
-                  "主干是 The researchers found...，that 被省略的宾语从句作 found 的内容。",
-                  "accessibility of the AEDs 是从句主语，of 短语说明可及性针对什么。",
-                  "varied considerably 是谓语，副词加强差异程度。",
-                  "across the area 是地点范围状语，限制比较范围。",
-                  "find + 宾语从句适合报告研究发现，避免把结论写成无来源断言。"
-                ],
-                "translation": "研究人员发现，这 1,893 个自动体外除颤器的可及性在该地区差异很大。"
-              },
-              {
-                "original": "The team's models were based on drones being housed at sites ranging from current AED locations to fire stations and mobile intensive care units.",
-                "analysis": [
-                  "主干是 The team's models were based on...，被动结构突出模型依据。",
-                  "drones being housed 是动名词复合结构，作介词 on 的宾语。",
-                  "ranging from... to... 修饰 sites，列出基地位置范围。",
-                  "current AED locations、fire stations 和 mobile intensive care units 构成并列例证。",
-                  "be based on + 动名词复合结构可用于谨慎说明研究模型的假设。"
-                ],
-                "translation": "该团队的模型建立在这样的设定上：无人机部署在从现有 AED 地点到消防站和移动重症监护单元等地点。"
               }
             ]
           }
