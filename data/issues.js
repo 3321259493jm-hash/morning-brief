@@ -1,6 +1,339 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-04T10:38:07+08:00",
+  "updatedAt": "2026-10-05T09:51:50.750+08:00",
   "issues": [
+    {
+      "date": "2026-10-05",
+      "status": "ready",
+      "ai": {
+        "intro": "已检索 10 月 4—5 日官方公告，符合“学生可试用或需了解”的新变化不足 3 项，按要求扩展到此前 7 天；每项按来源真实发布日期标注。免费资源重新核验官方定价、帮助或模型卡页面。",
+        "updates": [
+          {
+            "event": "Copilot 代码审查 API 支持 REST、GraphQL 请求，并将 Balanced 设为默认（2026-10-02）",
+            "summary": "GitHub 为 Copilot code review 开放 REST 与 GraphQL API 请求，可在每次请求时设置审查力度；默认审查力度也改为 Balanced。此 API 能力已面向 Copilot Pro、Pro+、Max、Business 和 Enterprise 一般可用；先前主动选择 Lite 的个人或团队设置会保留。",
+            "howTo": "在 GitHub PR 工作流或自有脚本中调用受支持的 REST/GraphQL API 请求 Copilot review，并按请求选择 effort；若要在网页调整默认级别，个人进入头像 > Copilot settings > Copilot > Code review，仓库和组织管理员可在各自 Copilot > Code review 设置中改为 Lite。",
+            "impact": "课程小组可把 PR 初审接入已有 CI 或作业提交流程，并按代码规模选择审查力度；默认 Balanced 比只依赖人工手动发起更便于形成一致的复核习惯，但生成意见仍需人工判断。",
+            "free": "API 功能适用于公告列出的 Copilot Pro、Pro+、Max、Business、Enterprise 计划，Free 未列入。该公告未说明各计划价格、可用地区或 API 请求额度；Balanced 默认变更于 2026-09-28 生效。",
+            "category": "AI 编程 / 代码审查",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-02",
+              "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
+            }
+          },
+          {
+            "event": "GitHub Copilot CLI 与应用预览桌面 computer use（2026-10-01）",
+            "summary": "GitHub 在 Copilot CLI 和 macOS、Windows 版 GitHub Copilot app 中公开预览 computer use。经用户授权后，Copilot 可读取桌面应用可访问内容和视觉上下文，并点击、输入、滚动及跨应用操作；组织设置可禁用此功能。",
+            "howTo": "CLI 交互会话中输入 /computer on 开启，用 /computer show 检查状态、/computer off 关闭；Copilot app 用户进入 Settings > Computer Use 并启用 Enable Computer Use。macOS 需要按引导授予辅助功能与屏幕录制权限；描述任务前先检查会涉及的应用和约束。",
+            "impact": "学生可尝试让代理处理没有 API 或命令行入口的桌面软件，例如在演示文稿中整理课程信息；审批提示与权限设置有助于保留人工控制，但不应在未核对操作时让它处理敏感资料。",
+            "free": "目前是 public preview，支持 Copilot CLI 以及 macOS、Windows 桌面应用；Copilot 控制应用前需获批准，用户可将应用设为始终允许，组织管理员也可关闭此功能。公告未说明适用计划、价格、地区或使用额度；macOS 还需授予系统权限。",
+            "category": "AI 编程 / 桌面代理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-01",
+              "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
+            }
+          },
+          {
+            "event": "VS Code 9 月版本扩展代理任务自动化与 Dev Container 支持（2026-10-01）",
+            "summary": "GitHub 汇总 VS Code 1.136—1.140（2026 年 9 月陆续发布）的 Copilot 更新：Agents window 可排定按小时、每日或每周运行的任务，也能让代理处理 PR review feedback、失败检查与合并冲突；本地或远端文件夹可从菜单启动 Dev Container agent session。排程和 agent merge 等功能仍标为预览。",
+            "howTo": "更新 VS Code 后打开 Agents window，选择本地或远程文件夹菜单中的 Use Dev Container，在项目容器中启动代理会话；也可从代理会话打开 pull request 表单，检查标题和描述后创建 PR。要使用排程或 agent merge，先确认对应功能仍处于 preview 并在界面启用。",
+            "impact": "学生可在项目配置的容器中复现相同开发工具和依赖，再用代理整理 PR 或检查失败项，减少“本机能运行、同伴机器不能运行”的课程协作问题；自动合并和排程适合先在非关键分支试验。",
+            "free": "公告覆盖 VS Code 1.136—1.140；其中自动化、agent merge、自动清理等功能明确处于 preview。该发布摘要未说明各功能所需账户计划、价格、地区和调用额度；需使用 VS Code，具体账户资格以界面实际开放为准。",
+            "category": "AI 编程 / VS Code 代理工作流",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-01",
+              "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini API 与 Google AI Studio：部分模型提供免费层",
+            "summary": "Google AI for Developers 定价页列出 Gemini API Free Tier：可在 AI Studio 开始使用，部分模型的输入和输出 token 价格为免费，但可用模型受限。官方同时说明免费层的内容会用于改进产品，因此不宜直接提交未公开论文、个人资料或课程答案。",
+            "howTo": "打开 Google AI Studio，选择明确标为 Free Tier 的 Gemini 模型并从示例开始调用；在写入个人 API key 前先检查本次选择的模型、计费层及数据使用条款。",
+            "impact": "可用来给课程原型接入文本生成 API、练习提示词和比较输出；用作业草稿时先移除个人信息，并注意免费层输入可能用于产品改进。",
+            "free": "官方列出部分模型免费输入和输出 token，并称模型访问受限；页面未给出此处适用模型的完整调用额度、免费层地区及账户资格，均为“官方未说明”。免费层内容用于改进产品；不要把免费价格误解为无限调用或适用于所有模型。",
+            "category": "免费 API / AI 开发学习",
+            "source": {
+              "name": "Google AI for Developers 定价文档",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Gemini Apps：个人 Google 账户可使用无付费计划的基础额度",
+            "summary": "Google 帮助中心说明，没有 Google AI 计划的 Gemini Apps 用户仍受计算资源用量限制；额度会综合提示复杂度、模型、功能和对话长度计算，而不是固定消息数。",
+            "howTo": "用个人 Google 账户打开 Gemini Apps，先用基础功能做概念解释、阅读提问或复习提纲；在达到当前用量上限后等待刷新，不要把高负载功能视作随时可用。",
+            "impact": "无需先订阅即可尝试网页学习助手，适合将课程阅读拆成短问题；高需求时部分功能可能对无计划用户暂不可用，关键作业应保留其他工作方式。",
+            "free": "无 Google AI 计划用户按计算资源使用限制运行；额度每 5 小时刷新，另受周上限约束，具体 prompt 数量官方未说明。限额会变化，部分高计算功能在需求高时可能不可用；该帮助页针对个人账户，完整地区可用范围官方未说明。",
+            "category": "免费网页 / 学习助手",
+            "source": {
+              "name": "Google Gemini Apps 帮助中心",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemini/answer/16275805?hl=en"
+            }
+          },
+          {
+            "event": "Claude Free：日常问答的免费计划",
+            "summary": "Claude 官方定价页列有 Free 计划，可用于日常问题。免费用量按滚动五小时会话窗口重置；实际容量取决于对话长度、模型和使用功能，不保证固定消息条数。",
+            "howTo": "从 Claude 网页或移动端登录后选择 Free 计划，用短段落请它解释概念、比较阅读观点或生成自测题；在 Settings > Usage 查看当前额度，并对照原文核查事实。",
+            "impact": "可作为英语阅读和课程复习的日常辅助；把长资料拆分成问题可更好控制额度，且模型生成内容不应直接代替论文证据。",
+            "free": "Free 计划覆盖日常问题；用量按滚动 5 小时窗口重置，没有固定消息数，并可能受到其他周/月周期限制。免费账户资格和完整地区可用范围官方未说明；用量还随模型、对话长度和功能变化。",
+            "category": "免费网页 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-4B：可下载的 Apache-2.0 开放模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡公开 Qwen3-4B 权重、Transformers 加载示例及本地运行方式；仓库许可证为 Apache-2.0。模型卡给出的原生上下文长度为 32,768 token，并列出本地应用和推理框架选项。",
+            "howTo": "打开 Qwen/Qwen3-4B 模型卡，从 Files and versions 获取模型文件；按卡片示例安装较新版本 Transformers 与 Accelerate，再用 AutoTokenizer 和 AutoModelForCausalLM 加载模型。运行前先查看设备内存与模型文件需求。",
+            "impact": "适合在本地实验文本生成、双语提示或课程代码中的模型接入，也可阅读许可证理解开放权重与商业软件服务的区别；本地推理仍需要合适硬件。",
+            "free": "模型仓库的 LICENSE 为 Apache-2.0，权重可从公开 Hugging Face 仓库获取；许可证使用须遵循其条款。模型文件本身的地区限制、账户要求及本地运行所需硬件额度官方未说明；部署硬件或云算力可能另有成本。",
+            "category": "免费开放权重 / 本地模型学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡与许可证",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期选取 10 月 5 日与 10 月 3 日的免费全文，分别讨论儿童读物代表性与社会平等；按原文梳理观点、证据和论证结构。",
+        "articles": [
+          {
+            "title": "Children’s books with Black main characters down 8% in a year, study shows",
+            "source": "The Guardian",
+            "published": "2026-10-05",
+            "url": "https://www.theguardian.com/books/2026/oct/05/childrens-books-with-black-main-characters-down-study-uk",
+            "readingTime": "5 分钟",
+            "topic": "文化 / 儿童出版与代表性",
+            "summary": "《卫报》依据公益组织 Inclusive Books for Children 对英国 2025 年 2,189 本儿童读物的调查指出，只有 47 本（2.1%）以黑人角色为主角，较上一年减少 7.8%；仅 150 本（6.9%）呈现少数族裔、残障或神经多样性主角。报道将这些比例与相关儿童人口占比对照，并补充残障主角图画书数量骤减、神经多样性角色有所增加等不同方向的变化。文章随后引用作者和早教专家，批评把身份本身当作唯一故事内容的“偶然代表”不足，主张孩子也应在普通的友情、冒险和日常故事中看到多样角色；结尾保留进展迹象，同时强调出版界仍需改善。",
+            "reason": [
+              "儿童阅读、文化代表性和出版公平属于教育与社会文化议题，可练习把个体经验放进群体数据中分析。",
+              "文章先用调查数字提出问题，再横向比较群体、引入专家评价，最后补充进展并回到改进呼吁，论证层次清楚。",
+              "阅读题可考查比例数据的比较对象、专家引语的作用，以及 incidental representation 指什么。",
+              "representation、marginalised、neurodivergent 等词汇可迁移至教育公平、文化多样性和公共传播话题。",
+              "写作可借鉴“统计数据—结构性解释—反方或进展信息—有限结论”的展开方式，避免只凭个案下结论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "representation",
+                "phonetic": "/ˌreprɪzenˈteɪʃn/",
+                "part": "n.",
+                "translation": "代表；呈现；代表性"
+              },
+              {
+                "word": "marginalised",
+                "phonetic": "/ˈmɑːdʒɪnəlaɪzd/",
+                "part": "adj.",
+                "translation": "被边缘化的"
+              },
+              {
+                "word": "neurodivergent",
+                "phonetic": "/ˌnjʊərəʊdaɪˈvɜːdʒənt/",
+                "part": "adj.",
+                "translation": "神经多样性的"
+              },
+              {
+                "word": "survey",
+                "phonetic": "/ˈsɜːveɪ/",
+                "part": "n.",
+                "translation": "调查；抽样研究"
+              },
+              {
+                "word": "incidental",
+                "phonetic": "/ˌɪnsɪˈdentl/",
+                "part": "adj.",
+                "translation": "附带的；非刻意呈现的"
+              },
+              {
+                "word": "reliance",
+                "phonetic": "/rɪˈlaɪəns/",
+                "part": "n.",
+                "translation": "依赖；依靠"
+              },
+              {
+                "word": "reflect",
+                "phonetic": "/rɪˈflekt/",
+                "part": "v.",
+                "translation": "反映；体现"
+              },
+              {
+                "word": "decline",
+                "phonetic": "/dɪˈklaɪn/",
+                "part": "n./v.",
+                "translation": "下降；减少"
+              },
+              {
+                "word": "feature",
+                "phonetic": "/ˈfiːtʃə(r)/",
+                "part": "v.",
+                "translation": "以……为特色；使……担任主角"
+              },
+              {
+                "word": "diversity",
+                "phonetic": "/daɪˈvɜːsəti/",
+                "part": "n.",
+                "translation": "多样性"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "There were some signs of progress.",
+                "analysis": [
+                  "这是 there be 存在句，真正的主语是复数名词短语 some signs of progress。",
+                  "some 限定 signs，of progress 后置说明这些迹象涉及“进展”。",
+                  "There were 与前文对不足的批评形成让步式转折，提示作者不会把结论写成单向度的悲观判断。",
+                  "some signs 弱化断言强度，表示出现了一些但并非全面解决问题的积极变化。",
+                  "可借鉴 There are signs of... 在提出问题后补充有限进展。"
+                ],
+                "translation": "也出现了一些进展迹象。"
+              },
+              {
+                "original": "Neurodivergent representation increased in picture books, from three titles in 2024 to 13 last year.",
+                "analysis": [
+                  "主干是 Neurodivergent representation increased，representation 是主语，increased 表示数量或程度上升。",
+                  "Neurodivergent 修饰 representation，in picture books 限定讨论范围。",
+                  "from three titles in 2024 to 13 last year 构成 from...to... 变化区间，分别给出起点和终点。",
+                  "last year 与 2024 对照说明变化跨越相邻年度；数字指书目数量，不是儿童人数。",
+                  "可借鉴 increase from A to B 报告有明确起止值的趋势。"
+                ],
+                "translation": "图画书中的神经多样性代表角色有所增加：从 2024 年的 3 本增至去年的 13 本。"
+              },
+              {
+                "original": "These figures need to be more than mere statistics and a call to action for continued change and improvements.",
+                "analysis": [
+                  "主干是 These figures need to be...，need to 表示必要性，而非已经发生的事实。",
+                  "more than 后接并列名词短语 mere statistics 和 a call to action，提出数字不应只停留在呈现层面。",
+                  "for continued change and improvements 说明行动呼吁的目标，continued 修饰 change。",
+                  "These figures 回指前文多组调查数据，形成“证据—行动”之间的逻辑衔接。",
+                  "可借鉴 need to be more than... and... 强调证据需要转化为持续行动。"
+                ],
+                "translation": "这些数字不能只是统计结果，还应成为推动持续改变和改进的行动呼吁。"
+              }
+            ]
+          },
+          {
+            "title": "Hunter-gatherer societies are often put on a pedestal as paragons of equality – but the reality is more complicated",
+            "source": "The Conversation",
+            "published": "2026-10-03",
+            "url": "https://theconversation.com/hunter-gatherer-societies-are-often-put-on-a-pedestal-as-paragons-of-equality-but-the-reality-is-more-complicated-289009",
+            "readingTime": "8 分钟",
+            "topic": "社会 / 平等观念与人类群体",
+            "summary": "两位人类学者从坦桑尼亚 Hadza 人分享猎物的场景切入，指出“平等社会”常被理想化。作者综合一个多世纪的民族志材料，并比较 Hadza、Ju/’Hoansi、Bayaka 等群体，发现没有社会完全没有不平等：财产、性别、年龄、领导权和仪式知识都可能形成差异。文章进一步论证，分享、嘲笑炫耀者、提出要求和跨群体合作等机制，常由人们争取资源、地位或自主权的自利动机推动，而非单纯利他。结论不是否定平等，而是把平等理解为各社会用于限制不平等、保护自主与资源获取的一组实践工具，反对将狩猎采集者简单描绘为完美平等典范。",
+            "reason": [
+              "社会平等、资源分配和群体规范是常见社会科学主题，文章把抽象概念与具体生活实践相连。",
+              "结构从猎物分享的个案引出传统印象，接着综述跨文化证据，再解释自利机制，最后修正“完美平等”的结论。",
+              "阅读题可考查作者如何限定 egalitarian、例证如何支持“没有社会全然平等”，以及 self-interest 与 sharing 的关系。",
+              "subsistence、consensus、autonomy、hierarchical 等词汇适合社会学、人类学和公共政策类阅读。",
+              "写作可借鉴先呈现常见观点、再用多类证据修正绝对化判断，并以更精确概念收束。"
+            ],
+            "vocabulary": [
+              {
+                "word": "egalitarian",
+                "phonetic": "/ɪˌɡælɪˈteəriən/",
+                "part": "adj.",
+                "translation": "平等主义的；主张人人平等的"
+              },
+              {
+                "word": "subsistence",
+                "phonetic": "/səbˈsɪstəns/",
+                "part": "n.",
+                "translation": "生计；维持生活"
+              },
+              {
+                "word": "inequality",
+                "phonetic": "/ˌɪnɪˈkwɒləti/",
+                "part": "n.",
+                "translation": "不平等；差异"
+              },
+              {
+                "word": "consensus",
+                "phonetic": "/kənˈsensəs/",
+                "part": "n.",
+                "translation": "共识"
+              },
+              {
+                "word": "constrained",
+                "phonetic": "/kənˈstreɪnd/",
+                "part": "adj.",
+                "translation": "受到限制的"
+              },
+              {
+                "word": "hierarchical",
+                "phonetic": "/ˌhaɪəˈrɑːkɪkəl/",
+                "part": "adj.",
+                "translation": "等级分明的"
+              },
+              {
+                "word": "self-interested",
+                "phonetic": "/ˌselfˈɪntrəstɪd/",
+                "part": "adj.",
+                "translation": "以自身利益为出发点的"
+              },
+              {
+                "word": "autonomy",
+                "phonetic": "/ɔːˈtɒnəmi/",
+                "part": "n.",
+                "translation": "自主；自主权"
+              },
+              {
+                "word": "widespread",
+                "phonetic": "/ˈwaɪdspred/",
+                "part": "adj.",
+                "translation": "广泛存在的"
+              },
+              {
+                "word": "deliberate",
+                "phonetic": "/dɪˈlɪbərət/",
+                "part": "adj.",
+                "translation": "有意的；审慎的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "In our recent wide-ranging review of the evidence from the early 20th century onward, we found that no society lacked inequality.",
+                "analysis": [
+                  "主句主干是 we found that...；that 引导宾语从句，说明研究发现。",
+                  "句首 In...onward 介词短语交代证据综述的范围和时间起点，wide-ranging 修饰 review。",
+                  "宾语从句的主干是 no society lacked inequality，双重否定形式 lacked... 表达“没有社会完全不存在不平等”。",
+                  "作者先交代材料范围，再给出概括性结论，避免把个别案例当作普遍事实。",
+                  "可借鉴 In our review..., we found that... 汇报综述结论，并用 no...lacked... 表达普遍性判断。"
+                ],
+                "translation": "在对二十世纪初以来的广泛证据进行综述后，我们发现没有任何社会不存在不平等。"
+              },
+              {
+                "original": "Instead, equality often results from people’s self-interested motives to acquire resources, status and autonomy.",
+                "analysis": [
+                  "Instead 是句首连接副词，承接前文并转向对平等成因的不同解释。",
+                  "主干为 equality results from motives，often 修饰结果发生的频率。",
+                  "people’s self-interested 修饰 motives；to acquire... 是不定式，说明这些动机指向什么。",
+                  "resources、status 和 autonomy 是并列宾语，概括人们追求的不同利益。",
+                  "可借鉴 result from + 动机/条件解释社会结果的成因，并用 Instead 引入修正观点。"
+                ],
+                "translation": "相反，平等往往源自人们获取资源、地位和自主权的自利动机。"
+              },
+              {
+                "original": "Most families have similar, modest possessions and store little material wealth.",
+                "analysis": [
+                  "句子由 and 连接两个并列谓语 have 与 store，共用主语 Most families。",
+                  "similar 和 modest 并列修饰 possessions，描述财物相似且有限。",
+                  "little 修饰不可数名词 material wealth，强调储存的物质财富很少。",
+                  "该句以生活资料差异较小的观察支持群体间物质不平等有限，但不等于所有维度完全平等。",
+                  "可借鉴 similar, modest... and little... 并列描述资源分布特征。"
+                ],
+                "translation": "大多数家庭拥有相似且不多的财物，积累的物质财富也很少。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-04",
       "status": "ready",
@@ -2213,432 +2546,6 @@ window.BRIEFING_DATA = {
                   "entirely 限定 prevent，说明措施降低了涨幅，却没有彻底消除涨价。"
                 ],
                 "translation": "这些措施降低了油价上涨的幅度，但并未完全阻止涨价。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-28",
-      "status": "ready",
-      "ai": {
-        "intro": "先核验 9 月 24—25 日的 GitHub 官方更新，再补充仍可用的免费 AI 资源；因 9 月 27—28 日不足 3 条可直接核验的新发布，按规则扩展到前 7 日，并保留来源实际发布日期。",
-        "updates": [
-          {
-            "event": "GitHub Agentic Autofix 开始使用 Copilot Memory（2026-09-25）",
-            "summary": "GitHub Changelog 说明，Agentic Autofix 现在会使用 Copilot Memory；它可把仓库中与安全开发模式有关的记忆提供给代码修复流程。官方同时将 Agentic Autofix 和 Copilot Memory 标为 public preview。",
-            "howTo": "在支持的 GitHub 仓库中触发 Agentic Autofix，先在仓库中配置并检查 Copilot Memory 的内容，再审阅它提出的修复和测试；将自动生成的改动放入分支，运行测试后再提交。",
-            "impact": "课程项目可让自动修复参考仓库约定和安全模式，减少重复说明；学生仍应检查记忆是否过时、修复是否引入回归，并把安全判断留给人工。",
-            "free": "官方只说明两项能力处于 public preview；没有统一说明个人/学生计划、地区、账号资格或配额。",
-            "category": "AI 编程 / 代码安全",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-25",
-              "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory"
-            }
-          },
-          {
-            "event": "GitHub 对高影响操作加入 proof of presence（2026-09-24）",
-            "summary": "GitHub 为企业账户公开预览 proof of presence，在高影响操作发生时要求确认确有获授权的人正在操作；官方称这是企业版 sudo mode 的扩展，用于降低被盗会话 Cookie 或长期令牌带来的供应链风险。",
-            "howTo": "若组织属于 GitHub Enterprise Cloud 的 managed-user enterprise，且使用 Microsoft Entra ID 作为 SAML 或 OIDC SSO IdP，由管理员按 Changelog 说明启用并测试高影响操作的现场确认；普通个人账号不能据此推断已获得该能力。",
-            "impact": "做开源或课程仓库管理时，学生可把“身份在场”作为高风险发布、权限和设置操作的额外控制点，并在自动化脚本中避免绕过人工确认。",
-            "free": "官方标为 public preview；范围仅为 github.com 和 GHEC-DR 上使用 Microsoft Entra ID SSO 的 managed-user enterprise，价格、个人/学生资格、地区和配额官方未说明。",
-            "category": "AI 时代安全 / 身份验证",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-24",
-              "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions"
-            }
-          },
-          {
-            "event": "GitHub Enterprise managed settings 增加产品内验证器（2026-09-25）",
-            "summary": "GitHub Changelog 发布 Enterprise managed settings in-product validator，用于在产品内检查企业托管设置；它把设置校验直接放入管理流程，帮助管理员发现配置问题。",
-            "howTo": "企业管理员打开 GitHub Enterprise 的 managed settings 页面，使用产品内 validator 检查当前配置；按页面提示修正问题，再让组织管理员复核设置和生效范围。",
-            "impact": "学生参与学校或实验室 GitHub Enterprise 管理时，可把 validator 当作发布前配置检查，减少因策略遗漏导致的协作或权限问题；它不能替代对组织政策的人工审阅。",
-            "free": "该 Changelog 没有说明价格、免费计划、地区、账号资格或使用配额；可用范围以企业账户当前页面为准。",
-            "category": "AI 协作基础设施 / 企业管理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-25",
-              "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude 免费计划的滚动五小时窗口",
-            "summary": "Anthropic 定价页列出 Free 计划，面向日常问题；页面说明所有计划都有使用限制，免费额度按滚动的五小时 session window 重置。",
-            "howTo": "打开 Claude 网页、桌面或移动端并注册/登录，先用短文本做摘要或改写；在 Settings > Usage 查看用量，达到限制后等待窗口重置。",
-            "impact": "适合英文改写、概念解释和学习提纲；长文应拆分，关键事实回到原文核验。",
-            "free": "官方确认 Free 计划和滚动五小时重置，但没有给出固定消息数；账号、地区和具体上限官方未说明。",
-            "category": "长期免费网页访问 / AI 助手",
-            "source": {
-              "name": "Claude 官方定价",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student 免费学生计划",
-            "summary": "GitHub 计划说明列出 Copilot Student 为免费学生计划，权益包括 unlimited code completions、GitHub AI Credits，以及 auto model selection 下有限的 chat 和 agent 使用。",
-            "howTo": "在 GitHub Education 完成学生身份验证并启用 Copilot Student，在 IDE 安装扩展；用补全处理样板代码，并在账户页面查看 chat/agent 使用情况。",
-            "impact": "可用于课程编程、测试草稿和报错解释，降低练习门槛；提交前运行测试并人工审查生成代码。",
-            "free": "官方标为免费并要求 verified student；补全 unlimited，chat/agent limited。统一 credits 数值、地区例外和验证材料要求官方未说明。",
-            "category": "学生教育福利 / AI 编程",
-            "source": {
-              "name": "GitHub Copilot 官方计划说明",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "Gemini API 与 AI Studio 的 Free tier",
-            "summary": "Google Gemini API 定价页把部分模型列为 Free tier，并将免费层与付费层分开；具体模型的限流与价格需按当前表格逐项查看。",
-            "howTo": "登录 Google AI Studio，选择标有 Free tier 的模型，先做低频摘要或分类原型；上线前记录页面列出的 RPM、TPM、RPD 等限制并处理超限。",
-            "impact": "学生可用较低门槛完成 API 原型，学习按 token 和请求速率估算成本，不把免费层当成无限吞吐。",
-            "free": "官方确认存在 Free tier；模型清单、请求限制、账号资格、地区和重置周期按模型/项目决定，统一额度官方未说明。",
-            "category": "免费 API / 开发者资源",
-            "source": {
-              "name": "Google Gemini API 官方定价",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Google Colab 免费托管 Jupyter 环境",
-            "summary": "Colab FAQ 将其定义为无需本地设置的托管 Jupyter Notebook 服务，并说明可免费使用包括 GPU 和 TPU 在内的计算资源；资源不保证，使用上限会波动。",
-            "howTo": "打开 Colab，新建或导入 notebook，在运行时设置中按需尝试 GPU/TPU；把 notebook 保存到 Drive 或从 GitHub 加载，不要把密钥写入共享文件。",
-            "impact": "适合数据清洗、课程实验和小型机器学习练习；应保存中间结果，并为资源回收或限流准备替代方案。",
-            "free": "官方说明服务可免费使用且资源不保证；具体配额、可用地区、重置周期和 GPU/TPU 获得条件官方未说明。",
-            "category": "长期免费开发环境 / 学习",
-            "source": {
-              "name": "Google Colaboratory FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Qwen3-4B Apache-2.0 开放模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 可下载权重，介绍 thinking/non-thinking 模式切换和多语言能力，并在许可部分标注 Apache-2.0。",
-            "howTo": "打开 Qwen/Qwen3-4B 模型卡，按 Transformers 示例安装依赖并下载权重；先检查本机存储、内存和推理工具要求，再用非敏感文本测试。",
-            "impact": "可用于本地多语言翻译、摘要和代码实验，帮助学生学习模型部署而不必先购买 API；运行成本取决于本地设备，输出仍需审查。",
-            "free": "模型卡提供下载并标注 Apache-2.0；账号、地区、下载配额及运行硬件成本官方未统一说明。",
-            "category": "开放模型权重 / Apache-2.0",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B"
-            }
-          },
-          {
-            "event": "GitHub Education 认证学生可使用 Student Developer Pack",
-            "summary": "GitHub Education 的官方页面提供 Student Developer Pack 入口，面向经验证的学生，包含开发者工具和服务的学生权益；具体合作项目以页面当前列表为准。",
-            "howTo": "打开 GitHub Education Student Developer Pack 页面，登录 GitHub，按页面流程提交学生身份验证；获批后逐项打开可用合作项目并阅读其独立条款。",
-            "impact": "可为课程开发、部署和协作提供工具试用或学生权益，避免直接购买；学生应记录每项服务的到期、地区和数据处理条件。",
-            "free": "官方页面以 verified student 为资格基础，但未对所有合作项目统一说明价格、地区、期限或额度；以每项合作方页面为准。",
-            "category": "学生教育福利 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方页面",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Protesters disperse after blocking controversial Orange Order parade",
-            "source": "BBC",
-            "published": "2026-09-27",
-            "url": "https://www.bbc.co.uk/news/articles/c6qjkk55wd47o",
-            "readingTime": "6 分钟",
-            "topic": "社会 / 社区冲突与妥协",
-            "summary": "文章报道北爱尔兰一场有争议的 Orange Order 游行被抗议者阻拦后，参与者最终散去；同时交代北爱尔兰事务大臣 Chris Bryant 从工党会议返回参与会谈，并敦促争议双方继续寻求妥协。报道以现场事件切入，再补充政治人物回应，呈现社区传统、公共秩序与谈判之间的张力，结论落在避免冲突升级的政治沟通。",
-            "reason": [
-              "主题涉及身份、传统、公共空间与妥协，适合社会议题阅读。",
-              "结构为现场结果—政治回应—冲突背景，便于定位事实与观点。",
-              "可训练区分报道事实和官员倡议，并判断作者如何用结果收束。",
-              "controversial、dispute、compromise 等词适合公共事务语境。",
-              "写作可借鉴先描述争议事件，再呈现相关方立场并提出缓和方向。"
-            ],
-            "vocabulary": [
-              {
-                "word": "controversial",
-                "phonetic": "/ˌkɒn.trəˈvɜː.ʃəl/",
-                "part": "adj.",
-                "translation": "有争议的"
-              },
-              {
-                "word": "parade",
-                "phonetic": "/pəˈreɪd/",
-                "part": "n.",
-                "translation": "游行"
-              },
-              {
-                "word": "disperse",
-                "phonetic": "/dɪˈspɜːs/",
-                "part": "v.",
-                "translation": "散去；驱散"
-              },
-              {
-                "word": "protester",
-                "phonetic": "/prəˈtes.tər/",
-                "part": "n.",
-                "translation": "抗议者"
-              },
-              {
-                "word": "dispute",
-                "phonetic": "/dɪˈspjuːt/",
-                "part": "n.",
-                "translation": "争议"
-              },
-              {
-                "word": "compromise",
-                "phonetic": "/ˈkɒm.prə.maɪz/",
-                "part": "n.",
-                "translation": "妥协"
-              },
-              {
-                "word": "community",
-                "phonetic": "/kəˈmjuː.nə.ti/",
-                "part": "n.",
-                "translation": "社区；群体"
-              },
-              {
-                "word": "tension",
-                "phonetic": "/ˈten.ʃən/",
-                "part": "n.",
-                "translation": "紧张关系"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Protesters disperse after blocking controversial Orange Order parade.",
-                "analysis": [
-                  "主干是 Protesters disperse，主语和谓语清晰。",
-                  "after 引导时间状语，说明散去发生在阻拦之后。",
-                  "blocking 是动名词，controversial 修饰 parade。",
-                  "标题用一般现在时概括已发生新闻，简洁突出结果。"
-                ],
-                "translation": "抗议者阻拦有争议的 Orange Order 游行后散去。"
-              },
-              {
-                "original": "The dispute has caused tension in the community.",
-                "analysis": [
-                  "主干为 The dispute has caused tension。",
-                  "现在完成时连接过去争议与当前影响。",
-                  "in the community 是地点/范围状语。",
-                  "cause + 名词可用于表达社会事件的结果。"
-                ],
-                "translation": "这场争议在社区中造成了紧张。"
-              },
-              {
-                "original": "Both sides must double down on compromise.",
-                "analysis": [
-                  "主干是 Both sides must double down。",
-                  "on compromise 补充行动方向。",
-                  "must 表示政治倡议中的必要性。",
-                  "double down on 可表达“进一步坚持或加大努力”，但语气较强。"
-                ],
-                "translation": "双方都必须进一步努力寻求妥协。"
-              }
-            ]
-          },
-          {
-            "title": "Scientists discover two new species of sea spiders along Canadian coastline",
-            "source": "NPR",
-            "published": "2026-09-27",
-            "url": "https://www.npr.org/2026/09/27/nx-s1-5982026/new-sea-spider-species",
-            "readingTime": "5 分钟",
-            "topic": "环境 / 生物多样性",
-            "summary": "NPR 报道科学家在加拿大海岸线发现两种新的海蜘蛛，并提醒读者目前已确认的海蜘蛛种类超过 1,300 种。文章以新发现为入口，解释海蜘蛛并非真正的蜘蛛、研究者如何在沿海样本中识别物种，再把个案放回海洋生物多样性调查的更大背景。结尾强调仍有物种等待记录，说明分类研究对认识海洋生态的重要性。",
-            "reason": [
-              "主题是物种发现与海洋生物多样性，适合环境科学普及类文章。",
-              "结构为发现—概念澄清—研究过程—更广泛意义。",
-              "可训练主旨概括、数字细节定位和对类比说明的理解。",
-              "species、coastline、identify 等词可迁移到环境报道。",
-              "写作可借鉴从具体发现过渡到生态保护或科学认知意义。"
-            ],
-            "vocabulary": [
-              {
-                "word": "species",
-                "phonetic": "/ˈspiː.ʃiːz/",
-                "part": "n.",
-                "translation": "物种"
-              },
-              {
-                "word": "coastline",
-                "phonetic": "/ˈkəʊst.laɪn/",
-                "part": "n.",
-                "translation": "海岸线"
-              },
-              {
-                "word": "scientist",
-                "phonetic": "/ˈsaɪən.tɪst/",
-                "part": "n.",
-                "translation": "科学家"
-              },
-              {
-                "word": "identify",
-                "phonetic": "/aɪˈden.tɪ.faɪ/",
-                "part": "v.",
-                "translation": "识别；确定"
-              },
-              {
-                "word": "biodiversity",
-                "phonetic": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
-                "part": "n.",
-                "translation": "生物多样性"
-              },
-              {
-                "word": "specimen",
-                "phonetic": "/ˈspes.ɪ.mən/",
-                "part": "n.",
-                "translation": "标本"
-              },
-              {
-                "word": "marine",
-                "phonetic": "/məˈriːn/",
-                "part": "adj.",
-                "translation": "海洋的"
-              },
-              {
-                "word": "discovery",
-                "phonetic": "/dɪˈskʌv.ər.i/",
-                "part": "n.",
-                "translation": "发现"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Scientists discover two new species of sea spiders along the Canadian coastline.",
-                "analysis": [
-                  "主干是 Scientists discover two new species。",
-                  "of sea spiders 说明 species 的类别。",
-                  "along the Canadian coastline 是地点状语。",
-                  "标题用一般现在时突出新闻事件和发现结果。"
-                ],
-                "translation": "科学家在加拿大海岸线沿岸发现了两种新的海蜘蛛。"
-              },
-              {
-                "original": "So far, scientists have identified more than 1,300 species of sea spiders.",
-                "analysis": [
-                  "主干为 scientists have identified species。",
-                  "So far 与现在完成时搭配，表示截至目前的累计结果。",
-                  "more than 1,300 是数量限定。",
-                  "of sea spiders 后置说明 species 的范围。"
-                ],
-                "translation": "截至目前，科学家已经确认了 1,300 多种海蜘蛛。"
-              },
-              {
-                "original": "The discovery adds to what scientists know about life in the ocean.",
-                "analysis": [
-                  "主干是 The discovery adds to ...。",
-                  "what 引导名词性从句作介词 to 的宾语。",
-                  "about life in the ocean 说明知识的主题。",
-                  "add to 可用于表达新证据对既有认知的补充。"
-                ],
-                "translation": "这一发现丰富了科学家对海洋生命的认识。"
-              }
-            ]
-          },
-          {
-            "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit",
-            "source": "The Guardian",
-            "published": "2026-09-27",
-            "url": "https://www.theguardian.com/us-news/2026/sep/27/giant-pandas-atlanta-zoo-china-xi-trump-summit",
-            "readingTime": "5 分钟",
-            "topic": "文化 / 国际交流与动物保护",
-            "summary": "文章报道两只大熊猫 Ping Ping 和 Fu Shuang 从中国抵达亚特兰大动物园，背景是中美政府之间的租借安排以及习近平与特朗普峰会后的外交氛围。报道先写熊猫抵达这一可见事件，再解释租借协议和动物园接待安排，最后把“熊猫外交”放在两国关系和公众文化交流中理解。文章的重点不是单纯的动物新闻，而是文化象征如何与国家间关系、保护合作和公共期待相连。",
-            "reason": [
-              "主题结合动物保护、文化交流与国际关系，适合跨学科阅读。",
-              "结构为抵达消息—租借细节—外交背景—象征意义。",
-              "可训练识别事实、背景和隐含意义之间的层次。",
-              "loan deal、summit、diplomatic 等词适合国际新闻。",
-              "写作可借鉴用具体公共事件引出更广泛的关系与合作讨论。"
-            ],
-            "vocabulary": [
-              {
-                "word": "giant panda",
-                "phonetic": "/ˌdʒaɪ.ənt ˈpæn.də/",
-                "part": "n.",
-                "translation": "大熊猫"
-              },
-              {
-                "word": "arrive",
-                "phonetic": "/əˈraɪv/",
-                "part": "v.",
-                "translation": "抵达"
-              },
-              {
-                "word": "summit",
-                "phonetic": "/ˈsʌm.ɪt/",
-                "part": "n.",
-                "translation": "峰会"
-              },
-              {
-                "word": "loan deal",
-                "phonetic": "/ləʊn diːl/",
-                "part": "n.",
-                "translation": "租借协议"
-              },
-              {
-                "word": "diplomatic",
-                "phonetic": "/ˌdɪp.ləˈmæt.ɪk/",
-                "part": "adj.",
-                "translation": "外交的"
-              },
-              {
-                "word": "symbol",
-                "phonetic": "/ˈsɪm.bəl/",
-                "part": "n.",
-                "translation": "象征"
-              },
-              {
-                "word": "conservation",
-                "phonetic": "/ˌkɒn.səˈveɪ.ʃən/",
-                "part": "n.",
-                "translation": "保护；保育"
-              },
-              {
-                "word": "relationship",
-                "phonetic": "/rɪˈleɪ.ʃən.ʃɪp/",
-                "part": "n.",
-                "translation": "关系"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Two giant pandas arrive in Atlanta from China after the Xi-Trump summit.",
-                "analysis": [
-                  "主干是 Two giant pandas arrive in Atlanta。",
-                  "from China 说明来源，after ... summit 提供时间背景。",
-                  "标题使用一般现在时压缩叙事。",
-                  "after 短语把动物新闻与外交事件并置。"
-                ],
-                "translation": "习近平与特朗普峰会后，两只大熊猫从中国抵达亚特兰大。"
-              },
-              {
-                "original": "The pandas are part of a loan deal between the Chinese and US governments.",
-                "analysis": [
-                  "主干是 The pandas are part of a loan deal。",
-                  "between ... governments 限定协议双方。",
-                  "are part of 表示个体属于更大的安排。",
-                  "被动意义通过名词 loan deal 间接呈现，适合说明制度背景。"
-                ],
-                "translation": "这些熊猫是中美两国政府租借协议的一部分。"
-              },
-              {
-                "original": "The animals have become a symbol of the relationship between the two countries.",
-                "analysis": [
-                  "主干是 The animals have become a symbol。",
-                  "现在完成时表示象征意义逐渐形成并延续到现在。",
-                  "of the relationship 说明 symbol 的内容。",
-                  "between the two countries 限定关系的双方。"
-                ],
-                "translation": "这些动物已经成为两国关系的一种象征。"
               }
             ]
           }
