@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-06T10:56:34.535+08:00",
+  "updatedAt": "2026-10-07T10:17:11.593+08:00",
   "issues": [
+    {
+      "date": "2026-10-07",
+      "status": "ready",
+      "ai": {
+        "intro": "核对 10 月 6—7 日官方产品更新，选取 Copilot 指标修复、AI Scan 管理视图、GitHub 密钥检测与分支堆叠 PR；免费资源逐一复查官方模型卡、定价与帮助页，区分免费额度、开放权重和未说明的限制。",
+        "updates": [
+          {
+            "event": "GitHub 修复 Copilot Agent 使用统计的 IDE 归因问题（2026-10-06）",
+            "summary": "部分采用 Copilot SDK Agent 模式的 IDE 会话此前没有标明来源 IDE，导致活动漏记或被计入 Copilot CLI。GitHub 已在 VS Code 1.139.0 及之后版本推出修复，其他受影响 IDE 的修复将随更新陆续推出；旧版本产生的缺失数据无法补回。",
+            "howTo": "若团队依赖 Copilot 使用指标，先将 VS Code 更新到 1.139.0 或更高版本；使用其他 IDE 时，等 GitHub 公布修复版本后升级。可在指标报告中核对 IDE 版本，确保 IDE 遥测未关闭且网络未拦截遥测端点。",
+            "impact": "维护课程项目或实验室组织的同学可避免把 Agent 活动误判为 Copilot 使用下降；但历史缺失值不能补回，CLI 指标此前也可能偏高。",
+            "free": "这是使用指标的归因修复，官方明确称不影响计费。适用对象为使用 Copilot SDK Agent 模式的受影响 IDE；VS Code 修复版为 1.139.0 及以后，其他 IDE 仍分批推出。价格、地区和使用额度官方未说明。",
+            "category": "AI 编程工具 / Copilot 使用指标",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-06",
+              "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics"
+            }
+          },
+          {
+            "event": "GitHub Security Overview 显示组织的 AI Scan 启用状态（2026-10-06）",
+            "summary": "组织和企业管理员现在可在 Security Overview 的 coverage view 查看各仓库是否启用了 pull request AI Scan；汇总视图显示启用与未启用仓库数，仓库行及 CSV 导出也包含有效状态。",
+            "howTo": "以组织或企业管理员身份打开 Security Overview 的 coverage view，查看 Code Scanning AI Scan 状态；可用 `code-scanning-ai-scan-pr-scan:enabled` 或 `code-scanning-ai-scan-pr-scan:not-enabled` 筛选，并导出 CSV 核对仓库覆盖情况。",
+            "impact": "负责课程组织或实验室代码库的同学可盘点 AI Scan 覆盖情况，发现未启用的仓库并向管理员确认策略；这项更新提供的是可见性，不代表扫描已自动启用。",
+            "free": "官方说明该状态视图面向组织与企业管理员；计划价格、地区、使用额度及是否需额外启用资格均未说明。",
+            "category": "AI 开发安全 / 仓库管理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-06",
+              "url": "https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview"
+            }
+          },
+          {
+            "event": "GitHub Secret Scanning 新增 Lovable、Pydantic 与 Supabase 密钥检测（2026-10-05）",
+            "summary": "Secret Scanning 新增 Lovable API key、Pydantic Logfire token 与 AI Gateway API key，以及 Supabase OAuth access token 和 scoped personal access token 检测。Lovable 加入合作伙伴计划；公开仓库发现合作伙伴密钥时会转交服务方，用户密钥则可在公开或私有仓库触发告警。",
+            "howTo": "在课程仓库检查 Secret Scanning 告警和受支持的密钥类型；不要把真实密钥提交到仓库来测试。若发现已暴露凭据，立即在对应服务中撤销或轮换，并从代码及后续提交中移除。",
+            "impact": "使用 Lovable、Pydantic AI 或 Supabase 搭建原型的团队，可更早发现误提交的 API 凭据；检测覆盖增加仍不能替代提交前的密钥管理。",
+            "free": "公告说明了受支持的密钥类型及合作伙伴/用户密钥的告警范围，但没有说明适用计划、价格、地区或使用额度；这些信息官方未说明。",
+            "category": "AI 开发安全 / 密钥防泄漏",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-05",
+              "url": "https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more"
+            }
+          },
+          {
+            "event": "GitHub Stacked Pull Requests 正式开放，CLI 与 Agent 工作流支持更多操作（2026-10-06）",
+            "summary": "GitHub 宣布 stacked pull requests 正式可用，可把较大改动拆成较小 PR 独立审阅并合并。更新还增加堆叠 PR 的导航、重定向与合并改进；`gh stack` 扩展支持 Git worktrees，自动合并则会在未来几周逐步推出。",
+            "howTo": "在 GitHub.com 的项目中按依赖关系创建堆叠 PR，利用 PR 页面查看 stack 上下文；也可查阅官方文档并使用 `gh stack` CLI 扩展。设置自动合并前，先确认每个 PR 都满足仓库的合并要求。",
+            "impact": "小组作业中相互依赖的功能分支可以拆成更小的审阅单元，减少一个超大 PR 堵住队友检查的情况；签名提交和分支规则仍需按仓库设置检查。",
+            "free": "官方说明该功能现已适用于所有 GitHub.com 计划；GitHub Enterprise Server 将在未来版本提供。具体 CLI 扩展、地区及使用额度官方未说明；自动合并仍在数周内逐步推出。",
+            "category": "AI 开发协作 / Agent 工作流",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-06",
+              "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Qwen3-8B：Apache-2.0 许可的开放权重语言模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡开放 Qwen3-8B 权重，标注 Apache-2.0 许可；模型卡列出 8.2B 参数、原生 32,768 token 上下文，并提供 Transformers 加载示例。",
+            "howTo": "打开模型卡查看文件与许可；安装 Transformers 4.51.0 或更新版本，按卡片示例用 `AutoTokenizer` 和 `AutoModelForCausalLM` 加载 `Qwen/Qwen3-8B`，再用课程文本测试中英问答或翻译。",
+            "impact": "可用于练习本地模型部署、提示词比较和多语言任务；把模型输出当作待核实的草稿，不直接用于高风险结论。",
+            "free": "模型仓库公开且未设访问门槛，模型卡标注 Apache-2.0。官方未说明下载地区或额度；本地推理所需硬件与算力成本取决于设备，模型卡未承诺免费托管推理。",
+            "category": "免费开放权重 / 多语言学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-8B"
+            }
+          },
+          {
+            "event": "FLUX.1 [schnell]：可下载的 Apache-2.0 文生图权重",
+            "summary": "Black Forest Labs 官方 Hugging Face 模型卡公开 12B 参数的 FLUX.1 [schnell] 权重，称其可在 1 至 4 步生成图像，并采用 Apache-2.0 许可，允许个人、科学及商业用途。",
+            "howTo": "从模型卡查看使用说明与许可证；按示例安装或升级 Diffusers，加载 `black-forest-labs/FLUX.1-schnell`，用自己的提示词生成课程插图或视觉概念稿。先检查硬件是否足以本地运行。",
+            "impact": "可为展示文稿、海报草图或创意作业制作配图，也适合学习扩散模型推理流程；生成图像可能不准确或带有偏见，需人工检查。",
+            "free": "模型权重公开，Apache-2.0 许可允许个人、科学和商业用途；托管 API 价格、地区、账户要求及用量未在模型卡说明。本地使用需自备算力，硬件门槛官方未说明。",
+            "category": "免费开放权重 / 图像生成",
+            "source": {
+              "name": "Black Forest Labs 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：AI Studio 可免费试做部分模型调用",
+            "summary": "Google AI for Developers 当前定价页列出 Gemini API Free Tier：可在 AI Studio 开始使用，部分模型输入与输出 token 免费，但模型访问受限；免费层内容会用于改进 Google 产品。",
+            "howTo": "打开 Google AI Studio，选择定价页明确列为 Free Tier 的模型并按示例发起 API 调用；编写程序前再次核对该模型的免费层、速率限制和数据条款，不上传未公开论文或个人信息。",
+            "impact": "适合做课程原型、练习 API 调用或比较提示词；免费层输入可能用于产品改进，不应把它当成适合敏感资料的私密环境。",
+            "free": "官方明确部分模型输入/输出 token 免费、模型访问受限，免费层内容用于改进产品；定价页未为所有模型统一列出免费调用额度，也未说明本条所涉账户资格或地区，具体速率限制需查看所选模型页面。",
+            "category": "免费 API / AI 开发学习",
+            "source": {
+              "name": "Google AI for Developers 定价文档",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Gemini Notebook 免费用户可添加最多 50 个来源进行资料问答",
+            "summary": "Google 帮助中心说明，Gemini Notebook 免费用户每本笔记本最多可加入 50 个来源，支持 PDF、Office 文档、网页文字和带字幕的公开视频等；单个来源最多 500,000 词，上传文件上限为 200 MB。",
+            "howTo": "打开 Gemini Notebook，新建笔记本并选择 Add sources，导入有权使用的课程文件或网页；选中来源后提问或生成摘要。网页导入仅抓取文字，付费墙页面不受支持。",
+            "impact": "可把多篇课程阅读放在同一笔记本中比较论点、生成复习问题；回答时回看原文及引用，避免把模型归纳误当成作者结论。",
+            "free": "官方写明免费用户最多 50 个来源、单源最多 500,000 词、上传文件最多 200 MB；地区、账户资格、额外提示额度或截止日期官方未说明。移动应用对部分功能可能有限制。",
+            "category": "免费网页工具 / 来源型学习研究",
+            "source": {
+              "name": "Google Gemini Notebook 帮助中心",
+              "published": "官方未说明",
+              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期从 BBC 商业报道与 NPR 媒体行业报道切入：一篇讨论 Jaguar 电动化转型与品牌押注，另一篇分析派拉蒙与华纳合并的市场影响，练习比较事实、公司主张与批评者预测。",
+        "articles": [
+          {
+            "title": "From 'woke' ridicule to real car - new electric Jaguar unveiled",
+            "source": "BBC",
+            "published": "2026-10-07",
+            "url": "https://www.bbc.co.uk/news/articles/c6je50ydld31o",
+            "readingTime": "约 3 分钟",
+            "topic": "商业 / 汽车品牌转型与电动化",
+            "summary": "BBC 从 Jaguar 重塑品牌时引发的争议写起，报道其首款新车型 Type 01 在纽约公开亮相。文章先介绍这款纯电 Grand Tourer 的造型如何回应 Jaguar 的经典历史，再列出动力、续航和价格等数据，说明 JLR 为品牌转型投入巨大。报道没有把新车发布写成单向成功：一方面呈现公司对性能与技术的宣传，另一方面指出高昂售价、设计争议及消费者对全电动战略的不同反应。结尾将新车视为一次商业押注，核心问题是品牌能否借新方向赢得市场。",
+            "reason": [
+              "品牌转型、产品定价与电动化竞争是商业和科技趋势类阅读常见主题，可训练区分产品事实与企业战略判断。",
+              "文章先回顾争议背景，再介绍新车设计和性能，随后讨论价格与市场反应，最后落到品牌押注。",
+              "阅读题可考查车型发布为何受到关注、性能与售价数据如何构成对照，以及作者如何呈现正反反应。",
+              "gamble、emblematic、hefty、reinvent 等词适合迁移到企业转型、创新成本和品牌价值主题。",
+              "写作可借鉴“历史背景—产品证据—成本或风险—市场判断”的结构，避免把发布会数据直接当作商业成功。"
+            ],
+            "vocabulary": [
+              {
+                "word": "unveil",
+                "phonetic": "/ˌʌnˈveɪl/",
+                "part": "v.",
+                "translation": "首次公开；揭晓"
+              },
+              {
+                "word": "imposing",
+                "phonetic": "/ɪmˈpəʊzɪŋ/",
+                "part": "adj.",
+                "translation": "气势宏大的；令人印象深刻的"
+              },
+              {
+                "word": "deliberately",
+                "phonetic": "/dɪˈlɪbərətli/",
+                "part": "adv.",
+                "translation": "刻意地；审慎地"
+              },
+              {
+                "word": "emblematic",
+                "phonetic": "/ˌembləˈmætɪk/",
+                "part": "adj.",
+                "translation": "象征性的；典型的"
+              },
+              {
+                "word": "gamble",
+                "phonetic": "/ˈɡæmbl/",
+                "part": "n.",
+                "translation": "冒险；押注"
+              },
+              {
+                "word": "potent",
+                "phonetic": "/ˈpəʊtənt/",
+                "part": "adj.",
+                "translation": "强劲的；有力的"
+              },
+              {
+                "word": "hefty",
+                "phonetic": "/ˈhefti/",
+                "part": "adj.",
+                "translation": "高额的；巨大的"
+              },
+              {
+                "word": "reinvent",
+                "phonetic": "/ˌriːɪnˈvent/",
+                "part": "v.",
+                "translation": "彻底改造；重新塑造"
+              },
+              {
+                "word": "mixed reactions",
+                "phonetic": "/mɪkst riˈækʃənz/",
+                "part": "n. phr.",
+                "translation": "褒贬不一的反应"
+              },
+              {
+                "word": "strategy",
+                "phonetic": "/ˈstrætədʒi/",
+                "part": "n.",
+                "translation": "战略；策略"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "But it marks a gamble for JLR, which has invested billions reinventing Jaguar and is facing mixed reactions over the new car’s design and the brand’s all-electric strategy.",
+                "analysis": [
+                  "主句主干是 it marks a gamble，it 指代前文的新车型，mark 在此表示“构成、意味着”。",
+                  "句首 But 转折前文关于新车的介绍，提示焦点由产品参数转向商业风险。",
+                  "for JLR 限定这场押注的主体；which 引导非限制性定语从句，补充 JLR 已投入巨资并正面对不同反应。",
+                  "invested billions 与 is facing 并列呈现已付出的成本和当前市场反应，reinventing 作投入的用途说明。",
+                  "可借鉴 mark a gamble for... 概括战略风险，再用 which 从句补充证据。"
+                ],
+                "translation": "但这对 JLR 而言是一场押注：它已投入数十亿重塑 Jaguar，同时新车设计与品牌全电动战略正面临褒贬不一的反应。"
+              },
+              {
+                "original": "The new model’s electric motors are potent, producing about 1000 horsepower and allowing it to accelerate from 0-62mph in 3.2 seconds.",
+                "analysis": [
+                  "主干为 The new model’s electric motors are potent，说明新车型电机动力强劲。",
+                  "句末 producing 与 allowing 是现在分词短语，补充说明 potent 的具体依据。",
+                  "about 1000 horsepower 是 producing 的宾语，about 表示数据约数而非精确承诺。",
+                  "allowing 后接宾语 it 和不定式 to accelerate，from...in...交代加速区间与用时。",
+                  "可借鉴形容词判断后接分词短语，用可量化数据解释产品特征。"
+                ],
+                "translation": "这款新车的电动机动力强劲，可输出约 1,000 马力，并能在 3.2 秒内从静止加速至每小时 62 英里。"
+              },
+              {
+                "original": "However, it comes at a hefty price tag, with a minimum cost of £130,000 ($172,426).",
+                "analysis": [
+                  "However 是句首转折副词，把论述从性能优势转向购买成本。",
+                  "主干 it comes at a hefty price tag 中，come at 表示“以……为代价/价格”。",
+                  "with 引导的介词短语补充说明高价的具体数额，minimum 表示这是起步价。",
+                  "括号内美元金额是对英镑数字的换算说明，不是另一项独立费用。",
+                  "可借鉴 However, ... with a minimum cost of... 在列举优势后引入成本限制。"
+                ],
+                "translation": "不过，这款车售价不菲，起价为 13 万英镑（172,426 美元）。"
+              }
+            ]
+          },
+          {
+            "title": "New Hollywood era begins with an epic mega merger between Paramount and Warner Bros.",
+            "source": "NPR",
+            "published": "2026-10-06",
+            "url": "https://www.npr.org/2026/10/06/nx-s1-5988283/paramount-warner-bros-skydance-merger-david-ellison",
+            "readingTime": "约 5 分钟",
+            "topic": "经济 / 媒体并购与市场竞争",
+            "summary": "NPR 报道派拉蒙与华纳兄弟探索合并后的新公司 Skydance 开始运营，并梳理这笔 1,110 亿美元交易经历的抗议、诉讼和监管审查。文章先呈现新管理层关于资源整合和扩大竞争力的说法，再列出合并后归于同一集团的电影公司、流媒体平台和新闻机构。随后，报道转向反对者的担忧：媒体集中可能减少观众选择、推高订阅成本、压缩影视创作空间，并引发新闻独立性问题。结尾指出，新公司还面临巨额债务和人员去留的不确定性，说明交易完成并不等于整合风险消失。",
+            "reason": [
+              "媒体集中、企业并购、消费者选择和新闻独立性结合了商业与社会议题，适合训练从多方立场提炼主旨。",
+              "文章从新公司成立及交易规模入手，依次交代资产整合、管理层说法、反对者质疑和后续债务压力。",
+              "阅读题可考查并购方与批评者观点的差异、合并包含哪些业务，以及文章末尾提到债务的作用。",
+              "conglomerate、consolidate、regulatory scrutiny、oversight 等词可迁移到商业、监管和公共传播主题。",
+              "写作可借鉴“交易事实—企业理由—利益相关者担忧—未决风险”的论证结构，区分事实与预测。"
+            ],
+            "vocabulary": [
+              {
+                "word": "conglomerate",
+                "phonetic": "/kənˈɡlɒmərət/",
+                "part": "n.",
+                "translation": "大型综合企业；企业集团"
+              },
+              {
+                "word": "consolidate",
+                "phonetic": "/kənˈsɒlɪdeɪt/",
+                "part": "v.",
+                "translation": "合并；巩固"
+              },
+              {
+                "word": "regulatory",
+                "phonetic": "/ˈreɡjələtəri/",
+                "part": "adj.",
+                "translation": "监管的；规制的"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "审查；仔细审视"
+              },
+              {
+                "word": "competitor",
+                "phonetic": "/kəmˈpetɪtə/",
+                "part": "n.",
+                "translation": "竞争者"
+              },
+              {
+                "word": "acquisition",
+                "phonetic": "/ˌækwɪˈzɪʃn/",
+                "part": "n.",
+                "translation": "收购；获得"
+              },
+              {
+                "word": "oversight",
+                "phonetic": "/ˈəʊvəsaɪt/",
+                "part": "n.",
+                "translation": "监督；监管"
+              },
+              {
+                "word": "censor",
+                "phonetic": "/ˈsensə/",
+                "part": "v.",
+                "translation": "审查；删改"
+              },
+              {
+                "word": "inevitable",
+                "phonetic": "/ɪnˈevɪtəbl/",
+                "part": "adj.",
+                "translation": "不可避免的"
+              },
+              {
+                "word": "skeptical",
+                "phonetic": "/ˈskeptɪkl/",
+                "part": "adj.",
+                "translation": "持怀疑态度的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "A new era in Hollywood is set to begin with a new media conglomerate called Skydance.",
+                "analysis": [
+                  "主干是 A new era is set to begin，is set to 表示即将发生或预期将发生。",
+                  "in Hollywood 限定新时代发生的行业范围。",
+                  "with a new media conglomerate 补充伴随的新背景，called Skydance 是过去分词短语作后置定语。",
+                  "句子以概括性判断开篇，为后文解释并购资产和争议搭建背景。",
+                  "可借鉴 be set to + 动词原形引出即将出现的变化，再用 with 短语提供背景。"
+                ],
+                "translation": "好莱坞一个新时代即将随着名为 Skydance 的新媒体集团而开启。"
+              },
+              {
+                "original": "The $111 billion merger faced months of public protests, but ultimately passed legal and regulatory challenges in the U.S. and in Europe.",
+                "analysis": [
+                  "but 连接两个并列分句，前半句说交易面临抗议，后半句说明最终通过法律与监管审查。",
+                  "The $111 billion merger 是共同的主语，金额作前置定语强调交易规模。",
+                  "months of 修饰 public protests，说明抗议持续了一段时间。",
+                  "ultimately 是时间/结果副词，突出经历阻力后的结果；in the U.S. and in Europe 列出审查地区。",
+                  "可借鉴 faced..., but ultimately... 并列呈现阻力与结果，避免把过程写成单一结论。"
+                ],
+                "translation": "这笔 1,110 亿美元的合并案遭遇数月公众抗议，但最终通过了美国和欧洲的法律与监管审查。"
+              },
+              {
+                "original": "People against the deal predict viewers could soon have to pay more for streaming services, they could have fewer choices and there may be less risky films and TV shows.",
+                "analysis": [
+                  "People against the deal 是主句主语，against the deal 是介词短语后置修饰 people。",
+                  "主句谓语 predict 后接观点内容；could 引出对未来的预测，而不是已经发生的事实。",
+                  "后续并列列出三种担忧：订阅价格上升、选择减少，以及影视作品更趋保守。",
+                  "soon 表示预期时间，less risky 修饰 films and TV shows，体现对创作风险偏好的担忧。",
+                  "可借鉴 predict + 从句表达利益相关者对政策或市场变化的预期，并用并列项展开影响。"
+                ],
+                "translation": "反对这笔交易的人预测，观众很快可能要为流媒体服务支付更多费用、选择变少，影视作品也可能更少冒险。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-06",
       "status": "ready",
@@ -2003,451 +2349,6 @@ window.BRIEFING_DATA = {
                   "写作中可用 based on ... 引入依据，并用 cautious wording 标记分析而非判决。"
                 ],
                 "translation": "依据现行法律，这些公司面临的挑战并不轻松。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-09-30",
-      "status": "ready",
-      "ai": {
-        "intro": "近两日可核实的AI新变化不足3项，因此扩大到前7日并保留官方来源的真实发布日期；免费资源均按官方模型卡、产品页或教育福利页复核。",
-        "updates": [
-          {
-            "event": "GPT-6.1 Sol 开始在 GitHub Copilot 推出（2026-09-29）",
-            "summary": "GitHub 宣布 GPT-6.1 Sol 正式加入 Copilot，面向 agentic coding 与终端工作流；官方称其在早期测试中以更少 token 和步骤完成任务，但这是厂商测试描述，不代表独立基准结论。",
-            "howTo": "在符合资格的 Copilot 客户端（如 VS Code、Copilot CLI、github.com 或 GitHub Copilot app）打开模型选择器，选 GPT-6.1 Sol，先给它一个范围清楚的小编码任务，再审查 diff 并运行测试；若尚未显示，等待渐进式开放。",
-            "impact": "可让有资格的学生把它用于课程项目中的多步骤改动、终端任务或 bug 定位，并比较 token 使用和代码质量；仍需自行核对依赖、测试与安全影响。",
-            "free": "仅 Copilot Pro+、Max、Business 和 Enterprise 用户可用，按模型提供方列表价进行用量计费；逐步开放。Copilot Free/Student 不在官方列出的可用计划中；地区及具体用量官方未说明。",
-            "category": "AI 编程 / 新模型",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-29",
-              "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot"
-            }
-          },
-          {
-            "event": "Google Vids 为 Omni 1.1 加入更精细的AI视频控制（2026-09-23）",
-            "summary": "Google Vids 的 Omni 1.1 可延长场景并保持画面元素连贯、指定生成片段时长、生成 1080p 视频场景或放大现有片段；生成内容带有 SynthID 水印。",
-            "howTo": "打开 vids.new 并登录 Google 或 Workspace 账号，在 Google Vids 中提示生成视频场景；按需要延长场景、指定时长，再生成 1080p 片段或放大已有片段并导出。",
-            "impact": "学生可为课程展示、社团活动或项目提案制作短视频，较精确地匹配旁白长度并保持连续镜头；应标注AI生成内容并检查画面事实。",
-            "free": "官方称任何 Google 或 Google Workspace 账号均可免费开始生成；付费 Google AI 计划以及 Workspace Business、Enterprise 计划提供更大的生成池。免费额度、地区范围及账号 rollout 细节官方未说明。",
-            "category": "AI 视频 / 免费创作工具",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-09-23",
-              "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
-            }
-          },
-          {
-            "event": "Gemini 开始接入更多第三方 Connected Apps（2026-09-23）",
-            "summary": "Gemini 新增生产力、创意和生活方式类 Connected Apps，包括 Airtable、Linear、Adobe、Picsart、Peloton 等；可在 Gemini 设置连接应用，或在聊天中用 @ 提及应用。",
-            "howTo": "打开 Gemini 设置中的 Connected Apps，连接自己已有权限的应用；也可在 Gemini 对话中输入 @ 应用名，或直接提出任务。先确认授权范围，再检查 Gemini 汇总或生成的结果。",
-            "impact": "小组项目可在一个对话入口整理数据库或项目事项、构思视觉素材和安排活动；重要内容仍应回到原应用确认。",
-            "free": "官方称功能自公告日起逐步推出，并未说明适用计划、地区、第三方应用订阅条件或具体使用额度；需先连接自己有权使用的应用。",
-            "category": "AI 助手 / 应用连接",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-09-23",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "OpenAI gpt-oss-20b 开放权重（Apache 2.0）",
-            "summary": "OpenAI 官方 Hugging Face 模型卡提供 gpt-oss-20b 权重下载并标注 Apache 2.0；该量化模型面向本地或专用场景，卡片称其可在 16GB 内存中运行，并支持可调推理强度。",
-            "howTo": "按模型卡安装 Ollama 后运行 `ollama pull gpt-oss:20b` 与 `ollama run gpt-oss:20b`；也可用 Hugging Face CLI 下载权重并按官方 Transformers 示例部署。",
-            "impact": "适合在课程项目中练习本地模型部署、推理参数和函数调用；无需按 token 购买托管 API，但需要自行承担硬件、耗电与环境配置成本。",
-            "free": "模型权重可下载，Apache 2.0 许可允许使用与修改；模型卡注明约 16GB 内存需求。账号资格、地区和下载配额官方未说明；本地运行所需设备并非免费提供。",
-            "category": "可下载开放模型权重 / Apache 2.0",
-            "source": {
-              "name": "OpenAI 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/openai/gpt-oss-20b"
-            }
-          },
-          {
-            "event": "Google Vids 可免费生成 AI 视频场景",
-            "summary": "Google 官方说明，Omni 1.1 可在 Vids 中生成 1080p AI 视频场景、延长场景及放大已有片段；普通 Google 账号也可免费开始使用。",
-            "howTo": "访问 vids.new 并登录 Google 或 Workspace 账号，在 Vids 中输入场景描述并生成片段；需要更高生成额度时，先查看 Google AI 或 Workspace 计划说明。",
-            "impact": "可把课程汇报提纲、社团活动信息或项目展示做成短片，省去从空白时间线起步的步骤；提交前检查版权、事实和水印呈现。",
-            "free": "Google 或 Workspace 账号可免费开始生成，付费计划有更大的生成池；具体免费额度、地区与生成次数官方未说明。",
-            "category": "长期免费网页工具 / AI 视频",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-09-23",
-              "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack：Camber Student AI 数据科学资源",
-            "summary": "GitHub Education 列出的 Camber Student 计划面向在读学生免费提供 40 CPU 小时、5 GPU 小时、50GB 存储，以及每月 50 条 agent 消息，可从自有数据与代码构建并运行 AI agent。",
-            "howTo": "在 GitHub Education 申请 Student Developer Pack 并按页面指引领取 Camber Student；在 Camber 中连接项目数据源，创建 AI agent，再留意 CPU、GPU 与月度消息额度。",
-            "impact": "适合课程中的数据分析、机器学习原型和 agent 工作流练习，尤其是需要 GPU 或云端长任务的项目；先用小数据集验证，避免超出配额。",
-            "free": "页面列出在读学生可免费使用；额度为 40 CPU 小时、5 GPU 小时、50GB 存储和每月 50 条 agent 消息。地区、资格审核细则及计划期限官方未说明。",
-            "category": "学生教育福利 / AI 云端开发",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack：Azure for Students 云额度",
-            "summary": "GitHub Education 的学生福利页列出 Microsoft Azure for Students：18 岁及以上学生可获得 25 多项 Azure 云服务的免费访问和 100 美元 Azure credit，并注明无需信用卡。",
-            "howTo": "从 GitHub Education Student Developer Pack 打开 Microsoft Azure 福利入口，按其资格验证步骤申请；用量计费服务会消耗 Azure credit，先检查服务价格与余额。",
-            "impact": "可用于部署课程项目、练习云端基础设施，或在了解计费后试验云端 AI 服务；这笔 credit 是一般 Azure 额度，不等于某个 AI 模型的免费调用配额。",
-            "free": "官方列出 18 岁以上学生、25+ 项免费服务、100 美元 credit 且无需信用卡；具体地区、申领期限、额度有效期及 AI 服务覆盖范围官方未说明。",
-            "category": "学生教育福利 / 云服务额度",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Household energy bills forecast to see biggest rise in four years",
-            "source": "BBC",
-            "published": "2026-09-29",
-            "url": "https://www.bbc.co.uk/news/articles/cwz0zvj4m1myo",
-            "readingTime": "6 分钟",
-            "topic": "经济 / 能源价格与家庭负担",
-            "summary": "BBC 报道称，Cornwall Insight 预测英国典型家庭年能源账单明年1月可能升至1,999英镑，比当前价格上升276英镑、约16%；这只是预测，Ofgem 要到11月下旬才公布实际价格上限。文章先比较10月起的4%涨幅与政府减免的影响，再说明中东天然气供应受扰和欧洲储气偏低如何推高冬季价格；随后以家庭能源负担、超过50亿英镑欠费及供应商和公益组织的呼吁，呈现政策压力。结尾强调预测仍有不确定性，但价格设定窗口已过半，固定费率以外家庭面临的涨价风险较高。",
-            "reason": [
-              "能源价格与家庭负担属于经济、社会政策类常见议题，可练习从个人成本推及公共政策。",
-              "文章按预测数字、成因、家庭影响、政策回应推进，适合概括段落功能与论证链条。",
-              "可练习区分 forecast、actual cap 与 conditional prediction，避免把预测写成已发生事实。",
-              "price cap、variable tariff、storage、targeted support 等词适用于能源与生活成本话题。",
-              "可借鉴用具体账单数字引出弱势群体影响，再提出政策讨论的写作结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "forecast",
-                "phonetic": "/ˈfɔːrkæst/",
-                "part": "n./v.",
-                "translation": "预测；预报"
-              },
-              {
-                "word": "soar",
-                "phonetic": "/sɔːr/",
-                "part": "v.",
-                "translation": "猛增；飙升"
-              },
-              {
-                "word": "typical",
-                "phonetic": "/ˈtɪpɪkəl/",
-                "part": "adj.",
-                "translation": "典型的；有代表性的"
-              },
-              {
-                "word": "price cap",
-                "phonetic": "/ˈpraɪs kæp/",
-                "part": "n.",
-                "translation": "价格上限"
-              },
-              {
-                "word": "variable tariff",
-                "phonetic": "/ˈveriəbəl ˈtærɪf/",
-                "part": "n.",
-                "translation": "浮动费率"
-              },
-              {
-                "word": "sustain",
-                "phonetic": "/səˈsteɪn/",
-                "part": "v.",
-                "translation": "维持；持续"
-              },
-              {
-                "word": "disruption",
-                "phonetic": "/dɪsˈrʌpʃən/",
-                "part": "n.",
-                "translation": "中断；扰乱"
-              },
-              {
-                "word": "storage",
-                "phonetic": "/ˈstɔːrɪdʒ/",
-                "part": "n.",
-                "translation": "储存；储备"
-              },
-              {
-                "word": "targeted",
-                "phonetic": "/ˈtɑːrɡɪtɪd/",
-                "part": "adj.",
-                "translation": "有针对性的"
-              },
-              {
-                "word": "unsustainable",
-                "phonetic": "/ˌʌnsəˈsteɪnəbəl/",
-                "part": "adj.",
-                "translation": "不可持续的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The 16% predicted increase would hit millions of households at the coldest time of year, and would mark the biggest rise in bills for four years.",
-                "analysis": [
-                  "主干为 The increase would hit ... and would mark ...，两个 would 谓语并列。",
-                  "The 16% predicted 是名词 increase 的限定信息，说明幅度和预测性质。",
-                  "at the coldest time of year 与 for four years 分别补充发生时点和比较跨度。",
-                  "and 将家庭影响与历史幅度并列，形成由生活后果到统计判断的递进。",
-                  "可借鉴 would + 动词描述尚未确定的预测结果。"
-                ],
-                "translation": "预计上涨的16%将影响数百万家庭，恰逢一年中最寒冷的时候，并将成为四年来最大的账单涨幅。"
-              },
-              {
-                "original": "The forecast from consultancy Cornwall Insight comes a day before prices go up under regulator Ofgem's October price cap and puts increased pressure on the government to support those who will struggle to pay.",
-                "analysis": [
-                  "主干为 The forecast comes ... and puts ...，两个谓语共享主语。",
-                  "from consultancy Cornwall Insight 交代预测来源；a day before 引出时间参照。",
-                  "under ... price cap 说明价格上涨所处的监管机制。",
-                  "those 后接 who will struggle to pay 的定语从句，限定需要支持的人群。",
-                  "puts pressure on ... to do 是表达政策压力的实用结构。"
-                ],
-                "translation": "咨询机构 Cornwall Insight 的这项预测发布于监管机构 Ofgem 的10月价格上限上调前一天，并加大了要求政府帮助无力支付者的压力。"
-              },
-              {
-                "original": "This remains only a prediction at this stage.",
-                "analysis": [
-                  "主干为 This remains a prediction，This 指前文的账单上涨判断。",
-                  "only 限定判断的证据状态，提醒读者并非最终价格。",
-                  "at this stage 补充当前时间边界，保留未来信息变化的空间。",
-                  "该句与此前具体数字形成必要的审慎限定，体现新闻写作的归因意识。",
-                  "可用于写作中区分当前证据与最终结果：remain only a ... at this stage。"
-                ],
-                "translation": "现阶段这仍然只是一项预测。"
-              }
-            ]
-          },
-          {
-            "title": "How to hide your spending habits from retailers (so you don't get ripped off)",
-            "source": "NPR",
-            "published": "2026-09-29",
-            "url": "https://www.npr.org/2026/09/29/nx-s1-5983457/4-ways-to-avoid-getting-ripped-off-according-to-a-pricing-expert",
-            "readingTime": "6 分钟",
-            "topic": "科技趋势 / 消费者隐私与个性化定价",
-            "summary": "NPR 报道消费者倡议组织负责人 Lindsay Owens 对个性化定价的提醒：酒店、航空公司和零售商可能利用位置、浏览、人口统计与购买记录推测顾客愿付价格，并通过算法测试不同报价。文章先解释数据如何被收集和用于定价，再按场景给出建议：避免登录零售商应用、在不同设备和登录状态下比价、清理 cookies 与限制应用权限，也可考虑线下购物。作者承认这些做法耗时、便利性较低，未必值得用于小额消费；同时指出电子价签等技术也让实体店价格更易变化，并提到部分州开始立法限制个性化定价。",
-            "reason": [
-              "数据隐私、算法定价和消费者权益是科技发展与日常生活交叉的高频议题。",
-              "文章先说明数据如何支持个性化报价，再分场景列出保护隐私和比价方法，最后谈线下零售与政策回应。",
-              "可练习区分作者转述的专家判断、风险机制与可执行建议。",
-              "personalized pricing、incentive、comparison shopping 等词适合科技伦理与消费经济话题。",
-              "建议部分可用于写作中提出分层应对措施，同时注意文章承认时间成本和便利性取舍。"
-            ],
-            "vocabulary": [
-              {
-                "word": "deliberately",
-                "phonetic": "/dɪˈlɪbərətli/",
-                "part": "adv.",
-                "translation": "故意地；蓄意地"
-              },
-              {
-                "word": "overcharged",
-                "phonetic": "/ˌoʊvərˈtʃɑːrdʒd/",
-                "part": "v. pp.",
-                "translation": "被多收费；被索价过高"
-              },
-              {
-                "word": "geo-location",
-                "phonetic": "/ˌdʒiːoʊloʊˈkeɪʃən/",
-                "part": "n.",
-                "translation": "地理位置数据"
-              },
-              {
-                "word": "personalized",
-                "phonetic": "/ˈpɜːrsənəlaɪzd/",
-                "part": "adj.",
-                "translation": "个性化的；针对个人的"
-              },
-              {
-                "word": "incentive",
-                "phonetic": "/ɪnˈsentɪv/",
-                "part": "n.",
-                "translation": "激励；诱因"
-              },
-              {
-                "word": "retailer",
-                "phonetic": "/ˈriːteɪlər/",
-                "part": "n.",
-                "translation": "零售商"
-              },
-              {
-                "word": "comparison shopping",
-                "phonetic": "/kəmˈpærɪsən ˌʃɑːpɪŋ/",
-                "part": "n.",
-                "translation": "比价购物"
-              },
-              {
-                "word": "incognito",
-                "phonetic": "/ˌɪnkɑːɡˈniːtoʊ/",
-                "part": "adj.",
-                "translation": "隐身浏览的"
-              },
-              {
-                "word": "permission",
-                "phonetic": "/pərˈmɪʃən/",
-                "part": "n.",
-                "translation": "许可；权限"
-              },
-              {
-                "word": "unpredictable",
-                "phonetic": "/ˌʌnprɪˈdɪktəbəl/",
-                "part": "adj.",
-                "translation": "难以预测的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "\"What we're seeing is Big Tech reinventing the rip-off,\" says Lindsay Owens, head of the consumer advocacy group Groundwork Collaborative.",
-                "analysis": [
-                  "引语内部的主干是 What we're seeing is ...，What 引导的名词性从句作主语。",
-                  "引语的表语为 Big Tech reinventing the rip-off，其中 Big Tech 是动名词短语的逻辑主语。",
-                  "引语后置的 says Lindsay Owens 是报道语，说明观点来源。",
-                  "head of the consumer advocacy group Groundwork Collaborative 是 Owens 的同位语，补充身份信息。",
-                  "可借鉴“专家原话 + says + 姓名 + 同位语”写法呈现观点及来源。"
-                ],
-                "translation": "消费者倡议组织 Groundwork Collaborative 负责人 Lindsay Owens 说：“我们看到的是大型科技公司在重新包装宰客手法。”"
-              },
-              {
-                "original": "Still, there are ways to get a fair deal.",
-                "analysis": [
-                  "这是 there be 存在句，核心为 there are ways。",
-                  "Still 作句首连接副词，承接风险描述并引出转折性的解决方案。",
-                  "to get a fair deal 是不定式短语，说明 ways 的目的或内容。",
-                  "a fair deal 与前文的 rip-off 形成语义对照。",
-                  "Still, there are ways to ... 可用于从问题过渡到应对方案。"
-                ],
-                "translation": "不过，消费者仍有办法争取公平的交易。"
-              },
-              {
-                "original": "Clear your browsing data and cookies regularly.",
-                "analysis": [
-                  "这是省略主语 you 的祈使句，动词 Clear 直接提出行动建议。",
-                  "browsing data 和 cookies 是并列宾语，表示要清理的两类浏览信息。",
-                  "regularly 是频率副词，修饰 Clear，说明建议需要重复执行。",
-                  "句子由前文的风险分析转为具体、可执行的隐私保护步骤。",
-                  "祈使句可用于建议文，但应结合条件或理由，避免显得武断。"
-                ],
-                "translation": "定期清除浏览数据和 cookies。"
-              }
-            ]
-          },
-          {
-            "title": "On the rocks? Scotch distilleries pause production as unsold 'whisky loch' grows",
-            "source": "The Guardian",
-            "published": "2026-09-29",
-            "url": "https://www.theguardian.com/food/2026/sep/29/scotch-distilleries-pause-production-whisky-loch-scotland",
-            "readingTime": "8 分钟",
-            "topic": "经济 / 产业周期与消费变化",
-            "summary": "文章以苏格兰酒厂暂停生产和大型仓储扩建开篇，解释疫情期间繁荣后全球苏格兰威士忌需求回落，造成库存积压、裁员和部分企业财务压力。报道再分析原因：消费者在疫情期间囤酒后减少购买、健康意识增强、价格上升，以及美国关税和法国等市场需求下滑；威士忌必须在橡木桶中陈酿至少三年，令供需预测更困难。作者也呈现印度市场增长、旅游收入和业内对周期复苏的乐观判断，结尾以历史上低迷后需求回升作对照，但没有断言本轮复苏何时到来。",
-            "reason": [
-              "产业过剩、消费变化、出口市场和长期投资决策构成典型经济类阅读主题。",
-              "文章从仓储与停产的具体画面切入，转向需求成因、市场数据，再呈现复苏观点与历史类比。",
-              "可练习辨析供给过剩与需求下滑的因果链，以及报道如何并置乐观和谨慎声音。",
-              "maturation、glut、offset、downturn 等词适用于商业周期和产业分析。",
-              "可借鉴以案例引出宏观趋势，再用反方迹象和历史参照限定结论的写法。"
-            ],
-            "vocabulary": [
-              {
-                "word": "distillery",
-                "phonetic": "/dɪˈstɪləri/",
-                "part": "n.",
-                "translation": "酿酒厂；蒸馏厂"
-              },
-              {
-                "word": "slump",
-                "phonetic": "/slʌmp/",
-                "part": "v./n.",
-                "translation": "骤降；低迷"
-              },
-              {
-                "word": "glut",
-                "phonetic": "/ɡlʌt/",
-                "part": "n.",
-                "translation": "供过于求；过剩"
-              },
-              {
-                "word": "maturation",
-                "phonetic": "/ˌmætʃəˈreɪʃən/",
-                "part": "n.",
-                "translation": "成熟；陈酿"
-              },
-              {
-                "word": "navigate",
-                "phonetic": "/ˈnævɪɡeɪt/",
-                "part": "v.",
-                "translation": "应对；设法处理"
-              },
-              {
-                "word": "sustained",
-                "phonetic": "/səˈsteɪnd/",
-                "part": "adj.",
-                "translation": "持续的"
-              },
-              {
-                "word": "tentative",
-                "phonetic": "/ˈtentətɪv/",
-                "part": "adj.",
-                "translation": "试探性的；暂定的"
-              },
-              {
-                "word": "offset",
-                "phonetic": "/ˌɔːfˈset/",
-                "part": "v.",
-                "translation": "抵消；弥补"
-              },
-              {
-                "word": "downturn",
-                "phonetic": "/ˈdaʊntɜːrn/",
-                "part": "n.",
-                "translation": "衰退；下行期"
-              },
-              {
-                "word": "overconfidence",
-                "phonetic": "/ˌoʊvərˈkɑːnfɪdəns/",
-                "part": "n.",
-                "translation": "过度自信"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "After a 15-year boom turbocharged by the Covid-19 pandemic, demand for Scotch whisky has slumped around the world.",
-                "analysis": [
-                  "主干为 demand for Scotch whisky has slumped，说明需求已在全球回落。",
-                  "句首 After 引导时间背景，先交代繁荣周期再转入当前变化。",
-                  "turbocharged by the Covid-19 pandemic 是过去分词短语，修饰 boom 并说明繁荣的推动因素。",
-                  "前置背景与主句构成 boom/slump 的时间对照。",
-                  "可借鉴 After + 名词短语引出背景，再用主句写趋势变化。"
-                ],
-                "translation": "在疫情助推的15年繁荣期之后，苏格兰威士忌需求已在全球范围内下滑。"
-              },
-              {
-                "original": "Distilleries have paused production across Scotland to avoid adding to the glut of supply, known as a “whisky loch” – the equivalent of a “wine lake”.",
-                "analysis": [
-                  "主干为 Distilleries have paused production，使用现在完成时描述已采取的应对。",
-                  "to avoid adding ... 是目的不定式；adding 后接 to the glut 表示加剧积压。",
-                  "known as a “whisky loch” 是过去分词短语，补充解释 glut of supply。",
-                  "破折号后的 the equivalent of ... 用类比帮助读者理解新表达。",
-                  "可借鉴 pause ... to avoid doing ... 说明措施与预防目标。"
-                ],
-                "translation": "苏格兰各地的酒厂已暂停生产，以免加剧被称为“威士忌湖”的供给积压——相当于“葡萄酒湖”。"
-              },
-              {
-                "original": "Such lengthy maturation periods, used to create a wide range of flavour profiles from sweet to sulphurous, can make it hard to plan production.",
-                "analysis": [
-                  "主干为 maturation periods can make it hard to plan production。",
-                  "Such lengthy 对 periods 作指示与程度限定，回指前文的长期陈酿过程。",
-                  "used to create ... 是过去分词短语，补充说明陈酿的用途。",
-                  "from sweet to sulphurous 描述风味范围；因果关系落在长期周期使规划更难。",
-                  "make it + adj. + to do 是表达某因素增加行动难度的常用结构。"
-                ],
-                "translation": "如此漫长的陈酿期用于形成从甜味到硫磺味的多种风味，也使生产规划变得困难。"
               }
             ]
           }
