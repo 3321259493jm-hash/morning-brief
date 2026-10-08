@@ -1,6 +1,339 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-07T10:17:11.593+08:00",
+  "updatedAt": "2026-10-08T10:42:26+08:00",
   "issues": [
+    {
+      "date": "2026-10-08",
+      "status": "ready",
+      "ai": {
+        "intro": "核对 10 月 7 日官方产品公告，收录 Copilot 上线 Claude Haiku 5.5、GitHub 更新 AI 密钥检测，以及 Google 开放 SynthID Detector；免费资源重新核对官方定价、产品公告和模型卡，注明未公开的价格、账号与配额限制。",
+        "updates": [
+          {
+            "event": "Claude Haiku 5.5 上线 GitHub Copilot，面向快速、高频任务（2026-10-07）",
+            "summary": "GitHub 宣布 Claude Haiku 5.5 已在 Copilot 中正式提供，定位为快速、高频工作的小模型，适用于子代理、快速编辑和终端任务。模型可在 VS Code、Visual Studio、Copilot CLI、Copilot cloud agent、GitHub Copilot app、github.com、移动端、JetBrains、Xcode 和 Eclipse 的模型选择器中使用；开放正逐步推送。",
+            "howTo": "在上述任一受支持 Copilot 客户端打开模型选择器，选 Claude Haiku 5.5 后用于小范围代码修改、终端任务或子代理；如果尚未显示，等待逐步开放并检查组织管理员的模型策略。",
+            "impact": "课程项目中可将快速代码编辑、重复性终端工作或子代理任务交给轻量模型处理，再自行检查补丁和执行结果；调用消耗取决于使用量和所选计划的额度。",
+            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，不包括 Copilot Free 或 Student。该模型按提供商列表价采用基于用量的计费；具体价格见官方模型计费表。上线逐步推送；地区限制和单独配额官方未说明。",
+            "category": "AI 编程工具 / 模型更新",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-07",
+              "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
+            }
+          },
+          {
+            "event": "GitHub 将 AI 密钥检测模型用于密码告警，并规划更多检测入口（2026-10-07）",
+            "summary": "GitHub 推出一款读取周边代码上下文的专用密钥检测模型，可识别包括不具备常见 token 格式的密码。已使用 AI 检测密码告警的 GHSP 或 GHAS 客户已自动切换到新模型且不额外收费；AI push protection 处于私有预览，Copilot CLI 与 App 的 `/security-review` 密钥分类检查则仍待后续预览。",
+            "howTo": "若课程仓库所在组织已经启用 GHSP 或 GHAS 的 AI 密码告警，继续通过现有 secret-scanning 告警流程查看结果，模型升级无需手动切换。需要 AI push protection 的团队应由管理员先核对资格与预算，再申请预览并选择启用；不要把尚未开放的 `/security-review` 新分类器当成已上线功能。",
+            "impact": "团队可了解 GitHub 正把上下文识别用于发现格式不明显的密码，但告警仍需人工确认并及时撤销暴露凭据；普通个人仓库不能据此假定已有该企业级保护。",
+            "free": "现有 AI 检测密码告警对 GHSP/GHAS 客户不额外收费，但这些是有许可的安全产品。AI push protection 私有预览要求 GitHub Enterprise Cloud 或 GitHub Team 且购买 GHSP/GHAS，并将消耗 AI Credits；Copilot 密钥检查尚未开放，计划纳入 AI Credits。具体每次额度、适用地区和免费信用额官方未说明。",
+            "category": "AI 开发安全 / 密钥检测",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-07",
+              "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection"
+            }
+          },
+          {
+            "event": "Google 向全球英语用户开放 SynthID Detector，核验图像、视频和音频（2026-10-07）",
+            "summary": "Google DeepMind 宣布 SynthID Detector 面向全球英语用户开放。用户可提交图像、视频或音频，检查其中是否带有 Google 或合作方 AI 工具生成内容的 SynthID 水印；公告点名 OpenAI、NVIDIA、Kakao，Apple 支持则称即将推出。它检查的是相应水印，不是对所有 AI 生成内容的通用识别保证。",
+            "howTo": "打开 https://synthid.com/，选择图像、视频或音频文件并提交检测，查看系统是否在媒体中识别到 SynthID；若无水印结果，不应据此断定内容一定由人类创作。",
+            "impact": "写报告或准备课堂展示时，可对社交平台流传的多媒体做一次来源线索核验，并在引用时保留不确定性；未检测到水印不能作为真实性证明。",
+            "free": "Google 公告称该工具现面向全球任何人以英语使用；官方未说明是否收费、账号资格、上传大小或次数、保存期限及逐地区限制。",
+            "category": "AI 媒体核验 / 数字素养",
+            "source": {
+              "name": "Google The Keyword",
+              "published": "2026-10-07",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "SynthID Detector：公开使用的 AI 媒体水印核验工具",
+            "summary": "SynthID Detector 可供全球英语用户检查图像、视频和音频是否含有 Google 或合作方 AI 工具的 SynthID 水印，合作方包括 OpenAI、NVIDIA 和 Kakao。它只能提供水印线索，不能证明未检出水印的文件必然真实。",
+            "howTo": "访问 https://synthid.com/ 并提交待核验的图像、视频或音频；把结果作为来源线索，与原发布者和其他证据一并核对。",
+            "impact": "适用于课程演示、媒体素养练习和核对网络多媒体出处，不应代替事实核查或用于判断所有 AI 生成内容。",
+            "free": "官方称现面向全球任何人开放英语版本，但未说明价格、账号要求、文件大小、次数配额和文件处理期限；这些限制官方未说明。",
+            "category": "免费工具 / AI 媒体溯源",
+            "source": {
+              "name": "Google The Keyword",
+              "published": "2026-10-07",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
+            }
+          },
+          {
+            "event": "EmbeddingGemma 2：Apache 2.0 许可的多模态嵌入模型",
+            "summary": "Google DeepMind 的 EmbeddingGemma 2 开放 740M 参数权重，可把文本、代码、图像、视频和音频映射到统一向量空间，模型卡标注 Apache 2.0 许可。模型适用于本地语义搜索、分类和检索增强生成，不是直接生成文章的聊天模型。",
+            "howTo": "从 https://huggingface.co/google/embeddinggemma-2 查看许可证和快速开始；按模型卡安装 `sentence-transformers` 与 `transformers`，加载 `google/embeddinggemma-2`，用 `model.encode` 为自己的学习笔记或资料生成文本向量并比较相似度。",
+            "impact": "学生可用它制作离线笔记检索小实验，或学习如何把文本及多媒体转成可搜索向量；模型卡指出可按任务仅加载所需模态，实际速度取决于本地硬件。",
+            "free": "权重公开并采用 Apache 2.0 许可，模型卡仓库未设访问门槛；下载权重及本地运行不收模型使用费。托管推理的价格、地区和配额、特定硬件要求官方未统一说明。",
+            "category": "免费开放权重 / 多模态学习与检索",
+            "source": {
+              "name": "Google DeepMind 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/google/embeddinggemma-2"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：AI Studio 可免费调用部分模型",
+            "summary": "Google 当前定价文档列出 Gemini API Free Tier：可从 Google AI Studio 开始，部分模型的输入和输出 token 免费；可访问的模型有限制，而且免费层数据会用于改进 Google 产品。",
+            "howTo": "打开 Google AI Studio，选择官方定价页标为 Free Tier 的模型并按 API 快速开始文档发起调用；编码前核对该模型的速率限制及数据条款，不上传未公开论文或个人资料。",
+            "impact": "适合学生练习 API 调用、制作课程原型或比较提示词；免费层数据处理条款意味着不应把它当作提交敏感材料的私密空间。",
+            "free": "官方明确部分模型免费提供输入和输出 token，且模型访问受限、免费层内容用于改进 Google 产品；定价页未为所有模型列出统一额度，账号资格、地区资格及具体模型速率须逐项核对，通用额度官方未说明。",
+            "category": "免费 API / AI 开发学习",
+            "source": {
+              "name": "Google AI for Developers 定价文档",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-8B：Apache-2.0 许可的开放权重语言模型",
+            "summary": "Qwen 官方模型卡公开 Qwen3-8B 权重，标注 Apache-2.0 许可，列出 8.2B 参数及原生 32,768 token 上下文，并提供 Transformers 加载代码。模型支持思考与非思考模式，可用于中英问答、翻译和本地推理练习。",
+            "howTo": "打开模型卡查看文件与许可证；安装 Transformers 4.51.0 或更新版本，按卡片示例用 `AutoTokenizer` 和 `AutoModelForCausalLM` 加载 `Qwen/Qwen3-8B`，用非敏感课程文本测试问答或翻译。",
+            "impact": "可用于练习本地部署、提示词比较和多语言任务；把模型输出当成待核实草稿，并先确认个人设备是否能承担推理。",
+            "free": "官方仓库公开且未设访问门槛，模型卡标注 Apache-2.0；权重许可不等同于免费托管推理。本地硬件成本由使用者承担，托管 API 的价格、地区与用量官方未说明。",
+            "category": "免费开放权重 / 多语言学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-8B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期选 The Conversation 对 2026 亚运会政治张力的评论与 The Guardian 对埃博拉疫情的报道，分别练习历史背景如何解释当下事件，以及公共卫生报道如何从个案扩展到系统性约束。",
+        "articles": [
+          {
+            "title": "How geopolitical tensions tainted the 2026 Asian Games",
+            "source": "The Conversation",
+            "published": "2026-10-06",
+            "url": "https://theconversation.com/how-geopolitical-tensions-tainted-the-2026-asian-games-293279",
+            "readingTime": "约 6 分钟",
+            "topic": "文化 / 体育赛事中的历史记忆与区域政治",
+            "summary": "文章的核心判断是，亚运会虽以“想象一个亚洲”为口号，却无法与区域政治分离。作者先写日本名古屋开幕仪式呈现丰臣秀吉，引发韩国抗议，并用日本侵朝历史解释敏感性；继而讨论朝鲜运动员四十余年来首次赴日参赛及其与在日朝鲜族群体的互动，再列举朝韩比赛中的国歌误播、赛后拒绝握手等摩擦。后半转向台湾代表团遭遇的旗帜、服饰和入村争议，显示赛事组织者如何管理主权象征。结尾将这些案例概括为更具分裂性的国际体育环境中，赛事日益成为政治争议舞台；文章通过具体事件支撑评论，而非把“团结”口号直接当作现实。",
+            "reason": [
+              "体育与历史记忆、身份认同及文化交流交织，适合文化、社会关系和国际交流主题的考研阅读。",
+              "结构从赛事口号和日方仪式切入，按日韩、朝鲜与在日社群、台湾代表团逐步扩展，最后回到总论点。",
+              "可练习辨认作者观点与报道事实的区别，理解历史背景如何解释当下抗议，以及案例如何支撑结论。",
+              "fragmented、delegation、diaspora、friction 等词可用于社会分歧、群体身份与国际交流话题。",
+              "写作可借鉴“提出理想叙事—列出反例—解释历史成因—归纳制度影响”的结构，并用具体事件支撑抽象判断。"
+            ],
+            "vocabulary": [
+              {
+                "word": "drew to a close",
+                "phonetic": "/drɔː tə ə kləʊs/",
+                "part": "phr.",
+                "translation": "接近尾声；结束"
+              },
+              {
+                "word": "fragmented",
+                "phonetic": "/fræɡˈmentɪd/",
+                "part": "adj.",
+                "translation": "分裂的；碎片化的"
+              },
+              {
+                "word": "come to the fore",
+                "phonetic": "/kʌm tə ðə fɔː/",
+                "part": "phr.",
+                "translation": "显现出来；成为焦点"
+              },
+              {
+                "word": "flared",
+                "phonetic": "/fleə/",
+                "part": "v.",
+                "translation": "（冲突、紧张局势）骤然加剧"
+              },
+              {
+                "word": "delegation",
+                "phonetic": "/ˌdelɪˈɡeɪʃn/",
+                "part": "n.",
+                "translation": "代表团"
+              },
+              {
+                "word": "diaspora",
+                "phonetic": "/daɪˈspɒrə/",
+                "part": "n.",
+                "translation": "散居群体；离散族群"
+              },
+              {
+                "word": "friction",
+                "phonetic": "/ˈfrɪkʃn/",
+                "part": "n.",
+                "translation": "摩擦；冲突"
+              },
+              {
+                "word": "defiance",
+                "phonetic": "/dɪˈfaɪəns/",
+                "part": "n.",
+                "translation": "反抗；违抗"
+              },
+              {
+                "word": "fractured",
+                "phonetic": "/ˈfræktʃəd/",
+                "part": "adj.",
+                "translation": "分裂的；破裂的"
+              },
+              {
+                "word": "contention",
+                "phonetic": "/kənˈtenʃn/",
+                "part": "n.",
+                "translation": "争议；论点"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Despite the official slogan “imagine one Asia”, fragmented regional politics came to the fore as the event unfolded.",
+                "analysis": [
+                  "主干是 fragmented regional politics came to the fore，说明区域政治分歧浮现。",
+                  "句首 Despite the official slogan 是让步状语，把赛事口号与现实结果构成对照。",
+                  "as the event unfolded 是时间/过程状语从句，交代矛盾逐步显现的背景。",
+                  "fragmented 修饰 politics，后半用 came to the fore 表达议题由潜在变成显著。",
+                  "可借鉴 Despite + 名词，... came to the fore 的结构，写理想目标与现实落差。"
+                ],
+                "translation": "尽管官方口号是“想象一个亚洲”，区域政治分歧仍随着赛事展开而浮上台面。"
+              },
+              {
+                "original": "Historical issues are an area of particular sensitivity between South Korea and Japan.",
+                "analysis": [
+                  "句子主干为 Historical issues are an area，主语是历史问题，表语说明其性质。",
+                  "of particular sensitivity 是介词短语作后置修饰，具体界定 area。",
+                  "between South Korea and Japan 限定敏感性涉及的双方。",
+                  "该句把前述具体事件上升为解释背景，连接事例与作者分析。",
+                  "可借鉴 an area of particular sensitivity between... 概括双边关系中的敏感议题。"
+                ],
+                "translation": "历史问题是韩国与日本之间一个格外敏感的领域。"
+              },
+              {
+                "original": "The fractured regional relations on show at the 2026 Asian Games should not be viewed in isolation.",
+                "analysis": [
+                  "主干是 The fractured regional relations should not be viewed，使用情态动词加被动语态表达作者的判断。",
+                  "on show at the 2026 Asian Games 是后置修饰语，限定所指的区域关系。",
+                  "in isolation 表示孤立地看，构成作者要求读者采用整体背景理解的方式。",
+                  "句子由前文多个赛事争议归纳而来，提醒读者将个案放在更广泛的世界政治中考察。",
+                  "可借鉴 should not be viewed in isolation 提出分析框架，避免把事件脱离背景。"
+                ],
+                "translation": "亚运会上显现的区域关系裂痕，不应被孤立看待。"
+              }
+            ]
+          },
+          {
+            "title": "Kenya confirms first Ebola case as virus ‘surges’ in DR Congo province",
+            "source": "The Guardian",
+            "published": "2026-10-06",
+            "url": "https://www.theguardian.com/world/2026/oct/06/kenya-first-ebola-case-death-drc",
+            "readingTime": "约 4 分钟",
+            "topic": "健康 / 疫情追踪与公共卫生系统",
+            "summary": "报道以肯尼亚卫生部长宣布一名从刚果（金）返国男子感染埃博拉后死亡为开端，随后补充他跨境旅行、被隔离、确诊和追踪接触者的时间线。文章指出当局列出 28 名接触者，并正寻找同机乘客；同时把个案放回刚果（金）疫情背景，援引当地病例与死亡统计及无国界医生组织对北基伍病例增长的警告。后半转向疫情控制的系统障碍：冲突、对当局的不信任、资源短缺和治疗床位不足会增加转诊风险。结尾通过援引援助组织人员的描述强化医疗能力不足的后果，使报道从单一病例扩展到公共卫生应对条件。",
+            "reason": [
+              "传染病、跨境监测和医疗资源配置是健康与公共政策阅读常见主题，可训练事实信息筛选。",
+              "文章按确诊死亡、接触者追踪、区域传播背景、当地治疗能力障碍逐层推进。",
+              "阅读题可考查个案时间线、数字对应对象、消息来源归属，以及结尾如何解释疫情应对困难。",
+              "subsequently、isolate、contact tracing、hinder 等表达适用于公共卫生和风险管理语境。",
+              "写作可借鉴“个案—数据—结构性制约”的论证链，并用 reported、according to 等表达清楚标注信息来源。"
+            ],
+            "vocabulary": [
+              {
+                "word": "outbreak",
+                "phonetic": "/ˈaʊtbreɪk/",
+                "part": "n.",
+                "translation": "（疾病）暴发；疫情"
+              },
+              {
+                "word": "strain",
+                "phonetic": "/streɪn/",
+                "part": "n.",
+                "translation": "（病毒）毒株"
+              },
+              {
+                "word": "subsequently",
+                "phonetic": "/ˈsʌbsɪkwəntli/",
+                "part": "adv.",
+                "translation": "随后；之后"
+              },
+              {
+                "word": "isolated",
+                "phonetic": "/ˈaɪsəleɪt/",
+                "part": "v.",
+                "translation": "隔离；使孤立"
+              },
+              {
+                "word": "contact",
+                "phonetic": "/ˈkɒntækt/",
+                "part": "n.",
+                "translation": "（疾病患者的）接触者"
+              },
+              {
+                "word": "hindered",
+                "phonetic": "/ˈhɪndə/",
+                "part": "v.",
+                "translation": "阻碍；妨碍"
+              },
+              {
+                "word": "mistrust",
+                "phonetic": "/ˌmɪsˈtrʌst/",
+                "part": "n.",
+                "translation": "不信任"
+              },
+              {
+                "word": "surge",
+                "phonetic": "/sɜːdʒ/",
+                "part": "n.",
+                "translation": "激增；急剧上升"
+              },
+              {
+                "word": "peripheral",
+                "phonetic": "/pəˈrɪfərəl/",
+                "part": "adj.",
+                "translation": "外围的；边远地区的"
+              },
+              {
+                "word": "instability",
+                "phonetic": "/ˌɪnstəˈbɪləti/",
+                "part": "n.",
+                "translation": "不稳定；动荡"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The man, who has not been named, had been treated in the DRC after falling ill about a month ago.",
+                "analysis": [
+                  "主干是 The man had been treated in the DRC，过去完成时被动语态交代报道时点之前的治疗经历。",
+                  "who has not been named 是非限制性定语从句，补充说明当事人身份未公开。",
+                  "after falling ill about a month ago 是时间状语，交代就医前的病程起点。",
+                  "句子以匿名患者为中心，依次交代身份处理、地点和时间背景。",
+                  "可借鉴 had been treated... after doing... 按先后顺序压缩叙述事件。"
+                ],
+                "translation": "这名男子尚未公开姓名；他约一个月前发病后，曾在刚果（金）接受治疗。"
+              },
+              {
+                "original": "After starting in the DRC’s north-eastern Ituri province, the current outbreak has spread to seven provinces in the country’s north and east.",
+                "analysis": [
+                  "句首 After starting in... 是时间状语，说明疫情最初出现的地点。",
+                  "主干是 the current outbreak has spread，使用现在完成时概括截至报道时的传播范围。",
+                  "to seven provinces 指出扩散的数量，in the country’s north and east 进一步限定地理范围。",
+                  "该句由个案转向区域发展，为后续讨论跨省传播和医疗资源压力提供背景。",
+                  "可借鉴 After starting in..., ... has spread to... 描述事件从起点向更广范围扩展。"
+                ],
+                "translation": "当前疫情从刚果（金）东北部的伊图里省开始，已蔓延至该国北部和东部的七个省份。"
+              },
+              {
+                "original": "Multiple outbreaks are developing at the same time, with varying intensity and in different locations.",
+                "analysis": [
+                  "主干为 Multiple outbreaks are developing，使用现在进行时呈现同时发生且仍在发展的状况。",
+                  "at the same time 是时间状语，强调多个疫情并行。",
+                  "with varying intensity and in different locations 是补充性介词短语，分别说明强度与地点差异。",
+                  "这是无国界医生组织协调员的引语，呈现一线人员对疫情复杂性的描述，而非记者直接下结论。",
+                  "可借鉴 with + 名词 + 并列补充项，简洁交代多个现象的差异维度。"
+                ],
+                "translation": "多处疫情正在同时发展，其烈度各不相同，地点也各异。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-07",
       "status": "ready",
@@ -2017,338 +2350,6 @@ window.BRIEFING_DATA = {
                   "will be left with 强调政策变化后可用选择减少，可用于描述制度性后果。"
                 ],
                 "translation": "这些变化一旦生效，这些移民群体可负担且全面的保障选择将所剩无几。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-01",
-      "status": "ready",
-      "ai": {
-        "intro": "昨日到今日核实到两项官方产品变化，因此将检索范围扩大至前7日补足第3项；各条保留真实发布日期，免费资源按官方模型卡与帮助页复核。",
-        "updates": [
-          {
-            "event": "Cursor 推出 Rollouts 与 Security Review 两款代码发布机器人（2026-10-01）",
-            "summary": "Cursor 发布两款面向代码交付的 bot：Rollouts 在部署期间按环境监测变更健康度并报告回归；Security Review 在 pull request 中报告可利用漏洞。",
-            "howTo": "在 Cursor dashboard 的 Automations 中启用 Rollouts，连接源代码平台、部署系统和遥测服务；下一个 pull request 即开始监测。Security Review 可在 dashboard 为目标仓库启用，草稿 PR 会跳过。",
-            "impact": "有相应团队权限的学生可在课程项目发布时区分 staging 与 production 的回归，并在合并前查看注入、权限绕过或不安全反序列化等安全提示；报告仍需人工复核，Rollouts 不会自行合并或回滚。",
-            "free": "官方称功能面向 Cursor Teams 与 Enterprise 计划。公告称接下来10天含试用用量额度，约对应 Teams 50 次、Enterprise 500 次变更；个人免费层、地区与之后的价格或配额官方未说明。",
-            "category": "AI 编程 / 代码审查与部署",
-            "source": {
-              "name": "Cursor Changelog",
-              "published": "2026-10-01",
-              "url": "https://cursor.com/changelog"
-            }
-          },
-          {
-            "event": "GitHub Copilot 研究预览 HydraFusion 扩展到 VS Code 与 Copilot app（2026-09-30）",
-            "summary": "HydraFusion 不只是单个模型，而是在一次任务中编排多个模型；它可采用单模型、逐级升级或异模型批评后修订三种工作流，并增加过程透明度与进度提示。",
-            "howTo": "在 VS Code 1.140 或更新版本的 Copilot Chat 模型选择器中选 HydraFusion；若未出现，启用 `chat.copilot.hydraFusion.enabled`。Copilot app 用户更新应用后，在 Settings 搜索并启用 HydraFusion，再从模型选择器选择。",
-            "impact": "适合有权限的学生将多文件编程任务交给模型协作流程，并查看草稿是否经过质量门槛或独立审阅；仍需自行检查代码和运行测试。",
-            "free": "仅 Copilot Pro、Pro+、Business 与 Enterprise 用户可用，仍属可能变化的 research preview；Business/Enterprise 管理员需允许预览功能。官方未说明个人免费计划、地区或配额。",
-            "category": "AI 编程 / 多模型协作",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-09-30",
-              "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app"
-            }
-          },
-          {
-            "event": "Microsoft Copilot 新增 Home、Code 与 Autopilot 工作模式（2026-09-25）",
-            "summary": "Microsoft 公布新版 Copilot：Home 汇集 Chat、Cowork 与 Office 文档，Code 可用自然语言构建小型应用或自动化，Autopilot 则是持续工作的个人 agent。公告中的功能仍按 Frontier 与预览计划分阶段推出。",
-            "howTo": "符合组织条件的用户可通过 Microsoft Frontier 计划留意 Home 与 Code rollout；Code 的预览稍后面向 Microsoft 365 Premium 与 Pro 订阅者开放。Autopilot 需等待公告所述的 private preview。",
-            "impact": "学生团队可将课程项目资料整理、预算表或演示文稿起草放在同一 Copilot 工作区；若获得 Code 预览，也可用自然语言搭建小型项目看板，再检查生成逻辑和数据。",
-            "free": "官方说明新版通过 Frontier 计划逐步推出，Code 预览稍后面向 Microsoft 365 Premium 与 Pro 订阅者；价格、免费额度、地区和各功能的最终开放时间官方未说明。",
-            "category": "AI 助手 / 工作流",
-            "source": {
-              "name": "Microsoft Blog",
-              "published": "2026-09-25",
-              "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Colab 免费提供托管 Jupyter 笔记本与计算资源",
-            "summary": "Google Colab 无需本地安装即可运行和分享 Jupyter 笔记本；官方 FAQ 说明免费层可访问计算资源，包括 GPU 与 TPU，适合机器学习、数据科学和课程实验。",
-            "howTo": "打开 Colab，新建 notebook 或从 GitHub 导入 `.ipynb` 文件，在代码单元中运行课程代码；需要加速时从 Runtime 菜单尝试 GPU 或 TPU。",
-            "impact": "可用于课程数据清理、机器学习作业和复现公开 notebook，减少本地环境安装负担；重要结果及时下载或存入 Drive，避免依赖临时运行时。",
-            "free": "官方确认免费；资源不保证且不无限，使用限制会变化。账号资格、地区和固定免费配额官方未说明。",
-            "category": "免费学习工具 / 云端 Notebook",
-            "source": {
-              "name": "Google Colaboratory FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Microsoft Phi-4-mini-instruct 提供 MIT 许可开放权重",
-            "summary": "Microsoft 模型卡提供 3.8B 参数的 Phi-4-mini-instruct，面向计算资源受限环境并支持 128K token 上下文；权重按 MIT 许可发布，适合练习本地推理与多语言文本任务。",
-            "howTo": "打开官方 Hugging Face 模型卡，在 Files and versions 下载权重；按卡片中的 Transformers 示例加载 `microsoft/Phi-4-mini-instruct`，或先试用卡片链接的 Hugging Face demo。",
-            "impact": "学生可用较小型模型练习摘要、数学问答与本地部署，并比较提示词和输出；模型卡提醒应针对具体用途评估准确性、安全性与公平性。",
-            "free": "模型权重按 MIT 许可提供；托管推理、硬件成本、地区与下载配额官方未说明。",
-            "category": "可下载开放模型权重 / MIT",
-            "source": {
-              "name": "Microsoft 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
-            }
-          },
-          {
-            "event": "Mistral Small 3.2 24B 提供 Apache 2.0 开放权重",
-            "summary": "Mistral 模型卡提供 Small 3.2 24B Instruct 权重，说明它改进了精确指令跟随、减少重复生成，并提供更稳健的函数调用模板；权重许可为 Apache 2.0。",
-            "howTo": "按模型卡安装 `vllm>=0.9.1`，再运行 `vllm serve mistralai/Mistral-Small-3.2-24B-Instruct-2506 --tokenizer_mode mistral --config_format mistral --load_format mistral --tool-call-parser mistral --enable-auto-tool-choice --tensor-parallel-size 2`。",
-            "impact": "有合适 GPU 的学生可在本机或实验室服务器上练习函数调用、工具使用和本地推理；不要把模型卡所述的能力描述当作独立评测结论。",
-            "free": "权重按 Apache 2.0 许可提供；模型卡注明 BF16/FP16 推理约需 55GB GPU RAM。下载账号、地区、托管推理额度官方未说明，运行硬件并非免费提供。",
-            "category": "可下载开放模型权重 / Apache 2.0",
-            "source": {
-              "name": "Mistral 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
-            }
-          },
-          {
-            "event": "Google Gemma 3 1B 提供可下载开放权重",
-            "summary": "Google DeepMind 的 Gemma 3 1B 指令模型可处理文本和图像输入并生成文本，模型卡说明 1B 版本支持 32K token 输入上下文，并以小型模型为目标适配资源受限环境。",
-            "howTo": "打开官方模型卡并按其 Gemma Terms 使用；安装 `transformers>=4.50.0`，加载 `google/gemma-3-1b-it`，依照卡片示例使用 instruction-tuned chat template。",
-            "impact": "适合学生在个人设备或课程实验环境中尝试本地文本摘要、图像问答和小模型部署；先检查许可条款与设备能力。",
-            "free": "模型卡提供开放权重并链接 Google Gemma Terms；费用、账号资格、地区和下载配额官方未说明，使用受该条款约束。",
-            "category": "可下载开放模型权重 / Gemma Terms",
-            "source": {
-              "name": "Google DeepMind 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/google/gemma-3-1b-it"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "California bans child marriage, a practice still legal in 32 US states",
-            "source": "BBC",
-            "published": "2026-10-01",
-            "url": "https://www.bbc.co.uk/news/articles/c6rm9mnn0w3eo",
-            "readingTime": "6 分钟",
-            "topic": "社会 / 未成年人保护与婚姻法",
-            "summary": "BBC 从加州新法、旧有法律漏洞和当事人经历展开报道：新禁令将于2027年1月1日生效；此前加州没有最低婚龄，父母同意且法官批准即可结婚，未成年人也缺乏离婚机制。倡议组织称加州每年约有9,000名女孩结婚，几乎所有童婚都涉及女孩与成年男性；报道指出加州是2018年以来第18个禁止童婚的州。文章以幸存者证词呈现法律漏洞造成的个人伤害，并补充多年倡议及其他州仍允许童婚的背景，最后以新法生效日期和继续推动全国禁令收束。",
-            "reason": [
-              "未成年人保护与婚姻法兼具社会公平和公共政策属性，适合练习社会议题类阅读。",
-              "文章由新法切入，回溯旧制度，再用当事人证词和倡议组织数据说明影响，最后交代实施日期。",
-              "可练习主旨概括、数字归因、法律变化前后对比及证据来源辨析。",
-              "consent、nuptials、advocacy、lobbying 等词汇可用于法律与社会政策话题。",
-              "写作上可借鉴“制度缺口—受影响群体—改革回应”的论证顺序，并谨慎归因倡议组织数据。"
-            ],
-            "vocabulary": [
-              {
-                "word": "ban",
-                "phonetic": "/bæn/",
-                "part": "v./n.",
-                "translation": "禁止；禁令"
-              },
-              {
-                "word": "consent",
-                "phonetic": "/kənˈsent/",
-                "part": "n./v.",
-                "translation": "同意；许可"
-              },
-              {
-                "word": "nuptials",
-                "phonetic": "/ˈnʌpʃəlz/",
-                "part": "n.pl.",
-                "translation": "婚礼；婚姻"
-              },
-              {
-                "word": "trapped",
-                "phonetic": "/træpt/",
-                "part": "adj.",
-                "translation": "受困的；陷入困境的"
-              },
-              {
-                "word": "abusive",
-                "phonetic": "/əˈbjuːsɪv/",
-                "part": "adj.",
-                "translation": "虐待性的；辱骂的"
-              },
-              {
-                "word": "advocacy",
-                "phonetic": "/ˈædvəkəsi/",
-                "part": "n.",
-                "translation": "倡议；拥护"
-              },
-              {
-                "word": "wed",
-                "phonetic": "/wed/",
-                "part": "v.",
-                "translation": "结婚；使结婚"
-              },
-              {
-                "word": "lobbying",
-                "phonetic": "/ˈlɑːbiɪŋ/",
-                "part": "n.",
-                "translation": "游说活动"
-              },
-              {
-                "word": "survivor",
-                "phonetic": "/sərˈvaɪvər/",
-                "part": "n.",
-                "translation": "幸存者；挺过困境的人"
-              },
-              {
-                "word": "predatory",
-                "phonetic": "/ˈpredətɔːri/",
-                "part": "adj.",
-                "translation": "掠夺性的；利用弱者的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "In the state, there had been no legal age to wed, allowing children to get married as long as their parents consent and a judge signs off on the nuptials.",
-                "analysis": [
-                  "主干为 there had been no legal age，there be 结构说明此前缺少法定最低年龄。",
-                  "In the state 是句首地点状语，限定讨论范围为加州。",
-                  "allowing children... 是现在分词短语，补充说明没有年龄限制带来的后果。",
-                  "as long as 引导条件状语从句，parents consent 与 a judge signs off 是并列条件。",
-                  "可借鉴 no ... , allowing ... 描述制度缺口及其结果。"
-                ],
-                "translation": "在该州，此前没有法定结婚年龄，只要父母同意且法官批准，儿童就可以结婚。"
-              },
-              {
-                "original": "There was also no mechanism for people under 18 to get divorced.",
-                "analysis": [
-                  "主干为 There was no mechanism，there be 结构引出制度缺失。",
-                  "also 将离婚程序缺失与前文没有最低婚龄并列，补足法律漏洞。",
-                  "for people under 18 是介词短语，说明该机制原本应服务的人群。",
-                  "to get divorced 是不定式，说明 mechanism 的用途。",
-                  "no mechanism for sb to do 可用于分析制度性障碍。"
-                ],
-                "translation": "此外，18岁以下的人没有办理离婚的机制。"
-              },
-              {
-                "original": "California is the 18th to ban it since 2018.",
-                "analysis": [
-                  "主干为 California is the 18th，系动词后用序数词表示排名。",
-                  "to ban it 是不定式后置修饰 the 18th，说明加州采取的行动。",
-                  "since 2018 标示统计起点，强调这是一个逐步扩大的立法趋势。",
-                  "it 指代 child marriage，避免重复前文核心名词。",
-                  "可用序数词与 since 短语概括政策扩散过程。"
-                ],
-                "translation": "自2018年以来，加州是第18个禁止童婚的州。"
-              }
-            ]
-          },
-          {
-            "title": "Question of whether taxpayers or fossil fuel companies pay for climate change damage heads to Supreme Court",
-            "source": "The Conversation",
-            "published": "2026-09-30",
-            "url": "https://theconversation.com/question-of-whether-taxpayers-or-fossil-fuel-companies-pay-for-climate-change-damage-heads-to-supreme-court-292847",
-            "readingTime": "8 分钟",
-            "topic": "环境 / 气候诉讼与公共成本",
-            "summary": "文章先解释地方政府为何向石油公司追偿气候灾害的恢复与防护费用，再介绍Suncor与Exxon以联邦法为由反驳，并指出美国最高法院将于10月5日听取科罗拉多案争论。作者随后拆解《清洁空气法》是否排除州法、明示与默示排除及州权边界，列出其认为企业抗辩存在的法律障碍；最后讨论Alito不参与可能带来的平票风险。文章强调相关诉讼的公共成本和气候问责影响很大，但判决结果仍难预测。",
-            "reason": [
-              "气候灾害成本由谁承担，是环境治理、企业责任与公共财政交叉的典型议题。",
-              "文章先列诉讼背景和双方主张，再解释法律概念、逐项分析，最后评估判决影响。",
-              "适合练习识别作者立场、对比双方论证，以及区分即将听证与已作判决。",
-              "preemption、reimburse、allegation、liability 等词汇可迁移到法律、商业责任和环境政策阅读。",
-              "写作上可借鉴先提出成本分配问题，再引入法律框架和反方论据，最后保留结论不确定性的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "preemption",
-                "phonetic": "/ˌpriːˈempʃən/",
-                "part": "n.",
-                "translation": "（法律）优先适用；排除州法"
-              },
-              {
-                "word": "reimburse",
-                "phonetic": "/ˌriːɪmˈbɜːrs/",
-                "part": "v.",
-                "translation": "偿还；补偿"
-              },
-              {
-                "word": "allegation",
-                "phonetic": "/ˌæləˈɡeɪʃən/",
-                "part": "n.",
-                "translation": "指称；指控"
-              },
-              {
-                "word": "curtail",
-                "phonetic": "/kərˈteɪl/",
-                "part": "v.",
-                "translation": "削减；限制"
-              },
-              {
-                "word": "preclude",
-                "phonetic": "/prɪˈkluːd/",
-                "part": "v.",
-                "translation": "排除；阻止"
-              },
-              {
-                "word": "liability",
-                "phonetic": "/ˌlaɪəˈbɪləti/",
-                "part": "n.",
-                "translation": "责任；法律责任"
-              },
-              {
-                "word": "supersede",
-                "phonetic": "/ˌsuːpərˈsiːd/",
-                "part": "v.",
-                "translation": "取代；使……失效"
-              },
-              {
-                "word": "stringent",
-                "phonetic": "/ˈstrɪndʒənt/",
-                "part": "adj.",
-                "translation": "严格的；严厉的"
-              },
-              {
-                "word": "recovery",
-                "phonetic": "/rɪˈkʌvəri/",
-                "part": "n.",
-                "translation": "追回；补偿；恢复"
-              },
-              {
-                "word": "undercut",
-                "phonetic": "/ˌʌndərˈkʌt/",
-                "part": "v.",
-                "translation": "削弱；损害"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Dozens of states, cities, counties and tribes have sued major oil companies.",
-                "analysis": [
-                  "主干为 Dozens ... have sued companies，使用现在完成时说明诉讼已发生且与当前争议相关。",
-                  "主语由 states、cities、counties、tribes 并列构成，突出起诉方范围广。",
-                  "major 修饰 oil companies，指出被诉对象类别。",
-                  "该句从多个地方政府共同采取行动切入，建立文章背景。",
-                  "可借鉴 have sued ... to recover ... 表达公共机构追偿。"
-                ],
-                "translation": "数十个州、市、县和部落已经起诉大型石油公司。"
-              },
-              {
-                "original": "There are basically two kinds of preemption: express and implied.",
-                "analysis": [
-                  "主干为 There are two kinds，there be 结构用于提出分类。",
-                  "basically 是句子副词，表示作者接下来采用的基本分类方式。",
-                  "冒号后的 express and implied 是对 two kinds 的同位解释。",
-                  "此句从具体案件转入法律概念说明，承担段落转折作用。",
-                  "可借鉴 two kinds of ... : A and B 清楚界定术语类别。"
-                ],
-                "translation": "排除州法大致有两种：明示排除和默示排除。"
-              },
-              {
-                "original": "Based on the existing law, the companies have a steep hill to climb.",
-                "analysis": [
-                  "主干为 the companies have a steep hill to climb，表达企业面临的困难。",
-                  "Based on the existing law 是句首介词短语，限定判断所依据的法律背景。",
-                  "steep hill 是“艰难任务”的隐喻，不是字面地形。",
-                  "该句是作者评估前文法条后提出的阶段性结论。",
-                  "写作中可用 based on ... 引入依据，并用 cautious wording 标记分析而非判决。"
-                ],
-                "translation": "依据现行法律，这些公司面临的挑战并不轻松。"
               }
             ]
           }
