@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-08T10:42:26+08:00",
+  "updatedAt": "2026-10-09T10:57:33+08:00",
   "issues": [
+    {
+      "date": "2026-10-09",
+      "status": "ready",
+      "ai": {
+        "intro": "昨日到今日核实到两项值得学生留意或试用的新变化，因此将检索范围扩展至近 7 天，补入 10 月 7 日 Copilot CLI 本地模型更新；免费资源重新核对官方页面，并标出未说明的价格、资格与配额。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 本地沙箱正式可用，可限制 Agent 本机命令权限（2026-10-08）",
+            "summary": "GitHub 宣布本地沙箱已在 Copilot CLI、Copilot app，以及使用 Agent Host 的 VS Code 会话中正式可用。Agent 发起的命令可按用户或组织政策限制文件系统、网络、凭据等系统权限；该功能随 Copilot 提供，不另收沙箱费用。它是本机操作系统级隔离，不应理解为虚拟机或容器。",
+            "howTo": "在 Copilot CLI 会话中运行 `/sandbox enable`；Copilot app 的本地仓库会话可在项目设置中启用。先按官方指南确认操作系统要求：例如 macOS 使用 15 或更高版本，Linux 需安装受支持版本的 bubblewrap；之后再按项目需要配置文件、网络与凭据权限。",
+            "impact": "课程代码库中让 Agent 执行测试或脚本时，可先缩小其可读写目录和网络权限，降低误改其他文件或意外访问凭据的风险。沙箱不等于完全安全边界，仍需检查命令授权、策略范围和生成结果。",
+            "free": "GitHub 明确本地沙箱不另收费，但须能使用 GitHub Copilot；各计划的账户资格、地区适用范围和调用配额官方未说明。操作系统及依赖要求因平台而异，需查看官方指南。",
+            "category": "AI 编程安全 / 本地沙箱",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-08",
+              "url": "https://github.blog/changelog/2026-10-08-local-sandboxing-for-github-copilot-now-generally-available/"
+            }
+          },
+          {
+            "event": "Anthropic 推出 OSS Scanner，为符合条件的开源项目提供定期 Claude 漏洞扫描（2026-10-08）",
+            "summary": "Anthropic 宣布 OSS Scanner 是自愿加入的服务，会定期用其模型扫描已登记的开源项目，并向维护者发送漏洞说明、概念验证以及可用时的修复建议。扫描报告未经人工审查，可能出现错误或误报；项目必须有能力处理收到的发现。",
+            "howTo": "由项目核心维护者按 OSS Scanner 官方说明，在 `anthropics/oss-scanner` 仓库提交 PR，为项目添加 `projects/<project>/project.yaml`，填写仓库、主要联系人和 Dockerfile 等配置。Anthropic 会核验维护者身份并逐案决定是否接纳。",
+            "impact": "维护课程实验室或重要开源依赖的学生团队，可了解并申请额外的周期性安全检查；收到的模型发现需自行验证，不能未经复核就当成已确认漏洞或直接公开。",
+            "free": "官方称获接纳项目可免费获得周期性扫描；资格面向核心维护者，并优先考虑对基础设施或用户安全影响重要、具有远程攻击面或较多依赖项目，按个案审核。具体扫描频率、名额、地区与配额官方未说明；报告未经人工审核。",
+            "category": "免费 AI 安全工具 / 开源维护",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-08",
+              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+            }
+          },
+          {
+            "event": "GitHub Copilot CLI 的 `/model` 可发现本地 Ollama 模型（2026-10-07）",
+            "summary": "Copilot CLI 1.0.94-0 起可从正在运行的 Ollama 实例发现受支持的本地模型，并与已配置模型及 Copilot 云模型一同显示。发现不会自动安装模型；模型须已安装并支持工具调用和流式输出。选用本地模型也不会自动关闭遥测或进入离线模式。",
+            "howTo": "先安装并运行 Ollama，下载一个支持工具调用与流式输出的模型，再使用 Copilot CLI 1.0.94-0 或更新版本输入 `/model`。检查显示的提供商和端点后，选择“Add and use for this session”或“Add without switching”；如需离线运行，按官方说明另行设置离线模式。",
+            "impact": "学生可在现有 CLI 工作流中尝试本机模型，并比较不同模型处理非敏感课程代码的效果；选择本地模型不代表完全离线，若配置了远程提供商，提示词和代码上下文仍可能发送到网络端点。",
+            "free": "公告未说明该功能的计划/账号资格、价格、地区或配额。它依赖已安装的 Ollama 和模型以及本机硬件；本地模型的许可证和运行成本取决于所选模型及设备，官方未说明。",
+            "category": "AI 编程 / 本地模型接入",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-07",
+              "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot 本地沙箱：限制 Agent 本机命令的免费附加功能",
+            "summary": "Copilot 本地沙箱可按策略限制 Agent 执行命令的文件访问、网络和凭据权限。官方表示本地沙箱不另收费，并支持 Copilot CLI 与 Copilot app 等本地工作流；启用前须检查各操作系统的依赖和版本要求。",
+            "howTo": "在 Copilot CLI 会话运行 `/sandbox enable`，或在 Copilot app 本地会话设置中开启沙箱；先阅读官方本地沙箱指南并选择最小必要的文件和网络权限。",
+            "impact": "可为课程仓库的脚本运行和代码 Agent 增加权限边界，练习安全地使用开发自动化；沙箱并非完整虚拟机隔离，仍要审查策略与执行结果。",
+            "free": "GitHub 说明本地沙箱不另收费；仍需 GitHub Copilot 可用计划。各计划资格、地区和调用配额官方未说明。平台要求不同，指南列出 macOS 15+、Linux bubblewrap 等条件。",
+            "category": "免费开发工具 / Agent 安全",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-08",
+              "url": "https://github.blog/changelog/2026-10-08-local-sandboxing-for-github-copilot-now-generally-available/"
+            }
+          },
+          {
+            "event": "Anthropic OSS Scanner：开源项目可申请免费的周期性 AI 漏洞扫描",
+            "summary": "Anthropic 为获接纳的开源项目提供定期模型扫描，报告包含漏洞说明、概念验证和可用时的修复建议。报告未经人工审核，官方提示可能有不准确之处，因此它是维护者的补充线索而非已确认结论。",
+            "howTo": "由核心维护者阅读 OSS Scanner 的资格和配置要求，在 `anthropics/oss-scanner` 提交项目配置 PR；准备项目构建用 Dockerfile，并等待维护者身份核验和项目审核。",
+            "impact": "适合有能力处理安全报告的学生开源维护团队练习漏洞复核与修补流程；收到报告后先复现、评估影响并与项目安全流程协调。",
+            "free": "Anthropic 称已接纳项目的周期性扫描免费。项目须由核心维护者申请，并按重要性、远程攻击面及依赖情况逐案审核；扫描频率、地区和数量配额官方未说明。报告未经人工审核，可能错误。",
+            "category": "免费工具 / 开源安全扫描",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-08",
+              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+            }
+          },
+          {
+            "event": "Microsoft Phi-4-mini-instruct：MIT 许可的公开多语言模型权重",
+            "summary": "Microsoft 的 Phi-4-mini-instruct 模型卡列出 3.8B 参数和 128K token 上下文，提供可下载权重及 Transformers 推理示例，并标注 MIT 许可证。模型卡提醒其多语言表现存在差异，生成内容仍需核验。",
+            "howTo": "从 Hugging Face 官方模型卡下载 `microsoft/Phi-4-mini-instruct`，按模型卡安装 Transformers、PyTorch 等依赖并使用 `AutoModelForCausalLM` 加载；先用不含隐私的文本在本机测试。",
+            "impact": "适合有相应硬件的学生练习本地推理、提示词设计和中英文结果校对；对照模型卡检查设备内存需求，并把输出当作草稿而非可靠事实。",
+            "free": "模型仓库公开、未设置访问门槛，权重采用 MIT 许可证；下载和本地推理不收模型调用费，但硬件、电力及软件环境由使用者承担。托管推理价格、地区和配额官方未说明。",
+            "category": "免费开放权重 / 本地学习",
+            "source": {
+              "name": "Microsoft 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：MIT 许可的本地语音转写与语音翻译模型",
+            "summary": "OpenAI 官方仓库公开 Whisper 代码和模型权重，支持多语言语音识别、语音翻译及语言识别，并提供不同大小的模型以权衡速度和资源需求。",
+            "howTo": "按官方仓库安装 `openai-whisper` 与 ffmpeg，运行 `whisper lecture.wav --model small` 转写；非英语语音转英文须选择 multilingual 模型并使用 `--task translate`，不要用 turbo 做翻译。",
+            "impact": "可把本人有权处理的课程录音转成文字，制作听力复习稿或练习英译；转写可能出错，须对照音频校订，并注意录音隐私和许可。",
+            "free": "官方仓库称代码和权重按 MIT 许可证发布，可下载后本地运行；本地计算资源与软件环境由使用者承担。模型账号、地区、次数配额及托管服务价格官方未说明。",
+            "category": "免费开放模型 / 语音学习工具",
+            "source": {
+              "name": "OpenAI GitHub",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：Google AI Studio 可免费试用部分模型",
+            "summary": "Google 官方定价页列有 Gemini API 免费层：部分模型的输入和输出 token 免费，并可从 Google AI Studio 开始。免费层提交的内容会用于改进 Google 产品，因此不适合上传未公开论文或个人资料。",
+            "howTo": "打开 Google AI Studio，在官方定价页选择明确标注 Free Tier 的模型，按 API 快速开始说明发起调用；使用前逐项查看模型的速率限制和数据条款。",
+            "impact": "可用于练习 API 调用、构建课程原型或比较提示词；对研究草稿和个人数据，先评估免费层的数据使用条款并避免提交敏感内容。",
+            "free": "官方定价页说明部分模型的输入、输出 token 免费，但只限指定模型，且免费层内容用于改进 Google 产品。各模型具体额度、账号资格和地区条件官方未统一说明，应以所选模型页面为准。",
+            "category": "免费 API / AI 开发学习",
+            "source": {
+              "name": "Google AI for Developers 定价文档",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期用一篇大学生拖延研究报道练习区分描述性证据与因果解释，再以厄尔尼诺风险报道梳理气候预测、地方准备和社区韧性之间的逻辑；两篇原文均可免费阅读全文。",
+        "articles": [
+          {
+            "title": "University students say procrastination is biggest threat to their academic performance",
+            "source": "The Guardian",
+            "published": "2026-10-08",
+            "url": "https://www.theguardian.com/education/2026/oct/08/university-students-procrastination-biggest-threat-academic-performance",
+            "readingTime": "约 5 分钟",
+            "topic": "教育 / 拖延与大学生心理健康",
+            "summary": "文章以一项覆盖超过 65,000 名美国年轻人的研究为中心，指出受访大学生最常把拖延列为损害学业表现的问题之一，近半数称其妨碍学术任务。报道先呈现研究结果和研究者的意外发现，再引用心理学者提醒：这是一项描述性“快照”，不能据此作过度因果推断。随后解释拖延常与逃避任务引发的困难情绪有关，短期情绪修复可能转成压力、睡眠受损和继续拖延的反馈循环。结尾否定“懒惰”或单纯时间管理缺陷的简化解释，呼吁大学采取积极干预。",
+            "reason": [
+              "主题关联教育公平、大学生心理健康与学习策略，适合讨论个人行为和高校支持责任。",
+              "结构由大型调查结论切入，补充受访研究者与外部专家的不同判断，再解释反馈机制并落到干预建议。",
+              "可练习主旨题、研究局限判断、因果链梳理，以及区分调查发现与专家解释。",
+              "procrastination、impediment、salience、intervention 等词汇适用于教育、心理健康和问题解决类写作。",
+              "写作可借鉴“数据描述—谨慎解释—机制分析—提出干预”的论证结构，并避免把相关性写成因果性。"
+            ],
+            "vocabulary": [
+              {
+                "word": "procrastination",
+                "phonetic": "/prəˌkræstɪˈneɪʃn/",
+                "part": "n.",
+                "translation": "拖延；耽搁"
+              },
+              {
+                "word": "impediment",
+                "phonetic": "/ɪmˈpedɪmənt/",
+                "part": "n.",
+                "translation": "障碍；妨碍因素"
+              },
+              {
+                "word": "distress",
+                "phonetic": "/dɪˈstres/",
+                "part": "n.",
+                "translation": "痛苦；忧虑"
+              },
+              {
+                "word": "feedback loop",
+                "phonetic": "/ˈfiːdbæk luːp/",
+                "part": "n.",
+                "translation": "反馈循环"
+              },
+              {
+                "word": "salience",
+                "phonetic": "/ˈseɪliəns/",
+                "part": "n.",
+                "translation": "显著性；突出程度"
+              },
+              {
+                "word": "snapshot",
+                "phonetic": "/ˈsnæpʃɒt/",
+                "part": "n.",
+                "translation": "概况；某一时点的快照"
+              },
+              {
+                "word": "hamper",
+                "phonetic": "/ˈhæmpə(r)/",
+                "part": "v.",
+                "translation": "妨碍；阻碍"
+              },
+              {
+                "word": "derail",
+                "phonetic": "/diːˈreɪl/",
+                "part": "v.",
+                "translation": "使偏离计划；打乱"
+              },
+              {
+                "word": "intervention",
+                "phonetic": "/ˌɪntəˈvenʃn/",
+                "part": "n.",
+                "translation": "干预；介入措施"
+              },
+              {
+                "word": "mood repair",
+                "phonetic": "/muːd rɪˈpeə(r)/",
+                "part": "n.",
+                "translation": "情绪修复；短暂改善心情"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Procrastination is the biggest problem that can harm students’ academic performance at university.",
+                "analysis": [
+                  "主干是 Procrastination is the biggest problem，系表结构直接提出文章核心判断。",
+                  "that can harm students’ academic performance 是定语从句，修饰 problem。",
+                  "at university 限定 academic performance 的语境，指出讨论对象是大学学习。",
+                  "最高级 the biggest 加 can harm 将调查中的相对排序转述为鲜明结论。",
+                  "写作可仿用 “X is a major problem that can affect Y” 引出教育问题。"
+                ],
+                "translation": "拖延是可能损害大学生学业表现的最大问题。"
+              },
+              {
+                "original": "This descriptive study with a large sample provides some additional insights into the relative impact of procrastination with respect to its range of harms.",
+                "analysis": [
+                  "主干是 This study provides insights，主语后的 descriptive 标明研究性质。",
+                  "with a large sample 是介词短语，补充研究样本特征。",
+                  "into the relative impact of procrastination 是 insights 的内容，说明研究比较拖延造成的影响。",
+                  "with respect to its range of harms 限定比较范围，避免把结论扩大到所有方面。",
+                  "长句通过连续介词短语层层限定；描述性研究提供线索，但不自动证明因果关系。"
+                ],
+                "translation": "这项样本量较大的描述性研究，进一步揭示了拖延在不同危害方面的相对影响。"
+              },
+              {
+                "original": "Universities should be aware that many of their students are likely to be hampered by procrastination.",
+                "analysis": [
+                  "主句核心是 Universities should be aware，should be aware 表示建议高校重视。",
+                  "that 引导宾语从句，具体说明高校应意识到的内容。",
+                  "many of their students 是从句主语；are likely to 表示可能性而非确定比例。",
+                  "to be hampered by procrastination 是被动结构，突出学生受到拖延妨碍。",
+                  "写作可用 “Institutions should be aware that…” 从证据过渡到政策建议。"
+                ],
+                "translation": "高校应意识到，许多学生可能正受到拖延的妨碍。"
+              }
+            ]
+          },
+          {
+            "title": "‘Like an earthquake’: El Niño is coming for California – is the state ready?",
+            "source": "The Guardian",
+            "published": "2026-10-07",
+            "url": "https://www.theguardian.com/us-news/2026/oct/07/california-el-nino-preparedness",
+            "readingTime": "约 8 分钟",
+            "topic": "环境 / 厄尔尼诺与加州复合灾害准备",
+            "summary": "文章从加州湾区一次高水位淹路的现场写起，说明潜在强厄尔尼诺可能加剧加州的洪水、海岸侵蚀、山火后泥石流和高温风险。随后解释暖海温如何影响风险，并引用州气候学家和地方应急官员，展示南北加州影响不同、预测只能提高风险概率而非给出确定结果。中段按沿海社区和灾害恢复区梳理沙袋、堤岸、排水渠及应急系统等准备工作，同时指出政府资源无法在灾害初期覆盖每个人。结尾把重点落在居民预警、社区互助和韧性建设上，认为邻里联系有助于降低灾害冲击。",
+            "reason": [
+              "气候风险、灾害治理与社区韧性是环境和公共政策类常见考研主题。",
+              "文章由现场洪水引入，解释厄尔尼诺机制和地区差异，再以官员引语列举准备行动，最后强调社区层面的应对。",
+              "可练习区分风险概率与确定预测、辨认案例证据，以及推断作者对政府准备和居民互助的态度。",
+              "compounding、elevated、resilience、crosshairs 等表达适用于环境风险和公共安全话题。",
+              "写作可借鉴“指出复合风险—承认预测局限—列出分层准备—强调社区协作”的结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "vulnerabilities",
+                "phonetic": "/ˌvʌlnərəˈbɪlətiz/",
+                "part": "n.",
+                "translation": "脆弱性；易受影响之处"
+              },
+              {
+                "word": "tumultuous",
+                "phonetic": "/tjuːˈmʌltʃuəs/",
+                "part": "adj.",
+                "translation": "动荡的；剧烈多变的"
+              },
+              {
+                "word": "brewing",
+                "phonetic": "/ˈbruːɪŋ/",
+                "part": "v.",
+                "translation": "正在酝酿；即将发生"
+              },
+              {
+                "word": "crosshairs",
+                "phonetic": "/ˈkrɒsˌheəz/",
+                "part": "n.",
+                "translation": "准星；in the crosshairs 指成为威胁或攻击目标"
+              },
+              {
+                "word": "compounding",
+                "phonetic": "/kəmˈpaʊndɪŋ/",
+                "part": "adj.",
+                "translation": "叠加的；复合加剧的"
+              },
+              {
+                "word": "elevated",
+                "phonetic": "/ˈelɪveɪtɪd/",
+                "part": "adj.",
+                "translation": "升高的；增加的"
+              },
+              {
+                "word": "resilience",
+                "phonetic": "/rɪˈzɪliəns/",
+                "part": "n.",
+                "translation": "韧性；恢复力"
+              },
+              {
+                "word": "mobilize",
+                "phonetic": "/ˈməʊbəlaɪz/",
+                "part": "v.",
+                "translation": "动员；调集"
+              },
+              {
+                "word": "berm",
+                "phonetic": "/bɜːm/",
+                "part": "n.",
+                "translation": "沙堤；土埂"
+              },
+              {
+                "word": "culvert",
+                "phonetic": "/ˈkʌlvət/",
+                "part": "n.",
+                "translation": "涵洞；排水管涵"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "A strong El Niño shifts the probabilities – it does not determine exact outcomes.",
+                "analysis": [
+                  "主句核心是 A strong El Niño shifts the probabilities，说明现象改变风险分布。",
+                  "破折号后 it does not determine exact outcomes 省略重复主语所指，补充限定前句。",
+                  "does not 与 shifts 构成对照：概率改变不等于具体事件必然发生。",
+                  "exact 修饰 outcomes，突出预测无法精确确定个别结果。",
+                  "“shift probabilities, not determine outcomes” 是表达风险而非宿命的实用结构。"
+                ],
+                "translation": "强厄尔尼诺会改变各种结果出现的概率，却不能决定确切结果。"
+              },
+              {
+                "original": "The risks are but a taste of what’s to come as the world warms.",
+                "analysis": [
+                  "主干是 The risks are but a taste，but 在此表示“仅仅”。",
+                  "of what’s to come 是介词短语，说明眼前风险只是未来可能情况的一部分。",
+                  "as the world warms 是时间/背景状语从句，交代风险加深的气候背景。",
+                  "taste 使用“尝到一小部分”的比喻，强调当前事件只是预示。",
+                  "写作可用 “be but a taste of…” 表达当下案例预示更大趋势。"
+                ],
+                "translation": "随着全球变暖，这些风险不过是未来可能出现情形的一小部分。"
+              },
+              {
+                "original": "Our communities are the fabric that gets us through these disasters – neighbors helping neighbors saves lives.",
+                "analysis": [
+                  "主句核心是 Our communities are the fabric，以 fabric 比喻社区关系构成支撑网络。",
+                  "that gets us through these disasters 是定语从句，修饰 fabric 并说明其作用。",
+                  "破折号后 neighbors helping neighbors saves lives 对前面的比喻作具体解释。",
+                  "邻里互助与 saves lives 的因果表达把抽象韧性落到行动结果。",
+                  "写作可借鉴“抽象判断 + 破折号 + 具体解释”的衔接方式。"
+                ],
+                "translation": "社区关系是帮助人们渡过灾害的纽带——邻里互助能够挽救生命。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-08",
       "status": "ready",
@@ -2018,338 +2364,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 faster than... so... 解释生活成本变化带来的结果。"
                 ],
                 "translation": "近几个月物价涨幅快于工资，因此劳动者的实际购买力正在被削弱。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-02",
-      "status": "ready",
-      "ai": {
-        "intro": "截至上海 10 月 2 日，近两日官方页面核实到三项新变化；免费资源均重新按官方产品页、定价页或学生福利页核对。",
-        "updates": [
-          {
-            "event": "GitHub Copilot CLI 与应用新增桌面应用操作（2026-10-01）",
-            "summary": "GitHub 将 computer use 以公开预览形式带入 Copilot CLI 和 GitHub Copilot app（macOS、Windows）：Copilot 可读取应用内容、点击控件、输入文字并跨应用执行流程；操作前会请求批准。",
-            "howTo": "Copilot CLI 输入 `/computer on` 启用，可用 `/computer show` 查看状态、`/computer off` 关闭；Copilot app 在 Settings > Computer Use 打开 Enable Computer Use。先描述目标、应用与约束，并逐次检查将执行的动作。",
-            "impact": "课程小组可尝试把网页资料整理进演示文稿，或在没有 API/命令行接口的桌面软件里重复录入项目数据；不要让代理处理未核实的信息，macOS 还需授予 Accessibility 与 Screen Recording 权限。",
-            "free": "官方公告称为 public preview，适用于 Copilot CLI 和 macOS/Windows Copilot app；公告未说明所需订阅计划、价格、地区、免费额度或使用配额。组织管理设置可以关闭该功能。",
-            "category": "AI 编程 / 桌面自动化",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-01",
-              "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
-            }
-          },
-          {
-            "event": "Gemini Live 推出面向无障碍场景的 Guided Vision（2026-10-01）",
-            "summary": "Google 在兼容 Android 设备的 Gemini Live 中推出 Guided Vision：用户分享摄像头后，可用语音询问周围环境、文字或物品，Gemini 也会用语音提示调整取景。",
-            "howTo": "在 Gemini 手机应用的个人资料设置中开启 Use Guided Vision in Live，再启动 Gemini Live 并分享摄像头；也可按 Android Settings > Accessibility > Vision assistance > Guided Vision 设置快捷方式，或通过 TalkBack 菜单启动。",
-            "impact": "可帮助学生听读包装或印刷材料的小字、定位桌面物品，或获取陌生室内空间的描述；输出可能出错，官方明确说明它不是导航、避障或白手杖替代品。",
-            "free": "官方说明该功能面向兼容 Android 设备并已推出；价格、所需账号计划、开放地区、具体机型清单与使用配额官方未说明。",
-            "category": "AI 无障碍 / 实时视觉",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-01",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
-            }
-          },
-          {
-            "event": "Google 与 Planet 的 Project Suncatcher 原型卫星进入轨道（2026-10-01）",
-            "summary": "Google 表示，与 Planet 合作的 Project Suncatcher 原型卫星已搭乘 Transporter-18 发射并建立联系；团队将测试 TPU 在太空飞行、辐射和温度极端条件下的表现。这是探索太空机器学习基础设施的长期研究项目，不是面向用户的新 AI 服务。",
-            "howTo": "阅读 Google Research 的项目说明，了解这次轨道实验要测量的硬件条件与后续研究问题；目前公告提供的是研究进展，不含可供学生直接调用的产品步骤。",
-            "impact": "可作为课程讨论 AI 算力能源、数据中心基础设施和实验性技术成熟度的案例；区分已发射并开始测试的原型与尚待研究的规模化构想。",
-            "free": "公告只描述研究原型和在轨实验，没有面向公众的产品访问说明；价格、账号资格、地区及使用配额官方未说明。",
-            "category": "AI 基础设施 / 研究进展",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-01",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Gemini API 免费层与 AI Studio",
-            "summary": "Google 定价页列出 Gemini API Free tier：可免费使用部分模型的输入和输出 token，并可访问 Google AI Studio；免费层的模型和速率限制因具体模型而异。",
-            "howTo": "打开 Google AI Studio，查看可用模型及对应 API 免费层限制，创建小型课程原型并在模型页面核对当前速率限制；避免提交敏感或未获许可的数据。",
-            "impact": "可用于文本摘要、课程演示和小规模 API 原型，适合在购买服务前验证提示词与流程；官方标明免费层提交的数据可用于改进产品。",
-            "free": "官方定价页确认部分模型有免费输入与输出 token；确切模型、调用上限、地区和账号资格依页面当前信息而定，页面没有给出统一的固定免费配额。免费层数据可用于改进产品。",
-            "category": "免费 API / 学习开发",
-            "source": {
-              "name": "Google Gemini API 定价",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student 学生免费计划",
-            "summary": "GitHub Education 为通过学生验证的用户列出免费的 Copilot Student：含不限量代码补全、一定量的 GitHub AI Credits，以及有限的聊天和 agent 使用。",
-            "howTo": "在 GitHub Education 验证学生身份并领取 Student Developer Pack，再启用 Copilot Student；在 IDE 或 Copilot app 中使用代码补全或自动模型选择下的聊天/agent 功能。",
-            "impact": "可辅助理解报错、补写测试和熟悉课程项目代码；提交前仍应自行检查代码并运行测试，尤其不要盲目采纳未经验证的建议。",
-            "free": "GitHub Education 列出经验证学生可免费使用；代码补全不限量，AI Credits 与聊天/agent 使用有限，但该页面未列统一数值。地区、验证资格细则及计划期限官方未说明。",
-            "category": "学生教育福利 / AI 编程",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Camber Student 免费云端数据科学与 AI agent 资源",
-            "summary": "GitHub Education 页面列出在读学生可领取 Camber Student：每月 40 CPU 小时、5 GPU 小时、50 GB 存储和 50 条 agent 消息，并可连接公开数据源。",
-            "howTo": "在 GitHub Education Student Developer Pack 申请学生资格并领取 Camber Student；按 Camber 文档连接课程数据源、创建 agent，并在运行前查看本月 CPU、GPU 和消息额度。",
-            "impact": "适合练习数据清理、机器学习原型或数据问答 agent；用小数据集验证工作流并监控用量，避免课程项目消耗超出免费额度。",
-            "free": "官方福利页注明 enrolled students 可免费使用，每月含 40 CPU 小时、5 GPU 小时、50 GB 存储及 50 条 agent 消息；地区、验证细则、福利期限和超额费用官方未说明。",
-            "category": "学生教育福利 / 云端 AI",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "OpenAI gpt-oss-20b Apache 2.0 开放权重",
-            "summary": "OpenAI 官方模型卡提供 gpt-oss-20b 权重下载，采用 Apache 2.0 许可；模型卡称量化版本可在 16 GB 内存中运行，并提供 Transformers、vLLM 和 Ollama 等启动方式。",
-            "howTo": "从 Hugging Face 官方模型卡按指南下载权重；可安装 Transformers 依赖并运行卡片中的 pipeline 示例，或安装 Ollama 后执行 `ollama pull gpt-oss:20b` 与 `ollama run gpt-oss:20b`。",
-            "impact": "可在具备相应硬件的本地设备上练习模型部署、提示词和函数调用，避免按托管 API token 付费；需自行检查生成内容、依赖和设备成本。",
-            "free": "模型权重可按 Apache 2.0 许可下载和使用，官方模型卡给出约 16 GB 内存要求；下载账号、地区、托管推理费用与配额官方未说明，本地设备和运行电力需自备。",
-            "category": "可下载开放模型权重 / Apache 2.0",
-            "source": {
-              "name": "OpenAI 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/openai/gpt-oss-20b"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Japan raises permanent residency fee by 20 times",
-            "source": "BBC",
-            "published": "2026-10-01",
-            "url": "https://www.bbc.co.uk/news/articles/c6y8z8xeg8j1o",
-            "readingTime": "6 分钟",
-            "topic": "社会 / 移民政策与劳动力",
-            "summary": "BBC 报道日本自 10 月 1 日起将外国人申请永久居留的费用提高至原来的 20 倍，并同步收紧收入、养老金和日语要求。文章先用申请者赶在涨价前排队的场景引入，再列出新旧签证费用与收入门槛，随后把政策放入日本老龄化、劳动力短缺、外国居民人数增加及社会焦虑的背景中。报道引用在日外国居民对费用与待遇的质疑，也提到经济困难者和难民可获减免；结尾说明日语能力要求将于次年 4 月进一步收紧，并交代养老金资格标准。文章呈现了移民管理与补充劳动力之间的张力，而非简单断言政策效果。",
-            "reason": [
-              "移民政策、人口老龄化与劳动力短缺构成社会治理议题，适合练习分析公共政策的多重目标。",
-              "文章由费用变化切入，转向人口与就业背景，再纳入申请者意见和后续条件，体现新闻报道的层次推进。",
-              "可练习主旨归纳、数字比较、政策背景推断，以及区分政策事实和受访者评价。",
-              "permanent residency、labour shortage、restrictive、proficiency 等词汇可迁移到人口与就业主题阅读。",
-              "写作可借鉴“政策变化—社会背景—受影响群体—潜在权衡”的论证结构，避免把相关性写成因果结论。"
-            ],
-            "vocabulary": [
-              {
-                "word": "permanent residency",
-                "phonetic": "/ˈpɜːrmənənt ˈrezɪdənsi/",
-                "part": "n.",
-                "translation": "永久居留"
-              },
-              {
-                "word": "fee hike",
-                "phonetic": "/fiː haɪk/",
-                "part": "n.",
-                "translation": "费用上涨"
-              },
-              {
-                "word": "restrictive",
-                "phonetic": "/rɪˈstrɪktɪv/",
-                "part": "adj.",
-                "translation": "限制严格的"
-              },
-              {
-                "word": "labour shortage",
-                "phonetic": "/ˈleɪbər ˈʃɔːrtɪdʒ/",
-                "part": "n.",
-                "translation": "劳动力短缺"
-              },
-              {
-                "word": "resident population",
-                "phonetic": "/ˈrezɪdənt ˌpɑːpjəˈleɪʃən/",
-                "part": "n.",
-                "translation": "居民人口"
-              },
-              {
-                "word": "anxiety",
-                "phonetic": "/æŋˈzaɪəti/",
-                "part": "n.",
-                "translation": "焦虑；担忧"
-              },
-              {
-                "word": "orderly",
-                "phonetic": "/ˈɔːrdərli/",
-                "part": "adj./adv.",
-                "translation": "有秩序的；有条理地"
-              },
-              {
-                "word": "financial hardship",
-                "phonetic": "/faɪˈnænʃəl ˈhɑːrdʃɪp/",
-                "part": "n.",
-                "translation": "经济困难"
-              },
-              {
-                "word": "proficiency",
-                "phonetic": "/prəˈfɪʃənsi/",
-                "part": "n.",
-                "translation": "熟练；精通"
-              },
-              {
-                "word": "fall short",
-                "phonetic": "/fɔːl ʃɔːrt/",
-                "part": "phr.v.",
-                "translation": "不足；未达到"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Those seeking permanent residency must now also meet new income, pension and Japanese-language requirements.",
-                "analysis": [
-                  "主干为 Those must meet requirements，Those 指寻求永久居留的申请者。",
-                  "seeking permanent residency 是现在分词短语，后置修饰 Those。",
-                  "income、pension 和 Japanese-language 三项并列修饰 requirements，概括新门槛。",
-                  "now 与 also 表示这些要求是当前新增条件，与上文费用变化形成补充。",
-                  "可借鉴 meet requirements 表达达到政策、资格或学业要求。"
-                ],
-                "translation": "如今，申请永久居留者还必须满足新的收入、养老金和日语要求。"
-              },
-              {
-                "original": "Applicants who face financial hardship or are designated as refugees would be granted discounts.",
-                "analysis": [
-                  "主干为 Applicants would be granted discounts，使用被动语态突出申请者获得减免。",
-                  "who 引导定语从句，修饰 Applicants，并以 or 连接两种资格情形。",
-                  "face financial hardship 与 are designated as refugees 是并列谓语结构。",
-                  "would be granted 是情态动词加被动语态，说明符合条件者可获减免。",
-                  "可借鉴“限定条件 + would be granted”说明政策中的资格与待遇。"
-                ],
-                "translation": "面临经济困难或被认定为难民的申请者可获减免。"
-              },
-              {
-                "original": "Although immigration remains politically sensitive and restrictive in Japan, the nation's ageing population is increasingly relying on foreign workers to plug a labour shortage.",
-                "analysis": [
-                  "主句主干为 the nation's ageing population is relying on foreign workers。",
-                  "Although 引导让步状语从句，指出移民在日本仍具政治敏感性且受限制。",
-                  "increasingly 修饰 is relying，表示依赖程度不断上升；ageing 修饰 population。",
-                  "to plug a labour shortage 是目的/结果相关的不定式短语，说明依赖外劳的劳动力背景。",
-                  "句子把政策限制与人口结构带来的用工需求并置，构成转折张力。"
-                ],
-                "translation": "尽管移民在日本仍是政治敏感且受限制的议题，这个人口老龄化的国家却越来越依赖外国劳工来弥补劳动力短缺。"
-              }
-            ]
-          },
-          {
-            "title": "'It's a nightmare.' Former refugee, professor on Trump's new Medicaid policy",
-            "source": "NPR",
-            "published": "2026-10-01",
-            "url": "https://www.npr.org/2026/10/01/nx-s1-5987948/trump-medicaid-health-insurance-disability-refugee",
-            "readingTime": "7 分钟",
-            "topic": "健康 / 医疗保障与移民",
-            "summary": "NPR 以一名曾依靠 Medicaid 完成学业、如今帮助残障难民的教授经历开篇，说明政策变更对个人医疗与生活的影响。报道接着解释 H.R. 1 对合法移民 Medicaid 资格的调整，并援引 KFF Health News 估算 10 月约有 28 万人失去保障；文中还介绍难民与寻求庇护者的脆弱处境、慢性病用药风险，以及全价保险和雇主保险并非人人负担得起。文章随后比较州级替代方案及儿童、孕妇等群体的延续覆盖，最后回到预防性护理被推迟、未来治疗成本可能上升的担忧，并以受访者倡导公民参与作结。政策影响与数字均归因于报道所引机构和受访者。",
-            "reason": [
-              "医疗保障、移民身份与残障照护交叉，适合健康公平和社会政策类阅读主题。",
-              "文章以个人经历引入，继而解释法律与估算数据，再讨论替代保障和长期后果，最后回到公共参与。",
-              "可练习区分法律变化、机构估算、专家判断与个人证言，并判断各段证据承担的功能。",
-              "coverage、eligible、vulnerable、comprehensive、forgo 等词汇适用于医疗和福利政策话题。",
-              "写作可借鉴“个人案例—制度规则—影响数据—长期后果”的结构，同时谨慎注明统计来源。"
-            ],
-            "vocabulary": [
-              {
-                "word": "frantic",
-                "phonetic": "/ˈfræntɪk/",
-                "part": "adj.",
-                "translation": "焦急的；慌乱的"
-              },
-              {
-                "word": "coverage",
-                "phonetic": "/ˈkʌvərɪdʒ/",
-                "part": "n.",
-                "translation": "（保险）保障范围"
-              },
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合资格的"
-              },
-              {
-                "word": "humanitarian",
-                "phonetic": "/hjuːˌmænɪˈteriən/",
-                "part": "adj.",
-                "translation": "人道主义的"
-              },
-              {
-                "word": "vulnerable",
-                "phonetic": "/ˈvʌlnərəbəl/",
-                "part": "adj.",
-                "translation": "脆弱的；易受伤害的"
-              },
-              {
-                "word": "chronic",
-                "phonetic": "/ˈkrɑːnɪk/",
-                "part": "adj.",
-                "translation": "慢性的"
-              },
-              {
-                "word": "comprehensive",
-                "phonetic": "/ˌkɑːmprɪˈhensɪv/",
-                "part": "adj.",
-                "translation": "全面的"
-              },
-              {
-                "word": "preventative care",
-                "phonetic": "/prɪˈventətɪv ker/",
-                "part": "n.",
-                "translation": "预防性医疗"
-              },
-              {
-                "word": "forgo",
-                "phonetic": "/fɔːrˈɡoʊ/",
-                "part": "v.",
-                "translation": "放弃；不再享用"
-              },
-              {
-                "word": "civic engagement",
-                "phonetic": "/ˈsɪvɪk ɪnˈɡeɪdʒmənt/",
-                "part": "n.",
-                "translation": "公民参与"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Mustafa Rfat has been getting frantic phone calls recently from refugees with disabilities.",
-                "analysis": [
-                  "主干为 Mustafa Rfat has been getting phone calls，使用现在完成进行时呈现近期持续发生的情况。",
-                  "frantic 修饰 phone calls，强调来电者的焦急状态。",
-                  "recently 是时间状语，from refugees with disabilities 说明来电来源及群体。",
-                  "该句以具体人物和来电场景引出政策影响，先呈现个人层面的紧迫感。",
-                  "可借鉴 has been getting ... recently 描述近期反复出现的现象。"
-                ],
-                "translation": "Mustafa Rfat 最近不断接到残障难民焦急的电话。"
-              },
-              {
-                "original": "Only a small portion of legal immigrants have been eligible to enroll in Medicaid, including refugees and asylum seekers.",
-                "analysis": [
-                  "主干为 a small portion ... have been eligible，主语中心词 portion 决定谓语用单数概念。",
-                  "Only 限定 a small portion，强调符合资格的合法移民比例有限。",
-                  "to enroll in Medicaid 是 eligible 的补足结构，说明符合何种资格。",
-                  "including refugees and asylum seekers 是补充说明，举出相关群体。",
-                  "可借鉴 only a small portion of ... 表达范围受限，并用 including 引入例子。"
-                ],
-                "translation": "只有一小部分合法移民有资格加入 Medicaid，其中包括难民和寻求庇护者。"
-              },
-              {
-                "original": "Once these changes take place, these groups of immigrants will be left with very few options for affordable, comprehensive coverage.",
-                "analysis": [
-                  "主句主干为 these groups ... will be left with very few options。",
-                  "Once 引导时间/条件状语从句，说明后果发生的前提。",
-                  "these groups of immigrants 指代前文讨论的移民群体，建立语篇衔接。",
-                  "for affordable, comprehensive coverage 修饰 options，两个并列形容词限定保障类型。",
-                  "will be left with 强调政策变化后可用选择减少，可用于描述制度性后果。"
-                ],
-                "translation": "这些变化一旦生效，这些移民群体可负担且全面的保障选择将所剩无几。"
               }
             ]
           }
