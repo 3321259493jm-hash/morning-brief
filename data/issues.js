@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-09T10:57:33+08:00",
+  "updatedAt": "2026-10-10T10:19:18+08:00",
   "issues": [
+    {
+      "date": "2026-10-10",
+      "status": "ready",
+      "ai": {
+        "intro": "昨日到今日确认 1 项值得学生留意的产品变化，因此将检索范围扩至近 7 天，补入 10 月 7 日的 Google Playground 与 GitHub 秘密检测模型更新；各条按公告真实日期标注。",
+        "updates": [
+          {
+            "event": "Google 推出 Playground 实验游戏平台，可用提示词创建、试玩和分享自定义游戏（2026-10-07）",
+            "summary": "Google 将 Playground 描述为实验性游戏平台：用户用对话提示描述想法即可制作自定义游戏，无需编程经验；可从空白画布开始、改编提示模板或使用引导式支持，生成后立即试玩，并继续调整物理规则、角色和环境。",
+            "howTo": "打开 Google Labs 的 Playground 实验平台，从空白画布开始或改编一个 starter prompt；输入想制作的游戏描述并试玩，再用自然语言要求调整规则、物理效果、角色或场景。",
+            "impact": "学生可把课程概念转成可互动的小型原型，例如设计一个词汇闯关或生态系统模拟，再通过修改规则观察结果；平台降低了初次制作门槛，但生成的游戏仍需自行检查内容和运行效果。",
+            "free": "Google 将其称为实验性平台，但公告没有说明价格、账号资格、开放地区或生成/试玩配额；这些条件官方未说明，实际能否使用以当前 Playground 页面为准。",
+            "category": "生成式 AI / 互动内容创作",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-07",
+              "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+            }
+          },
+          {
+            "event": "GitHub 将上下文式 AI 秘密检测扩展至更多开发流程（2026-10-07）",
+            "summary": "GitHub 公布一款针对秘密信息检测微调的模型，可结合周边代码识别包括非标准格式密码在内的潜在凭据。已有 GitHub Secret Protection 或 GitHub Advanced Security 的 AI 密码告警用户会自动切换到新模型且不另收费；推送保护的 AI 检查仍处于私有预览，Copilot `/security-review` 的模型检查则公告为即将开放。",
+            "howTo": "若项目已有 GitHub Secret Protection 或 GitHub Advanced Security，可在仓库的 secret-scanning alerts 中查看 AI 检测到的密码告警；推送保护检查需符合资格的管理员开启私有预览。公告中的 `/security-review` 秘密分类检查当时尚未开放，不要把普通安全审查误认为该新检查已启用。",
+            "impact": "维护课程仓库或团队项目时，检测器可能发现不符合常见 token 格式的密码，帮助在凭据泄露前处理；学生应避免把真实密钥提交到仓库，并按 GitHub 指引轮换已暴露凭据。",
+            "free": "AI 密码告警仅对已有 GHSP/GHAS 覆盖的客户包含在原服务中、不另收费；推送保护的 AI 检查需相应付费覆盖并在预览中启用，新的 AI 检查会消耗 GitHub AI Credits。个人 Copilot 的 `/security-review` 新分类检查当时为即将开放，地区和具体配额官方未说明。",
+            "category": "AI 编程安全 / 凭据检测",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-07",
+              "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/"
+            }
+          },
+          {
+            "event": "Copilot 代码审查新增组织付费归属与外部许可证限制（2026-10-08）",
+            "summary": "GitHub 为组织管理员增加两项 Copilot code review 控制：可选择由组织而非成员个人承担已许可成员的审查费用，也可限制只有组织或企业提供 Copilot 许可证的成员才能发起审查。组织付费模式要求启用 AI Credits 付费使用，并可设置预算。",
+            "howTo": "组织所有者可在组织设置的 Copilot → Policies 中将 “Choose how members with a Copilot license are billed” 设为 Organization；需先启用组织 AI Credits 付费使用。若要限制个人外部许可证发起审查，可打开 “Only allow Copilot code review to be triggered by authorized users”。",
+            "impact": "课程团队或实验室若使用组织仓库，可由管理员统一管理代码审查的费用归属，避免成员个人额度意外耗尽；学生使用个人许可证时，可能受组织的授权用户政策限制。",
+            "free": "该设置本身不代表免费审查：选择组织付费需启用 AI Credits 付费使用；默认 Member 模式仍从成员自己的 Copilot entitlement 扣减额度。资格面向 Copilot 代码审查的组织管理场景，地区和具体价格/配额官方未在公告中说明。",
+            "category": "AI 编程 / 组织计费与访问控制",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-08",
+              "url": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Student：经验证学生可免费使用 Copilot 功能",
+            "summary": "GitHub Education 当前列出 Copilot Student 学生计划：验证通过的学生可免费使用 Copilot，包含无限代码补全及一定的 GitHub AI Credits；聊天和 Agent 使用受限，只能自动选择模型，且不包括第三方 Agent。",
+            "howTo": "打开 GitHub Student Developer Pack 的 Copilot Student offer，申请并完成 GitHub Education 学生身份验证，再按页面指引激活该计划；仅验证通过后适用。",
+            "impact": "适合用代码补全练习课程项目、让 Copilot 帮忙解释错误或辅助检查代码；由于聊天和 Agent 有限制，先把额度留给需要多步分析的学习任务。",
+            "free": "学生验证通过后免费；GitHub Student Developer Pack 表示无限代码补全、包含 AI Credits 额度、聊天和 Agent 使用受限且只提供自动模型选择。具体 Credits 数量及聊天/Agent 配额、地区限制和权益截止日期官方未说明。",
+            "category": "学生教育福利 / 免费 AI 编程",
+            "source": {
+              "name": "GitHub Education Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Azure for Students：学生可领取云服务与 100 美元 Azure 额度",
+            "summary": "GitHub Student Developer Pack 列出 Microsoft Azure 学生权益：年满 18 岁的学生可免信用卡使用 25+ 项 Azure 云服务，并获得 100 美元 Azure credit。它可用于教育目的的软件设计、开发、测试或演示等云端实践。",
+            "howTo": "在 GitHub Student Developer Pack 打开 Microsoft Azure offer，按页面指引申请 Azure for Students；启用前确认具体 Azure 服务是否适用学生订阅及信用额度，避免把额度之外的计费误作免费。",
+            "impact": "学生可用来部署课程项目原型、练习云端开发，或在允许的服务范围内试做 AI 应用；建议先设定资源预算并删除不再使用的云资源。",
+            "free": "官方列明年满 18 岁的学生可免信用卡使用 25+ Azure 服务并获 100 美元额度；该权益是有额度上限的学生福利，不等于所有 Azure AI 服务均免费。额度有效期、地区范围及各 AI 服务的具体配额官方未说明。",
+            "category": "学生教育福利 / 云端 AI 项目额度",
+            "source": {
+              "name": "GitHub Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：部分模型输入与输出 token 免费",
+            "summary": "Google AI for Developers 定价页列出 Gemini API 免费层，部分指定模型的输入和输出 token 免费，可从 Google AI Studio 开始使用；免费层内容会用于改进 Google 产品，因此不宜提交未公开论文或个人资料。",
+            "howTo": "进入 Google AI Studio，选择官方定价页明确标为 Free Tier 的模型并创建 API key，再按 Gemini API quickstart 发起调用；每次使用前核对该模型的速率限制和数据条款。",
+            "impact": "可用来练习 API 调用、比较提示词或搭建课程原型；对研究草稿和个人数据，先评估免费层的数据使用规则，不要上传敏感材料。",
+            "free": "只限定价页列出的部分模型，免费层输入/输出 token 免费，且内容可用于改进 Google 产品。模型范围有限；各模型具体调用限额、统一账号资格和地区条件官方未说明，应以所选模型当前页面为准。",
+            "category": "免费 API / AI 开发学习",
+            "source": {
+              "name": "Google AI for Developers 定价文档",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Microsoft Phi-4-mini-instruct：MIT 许可的可下载模型权重",
+            "summary": "Microsoft 官方 Hugging Face 模型卡提供 Phi-4-mini-instruct 权重，列明模型规模为 3.8B 参数、上下文长度 128K，并标注 MIT 许可证。可下载到本地运行；效果、内存和速度需按设备与任务自行测试。",
+            "howTo": "打开 Microsoft 官方模型卡，按 Transformers 示例安装 `transformers` 与 `accelerate`，用 `AutoTokenizer` 和 `AutoModelForCausalLM` 下载并加载 `microsoft/Phi-4-mini-instruct`；先用非敏感文本做本机测试。",
+            "impact": "适合有足够设备资源的学生练习本地模型部署、多语言提示词和结果校验；MIT 权重许可便于学习和原型开发，但不代表输出准确，也不免除硬件成本。",
+            "free": "模型卡公开权重并标注 MIT 许可，下载和本地推理不收模型调用费；硬件、电力和软件环境由使用者承担。模型托管推理价格、地区和配额官方未说明。",
+            "category": "免费开放权重 / 本地学习",
+            "source": {
+              "name": "Microsoft 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：MIT 许可的本地语音识别与翻译模型",
+            "summary": "OpenAI 官方仓库提供 Whisper 代码和模型权重，支持多语言语音识别、语音翻译和语言识别，并提供多种模型大小供用户按速度与资源取舍。",
+            "howTo": "依官方仓库安装 `openai-whisper` 和 ffmpeg，运行 `whisper lecture.wav --model small` 转写本人有权处理的录音；如需翻译，选择多语言模型并按仓库说明设置任务。",
+            "impact": "可以把课程录音制成复习文本、辅助听力或对照原音练习翻译；语音识别可能有误，需逐句校对，并先确认录音隐私和使用许可。",
+            "free": "代码和模型权重按 MIT 许可证发布，可下载后本地运行，不收模型 API 调用费；需自备兼容硬件与软件环境，托管服务价格、账号、地区和调用配额官方未说明。",
+            "category": "免费开放模型 / 语音学习工具",
+            "source": {
+              "name": "OpenAI GitHub",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期分别从工作场所的分类回收和医疗债务的预防机制切入：练习辨析个人经验、制度执行与成本约束，也学习报道如何将问题证据、政策方案和实施障碍串成完整论证。",
+        "articles": [
+          {
+            "title": "'People don't think recycling at work is part of their job description'",
+            "source": "BBC",
+            "published": "2026-10-09",
+            "url": "https://www.bbc.co.uk/news/articles/cqe8rn65yj2ko",
+            "readingTime": "约 3 分钟",
+            "topic": "环境 / 工作场所回收与公共政策",
+            "summary": "BBC 以威尔士几位工作者的经历呈现工作场所回收与家庭回收之间的差异：有人因单位可回收类别有限而把垃圾带回家，也有人因医院分类标识清楚而在工作中照常分类。报道随后转向制度层面，指出威尔士企业须把废弃物分为六类，但各地收集安排并不一致；Vale of Glamorgan 当地政府称新要求提高了回收物质量。文章最后呈现执行中的成本和额外劳动顾虑，同时引用当地项目负责人关于企业反应积极、分类实践逐渐成为习惯的观察，说明政策效果取决于设施、便利性和组织执行。",
+            "reason": [
+              "环境治理与日常行为相连，适合讨论个人习惯如何受到工作场所设施和公共政策影响。",
+              "结构先列举员工经验，再介绍威尔士分类规定和地方执行，最后对照成本顾虑与实际反馈。",
+              "可练习主旨题、例证作用题、观点态度题，并辨别访谈个案与整体政策效果之间的证据差异。",
+              "industrialised、segregated、collection arrangements、take it in one’s stride 等表达可用于环境与职场主题。",
+              "写作可借鉴“行为障碍—制度要求—执行成本—逐步适应”的论证链，避免只用个人态度解释回收率。"
+            ],
+            "vocabulary": [
+              {
+                "word": "routine",
+                "phonetic": "/ruːˈtiːn/",
+                "part": "n.",
+                "translation": "惯例；日常程序"
+              },
+              {
+                "word": "out and about",
+                "phonetic": "/ˌaʊt ən əˈbaʊt/",
+                "part": "phr.",
+                "translation": "外出时；在外活动时"
+              },
+              {
+                "word": "limited",
+                "phonetic": "/ˈlɪmɪtɪd/",
+                "part": "adj.",
+                "translation": "有限的；受限制的"
+              },
+              {
+                "word": "industrialised",
+                "phonetic": "/ɪnˈdʌstriəlaɪzd/",
+                "part": "adj.",
+                "translation": "工业化的"
+              },
+              {
+                "word": "impact",
+                "phonetic": "/ˈɪmpækt/",
+                "part": "n.",
+                "translation": "影响；作用"
+              },
+              {
+                "word": "category",
+                "phonetic": "/ˈkætəɡəri/",
+                "part": "n.",
+                "translation": "类别；范畴"
+              },
+              {
+                "word": "collection arrangements",
+                "phonetic": "/kəˈlekʃən əˈreɪndʒmənts/",
+                "part": "n. phr.",
+                "translation": "收集/清运安排"
+              },
+              {
+                "word": "segregated",
+                "phonetic": "/ˈseɡrɪɡeɪtɪd/",
+                "part": "adj.",
+                "translation": "分类分开的；隔离的"
+              },
+              {
+                "word": "critical",
+                "phonetic": "/ˈkrɪtɪkəl/",
+                "part": "adj.",
+                "translation": "持批评态度的；关键的"
+              },
+              {
+                "word": "take it in one’s stride",
+                "phonetic": "/teɪk ɪt ɪn wʌnz straɪd/",
+                "part": "idiom",
+                "translation": "从容应对；泰然接受"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "James Jenkins, 30, said he often took rubbish home with him given the limited options where he works.",
+                "analysis": [
+                  "主句主干为 James Jenkins said，后接省略 that 的宾语从句 he often took rubbish home with him。",
+                  "often 是频率副词，修饰 took，提示这不是一次性的行为。",
+                  "given the limited options 作原因状语，说明他把垃圾带回家的背景。",
+                  "where he works 是地点状语从句，限定可选回收设施所在的工作场所。",
+                  "可借鉴 given + 名词短语说明行为背后的条件，而非简单归因于个人态度。"
+                ],
+                "translation": "詹姆斯·詹金斯说，由于工作地点可选的回收方式有限，他常把垃圾带回家。"
+              },
+              {
+                "original": "Although businesses in Wales are now required to sort their waste into six categories, collection arrangements can vary from area to area.",
+                "analysis": [
+                  "Although 引导让步状语从句，先交代威尔士企业共同面对的分类要求。",
+                  "从句主干是 businesses are required，are required 为被动结构，突出制度要求而非执行主体。",
+                  "to sort their waste into six categories 是不定式补足语，说明具体需要完成的动作。",
+                  "主句主干 collection arrangements can vary，from area to area 表示地区间差异。",
+                  "句子以“规则统一—执行条件不同”构成对照，可用于分析政策落实差异。"
+                ],
+                "translation": "尽管威尔士企业现在必须把废弃物分成六类，但各地的收集安排可能不同。"
+              },
+              {
+                "original": "But we've been doing segregated recycling for a couple of years now, and most people just take it in their stride.",
+                "analysis": [
+                  "But 承接前文对成本和额外劳动的担忧，转入当地负责人的经验回应。",
+                  "前半句主干为 we have been doing recycling，现在完成进行时强调分类回收持续了数年。",
+                  "for a couple of years 是持续时间状语，now 与现在完成进行时呼应。",
+                  "and 连接两个并列分句；后半句主干 most people take it，it 指代分类回收的要求或做法。",
+                  "take something in one’s stride 表示从容接受，可借鉴该句呈现一种措施逐步常态化。"
+                ],
+                "translation": "不过，我们实行分类回收已有几年了，大多数人现在都能从容应对。"
+              }
+            ]
+          },
+          {
+            "title": "Medical debt is crushing hospital patients in LA. Health officials may have a fix",
+            "source": "NPR",
+            "published": "2026-10-08",
+            "url": "https://www.npr.org/2026/10/08/nx-s1-5991633/hospital-california-healthcare-medical-debt",
+            "readingTime": "约 5 分钟",
+            "topic": "经济与健康 / 医疗债务和救助资格筛查",
+            "summary": "NPR 报道洛杉矶县试图用“预先判定资格”减少医疗债务：医院可依据公开信息自动筛查低收入患者是否符合财务援助，而不必等患者自行发现并填写复杂申请。文章先以公共卫生部门“上游预防”的理念引出医疗欠债问题，再列出美国与洛杉矶县受债务影响的人数、患者因账单放弃处方或就诊的后果，以及医院追债效率低等证据。随后解释自动筛查如何运作、其他医院报告的援助增长和加州新规，并说明小型医院的成本障碍。结尾介绍医院协会批量采购系统和 L.A. Care 的资金支持，同时指出启动资金、数据准确度和 88 家医院是否加入仍未解决；作者强调筛查虽有助于预防，但不能单独消除医疗债务。",
+            "reason": [
+              "将健康公平、家庭财务负担和医疗机构治理结合起来，是常见的公共政策与社会问题主题。",
+              "报道从预防理念切入，接着说明债务规模和后果，再解释资格筛查机制，最后讨论合作方案及实施不确定性。",
+              "可练习因果链、数字证据作用、方案优缺点和作者结论题，并区分“可能减少”与“彻底解决”。",
+              "upstream、cumbersome、eligible、presumptive eligibility、fiscal 等词汇适用于公共卫生与社会保障论述。",
+              "写作可借鉴“问题成本—机制解释—集体行动—执行障碍”的结构，并用限制语保持结论审慎。"
+            ],
+            "vocabulary": [
+              {
+                "word": "upstream",
+                "phonetic": "/ˌʌpˈstriːm/",
+                "part": "adv./adj.",
+                "translation": "在问题发生前；上游的"
+              },
+              {
+                "word": "initiative",
+                "phonetic": "/ɪˈnɪʃətɪv/",
+                "part": "n.",
+                "translation": "倡议；行动计划"
+              },
+              {
+                "word": "staggering",
+                "phonetic": "/ˈstæɡərɪŋ/",
+                "part": "adj.",
+                "translation": "令人震惊的；惊人的"
+              },
+              {
+                "word": "cumbersome",
+                "phonetic": "/ˈkʌmbərsəm/",
+                "part": "adj.",
+                "translation": "繁琐的；难处理的"
+              },
+              {
+                "word": "eligible",
+                "phonetic": "/ˈelɪdʒəbəl/",
+                "part": "adj.",
+                "translation": "符合资格的"
+              },
+              {
+                "word": "presumptive eligibility",
+                "phonetic": "/prɪˈzʌmptɪv ˌelɪdʒəˈbɪləti/",
+                "part": "n. phr.",
+                "translation": "推定资格；预先判定资格"
+              },
+              {
+                "word": "fiscal",
+                "phonetic": "/ˈfɪskəl/",
+                "part": "adj.",
+                "translation": "财政的"
+              },
+              {
+                "word": "procure",
+                "phonetic": "/prəˈkjʊr/",
+                "part": "v.",
+                "translation": "采购；取得"
+              },
+              {
+                "word": "safety net",
+                "phonetic": "/ˈseɪfti net/",
+                "part": "n. phr.",
+                "translation": "安全网；社会保障体系"
+              },
+              {
+                "word": "forgo",
+                "phonetic": "/fɔːrˈɡoʊ/",
+                "part": "v.",
+                "translation": "放弃；不再享用"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "We like doing things upstream, meaning before they happen, not after the damage is done.",
+                "analysis": [
+                  "主句主干为 We like doing things，动名词短语作 like 的宾语。",
+                  "upstream 用比喻义表示在问题造成损害前采取行动。",
+                  "meaning before they happen 是补充说明，解释 upstream 的具体含义。",
+                  "not after the damage is done 与 before 对照，强调预防和事后补救的时间差。",
+                  "可借鉴 before..., not after... 简洁表达预防优先的政策理念。"
+                ],
+                "translation": "我们倾向于把事情做在前面，也就是在问题发生之前，而不是等损害已经造成之后。"
+              },
+              {
+                "original": "One potential solution is a system that automatically screens and qualifies low-income patients for financial aid without requiring an application.",
+                "analysis": [
+                  "主句主干为 One potential solution is a system，系表结构提出一种可能方案。",
+                  "that 引导限制性定语从句，修饰 system，说明系统具体如何工作。",
+                  "screens and qualifies 为并列谓语，宾语是 low-income patients，for financial aid 表明资格目标。",
+                  "without requiring an application 是介词短语，requiring 为动名词，说明免去的程序。",
+                  "可借鉴 a system that... without... 描述自动化方案及其减少的手续。"
+                ],
+                "translation": "一种可能的解决办法是建立一套系统，自动筛查并认定低收入患者的援助资格，无需他们提交申请。"
+              },
+              {
+                "original": "But he said the public health department couldn't ignore a problem that affects more county residents than asthma or tobacco use.",
+                "analysis": [
+                  "But 标示转折；主句主干为 he said，后接省略 that 的宾语从句。",
+                  "宾语从句主干为 the department couldn’t ignore a problem，情态动词 couldn’t 表示不能置之不理。",
+                  "that affects more county residents... 是修饰 problem 的定语从句，补充其影响范围。",
+                  "more... than... 构成比较级，借常见健康问题凸显医疗债务覆盖面之广。",
+                  "可借鉴“cannot ignore a problem that...”提出公共机构行动责任。"
+                ],
+                "translation": "但他说，公共卫生部门不能忽视一个影响县内居民人数超过哮喘或烟草使用的问题。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-09",
       "status": "ready",
@@ -2032,338 +2378,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 be happy to be corrected when... 表达研究或数据项目的可修正性。"
                 ],
                 "translation": "如果他们有地方弄错了，他和团队其他成员都乐于接受纠正。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-03",
-      "status": "ready",
-      "ai": {
-        "intro": "截至上海 10 月 3 日，先检索 10 月 2—3 日，符合条件的官方新变化不足三项，因此扩展到此前七天；免费资源按官方页面复核。",
-        "updates": [
-          {
-            "event": "GitHub Copilot CLI 与应用公开预览 computer use（2026-10-01）",
-            "summary": "GitHub 在 Copilot CLI 及 macOS、Windows 版 Copilot app 中开放 computer use 公测。Copilot 可读取应用内容与画面、点击控件、输入和编辑文本、滚动，并跨桌面应用执行流程；控制应用前会请求批准。",
-            "howTo": "在 Copilot CLI 输入 `/computer on` 开启，用 `/computer show` 检查状态、`/computer off` 关闭；Copilot app 则进入 Settings > Computer Use，开启 Enable Computer Use。描述目标、涉及应用和约束，并逐项检查代理准备执行的操作。",
-            "impact": "课程小组可尝试把网页资料整理进演示文稿，或在没有 API、命令行接口的图形软件中重复录入项目数据；先核对操作结果，不要交由代理处理未经核实的信息。macOS 需要授予 Accessibility 和 Screen Recording 权限。",
-            "free": "官方只称 public preview，未说明价格、免费资格、所需订阅、开放地区或使用配额；组织管理员可关闭该功能。",
-            "category": "AI 桌面自动化",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-01",
-              "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
-            }
-          },
-          {
-            "event": "Gemini Live 推出 Guided Vision 实时视觉辅助（2026-10-01）",
-            "summary": "Google 在兼容 Android 设备的 Gemini Live 中推出 Guided Vision。用户分享摄像头后，可语音询问周围环境、物品或文字，Gemini 还能用语音提示调整取景；该功能面向盲人、低视力用户及需要视觉辅助的人群。",
-            "howTo": "在 Gemini 手机应用的个人资料设置中开启 Use Guided Vision in Live，启动 Gemini Live 并分享摄像头；也可在 Android Settings > Accessibility > Vision assistance > Guided Vision 设置快捷方式，或从 TalkBack 菜单启动。",
-            "impact": "可尝试听读包装标签或印刷材料、寻找桌面物品，并获取陌生室内空间的文字描述；生成式 AI 可能出错，官方明确说明它不是导航、避障或白手杖替代品。",
-            "free": "官方称已面向兼容 Android 设备推出，但未说明价格、账号计划、开放地区、完整机型范围或使用配额。",
-            "category": "AI 无障碍 / 实时视觉",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-01",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
-            }
-          },
-          {
-            "event": "GitHub Copilot code review 支持 API 请求并调整审查力度（2026-10-02）",
-            "summary": "Copilot code review 现在可通过 REST 和 GraphQL API 请求，并可为单次审查设置 effort；Default 的默认审查力度改为 Balanced。该功能已向 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划开放。",
-            "howTo": "在目标仓库的拉取请求流程中，通过受支持的 REST 或 GraphQL API 发起 Copilot review，并按需要为该次审查指定力度。个人用户可在头像 > Copilot settings > Copilot > Code review 查看或调整默认值；组织和仓库也可在各自 Copilot 设置中管理。",
-            "impact": "学生团队可把自动审查接入课程仓库的 PR 工作流，减少等待人工初筛的时间；仍需自行阅读建议、运行测试并判断代码是否正确。",
-            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise；未列出 Free 计划。地区、API 调用额度及其他限制官方未说明。",
-            "category": "AI 编程 / 代码审查",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-02",
-              "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Azure for Students：$100 云额度及 Azure AI 学习资源",
-            "summary": "Microsoft 为符合条件的在读大学生提供 Azure for Students：官方页面列出 $100 Azure credit、无需信用卡，并可在教育用途下访问 Azure 产品；页面还明确提到可接触 Azure OpenAI。",
-            "howTo": "从 Microsoft Azure for Students 页面申请学生计划，先阅读 Azure OpenAI 或其他云服务的教育用途条件，再用额度做小型课程原型；部署前查看服务计费与免费额度，避免额度用尽后产生费用。",
-            "impact": "适合在课程中试做文本问答、数据处理或云端 AI 原型；可先用额度验证工作流，而不是直接承担常规 API 账单。",
-            "free": "官方列出全日制大学生资格、无需信用卡及 $100 额度；该额度可在 12 个月内用于大多数 Azure 产品。另有 20 多项常用服务的免费月额度，限新 Azure 客户、最长 12 个月，以及 65 多项始终免费的服务。国家/地区和申请截止日官方未说明。",
-            "category": "学生教育福利 / 云端 AI",
-            "source": {
-              "name": "Microsoft Azure for Students",
-              "published": "官方未说明",
-              "url": "https://azure.microsoft.com/en-us/free/students/"
-            }
-          },
-          {
-            "event": "IBM Granite 3.3 2B Instruct Apache 2.0 开放权重",
-            "summary": "IBM 官方模型卡开放 Granite 3.3 2B Instruct 权重，采用 Apache 2.0 许可；模型有 20 亿参数，支持中文等多种语言，可用于摘要、问答、信息抽取、RAG 和代码相关任务。",
-            "howTo": "打开 IBM 官方 Hugging Face 模型卡，按其示例安装 PyTorch、Accelerate 和 Transformers，再用 `ibm-granite/granite-3.3-2b-instruct` 加载模型；先用短文本测试本机是否有足够的计算资源。",
-            "impact": "可用于练习本地推理、RAG、文本分类或中英双语课程原型；下载开放权重不等于获得托管推理服务，运行仍需自备设备和算力。",
-            "free": "模型权重可按 Apache 2.0 许可下载和使用；官方模型卡未说明托管推理额度、地区或账号要求，也未给出统一硬件成本。",
-            "category": "可下载开放模型权重 / Apache 2.0",
-            "source": {
-              "name": "IBM Granite 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/ibm-granite/granite-3.3-2b-instruct"
-            }
-          },
-          {
-            "event": "Google Colab 免费 Jupyter 笔记本与计算资源",
-            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务，官方 FAQ 确认可免费使用，并提供包括 GPU、TPU 在内的计算资源；免费资源不是保证无限供应。",
-            "howTo": "打开 Colab，新建笔记本或从 Google Drive、GitHub 打开现有 `.ipynb`，运行 Python 单元格；开始前检查当前运行时可用资源，并及时保存笔记本。",
-            "impact": "可用于课程 Python 作业、数据分析和小规模机器学习实验，不必先配置本地开发环境；长时间任务应保存结果，因为虚拟机闲置后会被删除。",
-            "free": "官方确认服务免费，但资源不保证且不无限，使用限制会变化；地区、固定 GPU/TPU 时数和账号资格官方未说明。",
-            "category": "免费云端计算 / 学习开发",
-            "source": {
-              "name": "Google Colaboratory FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Claude Free 免费网页与应用访问",
-            "summary": "Anthropic 的 Claude Free 计划可用于日常问题；免费计划的使用量按滚动五小时窗口重置，实际可用量随对话长度、模型和功能而变，并非固定消息条数。",
-            "howTo": "打开 Claude 官网，选择免费计划并登录；可让它解释课程阅读材料、对论文提纲提出问题或生成练习题，再回到原文和课程资料核对答案。",
-            "impact": "适合临时复习、梳理论点和练习提问；高复杂度对话会更快消耗使用量，重要作业仍要由学生核实事实与引文。",
-            "free": "官方列出 Free 计划，按滚动五小时窗口重置；用量因对话、模型和功能而异，没有固定消息数，且可能另有每周或每月限制。具体地区、资格和额度官方未说明。",
-            "category": "长期免费网页 / 学习助手",
-            "source": {
-              "name": "Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Row erupts over Cairo mural depicting Tutankhamun and Nefertiti with dark skin",
-            "source": "The Guardian",
-            "published": "2026-10-02",
-            "url": "https://www.theguardian.com/global-development/2026/oct/02/row-erupts-over-cairo-mural-depicting-tutankhamun-and-nefertiti-with-dark-skin",
-            "readingTime": "5 分钟",
-            "topic": "文化 / 历史表征与人工智能",
-            "summary": "文章从开罗一幅被涂掉的壁画切入：当地志愿者为重要来访制作城市壁画，用 ChatGPT 生成设计，却因图像中图坦卡蒙与娜芙蒂蒂的肤色引发争议，最终在社交媒体舆论升温后被要求重涂。报道交代创作方未咨询考古与艺术专家，也呈现埃及学者对古埃及族群多样性和相关历史主张的不同看法。后半部分把事件放进长期的古埃及身份争论，并引用 AI 研究者及艺术评论者提醒：模型生成内容反映网络上流传的信息，不应替代专业判断或创作者本身。",
-            "reason": [
-              "主题涉及文化遗产、历史叙事与身份认同，可用于文化传播、媒介影响和科技伦理类考题。",
-              "结构由具体事件展开，依次说明争议成因、相关者回应，再回到长期争论及 AI 使用风险。",
-              "可练习主旨归纳、观点辨析和证据判断：区分报道事实、受访者看法与作者组织的论述。",
-              "词汇覆盖 depiction、controversy、oversight、complexion 等文化报道常见表达。",
-              "写作可借鉴“案例—争议—专家意见—审慎结论”的展开方式，论证技术工具应受专业知识约束。"
-            ],
-            "vocabulary": [
-              {
-                "word": "depicting",
-                "phonetic": "/dɪˈpɪktɪŋ/",
-                "part": "v.",
-                "translation": "描绘；刻画"
-              },
-              {
-                "word": "commissioned",
-                "phonetic": "/kəˈmɪʃənd/",
-                "part": "v.",
-                "translation": "委托创作；委任"
-              },
-              {
-                "word": "controversy",
-                "phonetic": "/ˈkɒntrəvɜːsi/",
-                "part": "n.",
-                "translation": "争议"
-              },
-              {
-                "word": "oversight",
-                "phonetic": "/ˈəʊvəsaɪt/",
-                "part": "n.",
-                "translation": "监督；审查"
-              },
-              {
-                "word": "complexion",
-                "phonetic": "/kəmˈplekʃən/",
-                "part": "n.",
-                "translation": "肤色；面色"
-              },
-              {
-                "word": "reignited",
-                "phonetic": "/ˌriːɪɡˈnaɪtɪd/",
-                "part": "v.",
-                "translation": "再次引发；重新点燃"
-              },
-              {
-                "word": "diverse",
-                "phonetic": "/daɪˈvɜːs/",
-                "part": "adj.",
-                "translation": "多样的"
-              },
-              {
-                "word": "reflected",
-                "phonetic": "/rɪˈflektɪd/",
-                "part": "v.",
-                "translation": "反映"
-              },
-              {
-                "word": "factually accurate",
-                "phonetic": "/ˈfæktʃuəli ˈækjərət/",
-                "part": "adj. phr.",
-                "translation": "符合事实的；准确的"
-              },
-              {
-                "word": "substitute",
-                "phonetic": "/ˈsʌbstɪtjuːt/",
-                "part": "v.",
-                "translation": "替代"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The team used the AI programme ChatGPT to generate the designs, which volunteers then painted on to the wall.",
-                "analysis": [
-                  "主干为 The team used the AI programme ChatGPT，to generate the designs 是说明用途的不定式结构。",
-                  "which 引导非限制性定语从句，指代前面的 designs；从句中 volunteers 是主语，painted 是谓语。",
-                  "then 标示先后顺序：先由 AI 生成设计，再由志愿者把设计画到墙上。",
-                  "句子把技术工具与人工执行并列呈现，并未说 AI 直接完成壁画。",
-                  "可借鉴 use A to do B, which... 描述工具、用途及后续结果。"
-                ],
-                "translation": "团队使用 ChatGPT 生成设计，志愿者随后把这些设计画到墙上。"
-              },
-              {
-                "original": "They were built by companies in the US and Europe, he said, and the content they generated could shape how those audiences saw themselves.",
-                "analysis": [
-                  "句子由 and 连接两个并列分句：They were built... 与 the content... could shape...。",
-                  "第一分句用 were built 被动语态，by companies... 引出执行者；he said 是插入的消息来源。",
-                  "第二分句中 they generated 是修饰 content 的定语从句，省略了关系代词 that。",
-                  "how those audiences saw themselves 是宾语从句，作 shape 的宾语；could 表示可能影响。",
-                  "可借鉴被动事实加并列影响的写法，讨论技术来源与社会后果。"
-                ],
-                "translation": "他说，这些工具由美国和欧洲的公司开发，而它们生成的内容可能影响这些受众如何看待自己。"
-              },
-              {
-                "original": "Mostafa Eissa, an art critic, said AI should remain a tool, never a decision-maker in its own right.",
-                "analysis": [
-                  "主干为 Mostafa Eissa said，an art critic 是解释人物身份的同位语。",
-                  "AI should remain a tool 是 said 后的宾语从句，should 表达主张而非既定事实。",
-                  "never a decision-maker 与 a tool 构成省略式对照，补足语义为“而不应成为决策者”。",
-                  "in its own right 强调“本身、独立地”，限定 decision-maker 的角色。",
-                  "可借鉴 remain A, never B 简洁表达某工具应有的边界。"
-                ],
-                "translation": "艺术评论家 Mostafa Eissa 认为，AI 应当只是工具，而不应成为独立的决策者。"
-              }
-            ]
-          },
-          {
-            "title": "The U.S. added only 29,000 jobs in September as job market lacks spark",
-            "source": "NPR",
-            "published": "2026-10-02",
-            "url": "https://www.npr.org/2026/10/02/nx-s1-5989140/jobs-labor-wages-federal-reserve",
-            "readingTime": "4 分钟",
-            "topic": "经济 / 就业数据与实际工资",
-            "summary": "NPR 根据美国劳工部 9 月就业报告指出，雇主仅新增 2.9 万个岗位，低于预期，且 7、8 月数据合计下修 6 万；失业率从 4.1% 升至 4.2%，但主要与劳动力人数增加有关，报告并未显示普遍裁员。文章随后转向工资：平均工资同比增长 3%，近期未能跟上物价上涨，削弱实际购买力。最后联系美联储抑制通胀的利率决策，解释疲弱就业数据为何降低再次加息的可能性，同时指出投资者仍预期年内至少再加息一次。",
-            "reason": [
-              "就业、通胀与利率是常见经济主题，适合练习从数据解释宏观趋势及其个人影响。",
-              "行文先报就业数据，再解释失业率构成与工资变化，最后连接美联储政策和市场反应。",
-              "可考查数字信息定位、因果推断、段落主旨，以及“就业疲软是否意味着普遍裁员”等细节判断。",
-              "文章包含 labor force、revise down、keep pace with、erode 等经济新闻高频表达。",
-              "写作可借鉴先呈现数据、再解释指标含义、最后说明政策后果的论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "forecasters",
-                "phonetic": "/ˈfɔːkɑːstəz/",
-                "part": "n.",
-                "translation": "预测者；预测机构"
-              },
-              {
-                "word": "revised down",
-                "phonetic": "/rɪˈvaɪzd daʊn/",
-                "part": "v. phr.",
-                "translation": "向下修正；下调"
-              },
-              {
-                "word": "turnover",
-                "phonetic": "/ˈtɜːnˌəʊvə/",
-                "part": "n.",
-                "translation": "人员流动；周转"
-              },
-              {
-                "word": "shed workers",
-                "phonetic": "/ʃed ˈwɜːkəz/",
-                "part": "v. phr.",
-                "translation": "裁员；减少雇员"
-              },
-              {
-                "word": "keep pace with",
-                "phonetic": "/kiːp peɪs wɪð/",
-                "part": "v. phr.",
-                "translation": "跟上；与……同步"
-              },
-              {
-                "word": "eroded",
-                "phonetic": "/ɪˈrəʊdɪd/",
-                "part": "v.",
-                "translation": "逐渐削弱；侵蚀"
-              },
-              {
-                "word": "benchmark",
-                "phonetic": "/ˈbentʃmɑːk/",
-                "part": "n.",
-                "translation": "基准；基准指标"
-              },
-              {
-                "word": "curb",
-                "phonetic": "/kɜːb/",
-                "part": "v.",
-                "translation": "抑制；控制"
-              },
-              {
-                "word": "lackluster",
-                "phonetic": "/ˈlæklʌstə/",
-                "part": "adj.",
-                "translation": "乏力的；不景气的"
-              },
-              {
-                "word": "inched higher",
-                "phonetic": "/ɪntʃt ˈhaɪə/",
-                "part": "v. phr.",
-                "translation": "小幅上升"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The U.S. job market showed signs of weakness in September as hiring slowed and the unemployment rate inched higher.",
-                "analysis": [
-                  "主干为 The U.S. job market showed signs，of weakness 说明迹象的具体内容。",
-                  "in September 是时间状语，限定报告所描述的时期。",
-                  "as 引导从句，hiring slowed 与 the unemployment rate inched higher 并列呈现两项变化。",
-                  "as 可兼有时间和原因意味，此处把就业放缓与失业率微升作为市场走弱的证据。",
-                  "可借鉴 show signs of... as... 用数据和并列现象概括趋势。"
-                ],
-                "translation": "9 月招聘放缓、失业率小幅上升，美国就业市场显现疲软迹象。"
-              },
-              {
-                "original": "The September report doesn't show widespread job cuts, although financial services and government shed workers.",
-                "analysis": [
-                  "主句主干为 The report does not show job cuts，widespread 修饰 job cuts，限定“普遍裁员”。",
-                  "although 引导让步状语从句，说明金融服务业和政府部门确有裁员。",
-                  "主句否认的是普遍现象，从句补充局部行业情况，二者并不矛盾。",
-                  "shed workers 是 shed 的及物用法，意为裁减员工。",
-                  "可借鉴 not..., although... 避免把局部变化误写成整体趋势。"
-                ],
-                "translation": "9 月报告并未显示普遍裁员，尽管金融服务业和政府部门减少了员工。"
-              },
-              {
-                "original": "Prices have been rising faster than paychecks in recent months, so workers' real buying power is being eroded.",
-                "analysis": [
-                  "前半句主干为 Prices have been rising，使用现在完成进行时强调近期持续上涨。",
-                  "faster than paychecks 是比较结构，省略了重复的 rising，比较价格与工资增长速度。",
-                  "so 连接原因与结果：价格涨得更快，购买力因此受损。",
-                  "后半句用现在进行时被动 is being eroded，突出购买力正在受到侵蚀。",
-                  "可借鉴 faster than... so... 解释生活成本变化带来的结果。"
-                ],
-                "translation": "近几个月物价涨幅快于工资，因此劳动者的实际购买力正在被削弱。"
               }
             ]
           }
