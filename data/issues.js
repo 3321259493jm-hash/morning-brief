@@ -1,6 +1,339 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-10T10:19:18+08:00",
+  "updatedAt": "2026-10-11T09:45:00+08:00",
   "issues": [
+    {
+      "date": "2026-10-11",
+      "status": "ready",
+      "ai": {
+        "intro": "10月10日至11日仅核实到1项符合条件的新变化，因此扩至近7天，补入10月8日与10月7日发布的公告；下列来源均按真实发布日期标注。",
+        "updates": [
+          {
+            "event": "GitHub Copilot for JetBrains 增加模型、MCP 启动和对话控制（2026-10-10）",
+            "summary": "GitHub 为 JetBrains 插件增加企业托管的默认模型设置、诊断问题的内联 Fix 操作、控制 Copilot 与 Claude MCP 服务器是否自动启动的选项，并改进聊天导航、账户切换和 Agent 会话稳定性。更新要求 JetBrains IDE 2025.2 或更高版本。",
+            "howTo": "更新到最新 GitHub Copilot JetBrains 插件；在代码诊断的 intention 菜单中点 Fix，让 Copilot 在可用时通过 Agent mode、否则通过 Ask mode提出修复；需要手动控制工具时，在 Copilot 的 MCP 设置中关闭服务器自动启动。",
+            "impact": "写课程项目时可从 IDE 诊断直接请求解释和修复建议，并按需启动 MCP 工具，减少在不同窗口间切换；处理建议前仍应检查差异，避免未审阅的更改进入作业或团队仓库。",
+            "free": "需要登录有权使用 Copilot 的 GitHub 账户，并使用 JetBrains IDE 2025.2 或更高版本。公告未说明该批功能适用的具体套餐、地区或独立配额，相关限制官方未说明；公告也未说明这次更新是否另收费。",
+            "category": "AI 编程助手 / IDE 工作流",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-10",
+              "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
+            }
+          },
+          {
+            "event": "Anthropic 为开源项目推出免费周期性 AI 漏洞扫描（2026-10-08）",
+            "summary": "Anthropic 的 OSS Scanner 面向获准加入的开源项目提供最强模型进行的周期性安全扫描，扫描报告直接由模型生成并发给维护者，不经过人工复核。项目需要自愿加入；官方特别提醒，服务适合已有能力跟进高危漏洞报告的项目。",
+            "howTo": "由项目核心维护者检查 OSS Scanner 的资格条件，在 anthropics/oss-scanner 仓库按模板新增 projects/<project>/project.yaml，填写仓库地址、主要联系人和构建用 Dockerfile 路径，再提交 Pull Request 申请；获准后按报告人工核查漏洞和修复建议。",
+            "impact": "维护课程工具或学生开源项目的人可了解真实的漏洞披露与维护流程；报告可能有误且没有人工审核，不能未经验证就把模型发现当作已确认漏洞或直接发布修补。",
+            "free": "被接受加入的开源项目可免费获得周期性扫描；官方以项目对基础设施或用户安全的重要性等条件个案评估，并会人工验证提交者是否为核心维护者。扫描频率、名额、地区和申请截止日期官方未说明。",
+            "category": "免费开源工具 / 代码安全",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-08",
+              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+            }
+          },
+          {
+            "event": "Anthropic 发布 Claude Haiku 5.5，面向快速、重复性任务（2026-10-07）",
+            "summary": "Claude Haiku 5.5 是 Anthropic 新一代小模型，面向摘要、分类、压缩上下文和子 Agent 等高频任务，并新增可调 effort 设置，便于在成本与回答能力间取舍。官方称其已在 Claude Platform、AWS、Google Cloud 和 Microsoft Azure 等平台提供。",
+            "howTo": "开发者可在 Claude Platform API 中选择模型 ID `claude-haiku-5-5`，用非敏感课程笔记测试摘要或分类，并尝试调整 effort；先对照原文检查遗漏，再决定是否将它接入项目流程。",
+            "impact": "适合快速整理阅读材料、给小批量访谈文本做初步主题分类，或为编码 Agent 分担范围明确的子任务；它不是复杂研究结论的替代品，输出应回查来源。",
+            "free": "官方模型页列有 API 输入和输出 token 价格，因此 API 调用按用量计费；公告未说明 Claude 免费聊天用户能否选择该型号，也未给出免费调用额度、地区限制或统一配额，均以所在平台实际页面为准，未明确部分官方未说明。",
+            "category": "生成式 AI / 轻量模型",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-07",
+              "url": "https://www.anthropic.com/claude-haiku-5-5"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月可用的编程补全与聊天额度",
+            "summary": "GitHub 的 Copilot Free 计划为个人提供无需订阅费的基础编程辅助；官方列出的月额度为 2,000 次代码补全和 50 次聊天请求，Copilot Edits 也计入聊天请求。",
+            "howTo": "打开 GitHub Copilot Plans 页面选择 Free 计划，登录 GitHub 账户后在支持的编辑器安装 Copilot 插件；先用少量代码补全和聊天请求测试课程仓库，留意当月额度。",
+            "impact": "可用于解释报错、生成小段样板代码或练习单元测试，避免为短期课程练习先购买付费计划；不要把生成代码未经检查地提交。",
+            "free": "计划价格为免费；每月 2,000 次代码补全、50 次聊天请求（含 Copilot Edits），额度按月重置。官方页面未说明地区限制或额外账户资格要求，未说明部分官方未说明。",
+            "category": "长期免费 / 编程学习",
+            "source": {
+              "name": "GitHub Copilot Plans & Pricing",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Claude Free：可直接用于日常问答、阅读和写作辅助",
+            "summary": "Claude 定价页列出每人可用的 Free 计划，覆盖日常问题；适合先用来解释概念、梳理阅读提纲或检查一段文字，而不必先订阅。",
+            "howTo": "打开 Claude 定价页进入 Free 计划，登录后在网页或官方应用中粘贴一段非敏感课程材料，要求模型先概括论点，再对照原文校验。",
+            "impact": "能为英语阅读、论文提纲和概念复习提供低门槛的初稿帮助；应核查引文与事实，不上传未公开论文、个人信息或研究参与者资料。",
+            "free": "Free 计划价格为 0；官方说明使用额度按滚动 5 小时窗口重置，但没有固定消息数，实际用量受对话长度、模型和功能影响，也可能有其他限额。具体地区资格官方未说明。",
+            "category": "长期免费 / 学习助手",
+            "source": {
+              "name": "Claude Pricing",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-4B-Instruct-2507：可下载的 Apache 2.0 开放权重模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡公开 Qwen3-4B-Instruct-2507 权重并标注 Apache-2.0 许可；模型卡列出 4B 参数和原生 262,144-token 上下文，并提供 Transformers 使用示例。",
+            "howTo": "打开模型卡查看许可与运行示例，按示例准备 Transformers 环境并下载权重；先在本机用不含个人信息的短文本测试，再依据设备内存决定是否继续部署。",
+            "impact": "有合适硬件的学生可以练习本地推理、提示词对照和模型部署，避免把实验文本发往托管聊天服务；本地模型回答仍需核验，模型许可也不代表输出可直接当作事实。",
+            "free": "模型权重以 Apache-2.0 许可公开，可下载后本地运行，不需要为该模型的本地推理支付 API 调用费；硬件、电力和运行环境由使用者承担。托管推理的价格、账户、地区和配额官方未说明。",
+            "category": "免费开放权重 / 本地学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+            }
+          },
+          {
+            "event": "Anthropic OSS Scanner：为获准的开源项目提供免费定期扫描",
+            "summary": "Anthropic 向加入 OSS Scanner 的开源项目免费提供模型安全扫描；核心维护者提交项目配置 PR，经审核加入后可定期收到漏洞报告。",
+            "howTo": "项目核心维护者查看 OSS Scanner 资格说明，按模板在 anthropics/oss-scanner 新建项目配置，填写仓库、联系人和构建环境并提交 PR；获准后人工复核扫描结果。",
+            "impact": "学生维护的公共软件若有足够用户或被其他项目依赖，可把安全扫描纳入维护实践；该服务明确适合能跟进已确认高危报告的项目，不适合把自动报告直接当作已确认漏洞。",
+            "free": "被接受加入的开源项目免费获得周期性扫描；申请需由核心维护者提交并经过人工确认，项目资格按安全影响等因素审核。扫描次数、地区、名额及期限官方未说明。",
+            "category": "免费单次申请 / 开源代码安全",
+            "source": {
+              "name": "Anthropic Cyber Mission",
+              "published": "2026-10-08",
+              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期从文学如何重释古典传统，以及一座威尔士小城如何重建牛仔裤制造业切入；练习对比、让步、因果与转折结构，并区分文化价值主张和企业经营事实。",
+        "articles": [
+          {
+            "title": "Anne Carson’s Nobel-winning, genre-defying work bridges the gap between ancient Greek literature and modern life",
+            "source": "The Conversation",
+            "published": "2026-10-09",
+            "url": "https://theconversation.com/anne-carsons-nobel-winning-genre-defying-work-bridges-the-gap-between-ancient-greek-literature-and-modern-life-294020",
+            "readingTime": "约 6 分钟",
+            "topic": "文化 / 古典文学的当代改写",
+            "summary": "文章以诺贝尔文学奖得主 Anne Carson 为中心，提出她的作品通过翻译、改编与跨媒介创作，让古希腊文学进入当代经验。作者先比较 Christopher Nolan 与 Carson 如何重新讲述古典故事，再以 Carson 将海伦与 Marilyn Monroe 并置、改写《安提戈涅》为例，说明旧文本可以借新的文化视角重获现实意义。随后文章转向《萨福诗选》的残篇处理：Carson 用方括号和留白标示原文缺失，不把不确定之处补成完整叙事；这种选择引发评论者对译者是否应介入古典文本的分歧。结尾把 Carson 的作品概括为过去与现在之间的持续对话，强调其诗人语言感和古典学训练共同使旧文学焕发新意。",
+            "reason": [
+              "古典文化如何进入现代生活，连接文学、翻译与文化记忆，是适合讨论“传统是否需要改写”的文化主题。",
+              "论述先提出跨时代改写的总观点，再举舞台作品与译本为例，继而引入反对意见，最后回到作品的总体价值。",
+              "可练习主旨题、例证功能题、指代题，以及辨析作者如何呈现 Carson 与批评者的不同立场。",
+              "genre-defying、overlay、fragmentary、elide 等词可用于分析文学形式、翻译取舍与文本证据。",
+              "写作可借鉴“传统材料—当代重构—争议边界—文化意义”的展开方式，论证改编时兼顾创新与原作。"
+            ],
+            "vocabulary": [
+              {
+                "word": "defy",
+                "phonetic": "/dɪˈfaɪ/",
+                "part": "v.",
+                "translation": "违背；不受……限制"
+              },
+              {
+                "word": "evoke",
+                "phonetic": "/ɪˈvoʊk/",
+                "part": "v.",
+                "translation": "唤起；使人想起"
+              },
+              {
+                "word": "contemporary",
+                "phonetic": "/kənˈtempəreri/",
+                "part": "adj.",
+                "translation": "当代的；现代的"
+              },
+              {
+                "word": "overlay",
+                "phonetic": "/ˌoʊvərˈleɪ/",
+                "part": "v.",
+                "translation": "叠加；将一种事物置于另一事物之上"
+              },
+              {
+                "word": "fragmentary",
+                "phonetic": "/ˈfræɡmənteri/",
+                "part": "adj.",
+                "translation": "残缺的；片段式的"
+              },
+              {
+                "word": "elide",
+                "phonetic": "/iˈlaɪd/",
+                "part": "v.",
+                "translation": "省略；删去"
+              },
+              {
+                "word": "austerity",
+                "phonetic": "/ɔːˈsterəti/",
+                "part": "n.",
+                "translation": "简朴；（表达方式的）克制"
+              },
+              {
+                "word": "interposition",
+                "phonetic": "/ˌɪntərpəˈzɪʃən/",
+                "part": "n.",
+                "translation": "介入；插入"
+              },
+              {
+                "word": "distinctive",
+                "phonetic": "/dɪˈstɪŋktɪv/",
+                "part": "adj.",
+                "translation": "独特的；有辨识度的"
+              },
+              {
+                "word": "legacy",
+                "phonetic": "/ˈleɡəsi/",
+                "part": "n.",
+                "translation": "遗产；流传下来的影响"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Although Nolan and Carson differ in approach, medium and critical reception, both have sought to make works of ancient Greece new for a contemporary audience.",
+                "analysis": [
+                  "主干是 both have sought to make works ... new，both 指 Nolan 与 Carson；although 引导让步状语从句。",
+                  "in approach, medium and critical reception 并列修饰 differ，概括两人的创作路径、媒介和评论反响差异。",
+                  "make + 宾语 + 形容词补足语（make works ... new）表达“使作品焕然一新”，后接 for 短语说明受众。",
+                  "让步关系先承认两者差异，再强调共同目标，构成“虽不同但有共性”的论证转折。",
+                  "可借鉴 Although A and B differ in ..., both ... 来组织比较类议论文。"
+                ],
+                "translation": "尽管诺兰与卡森在创作方式、媒介和评论反响上各不相同，两人都试图让古希腊作品对当代读者焕发新意。"
+              },
+              {
+                "original": "In it, Carson overlays Helen of Troy with Marilyn Monroe in order to explore the destructive power of beauty.",
+                "analysis": [
+                  "主句核心是 Carson overlays Helen of Troy with Marilyn Monroe；In it 回指上文提到的舞台作品。",
+                  "overlay A with B 表示把 B 的形象叠加到 A 之上，具体说明改编采用的手法。",
+                  "in order to 引出目的状语，说明这种人物并置服务于探讨 beauty 的破坏性力量。",
+                  "destructive 修饰 power，of beauty 作后置介词短语限定力量来源，形成抽象议题表达。",
+                  "可仿写 use/juxtapose A with B in order to explore ...，陈述作品手法与主题之间的关系。"
+                ],
+                "translation": "在这部作品中，卡森将特洛伊的海伦与玛丽莲·梦露叠置，以探讨美的破坏性力量。"
+              },
+              {
+                "original": "Rather than eliding them, Carson ends up bringing attention to these absences – an utterly distinctive choice.",
+                "analysis": [
+                  "主句为 Carson ends up bringing attention to these absences；Rather than 引出与主句形成对照的动名词短语。",
+                  "them 指代前文提到的残缺或模糊文本；these absences 把缺失本身作为关注对象。",
+                  "end up doing 表示最终采取某种做法，带有结果意味；bringing attention to 是“使……受到关注”。",
+                  "破折号后的 an utterly distinctive choice 是同位补充，对前面的处理方式作评价。",
+                  "rather than doing 可用于写作中突出“没有采取常规做法，而选择……”的对比。"
+                ],
+                "translation": "卡森没有把这些残缺删去，反而最终让读者注意到它们——这是一个极具特色的选择。"
+              }
+            ]
+          },
+          {
+            "title": "“Our town is making jeans again”: meet the firm reviving jobs and skills in Wales",
+            "source": "The Guardian",
+            "published": "2026-10-10",
+            "url": "https://www.theguardian.com/business/2026/oct/10/hiut-denim-jeans-cardigan-wales-manufacturing",
+            "readingTime": "约 6 分钟",
+            "topic": "商业 / 地方制造业与技能传承",
+            "summary": "报道考察威尔士 Cardigan 的 Hiut Denim 如何试图重建当地牛仔裤制造业。小镇曾有大型工厂，生产外迁后许多工作岗位消失；2011 年成立的 Hiut 则以小规模手工生产和重新培训工人为核心。文章用昔日每周数万条牛仔裤与如今每周约 120 条、约 20 名员工的反差，说明其并非复制大规模制造，而是以高价、工艺和长期维修服务支撑品牌。随后报道介绍疫情后的资金压力、家族接手、供应链挑战和扩张计划，并指出资深工人即将退休，企业只有有限时间培养新人。结尾呈现这项经营尝试的张力：地方就业与传统技能具有社会价值，但维持本地生产仍须面对成本、人才和市场规模问题。",
+            "reason": [
+              "地方产业、就业与手工技能的存续构成商业与社会交叉主题，可讨论全球化后制造业如何重建。",
+              "文章以城镇制造史开篇，转入企业创立和生产方式，再讨论资金、供应链、接班与扩张，呈现机遇和约束。",
+              "适合主旨题、数字对比题、人物引语作用题，以及判断企业叙事是否足以证明长期盈利能力。",
+              "outsource、heyday、backlog、selvedge、ethos 等表达可用于产业迁移、产能和品牌价值讨论。",
+              "写作可借鉴“产业衰退—小规模重建—商业模式—持续性挑战”的结构，并避免把个案成功直接推及整个行业。"
+            ],
+            "vocabulary": [
+              {
+                "word": "unlikely",
+                "phonetic": "/ʌnˈlaɪkli/",
+                "part": "adj.",
+                "translation": "不大可能的；出人意料的"
+              },
+              {
+                "word": "outsourcing",
+                "phonetic": "/ˈaʊtsɔːrsɪŋ/",
+                "part": "n.",
+                "translation": "外包；将生产转移至外部"
+              },
+              {
+                "word": "heyday",
+                "phonetic": "/ˈheɪdeɪ/",
+                "part": "n.",
+                "translation": "全盛时期；鼎盛期"
+              },
+              {
+                "word": "crank out",
+                "phonetic": "/kræŋk aʊt/",
+                "part": "phr.v.",
+                "translation": "大量快速生产"
+              },
+              {
+                "word": "backlog",
+                "phonetic": "/ˈbæklɔːɡ/",
+                "part": "n.",
+                "translation": "积压的订单；待办事项"
+              },
+              {
+                "word": "premium",
+                "phonetic": "/ˈpriːmiəm/",
+                "part": "adj.",
+                "translation": "高端的；价格较高的"
+              },
+              {
+                "word": "selvedge",
+                "phonetic": "/ˈselvɪdʒ/",
+                "part": "n.",
+                "translation": "（织物的）布边；此处指赤耳丹宁布"
+              },
+              {
+                "word": "logistical",
+                "phonetic": "/ləˈdʒɪstɪkəl/",
+                "part": "adj.",
+                "translation": "物流方面的；后勤的"
+              },
+              {
+                "word": "ethos",
+                "phonetic": "/ˈiːθɑːs/",
+                "part": "n.",
+                "translation": "价值观；精神气质"
+              },
+              {
+                "word": "stockist",
+                "phonetic": "/ˈstɑːkɪst/",
+                "part": "n.",
+                "translation": "经销商；备货零售商"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "When jeans manufacturing in Wales was moved abroad at the start of the century, hundreds of local people lost their jobs and were forced to find work elsewhere.",
+                "analysis": [
+                  "主句核心是 hundreds of local people lost their jobs and were forced to find work；When 从句交代时间和背景。",
+                  "manufacturing 是从句主语，was moved abroad 为被动结构，突出生产转移而非具体决策者。",
+                  "and 连接 lost 与 were forced 两个并列谓语，呈现岗位流失及后续谋生压力。",
+                  "elsewhere 与 abroad 构成空间对照：生产迁往海外，本地工人则不得不外出另找工作。",
+                  "可借鉴 When ... was moved ..., ... were forced to ...，表达政策或产业变化造成的社会后果。"
+                ],
+                "translation": "本世纪初，威尔士的牛仔裤制造业迁往海外时，数百名当地人失去了工作，被迫到别处谋生。"
+              },
+              {
+                "original": "Hiut employs 20 people, who make 120 pairs a week.",
+                "analysis": [
+                  "主句为 Hiut employs 20 people；who 引导非限定性定语从句，补充说明这些员工的生产工作。",
+                  "20 people 与 120 pairs a week 把企业规模和产量具体化，数字用于呈现小规模经营。",
+                  "一般现在时描述企业当前常态；a week 是频率时间状语，修饰 make。",
+                  "非限定从句中的 who 指代 people，不能理解成限制“哪些员工”这一范围。",
+                  "可借鉴“主体 + 规模数据，which/who + 补充产出”写法，将抽象商业模式落到可核实指标。"
+                ],
+                "translation": "Hiut 雇用 20 人，他们每周生产 120 条牛仔裤。"
+              },
+              {
+                "original": "He also wants to broaden Hiut’s appeal, and as part of that has secured new stockists, including Liberty department store in London.",
+                "analysis": [
+                  "句子以 He 为主语，wants to broaden 与 has secured 是由 and 连接的两个谓语，分别表达目标与已采取行动。",
+                  "as part of that 是插入的方式/关联状语，that 指拓宽品牌吸引力这一目标。",
+                  "including 引出例子，说明 new stockists 的具体对象，而不是另起一个完整分句。",
+                  "从“希望拓宽市场”到“取得新经销渠道”形成目的与行动之间的逻辑联系。",
+                  "可仿写 aim to broaden ..., and as part of that have secured ...，说明商业策略如何落实。"
+                ],
+                "translation": "他还希望扩大 Hiut 的吸引力，并为此争取到新的经销商，其中包括伦敦的 Liberty 百货。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-10",
       "status": "ready",
@@ -2032,352 +2365,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 similar, modest... and little... 并列描述资源分布特征。"
                 ],
                 "translation": "大多数家庭拥有相似且不多的财物，积累的物质财富也很少。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-04",
-      "status": "ready",
-      "ai": {
-        "intro": "先检索上海时间 10 月 3—4 日的官方发布，符合要求的新变化不足三项；因此仅扩展至此前七天，按各来源真实发布日期记录。免费资源逐项用官方页面复核。",
-        "updates": [
-          {
-            "event": "Gemini 4 Argon 开始定向预览，面向复杂开发与知识工作（2026-09-30）",
-            "summary": "Google 公布 Gemini 4 Argon，定位为面向复杂软件工程、企业知识工作与网络防御的长流程推理模型。当前仅通过 Fairwind Program 向受信任的网络防御人员定向开放；Google 表示之后会逐步向开发者、企业及消费者开放。",
-            "howTo": "目前普通学生没有已开放的自助试用入口。若属于 Fairwind 受邀测试者，可按该计划参与；其他开发者应等待开放，并留意 Google 后续的 Gemini API 文档或 AI Ultra 入口，公告称将先面向付费 API 客户和 Google AI Ultra 订阅者推出。",
-            "impact": "模型开放后，软件工程学生可评估它处理多步骤调试、代码迁移和长文档任务的表现；现在不应把产品公告误当成可立即免费调用的模型。",
-            "free": "目前是 Fairwind 计划中的定向测试，普通学生尚无免费入口。Google 公布的 API 引导价为每百万输入 token 2 美元、每百万输出 token 10 美元；引导期后分别为 4 美元和 20 美元，缓存输入 token 在引导期按输入价的 95% 折扣。将先向付费 API 客户和 Google AI Ultra 订阅者开放；地区、配额及引导期具体截止日官方未说明。",
-            "category": "AI 模型 / 编程与知识工作",
-            "source": {
-              "name": "Google 官方博客 The Keyword",
-              "published": "2026-09-30",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 在 CLI、应用和 SDK 推出 dynamic workflows（2026-10-01）",
-            "summary": "GitHub 为 Copilot CLI、Copilot 应用和 Copilot SDK 推出 dynamic workflows 公测：用代码定义可重复的流程，把自动化步骤与一个或多个代理组合起来，支持串行或并行执行、传递结构化结果和设置人工检查点。",
-            "howTo": "在 Copilot 应用中直接要求它创建一个可复用流程；CLI 用户先更新到最新版，再以 --experimental 启动，或在交互会话输入 /experimental on，然后描述任务、阶段和检查点。可从先运行测试、再整理失败原因并暂停人工审核的流程开始。",
-            "impact": "课程小组可把重复的代码审查、测试和报告步骤做成固定流程，让每次运行都按相同步骤执行；结构化结果和人工检查点也便于复核代理输出。",
-            "free": "官方称所有 Copilot 计划均可使用；目前为 public preview，功能可能变化。Copilot 应用无需额外设置，CLI 需最新版并显式启用实验功能；地区及各计划的具体调用额度官方未说明。",
-            "category": "AI 编程 / 工作流自动化",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-01",
-              "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app"
-            }
-          },
-          {
-            "event": "Copilot 停止支持四个模型并列出替代项（2026-10-02）",
-            "summary": "GitHub 宣布 Gemini 3.5 Flash、Gemini 3.6 Flash、Kimi K2.7 Code 和 Claude Opus 4.7 已在 Copilot Chat、行内编辑、ask、agent 和代码补全等体验中弃用；官方建议依次改用 Gemini 3.8 Flash、Kimi K3 和 Claude Opus 5.5。",
-            "howTo": "在 Copilot 的模型选择器中检查当前可用模型，并更新个人工作流或集成中的选择；组织用户若看不到替代模型，可请管理员检查 Copilot model policies。公告称无需手动移除已弃用模型。",
-            "impact": "如果课程项目的聊天、代理或编辑流程固定选择了上述旧模型，应改用官方建议的替代项，或重新检查自动模型选择，避免在作业期间才发现该模型无法选择。",
-            "free": "弃用适用于 Copilot 的所有体验；替代模型能否选择取决于账户计划及组织模型政策。公告未说明此次变化的单独价格、地区范围或配额。",
-            "category": "AI 编程 / 模型可用性",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-02",
-              "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Hugging Face Spaces：免费访问公开机器学习演示",
-            "summary": "Hugging Face Spaces 可托管机器学习演示。公开 Space 的源代码与运行中的应用对所有人开放；静态 Space 免费，默认 CPU Basic 硬件没有按小时费用。",
-            "howTo": "打开 Spaces 搜索并运行公开演示；若要自己制作，选择免费的静态 HTML Space，或符合条件的免费个人账户可建立最多两个运行在 ZeroGPU 上的 Gradio Spaces。不要把普通 Gradio/Docker 计算环境误认为免费。",
-            "impact": "学生可直接试用公开模型演示并观察输入、输出与界面流程，也可用静态页面制作课程展示；无需为访问公开演示先租用 GPU。",
-            "free": "公开 Space 可由任何人访问；静态 Space 免费。免费且状态良好的个人账户最多可托管 2 个 Gradio ZeroGPU Spaces；常规 Gradio/Docker Space 需要付费计划，升级硬件另收费。公开演示访问配额、地区及 ZeroGPU 推理额度官方未说明。",
-            "category": "免费 AI 演示 / 开发学习",
-            "source": {
-              "name": "Hugging Face Spaces 官方文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces-overview"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出 Copilot Free，可免费使用受限的 AI 编程功能；行内代码补全每月最多 2,000 次，模型只能自动选择。",
-            "howTo": "用个人 GitHub 账户启用 Copilot Free，并在 IDE 安装 Copilot；先用补全处理样板代码，再用免费计划允许的聊天功能解释报错或起草测试，提交前运行测试并人工核对。",
-            "impact": "适合没有学校 Copilot 权益的学生辅助课程编程、理解代码和补写测试；每月补全上限适合轻量使用，不宜按无限服务规划项目。",
-            "free": "免费计划仅面向无法通过组织或企业访问 Copilot 的个人开发者；行内补全限每月 2,000 次，模型为自动选择。AI Credits 数量、地区限制及具体账号资格例外官方未说明。",
-            "category": "长期免费代码助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划说明",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "Azure for Students：$100 云额度与学生开发工具",
-            "summary": "Microsoft 为符合条件的全日制大学生提供 Azure for Students：$100 Azure credit 可在 12 个月内使用；页面还列出 20 多项服务的免费月额度，以及 65 多项始终免费的服务。",
-            "howTo": "从 Azure for Students 页面申请并按提示验证全日制大学生身份，再通过 Azure Education Hub 获取开发工具；用额度搭建课程演示或小型云端原型前，先核对具体服务是否超出免费额度。",
-            "impact": "适合在课程中试做云端应用、数据科学或 AI 原型，降低初期云资源门槛；部署时应持续查看用量，避免超过额度后产生费用。",
-            "free": "全日制大学生可申请，无需信用卡；$100 额度有效 12 个月。20 多项服务的免费月额度限新 Azure 客户、最长 12 个月，另有 65 多项始终免费的服务。地区可用性及申请期限官方未说明。",
-            "category": "学生教育福利 / 云端 AI",
-            "source": {
-              "name": "Microsoft Azure for Students",
-              "published": "官方未说明",
-              "url": "https://azure.microsoft.com/en-us/free/students/"
-            }
-          },
-          {
-            "event": "Claude Free：免费日常问答与滚动五小时额度",
-            "summary": "Anthropic 定价页列出 Claude Free，定位为日常问题；免费使用量按滚动五小时窗口重置，实际可用量随对话长度、模型和功能而变化。",
-            "howTo": "注册或登录 Claude 免费计划，把课程阅读拆成短段落，请它解释概念、比较论点或生成复习题；在 Settings > Usage 查看当前使用情况，并用原始材料核对事实。",
-            "impact": "可用于课前预习、英语阅读和复习提纲；长上下文与复杂功能会消耗更多额度，不应把模型回答直接当作论文引文。",
-            "free": "Free 计划可免费使用，限制按滚动五小时窗口重置；没有固定消息数，且用量取决于对话、模型和功能，官方也可能设置其他周期上限。具体地区及账号资格官方未说明。",
-            "category": "长期免费网页 / 学习助手",
-            "source": {
-              "name": "Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Jupyter 与浮动计算资源",
-            "summary": "Google Colab 是无需本地安装的托管 Jupyter Notebook 服务；官方确认可免费使用，并可能提供 GPU、TPU 等计算资源，但免费资源并不保证且不无限。",
-            "howTo": "打开 Colab，新建笔记本或从 Drive、GitHub 导入 .ipynb，运行 Python 单元格；需要加速时查看当前运行时是否提供 GPU/TPU，并及时保存代码和结果。",
-            "impact": "可用于课程 Python 作业、数据分析和小型机器学习练习，省去本地配置；长任务要保存进度，并准备资源不可用时的替代方案。",
-            "free": "Colab 免费使用；资源供应不保证且使用限制会变化，GPU/TPU 时数、地区与账号资格的统一配额官方未说明。",
-            "category": "免费云计算 / 学习开发",
-            "source": {
-              "name": "Google Colaboratory FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "选取两篇可免费阅读全文的近期报道，分别讨论育儿信息过载与社区河流污染监测；已核对所有旧 issue 的文章标题和 URL，均未重复。",
-        "articles": [
-          {
-            "title": "When parenting advice becomes too much",
-            "source": "BBC",
-            "published": "2026-10-04",
-            "url": "https://www.bbc.co.uk/news/articles/cv4g5267jk8yo",
-            "readingTime": "8 分钟",
-            "topic": "社会 / 育儿信息与家庭心理",
-            "summary": "BBC 从一位母亲在网上搜寻育儿建议、却因睡眠安排和幼儿发脾气而不断怀疑自己的经历切入，讨论当代父母面对的建议过量与相互冲突。报道引述政府研究称，约三分之二有年幼子女的父母感到信息过载；随后梳理社交媒体传播的多种育儿风格，并介绍权威型、专制型、宽容型和忽视型等研究框架。受访专家对温和育儿是否等同于放任存在分歧，文章也指出网上存在未经专业训练者提供的错误建议，以及家庭支持和公共服务变化带来的压力。结尾回到个体经验与课程支持，呈现的不是一套万能育儿法，而是信息、边界和父母信心之间的张力。",
-            "reason": [
-              "育儿压力、社交媒体信息与家庭心理健康构成社会生活类议题，适合讨论数字环境对日常决策的影响。",
-              "文章以个人经历开篇，转向调查和历史背景，再比较专家观点，最后回到个人应对，结构层次清楚。",
-              "阅读题可考查数据归属、不同专家对温和育儿的分歧，以及作者如何区分研究结论和受访者看法。",
-              "overwhelmed、conflicting、intuition、misinformation 等词可迁移到信息过载、教育和心理健康话题。",
-              "写作可借鉴“个案—数据—观点对照—有限结论”的展开方式，避免把复杂社会问题归结为单一方案。"
-            ],
-            "vocabulary": [
-              {
-                "word": "overwhelmed",
-                "phonetic": "/ˌəʊvəˈwelmd/",
-                "part": "adj.",
-                "translation": "不堪重负的；应接不暇的"
-              },
-              {
-                "word": "conflicting",
-                "phonetic": "/kənˈflɪktɪŋ/",
-                "part": "adj.",
-                "translation": "相互矛盾的；冲突的"
-              },
-              {
-                "word": "intuition",
-                "phonetic": "/ˌɪntjuˈɪʃən/",
-                "part": "n.",
-                "translation": "直觉"
-              },
-              {
-                "word": "empathy",
-                "phonetic": "/ˈempəθi/",
-                "part": "n.",
-                "translation": "共情；同理心"
-              },
-              {
-                "word": "boundaries",
-                "phonetic": "/ˈbaʊndəriz/",
-                "part": "n.",
-                "translation": "界限；边界"
-              },
-              {
-                "word": "authoritative",
-                "phonetic": "/ɔːˈθɒrətətɪv/",
-                "part": "adj.",
-                "translation": "权威型的；有权威的"
-              },
-              {
-                "word": "permissive",
-                "phonetic": "/pəˈmɪsɪv/",
-                "part": "adj.",
-                "translation": "宽容的；放任的"
-              },
-              {
-                "word": "counter-cultural",
-                "phonetic": "/ˌkaʊntəˈkʌltʃərəl/",
-                "part": "adj.",
-                "translation": "反主流文化的；逆文化潮流的"
-              },
-              {
-                "word": "misinformation",
-                "phonetic": "/ˌmɪsɪnfəˈmeɪʃən/",
-                "part": "n.",
-                "translation": "错误信息；不实信息"
-              },
-              {
-                "word": "burnout",
-                "phonetic": "/ˈbɜːnaʊt/",
-                "part": "n.",
-                "translation": "身心俱疲；倦怠"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Her confidence and intuition were stripped away as she questioned every parenting decision.",
-                "analysis": [
-                  "主句主干是 Her confidence and intuition were stripped away，两个名词并列作主语，谓语使用被动语态。",
-                  "as 引导状语从句，说明她不断质疑育儿决定时，信心与直觉逐渐丧失的伴随过程。",
-                  "every 修饰 decision，强调这种怀疑涉及每一个育儿选择，而非单次事件。",
-                  "strip away 表示逐渐剥夺或去除；were stripped away 突出人物受到的影响。",
-                  "可借鉴 be stripped away as... 描述某种能力或信心在持续过程中被削弱。"
-                ],
-                "translation": "她不断质疑每一个育儿决定，信心和直觉也随之被一点点削弱。"
-              },
-              {
-                "original": "The confusion around the \"right\" way to parent has led some parents to turn to courses for help.",
-                "analysis": [
-                  "主干是 The confusion has led some parents to turn to courses，主语为 confusion，谓语为现在完成时。",
-                  "around the “right” way to parent 修饰 confusion；to parent 是说明方式的动词不定式。",
-                  "has led A to do B 表示某种情况促使某人采取行动，强调已有影响。",
-                  "for help 说明参加课程的目的；引号中的 right 提示“正确方式”是被讨论的观念。",
-                  "可借鉴 confusion around... has led... to... 说明信息不确定如何推动行为改变。"
-                ],
-                "translation": "对“正确”育儿方式的困惑，使一些父母转而参加课程寻求帮助。"
-              },
-              {
-                "original": "Many factors shaping family life remain outside parents' control.",
-                "analysis": [
-                  "句子主干为 Many factors remain outside parents’ control，remain 后接介词短语作表语。",
-                  "shaping family life 是现在分词短语，后置修饰 factors，表示这些因素会影响家庭生活。",
-                  "parents’ 是复数名词所有格，修饰 control；outside 表示不在某人的控制范围内。",
-                  "句意限定了父母能控制的范围，与将家庭结果完全归咎于个人形成逻辑上的制约。",
-                  "可借鉴 factors shaping... remain outside... 表达影响因素复杂且不可完全控制。"
-                ],
-                "translation": "许多影响家庭生活的因素仍不在父母的掌控范围内。"
-              }
-            ]
-          },
-          {
-            "title": "‘It’s shocking really’: Devon community tracks River Dart sewage spills",
-            "source": "The Guardian",
-            "published": "2026-10-03",
-            "url": "https://www.theguardian.com/environment/2026/oct/03/devon-community-platform-river-hub-dart-sewage-spills-overflows",
-            "readingTime": "7 分钟",
-            "topic": "环境 / 污水监测与公民行动",
-            "summary": "报道介绍英国德文郡 Friends of the Dart 团体建立的 River Hub：平台逐次汇集 River Dart 的污水溢流时间、反复污染地点及已计划或尚无计划的改进工程，也解释“干天排放”的分类依据。报道说明部分资料来自公开记录，部分需要通过信息公开申请取得；项目团队承认平台信息仍不完整，也可能有误。文章穿插居民、河流活动从业者、South West Water 与环境监管机构的不同说法，既呈现社区以数据推动问责的做法，也保留了官方回应和证据局限。团队称愿把模式免费提供给其他河流团体，结尾将重点落在把不满转化为可核查资料和社区行动。",
-            "reason": [
-              "河流污染、公共信息透明度和社区参与连接环境保护与公民责任，是常见的社会治理类阅读主题。",
-              "文章从平台功能切入，解释数据来源和方法，再呈现居民经历、机构回应及团队对局限的承认。",
-              "阅读题可考查平台提供的信息类型、公开资料与信息申请的区别，以及不同利益相关方的立场。",
-              "overflow、discharge、tributary、remedial 等词适合环境报道和公共设施话题。",
-              "写作可借鉴以具体平台案例说明数据透明如何支持公共监督，同时主动交代数据不完整和归因边界。"
-            ],
-            "vocabulary": [
-              {
-                "word": "sewage",
-                "phonetic": "/ˈsuːɪdʒ/",
-                "part": "n.",
-                "translation": "污水；生活污水"
-              },
-              {
-                "word": "overflow",
-                "phonetic": "/ˈəʊvəfləʊ/",
-                "part": "n.",
-                "translation": "溢流；溢流口"
-              },
-              {
-                "word": "spill",
-                "phonetic": "/spɪl/",
-                "part": "n.",
-                "translation": "泄漏；溢出"
-              },
-              {
-                "word": "tributary",
-                "phonetic": "/ˈtrɪbjətri/",
-                "part": "n.",
-                "translation": "支流"
-              },
-              {
-                "word": "granular",
-                "phonetic": "/ˈɡrænjələ/",
-                "part": "adj.",
-                "translation": "细致具体的；粒状的"
-              },
-              {
-                "word": "discharge",
-                "phonetic": "/dɪsˈtʃɑːdʒ/",
-                "part": "n.",
-                "translation": "排放；排出物"
-              },
-              {
-                "word": "remedial",
-                "phonetic": "/rɪˈmiːdiəl/",
-                "part": "adj.",
-                "translation": "补救的；矫正的"
-              },
-              {
-                "word": "incomplete",
-                "phonetic": "/ˌɪnkəmˈpliːt/",
-                "part": "adj.",
-                "translation": "不完整的"
-              },
-              {
-                "word": "methodology",
-                "phonetic": "/ˌmeθəˈdɒlədʒi/",
-                "part": "n.",
-                "translation": "方法；方法论"
-              },
-              {
-                "word": "acknowledge",
-                "phonetic": "/əkˈnɒlɪdʒ/",
-                "part": "v.",
-                "translation": "承认；确认"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The hub has a page that people can check to find out where spills are happening right now.",
-                "analysis": [
-                  "主干是 The hub has a page，that 引导定语从句修饰 page。",
-                  "people can check 的宾语是关系代词 that，指代前面的 page。",
-                  "to find out 是目的状语；where spills are happening 是 find out 的宾语从句。",
-                  "right now 限定 spills are happening 的时间，突出平台提供实时信息。",
-                  "可借鉴 a page that... to find out where... 描述数字工具的功能和信息用途。"
-                ],
-                "translation": "这个平台设有页面，供人们查询此刻哪些地方正在发生污水溢流。"
-              },
-              {
-                "original": "The hub concludes that not all do.",
-                "analysis": [
-                  "主干为 The hub concludes，that 引导结论内容的宾语从句。",
-                  "not all 中 all 指代前文提到的污水处理厂，not 表示并非全部。",
-                  "do 是替代动词，省略前文的 have enough capacity to deal with the sewage produced。",
-                  "句子以简短代词结构收束前文问题，读者需回看上下文确定 do 的所指。",
-                  "可借鉴 not all do 避免重复前文动词短语，并准确表达部分否定。"
-                ],
-                "translation": "平台的结论是，并非所有处理厂都有足够能力应对其服务人口产生的污水。"
-              },
-              {
-                "original": "He and the rest of the team are happy to be corrected when they have got something wrong.",
-                "analysis": [
-                  "主干是 He and the rest of the team are happy，两个并列成分共同作主语。",
-                  "to be corrected 是被动不定式，作 happy 的补足成分，说明团队愿意接受纠正。",
-                  "when 引导时间状语从句；have got something wrong 使用现在完成时，表示发现错误的情形。",
-                  "被动形式把重点放在“接受纠正”而不是纠正者身上，传达对资料错误的开放态度。",
-                  "可借鉴 be happy to be corrected when... 表达研究或数据项目的可修正性。"
-                ],
-                "translation": "如果他们有地方弄错了，他和团队其他成员都乐于接受纠正。"
               }
             ]
           }
