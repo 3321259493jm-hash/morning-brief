@@ -1,6 +1,338 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-11T09:45:00+08:00",
+  "updatedAt": "2026-10-12T10:17:53+08:00",
   "issues": [
+    {
+      "date": "2026-10-12",
+      "status": "ready",
+      "ai": {
+        "intro": "10月11日至12日未核实到足够的新产品变化，故将检索范围扩至近7天；以下保留公告的实际发布日期，并标出免费与可用性信息未公开之处。",
+        "updates": [
+          {
+            "event": "Google Flow Music 支持将自定义音乐工具导出为 VST3/AU 插件（2026-10-06）",
+            "summary": "Flow Music 的 Spaces 可用自然语言创建自定义乐器或效果器；新变化是可将 Spaces 导出为 VST3/AU 插件，放入数字音频工作站使用。",
+            "howTo": "打开 Google Flow Music 的 Spaces，用自然语言描述要制作的乐器或效果器；完成后导出为 VST3 或 AU，再在自己的 DAW 中加载。",
+            "impact": "做音乐、声音设计或多媒体作业时，可按自己的工作流制作小型效果器，并在熟悉的音频软件中继续编辑；导出前应先试听并检查参数是否符合项目要求。",
+            "free": "官方公告未说明该功能的价格、账号条件、开放地区或使用配额；这些信息官方未说明。",
+            "category": "生成式 AI / 音乐创作",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-06",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/create-music-production-plugins-google-flow/"
+            }
+          },
+          {
+            "event": "Anthropic 更新 Claude 使用政策，明确合成活动与高风险场景要求（2026-10-08）",
+            "summary": "Anthropic 发布新版 Usage Policy，集中说明禁止虚假身份、虚假账号等欺骗性活动，并细化选举操纵、监控、武器及高风险健康/财务建议等规则；新版政策定于 2026-11-12 生效。公告称其中多数内容是澄清既有规定。",
+            "howTo": "使用 Claude 前查看新版 Usage Policy，重点核对课程项目是否涉及虚假账号/活动、选举信息、个人监控或高风险建议；新规自 2026-11-12 起适用。",
+            "impact": "做社科传播、选举研究或健康与财务主题项目时，避免让模型生成欺骗性活动材料；涉及影响个人权益的建议，应保留合格人员审核，并明确告知当事人使用了 AI。",
+            "free": "这是使用政策更新而非付费计划公告；官方未说明价格、账号套餐或地区配额变化。新版政策生效日为 2026-11-12，地区可用性仍按官方 Supported Regions Policy 执行。",
+            "category": "AI 使用政策 / 负责任使用",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-08",
+              "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+            }
+          },
+          {
+            "event": "Qwen 发布 Qwen-Image-2.1-Turbo 加速图像生成模型（2026-10-09）",
+            "summary": "Qwen-Image-2.1-Turbo 是 Qwen-Image-2.1 的加速检查点，面向文生图和图像编辑，采用 8 步去噪；模型卡称其可直接使用 QwenImage21Pipeline，并带有推荐采样设置。",
+            "howTo": "按模型卡先准备兼容 CUDA 的 PyTorch，再安装 Diffusers 最新源码、Transformers 5.17.0 以上版本、Accelerate 与 Pillow；在 Python 中用 QwenImage21Pipeline.from_pretrained(\"Qwen/Qwen-Image-2.1-Turbo\") 加载权重并在 CUDA 设备运行。",
+            "impact": "可为课程海报、视觉概念稿或图像编辑项目快速制作初稿；检查生成图中的文字、公式、事实和版权合规性后再用于提交或公开展示。",
+            "free": "模型卡提供公开权重和本地运行示例，但许可标记为 other，应先阅读卡片所列条款。官方未说明托管推理是否免费、具体价格、账号要求、地区或配额；本地运行需要兼容 CUDA 的设备。",
+            "category": "生成式 AI / 开放模型与图像",
+            "source": {
+              "name": "Qwen Hugging Face Model Card",
+              "published": "2026-10-09",
+              "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Ollama：MIT 许可的本地开源模型运行工具",
+            "summary": "Ollama 提供本地运行和管理开源模型的软件，可从命令行或本地 REST API 调用；应用本身按 MIT 许可证发布。",
+            "howTo": "从 Ollama 官方下载页安装对应系统版本，按 Quickstart 选择并下载一个模型，然后在终端运行模型或调用本机 REST API；使用前分别查看所选模型自己的许可证。",
+            "impact": "可在课程项目中搭建本地问答或代码辅助原型，减少把笔记上传至外部聊天网站的需要；本地模型效果和速度取决于设备，输出仍需核验。",
+            "free": "Ollama 软件以 MIT 许可证发布，可免费下载和本地运行；模型权重可能有各自的授权条件，云端模型不等同于本地免费功能。地区、配额及设备性能要求因模型而异，官方未说明统一限制。",
+            "category": "长期免费 / 开源本地 AI",
+            "source": {
+              "name": "Ollama GitHub Repository",
+              "published": "官方未说明",
+              "url": "https://github.com/ollama/ollama"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：MIT 许可的本地语音识别与翻译模型",
+            "summary": "Whisper 是通用语音识别模型，可做多语言转写、语音翻译和语言识别；官方仓库提供代码、模型安装方式及不同大小模型的硬件需求。",
+            "howTo": "按官方说明安装 Python 包 `pip install -U openai-whisper` 和 ffmpeg，再用命令行对本地音频转写；需要将非英语音频翻成英文时使用 `--task translate`。先在短音频上检查识别和专名。",
+            "impact": "可把公开讲座、访谈或语言练习音频转成文字，制作复习材料或对照听力；录音若涉及他人，应先确认授权并保护隐私。",
+            "free": "官方代码仓库采用 MIT 许可，可免费下载代码和模型；本地运行需要安装依赖与兼容硬件，模型大小对应不同显存需求。地区、账号及云端托管额度官方未说明。",
+            "category": "免费开源工具 / 语音转写",
+            "source": {
+              "name": "OpenAI Whisper GitHub Repository",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：部分模型输入与输出 token 免费",
+            "summary": "Google AI Studio 的 Gemini API 免费层对部分模型提供免费输入与输出 token，并允许从 AI Studio 开始测试；可用模型有限，免费层数据可能用于改进 Google 产品。",
+            "howTo": "打开 Gemini API 定价页选择标注为 Free Tier 的模型，再进入 AI Studio 创建项目并生成 API key；先用非敏感课程文本做小规模原型，并在控制台检查模型对应的速率限制。",
+            "impact": "适合为课程应用验证摘要、分类或问答流程是否可行，而不必在原型阶段先承担按 token 计费；不要向免费层提交个人或机密资料，因为官方标注免费层数据可能用于改进产品。",
+            "free": "免费层仅覆盖部分模型，表中输入与输出 token 标为免费；速率限制随模型和项目而异，官方没有在该定价页给出统一额度。免费层数据可能用于改进产品；地区及账户资格的统一要求官方未说明。",
+            "category": "长期免费 / API 试用",
+            "source": {
+              "name": "Google AI for Developers Pricing",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Gemini Apps：无 Google AI 订阅也可使用基础功能",
+            "summary": "Google 帮助中心说明，没有 Google AI 订阅的个人账户仍可使用 Gemini Apps，但免费使用受计算量和使用周期限制；高需求时部分高算力功能可能暂不可用。",
+            "howTo": "用个人 Google 账户打开 Gemini Apps 进行学习问答或文本整理；到达使用上限后等待额度刷新，或查看页面提示，不要假设 Deep Research 等功能始终可用。",
+            "impact": "可用于解释课程概念、整理阅读提纲或提出自测问题；复杂作业应分批提供材料，并用课程资料核实回答。",
+            "free": "无需 Google AI 订阅即可使用基础额度；官方称限额按计算量决定，每 5 小时刷新但还有 weekly limit，未公布统一提示次数。无订阅用户的 Deep Research 等功能在高需求时可能不可用；额度会变动。",
+            "category": "长期免费 / 学习问答",
+            "source": {
+              "name": "Google Gemini Apps Help",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemini/answer/16275805?hl=en"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "France’s other schools problem – the teens violently smashing up their old primaries: ‘They think it’s not worthy of respect – so they trash it’",
+            "source": "The Guardian",
+            "published": "2026-10-11",
+            "url": "https://www.theguardian.com/world/2026/oct/11/france-violent-attacks-trashings-schools-teenagers",
+            "readingTime": "约 14 分钟",
+            "topic": "社会 / 青少年与公共教育",
+            "summary": "文章从法国里昂一所小学被两名少年纵火的事件切入，指出近年学校被闯入、破坏的案例并非单纯的个别恶作剧。报道随后比较不同城市与社区的案例，说明受损的不只是建筑和教学设备，还包括学生、家庭和教师对校园安全与归属感的体验。作者采访教育研究者、地方人员、家长和教师，呈现学业挫折、贫困与污名化社区、家庭困难、假期无聊、群体归属需求以及社交媒体传播等多种解释，同时指出研究者对社交媒体究竟是诱因还是放大器存在不同看法。结尾批评官方统计和政策把问题缩减为财产损失与安保措施，主张理解破坏行为背后的社会排斥和情感原因；文章并未把单一因素当作确定成因。",
+            "reason": [
+              "学校作为社会整合机构能否兑现公平承诺，连接教育、青年发展与社会排斥，是可展开论证的社会议题。",
+              "文章由个案引出全国性现象，再以地区案例、受访者解释和官方回应层层推进，最后质疑只靠安保的政策结论。",
+              "可练习主旨题、例证作用题、作者态度题，以及区分相关性、可能解释和已证实因果的判断题。",
+              "phenomenon、resentment、incitement、desensitising 等词可用于讨论群体行为、情绪与媒介影响。",
+              "写作可借鉴“具体事件—多因素解释—数据局限—制度回应”的结构，避免将复杂社会问题归结为单一原因。"
+            ],
+            "vocabulary": [
+              {
+                "word": "phenomenon",
+                "phonetic": "/fəˈnɒmɪnən/",
+                "part": "n.",
+                "translation": "现象"
+              },
+              {
+                "word": "vandalism",
+                "phonetic": "/ˈvændəlɪzəm/",
+                "part": "n.",
+                "translation": "故意破坏公物的行为"
+              },
+              {
+                "word": "resentment",
+                "phonetic": "/rɪˈzentmənt/",
+                "part": "n.",
+                "translation": "怨恨；愤懑"
+              },
+              {
+                "word": "perpetrator",
+                "phonetic": "/ˈpɜːpətreɪtə(r)/",
+                "part": "n.",
+                "translation": "作案者；实施者"
+              },
+              {
+                "word": "delinquency",
+                "phonetic": "/dɪˈlɪŋkwənsi/",
+                "part": "n.",
+                "translation": "违法行为；青少年犯罪"
+              },
+              {
+                "word": "incitement",
+                "phonetic": "/ɪnˈsaɪtmənt/",
+                "part": "n.",
+                "translation": "煽动；刺激"
+              },
+              {
+                "word": "ephemeral",
+                "phonetic": "/ɪˈfemərəl/",
+                "part": "adj.",
+                "translation": "短暂的；转瞬即逝的"
+              },
+              {
+                "word": "desensitising",
+                "phonetic": "/diːˈsensɪtaɪzɪŋ/",
+                "part": "adj.",
+                "translation": "使感觉迟钝的；脱敏的"
+              },
+              {
+                "word": "piecemeal",
+                "phonetic": "/ˈpiːsmiːl/",
+                "part": "adj./adv.",
+                "translation": "零散的；逐步零碎地"
+              },
+              {
+                "word": "counterproductive",
+                "phonetic": "/ˌkaʊntəprəˈdʌktɪv/",
+                "part": "adj.",
+                "translation": "适得其反的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "There were at least 15 cases in 2025; a similar number in 2024.",
+                "analysis": [
+                  "句子由 There were... 引出存在句，核心信息是法国在 2025 年至少发生 15 起此类案件。",
+                  "at least 限定数量，明确表示这是下限而非精确总数。",
+                  "分号连接两个完整分句；a similar number 省略重复的 cases，避免赘述。",
+                  "2025 与 2024 的并列比较用有限数据呈现连续性，但本句本身不解释变化原因。",
+                  "可借鉴 There were at least...; a similar number... 简洁比较相邻年份的数量。"
+                ],
+                "translation": "2025 年至少发生了 15 起案件；2024 年的数量也大致相当。"
+              },
+              {
+                "original": "It’s hard to square this beguiling clash of motives.",
+                "analysis": [
+                  "句子主干为 It is hard to square...；形式主语 it 指向后面的不定式含义，即“难以解释或协调”。",
+                  "to square 是真正的逻辑内容，this beguiling clash of motives 是其宾语。",
+                  "beguiling 修饰 clash，指出多种动机并存且令人困惑；of motives 限定冲突的内容。",
+                  "该句承接前面对破坏行为兼具兴奋、愤怒和自伤意味的描述，表达作者对单一解释的保留。",
+                  "可借鉴 It is hard to square A with B 表达两种证据或解释难以调和。"
+                ],
+                "translation": "这种令人困惑的动机冲突很难解释得通。"
+              },
+              {
+                "original": "But statistics don’t tally the impact on the ground.",
+                "analysis": [
+                  "主干为 statistics don’t tally the impact；But 引出与前文统计口径形成的转折。",
+                  "tally 在此表示准确记录或反映；the impact 是其宾语。",
+                  "on the ground 是习语化的地点/现实层面状语，强调社区中的实际影响，而非抽象数字。",
+                  "逻辑上作者区分“统计上占比不高”与“对具体社区影响重大”，避免以数字抹去经验。",
+                  "可借鉴 Statistics do not capture/tally the impact on the ground 来指出量化指标的局限。"
+                ],
+                "translation": "但统计数字并未记录基层社区所承受的实际影响。"
+              }
+            ]
+          },
+          {
+            "title": "Sweating the details: Sauna's potential health benefits draw scientists' interest",
+            "source": "NPR",
+            "published": "2026-10-11",
+            "url": "https://www.npr.org/2026/10/11/nx-s1-5996655/heat-therapy-sauna-thermoregulation-health-benefits",
+            "readingTime": "约 9 分钟",
+            "topic": "健康 / 科学证据与热疗",
+            "summary": "文章从桑拿热潮与人体耐热的生理机制切入，指出尽管公众兴趣上升，现代医学对桑拿和其他热疗的证据仍不足以形成稳固的临床建议。报道介绍研究者在奥斯陆成立跨国研究小组，计划统一湿度、体温与热疗定义等测量标准，为更大规模、多地点的试验做准备。随后文章综述早期证据：部分观察研究把规律桑拿与较低心血管疾病风险联系起来，小型研究也提示热暴露可能影响血压、血管健康或炎症指标；但样本规模、方法不一、自我报告和混杂因素都限制了因果结论。结尾强调科学家尚不能回答应多频繁进行、实际收益和风险如何等问题，需要严格随机对照试验，而非把相关性或健康潮流包装成确定疗效。",
+            "reason": [
+              "如何区分健康潮流与可靠医学证据，适合练习健康、公共科学传播和循证决策主题。",
+              "文章从生理背景与大众兴趣起笔，交代研究组织，再对照初步发现和研究缺陷，最后指出下一步证据需求。",
+              "可考查主旨、研究设计、例证作用，以及观察性研究为何不能直接证明因果关系。",
+              "thermoregulation、intervention、observational、extrapolate 等词常见于科普和学术论证。",
+              "写作可借鉴“初步希望—证据不足—方法限制—进一步验证”的谨慎论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "thermoregulation",
+                "phonetic": "/ˌθɜːməʊˌreɡjʊˈleɪʃən/",
+                "part": "n.",
+                "translation": "体温调节"
+              },
+              {
+                "word": "physiological",
+                "phonetic": "/ˌfɪziəˈlɒdʒɪkəl/",
+                "part": "adj.",
+                "translation": "生理的"
+              },
+              {
+                "word": "disparate",
+                "phonetic": "/ˈdɪspərət/",
+                "part": "adj.",
+                "translation": "迥异的；彼此不同的"
+              },
+              {
+                "word": "rigorously",
+                "phonetic": "/ˈrɪɡərəsli/",
+                "part": "adv.",
+                "translation": "严谨地；严格地"
+              },
+              {
+                "word": "intervention",
+                "phonetic": "/ˌɪntəˈvenʃən/",
+                "part": "n.",
+                "translation": "干预措施"
+              },
+              {
+                "word": "extrapolate",
+                "phonetic": "/ɪkˈstræpəleɪt/",
+                "part": "v.",
+                "translation": "推断；外推"
+              },
+              {
+                "word": "observational",
+                "phonetic": "/ˌɒbzəˈveɪʃənəl/",
+                "part": "adj.",
+                "translation": "观察性的"
+              },
+              {
+                "word": "conclusive",
+                "phonetic": "/kənˈkluːsɪv/",
+                "part": "adj.",
+                "translation": "确凿的；决定性的"
+              },
+              {
+                "word": "vascular",
+                "phonetic": "/ˈvæskjələ(r)/",
+                "part": "adj.",
+                "translation": "血管的"
+              },
+              {
+                "word": "confound",
+                "phonetic": "/kənˈfaʊnd/",
+                "part": "v.",
+                "translation": "混淆；使难以辨明"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The acute physiological response to heat is now well understood.",
+                "analysis": [
+                  "主干是 The response is understood，主语中心词 response，谓语为被动结构 is understood。",
+                  "acute 与 physiological 共同修饰 response，限定为急性生理反应；to heat 补充说明反应对象。",
+                  "now 作时间状语，强调与过去研究认知相比当前理解程度。",
+                  "该句用清楚的已知结论作铺垫，随后转向文章关注的另一面：热暴露可能带来的治疗益处。",
+                  "可借鉴 X is now well understood, whereas... 对照成熟知识与尚待研究的问题。"
+                ],
+                "translation": "科学家长期以来一直惊叹于人体如何耐受极端高温，以及这对健康意味着什么。"
+              },
+              {
+                "original": "“We’re all over the place,” Mason says.",
+                "analysis": [
+                  "直接引语的核心是 We are all over the place，we 指代研究这个领域的学者。",
+                  "all over the place 是习语，结合上下文指研究方法和术语缺乏统一，而非研究者的物理位置。",
+                  "Mason says 使用一般现在时作引述语，说明观点来源并保持客观报道语气。",
+                  "前文提到标准不一，这句话将抽象的方法分散具体化，说明建立共通标准的必要性。",
+                  "可借鉴 be all over the place 概括信息、计划或方法缺乏组织的状态。"
+                ],
+                "translation": "但赫格伦德和一小群国际科学家正努力推动这件事，并组织这一原本小众且分散的研究领域。"
+              },
+              {
+                "original": "What are the actual benefits?",
+                "analysis": [
+                  "这是由疑问词 what 引导的特殊疑问句，询问桑拿和热疗的实际益处。",
+                  "句子主干可还原为 the benefits are what；what 作表语，主语为 the actual benefits。",
+                  "actual 强调要确认真实效果，与前文初步研究或公众热潮形成对照。",
+                  "该问句列在研究者提出的一组未解问题中，作用是强调现有证据尚不能回答关键问题。",
+                  "可借鉴 What are the actual benefits? 引出效果评估，并在后文用证据而非期待作答。"
+                ],
+                "translation": "尽管前景可期，专家强调，从这类观察性数据中能够外推的结论有限，因为它依赖自我报告，结果也可能受到其他因素干扰。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-11",
       "status": "ready",
@@ -2032,339 +2364,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 the principles of... 概括作品或项目所传达的并列价值观。"
                 ],
                 "translation": "相信自己、珍视家庭与友谊、热爱阅读这些理念贯穿了每一季。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-05",
-      "status": "ready",
-      "ai": {
-        "intro": "已检索 10 月 4—5 日官方公告，符合“学生可试用或需了解”的新变化不足 3 项，按要求扩展到此前 7 天；每项按来源真实发布日期标注。免费资源重新核验官方定价、帮助或模型卡页面。",
-        "updates": [
-          {
-            "event": "Copilot 代码审查 API 支持 REST、GraphQL 请求，并将 Balanced 设为默认（2026-10-02）",
-            "summary": "GitHub 为 Copilot code review 开放 REST 与 GraphQL API 请求，可在每次请求时设置审查力度；默认审查力度也改为 Balanced。此 API 能力已面向 Copilot Pro、Pro+、Max、Business 和 Enterprise 一般可用；先前主动选择 Lite 的个人或团队设置会保留。",
-            "howTo": "在 GitHub PR 工作流或自有脚本中调用受支持的 REST/GraphQL API 请求 Copilot review，并按请求选择 effort；若要在网页调整默认级别，个人进入头像 > Copilot settings > Copilot > Code review，仓库和组织管理员可在各自 Copilot > Code review 设置中改为 Lite。",
-            "impact": "课程小组可把 PR 初审接入已有 CI 或作业提交流程，并按代码规模选择审查力度；默认 Balanced 比只依赖人工手动发起更便于形成一致的复核习惯，但生成意见仍需人工判断。",
-            "free": "API 功能适用于公告列出的 Copilot Pro、Pro+、Max、Business、Enterprise 计划，Free 未列入。该公告未说明各计划价格、可用地区或 API 请求额度；Balanced 默认变更于 2026-09-28 生效。",
-            "category": "AI 编程 / 代码审查",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-02",
-              "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
-            }
-          },
-          {
-            "event": "GitHub Copilot CLI 与应用预览桌面 computer use（2026-10-01）",
-            "summary": "GitHub 在 Copilot CLI 和 macOS、Windows 版 GitHub Copilot app 中公开预览 computer use。经用户授权后，Copilot 可读取桌面应用可访问内容和视觉上下文，并点击、输入、滚动及跨应用操作；组织设置可禁用此功能。",
-            "howTo": "CLI 交互会话中输入 /computer on 开启，用 /computer show 检查状态、/computer off 关闭；Copilot app 用户进入 Settings > Computer Use 并启用 Enable Computer Use。macOS 需要按引导授予辅助功能与屏幕录制权限；描述任务前先检查会涉及的应用和约束。",
-            "impact": "学生可尝试让代理处理没有 API 或命令行入口的桌面软件，例如在演示文稿中整理课程信息；审批提示与权限设置有助于保留人工控制，但不应在未核对操作时让它处理敏感资料。",
-            "free": "目前是 public preview，支持 Copilot CLI 以及 macOS、Windows 桌面应用；Copilot 控制应用前需获批准，用户可将应用设为始终允许，组织管理员也可关闭此功能。公告未说明适用计划、价格、地区或使用额度；macOS 还需授予系统权限。",
-            "category": "AI 编程 / 桌面代理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-01",
-              "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
-            }
-          },
-          {
-            "event": "VS Code 9 月版本扩展代理任务自动化与 Dev Container 支持（2026-10-01）",
-            "summary": "GitHub 汇总 VS Code 1.136—1.140（2026 年 9 月陆续发布）的 Copilot 更新：Agents window 可排定按小时、每日或每周运行的任务，也能让代理处理 PR review feedback、失败检查与合并冲突；本地或远端文件夹可从菜单启动 Dev Container agent session。排程和 agent merge 等功能仍标为预览。",
-            "howTo": "更新 VS Code 后打开 Agents window，选择本地或远程文件夹菜单中的 Use Dev Container，在项目容器中启动代理会话；也可从代理会话打开 pull request 表单，检查标题和描述后创建 PR。要使用排程或 agent merge，先确认对应功能仍处于 preview 并在界面启用。",
-            "impact": "学生可在项目配置的容器中复现相同开发工具和依赖，再用代理整理 PR 或检查失败项，减少“本机能运行、同伴机器不能运行”的课程协作问题；自动合并和排程适合先在非关键分支试验。",
-            "free": "公告覆盖 VS Code 1.136—1.140；其中自动化、agent merge、自动清理等功能明确处于 preview。该发布摘要未说明各功能所需账户计划、价格、地区和调用额度；需使用 VS Code，具体账户资格以界面实际开放为准。",
-            "category": "AI 编程 / VS Code 代理工作流",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-01",
-              "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini API 与 Google AI Studio：部分模型提供免费层",
-            "summary": "Google AI for Developers 定价页列出 Gemini API Free Tier：可在 AI Studio 开始使用，部分模型的输入和输出 token 价格为免费，但可用模型受限。官方同时说明免费层的内容会用于改进产品，因此不宜直接提交未公开论文、个人资料或课程答案。",
-            "howTo": "打开 Google AI Studio，选择明确标为 Free Tier 的 Gemini 模型并从示例开始调用；在写入个人 API key 前先检查本次选择的模型、计费层及数据使用条款。",
-            "impact": "可用来给课程原型接入文本生成 API、练习提示词和比较输出；用作业草稿时先移除个人信息，并注意免费层输入可能用于产品改进。",
-            "free": "官方列出部分模型免费输入和输出 token，并称模型访问受限；页面未给出此处适用模型的完整调用额度、免费层地区及账户资格，均为“官方未说明”。免费层内容用于改进产品；不要把免费价格误解为无限调用或适用于所有模型。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Gemini Apps：个人 Google 账户可使用无付费计划的基础额度",
-            "summary": "Google 帮助中心说明，没有 Google AI 计划的 Gemini Apps 用户仍受计算资源用量限制；额度会综合提示复杂度、模型、功能和对话长度计算，而不是固定消息数。",
-            "howTo": "用个人 Google 账户打开 Gemini Apps，先用基础功能做概念解释、阅读提问或复习提纲；在达到当前用量上限后等待刷新，不要把高负载功能视作随时可用。",
-            "impact": "无需先订阅即可尝试网页学习助手，适合将课程阅读拆成短问题；高需求时部分功能可能对无计划用户暂不可用，关键作业应保留其他工作方式。",
-            "free": "无 Google AI 计划用户按计算资源使用限制运行；额度每 5 小时刷新，另受周上限约束，具体 prompt 数量官方未说明。限额会变化，部分高计算功能在需求高时可能不可用；该帮助页针对个人账户，完整地区可用范围官方未说明。",
-            "category": "免费网页 / 学习助手",
-            "source": {
-              "name": "Google Gemini Apps 帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemini/answer/16275805?hl=en"
-            }
-          },
-          {
-            "event": "Claude Free：日常问答的免费计划",
-            "summary": "Claude 官方定价页列有 Free 计划，可用于日常问题。免费用量按滚动五小时会话窗口重置；实际容量取决于对话长度、模型和使用功能，不保证固定消息条数。",
-            "howTo": "从 Claude 网页或移动端登录后选择 Free 计划，用短段落请它解释概念、比较阅读观点或生成自测题；在 Settings > Usage 查看当前额度，并对照原文核查事实。",
-            "impact": "可作为英语阅读和课程复习的日常辅助；把长资料拆分成问题可更好控制额度，且模型生成内容不应直接代替论文证据。",
-            "free": "Free 计划覆盖日常问题；用量按滚动 5 小时窗口重置，没有固定消息数，并可能受到其他周/月周期限制。免费账户资格和完整地区可用范围官方未说明；用量还随模型、对话长度和功能变化。",
-            "category": "免费网页 / 学习助手",
-            "source": {
-              "name": "Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Qwen3-4B：可下载的 Apache-2.0 开放模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡公开 Qwen3-4B 权重、Transformers 加载示例及本地运行方式；仓库许可证为 Apache-2.0。模型卡给出的原生上下文长度为 32,768 token，并列出本地应用和推理框架选项。",
-            "howTo": "打开 Qwen/Qwen3-4B 模型卡，从 Files and versions 获取模型文件；按卡片示例安装较新版本 Transformers 与 Accelerate，再用 AutoTokenizer 和 AutoModelForCausalLM 加载模型。运行前先查看设备内存与模型文件需求。",
-            "impact": "适合在本地实验文本生成、双语提示或课程代码中的模型接入，也可阅读许可证理解开放权重与商业软件服务的区别；本地推理仍需要合适硬件。",
-            "free": "模型仓库的 LICENSE 为 Apache-2.0，权重可从公开 Hugging Face 仓库获取；许可证使用须遵循其条款。模型文件本身的地区限制、账户要求及本地运行所需硬件额度官方未说明；部署硬件或云算力可能另有成本。",
-            "category": "免费开放权重 / 本地模型学习",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡与许可证",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期选取 10 月 5 日与 10 月 3 日的免费全文，分别讨论儿童读物代表性与社会平等；按原文梳理观点、证据和论证结构。",
-        "articles": [
-          {
-            "title": "Children’s books with Black main characters down 8% in a year, study shows",
-            "source": "The Guardian",
-            "published": "2026-10-05",
-            "url": "https://www.theguardian.com/books/2026/oct/05/childrens-books-with-black-main-characters-down-study-uk",
-            "readingTime": "5 分钟",
-            "topic": "文化 / 儿童出版与代表性",
-            "summary": "《卫报》依据公益组织 Inclusive Books for Children 对英国 2025 年 2,189 本儿童读物的调查指出，只有 47 本（2.1%）以黑人角色为主角，较上一年减少 7.8%；仅 150 本（6.9%）呈现少数族裔、残障或神经多样性主角。报道将这些比例与相关儿童人口占比对照，并补充残障主角图画书数量骤减、神经多样性角色有所增加等不同方向的变化。文章随后引用作者和早教专家，批评把身份本身当作唯一故事内容的“偶然代表”不足，主张孩子也应在普通的友情、冒险和日常故事中看到多样角色；结尾保留进展迹象，同时强调出版界仍需改善。",
-            "reason": [
-              "儿童阅读、文化代表性和出版公平属于教育与社会文化议题，可练习把个体经验放进群体数据中分析。",
-              "文章先用调查数字提出问题，再横向比较群体、引入专家评价，最后补充进展并回到改进呼吁，论证层次清楚。",
-              "阅读题可考查比例数据的比较对象、专家引语的作用，以及 incidental representation 指什么。",
-              "representation、marginalised、neurodivergent 等词汇可迁移至教育公平、文化多样性和公共传播话题。",
-              "写作可借鉴“统计数据—结构性解释—反方或进展信息—有限结论”的展开方式，避免只凭个案下结论。"
-            ],
-            "vocabulary": [
-              {
-                "word": "representation",
-                "phonetic": "/ˌreprɪzenˈteɪʃn/",
-                "part": "n.",
-                "translation": "代表；呈现；代表性"
-              },
-              {
-                "word": "marginalised",
-                "phonetic": "/ˈmɑːdʒɪnəlaɪzd/",
-                "part": "adj.",
-                "translation": "被边缘化的"
-              },
-              {
-                "word": "neurodivergent",
-                "phonetic": "/ˌnjʊərəʊdaɪˈvɜːdʒənt/",
-                "part": "adj.",
-                "translation": "神经多样性的"
-              },
-              {
-                "word": "survey",
-                "phonetic": "/ˈsɜːveɪ/",
-                "part": "n.",
-                "translation": "调查；抽样研究"
-              },
-              {
-                "word": "incidental",
-                "phonetic": "/ˌɪnsɪˈdentl/",
-                "part": "adj.",
-                "translation": "附带的；非刻意呈现的"
-              },
-              {
-                "word": "reliance",
-                "phonetic": "/rɪˈlaɪəns/",
-                "part": "n.",
-                "translation": "依赖；依靠"
-              },
-              {
-                "word": "reflect",
-                "phonetic": "/rɪˈflekt/",
-                "part": "v.",
-                "translation": "反映；体现"
-              },
-              {
-                "word": "decline",
-                "phonetic": "/dɪˈklaɪn/",
-                "part": "n./v.",
-                "translation": "下降；减少"
-              },
-              {
-                "word": "feature",
-                "phonetic": "/ˈfiːtʃə(r)/",
-                "part": "v.",
-                "translation": "以……为特色；使……担任主角"
-              },
-              {
-                "word": "diversity",
-                "phonetic": "/daɪˈvɜːsəti/",
-                "part": "n.",
-                "translation": "多样性"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "There were some signs of progress.",
-                "analysis": [
-                  "这是 there be 存在句，真正的主语是复数名词短语 some signs of progress。",
-                  "some 限定 signs，of progress 后置说明这些迹象涉及“进展”。",
-                  "There were 与前文对不足的批评形成让步式转折，提示作者不会把结论写成单向度的悲观判断。",
-                  "some signs 弱化断言强度，表示出现了一些但并非全面解决问题的积极变化。",
-                  "可借鉴 There are signs of... 在提出问题后补充有限进展。"
-                ],
-                "translation": "也出现了一些进展迹象。"
-              },
-              {
-                "original": "Neurodivergent representation increased in picture books, from three titles in 2024 to 13 last year.",
-                "analysis": [
-                  "主干是 Neurodivergent representation increased，representation 是主语，increased 表示数量或程度上升。",
-                  "Neurodivergent 修饰 representation，in picture books 限定讨论范围。",
-                  "from three titles in 2024 to 13 last year 构成 from...to... 变化区间，分别给出起点和终点。",
-                  "last year 与 2024 对照说明变化跨越相邻年度；数字指书目数量，不是儿童人数。",
-                  "可借鉴 increase from A to B 报告有明确起止值的趋势。"
-                ],
-                "translation": "图画书中的神经多样性代表角色有所增加：从 2024 年的 3 本增至去年的 13 本。"
-              },
-              {
-                "original": "These figures need to be more than mere statistics and a call to action for continued change and improvements.",
-                "analysis": [
-                  "主干是 These figures need to be...，need to 表示必要性，而非已经发生的事实。",
-                  "more than 后接并列名词短语 mere statistics 和 a call to action，提出数字不应只停留在呈现层面。",
-                  "for continued change and improvements 说明行动呼吁的目标，continued 修饰 change。",
-                  "These figures 回指前文多组调查数据，形成“证据—行动”之间的逻辑衔接。",
-                  "可借鉴 need to be more than... and... 强调证据需要转化为持续行动。"
-                ],
-                "translation": "这些数字不能只是统计结果，还应成为推动持续改变和改进的行动呼吁。"
-              }
-            ]
-          },
-          {
-            "title": "Hunter-gatherer societies are often put on a pedestal as paragons of equality – but the reality is more complicated",
-            "source": "The Conversation",
-            "published": "2026-10-03",
-            "url": "https://theconversation.com/hunter-gatherer-societies-are-often-put-on-a-pedestal-as-paragons-of-equality-but-the-reality-is-more-complicated-289009",
-            "readingTime": "8 分钟",
-            "topic": "社会 / 平等观念与人类群体",
-            "summary": "两位人类学者从坦桑尼亚 Hadza 人分享猎物的场景切入，指出“平等社会”常被理想化。作者综合一个多世纪的民族志材料，并比较 Hadza、Ju/’Hoansi、Bayaka 等群体，发现没有社会完全没有不平等：财产、性别、年龄、领导权和仪式知识都可能形成差异。文章进一步论证，分享、嘲笑炫耀者、提出要求和跨群体合作等机制，常由人们争取资源、地位或自主权的自利动机推动，而非单纯利他。结论不是否定平等，而是把平等理解为各社会用于限制不平等、保护自主与资源获取的一组实践工具，反对将狩猎采集者简单描绘为完美平等典范。",
-            "reason": [
-              "社会平等、资源分配和群体规范是常见社会科学主题，文章把抽象概念与具体生活实践相连。",
-              "结构从猎物分享的个案引出传统印象，接着综述跨文化证据，再解释自利机制，最后修正“完美平等”的结论。",
-              "阅读题可考查作者如何限定 egalitarian、例证如何支持“没有社会全然平等”，以及 self-interest 与 sharing 的关系。",
-              "subsistence、consensus、autonomy、hierarchical 等词汇适合社会学、人类学和公共政策类阅读。",
-              "写作可借鉴先呈现常见观点、再用多类证据修正绝对化判断，并以更精确概念收束。"
-            ],
-            "vocabulary": [
-              {
-                "word": "egalitarian",
-                "phonetic": "/ɪˌɡælɪˈteəriən/",
-                "part": "adj.",
-                "translation": "平等主义的；主张人人平等的"
-              },
-              {
-                "word": "subsistence",
-                "phonetic": "/səbˈsɪstəns/",
-                "part": "n.",
-                "translation": "生计；维持生活"
-              },
-              {
-                "word": "inequality",
-                "phonetic": "/ˌɪnɪˈkwɒləti/",
-                "part": "n.",
-                "translation": "不平等；差异"
-              },
-              {
-                "word": "consensus",
-                "phonetic": "/kənˈsensəs/",
-                "part": "n.",
-                "translation": "共识"
-              },
-              {
-                "word": "constrained",
-                "phonetic": "/kənˈstreɪnd/",
-                "part": "adj.",
-                "translation": "受到限制的"
-              },
-              {
-                "word": "hierarchical",
-                "phonetic": "/ˌhaɪəˈrɑːkɪkəl/",
-                "part": "adj.",
-                "translation": "等级分明的"
-              },
-              {
-                "word": "self-interested",
-                "phonetic": "/ˌselfˈɪntrəstɪd/",
-                "part": "adj.",
-                "translation": "以自身利益为出发点的"
-              },
-              {
-                "word": "autonomy",
-                "phonetic": "/ɔːˈtɒnəmi/",
-                "part": "n.",
-                "translation": "自主；自主权"
-              },
-              {
-                "word": "widespread",
-                "phonetic": "/ˈwaɪdspred/",
-                "part": "adj.",
-                "translation": "广泛存在的"
-              },
-              {
-                "word": "deliberate",
-                "phonetic": "/dɪˈlɪbərət/",
-                "part": "adj.",
-                "translation": "有意的；审慎的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "In our recent wide-ranging review of the evidence from the early 20th century onward, we found that no society lacked inequality.",
-                "analysis": [
-                  "主句主干是 we found that...；that 引导宾语从句，说明研究发现。",
-                  "句首 In...onward 介词短语交代证据综述的范围和时间起点，wide-ranging 修饰 review。",
-                  "宾语从句的主干是 no society lacked inequality，双重否定形式 lacked... 表达“没有社会完全不存在不平等”。",
-                  "作者先交代材料范围，再给出概括性结论，避免把个别案例当作普遍事实。",
-                  "可借鉴 In our review..., we found that... 汇报综述结论，并用 no...lacked... 表达普遍性判断。"
-                ],
-                "translation": "在对二十世纪初以来的广泛证据进行综述后，我们发现没有任何社会不存在不平等。"
-              },
-              {
-                "original": "Instead, equality often results from people’s self-interested motives to acquire resources, status and autonomy.",
-                "analysis": [
-                  "Instead 是句首连接副词，承接前文并转向对平等成因的不同解释。",
-                  "主干为 equality results from motives，often 修饰结果发生的频率。",
-                  "people’s self-interested 修饰 motives；to acquire... 是不定式，说明这些动机指向什么。",
-                  "resources、status 和 autonomy 是并列宾语，概括人们追求的不同利益。",
-                  "可借鉴 result from + 动机/条件解释社会结果的成因，并用 Instead 引入修正观点。"
-                ],
-                "translation": "相反，平等往往源自人们获取资源、地位和自主权的自利动机。"
-              },
-              {
-                "original": "Most families have similar, modest possessions and store little material wealth.",
-                "analysis": [
-                  "句子由 and 连接两个并列谓语 have 与 store，共用主语 Most families。",
-                  "similar 和 modest 并列修饰 possessions，描述财物相似且有限。",
-                  "little 修饰不可数名词 material wealth，强调储存的物质财富很少。",
-                  "该句以生活资料差异较小的观察支持群体间物质不平等有限，但不等于所有维度完全平等。",
-                  "可借鉴 similar, modest... and little... 并列描述资源分布特征。"
-                ],
-                "translation": "大多数家庭拥有相似且不多的财物，积累的物质财富也很少。"
               }
             ]
           }
