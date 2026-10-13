@@ -1,6 +1,238 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-12T10:17:53+08:00",
+  "updatedAt": "2026-10-13T11:26:36+08:00",
   "issues": [
+    {
+      "date": "2026-10-13",
+      "status": "ready",
+      "ai": {
+        "intro": "10月12日至13日未核实到3项足够适合学生的新变化，因此将检索范围扩至近7天；下列项目保留公告实际发布日期，并注明资格与免费限制。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 新增管理员可配置的遥测身份归因与采集类别（2026-10-12）",
+            "summary": "GitHub 为企业管理员增加 Copilot 遥测管理设置：可将活动归因到经验证的 GitHub 用户，同时把身份采集与提示词、回复、工具参数、工具输出和策略详情等内容类别分别控制。各类采集默认关闭。",
+            "howTo": "如负责组织设置，在 managed settings 中配置 telemetry.capture.identity 及所需的 capture 类别；身份归因和内容采集须分别启用。功能可用于 Copilot CLI、GitHub Copilot app 及 VS Code Agent Host 会话。",
+            "impact": "在学校或团队的受管开发环境中使用 Copilot 的学生，可据此了解管理员可能记录的是身份、内容还是两者，并在提交课程代码或个人资料前确认组织的采集设置。",
+            "free": "面向使用 managed settings 的企业管理员；公告没有说明额外价格、地区或使用配额，具体计划资格官方未说明。提示词、工具和策略采集可能包含源码、文件、命令及路径；官方建议只启用审计所需类别。",
+            "category": "开发工具 / AI 隐私与管理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-12",
+              "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture"
+            }
+          },
+          {
+            "event": "Google 公布 AMIE 在真实门诊预诊中的临床研究（2026-10-08）",
+            "summary": "Google 与 Beth Israel Deaconess Medical Center 研究人员在《The Lancet》发表 AMIE 研究：98 名患者在紧急照护门诊就诊前与研究型诊断聊天机器人交流，医生实时监督。Google 报告称，75% 的病例中摘要帮助医生准备就诊，超过一半影响了医生的处理方式，模型的鉴别诊断与医生最终诊断有 90% 一致；研究者同时指出仍需更大规模临床试验。",
+            "howTo": "打开 Google Research 公告并进入其链接的《The Lancet》论文，先查看研究对象、监督方式和预设安全标准，再区分单一门诊研究结果与广泛临床部署的证据。",
+            "impact": "医学生或健康科学学生可用这项研究练习评读临床 AI 证据：分别看安全性、摘要的临床用途及诊断一致性指标，不把早期结果直接外推为通用诊疗能力。",
+            "free": "公告和论文链接可在线阅读；AMIE 在该文中是研究型诊断聊天机器人，并非面向公众开放的产品。产品价格、个人账号条件、地区开放和使用配额官方未说明；Google 明确表示仍需更大规模临床试验。",
+            "category": "AI 研究 / 医疗与健康",
+            "source": {
+              "name": "Google Research Blog",
+              "published": "2026-10-08",
+              "url": "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/"
+            }
+          },
+          {
+            "event": "Anthropic 扩展 Cyber Verification Program，分层向经核验的防御团队开放能力（2026-10-06）",
+            "summary": "Anthropic 将 Project Glasswing 与既有 CVP 整合为扩展计划，按 Defense、Red Team 和 Specialized 三档提供不同的网络安全能力与较少的拦截。申请组织须接受核验并证明相应安全控制；高风险专项档仅面向有限且经深入审查的组织。",
+            "howTo": "有正当防御工作需求的学校安全团队、开源维护者或研究组织可先阅读各档资格要求，再由组织通过官方 CVP 入口申请；Red Team 档只可测试获授权系统，专项档还需深入审核。",
+            "impact": "网络安全方向学生可把公告用于理解模型能力开放如何与身份核验、授权范围及滥用监测配套；普通个人账户不会因此自动获得低拦截能力，课程演练仍应限定在获准系统内。",
+            "free": "计划要求组织申请及核验，Defense 档目标为数日内回复，Red Team 档审核可能需数周；Specialized 档仅限少数组织。Claude Platform、Vertex AI 和 Microsoft Foundry 可用；Amazon Bedrock 仅适用于符合 Enterprise Frontier Safeguards 条件的客户。价格、地区配额官方未说明。",
+            "category": "AI 安全 / 网络防御",
+            "source": {
+              "name": "Anthropic News",
+              "published": "2026-10-06",
+              "url": "https://www.anthropic.com/news/cyber-verification-program"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Student：经验证学生可用的免费 AI 编程计划",
+            "summary": "GitHub Education 说明，验证通过的学生可用 Copilot Student；计划包含不限量代码补全、一定额度的 GitHub AI Credits，以及有限的聊天和代理用量，模型只能通过自动选择使用。",
+            "howTo": "前往 GitHub Education Pack 的 GitHub Copilot 栏目，按页面流程验证学生身份并启用 Student 计划；使用时留意聊天、代理和 AI Credits 的计划限制。",
+            "impact": "可用于课程项目中的代码补全、理解报错和小规模编程练习；学生应检查并测试建议，不应把自动生成结果直接当作正确答案。",
+            "free": "对通过验证的学生提供免费 Student 计划；代码补全不限量，但聊天和代理用量有限，AI Credits 的确切额度、适用地区和截止日期官方未说明。",
+            "category": "学生教育福利 / AI 编程",
+            "source": {
+              "name": "GitHub Education Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Notion AI：Free 与 Plus 用户可试用有限次数的 AI 回复",
+            "summary": "Notion 帮助中心确认 Free 和 Plus 计划用户可获得有限数量的免费 AI 回复；AI 可用于改写、翻译、摘要、问答等页面操作。用完后继续使用需升级至 Business 或 Enterprise。",
+            "howTo": "在 Notion 免费或 Plus 工作区新建学习页面，选中文本使用 AI 编辑，或在页面输入 /AI Block 生成提纲、摘要等；留意免费回复用量提示。",
+            "impact": "适合将课堂笔记改成复习提纲、润色英语草稿或翻译阅读材料；把 AI 输出与原文核对，避免将未经检查的内容写入正式作业。",
+            "free": "Free 和 Plus 用户可领取有限次免费 AI 回复；官方没有公布具体次数、刷新周期或地区限制。免费回复用尽后，需升级到 Business 或 Enterprise 才能继续使用 AI 功能。",
+            "category": "长期免费 / 学习写作与整理",
+            "source": {
+              "name": "Notion AI Help Center",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/help/complimentary-ai-responses"
+            }
+          },
+          {
+            "event": "Qwen3-Next-80B-A3B-Instruct：Apache-2.0 许可的公开模型权重",
+            "summary": "Qwen 在 Hugging Face 发布可下载的 Qwen3-Next-80B-A3B-Instruct 权重，模型卡提供 Transformers 快速上手示例，并列出 Apache-2.0 许可。模型总参数为 80B、每 token 激活 3B，适合本地部署实验而非轻量设备即用。",
+            "howTo": "从官方模型卡下载权重，按卡片安装 Transformers 主分支与依赖，再用 AutoTokenizer 和 AutoModelForCausalLM 加载模型；部署前先核对本机显存、存储和推理框架要求。",
+            "impact": "可用于课程中的开源模型部署、提示词评测或本地推理实验；本地运行有助于控制输入数据的传输边界，但仍需遵守模型许可并验证生成内容。",
+            "free": "模型权重可公开下载，模型卡标注 Apache-2.0；本地使用不收模型调用费，但需要自行准备足够硬件和依赖。托管推理是否免费、账号要求、地区及托管配额官方未说明。",
+            "category": "开源模型 / 本地推理",
+            "source": {
+              "name": "Qwen Hugging Face Model Card",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：部分模型的输入与输出 token 免费",
+            "summary": "Google 定价页列出 Gemini API 免费层：部分模型可免费使用输入和输出 token，并可从 Google AI Studio 开始；免费层数据可能用于改进 Google 产品。",
+            "howTo": "在官方定价页确认具体模型标为 Free Tier，再点 Get started for Free 进入 AI Studio 测试；先核对该模型的限制，并避免输入个人或机密材料。",
+            "impact": "可为摘要、分类或问答课程原型做小规模验证，无需在试验阶段先支付 token 费用；不要把免费额度误认为无限调用，也不要输入敏感资料。",
+            "free": "仅部分模型免费，具体速率限制随模型而异，统一额度官方未说明；免费层数据可能用于改进 Google 产品。地区和账号资格的统一要求官方未说明。",
+            "category": "长期免费 / API 试用",
+            "source": {
+              "name": "Google AI for Developers Pricing",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Publicly owned rail is popular. But is it making the trains run on time?",
+            "source": "BBC",
+            "published": "2026-10-12",
+            "url": "https://www.bbc.co.uk/news/articles/ck5yn0n14r8do",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "经济与社会 / 铁路国有化和服务质量",
+            "summary": "BBC 从公众对铁路私有化失败、票价和服务可靠性的常见判断切入，引用铁路专家对 1990 年代私营铁路运营表现的不同评价。报道进一步厘清英国铁路并非简单的私有或公有二分：基础设施已由公共部门管理，部分客运公司早已国有化，另有受政府合同约束的运营商、私人持有的车辆公司及货运和开放接入运营商。文章最后指出，当前所谓铁路国有化主要是客运合同到期后逐步将运营商转回公有并成为默认模式，并不等同于恢复旧式 British Rail；所有权变化能否满足乘客对准点和服务的期待仍是实际考验。",
+            "reason": [
+              "公共服务效率、国有化与消费者体验相连，是经济政策和社会治理类常见议题。",
+              "文章从流行看法起笔，以专家反例修正单一叙事，再拆解复杂的所有权结构，最后落到政策实际含义。",
+              "可练习作者如何限定“私有化”“国有化”的含义、例证作用题，以及标题提出的服务效果是否已获证明。",
+              "privatisation、subsidy、infrastructure、devolved 等词适合经济制度、公共投资和地方治理语境。",
+              "写作可借鉴先呈现争论双方、再区分概念和制度事实、最后评估政策结果的论证结构。"
+            ],
+            "vocabulary": [
+              {"word":"privatisation","phonetic":"/ˌpraɪvətaɪˈzeɪʃən/","part":"n.","translation":"私有化"},
+              {"word":"unreliable","phonetic":"/ˌʌnrɪˈlaɪəbl/","part":"adj.","translation":"不可靠的"},
+              {"word":"operating costs","phonetic":"/ˈɒpəreɪtɪŋ kɒsts/","part":"n. phr.","translation":"运营成本"},
+              {"word":"subsidy","phonetic":"/ˈsʌbsədi/","part":"n.","translation":"补贴"},
+              {"word":"nationalisation","phonetic":"/ˌnæʃənəlaɪˈzeɪʃən/","part":"n.","translation":"国有化"},
+              {"word":"infrastructure","phonetic":"/ˈɪnfrəstrʌktʃə/","part":"n.","translation":"基础设施"},
+              {"word":"devolved","phonetic":"/dɪˈvɒlvd/","part":"adj.","translation":"权力下放的"},
+              {"word":"fixed fee","phonetic":"/ˌfɪkst ˈfiː/","part":"n. phr.","translation":"固定费用"},
+              {"word":"financial risk","phonetic":"/faɪˌnænʃəl ˈrɪsk/","part":"n. phr.","translation":"财务风险"},
+              {"word":"expire","phonetic":"/ɪkˈspaɪə/","part":"v.","translation":"到期"}
+            ],
+            "sentences": [
+              {
+                "original": "The view that privatisation ultimately failed, leaving unreliable services and high fares, may be widespread.",
+                "analysis": [
+                  "主句核心是 The view ... may be widespread，情态动词 may 保留判断余地。",
+                  "that 引导同位语从句，说明 view 的具体内容：私有化最终失败。",
+                  "leaving unreliable services and high fares 是现在分词短语，补充该观点认为的后果。",
+                  "ultimately 修饰 failed，widespread 描述这种看法的普及程度，而非证实其正确。",
+                  "可借鉴 the view that... 表述一种社会看法，并用 may 避免把普遍观点写成定论。"
+                ],
+                "translation": "认为私有化最终失败、导致服务不可靠且票价高昂的看法，或许相当普遍。"
+              },
+              {
+                "original": "However, Prof Glaister argues that for a few years in the 1990s, the old privatised system actually worked well.",
+                "analysis": [
+                  "主句核心是 Prof Glaister argues，However 标示其观点与前句的普遍看法形成转折。",
+                  "that 引导宾语从句，完整呈现专家提出的反例性判断。",
+                  "for a few years in the 1990s 是时间状语，限定“运行良好”的时期。",
+                  "actually 强调结论与预期相反；old privatised system 是 worked well 的主语。",
+                  "可借鉴 However + 专家观点 + that 从句，引入证据或观点对既有论述作修正。"
+                ],
+                "translation": "不过，Glaister 教授认为，20 世纪 90 年代有几年旧的私营铁路体系实际上运行良好。"
+              },
+              {
+                "original": "Operating costs and subsidies were falling while the number of train services and passengers went up, he says.",
+                "analysis": [
+                  "主句以 he says 作引述框架，核心信息是两个同时发生的变化。",
+                  "while 连接并对照两组趋势：运营成本和补贴下降，列车服务及乘客数量上升。",
+                  "the number of... 是不可数的单数结构，因此搭配 went up 表示数量增长。",
+                  "两个并列名词组提供相反方向的指标，支撑前句“运行良好”的理由。",
+                  "可借鉴 while 对照政策成本与服务产出，形成简洁的证据型表达。"
+                ],
+                "translation": "他说，运营成本和补贴在下降，而列车班次和乘客人数却在增加。"
+              }
+            ]
+          },
+          {
+            "title": "Why the right turned on Indian Americans",
+            "source": "Vox",
+            "published": "2026-10-12",
+            "url": "https://www.vox.com/podcasts/505495/anti-indian-racism-online-right-vivek-ramaswamy",
+            "readingTime": "约 10 分钟（估算）",
+            "topic": "社会 / 移民、种族与身份政治",
+            "summary": "Vox 以一段涉及印度裔政治人物的社交媒体风波引出右翼网络反印裔言论，随后通过主持人与记者的访谈讨论其社会背景。受访者把部分敌意与印度裔在教育、科技及职业领域的可见度、围绕机会竞争的中产阶层焦虑，以及反全球化情绪联系起来；报道也谈及网络创作者借争议获得关注的动力。访谈进一步呈现印度裔美国人对局势的务实回应和对自身融入经历的不同感受，并以第一代移民的适应和后续代际选择作比较。文章提供的是受访者对现象的解释，而不是对单一因果关系的证明。",
+            "reason": [
+              "移民融入、种族偏见与教育和职业竞争结合，适合社会公平、身份政治类主题。",
+              "文章由社交媒体事件提出问题，以访谈解释社会背景，再补入当事群体回应，最后联系移民代际经验。",
+              "可练习主旨题、观点归属题和因果推断题，尤其要区分受访者解释与已证实结论。",
+              "conspicuous、stereotype、resentment、backlash 等词可用于分析偏见、群体情绪和舆论变化。",
+              "写作可借鉴“具体事件—结构性解释—群体回应”的组织方式，并用归因限定语避免过度概括。"
+            ],
+            "vocabulary": [
+              {"word":"conspicuous","phonetic":"/kənˈspɪkjuəs/","part":"adj.","translation":"显眼的；显著的"},
+              {"word":"stereotype","phonetic":"/ˈsteriətaɪp/","part":"n.","translation":"刻板印象"},
+              {"word":"advocate","phonetic":"/ˈædvəkət/","part":"n.","translation":"倡导者；支持者"},
+              {"word":"visible","phonetic":"/ˈvɪzəbl/","part":"adj.","translation":"可见的；显而易见的"},
+              {"word":"resentment","phonetic":"/rɪˈzentmənt/","part":"n.","translation":"怨恨；不满"},
+              {"word":"backlash","phonetic":"/ˈbæklæʃ/","part":"n.","translation":"强烈反对；反弹"},
+              {"word":"status threat","phonetic":"/ˈsteɪtəs θret/","part":"n. phr.","translation":"地位威胁"},
+              {"word":"pragmatism","phonetic":"/ˈpræɡmətɪzəm/","part":"n.","translation":"务实；实用主义"},
+              {"word":"denigrate","phonetic":"/ˈdenɪɡreɪt/","part":"v.","translation":"诋毁；贬低"},
+              {"word":"influx","phonetic":"/ˈɪnflʌks/","part":"n.","translation":"大量涌入"}
+            ],
+            "sentences": [
+              {
+                "original": "It was the latest example of a broader shift on the right, where Indian Americans and Indian immigrants have become a conspicuous target of online conservative anger.",
+                "analysis": [
+                  "主句核心是 It was the latest example，说明前文事件是更大变化的一个例子。",
+                  "of a broader shift 补足 example 的内容，on the right 限定这一变化发生的政治范围。",
+                  "where 引导关系副词从句，补充说明这一政治变化中出现的群体处境。",
+                  "have become 使用现在完成时，呈现目标状态逐渐形成并延续至今。",
+                  "可借鉴 It is an example of...，再用 where 从句展开社会现象的具体表现。"
+                ],
+                "translation": "这只是右翼更广泛变化的最新例子：印度裔美国人和印度移民已成为网络保守派愤怒针对的显眼目标。"
+              },
+              {
+                "original": "I think that is a component of it.",
+                "analysis": [
+                  "句子主干是 I think，后接 that 引导的宾语从句。",
+                  "从句核心为 that is a component，that 指代前文提出的解释或因素。",
+                  "of it 补充 component 所属的整体，避免把单一因素说成全部原因。",
+                  "I think 是观点限定语，标明这是说话者判断而非报道已证实的事实。",
+                  "可借鉴 a component of... 和 I think 的搭配，谨慎表达多因素解释。"
+                ],
+                "translation": "我认为那是其中一个因素。"
+              },
+              {
+                "original": "It’s a much larger anti-globalization backlash on the right, not only when it comes to things like immigration, but also trade and tariffs and restrictions like that.",
+                "analysis": [
+                  "主句核心为 It’s a backlash，表语 backlash 点明受访者对现象的定性。",
+                  "much larger 和 anti-globalization 修饰 backlash，说明其规模和性质。",
+                  "on the right 限定政治语境；when it comes to 引出讨论范围。",
+                  "not only... but also... 并列移民、贸易、关税及类似限制，展示论点覆盖面。",
+                  "可借鉴 not only... but also... 扩展论据类别，并用 like that 回指同类政策。"
+                ],
+                "translation": "这是一种范围更广的右翼反全球化反弹，不只涉及移民，也涉及贸易、关税及类似限制。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-12",
       "status": "ready",
@@ -2031,339 +2263,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 predict + 从句表达利益相关者对政策或市场变化的预期，并用并列项展开影响。"
                 ],
                 "translation": "反对这笔交易的人预测，观众很快可能要为流媒体服务支付更多费用、选择变少，影视作品也可能更少冒险。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-06",
-      "status": "ready",
-      "ai": {
-        "intro": "先检索 10 月 5—6 日官方发布，符合学生可尝试或需要了解的新变化不足 3 项，因此扩展到此前 7 天；来源均保留实际发布日期。免费资源重新核对了官方定价、帮助文档或模型卡，并优先补入不同类型的研究工具和开放模型。",
-        "updates": [
-          {
-            "event": "Google 发布 Gemini 4 Argon，面向编码与企业知识工作（2026-09-30）",
-            "summary": "Google 宣布 Gemini 4 Argon，定位于长程编码、企业知识工作及网络防御等任务；公告描述了编码、推理、多模态和持续执行多步骤任务等方向。发布页当时称模型即将推出，没有给出面向所有用户的立即开放时间。",
-            "howTo": "先阅读 Google 官方发布页并留意后续可用性公告；该发布页没有提供公开申请或立即体验的操作步骤，不能据此假定当前账户已获开放。",
-            "impact": "学生可把它视为复杂代码维护和多步骤资料处理方向的新模型，但目前应把发布信息与实际可用性区分；等官方明确开放入口后，再用非敏感课程代码或资料试用。",
-            "free": "官方公告称模型将推出，但未说明免费或付费计划、账户资格、可用地区、推出时间及使用额度；以上均为“官方未说明”。",
-            "category": "AI 模型 / 编码与知识工作",
-            "source": {
-              "name": "Google 博客",
-              "published": "2026-09-30",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
-            }
-          },
-          {
-            "event": "GitHub Secret Scanning 新增 Lovable、Pydantic 与 Supabase 密钥检测（2026-10-05）",
-            "summary": "GitHub 为 Secret Scanning 增加 Lovable API key、Pydantic Logfire token 与 AI Gateway API key，以及 Supabase OAuth access token 和 scoped personal access token 等检测类型。公告说明，公开仓库中发现的合作伙伴密钥会转交给相应服务方；用户密钥则会在公开或私有仓库触发告警。",
-            "howTo": "检查课程仓库的 Secret Scanning 告警及已支持的密钥类型；若真实密钥误入代码库，立即在对应服务商处撤销或轮换，并从后续提交中移除，切勿用真实凭据测试检测功能。",
-            "impact": "使用 Lovable、Pydantic 或 Supabase 做课程原型的团队，可更早发现误提交的凭据；告警有助于缩短密钥暴露时间，但不能替代提交前的保密检查。",
-            "free": "公告说明检测类型及公开仓库合作伙伴密钥转交通知、公开或私有仓库用户密钥告警；未说明适用计划、价格、地区或使用额度，均为“官方未说明”。",
-            "category": "开发安全 / 密钥防泄漏",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-05",
-              "url": "https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more"
-            }
-          },
-          {
-            "event": "GitHub App 安装令牌完成无状态格式迁移（2026-10-02）",
-            "summary": "GitHub 已完成无状态 GitHub App 安装令牌的分阶段推出；新签发令牌默认采用 ghs_APPID_JWT 格式，长度约 520 字符，而非旧格式的 40 字符。令牌权限、仓库范围和一小时有效期保持不变；用于验证新格式的临时请求头计划于 2026-11-30 弃用。",
-            "howTo": "如果课程项目维护 GitHub App，检查验证规则、数据库字段、代理和日志脱敏规则是否假定令牌恰为 40 个字符；用两种格式测试集成，并在 2026-11-30 前从生产代码移除临时请求头。",
-            "impact": "学生团队可以避免因固定长度校验或字段截断导致 GitHub App 工作流失效，也能把凭据视为不透明字符串，减少日志误记或授权头被截断的风险。",
-            "free": "公告称新格式默认用于新签发的 GitHub App 安装令牌，未说明价格、计划资格、地区或额度；这些信息均为“官方未说明”。",
-            "category": "开发工具 / GitHub App 集成",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-02",
-              "url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini Notebook：免费标准额度可整理课程资料并基于来源提问",
-            "summary": "Google 帮助中心说明，免费用户可在 Gemini Notebook 中添加最多 50 个来源；支持 PDF、Office 文档、网页链接和带字幕的公开视频等材料，并可针对导入来源提问或生成摘要。",
-            "howTo": "打开 Gemini Notebook，新建笔记本并添加课程 PDF、文档或网页链接；选中相关来源后提问或生成摘要。网页导入只抓取页面文字，付费墙网页不受支持。",
-            "impact": "可把多篇课程阅读或公开资料放进同一笔记本，按来源比较观点、生成复习问题；提问时核对引用材料，避免把模型归纳误当成原文结论。",
-            "free": "官方说明免费用户最多可添加 50 个来源，每个来源最多 500,000 词或上传文件 200 MB；账户资格、地区、具体提示额度及截止日期“官方未说明”。",
-            "category": "免费网页工具 / 来源型学习研究",
-            "source": {
-              "name": "Google Notebook 帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
-            }
-          },
-          {
-            "event": "SmolLM3-3B：可下载的 Apache-2.0 开放模型权重",
-            "summary": "Hugging Face 上 HuggingFaceTB 官方模型卡提供 SmolLM3-3B 的开放权重和 Transformers 本地运行示例；模型卡标明 Apache-2.0 许可，并描述了混合推理和最长 128k token 的上下文支持。",
-            "howTo": "打开模型卡查看文件与许可证；按示例安装 Transformers 4.53.0 或更新版本，通过 AutoTokenizer 和 AutoModelForCausalLM 从 Hugging Face 加载 HuggingFaceTB/SmolLM3-3B，再在本地运行提示词实验。",
-            "impact": "适合课程作业中练习本地模型加载、提示模板和离线文本生成；学生可在 Apache-2.0 条款下研究开放权重，但部署仍需要足够的本地或云端算力。",
-            "free": "官方模型卡标注 Apache-2.0，公开提供模型权重；模型文件下载、账户和地区限制未说明，本地硬件或云端算力成本也未说明。",
-            "category": "免费开放权重 / 本地模型学习",
-            "source": {
-              "name": "HuggingFaceTB 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
-            }
-          },
-          {
-            "event": "Gemini API 与 Google AI Studio：部分模型提供免费层",
-            "summary": "Google AI for Developers 定价页列出 Gemini API Free Tier：可在 AI Studio 开始使用，部分模型的输入和输出 token 免费，但可用模型受限。官方说明免费层内容会用于改进产品，因此不宜直接提交未公开论文、个人资料或课程答案。",
-            "howTo": "打开 Google AI Studio，选择明确标为 Free Tier 的 Gemini 模型并从示例开始调用；写入个人 API key 前先检查所选模型、计费层及数据使用条款。",
-            "impact": "可用于课程原型中的文本生成 API、提示词练习和输出比较；处理作业草稿时先移除个人信息，并注意免费层输入可能用于产品改进。",
-            "free": "官方列出部分模型免费输入和输出 token，并称模型访问受限；适用模型的完整调用额度、免费层地区及账户资格均为“官方未说明”。免费层内容用于改进产品，不等于无限调用或所有模型免费。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划文档列出免费的 Copilot Free，包含有限的编程辅助功能；个人开发者每月可获得 2,000 次 inline code completions。Free 与 Student 计划的模型通过自动选择提供。",
-            "howTo": "用个人 GitHub 账户开通 Copilot Free，在支持的 IDE 中安装 Copilot 并启用行内补全；在 IDE 里检查当前计划与用量，避免将代码补全次数误认为聊天请求额度。",
-            "impact": "适合学生在课程编程中试用行内补全、改写重复代码或理解 API 调用；每月额度有限，仍应检查生成代码并理解其行为。",
-            "free": "个人 Copilot Free 每月 2,000 次行内补全，功能受限；仅适用于未通过组织或企业获得 Copilot 的个人开发者。聊天功能、账户地区和免费计划截止日期等信息以官方未说明为准。",
-            "category": "免费编程助手 / 学生开发",
-            "source": {
-              "name": "GitHub Copilot 官方计划文档",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期选取 10 月 5 日的 BBC 教育报道与 NPR 文化回顾，分别讨论学生抗议背后的教育诉求，以及儿童读物改编为电视作品的过程。",
-        "articles": [
-          {
-            "title": "France braces for national day of school protests after injuries and mass arrests",
-            "source": "BBC",
-            "published": "2026-10-05",
-            "url": "https://www.bbc.co.uk/news/articles/cr4g1q1elxnjo",
-            "readingTime": "约 2 分钟",
-            "topic": "教育 / 学生抗议与公共服务",
-            "summary": "BBC 报道法国学生组织呼吁举行全国性行动，要求增加教育投入；此前一周的示威已扩散到数百所学校，报道列出受伤和逮捕人数，并交代冲突升级的背景。政府称已推出回应措施，但学生组织认为没有具体承诺，教师工会也支持参加行动。文章随后说明示威从巴黎扩散至全国，诉求包括教室拥挤、校舍破旧和教师不足；结尾补充抗议由高中生发起、大学生后来加入，交代参与群体的变化。",
-            "reason": [
-              "教育资源、学生参与和公共服务供给是常见社会议题，可练习区分诉求、政府回应与组织立场。",
-              "文章先交代全国行动及冲突背景，再呈现政府与学生组织分歧，随后列出具体教育问题并说明运动扩散过程。",
-              "阅读题可考查政府措施为何未说服组织、示威诉求有哪些，以及末段说明参与群体变化的作用。",
-              "brace、mobilisation、deadlock、overcrowded 等词可迁移到校园治理、公共资源和社会运动主题。",
-              "写作可借鉴“事件背景—双方立场—具体原因—参与范围”的结构，避免把抗议简化为单一原因。"
-            ],
-            "vocabulary": [
-              {
-                "word": "brace",
-                "phonetic": "/breɪs/",
-                "part": "v.",
-                "translation": "为……作准备；准备应对"
-              },
-              {
-                "word": "nationwide",
-                "phonetic": "/ˌneɪʃnˈwaɪd/",
-                "part": "adj.",
-                "translation": "全国范围的"
-              },
-              {
-                "word": "demonstration",
-                "phonetic": "/ˌdemənˈstreɪʃn/",
-                "part": "n.",
-                "translation": "示威；集会"
-              },
-              {
-                "word": "blockade",
-                "phonetic": "/blɒˈkeɪd/",
-                "part": "v./n.",
-                "translation": "封锁；阻塞"
-              },
-              {
-                "word": "mobilisation",
-                "phonetic": "/ˌməʊbɪlaɪˈzeɪʃn/",
-                "part": "n.",
-                "translation": "动员；动员行动"
-              },
-              {
-                "word": "deadlock",
-                "phonetic": "/ˈdedlɒk/",
-                "part": "n.",
-                "translation": "僵局"
-              },
-              {
-                "word": "repression",
-                "phonetic": "/rɪˈpreʃn/",
-                "part": "n.",
-                "translation": "镇压；压制"
-              },
-              {
-                "word": "overcrowded",
-                "phonetic": "/ˌəʊvəˈkraʊdɪd/",
-                "part": "adj.",
-                "translation": "过度拥挤的"
-              },
-              {
-                "word": "run-down",
-                "phonetic": "/ˌrʌn ˈdaʊn/",
-                "part": "adj.",
-                "translation": "破旧的；失修的"
-              },
-              {
-                "word": "urge",
-                "phonetic": "/ɜːdʒ/",
-                "part": "v.",
-                "translation": "敦促；力劝"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The protests were started by high school students, who were later joined by university students.",
-                "analysis": [
-                  "主句核心是 The protests were started，使用一般过去时被动语态，突出抗议行动而非发起者。",
-                  "by high school students 补出施事者，回答谁最先发起抗议。",
-                  "who 引导非限制性定语从句，补充说明高中生后来有大学生加入。",
-                  "later 标示时间推进；主句与从句合起来呈现参与群体逐步扩大的过程。",
-                  "可借鉴 be started by...，再用 who 从句补充事件中的后续变化。"
-                ],
-                "translation": "抗议最初由高中生发起，后来有大学生加入。"
-              },
-              {
-                "original": "Some other organisations have also shown their support for the students, with the teachers' union SNES-FSU urging its members to join Tuesday's protest.",
-                "analysis": [
-                  "主句核心是 Some other organisations have shown their support，使用现在完成时说明支持行动已出现。",
-                  "for the students 指明 support 的对象；also 表示这并非唯一一个支持方。",
-                  "with 后接 the teachers' union... urging... 构成 with 复合结构，补充说明教师工会如何支持。",
-                  "to join Tuesday's protest 是不定式短语，说明工会敦促成员采取的行动。",
-                  "可借鉴 with + 名词 + -ing 在主句后补充同步发生的背景或行动。"
-                ],
-                "translation": "其他一些组织也表示支持学生，教师工会 SNES-FSU 还敦促成员参加周二的抗议。"
-              },
-              {
-                "original": "The wave of demonstrations began in September in Paris and has spread across the country, with students protesting over a range of issues, including overcrowded classrooms, run-down buildings, and a lack of teachers.",
-                "analysis": [
-                  "主干由 began 与 has spread 两个并列谓语构成，分别交代运动的起点和后来扩散的结果。",
-                  "in September in Paris 和 across the country 分别给出时间地点与扩散范围。",
-                  "with students protesting... 是 with 复合结构，补充说明抗议者正在回应的问题。",
-                  "including 引出例示，列出拥挤教室、失修建筑和教师短缺等诉求。",
-                  "一般过去时与现在完成时搭配，呈现从过去起始并延续至当前的变化。"
-                ],
-                "translation": "示威浪潮于 9 月从巴黎开始，现已扩展至全国；学生抗议的问题包括教室拥挤、校舍破旧和教师短缺。"
-              }
-            ]
-          },
-          {
-            "title": "The iconic Arthur Read made his TV debut 30 years ago",
-            "source": "NPR",
-            "published": "2026-10-05",
-            "url": "https://www.npr.org/2026/10/05/g-s1-146052/arthur-read-tv-debut-30-anniversary",
-            "readingTime": "约 5 分钟",
-            "topic": "文化 / 儿童阅读与电视改编",
-            "summary": "NPR 借《Arthur》电视首播三十周年，回顾角色从绘本走向电视的过程。文章先讲作者 Marc Brown 如何根据儿子的睡前故事请求创作土豚 Arthur，又说明为了让角色戴眼镜并面向读者，作者重新调整形象；随后写到制片人 Carol Greenwald 认为绘本能让孩子愿意继续阅读，因而推动电视改编。Brown 起初担心失去角色控制权，但 GBH 的合作和图书销量变化促成了改编；节目后来以学校、家庭和社区关系为主题发展出长期系列。文章也纳入节目播出争议，呈现儿童电视的文化影响并非全无分歧，最后回到阅读、家庭和归属感等持续主题。",
-            "reason": [
-              "儿童阅读、电视改编与文化传播适合讨论媒介如何影响阅读兴趣，也避免只从商业成功评价作品。",
-              "文章按绘本起源、人物设计、电视改编、长期影响和争议展开，时间线清晰，并穿插创作者及制片人的回忆。",
-              "阅读题可考查角色设计改变的原因、电视改编如何带动阅读，以及结尾争议如何修正单纯的怀旧叙述。",
-              "pivotal、resonate、preserve、underlying 等词汇适用于文化作品、教育效果和媒介影响类文章。",
-              "写作可借鉴“起源—转折—影响—限制”的人物或作品介绍框架，并用引语补充当事人视角。"
-            ],
-            "vocabulary": [
-              {
-                "word": "protagonist",
-                "phonetic": "/prəˈtæɡənɪst/",
-                "part": "n.",
-                "translation": "主角；主人公"
-              },
-              {
-                "word": "aardvark",
-                "phonetic": "/ˈɑːdvɑːk/",
-                "part": "n.",
-                "translation": "土豚"
-              },
-              {
-                "word": "debut",
-                "phonetic": "/ˈdeɪbjuː/",
-                "part": "n./v.",
-                "translation": "首次亮相；初次登场"
-              },
-              {
-                "word": "pivotal",
-                "phonetic": "/ˈpɪvətl/",
-                "part": "adj.",
-                "translation": "关键的；核心的"
-              },
-              {
-                "word": "resonate",
-                "phonetic": "/ˈrezəneɪt/",
-                "part": "v.",
-                "translation": "引起共鸣；产生影响"
-              },
-              {
-                "word": "preserve",
-                "phonetic": "/prɪˈzɜːv/",
-                "part": "v.",
-                "translation": "保留；维护"
-              },
-              {
-                "word": "milestone",
-                "phonetic": "/ˈmaɪlstəʊn/",
-                "part": "n.",
-                "translation": "里程碑；重要阶段"
-              },
-              {
-                "word": "underlying",
-                "phonetic": "/ˌʌndəˈlaɪɪŋ/",
-                "part": "adj.",
-                "translation": "潜在的；根本的"
-              },
-              {
-                "word": "evolve",
-                "phonetic": "/ɪˈvɒlv/",
-                "part": "v.",
-                "translation": "发展；演变"
-              },
-              {
-                "word": "relatable",
-                "phonetic": "/rɪˈleɪtəbl/",
-                "part": "adj.",
-                "translation": "能引起共鸣的；易于理解的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Although Greenwald believed Arthur was ready to make his public television debut, Brown was less sure.",
-                "analysis": [
-                  "主句核心是 Brown was less sure，说明 Brown 对改编持保留态度。",
-                  "Although 引导让步状语从句，交代 Greenwald 相信 Arthur 已准备好登上公共电视。",
-                  "从句中的 believed 后接省略 that 的宾语从句，宾语从句核心为 Arthur was ready。",
-                  "Although 从句与主句形成意见对照，解释电视改编为何存在协商过程。",
-                  "可借鉴 Although A..., B... 表达双方看法不同而不割裂前后论证。"
-                ],
-                "translation": "尽管 Greenwald 认为 Arthur 已准备好登上公共电视，Brown 却没有那么确定。"
-              },
-              {
-                "original": "Though they were not an immediate commercial success, Brown's picture books resonated with families, including Carol Greenwald's.",
-                "analysis": [
-                  "主句核心是 Brown's picture books resonated with families，说明绘本逐渐获得家庭读者共鸣。",
-                  "Though 引导让步状语从句，先承认绘本并未立即取得商业成功。",
-                  "immediate 修饰 commercial success，限定成功出现的时间，而非否认后来受到欢迎。",
-                  "including Carol Greenwald's 是补充例证，说明 families 中包括制片人 Greenwald 的家庭。",
-                  "该句以“起初不成功但后来共鸣”形成转折，可借鉴 Though... 主句结构。"
-                ],
-                "translation": "尽管 Brown 的绘本并未立刻取得商业成功，却引起了许多家庭的共鸣，其中包括 Carol Greenwald 一家。"
-              },
-              {
-                "original": "The principles of believing in yourself, valuing family and friendship, and loving reading carried from season to season.",
-                "analysis": [
-                  "主干是 The principles... carried，主语为 principles，谓语 carried 表示这些理念贯穿系列。",
-                  "of 后接三个并列的动名词短语，分别说明理念内容：自信、重视家庭友谊和热爱阅读。",
-                  "from season to season 是重复结构，表示这些主题跨越多个播出季持续存在。",
-                  "该句从剧情层面概括节目长期价值，承接前文对角色和系列发展的描述。",
-                  "可借鉴 the principles of... 概括作品或项目所传达的并列价值观。"
-                ],
-                "translation": "相信自己、珍视家庭与友谊、热爱阅读这些理念贯穿了每一季。"
               }
             ]
           }
