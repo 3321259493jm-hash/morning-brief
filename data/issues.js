@@ -1,6 +1,238 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-13T11:26:36+08:00",
+  "updatedAt": "2026-10-14T09:50:47+08:00",
   "issues": [
+    {
+      "date": "2026-10-14",
+      "status": "ready",
+      "ai": {
+        "intro": "10月13日至14日核实到3项官方产品变化；以下均保留来源实际发布日期。免费资源重新核查了免费层、模型许可和来源数量，并注明官方未列明的地区或配额。",
+        "updates": [
+          {
+            "event": "Google 发布 Gemini 4 Argon，面向开发者与消费者开放（2026-10-13）",
+            "summary": "Google 发布 Gemini 4 Argon，定位于需要多步推理的复杂任务，并称其可处理编码、科学及文档理解工作。模型通过 Gemini API 和 Google AI Studio 面向开发者开放；Gemini API 提供 100 万 token 的统一输入输出上限。",
+            "howTo": "开发者可打开 Google AI Studio，在付费 API 层选择 Gemini 4 Argon 并按官方文档配置调用；个人用户可在 Gemini 应用或 Search AI Mode 中使用，但须符合对应订阅资格。",
+            "impact": "研究生可用它整理长篇论文资料、分析多份课程文档或辅助调试多步骤代码任务；提交论文或运行代码前，仍需核对引文、数据与生成结果。",
+            "free": "API 为付费调用：官方公告列出至 2026-11-30 的介绍价为每百万输入 token 2 美元、每百万输出 token 10 美元，缓存输入 token 减价 95%；之后为每百万输入 4 美元、输出 20 美元。面向个人 Gemini 应用的 Argon 要求 Google AI Pro 或 Ultra 订阅。API 全球推出；额外免费额度、账号资格和应用地区开放情况官方未说明。",
+            "category": "AI 模型 / 多步推理与学习研究",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-13",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+            }
+          },
+          {
+            "event": "Gemini 4 Argon 成为 GitHub Copilot 一般可用模型（2026-10-13）",
+            "summary": "GitHub 将 Gemini 4 Argon 加入 Copilot 模型选择器，适用于复杂编码、代理式工作流和推理任务；模型会检查结果并测试边缘情形。GitHub 表示该模型按供应商标价计费，且正在逐步推出。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、Copilot coding agent、Copilot app、JetBrains IDE、Xcode 或 Eclipse 中打开 Copilot 模型选择器并选择 Gemini 4 Argon；若未出现，稍后再检查。Business 和 Enterprise 管理员可在 Copilot 设置中管理模型策略。",
+            "impact": "可用于拆解课程项目、排查复杂报错或让编程代理检查边界条件；学生应先确认所用 Copilot 计划和计费方式，再将其用于高频任务。",
+            "free": "仅 Copilot Pro+、Max、Business 和 Enterprise 用户可用；按供应商标价使用量计费。逐步推出，是否已开放取决于 rollout；免费计划、单独配额和适用地区官方未说明。",
+            "category": "AI 编程工具 / Copilot 模型",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-13",
+              "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+            }
+          },
+          {
+            "event": "Gemini 应用加入 Argon、任务模式和 macOS 代理式编程界面（2026-10-13）",
+            "summary": "Google 将 Gemini 4 Argon 带入 Gemini 应用，并在 macOS 应用中加入 Google Antigravity 的代理式编程界面。用户还可从主聊天窗口切换到 Tasks，让 Gemini 跨 Google 应用和已连接服务执行任务；Google 称可连接 40 多款应用。",
+            "howTo": "符合订阅条件的用户打开 Gemini 应用，在模型选择处使用 Argon；要启动任务，从主聊天窗口切换到 Tasks 并描述要完成的工作。macOS 用户可在 Gemini 应用内切换到 Antigravity 编程界面。",
+            "impact": "学生可用任务模式整理跨应用资料、草拟活动安排，或在 macOS 上尝试代理式编程；对外发送邮件、修改资料或提交代码前应检查代理所做的操作。",
+            "free": "Argon 与 Tasks 面向 Google AI Pro 和 Ultra 订阅用户；公告未说明免费开放、使用配额、适用地区或逐步推出的完整节奏。连接服务还需相应应用账号及权限。",
+            "category": "AI 助手 / 任务自动化与编程",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-13",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude Free：可免费使用的日常问答与写作助手",
+            "summary": "Anthropic 的 Claude 定价页列出 Free 计划，适用于日常提问；网页、桌面端、移动端及 Claude Code 的活动共用使用额度。额度按滚动五小时窗口重置，实际可用量会随对话长度、模型和功能变化。",
+            "howTo": "前往 Claude 官网注册或登录免费账号，在网页、桌面或移动应用中输入问题；可用于概括课堂材料、列出论文提纲或解释英语段落，并在设置的 Usage 页面查看当前用量。",
+            "impact": "适合日常复习、概念解释和初稿构思；把输出当作学习辅助，核查事实和引用，不要把敏感个人资料输入聊天。",
+            "free": "官方提供 Free 计划，无固定消息次数；额度在滚动五小时窗口重置，并可能另有周/月或功能限制。地区、账号资格和确切用量官方未说明。",
+            "category": "长期免费 / 问答与写作",
+            "source": {
+              "name": "Claude Pricing",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "SmolLM3-3B：Apache-2.0 许可的可下载小型开放模型",
+            "summary": "Hugging Face 官方模型卡提供 SmolLM3-3B 权重、Transformers 使用示例并标注 Apache-2.0 许可。模型有 30 亿参数，支持双模式推理，模型卡说明其训练上下文为 64k token，并可通过 YaRN 扩展。",
+            "howTo": "打开 Hugging Face 官方模型卡下载权重，安装 Transformers 后按卡片中的 AutoTokenizer 和 AutoModelForCausalLM 示例加载；运行前检查设备内存、显存和依赖版本。",
+            "impact": "适合在课程实验中测试本地推理、提示词或开源模型；本地运行可避免把输入发往托管服务，但仍需评估硬件能力并验证模型输出。",
+            "free": "权重可公开下载，模型卡标注 Apache-2.0；自行部署无需支付模型调用费，但需自备硬件和计算资源。托管推理价格、账号、地区及配额官方未说明。",
+            "category": "开放模型 / 本地部署实验",
+            "source": {
+              "name": "Hugging Face 官方模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+            }
+          },
+          {
+            "event": "Gemini Notebook：免费用户每个笔记本最多添加 50 个来源",
+            "summary": "Google 帮助中心说明，Gemini Notebook 的 Free 用户每个笔记本可添加最多 50 个来源，包括文档、PDF、网页和公开视频链接；每个来源最多 50 万词或 200MB，可据所选来源进行问答和摘要。",
+            "howTo": "登录 Gemini Notebook，新建笔记本并点 Add sources，加入课程讲义、论文或网页；在聊天中针对所选来源提问，或让它生成摘要，再回到原文核对结论。",
+            "impact": "可把分散的阅读材料集中成复习资料，并围绕指定来源查找论据；对手机端功能限制和上传材料的版权要求需特别留意。",
+            "free": "官方列明 Free 用户每个笔记本最多 50 个来源；单个来源最多 50 万词或 200MB。需登录 Google 账号；地区适用范围官方未说明，帮助页提示移动应用部分功能可能受限。",
+            "category": "长期免费 / 论文阅读与资料整理",
+            "source": {
+              "name": "Google Gemini Notebook Help",
+              "published": "官方未说明",
+              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
+            }
+          },
+          {
+            "event": "Gemini Apps 无付费 AI 计划也可使用部分功能",
+            "summary": "Google 帮助中心列出没有 Google AI 计划的 Gemini Apps 用户，并说明可用量采用计算资源限额；限额会受提示复杂度、模型、功能和对话长度影响，不等于固定消息数。",
+            "howTo": "用个人 Google 账号打开 Gemini Apps，先尝试基础聊天或学习问答；查看官方限额说明，遇到功能暂不可用时等待限额刷新，或改用可用的基础功能。",
+            "impact": "适合临时解释概念、头脑风暴或整理短材料，不必先购买订阅；高强度学习任务应准备其他工具，因为免费访问可能受繁忙时段容量影响。",
+            "free": "无 Google AI 计划的用户可使用部分功能；限额按计算资源计，通常每 5 小时刷新并受周限额影响，官方没有给出固定消息数。页面针对个人 Google 账号；地区和具体账号资格官方未说明，繁忙时部分高计算功能可能不可用。",
+            "category": "长期免费 / 学习问答",
+            "source": {
+              "name": "Google Gemini Apps Help",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemini/answer/16275805?hl=en"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "This economist believes the system is broken. Maybe she has a point",
+            "source": "The Conversation",
+            "published": "2026-10-12",
+            "url": "https://theconversation.com/this-economist-believes-the-system-is-broken-maybe-she-has-a-point-292129",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "经济与社会 / 公共利益、市场治理与政府角色",
+            "summary": "The Conversation 评述经济学家 Mariana Mazzucato 的新书，先概括她的主张：政府不应只在市场失灵后补救，而应与企业合作，主动塑造市场服务公共利益。文章回顾其对“公共部门承担风险、私人部门取得收益”的批评，并介绍税收、政府持股和以明确使命组织公私合作等政策选项。随后以伦敦 Camden 的社区财富基金、合作社和水资源治理为例，展示这些理念如何延伸到地方就业、不平等和跨国环境问题。作者也指出，Mazzucato 擅长批判现状，却较少说明如何实现可行转型；文末把她的思路与福祉衡量联系起来，并提醒全球合作正面临政治阻力。",
+            "reason": [
+              "市场与政府边界、公共服务和不平等是经济政策类阅读与写作的常见主题。",
+              "文章从一本新书的中心论点切入，依次解释理论、举出地方政策实例，再指出方案局限并回到福祉衡量。",
+              "可练习主旨题、例证作用题和作者态度题，尤其要区分书中主张与作者对其可行性的评价。",
+              "socialise risk、equity stake、ambiguous、plausible 等词可用于讨论市场治理和公共投资。",
+              "写作可借鉴“提出理念—说明政策工具—给出案例—承认执行局限”的论证路径。"
+            ],
+            "vocabulary": [
+              {"word":"hand in hand","phonetic":"/ˌhænd ɪn ˈhænd/","part":"adv. phr.","translation":"密切合作；携手"},
+              {"word":"socialise","phonetic":"/ˈsəʊʃəlaɪz/","part":"v.","translation":"由社会或公共部门共同承担"},
+              {"word":"privatise","phonetic":"/ˈpraɪvətaɪz/","part":"v.","translation":"私有化；转由私人取得"},
+              {"word":"equity stake","phonetic":"/ˈekwəti steɪk/","part":"n. phr.","translation":"股权；持股"},
+              {"word":"sovereign wealth fund","phonetic":"/ˌsɒvrɪn ˈwelθ fʌnd/","part":"n. phr.","translation":"主权财富基金"},
+              {"word":"ambiguous","phonetic":"/æmˈbɪɡjuəs/","part":"adj.","translation":"含义不明确的；模糊的"},
+              {"word":"individualistic","phonetic":"/ˌɪndɪvɪdʒuəˈlɪstɪk/","part":"adj.","translation":"个人主义的"},
+              {"word":"inclusive","phonetic":"/ɪnˈkluːsɪv/","part":"adj.","translation":"包容的；不排斥群体的"},
+              {"word":"plausible","phonetic":"/ˈplɔːzəbl/","part":"adj.","translation":"看似合理的；可行的"},
+              {"word":"wellbeing","phonetic":"/ˌwelˈbiːɪŋ/","part":"n.","translation":"福祉；幸福安康"}
+            ],
+            "sentences": [
+              {
+                "original": "Governments need to work hand in hand with the private sector, rather than leaving business to its own devices.",
+                "analysis": [
+                  "主句核心是 Governments need to work，need to 表示必要性。",
+                  "hand in hand with the private sector 是方式短语，说明政府应如何行动。",
+                  "rather than 引出对照项，leaving business to its own devices 是动名词结构，指放任企业自行其是。",
+                  "句子用合作治理与放任市场构成政策选择上的对比。",
+                  "可借鉴 rather than + 动名词表达“采取某种做法，而非另一种做法”。"
+                ],
+                "translation": "政府需要与私营部门携手合作，而不是放任企业自行其是。"
+              },
+              {
+                "original": "The “common good” or “public good” can be taken to mean the interests of the broader community.",
+                "analysis": [
+                  "句子主干是 The “common good” or “public good” can be taken to mean...，两个术语由 or 并列。",
+                  "can be taken to mean 是情态动词加被动结构，表示一种可接受的解释，而非唯一界定。",
+                  "the interests of the broader community 是 mean 的补足内容，of 短语说明利益归属。",
+                  "broader 修饰 community，强调超越狭义个体利益的更大群体。",
+                  "可借鉴 can be taken to mean 为存在歧义的概念给出审慎定义。"
+                ],
+                "translation": "“共同利益”或“公共利益”可以理解为更广泛社区的利益。"
+              },
+              {
+                "original": "Mazzucato is better at critiquing current economies than describing a plausible path to better ones.",
+                "analysis": [
+                  "主干是 Mazzucato is better at X than Y，比较的是两方面的能力。",
+                  "at 后的 critiquing 与 than 后的 describing 都是动名词，形成平行结构。",
+                  "current 修饰 economies；a plausible path 中 plausible 修饰 path，说明评价聚焦于批判与可行方案的差别。",
+                  "句子用转折性评价限制前文论述，表明作者既呈现理论贡献，也指出实践不足。",
+                  "可借鉴 be better at... than... 对观点或政策的长处与局限作平衡评价。"
+                ],
+                "translation": "Mazzucato 更擅长批判当下的经济体系，而不是描绘一条切实可行的改良路径。"
+              }
+            ]
+          },
+          {
+            "title": "Is it OK for jobseekers or employers to use AI?",
+            "source": "BBC",
+            "published": "2026-10-13",
+            "url": "https://www.bbc.com/news/articles/c623dnkn8pkyo",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "商业与社会 / 求职、招聘公平与生成式 AI",
+            "summary": "BBC 从求职者是否应使用 AI 写简历、求职信或参加面试提出伦理问题，并以毕业生 Tom 的经历说明求职竞争和批量申请带来的压力。报道随后引用英国毕业生雇主协会对 155 家大型雇主的调查：雇主对求职材料辅助逐渐接受，但 92% 曾遇到或怀疑招聘中的 AI 不当使用。能源企业 EDF 因收到 12,000 份毕业生申请而提前关闭招聘，并尝试用技能和行为评估减少对 AI 文本的依赖。文章也指出，候选人与企业都可能使用 AI，求职者担心竞争不公平，招聘方则强调真实性和个性；作者没有给出简单禁用答案，而将其呈现为仍在变化的职业伦理难题。",
+            "reason": [
+              "技术如何改变就业、公平竞争与职业伦理，是商业和社会议题的交叉主题。",
+              "报道先以求职者的个人经验引入，再呈现雇主调查和企业案例，最后转向招聘双方的伦理张力。",
+              "可练习调查数据题、人物例证作用题和作者结论题，并判断哪些陈述来自受访者、哪些来自调查。",
+              "screening、misconduct、hypocritical、authenticity 等词适合讨论招聘流程和诚信。",
+              "写作可借鉴“个人处境—调查证据—机构应对—未决伦理问题”的递进结构。"
+            ],
+            "vocabulary": [
+              {"word":"jobseeker","phonetic":"/ˈdʒɒbˌsiːkə/","part":"n.","translation":"求职者"},
+              {"word":"demoralising","phonetic":"/dɪˈmɒrəlaɪzɪŋ/","part":"adj.","translation":"令人泄气的"},
+              {"word":"hypocritical","phonetic":"/ˌhɪpəˈkrɪtɪkl/","part":"adj.","translation":"虚伪的；言行不一的"},
+              {"word":"screening","phonetic":"/ˈskriːnɪŋ/","part":"n.","translation":"筛选；初步审核"},
+              {"word":"misconduct","phonetic":"/ˌmɪsˈkɒndʌkt/","part":"n.","translation":"不当行为；违规"},
+              {"word":"spray and pray","phonetic":"/ˌspreɪ ən ˈpreɪ/","part":"n. phr.","translation":"广撒网式申请"},
+              {"word":"level playing field","phonetic":"/ˌlevəl ˈpleɪɪŋ fiːld/","part":"n. phr.","translation":"公平竞争环境"},
+              {"word":"authenticity","phonetic":"/ˌɔːθenˈtɪsəti/","part":"n.","translation":"真实性；真诚"},
+              {"word":"grapple with","phonetic":"/ˈɡræpəl wɪð/","part":"v. phr.","translation":"努力应对；设法解决"},
+              {"word":"assessment","phonetic":"/əˈsesmənt/","part":"n.","translation":"评估；考核"}
+            ],
+            "sentences": [
+              {
+                "original": "Would you use AI to help you write a CV or cover letter?",
+                "analysis": [
+                  "主干是 Would you use AI?，一般疑问句直接向读者提出选择。",
+                  "to help you write 是目的结构，说明使用 AI 的具体用途。",
+                  "help 后接宾语 you 和不带 to 的动词 write；a CV or cover letter 列出两种求职材料。",
+                  "开篇设问把抽象的招聘伦理转化为读者熟悉的个人决策。",
+                  "可借鉴 Would you... 引入议题，再在正文比较不同做法的利弊。"
+                ],
+                "translation": "你会用 AI 帮自己写简历或求职信吗？"
+              },
+              {
+                "original": "According to the ISE, the graduate market has stabilised after a sharp fall last year but remains tough.",
+                "analysis": [
+                  "核心主语是 the graduate market，谓语由 has stabilised 和 remains 并列构成。",
+                  "According to the ISE 是来源状语，明确判断归属于英国毕业生雇主协会。",
+                  "after a sharp fall last year 限定市场企稳的背景和时间。",
+                  "but 连接恢复迹象与仍然艰难的现实，形成让步式对照。",
+                  "可借鉴 According to... + but...，在引用来源时同时呈现趋势改善和持续问题。"
+                ],
+                "translation": "据英国毕业生雇主协会称，毕业生就业市场在去年大幅下滑后已趋于稳定，但仍然严峻。"
+              },
+              {
+                "original": "She says the use of AI in job applications is a “moral dilemma” that employers and employees will continue to grapple with.",
+                "analysis": [
+                  "主句核心是 She says，后接 that 省略的宾语从句。",
+                  "从句主干为 the use of AI is a “moral dilemma”，of AI 和 in job applications 逐层限定使用方式。",
+                  "that 引导定语从句修饰 dilemma；employers and employees 是并列主语。",
+                  "will continue to 表示问题仍会持续，grapple with 强调需要艰难应对。",
+                  "可借鉴 describe... as a dilemma，并用 continue to + 动词表达尚未解决的长期议题。"
+                ],
+                "translation": "她说，在求职申请中使用 AI 是一道雇主和雇员仍将持续面对的“道德难题”。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-13",
       "status": "ready",
@@ -1917,352 +2149,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 with + 名词 + 并列补充项，简洁交代多个现象的差异维度。"
                 ],
                 "translation": "多处疫情正在同时发展，其烈度各不相同，地点也各异。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-07",
-      "status": "ready",
-      "ai": {
-        "intro": "核对 10 月 6—7 日官方产品更新，选取 Copilot 指标修复、AI Scan 管理视图、GitHub 密钥检测与分支堆叠 PR；免费资源逐一复查官方模型卡、定价与帮助页，区分免费额度、开放权重和未说明的限制。",
-        "updates": [
-          {
-            "event": "GitHub 修复 Copilot Agent 使用统计的 IDE 归因问题（2026-10-06）",
-            "summary": "部分采用 Copilot SDK Agent 模式的 IDE 会话此前没有标明来源 IDE，导致活动漏记或被计入 Copilot CLI。GitHub 已在 VS Code 1.139.0 及之后版本推出修复，其他受影响 IDE 的修复将随更新陆续推出；旧版本产生的缺失数据无法补回。",
-            "howTo": "若团队依赖 Copilot 使用指标，先将 VS Code 更新到 1.139.0 或更高版本；使用其他 IDE 时，等 GitHub 公布修复版本后升级。可在指标报告中核对 IDE 版本，确保 IDE 遥测未关闭且网络未拦截遥测端点。",
-            "impact": "维护课程项目或实验室组织的同学可避免把 Agent 活动误判为 Copilot 使用下降；但历史缺失值不能补回，CLI 指标此前也可能偏高。",
-            "free": "这是使用指标的归因修复，官方明确称不影响计费。适用对象为使用 Copilot SDK Agent 模式的受影响 IDE；VS Code 修复版为 1.139.0 及以后，其他 IDE 仍分批推出。价格、地区和使用额度官方未说明。",
-            "category": "AI 编程工具 / Copilot 使用指标",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-06",
-              "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics"
-            }
-          },
-          {
-            "event": "GitHub Security Overview 显示组织的 AI Scan 启用状态（2026-10-06）",
-            "summary": "组织和企业管理员现在可在 Security Overview 的 coverage view 查看各仓库是否启用了 pull request AI Scan；汇总视图显示启用与未启用仓库数，仓库行及 CSV 导出也包含有效状态。",
-            "howTo": "以组织或企业管理员身份打开 Security Overview 的 coverage view，查看 Code Scanning AI Scan 状态；可用 `code-scanning-ai-scan-pr-scan:enabled` 或 `code-scanning-ai-scan-pr-scan:not-enabled` 筛选，并导出 CSV 核对仓库覆盖情况。",
-            "impact": "负责课程组织或实验室代码库的同学可盘点 AI Scan 覆盖情况，发现未启用的仓库并向管理员确认策略；这项更新提供的是可见性，不代表扫描已自动启用。",
-            "free": "官方说明该状态视图面向组织与企业管理员；计划价格、地区、使用额度及是否需额外启用资格均未说明。",
-            "category": "AI 开发安全 / 仓库管理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-06",
-              "url": "https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview"
-            }
-          },
-          {
-            "event": "GitHub Secret Scanning 新增 Lovable、Pydantic 与 Supabase 密钥检测（2026-10-05）",
-            "summary": "Secret Scanning 新增 Lovable API key、Pydantic Logfire token 与 AI Gateway API key，以及 Supabase OAuth access token 和 scoped personal access token 检测。Lovable 加入合作伙伴计划；公开仓库发现合作伙伴密钥时会转交服务方，用户密钥则可在公开或私有仓库触发告警。",
-            "howTo": "在课程仓库检查 Secret Scanning 告警和受支持的密钥类型；不要把真实密钥提交到仓库来测试。若发现已暴露凭据，立即在对应服务中撤销或轮换，并从代码及后续提交中移除。",
-            "impact": "使用 Lovable、Pydantic AI 或 Supabase 搭建原型的团队，可更早发现误提交的 API 凭据；检测覆盖增加仍不能替代提交前的密钥管理。",
-            "free": "公告说明了受支持的密钥类型及合作伙伴/用户密钥的告警范围，但没有说明适用计划、价格、地区或使用额度；这些信息官方未说明。",
-            "category": "AI 开发安全 / 密钥防泄漏",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-05",
-              "url": "https://github.blog/changelog/2026-10-05-secret-scanning-adds-detectors-for-lovable-supabase-and-more"
-            }
-          },
-          {
-            "event": "GitHub Stacked Pull Requests 正式开放，CLI 与 Agent 工作流支持更多操作（2026-10-06）",
-            "summary": "GitHub 宣布 stacked pull requests 正式可用，可把较大改动拆成较小 PR 独立审阅并合并。更新还增加堆叠 PR 的导航、重定向与合并改进；`gh stack` 扩展支持 Git worktrees，自动合并则会在未来几周逐步推出。",
-            "howTo": "在 GitHub.com 的项目中按依赖关系创建堆叠 PR，利用 PR 页面查看 stack 上下文；也可查阅官方文档并使用 `gh stack` CLI 扩展。设置自动合并前，先确认每个 PR 都满足仓库的合并要求。",
-            "impact": "小组作业中相互依赖的功能分支可以拆成更小的审阅单元，减少一个超大 PR 堵住队友检查的情况；签名提交和分支规则仍需按仓库设置检查。",
-            "free": "官方说明该功能现已适用于所有 GitHub.com 计划；GitHub Enterprise Server 将在未来版本提供。具体 CLI 扩展、地区及使用额度官方未说明；自动合并仍在数周内逐步推出。",
-            "category": "AI 开发协作 / Agent 工作流",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-06",
-              "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Qwen3-8B：Apache-2.0 许可的开放权重语言模型",
-            "summary": "Qwen 官方 Hugging Face 模型卡开放 Qwen3-8B 权重，标注 Apache-2.0 许可；模型卡列出 8.2B 参数、原生 32,768 token 上下文，并提供 Transformers 加载示例。",
-            "howTo": "打开模型卡查看文件与许可；安装 Transformers 4.51.0 或更新版本，按卡片示例用 `AutoTokenizer` 和 `AutoModelForCausalLM` 加载 `Qwen/Qwen3-8B`，再用课程文本测试中英问答或翻译。",
-            "impact": "可用于练习本地模型部署、提示词比较和多语言任务；把模型输出当作待核实的草稿，不直接用于高风险结论。",
-            "free": "模型仓库公开且未设访问门槛，模型卡标注 Apache-2.0。官方未说明下载地区或额度；本地推理所需硬件与算力成本取决于设备，模型卡未承诺免费托管推理。",
-            "category": "免费开放权重 / 多语言学习",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-8B"
-            }
-          },
-          {
-            "event": "FLUX.1 [schnell]：可下载的 Apache-2.0 文生图权重",
-            "summary": "Black Forest Labs 官方 Hugging Face 模型卡公开 12B 参数的 FLUX.1 [schnell] 权重，称其可在 1 至 4 步生成图像，并采用 Apache-2.0 许可，允许个人、科学及商业用途。",
-            "howTo": "从模型卡查看使用说明与许可证；按示例安装或升级 Diffusers，加载 `black-forest-labs/FLUX.1-schnell`，用自己的提示词生成课程插图或视觉概念稿。先检查硬件是否足以本地运行。",
-            "impact": "可为展示文稿、海报草图或创意作业制作配图，也适合学习扩散模型推理流程；生成图像可能不准确或带有偏见，需人工检查。",
-            "free": "模型权重公开，Apache-2.0 许可允许个人、科学和商业用途；托管 API 价格、地区、账户要求及用量未在模型卡说明。本地使用需自备算力，硬件门槛官方未说明。",
-            "category": "免费开放权重 / 图像生成",
-            "source": {
-              "name": "Black Forest Labs 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：AI Studio 可免费试做部分模型调用",
-            "summary": "Google AI for Developers 当前定价页列出 Gemini API Free Tier：可在 AI Studio 开始使用，部分模型输入与输出 token 免费，但模型访问受限；免费层内容会用于改进 Google 产品。",
-            "howTo": "打开 Google AI Studio，选择定价页明确列为 Free Tier 的模型并按示例发起 API 调用；编写程序前再次核对该模型的免费层、速率限制和数据条款，不上传未公开论文或个人信息。",
-            "impact": "适合做课程原型、练习 API 调用或比较提示词；免费层输入可能用于产品改进，不应把它当成适合敏感资料的私密环境。",
-            "free": "官方明确部分模型输入/输出 token 免费、模型访问受限，免费层内容用于改进产品；定价页未为所有模型统一列出免费调用额度，也未说明本条所涉账户资格或地区，具体速率限制需查看所选模型页面。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Gemini Notebook 免费用户可添加最多 50 个来源进行资料问答",
-            "summary": "Google 帮助中心说明，Gemini Notebook 免费用户每本笔记本最多可加入 50 个来源，支持 PDF、Office 文档、网页文字和带字幕的公开视频等；单个来源最多 500,000 词，上传文件上限为 200 MB。",
-            "howTo": "打开 Gemini Notebook，新建笔记本并选择 Add sources，导入有权使用的课程文件或网页；选中来源后提问或生成摘要。网页导入仅抓取文字，付费墙页面不受支持。",
-            "impact": "可把多篇课程阅读放在同一笔记本中比较论点、生成复习问题；回答时回看原文及引用，避免把模型归纳误当成作者结论。",
-            "free": "官方写明免费用户最多 50 个来源、单源最多 500,000 词、上传文件最多 200 MB；地区、账户资格、额外提示额度或截止日期官方未说明。移动应用对部分功能可能有限制。",
-            "category": "免费网页工具 / 来源型学习研究",
-            "source": {
-              "name": "Google Gemini Notebook 帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期从 BBC 商业报道与 NPR 媒体行业报道切入：一篇讨论 Jaguar 电动化转型与品牌押注，另一篇分析派拉蒙与华纳合并的市场影响，练习比较事实、公司主张与批评者预测。",
-        "articles": [
-          {
-            "title": "From 'woke' ridicule to real car - new electric Jaguar unveiled",
-            "source": "BBC",
-            "published": "2026-10-07",
-            "url": "https://www.bbc.co.uk/news/articles/c6je50ydld31o",
-            "readingTime": "约 3 分钟",
-            "topic": "商业 / 汽车品牌转型与电动化",
-            "summary": "BBC 从 Jaguar 重塑品牌时引发的争议写起，报道其首款新车型 Type 01 在纽约公开亮相。文章先介绍这款纯电 Grand Tourer 的造型如何回应 Jaguar 的经典历史，再列出动力、续航和价格等数据，说明 JLR 为品牌转型投入巨大。报道没有把新车发布写成单向成功：一方面呈现公司对性能与技术的宣传，另一方面指出高昂售价、设计争议及消费者对全电动战略的不同反应。结尾将新车视为一次商业押注，核心问题是品牌能否借新方向赢得市场。",
-            "reason": [
-              "品牌转型、产品定价与电动化竞争是商业和科技趋势类阅读常见主题，可训练区分产品事实与企业战略判断。",
-              "文章先回顾争议背景，再介绍新车设计和性能，随后讨论价格与市场反应，最后落到品牌押注。",
-              "阅读题可考查车型发布为何受到关注、性能与售价数据如何构成对照，以及作者如何呈现正反反应。",
-              "gamble、emblematic、hefty、reinvent 等词适合迁移到企业转型、创新成本和品牌价值主题。",
-              "写作可借鉴“历史背景—产品证据—成本或风险—市场判断”的结构，避免把发布会数据直接当作商业成功。"
-            ],
-            "vocabulary": [
-              {
-                "word": "unveil",
-                "phonetic": "/ˌʌnˈveɪl/",
-                "part": "v.",
-                "translation": "首次公开；揭晓"
-              },
-              {
-                "word": "imposing",
-                "phonetic": "/ɪmˈpəʊzɪŋ/",
-                "part": "adj.",
-                "translation": "气势宏大的；令人印象深刻的"
-              },
-              {
-                "word": "deliberately",
-                "phonetic": "/dɪˈlɪbərətli/",
-                "part": "adv.",
-                "translation": "刻意地；审慎地"
-              },
-              {
-                "word": "emblematic",
-                "phonetic": "/ˌembləˈmætɪk/",
-                "part": "adj.",
-                "translation": "象征性的；典型的"
-              },
-              {
-                "word": "gamble",
-                "phonetic": "/ˈɡæmbl/",
-                "part": "n.",
-                "translation": "冒险；押注"
-              },
-              {
-                "word": "potent",
-                "phonetic": "/ˈpəʊtənt/",
-                "part": "adj.",
-                "translation": "强劲的；有力的"
-              },
-              {
-                "word": "hefty",
-                "phonetic": "/ˈhefti/",
-                "part": "adj.",
-                "translation": "高额的；巨大的"
-              },
-              {
-                "word": "reinvent",
-                "phonetic": "/ˌriːɪnˈvent/",
-                "part": "v.",
-                "translation": "彻底改造；重新塑造"
-              },
-              {
-                "word": "mixed reactions",
-                "phonetic": "/mɪkst riˈækʃənz/",
-                "part": "n. phr.",
-                "translation": "褒贬不一的反应"
-              },
-              {
-                "word": "strategy",
-                "phonetic": "/ˈstrætədʒi/",
-                "part": "n.",
-                "translation": "战略；策略"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "But it marks a gamble for JLR, which has invested billions reinventing Jaguar and is facing mixed reactions over the new car’s design and the brand’s all-electric strategy.",
-                "analysis": [
-                  "主句主干是 it marks a gamble，it 指代前文的新车型，mark 在此表示“构成、意味着”。",
-                  "句首 But 转折前文关于新车的介绍，提示焦点由产品参数转向商业风险。",
-                  "for JLR 限定这场押注的主体；which 引导非限制性定语从句，补充 JLR 已投入巨资并正面对不同反应。",
-                  "invested billions 与 is facing 并列呈现已付出的成本和当前市场反应，reinventing 作投入的用途说明。",
-                  "可借鉴 mark a gamble for... 概括战略风险，再用 which 从句补充证据。"
-                ],
-                "translation": "但这对 JLR 而言是一场押注：它已投入数十亿重塑 Jaguar，同时新车设计与品牌全电动战略正面临褒贬不一的反应。"
-              },
-              {
-                "original": "The new model’s electric motors are potent, producing about 1000 horsepower and allowing it to accelerate from 0-62mph in 3.2 seconds.",
-                "analysis": [
-                  "主干为 The new model’s electric motors are potent，说明新车型电机动力强劲。",
-                  "句末 producing 与 allowing 是现在分词短语，补充说明 potent 的具体依据。",
-                  "about 1000 horsepower 是 producing 的宾语，about 表示数据约数而非精确承诺。",
-                  "allowing 后接宾语 it 和不定式 to accelerate，from...in...交代加速区间与用时。",
-                  "可借鉴形容词判断后接分词短语，用可量化数据解释产品特征。"
-                ],
-                "translation": "这款新车的电动机动力强劲，可输出约 1,000 马力，并能在 3.2 秒内从静止加速至每小时 62 英里。"
-              },
-              {
-                "original": "However, it comes at a hefty price tag, with a minimum cost of £130,000 ($172,426).",
-                "analysis": [
-                  "However 是句首转折副词，把论述从性能优势转向购买成本。",
-                  "主干 it comes at a hefty price tag 中，come at 表示“以……为代价/价格”。",
-                  "with 引导的介词短语补充说明高价的具体数额，minimum 表示这是起步价。",
-                  "括号内美元金额是对英镑数字的换算说明，不是另一项独立费用。",
-                  "可借鉴 However, ... with a minimum cost of... 在列举优势后引入成本限制。"
-                ],
-                "translation": "不过，这款车售价不菲，起价为 13 万英镑（172,426 美元）。"
-              }
-            ]
-          },
-          {
-            "title": "New Hollywood era begins with an epic mega merger between Paramount and Warner Bros.",
-            "source": "NPR",
-            "published": "2026-10-06",
-            "url": "https://www.npr.org/2026/10/06/nx-s1-5988283/paramount-warner-bros-skydance-merger-david-ellison",
-            "readingTime": "约 5 分钟",
-            "topic": "经济 / 媒体并购与市场竞争",
-            "summary": "NPR 报道派拉蒙与华纳兄弟探索合并后的新公司 Skydance 开始运营，并梳理这笔 1,110 亿美元交易经历的抗议、诉讼和监管审查。文章先呈现新管理层关于资源整合和扩大竞争力的说法，再列出合并后归于同一集团的电影公司、流媒体平台和新闻机构。随后，报道转向反对者的担忧：媒体集中可能减少观众选择、推高订阅成本、压缩影视创作空间，并引发新闻独立性问题。结尾指出，新公司还面临巨额债务和人员去留的不确定性，说明交易完成并不等于整合风险消失。",
-            "reason": [
-              "媒体集中、企业并购、消费者选择和新闻独立性结合了商业与社会议题，适合训练从多方立场提炼主旨。",
-              "文章从新公司成立及交易规模入手，依次交代资产整合、管理层说法、反对者质疑和后续债务压力。",
-              "阅读题可考查并购方与批评者观点的差异、合并包含哪些业务，以及文章末尾提到债务的作用。",
-              "conglomerate、consolidate、regulatory scrutiny、oversight 等词可迁移到商业、监管和公共传播主题。",
-              "写作可借鉴“交易事实—企业理由—利益相关者担忧—未决风险”的论证结构，区分事实与预测。"
-            ],
-            "vocabulary": [
-              {
-                "word": "conglomerate",
-                "phonetic": "/kənˈɡlɒmərət/",
-                "part": "n.",
-                "translation": "大型综合企业；企业集团"
-              },
-              {
-                "word": "consolidate",
-                "phonetic": "/kənˈsɒlɪdeɪt/",
-                "part": "v.",
-                "translation": "合并；巩固"
-              },
-              {
-                "word": "regulatory",
-                "phonetic": "/ˈreɡjələtəri/",
-                "part": "adj.",
-                "translation": "监管的；规制的"
-              },
-              {
-                "word": "scrutiny",
-                "phonetic": "/ˈskruːtəni/",
-                "part": "n.",
-                "translation": "审查；仔细审视"
-              },
-              {
-                "word": "competitor",
-                "phonetic": "/kəmˈpetɪtə/",
-                "part": "n.",
-                "translation": "竞争者"
-              },
-              {
-                "word": "acquisition",
-                "phonetic": "/ˌækwɪˈzɪʃn/",
-                "part": "n.",
-                "translation": "收购；获得"
-              },
-              {
-                "word": "oversight",
-                "phonetic": "/ˈəʊvəsaɪt/",
-                "part": "n.",
-                "translation": "监督；监管"
-              },
-              {
-                "word": "censor",
-                "phonetic": "/ˈsensə/",
-                "part": "v.",
-                "translation": "审查；删改"
-              },
-              {
-                "word": "inevitable",
-                "phonetic": "/ɪnˈevɪtəbl/",
-                "part": "adj.",
-                "translation": "不可避免的"
-              },
-              {
-                "word": "skeptical",
-                "phonetic": "/ˈskeptɪkl/",
-                "part": "adj.",
-                "translation": "持怀疑态度的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "A new era in Hollywood is set to begin with a new media conglomerate called Skydance.",
-                "analysis": [
-                  "主干是 A new era is set to begin，is set to 表示即将发生或预期将发生。",
-                  "in Hollywood 限定新时代发生的行业范围。",
-                  "with a new media conglomerate 补充伴随的新背景，called Skydance 是过去分词短语作后置定语。",
-                  "句子以概括性判断开篇，为后文解释并购资产和争议搭建背景。",
-                  "可借鉴 be set to + 动词原形引出即将出现的变化，再用 with 短语提供背景。"
-                ],
-                "translation": "好莱坞一个新时代即将随着名为 Skydance 的新媒体集团而开启。"
-              },
-              {
-                "original": "The $111 billion merger faced months of public protests, but ultimately passed legal and regulatory challenges in the U.S. and in Europe.",
-                "analysis": [
-                  "but 连接两个并列分句，前半句说交易面临抗议，后半句说明最终通过法律与监管审查。",
-                  "The $111 billion merger 是共同的主语，金额作前置定语强调交易规模。",
-                  "months of 修饰 public protests，说明抗议持续了一段时间。",
-                  "ultimately 是时间/结果副词，突出经历阻力后的结果；in the U.S. and in Europe 列出审查地区。",
-                  "可借鉴 faced..., but ultimately... 并列呈现阻力与结果，避免把过程写成单一结论。"
-                ],
-                "translation": "这笔 1,110 亿美元的合并案遭遇数月公众抗议，但最终通过了美国和欧洲的法律与监管审查。"
-              },
-              {
-                "original": "People against the deal predict viewers could soon have to pay more for streaming services, they could have fewer choices and there may be less risky films and TV shows.",
-                "analysis": [
-                  "People against the deal 是主句主语，against the deal 是介词短语后置修饰 people。",
-                  "主句谓语 predict 后接观点内容；could 引出对未来的预测，而不是已经发生的事实。",
-                  "后续并列列出三种担忧：订阅价格上升、选择减少，以及影视作品更趋保守。",
-                  "soon 表示预期时间，less risky 修饰 films and TV shows，体现对创作风险偏好的担忧。",
-                  "可借鉴 predict + 从句表达利益相关者对政策或市场变化的预期，并用并列项展开影响。"
-                ],
-                "translation": "反对这笔交易的人预测，观众很快可能要为流媒体服务支付更多费用、选择变少，影视作品也可能更少冒险。"
               }
             ]
           }
