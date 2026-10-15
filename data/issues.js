@@ -1,6 +1,238 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-14T09:50:47+08:00",
+  "updatedAt": "2026-10-15T09:28:21+08:00",
   "issues": [
+    {
+      "date": "2026-10-15",
+      "status": "ready",
+      "ai": {
+        "intro": "10月14日至15日官方公告中核实到2项可尝试或值得了解的AI变化；为达到3项，将检索范围扩至近7天并补入10月10日的Copilot更新。免费资源仅列官方明确说明的资格、价格、许可和配额。",
+        "updates": [
+          {
+            "event": "Google Earth AI 扩展早期访问，加入地理分析、风险预测和代理技能（2026-10-14）",
+            "summary": "Google Research 扩展 Earth AI 早期访问，提供三种新能力：在 Google Earth 中进行更深入的地理空间分析、用行星预测引擎评估风险与情景，以及通过实验性 agent-to-agent API 把地理推理技能接入自定义工作流。公告还提到可查询超过 1 亿个公开数据集。",
+            "howTo": "打开 Google Earth 的 Ask Google Earth 入口尝试地理问题；如需使用新实验能力，按公告中的 Early Access 表单申请，并查看其合作伙伴邀请条件。",
+            "impact": "地理、环境和公共卫生方向的学生可用它探索地点与数据、构思风险情景或测试工作流；新能力仍属实验性早期访问，不能把预测结果当成已验证结论。",
+            "free": "公告称正在扩展早期访问并邀请合作伙伴，未说明一般用户是否可直接使用、费用、具体配额或适用地区；实验性地理空间代理能力的开放范围也未说明。",
+            "category": "AI 研究 / 地理空间分析",
+            "source": {
+              "name": "Google Research Blog",
+              "published": "2026-10-14",
+              "url": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 更新 HydraFusion 并推出 HydraFusion Max（2026-10-14）",
+            "summary": "GitHub 更新 HydraFusion 的模型池与多模型编排流程，并推出针对高难任务调整推理力度的 HydraFusion Max。更新还加入审阅后按需修复的 Cascade 判定步骤，以及直接检查工作区、并行审阅的 Critique 流程。",
+            "howTo": "在 VS Code、GitHub Copilot app 或 Copilot CLI 中打开模型选择器，选择 HydraFusion 或 HydraFusion Max；如果选项不可见，先确认客户端、实验功能开关和组织模型策略，再查看官方 HydraFusion 文档。",
+            "impact": "可用来拆分课程编程项目、让代理检查工作区改动或比较不同编排方式；提交前仍应自行运行测试并审阅生成的代码。",
+            "free": "HydraFusion 与 Max 面向 Copilot Pro、Pro+、Business 和 Enterprise，需启用实验或预览功能并遵从组织模型策略；公告未说明单独价格、额度或地区。Copilot Free/Student 不在公告列出的计划中。",
+            "category": "AI 编程工具 / 多模型代理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-14",
+              "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option"
+            }
+          },
+          {
+            "event": "GitHub Copilot for JetBrains 增加诊断修复与 MCP 启动控制（2026-10-10）",
+            "summary": "Copilot 的 JetBrains 插件新增诊断菜单中的 Fix 操作，可在可用时通过 agent mode、否则通过 ask mode 请求修复；另增加 Copilot 和 Claude MCP 服务器的自动启动开关，并改进聊天导航、账户切换与会话可靠性。",
+            "howTo": "将 JetBrains IDE 更新至 2025.2 或更高版本并安装最新版 GitHub Copilot 插件；在诊断的 intention 菜单选 Fix，或在 Copilot 设置中关闭 MCP 服务器自动启动。",
+            "impact": "学生可以在 IDE 内直接把课程代码诊断交给 Copilot 提出修复建议，并明确控制 MCP 工具何时启动；仍要检查补丁是否符合项目要求。",
+            "free": "公告要求 JetBrains IDE 2025.2 或更高版本并提示使用 Copilot 插件，但没有列出适用计划、价格、地区或消息额度；agent mode 是否可用取决于用户当前配置。",
+            "category": "AI 编程工具 / IDE 更新",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-10",
+              "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Student：经验证学生可免费使用学生计划",
+            "summary": "GitHub Education 的学生包列出免费的 Copilot Student：代码补全不限量，并附一定的 GitHub AI Credits；聊天和 agent 使用有限，且模型只能通过自动选择使用。",
+            "howTo": "打开 GitHub Student Developer Pack，登录 GitHub 账号并完成学生身份验证，然后启用 Copilot Student；使用代码补全、有限的聊天或 agent 功能，并在账号中查看 AI Credits。",
+            "impact": "适合课程项目中的代码补全、解释和有限的调试协助；检查生成代码并遵守课程对 AI 使用的要求。",
+            "free": "官方列明经验证学生可免费使用，代码补全不限量；AI Credits 数量及聊天、agent 的具体额度官方未说明。地区适用范围官方未说明，模型仅限自动选择。",
+            "category": "学生教育福利 / AI 编程",
+            "source": {
+              "name": "GitHub Education Student Developer Pack",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Gemini API 免费层：可在 Google AI Studio 试用部分模型",
+            "summary": "Google AI 开发者定价页列出 Gemini API Free 层：仅限部分模型，输入和输出 token 免费，并可使用 Google AI Studio；免费层提交的内容可用于改进 Google 产品。",
+            "howTo": "在 Google AI Studio 创建 API key，按官方定价表选择标注为 Free Tier 的模型进行小型原型测试，并先核对该模型当前的速率限制与数据使用条款。",
+            "impact": "可用于课程原型、文本分类或复习资料草稿，不必先支付模型 token 费用；不要提交敏感材料，因为官方说明免费层内容会用于改进产品。",
+            "free": "只有部分模型在免费层可用，输入和输出 token 免费；各模型具体调用配额、账号资格和地区以官方页面为准，页面未说明的部分不作推定。免费层数据可用于改进产品。",
+            "category": "长期免费 / API 原型",
+            "source": {
+              "name": "Google AI for Developers Pricing",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "OpenRouter 免费模型调用：每日免费请求有明确上限",
+            "summary": "OpenRouter 官方限制文档列出免费模型的请求限额：账户没有 credits 时每天最多 50 次，免费模型速率上限为每分钟 20 次。",
+            "howTo": "创建 OpenRouter API key，在模型目录选择当前可用的免费模型，然后使用官方 API 发起少量测试请求；达到每日或每分钟上限后等待限额恢复。",
+            "impact": "适合用统一 API 对比免费模型、制作简单学习工具或练习客户端调用；不同模型供应方仍可能有各自限制，发送前先确认选择的是免费模型。",
+            "free": "无 credits 的账户可使用免费模型，每天最多 50 次、每分钟最多 20 次；无需先购买 credits 即可使用此基础额度。需要 OpenRouter 账号和 API key，地区资格及具体免费模型的持续可用性官方未说明。",
+            "category": "免费 API / 多模型试用",
+            "source": {
+              "name": "OpenRouter Limits Documentation",
+              "published": "官方未说明",
+              "url": "https://openrouter.ai/docs/api_reference/limits"
+            }
+          },
+          {
+            "event": "Qwen3-4B-Instruct-2507：Apache-2.0 许可的可下载模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B-Instruct-2507 权重，标注 Apache-2.0 许可、40 亿参数和原生 262,144 token 上下文，并给出 Transformers 加载示例。",
+            "howTo": "在 Hugging Face 模型卡下载公开权重，按卡片示例使用 AutoTokenizer 与 AutoModelForCausalLM 加载；使用最新 Transformers，运行前确认本机内存、显存和依赖。",
+            "impact": "适合在本地练习模型加载、提示设计和多语言文本任务；本地推理便于做课程实验，但硬件不足时应降低上下文长度或改用其他环境。",
+            "free": "模型页公开且标注 Apache-2.0，可下载模型权重；自行运行不收模型调用费，但计算硬件和云端算力成本由使用者承担。托管推理价格、地区及配额官方未说明。",
+            "category": "开放模型 / 本地学习",
+            "source": {
+              "name": "Hugging Face 官方模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story",
+            "source": "The Guardian",
+            "published": "2026-10-14",
+            "url": "https://www.theguardian.com/technology/2026/oct/14/zimbabwean-author-simbarashe-kundizeza-denies-ai-story",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "文化与科技 / 文学评奖、AI 检测与作者身份",
+            "summary": "The Guardian 报道围绕津巴布韦作家 Simbarashe Kundizeza 的短篇小说是否由 AI 写作展开的争议。文章先说明该作品获 Caine Prize 后，记者 Vauhini Vara 使用 Pangram 检测并质疑其文风；随后呈现 Kundizeza 的否认，以及奖项主席对检测软件不能成为最终裁决者的担忧。作者再补充其他文学奖项的类似争论，并引用 Pangram 自身研究和一篇同行评审研究，同时指出第三方准确性研究仍有限。文章没有裁定作品是否由 AI 生成，而是呈现检测结果、作者回应和证据局限之间尚未解决的张力。",
+            "reason": [
+              "文学创作、学术诚信与自动化判断的边界连接文化和科技，是适合讨论的综合主题。",
+              "文章按检测指控、作者回应、奖项机构立场、其他案例与研究证据推进，最后落在证据仍有限这一不确定结论。",
+              "可练习辨认消息来源、观点归属和证据强弱，并区分软件判定与经独立验证的事实。",
+              "proliferation、aphorism、arbiter、allegation 等词有助于讨论写作风格、评审权和争议。",
+              "写作可借鉴“提出指控—呈现回应—检视工具证据—说明未决之处”的平衡论证结构。"
+            ],
+            "vocabulary": [
+              {"word":"proliferation","phonetic":"/prəˌlɪfəˈreɪʃən/","part":"n.","translation":"大量增加；泛滥"},
+              {"word":"epigraph","phonetic":"/ˈepɪɡræf/","part":"n.","translation":"题词；卷首引语"},
+              {"word":"aphorism","phonetic":"/ˈæfərɪzəm/","part":"n.","translation":"格言；警句"},
+              {"word":"maudlin","phonetic":"/ˈmɔːdlɪn/","part":"adj.","translation":"伤感过度的；多愁善感的"},
+              {"word":"trope","phonetic":"/troʊp/","part":"n.","translation":"惯用表达；常见主题"},
+              {"word":"arbiter","phonetic":"/ˈɑːrbɪtər/","part":"n.","translation":"裁决者；权威"},
+              {"word":"allegation","phonetic":"/ˌæləˈɡeɪʃən/","part":"n.","translation":"指控；未经证实的说法"},
+              {"word":"false positive","phonetic":"/ˌfɔːls ˈpɑːzətɪv/","part":"n. phr.","translation":"假阳性；误报"},
+              {"word":"third-party","phonetic":"/ˌθɜːrd ˈpɑːrti/","part":"adj.","translation":"第三方的"},
+              {"word":"genre","phonetic":"/ˈʒɑːnrə/","part":"n.","translation":"体裁；类型"}
+            ],
+            "sentences": [
+              {
+                "original": "Similar claims have been made recently about other literary prize winners.",
+                "analysis": [
+                  "主干是 Similar claims have been made，使用现在完成时被动语态概述近期出现的类似说法。",
+                  "recently 是时间副词，提示这些事件与当前争论的关联。",
+                  "about other literary prize winners 补充说明 claims 涉及的对象。",
+                  "句子从单一个案转向同类事件，发挥扩展背景的作用。",
+                  "可借鉴 have been made recently about... 概述近期围绕某议题出现的主张。"
+                ],
+                "translation": "近期，其他文学奖得主也遭遇了类似指控。"
+              },
+              {
+                "original": "The Caine prize said in a statement that it was reviewing the allegations that Kundizeza had used AI.",
+                "analysis": [
+                  "主句核心是 The Caine prize said，来源由主语直接标明。",
+                  "that it was reviewing... 是 said 的宾语从句，说明奖项方正在审查。",
+                  "the allegations 后接 that Kundizeza had used AI，构成进一步说明 allegations 内容的同位语从句。",
+                  "had used 是过去完成时，位于过去的 reviewing 语境中，表示被指称的行为在先。",
+                  "双层 that 从句把机构行动与被审查的指控分开，适合用于严谨转述争议。"
+                ],
+                "translation": "Caine 奖在一份声明中表示，正在审查 Kundizeza 使用 AI 的指控。"
+              },
+              {
+                "original": "Its chair questioned the reliability of AI-detection software itself.",
+                "analysis": [
+                  "主干是 Its chair questioned the reliability，主语和谓语表达机构主席对可靠性的质疑。",
+                  "of AI-detection software 是后置介词短语，说明 reliability 所指对象。",
+                  "itself 放在名词短语末尾起强调作用，突出被质疑的是检测软件本身。",
+                  "该句给出对检测工具的保留意见，与前文软件判断形成对照。",
+                  "可借鉴 question the reliability of... 表达对某种方法或证据可靠性的审慎态度。"
+                ],
+                "translation": "该奖项主席质疑 AI 检测软件本身的可靠性。"
+              }
+            ]
+          },
+          {
+            "title": "Aboard an icebreaker, a writer got a closer look at the Arctic's 'Sea Change'",
+            "source": "NPR",
+            "published": "2026-10-14",
+            "url": "https://www.npr.org/2026/10/14/nx-s1-6001592/arctic-sea-change-rana-foroohar",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "环境与经济 / 北极航道、资源和国际竞争",
+            "summary": "NPR 以作者 Rana Foroohar 登上美国海岸警卫队破冰船的经历切入，讨论北极海冰融化后航道开放如何带来贸易机会和大国竞争。访谈援引她的估算，称北极航线在特定情况下可缩短大西洋至太平洋航程所需时间；同时梳理北极海底的油气、稀土和通信电缆等战略资源。文章接着谈到国际海洋法对海上活动的治理，以及美国未签署相关公约所带来的规则争议，再把北极放入全球化转向区域化、势力范围竞争的背景。结尾回到持续变暖对鱼类、风浪和更广区域气候的影响，指出商业、军事和环境变化使北极成为未来政策关注点。",
+            "reason": [
+              "气候变化与贸易、安全和资源治理交织，适合练习环境议题的跨学科阅读。",
+              "文章从破冰船现场观察展开，依次解释航运收益、战略资源、国际规则和气候影响。",
+              "可练习主旨题、例证作用题、引语归属题，以及判断作者如何从区域案例推及全球趋势。",
+              "touchstone、sovereign、regionalization、bellwether 等词可用于讨论国际关系和区域变化。",
+              "写作可借鉴“环境变化—经济机会—制度争议—长期影响”的层层推进结构。"
+            ],
+            "vocabulary": [
+              {"word":"traverse","phonetic":"/trəˈvɜːrs/","part":"v.","translation":"横越；穿越"},
+              {"word":"conceptual","phonetic":"/kənˈseptʃuəl/","part":"adj.","translation":"概念上的；理论性的"},
+              {"word":"touchstone","phonetic":"/ˈtʌtʃstoʊn/","part":"n.","translation":"检验标准；典型例证"},
+              {"word":"sovereign","phonetic":"/ˈsɑːvrən/","part":"adj.","translation":"拥有主权的"},
+              {"word":"convention","phonetic":"/kənˈvenʃən/","part":"n.","translation":"公约；惯例"},
+              {"word":"free-for-all","phonetic":"/ˌfriː fər ˈɔːl/","part":"n.","translation":"无规则的争夺；混战"},
+              {"word":"regionalization","phonetic":"/ˌriːdʒənələˈzeɪʃən/","part":"n.","translation":"区域化"},
+              {"word":"bellwether","phonetic":"/ˈbelˌweðər/","part":"n.","translation":"风向标；先兆"},
+              {"word":"commerce","phonetic":"/ˈkɑːmɜːrs/","part":"n.","translation":"商业；贸易"},
+              {"word":"sobering","phonetic":"/ˈsoʊbərɪŋ/","part":"adj.","translation":"令人清醒的；发人深省的"}
+            ],
+            "sentences": [
+              {
+                "original": "As polar ice melts in the Arctic, shipping lanes are opening up, making the region a new zone of superpower competition.",
+                "analysis": [
+                  "主句核心是 shipping lanes are opening up，使用现在进行时呈现正在发生的变化。",
+                  "As polar ice melts in the Arctic 是原因/伴随背景从句，说明航道变化的环境条件。",
+                  "making the region... 是现在分词短语，表示航道开放带来的结果。",
+                  "a new zone of superpower competition 是 make 的宾语补足语，点明地理变化的政治后果。",
+                  "可借鉴 As..., ... , making... 的结构，把背景、变化与影响压缩在一句中。"
+                ],
+                "translation": "随着北极海冰融化，航道正在开放，使该地区成为大国竞争的新地带。"
+              },
+              {
+                "original": "There is something called the United Nations Convention on the Law of the Sea, which governs maritime activities, including those in the Arctic.",
+                "analysis": [
+                  "主干是 There is something，there be 结构引出后面的制度名称。",
+                  "called the United Nations Convention... 是过去分词短语，后置修饰 something。",
+                  "which governs maritime activities 是非限制性定语从句，补充说明该公约的作用。",
+                  "including those in the Arctic 中 those 指代 maritime activities，举出适用范围中的一例。",
+                  "可借鉴名词 + called... 引入概念，再用 which 从句说明其功能。"
+                ],
+                "translation": "有一项名为《联合国海洋法公约》的公约，规范海上活动，包括北极地区的活动。"
+              },
+              {
+                "original": "There is going to be more commerce done through this area.",
+                "analysis": [
+                  "there is going to be 是表示未来存在或发生的结构，核心名词是 more commerce。",
+                  "done through this area 是过去分词短语，补充说明贸易将经由何处进行。",
+                  "more 表示数量增加，through this area 则聚焦北极通道的地理作用。",
+                  "这句预测承接前文的航道变化，为文章转向商业和军事利益作铺垫。",
+                  "可借鉴 There is going to be more... done through... 描述某种活动可能增加及其发生路径。"
+                ],
+                "translation": "未来将有更多贸易经由这一地区开展。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-14",
       "status": "ready",
@@ -1816,339 +2048,6 @@ window.BRIEFING_DATA = {
                   "写作可借鉴“抽象判断 + 破折号 + 具体解释”的衔接方式。"
                 ],
                 "translation": "社区关系是帮助人们渡过灾害的纽带——邻里互助能够挽救生命。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-08",
-      "status": "ready",
-      "ai": {
-        "intro": "核对 10 月 7 日官方产品公告，收录 Copilot 上线 Claude Haiku 5.5、GitHub 更新 AI 密钥检测，以及 Google 开放 SynthID Detector；免费资源重新核对官方定价、产品公告和模型卡，注明未公开的价格、账号与配额限制。",
-        "updates": [
-          {
-            "event": "Claude Haiku 5.5 上线 GitHub Copilot，面向快速、高频任务（2026-10-07）",
-            "summary": "GitHub 宣布 Claude Haiku 5.5 已在 Copilot 中正式提供，定位为快速、高频工作的小模型，适用于子代理、快速编辑和终端任务。模型可在 VS Code、Visual Studio、Copilot CLI、Copilot cloud agent、GitHub Copilot app、github.com、移动端、JetBrains、Xcode 和 Eclipse 的模型选择器中使用；开放正逐步推送。",
-            "howTo": "在上述任一受支持 Copilot 客户端打开模型选择器，选 Claude Haiku 5.5 后用于小范围代码修改、终端任务或子代理；如果尚未显示，等待逐步开放并检查组织管理员的模型策略。",
-            "impact": "课程项目中可将快速代码编辑、重复性终端工作或子代理任务交给轻量模型处理，再自行检查补丁和执行结果；调用消耗取决于使用量和所选计划的额度。",
-            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，不包括 Copilot Free 或 Student。该模型按提供商列表价采用基于用量的计费；具体价格见官方模型计费表。上线逐步推送；地区限制和单独配额官方未说明。",
-            "category": "AI 编程工具 / 模型更新",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-07",
-              "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
-            }
-          },
-          {
-            "event": "GitHub 将 AI 密钥检测模型用于密码告警，并规划更多检测入口（2026-10-07）",
-            "summary": "GitHub 推出一款读取周边代码上下文的专用密钥检测模型，可识别包括不具备常见 token 格式的密码。已使用 AI 检测密码告警的 GHSP 或 GHAS 客户已自动切换到新模型且不额外收费；AI push protection 处于私有预览，Copilot CLI 与 App 的 `/security-review` 密钥分类检查则仍待后续预览。",
-            "howTo": "若课程仓库所在组织已经启用 GHSP 或 GHAS 的 AI 密码告警，继续通过现有 secret-scanning 告警流程查看结果，模型升级无需手动切换。需要 AI push protection 的团队应由管理员先核对资格与预算，再申请预览并选择启用；不要把尚未开放的 `/security-review` 新分类器当成已上线功能。",
-            "impact": "团队可了解 GitHub 正把上下文识别用于发现格式不明显的密码，但告警仍需人工确认并及时撤销暴露凭据；普通个人仓库不能据此假定已有该企业级保护。",
-            "free": "现有 AI 检测密码告警对 GHSP/GHAS 客户不额外收费，但这些是有许可的安全产品。AI push protection 私有预览要求 GitHub Enterprise Cloud 或 GitHub Team 且购买 GHSP/GHAS，并将消耗 AI Credits；Copilot 密钥检查尚未开放，计划纳入 AI Credits。具体每次额度、适用地区和免费信用额官方未说明。",
-            "category": "AI 开发安全 / 密钥检测",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-07",
-              "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection"
-            }
-          },
-          {
-            "event": "Google 向全球英语用户开放 SynthID Detector，核验图像、视频和音频（2026-10-07）",
-            "summary": "Google DeepMind 宣布 SynthID Detector 面向全球英语用户开放。用户可提交图像、视频或音频，检查其中是否带有 Google 或合作方 AI 工具生成内容的 SynthID 水印；公告点名 OpenAI、NVIDIA、Kakao，Apple 支持则称即将推出。它检查的是相应水印，不是对所有 AI 生成内容的通用识别保证。",
-            "howTo": "打开 https://synthid.com/，选择图像、视频或音频文件并提交检测，查看系统是否在媒体中识别到 SynthID；若无水印结果，不应据此断定内容一定由人类创作。",
-            "impact": "写报告或准备课堂展示时，可对社交平台流传的多媒体做一次来源线索核验，并在引用时保留不确定性；未检测到水印不能作为真实性证明。",
-            "free": "Google 公告称该工具现面向全球任何人以英语使用；官方未说明是否收费、账号资格、上传大小或次数、保存期限及逐地区限制。",
-            "category": "AI 媒体核验 / 数字素养",
-            "source": {
-              "name": "Google The Keyword",
-              "published": "2026-10-07",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "SynthID Detector：公开使用的 AI 媒体水印核验工具",
-            "summary": "SynthID Detector 可供全球英语用户检查图像、视频和音频是否含有 Google 或合作方 AI 工具的 SynthID 水印，合作方包括 OpenAI、NVIDIA 和 Kakao。它只能提供水印线索，不能证明未检出水印的文件必然真实。",
-            "howTo": "访问 https://synthid.com/ 并提交待核验的图像、视频或音频；把结果作为来源线索，与原发布者和其他证据一并核对。",
-            "impact": "适用于课程演示、媒体素养练习和核对网络多媒体出处，不应代替事实核查或用于判断所有 AI 生成内容。",
-            "free": "官方称现面向全球任何人开放英语版本，但未说明价格、账号要求、文件大小、次数配额和文件处理期限；这些限制官方未说明。",
-            "category": "免费工具 / AI 媒体溯源",
-            "source": {
-              "name": "Google The Keyword",
-              "published": "2026-10-07",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
-            }
-          },
-          {
-            "event": "EmbeddingGemma 2：Apache 2.0 许可的多模态嵌入模型",
-            "summary": "Google DeepMind 的 EmbeddingGemma 2 开放 740M 参数权重，可把文本、代码、图像、视频和音频映射到统一向量空间，模型卡标注 Apache 2.0 许可。模型适用于本地语义搜索、分类和检索增强生成，不是直接生成文章的聊天模型。",
-            "howTo": "从 https://huggingface.co/google/embeddinggemma-2 查看许可证和快速开始；按模型卡安装 `sentence-transformers` 与 `transformers`，加载 `google/embeddinggemma-2`，用 `model.encode` 为自己的学习笔记或资料生成文本向量并比较相似度。",
-            "impact": "学生可用它制作离线笔记检索小实验，或学习如何把文本及多媒体转成可搜索向量；模型卡指出可按任务仅加载所需模态，实际速度取决于本地硬件。",
-            "free": "权重公开并采用 Apache 2.0 许可，模型卡仓库未设访问门槛；下载权重及本地运行不收模型使用费。托管推理的价格、地区和配额、特定硬件要求官方未统一说明。",
-            "category": "免费开放权重 / 多模态学习与检索",
-            "source": {
-              "name": "Google DeepMind 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/google/embeddinggemma-2"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：AI Studio 可免费调用部分模型",
-            "summary": "Google 当前定价文档列出 Gemini API Free Tier：可从 Google AI Studio 开始，部分模型的输入和输出 token 免费；可访问的模型有限制，而且免费层数据会用于改进 Google 产品。",
-            "howTo": "打开 Google AI Studio，选择官方定价页标为 Free Tier 的模型并按 API 快速开始文档发起调用；编码前核对该模型的速率限制及数据条款，不上传未公开论文或个人资料。",
-            "impact": "适合学生练习 API 调用、制作课程原型或比较提示词；免费层数据处理条款意味着不应把它当作提交敏感材料的私密空间。",
-            "free": "官方明确部分模型免费提供输入和输出 token，且模型访问受限、免费层内容用于改进 Google 产品；定价页未为所有模型列出统一额度，账号资格、地区资格及具体模型速率须逐项核对，通用额度官方未说明。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Qwen3-8B：Apache-2.0 许可的开放权重语言模型",
-            "summary": "Qwen 官方模型卡公开 Qwen3-8B 权重，标注 Apache-2.0 许可，列出 8.2B 参数及原生 32,768 token 上下文，并提供 Transformers 加载代码。模型支持思考与非思考模式，可用于中英问答、翻译和本地推理练习。",
-            "howTo": "打开模型卡查看文件与许可证；安装 Transformers 4.51.0 或更新版本，按卡片示例用 `AutoTokenizer` 和 `AutoModelForCausalLM` 加载 `Qwen/Qwen3-8B`，用非敏感课程文本测试问答或翻译。",
-            "impact": "可用于练习本地部署、提示词比较和多语言任务；把模型输出当成待核实草稿，并先确认个人设备是否能承担推理。",
-            "free": "官方仓库公开且未设访问门槛，模型卡标注 Apache-2.0；权重许可不等同于免费托管推理。本地硬件成本由使用者承担，托管 API 的价格、地区与用量官方未说明。",
-            "category": "免费开放权重 / 多语言学习",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-8B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期选 The Conversation 对 2026 亚运会政治张力的评论与 The Guardian 对埃博拉疫情的报道，分别练习历史背景如何解释当下事件，以及公共卫生报道如何从个案扩展到系统性约束。",
-        "articles": [
-          {
-            "title": "How geopolitical tensions tainted the 2026 Asian Games",
-            "source": "The Conversation",
-            "published": "2026-10-06",
-            "url": "https://theconversation.com/how-geopolitical-tensions-tainted-the-2026-asian-games-293279",
-            "readingTime": "约 6 分钟",
-            "topic": "文化 / 体育赛事中的历史记忆与区域政治",
-            "summary": "文章的核心判断是，亚运会虽以“想象一个亚洲”为口号，却无法与区域政治分离。作者先写日本名古屋开幕仪式呈现丰臣秀吉，引发韩国抗议，并用日本侵朝历史解释敏感性；继而讨论朝鲜运动员四十余年来首次赴日参赛及其与在日朝鲜族群体的互动，再列举朝韩比赛中的国歌误播、赛后拒绝握手等摩擦。后半转向台湾代表团遭遇的旗帜、服饰和入村争议，显示赛事组织者如何管理主权象征。结尾将这些案例概括为更具分裂性的国际体育环境中，赛事日益成为政治争议舞台；文章通过具体事件支撑评论，而非把“团结”口号直接当作现实。",
-            "reason": [
-              "体育与历史记忆、身份认同及文化交流交织，适合文化、社会关系和国际交流主题的考研阅读。",
-              "结构从赛事口号和日方仪式切入，按日韩、朝鲜与在日社群、台湾代表团逐步扩展，最后回到总论点。",
-              "可练习辨认作者观点与报道事实的区别，理解历史背景如何解释当下抗议，以及案例如何支撑结论。",
-              "fragmented、delegation、diaspora、friction 等词可用于社会分歧、群体身份与国际交流话题。",
-              "写作可借鉴“提出理想叙事—列出反例—解释历史成因—归纳制度影响”的结构，并用具体事件支撑抽象判断。"
-            ],
-            "vocabulary": [
-              {
-                "word": "drew to a close",
-                "phonetic": "/drɔː tə ə kləʊs/",
-                "part": "phr.",
-                "translation": "接近尾声；结束"
-              },
-              {
-                "word": "fragmented",
-                "phonetic": "/fræɡˈmentɪd/",
-                "part": "adj.",
-                "translation": "分裂的；碎片化的"
-              },
-              {
-                "word": "come to the fore",
-                "phonetic": "/kʌm tə ðə fɔː/",
-                "part": "phr.",
-                "translation": "显现出来；成为焦点"
-              },
-              {
-                "word": "flared",
-                "phonetic": "/fleə/",
-                "part": "v.",
-                "translation": "（冲突、紧张局势）骤然加剧"
-              },
-              {
-                "word": "delegation",
-                "phonetic": "/ˌdelɪˈɡeɪʃn/",
-                "part": "n.",
-                "translation": "代表团"
-              },
-              {
-                "word": "diaspora",
-                "phonetic": "/daɪˈspɒrə/",
-                "part": "n.",
-                "translation": "散居群体；离散族群"
-              },
-              {
-                "word": "friction",
-                "phonetic": "/ˈfrɪkʃn/",
-                "part": "n.",
-                "translation": "摩擦；冲突"
-              },
-              {
-                "word": "defiance",
-                "phonetic": "/dɪˈfaɪəns/",
-                "part": "n.",
-                "translation": "反抗；违抗"
-              },
-              {
-                "word": "fractured",
-                "phonetic": "/ˈfræktʃəd/",
-                "part": "adj.",
-                "translation": "分裂的；破裂的"
-              },
-              {
-                "word": "contention",
-                "phonetic": "/kənˈtenʃn/",
-                "part": "n.",
-                "translation": "争议；论点"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Despite the official slogan “imagine one Asia”, fragmented regional politics came to the fore as the event unfolded.",
-                "analysis": [
-                  "主干是 fragmented regional politics came to the fore，说明区域政治分歧浮现。",
-                  "句首 Despite the official slogan 是让步状语，把赛事口号与现实结果构成对照。",
-                  "as the event unfolded 是时间/过程状语从句，交代矛盾逐步显现的背景。",
-                  "fragmented 修饰 politics，后半用 came to the fore 表达议题由潜在变成显著。",
-                  "可借鉴 Despite + 名词，... came to the fore 的结构，写理想目标与现实落差。"
-                ],
-                "translation": "尽管官方口号是“想象一个亚洲”，区域政治分歧仍随着赛事展开而浮上台面。"
-              },
-              {
-                "original": "Historical issues are an area of particular sensitivity between South Korea and Japan.",
-                "analysis": [
-                  "句子主干为 Historical issues are an area，主语是历史问题，表语说明其性质。",
-                  "of particular sensitivity 是介词短语作后置修饰，具体界定 area。",
-                  "between South Korea and Japan 限定敏感性涉及的双方。",
-                  "该句把前述具体事件上升为解释背景，连接事例与作者分析。",
-                  "可借鉴 an area of particular sensitivity between... 概括双边关系中的敏感议题。"
-                ],
-                "translation": "历史问题是韩国与日本之间一个格外敏感的领域。"
-              },
-              {
-                "original": "The fractured regional relations on show at the 2026 Asian Games should not be viewed in isolation.",
-                "analysis": [
-                  "主干是 The fractured regional relations should not be viewed，使用情态动词加被动语态表达作者的判断。",
-                  "on show at the 2026 Asian Games 是后置修饰语，限定所指的区域关系。",
-                  "in isolation 表示孤立地看，构成作者要求读者采用整体背景理解的方式。",
-                  "句子由前文多个赛事争议归纳而来，提醒读者将个案放在更广泛的世界政治中考察。",
-                  "可借鉴 should not be viewed in isolation 提出分析框架，避免把事件脱离背景。"
-                ],
-                "translation": "亚运会上显现的区域关系裂痕，不应被孤立看待。"
-              }
-            ]
-          },
-          {
-            "title": "Kenya confirms first Ebola case as virus ‘surges’ in DR Congo province",
-            "source": "The Guardian",
-            "published": "2026-10-06",
-            "url": "https://www.theguardian.com/world/2026/oct/06/kenya-first-ebola-case-death-drc",
-            "readingTime": "约 4 分钟",
-            "topic": "健康 / 疫情追踪与公共卫生系统",
-            "summary": "报道以肯尼亚卫生部长宣布一名从刚果（金）返国男子感染埃博拉后死亡为开端，随后补充他跨境旅行、被隔离、确诊和追踪接触者的时间线。文章指出当局列出 28 名接触者，并正寻找同机乘客；同时把个案放回刚果（金）疫情背景，援引当地病例与死亡统计及无国界医生组织对北基伍病例增长的警告。后半转向疫情控制的系统障碍：冲突、对当局的不信任、资源短缺和治疗床位不足会增加转诊风险。结尾通过援引援助组织人员的描述强化医疗能力不足的后果，使报道从单一病例扩展到公共卫生应对条件。",
-            "reason": [
-              "传染病、跨境监测和医疗资源配置是健康与公共政策阅读常见主题，可训练事实信息筛选。",
-              "文章按确诊死亡、接触者追踪、区域传播背景、当地治疗能力障碍逐层推进。",
-              "阅读题可考查个案时间线、数字对应对象、消息来源归属，以及结尾如何解释疫情应对困难。",
-              "subsequently、isolate、contact tracing、hinder 等表达适用于公共卫生和风险管理语境。",
-              "写作可借鉴“个案—数据—结构性制约”的论证链，并用 reported、according to 等表达清楚标注信息来源。"
-            ],
-            "vocabulary": [
-              {
-                "word": "outbreak",
-                "phonetic": "/ˈaʊtbreɪk/",
-                "part": "n.",
-                "translation": "（疾病）暴发；疫情"
-              },
-              {
-                "word": "strain",
-                "phonetic": "/streɪn/",
-                "part": "n.",
-                "translation": "（病毒）毒株"
-              },
-              {
-                "word": "subsequently",
-                "phonetic": "/ˈsʌbsɪkwəntli/",
-                "part": "adv.",
-                "translation": "随后；之后"
-              },
-              {
-                "word": "isolated",
-                "phonetic": "/ˈaɪsəleɪt/",
-                "part": "v.",
-                "translation": "隔离；使孤立"
-              },
-              {
-                "word": "contact",
-                "phonetic": "/ˈkɒntækt/",
-                "part": "n.",
-                "translation": "（疾病患者的）接触者"
-              },
-              {
-                "word": "hindered",
-                "phonetic": "/ˈhɪndə/",
-                "part": "v.",
-                "translation": "阻碍；妨碍"
-              },
-              {
-                "word": "mistrust",
-                "phonetic": "/ˌmɪsˈtrʌst/",
-                "part": "n.",
-                "translation": "不信任"
-              },
-              {
-                "word": "surge",
-                "phonetic": "/sɜːdʒ/",
-                "part": "n.",
-                "translation": "激增；急剧上升"
-              },
-              {
-                "word": "peripheral",
-                "phonetic": "/pəˈrɪfərəl/",
-                "part": "adj.",
-                "translation": "外围的；边远地区的"
-              },
-              {
-                "word": "instability",
-                "phonetic": "/ˌɪnstəˈbɪləti/",
-                "part": "n.",
-                "translation": "不稳定；动荡"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The man, who has not been named, had been treated in the DRC after falling ill about a month ago.",
-                "analysis": [
-                  "主干是 The man had been treated in the DRC，过去完成时被动语态交代报道时点之前的治疗经历。",
-                  "who has not been named 是非限制性定语从句，补充说明当事人身份未公开。",
-                  "after falling ill about a month ago 是时间状语，交代就医前的病程起点。",
-                  "句子以匿名患者为中心，依次交代身份处理、地点和时间背景。",
-                  "可借鉴 had been treated... after doing... 按先后顺序压缩叙述事件。"
-                ],
-                "translation": "这名男子尚未公开姓名；他约一个月前发病后，曾在刚果（金）接受治疗。"
-              },
-              {
-                "original": "After starting in the DRC’s north-eastern Ituri province, the current outbreak has spread to seven provinces in the country’s north and east.",
-                "analysis": [
-                  "句首 After starting in... 是时间状语，说明疫情最初出现的地点。",
-                  "主干是 the current outbreak has spread，使用现在完成时概括截至报道时的传播范围。",
-                  "to seven provinces 指出扩散的数量，in the country’s north and east 进一步限定地理范围。",
-                  "该句由个案转向区域发展，为后续讨论跨省传播和医疗资源压力提供背景。",
-                  "可借鉴 After starting in..., ... has spread to... 描述事件从起点向更广范围扩展。"
-                ],
-                "translation": "当前疫情从刚果（金）东北部的伊图里省开始，已蔓延至该国北部和东部的七个省份。"
-              },
-              {
-                "original": "Multiple outbreaks are developing at the same time, with varying intensity and in different locations.",
-                "analysis": [
-                  "主干为 Multiple outbreaks are developing，使用现在进行时呈现同时发生且仍在发展的状况。",
-                  "at the same time 是时间状语，强调多个疫情并行。",
-                  "with varying intensity and in different locations 是补充性介词短语，分别说明强度与地点差异。",
-                  "这是无国界医生组织协调员的引语，呈现一线人员对疫情复杂性的描述，而非记者直接下结论。",
-                  "可借鉴 with + 名词 + 并列补充项，简洁交代多个现象的差异维度。"
-                ],
-                "translation": "多处疫情正在同时发展，其烈度各不相同，地点也各异。"
               }
             ]
           }
