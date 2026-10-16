@@ -1,6 +1,238 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-15T09:28:21+08:00",
+  "updatedAt": "2026-10-16T09:10:00+08:00",
   "issues": [
+    {
+      "date": "2026-10-16",
+      "status": "ready",
+      "ai": {
+        "intro": "10月15日至16日核实到2项官方产品变化；为补足3项，将检索范围扩至此前7天，并补入10月13日的Copilot模型更新。免费资源仅列可访问的官方价格、用量或许可说明。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 将于11月16日停用部分模型（2026-10-15）",
+            "summary": "GitHub 公告称，Copilot Chat、内联编辑、ask/agent 模式和代码补全将于2026年11月16日停用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra，并列出替代模型。个人年付订阅者仍可继续使用 Opus 4.8。",
+            "howTo": "查看自己在 Copilot Chat、CLI 或 IDE 工作流中使用的模型；准备切换时，在模型选择器中试用公告列出的替代项。Business 和 Enterprise 管理员可在 Copilot 设置的模型策略中核对启用状态。",
+            "impact": "依赖特定 Copilot 模型的课程项目、代码代理或自动化工作流可提前安排迁移和回归测试，避免模型停用后任务中断。",
+            "free": "停用日期为2026年11月16日；个人年付用户的 Claude Opus 4.8 有例外。公告未说明具体价格、地区或请求额度，也未分别说明 Free/Student 计划适用情况；Business/Enterprise 的可用性还受管理员策略影响。",
+            "category": "AI 编程工具 / 模型生命周期",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-15",
+              "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/"
+            }
+          },
+          {
+            "event": "Gemini 4 Argon 在 GitHub Copilot 中上线（2026-10-13）",
+            "summary": "GitHub 宣布 Gemini 4 Argon 在 Copilot 中正式可用，面向复杂编程、代理和推理任务；公告称模型会检查工作并测试边界情况。它可在 VS Code、Visual Studio、Copilot CLI、JetBrains、Xcode、Eclipse、Copilot app 和 coding agent 中选择。",
+            "howTo": "在支持的 Copilot 客户端打开模型选择器并选择 Gemini 4 Argon；若暂未显示，等待分阶段开放，Business/Enterprise 用户还需检查管理员的模型策略。",
+            "impact": "可用于课程项目的多步编程、CLI 调试和代码代理任务；让模型尝试边界情况测试后，仍应自行检查代码并运行项目测试。",
+            "free": "公告列出的计划为 Copilot Pro+、Max、Business 和 Enterprise；按供应商列表价计费，属于按用量计费，且分阶段推出。具体费用、地区和调用额度以公告所链接的价格页及账户策略为准；公告未称 Free 或 Student 计划可用。",
+            "category": "AI 编程工具 / 新模型",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-13",
+              "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/"
+            }
+          },
+          {
+            "event": "Cloudflare Workers AI 更新逐模型计价说明（2026-10-15）",
+            "summary": "Cloudflare 更新 Workers AI 定价文档，展示更细的逐模型计价单位，同时说明后台仍按 Neurons 计量。页面列出每个模型的输入、输出 token 与 Neurons 价格，并说明免费额度和超额计价规则。",
+            "howTo": "先在官方定价表比较目标模型的输入、输出单价和 Neurons，再按官方入门页通过 Dashboard、Workers binding 或 REST API 创建小规模调用，并在 Dashboard 查看用量。",
+            "impact": "做课程原型或模型对比时，可先估算请求是否落在每日免费额度内；不同模型消耗不同，适合在提交大量实验请求前核对成本。",
+            "free": "Workers Free 每日免费额度为10,000 Neurons，按 UTC 00:00 重置；超过额度需 Workers Paid，超额价格为每1,000 Neurons 0.011美元。部分模型要求付费计费方式；具体型号以官方定价页列出的清单为准。地区条件官方未说明。",
+            "category": "AI 开发平台 / 定价更新",
+            "source": {
+              "name": "Cloudflare Workers AI Pricing",
+              "published": "2026-10-15",
+              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Cloudflare Workers AI：每日10,000 Neurons 免费额度",
+            "summary": "Cloudflare 官方定价页说明，Workers AI 在 Free 和 Paid Workers 计划中提供每日共10,000 Neurons 免费额度；各模型按输入、输出用量折算，超出后需付费计划。",
+            "howTo": "创建 Cloudflare 账号后，从 Workers AI Dashboard、Workers binding 或 REST API 选择未标注付费方式要求的模型进行少量测试，并在 Dashboard 查看 Neurons 用量。",
+            "impact": "适合学生制作简单文本生成、分类或模型 API 原型；每日额度按 UTC 重置，测试前比较模型单价，避免把不同模型的用量视作相同。",
+            "free": "每日10,000 Neurons，UTC 00:00 重置；Workers Free 超出后操作会受限，需转 Workers Paid，官方标价为每1,000 Neurons 0.011美元。部分模型必须绑定付费方式；地区资格官方未说明。",
+            "category": "免费 API / 每日额度",
+            "source": {
+              "name": "Cloudflare Workers AI Pricing",
+              "published": "2026-10-15",
+              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+            }
+          },
+          {
+            "event": "Claude Free：可免费使用网页、桌面和移动端日常问答",
+            "summary": "Claude 官方价格页列有 Free 计划，覆盖日常问题；网页、桌面、移动端和 Claude Code 共用一组使用额度，免费额度按滚动5小时窗口重置。",
+            "howTo": "登录 Claude，选择 Free 计划，在网页端、桌面端或移动端输入日常学习问题；打开 Settings > Usage 查看当前用量，达到上限后等待重置。",
+            "impact": "可用于解释概念、整理复习问题或润色学习笔记；复杂或长对话会更快消耗共享额度，重要结论应回到课程资料核验。",
+            "free": "官方提供 Free 计划；没有固定消息条数，实际用量随对话长度、模型和功能而变，限制按滚动5小时窗口重置。支持地区按 Claude 官方地区政策；具体地区名单和免费额度数值在价格页未说明。",
+            "category": "长期免费 / 网页与应用",
+            "source": {
+              "name": "Claude Pricing",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Qwen3.8-27B：Apache-2.0 许可的公开模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3.8-27B 权重和 Transformers 格式配置，列出原生262,144 token 上下文以及图像、视频理解能力；官方仓库许可文件为 Apache-2.0。",
+            "howTo": "打开 Qwen 官方模型卡，按其说明下载权重并使用 Transformers、vLLM 或 SGLang 等兼容工具加载；先确认本机或云端硬件能承载27B参数模型。",
+            "impact": "适合练习本地模型部署、多模态资料理解和推理参数设置；本地运行也便于课程实验中控制输入数据，但需要自行评估计算资源。",
+            "free": "模型权重公开，官方许可文件标注 Apache-2.0；下载和本地调用不按 API token 计费，但硬件或云端算力可能产生费用。模型最低硬件要求、托管推理额度和地区条件官方未说明。",
+            "category": "开放模型 / 本地学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：在 AI Studio 免费试做小型原型",
+            "summary": "Google AI for Developers 定价页列出 Gemini API Free 层：部分模型可免费使用输入和输出 token，并可访问 Google AI Studio；免费层提交内容可用于改进 Google 产品。",
+            "howTo": "在 Google AI Studio 创建 API key，选择定价表标注 Free Tier 的模型进行小型实验；开始前核对该模型的速率限制，并避免提交敏感或个人资料。",
+            "impact": "可用于课程原型、文本整理或小规模分类实验，不需先承担所选免费模型的 token 费用；免费层的数据使用条款与模型配额仍需留意。",
+            "free": "仅部分模型有 Free Tier，输入和输出 token 免费并可使用 AI Studio；各模型调用限制及支持地区以官方定价和地区页为准，未列明部分官方未说明。官方说明免费层提交内容可用于改进产品。",
+            "category": "免费 API / 原型开发",
+            "source": {
+              "name": "Google AI for Developers Pricing",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+            "source": "BBC",
+            "published": "2026-10-13",
+            "url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "健康与教育 / 学校屏幕使用和儿童发展",
+            "summary": "BBC 报道一封由150多名临床人员联署的公开信，警告英国学校过度使用平板和电脑可能损害儿童身体及发育健康。联署者称近100万名儿童在大多数课程中使用屏幕，并引用一项涵盖276项研究、540万名参与者的分析，指出儿童近视比例从1990年的约24%升至2023年的近36%。报道同时说明，英国政府正就5至18岁儿童屏幕时间指南征求意见，并认为合理使用技术也能成为有效学习工具。结尾呈现医生对“为适应数字世界而增加屏幕时间”这一理由的反驳，强调睡眠、视力、休息和批判思维。文章报道的是临床人员的警告和他们引用的证据，并未将屏幕使用断言为单一因果。",
+            "reason": [
+              "学校数字化与儿童健康相冲突，兼具教育和公共健康意义，适合练习综合性议论文主题。",
+              "文章由医生公开信提出警告，继而给出使用规模和研究数据，再补入政府立场，最后以医生的反驳收束。",
+              "可练习识别“研究结果—相关风险—因果结论”的差别，并判断数字和观点分别来自谁。",
+              "clinician、developmental、short-sightedness、appraise 等词可用于健康和教育类写作。",
+              "议论文可借鉴“提出担忧—列证据—承认技术价值—限定使用条件”的平衡结构。"
+            ],
+            "vocabulary": [
+              {"word":"clinician","phonetic":"/klɪˈnɪʃən/","part":"n.","translation":"临床医生"},
+              {"word":"developmental","phonetic":"/ˌdɪveləpˈmentəl/","part":"adj.","translation":"发育的；发展的"},
+              {"word":"consult","phonetic":"/kənˈsʌlt/","part":"v.","translation":"征求意见；咨询"},
+              {"word":"guidance","phonetic":"/ˈɡaɪdəns/","part":"n.","translation":"指导意见；指引"},
+              {"word":"short-sightedness","phonetic":"/ˌʃɔːtˈsaɪtɪdnəs/","part":"n.","translation":"近视"},
+              {"word":"signatory","phonetic":"/ˈsɪɡnətəri/","part":"n.","translation":"签署人"},
+              {"word":"advocate","phonetic":"/ˈædvəkeɪt/","part":"v.","translation":"提倡；主张"},
+              {"word":"critically","phonetic":"/ˈkrɪtɪkli/","part":"adv.","translation":"批判性地"},
+              {"word":"appraise","phonetic":"/əˈpreɪz/","part":"v.","translation":"评估；评价"},
+              {"word":"compound","phonetic":"/kəmˈpaʊnd/","part":"v.","translation":"使加剧；使恶化"}
+            ],
+            "sentences": [
+              {
+                "original": "The government said it was consulting on screen time guidance for children aged five to 18...",
+                "analysis": [
+                  "主干是 The government said，报道以政府为观点来源，避免把意见写成无归属的事实。",
+                  "it was consulting... 是 said 后的宾语从句，说明政府正在征求意见。",
+                  "on screen time guidance 是介词短语，指出咨询议题；for children aged five to 18 限定指南适用对象。",
+                  "was consulting 表示正在进行中的政策程序；省略号表示原句还有后续内容，报道随后补充政府对技术教育价值的看法。",
+                  "可借鉴 report that... is consulting on... 转述政策仍在征询阶段。"
+                ],
+                "translation": "政府表示，正在就面向5至18岁儿童的屏幕时间指南征求意见……"
+              },
+              {
+                "original": "They pointed to an analysis of 276 studies covering 5.4 million participants around the world.",
+                "analysis": [
+                  "主干是 They pointed to an analysis，They 指前文的临床人员，谓语引出其证据来源。",
+                  "of 276 studies 补充说明 analysis 的研究范围。",
+                  "covering 5.4 million participants 是现在分词短语，后置修饰 studies。",
+                  "around the world 修饰 participants，交代研究参与者的地域范围。",
+                  "point to an analysis of... 可用于介绍论证者引用的证据，同时不等于作者独立验证了结论。"
+                ],
+                "translation": "他们提到一项分析，该分析涵盖276项研究和全球540万名参与者。"
+              },
+              {
+                "original": "She said it was a \"lazy argument\" to advocate for screen use to prepare children for a digital world.",
+                "analysis": [
+                  "主干是 She said，后接宾语从句，表明评价属于受访医生而非记者的定论。",
+                  "it was a \"lazy argument\" 是从句核心，评价对象是以数字时代为理由支持屏幕使用的说法。",
+                  "to advocate for screen use 是不定式短语，说明该论点所针对的主张。",
+                  "to prepare children for a digital world 表示支持屏幕使用的目的。",
+                  "引述评价词后再交代其论证对象，适合呈现争议双方立场而不混淆归属。"
+                ],
+                "translation": "她说，以让儿童适应数字世界为由提倡使用屏幕，是一种“站不住脚的论点”。"
+              }
+            ]
+          },
+          {
+            "title": "Poland’s ascent from communist state to top 20 economy reverses the brain drain",
+            "source": "The Guardian",
+            "published": "2026-10-15",
+            "url": "https://www.theguardian.com/world/2026/oct/15/poland-economy-heights-transformed-regional-tech-hub",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "经济与社会 / 波兰转型、人才回流与增长代价",
+            "summary": "文章以华沙新旧建筑并置开篇，把波兰从共产主义时期走向繁荣的转型作为主线。报道引用收入与欧盟平均水平的差距缩小、波兰跻身全球前20大经济体等数据，并通过回国工作的建筑师和科技企业管理者讲述人才回流与产业升级。随后文章没有停留在“经济奇迹”：它指出资本流入推高生活成本、收入不平等和政治分歧等增长代价，也说明低成本劳动力优势正在减弱。结尾转向生产率、教育技能和区域科技中心的建设，强调未来发展不靠所谓捷径，而要从低成本追赶转向更高附加值的工作。",
+            "reason": [
+              "经济转型、移民流动、生活成本与生产率相互关联，适合经济和社会发展主题阅读。",
+              "文章从华沙地标的对比切入，回溯历史和宏观数据，再以回流人才和企业案例展开，最后呈现增长代价与未来挑战。",
+              "可练习区分宏观增长与居民生活感受，并理解人才外流逆转并不代表所有社会问题消失。",
+              "brain drain、converge、influx、inequality、productivity 等词适合经济和人口流动话题。",
+              "写作可借鉴“承认成就—指出分配问题—提出生产率转型”的让步与转折结构。"
+            ],
+            "vocabulary": [
+              {"word":"prosperity","phonetic":"/prɒˈsperəti/","part":"n.","translation":"繁荣；兴旺"},
+              {"word":"converge","phonetic":"/kənˈvɜːdʒ/","part":"v.","translation":"趋同；接近"},
+              {"word":"brain drain","phonetic":"/ˈbreɪn dreɪn/","part":"n. phr.","translation":"人才外流"},
+              {"word":"influx","phonetic":"/ˈɪnflʌks/","part":"n.","translation":"涌入；流入"},
+              {"word":"inequality","phonetic":"/ˌɪnɪˈkwɒləti/","part":"n.","translation":"不平等"},
+              {"word":"convergence","phonetic":"/kənˈvɜːdʒəns/","part":"n.","translation":"趋同；趋近"},
+              {"word":"bolster","phonetic":"/ˈbəʊlstə/","part":"v.","translation":"加强；支持"},
+              {"word":"stellar","phonetic":"/ˈstelə/","part":"adj.","translation":"出色的；突出的"},
+              {"word":"productivity","phonetic":"/ˌprɒdʌkˈtɪvəti/","part":"n.","translation":"生产率；生产力"},
+              {"word":"unprecedented","phonetic":"/ʌnˈpresɪdentɪd/","part":"adj.","translation":"前所未有的"}
+            ],
+            "sentences": [
+              {
+                "original": "Over the four decades since regaining its independence from Soviet-dominated rule, Poland has been transformed.",
+                "analysis": [
+                  "主句核心是 Poland has been transformed，使用现在完成时被动语态概括长期变化及其当前结果。",
+                  "Over the four decades 是时间状语，给出变化持续的跨度。",
+                  "since regaining its independence... 是省略主语的动名词结构，说明时间起点。",
+                  "from Soviet-dominated rule 补充说明 independence 所摆脱的统治状态。",
+                  "可借鉴 Over the past... since... has been transformed 描述历时性的社会转型。"
+                ],
+                "translation": "自摆脱苏联主导的统治、恢复独立以来的四十年间，波兰发生了深刻转型。"
+              },
+              {
+                "original": "National income surpassed $1tn (£755bn) last year, ranking Poland among the world’s 20 largest economies.",
+                "analysis": [
+                  "主干是 National income surpassed $1tn，主语和谓语直接陈述经济指标及其变化。",
+                  "last year 是时间状语，限定数据发生的年份。",
+                  "ranking Poland... 是现在分词短语，补充说明该指标对应的排名结果。",
+                  "among the world’s 20 largest economies 表示所属范围，避免把排名理解成精确的名次。",
+                  "主句数据加分词结果结构，可简洁地把指标与意义连接起来。"
+                ],
+                "translation": "波兰去年国民收入超过1万亿美元，跻身全球最大的20个经济体之列。"
+              },
+              {
+                "original": "The influx of global capital has driven up living costs, squeezing out poor Varsovians.",
+                "analysis": [
+                  "主干是 The influx... has driven up living costs，主语是资本流入，谓语指出生活成本上升。",
+                  "of global capital 是后置介词短语，说明 influx 的来源。",
+                  "has driven up 使用现在完成时，呈现过去资本流入对当前生活成本的影响。",
+                  "squeezing out poor Varsovians 是现在分词结果状语，补充说明成本上升带来的分配后果。",
+                  "该句把总体资本流入与特定群体承受的代价并置，可用于构造平衡的经济论证。"
+                ],
+                "translation": "全球资本的涌入推高了生活成本，使较贫困的华沙居民受到挤压。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-15",
       "status": "ready",
@@ -1702,352 +1934,6 @@ window.BRIEFING_DATA = {
                   "可借鉴“cannot ignore a problem that...”提出公共机构行动责任。"
                 ],
                 "translation": "但他说，公共卫生部门不能忽视一个影响县内居民人数超过哮喘或烟草使用的问题。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-09",
-      "status": "ready",
-      "ai": {
-        "intro": "昨日到今日核实到两项值得学生留意或试用的新变化，因此将检索范围扩展至近 7 天，补入 10 月 7 日 Copilot CLI 本地模型更新；免费资源重新核对官方页面，并标出未说明的价格、资格与配额。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 本地沙箱正式可用，可限制 Agent 本机命令权限（2026-10-08）",
-            "summary": "GitHub 宣布本地沙箱已在 Copilot CLI、Copilot app，以及使用 Agent Host 的 VS Code 会话中正式可用。Agent 发起的命令可按用户或组织政策限制文件系统、网络、凭据等系统权限；该功能随 Copilot 提供，不另收沙箱费用。它是本机操作系统级隔离，不应理解为虚拟机或容器。",
-            "howTo": "在 Copilot CLI 会话中运行 `/sandbox enable`；Copilot app 的本地仓库会话可在项目设置中启用。先按官方指南确认操作系统要求：例如 macOS 使用 15 或更高版本，Linux 需安装受支持版本的 bubblewrap；之后再按项目需要配置文件、网络与凭据权限。",
-            "impact": "课程代码库中让 Agent 执行测试或脚本时，可先缩小其可读写目录和网络权限，降低误改其他文件或意外访问凭据的风险。沙箱不等于完全安全边界，仍需检查命令授权、策略范围和生成结果。",
-            "free": "GitHub 明确本地沙箱不另收费，但须能使用 GitHub Copilot；各计划的账户资格、地区适用范围和调用配额官方未说明。操作系统及依赖要求因平台而异，需查看官方指南。",
-            "category": "AI 编程安全 / 本地沙箱",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-08",
-              "url": "https://github.blog/changelog/2026-10-08-local-sandboxing-for-github-copilot-now-generally-available/"
-            }
-          },
-          {
-            "event": "Anthropic 推出 OSS Scanner，为符合条件的开源项目提供定期 Claude 漏洞扫描（2026-10-08）",
-            "summary": "Anthropic 宣布 OSS Scanner 是自愿加入的服务，会定期用其模型扫描已登记的开源项目，并向维护者发送漏洞说明、概念验证以及可用时的修复建议。扫描报告未经人工审查，可能出现错误或误报；项目必须有能力处理收到的发现。",
-            "howTo": "由项目核心维护者按 OSS Scanner 官方说明，在 `anthropics/oss-scanner` 仓库提交 PR，为项目添加 `projects/<project>/project.yaml`，填写仓库、主要联系人和 Dockerfile 等配置。Anthropic 会核验维护者身份并逐案决定是否接纳。",
-            "impact": "维护课程实验室或重要开源依赖的学生团队，可了解并申请额外的周期性安全检查；收到的模型发现需自行验证，不能未经复核就当成已确认漏洞或直接公开。",
-            "free": "官方称获接纳项目可免费获得周期性扫描；资格面向核心维护者，并优先考虑对基础设施或用户安全影响重要、具有远程攻击面或较多依赖项目，按个案审核。具体扫描频率、名额、地区与配额官方未说明；报告未经人工审核。",
-            "category": "免费 AI 安全工具 / 开源维护",
-            "source": {
-              "name": "Anthropic News",
-              "published": "2026-10-08",
-              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
-            }
-          },
-          {
-            "event": "GitHub Copilot CLI 的 `/model` 可发现本地 Ollama 模型（2026-10-07）",
-            "summary": "Copilot CLI 1.0.94-0 起可从正在运行的 Ollama 实例发现受支持的本地模型，并与已配置模型及 Copilot 云模型一同显示。发现不会自动安装模型；模型须已安装并支持工具调用和流式输出。选用本地模型也不会自动关闭遥测或进入离线模式。",
-            "howTo": "先安装并运行 Ollama，下载一个支持工具调用与流式输出的模型，再使用 Copilot CLI 1.0.94-0 或更新版本输入 `/model`。检查显示的提供商和端点后，选择“Add and use for this session”或“Add without switching”；如需离线运行，按官方说明另行设置离线模式。",
-            "impact": "学生可在现有 CLI 工作流中尝试本机模型，并比较不同模型处理非敏感课程代码的效果；选择本地模型不代表完全离线，若配置了远程提供商，提示词和代码上下文仍可能发送到网络端点。",
-            "free": "公告未说明该功能的计划/账号资格、价格、地区或配额。它依赖已安装的 Ollama 和模型以及本机硬件；本地模型的许可证和运行成本取决于所选模型及设备，官方未说明。",
-            "category": "AI 编程 / 本地模型接入",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-07",
-              "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot 本地沙箱：限制 Agent 本机命令的免费附加功能",
-            "summary": "Copilot 本地沙箱可按策略限制 Agent 执行命令的文件访问、网络和凭据权限。官方表示本地沙箱不另收费，并支持 Copilot CLI 与 Copilot app 等本地工作流；启用前须检查各操作系统的依赖和版本要求。",
-            "howTo": "在 Copilot CLI 会话运行 `/sandbox enable`，或在 Copilot app 本地会话设置中开启沙箱；先阅读官方本地沙箱指南并选择最小必要的文件和网络权限。",
-            "impact": "可为课程仓库的脚本运行和代码 Agent 增加权限边界，练习安全地使用开发自动化；沙箱并非完整虚拟机隔离，仍要审查策略与执行结果。",
-            "free": "GitHub 说明本地沙箱不另收费；仍需 GitHub Copilot 可用计划。各计划资格、地区和调用配额官方未说明。平台要求不同，指南列出 macOS 15+、Linux bubblewrap 等条件。",
-            "category": "免费开发工具 / Agent 安全",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-08",
-              "url": "https://github.blog/changelog/2026-10-08-local-sandboxing-for-github-copilot-now-generally-available/"
-            }
-          },
-          {
-            "event": "Anthropic OSS Scanner：开源项目可申请免费的周期性 AI 漏洞扫描",
-            "summary": "Anthropic 为获接纳的开源项目提供定期模型扫描，报告包含漏洞说明、概念验证和可用时的修复建议。报告未经人工审核，官方提示可能有不准确之处，因此它是维护者的补充线索而非已确认结论。",
-            "howTo": "由核心维护者阅读 OSS Scanner 的资格和配置要求，在 `anthropics/oss-scanner` 提交项目配置 PR；准备项目构建用 Dockerfile，并等待维护者身份核验和项目审核。",
-            "impact": "适合有能力处理安全报告的学生开源维护团队练习漏洞复核与修补流程；收到报告后先复现、评估影响并与项目安全流程协调。",
-            "free": "Anthropic 称已接纳项目的周期性扫描免费。项目须由核心维护者申请，并按重要性、远程攻击面及依赖情况逐案审核；扫描频率、地区和数量配额官方未说明。报告未经人工审核，可能错误。",
-            "category": "免费工具 / 开源安全扫描",
-            "source": {
-              "name": "Anthropic News",
-              "published": "2026-10-08",
-              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
-            }
-          },
-          {
-            "event": "Microsoft Phi-4-mini-instruct：MIT 许可的公开多语言模型权重",
-            "summary": "Microsoft 的 Phi-4-mini-instruct 模型卡列出 3.8B 参数和 128K token 上下文，提供可下载权重及 Transformers 推理示例，并标注 MIT 许可证。模型卡提醒其多语言表现存在差异，生成内容仍需核验。",
-            "howTo": "从 Hugging Face 官方模型卡下载 `microsoft/Phi-4-mini-instruct`，按模型卡安装 Transformers、PyTorch 等依赖并使用 `AutoModelForCausalLM` 加载；先用不含隐私的文本在本机测试。",
-            "impact": "适合有相应硬件的学生练习本地推理、提示词设计和中英文结果校对；对照模型卡检查设备内存需求，并把输出当作草稿而非可靠事实。",
-            "free": "模型仓库公开、未设置访问门槛，权重采用 MIT 许可证；下载和本地推理不收模型调用费，但硬件、电力及软件环境由使用者承担。托管推理价格、地区和配额官方未说明。",
-            "category": "免费开放权重 / 本地学习",
-            "source": {
-              "name": "Microsoft 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
-            }
-          },
-          {
-            "event": "OpenAI Whisper：MIT 许可的本地语音转写与语音翻译模型",
-            "summary": "OpenAI 官方仓库公开 Whisper 代码和模型权重，支持多语言语音识别、语音翻译及语言识别，并提供不同大小的模型以权衡速度和资源需求。",
-            "howTo": "按官方仓库安装 `openai-whisper` 与 ffmpeg，运行 `whisper lecture.wav --model small` 转写；非英语语音转英文须选择 multilingual 模型并使用 `--task translate`，不要用 turbo 做翻译。",
-            "impact": "可把本人有权处理的课程录音转成文字，制作听力复习稿或练习英译；转写可能出错，须对照音频校订，并注意录音隐私和许可。",
-            "free": "官方仓库称代码和权重按 MIT 许可证发布，可下载后本地运行；本地计算资源与软件环境由使用者承担。模型账号、地区、次数配额及托管服务价格官方未说明。",
-            "category": "免费开放模型 / 语音学习工具",
-            "source": {
-              "name": "OpenAI GitHub",
-              "published": "官方未说明",
-              "url": "https://github.com/openai/whisper"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：Google AI Studio 可免费试用部分模型",
-            "summary": "Google 官方定价页列有 Gemini API 免费层：部分模型的输入和输出 token 免费，并可从 Google AI Studio 开始。免费层提交的内容会用于改进 Google 产品，因此不适合上传未公开论文或个人资料。",
-            "howTo": "打开 Google AI Studio，在官方定价页选择明确标注 Free Tier 的模型，按 API 快速开始说明发起调用；使用前逐项查看模型的速率限制和数据条款。",
-            "impact": "可用于练习 API 调用、构建课程原型或比较提示词；对研究草稿和个人数据，先评估免费层的数据使用条款并避免提交敏感内容。",
-            "free": "官方定价页说明部分模型的输入、输出 token 免费，但只限指定模型，且免费层内容用于改进 Google 产品。各模型具体额度、账号资格和地区条件官方未统一说明，应以所选模型页面为准。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期用一篇大学生拖延研究报道练习区分描述性证据与因果解释，再以厄尔尼诺风险报道梳理气候预测、地方准备和社区韧性之间的逻辑；两篇原文均可免费阅读全文。",
-        "articles": [
-          {
-            "title": "University students say procrastination is biggest threat to their academic performance",
-            "source": "The Guardian",
-            "published": "2026-10-08",
-            "url": "https://www.theguardian.com/education/2026/oct/08/university-students-procrastination-biggest-threat-academic-performance",
-            "readingTime": "约 5 分钟",
-            "topic": "教育 / 拖延与大学生心理健康",
-            "summary": "文章以一项覆盖超过 65,000 名美国年轻人的研究为中心，指出受访大学生最常把拖延列为损害学业表现的问题之一，近半数称其妨碍学术任务。报道先呈现研究结果和研究者的意外发现，再引用心理学者提醒：这是一项描述性“快照”，不能据此作过度因果推断。随后解释拖延常与逃避任务引发的困难情绪有关，短期情绪修复可能转成压力、睡眠受损和继续拖延的反馈循环。结尾否定“懒惰”或单纯时间管理缺陷的简化解释，呼吁大学采取积极干预。",
-            "reason": [
-              "主题关联教育公平、大学生心理健康与学习策略，适合讨论个人行为和高校支持责任。",
-              "结构由大型调查结论切入，补充受访研究者与外部专家的不同判断，再解释反馈机制并落到干预建议。",
-              "可练习主旨题、研究局限判断、因果链梳理，以及区分调查发现与专家解释。",
-              "procrastination、impediment、salience、intervention 等词汇适用于教育、心理健康和问题解决类写作。",
-              "写作可借鉴“数据描述—谨慎解释—机制分析—提出干预”的论证结构，并避免把相关性写成因果性。"
-            ],
-            "vocabulary": [
-              {
-                "word": "procrastination",
-                "phonetic": "/prəˌkræstɪˈneɪʃn/",
-                "part": "n.",
-                "translation": "拖延；耽搁"
-              },
-              {
-                "word": "impediment",
-                "phonetic": "/ɪmˈpedɪmənt/",
-                "part": "n.",
-                "translation": "障碍；妨碍因素"
-              },
-              {
-                "word": "distress",
-                "phonetic": "/dɪˈstres/",
-                "part": "n.",
-                "translation": "痛苦；忧虑"
-              },
-              {
-                "word": "feedback loop",
-                "phonetic": "/ˈfiːdbæk luːp/",
-                "part": "n.",
-                "translation": "反馈循环"
-              },
-              {
-                "word": "salience",
-                "phonetic": "/ˈseɪliəns/",
-                "part": "n.",
-                "translation": "显著性；突出程度"
-              },
-              {
-                "word": "snapshot",
-                "phonetic": "/ˈsnæpʃɒt/",
-                "part": "n.",
-                "translation": "概况；某一时点的快照"
-              },
-              {
-                "word": "hamper",
-                "phonetic": "/ˈhæmpə(r)/",
-                "part": "v.",
-                "translation": "妨碍；阻碍"
-              },
-              {
-                "word": "derail",
-                "phonetic": "/diːˈreɪl/",
-                "part": "v.",
-                "translation": "使偏离计划；打乱"
-              },
-              {
-                "word": "intervention",
-                "phonetic": "/ˌɪntəˈvenʃn/",
-                "part": "n.",
-                "translation": "干预；介入措施"
-              },
-              {
-                "word": "mood repair",
-                "phonetic": "/muːd rɪˈpeə(r)/",
-                "part": "n.",
-                "translation": "情绪修复；短暂改善心情"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Procrastination is the biggest problem that can harm students’ academic performance at university.",
-                "analysis": [
-                  "主干是 Procrastination is the biggest problem，系表结构直接提出文章核心判断。",
-                  "that can harm students’ academic performance 是定语从句，修饰 problem。",
-                  "at university 限定 academic performance 的语境，指出讨论对象是大学学习。",
-                  "最高级 the biggest 加 can harm 将调查中的相对排序转述为鲜明结论。",
-                  "写作可仿用 “X is a major problem that can affect Y” 引出教育问题。"
-                ],
-                "translation": "拖延是可能损害大学生学业表现的最大问题。"
-              },
-              {
-                "original": "This descriptive study with a large sample provides some additional insights into the relative impact of procrastination with respect to its range of harms.",
-                "analysis": [
-                  "主干是 This study provides insights，主语后的 descriptive 标明研究性质。",
-                  "with a large sample 是介词短语，补充研究样本特征。",
-                  "into the relative impact of procrastination 是 insights 的内容，说明研究比较拖延造成的影响。",
-                  "with respect to its range of harms 限定比较范围，避免把结论扩大到所有方面。",
-                  "长句通过连续介词短语层层限定；描述性研究提供线索，但不自动证明因果关系。"
-                ],
-                "translation": "这项样本量较大的描述性研究，进一步揭示了拖延在不同危害方面的相对影响。"
-              },
-              {
-                "original": "Universities should be aware that many of their students are likely to be hampered by procrastination.",
-                "analysis": [
-                  "主句核心是 Universities should be aware，should be aware 表示建议高校重视。",
-                  "that 引导宾语从句，具体说明高校应意识到的内容。",
-                  "many of their students 是从句主语；are likely to 表示可能性而非确定比例。",
-                  "to be hampered by procrastination 是被动结构，突出学生受到拖延妨碍。",
-                  "写作可用 “Institutions should be aware that…” 从证据过渡到政策建议。"
-                ],
-                "translation": "高校应意识到，许多学生可能正受到拖延的妨碍。"
-              }
-            ]
-          },
-          {
-            "title": "‘Like an earthquake’: El Niño is coming for California – is the state ready?",
-            "source": "The Guardian",
-            "published": "2026-10-07",
-            "url": "https://www.theguardian.com/us-news/2026/oct/07/california-el-nino-preparedness",
-            "readingTime": "约 8 分钟",
-            "topic": "环境 / 厄尔尼诺与加州复合灾害准备",
-            "summary": "文章从加州湾区一次高水位淹路的现场写起，说明潜在强厄尔尼诺可能加剧加州的洪水、海岸侵蚀、山火后泥石流和高温风险。随后解释暖海温如何影响风险，并引用州气候学家和地方应急官员，展示南北加州影响不同、预测只能提高风险概率而非给出确定结果。中段按沿海社区和灾害恢复区梳理沙袋、堤岸、排水渠及应急系统等准备工作，同时指出政府资源无法在灾害初期覆盖每个人。结尾把重点落在居民预警、社区互助和韧性建设上，认为邻里联系有助于降低灾害冲击。",
-            "reason": [
-              "气候风险、灾害治理与社区韧性是环境和公共政策类常见考研主题。",
-              "文章由现场洪水引入，解释厄尔尼诺机制和地区差异，再以官员引语列举准备行动，最后强调社区层面的应对。",
-              "可练习区分风险概率与确定预测、辨认案例证据，以及推断作者对政府准备和居民互助的态度。",
-              "compounding、elevated、resilience、crosshairs 等表达适用于环境风险和公共安全话题。",
-              "写作可借鉴“指出复合风险—承认预测局限—列出分层准备—强调社区协作”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "vulnerabilities",
-                "phonetic": "/ˌvʌlnərəˈbɪlətiz/",
-                "part": "n.",
-                "translation": "脆弱性；易受影响之处"
-              },
-              {
-                "word": "tumultuous",
-                "phonetic": "/tjuːˈmʌltʃuəs/",
-                "part": "adj.",
-                "translation": "动荡的；剧烈多变的"
-              },
-              {
-                "word": "brewing",
-                "phonetic": "/ˈbruːɪŋ/",
-                "part": "v.",
-                "translation": "正在酝酿；即将发生"
-              },
-              {
-                "word": "crosshairs",
-                "phonetic": "/ˈkrɒsˌheəz/",
-                "part": "n.",
-                "translation": "准星；in the crosshairs 指成为威胁或攻击目标"
-              },
-              {
-                "word": "compounding",
-                "phonetic": "/kəmˈpaʊndɪŋ/",
-                "part": "adj.",
-                "translation": "叠加的；复合加剧的"
-              },
-              {
-                "word": "elevated",
-                "phonetic": "/ˈelɪveɪtɪd/",
-                "part": "adj.",
-                "translation": "升高的；增加的"
-              },
-              {
-                "word": "resilience",
-                "phonetic": "/rɪˈzɪliəns/",
-                "part": "n.",
-                "translation": "韧性；恢复力"
-              },
-              {
-                "word": "mobilize",
-                "phonetic": "/ˈməʊbəlaɪz/",
-                "part": "v.",
-                "translation": "动员；调集"
-              },
-              {
-                "word": "berm",
-                "phonetic": "/bɜːm/",
-                "part": "n.",
-                "translation": "沙堤；土埂"
-              },
-              {
-                "word": "culvert",
-                "phonetic": "/ˈkʌlvət/",
-                "part": "n.",
-                "translation": "涵洞；排水管涵"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "A strong El Niño shifts the probabilities – it does not determine exact outcomes.",
-                "analysis": [
-                  "主句核心是 A strong El Niño shifts the probabilities，说明现象改变风险分布。",
-                  "破折号后 it does not determine exact outcomes 省略重复主语所指，补充限定前句。",
-                  "does not 与 shifts 构成对照：概率改变不等于具体事件必然发生。",
-                  "exact 修饰 outcomes，突出预测无法精确确定个别结果。",
-                  "“shift probabilities, not determine outcomes” 是表达风险而非宿命的实用结构。"
-                ],
-                "translation": "强厄尔尼诺会改变各种结果出现的概率，却不能决定确切结果。"
-              },
-              {
-                "original": "The risks are but a taste of what’s to come as the world warms.",
-                "analysis": [
-                  "主干是 The risks are but a taste，but 在此表示“仅仅”。",
-                  "of what’s to come 是介词短语，说明眼前风险只是未来可能情况的一部分。",
-                  "as the world warms 是时间/背景状语从句，交代风险加深的气候背景。",
-                  "taste 使用“尝到一小部分”的比喻，强调当前事件只是预示。",
-                  "写作可用 “be but a taste of…” 表达当下案例预示更大趋势。"
-                ],
-                "translation": "随着全球变暖，这些风险不过是未来可能出现情形的一小部分。"
-              },
-              {
-                "original": "Our communities are the fabric that gets us through these disasters – neighbors helping neighbors saves lives.",
-                "analysis": [
-                  "主句核心是 Our communities are the fabric，以 fabric 比喻社区关系构成支撑网络。",
-                  "that gets us through these disasters 是定语从句，修饰 fabric 并说明其作用。",
-                  "破折号后 neighbors helping neighbors saves lives 对前面的比喻作具体解释。",
-                  "邻里互助与 saves lives 的因果表达把抽象韧性落到行动结果。",
-                  "写作可借鉴“抽象判断 + 破折号 + 具体解释”的衔接方式。"
-                ],
-                "translation": "社区关系是帮助人们渡过灾害的纽带——邻里互助能够挽救生命。"
               }
             ]
           }
