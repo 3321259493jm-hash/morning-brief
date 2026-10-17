@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-16T09:10:00+08:00",
+  "updatedAt": "2026-10-17T09:17:33+08:00",
   "issues": [
+    {
+      "date": "2026-10-17",
+      "status": "ready",
+      "ai": {
+        "intro": "10月15日至16日核实到3项可实际尝试的 AI 产品更新，分别涉及备考资料生成、短信防诈与 AI 搜索结果链接。免费资源重新核验后，补充学生 Copilot 权益与可本地运行的 gpt-oss 权重；各项限制以所列官方页面为准。",
+        "updates": [
+          {
+            "event": "Gemini Notebook 新增 60 秒视频概览与互动测验（2026-10-16）",
+            "summary": "Google 的 Gemini Notebook 学习指南介绍了新的短视频概览和互动测验形式：视频概览约 60 秒，测验可用于主动回忆课程材料。公告把它们定位为备考工具，并未给出与旧功能的性能比较。",
+            "howTo": "打开 notebook.google，使用课程讲义或复习资料建立笔记本；在笔记本中生成视频概览或互动测验，先用测验自测，再回到原资料核对错题。",
+            "impact": "可把长讲义先压缩成短视频复习，再用互动题检查概念是否记牢；适合考前快速回顾，但不应把自动生成的题目当作标准答案。",
+            "free": "功能入口为 Gemini Notebook（notebook.google）。该公告未说明价格、账户资格、地区开放范围或生成配额；是否可用以本人页面实际显示为准。",
+            "category": "AI 学习工具 / 备考功能",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-16",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/three-tips-study-gemini-notebook/"
+            }
+          },
+          {
+            "event": "Circle to Search 可检查可疑短信（2026-10-15）",
+            "summary": "Google 介绍了 Android 上 Circle to Search 的短信防诈用法：圈选收到的可疑短信后，AI Overview 会给出风险线索和建议的下一步操作，帮助用户在点击链接或分享个人信息前先检查。",
+            "howTo": "在支持 Circle to Search 的 Android 设备上长按 Home 键或导航栏，圈住可疑短信内容，阅读 AI Overview 的线索；若发现风险，再自行删除短信并拉黑号码。",
+            "impact": "收到陌生人催促转账、索要资料或附带链接的短信时，可先用它整理可疑信号；结果只是辅助判断，仍应通过机构官网等独立渠道核实。",
+            "free": "官方说明该用法适用于 Android 的 Circle to Search，但没有说明价格、账户条件、地区覆盖或调用配额；具体可用性取决于设备上是否提供该功能。",
+            "category": "AI 安全工具 / Android",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-15",
+              "url": "https://blog.google/innovation-and-ai/technology/safety-security/circle-to-search-android-text-message-scams/"
+            }
+          },
+          {
+            "event": "Google Search 调整 AI 回答中的网页链接展示（2026-10-15）",
+            "summary": "Google 宣布在 AI Mode 与 AI Overviews 中更频繁地把行内来源链接放到回答较靠前的位置；同时测试在回答顶部集中呈现完成特定任务所需的官方网页，并附上链接用途说明。重点是让读者更容易跳转到原始网页，而非只看 AI 摘要。",
+            "howTo": "在 Google Search 的 AI Mode 或 AI Overview 中提问；如账户界面已出现较靠前的行内链接或顶部官方链接区，点开来源网页核验原文。顶部专门展示仍属测试，不保证每次搜索都出现。",
+            "impact": "查奖学金申请、学校报名或政府办事流程时，可直接从 AI 答案跳到原始办理页面；写课程论文时也更方便追溯 AI 摘要依据的来源。",
+            "free": "更新涉及 Google Search 的 AI Mode 和 AI Overviews；顶部链接区由官方说明为测试功能。公告未说明价格、账户资格、地区范围或使用配额，也未列出测试用户条件。",
+            "category": "AI 搜索 / 来源可追溯性",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-15",
+              "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Student：经验证学生可免费使用",
+            "summary": "GitHub 官方说明，通过 GitHub Education 验证的学生可免费使用 Copilot 功能；该学生说明页未列明具体功能范围与使用额度。",
+            "howTo": "登录 GitHub 并在 Settings > Education benefits 完成学生验证；通过后按提示单独启用 Copilot Student。检查结账页面，若仍只显示付费计划，不要购买，等待权益同步后重试。",
+            "impact": "可用于课程编程、调试和代码解释练习；启用前先核对账户实际显示的可用功能与额度。",
+            "free": "价格为免费；资格限 GitHub Education 验证通过的学生，GitHub 每月重新核验资格。此说明页未列出具体功能范围、使用额度、地区限制或截止日期，官方未说明。",
+            "category": "学生教育权益 / AI 编程",
+            "source": {
+              "name": "GitHub Docs",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
+            }
+          },
+          {
+            "event": "OpenAI gpt-oss-20b：Apache 2.0 开放权重可本地运行",
+            "summary": "OpenAI 官方 Hugging Face 模型卡提供 gpt-oss-20b 下载，并标注 Apache 2.0 许可；模型卡称其可在约 16GB 内存范围运行，支持可配置推理强度与本地推理工具。下载权重不等于获得免费云端算力。",
+            "howTo": "在具备足够内存的电脑安装 Ollama 后执行 `ollama pull gpt-oss:20b` 和 `ollama run gpt-oss:20b`；也可按模型卡使用 Transformers。先确认设备内存与存储空间，再离线试做总结或代码解释。",
+            "impact": "可用于学习本地部署、提示词测试和模型行为对比，避免把课程资料上传给在线服务；本地设备资源不足时仍需另行承担云算力成本。",
+            "free": "模型权重可下载，模型卡标注 Apache 2.0；本地推理不按 API token 计费，但设备、电力或云端算力可能收费。下载账户要求、地区限制、调用配额和优惠截止日期官方未说明。",
+            "category": "开放模型 / 本地学习",
+            "source": {
+              "name": "OpenAI 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/openai/gpt-oss-20b"
+            }
+          },
+          {
+            "event": "Claude Free：网页、桌面与移动端日常问答",
+            "summary": "Claude 官方价格页列出 Free 计划，可用于日常问题；网页、桌面、移动端与 Claude Code 共用一组使用额度，限制按滚动 5 小时窗口重置。实际可用量随对话长度、模型和所用功能变化。",
+            "howTo": "登录 Claude 并选择 Free 计划，在网页端、桌面端或移动端输入学习问题；通过 Settings > Usage 查看当前用量，达到上限后等待滚动窗口重置。",
+            "impact": "可用于解释课程概念、生成自测问题或润色笔记；长文档与多轮对话会消耗共享额度，关键结论应回到教材和原始资料核对。",
+            "free": "官方提供免费计划；无固定消息条数，网页、桌面、移动端和 Claude Code 共用额度，按滚动 5 小时窗口重置。具体消息配额、地区资格和免费计划截止日期官方未说明。",
+            "category": "长期免费 / 网页与应用",
+            "source": {
+              "name": "Claude Pricing",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Gemini API Free Tier：部分模型输入与输出 token 免费",
+            "summary": "Google AI for Developers 定价页列出 Gemini API Free Tier：部分模型的输入和输出 token 免费，并可使用 Google AI Studio。官方同时说明免费层提交内容可能用于改进 Google 产品，因此不适合输入敏感资料。",
+            "howTo": "在 Google AI Studio 创建 API key，选用定价表明确标为 Free Tier 的模型进行小规模试验；到 AI Studio 的 rate limits 页面查看项目当前 RPM、TPM 和每日请求限制。",
+            "impact": "可用于课程原型、文本分类或学习 API 调用流程；先核对模型级免费状态与实时限额，避免误把付费模型调用当作免费。",
+            "free": "价格为 $0 的仅限定价表中标注 Free Tier 的模型；各模型 RPM、TPM 与每日额度不同并会随项目层级变化，应在 AI Studio 查看。免费层提交内容可用于改进产品；具体地区资格和免费层截止日期官方未说明。",
+            "category": "免费 API / 原型开发",
+            "source": {
+              "name": "Google AI for Developers Pricing",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Cloudflare Workers AI：每日 10,000 Neurons 免费额度",
+            "summary": "Cloudflare 官方定价页说明，Workers AI 每日提供 10,000 Neurons 免费额度，模型按用量折算，额度在 UTC 00:00 重置。Free 计划超过额度后需升级付费计划；部分模型从一开始就要求付费账单方式。",
+            "howTo": "创建 Cloudflare 账户后，在 Workers AI Dashboard、Workers binding 或 REST API 选用未标注付费要求的模型，先发少量请求，再到 Dashboard 查看 Neurons 用量。",
+            "impact": "适合制作文本生成、分类等轻量 API 原型；不同模型耗用量不同，应先检查逐模型价格和需绑定付费方式的型号。",
+            "free": "Free 与 Paid Workers 每日共享 10,000 Neurons 免费额度，UTC 00:00 重置；Free 超出后需升级至 Workers Paid，Paid 超出部分为每 1,000 Neurons $0.011。部分模型要求付费账单方式；地区资格和截止日期官方未说明。",
+            "category": "免费 API / 每日额度",
+            "source": {
+              "name": "Cloudflare Workers AI Pricing",
+              "published": "2026-10-15",
+              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Can social media bans protect young people’s mental health? Early research suggests that bans aren’t the answer",
+            "source": "The Conversation",
+            "published": "2026-10-16",
+            "url": "https://theconversation.com/can-social-media-bans-protect-young-peoples-mental-health-early-research-suggests-that-bans-arent-the-answer-291629",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "社会 / 青少年与社交媒体",
+            "summary": "文章从多国讨论限制未成年人使用社交媒体的政策切入，追问禁令是否真能改善青少年心理健康。作者先回顾心理健康担忧和平台风险，再指出社交媒体也能提供社群连接、自我表达与公民参与；现有证据不足以把青少年心理问题简单归因于平台使用。文章随后讨论年龄验证被绕过、隐私数据收集和禁令可能把青少年推向更危险网络空间等执行难题，最后主张以默认安全设置、数字素养教育、适度离屏时间、心理健康支持及让青少年参与讨论等组合措施取代单一禁令。",
+            "reason": [
+              "主题连接青少年心理健康、平台治理与个人隐私，适合社会政策类阅读和“如何平衡保护与权利”写作。",
+              "篇章先提出跨国禁令这一争议，再呈现心理风险与社交媒体益处，继而分析执行和隐私问题，最后给出替代方案，论证层次清楚。",
+              "可练习识别作者立场、区分相关性与因果、判断证据是否支持政策，以及概括反方理由等题型。",
+              "prohibit、precarious、oversight、biometric 等词汇覆盖政策、风险和技术监管语境，适合积累议论文表达。",
+              "写作可借鉴“承认问题—指出单一方案局限—提出多层次替代措施”的结构，并用 rather than、by default 等表达比较与政策设计。"
+            ],
+            "vocabulary": [
+              {
+                "word": "prohibiting",
+                "phonetic": "/prəˈhɪbɪtɪŋ/",
+                "part": "v.",
+                "translation": "禁止；阻止"
+              },
+              {
+                "word": "precarious",
+                "phonetic": "/prɪˈkeriəs/",
+                "part": "adj.",
+                "translation": "不稳定的；脆弱的"
+              },
+              {
+                "word": "compounding",
+                "phonetic": "/kəmˈpaʊndɪŋ/",
+                "part": "v.",
+                "translation": "加剧；使问题更复杂"
+              },
+              {
+                "word": "enacted",
+                "phonetic": "/ɪˈnæktɪd/",
+                "part": "v.",
+                "translation": "颁布；使成为法律"
+              },
+              {
+                "word": "oversight",
+                "phonetic": "/ˈoʊvərsaɪt/",
+                "part": "n.",
+                "translation": "监督；监管"
+              },
+              {
+                "word": "mechanism",
+                "phonetic": "/ˈmekənɪzəm/",
+                "part": "n.",
+                "translation": "机制；方法"
+              },
+              {
+                "word": "work-around",
+                "phonetic": "/ˈwɜːrkəraʊnd/",
+                "part": "n.",
+                "translation": "变通办法；规避方式"
+              },
+              {
+                "word": "biometric",
+                "phonetic": "/ˌbaɪoʊˈmetrɪk/",
+                "part": "adj.",
+                "translation": "生物特征识别的"
+              },
+              {
+                "word": "migrate",
+                "phonetic": "/ˈmaɪɡreɪt/",
+                "part": "v.",
+                "translation": "迁移；转移"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The question is, are these bans the solution to the mental health problems young people are facing?",
+                "analysis": [
+                  "前半句主干为 The question is，冒号式逗号后接直接提出的核心疑问。",
+                  "疑问句主干为 are these bans the solution，主语是 these bans，表语为 the solution。",
+                  "to the mental health problems 是介词短语，限定 solution 所针对的问题。",
+                  "young people are facing 是省略关系代词的定语从句，修饰 problems。",
+                  "可借鉴 The question is, ...? 引出政策是否解决问题的讨论。"
+                ],
+                "translation": "问题在于，这些禁令真能解决年轻人正面临的心理健康问题吗？"
+              },
+              {
+                "original": "There isn’t clear evidence that spending time on these platforms is the main cause of their mental health problems.",
+                "analysis": [
+                  "主句是 There isn’t clear evidence，there 作引导词，核心名词为 evidence。",
+                  "that 引导同位语从句，具体说明缺乏的证据内容。",
+                  "从句主干是 spending time ... is the main cause，动名词短语作主语。",
+                  "on these platforms 修饰 spending time；of their mental health problems 修饰 cause。",
+                  "句子限定的是因果证据不足，而非否认心理健康问题存在，适合用于谨慎论证。"
+                ],
+                "translation": "目前没有明确证据表明，在这些平台上花时间是他们心理健康问题的主要成因。"
+              },
+              {
+                "original": "Supporting young people’s mental health is a complex endeavor that will require a combination of people, organizations and resources coming together.",
+                "analysis": [
+                  "主句主干为 Supporting ... is a complex endeavor，动名词短语作主语。",
+                  "young people’s mental health 是 supporting 的宾语，说明支持的对象。",
+                  "that 引导定语从句修饰 endeavor，指出这一努力需要什么。",
+                  "will require 的宾语是 a combination；of people, organizations and resources 列出参与要素。",
+                  "coming together 作后置修饰，强调多方协作；可用于提出综合性政策方案。"
+                ],
+                "translation": "支持年轻人的心理健康是一项复杂工作，需要个人、组织和资源共同参与。"
+              }
+            ]
+          },
+          {
+            "title": "Could your plastic film packaging serve a purpose? We won’t know until recycling laws change",
+            "source": "The Conversation",
+            "published": "2026-10-16",
+            "url": "https://theconversation.com/could-your-plastic-film-packaging-serve-a-purpose-we-wont-know-until-recycling-laws-change-293561",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "环境 / 塑料回收与能源",
+            "summary": "文章讨论面包袋、包装膜等难回收软塑料能否通过热解转化为油，并把焦点放在英国回收规则如何定义“回收”：现行规则不把转成燃料算作回收，可能限制企业试验。作者说明热解在无氧条件下分解塑料，也用美国、荷兰和日本案例呈现产业结果不一；随后权衡潜在减排与污染处理、炼制和最终燃烧排放等代价。结尾强调热解油不能替代进口石油，且若产品外销也难带来本国能源安全收益，因此规则可考虑为真正难回收的残余塑料留出试验空间，同时避免夸大其供能作用。",
+            "reason": [
+              "文章切合环境治理、循环经济与能源安全主题，可用于讨论技术方案如何受法规和市场条件影响。",
+              "结构从日常塑料问题提出设问，解释法律定义，再比较不同地区的产业结果，继而权衡环境代价并回到政策建议。",
+              "适合考查作者主张、案例作用、因果链条以及“方案的潜力与局限”等细节和推断题。",
+              "pyrolysis、residue、incinerator、emissions 等词可拓展环境科技与政策领域的学术词汇。",
+              "写作可借鉴先承认技术潜力、再列出现实限制、最后提出有边界的法规调整，避免把单项技术描述成万能解法。"
+            ],
+            "vocabulary": [
+              {
+                "word": "flimsy",
+                "phonetic": "/ˈflɪmzi/",
+                "part": "adj.",
+                "translation": "薄而易破的；不结实的"
+              },
+              {
+                "word": "notoriously",
+                "phonetic": "/nəˈtɔːriəsli/",
+                "part": "adv.",
+                "translation": "众所周知地（常指负面特点）"
+              },
+              {
+                "word": "scope",
+                "phonetic": "/skoʊp/",
+                "part": "n.",
+                "translation": "范围；余地"
+              },
+              {
+                "word": "residue",
+                "phonetic": "/ˈrezɪduː/",
+                "part": "n.",
+                "translation": "残留物；残渣"
+              },
+              {
+                "word": "refinery",
+                "phonetic": "/rɪˈfaɪnəri/",
+                "part": "n.",
+                "translation": "炼油厂；精炼厂"
+              },
+              {
+                "word": "incinerator",
+                "phonetic": "/ɪnˈsɪnəreɪtər/",
+                "part": "n.",
+                "translation": "焚化炉；焚烧设施"
+              },
+              {
+                "word": "emissions",
+                "phonetic": "/ɪˈmɪʃənz/",
+                "part": "n. pl.",
+                "translation": "排放物；排放量"
+              },
+              {
+                "word": "incentivize",
+                "phonetic": "/ɪnˈsentɪvaɪz/",
+                "part": "v.",
+                "translation": "激励；给予动力"
+              },
+              {
+                "word": "dependence on",
+                "phonetic": "/dɪˈpendəns ɑːn/",
+                "part": "n. phr.",
+                "translation": "对……的依赖"
+              },
+              {
+                "word": "exposed to",
+                "phonetic": "/ɪkˈspoʊzd tuː/",
+                "part": "adj. phr.",
+                "translation": "暴露于；易受……影响"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Plastic film is notoriously tricky to recycle.",
+                "analysis": [
+                  "句子主干为 Plastic film is tricky，主语是 plastic film，系动词后接形容词补足语。",
+                  "notoriously 是方式副词，强调这种难处理特征广为人知。",
+                  "to recycle 是不定式补足语，说明 tricky 的具体方面。",
+                  "句子以日常材料开篇，先用简洁判断建立环境问题。",
+                  "可借鉴 be tricky to do 表达某事做起来困难。"
+                ],
+                "translation": "塑料薄膜众所周知很难回收。"
+              },
+              {
+                "original": "With no oxygen, the plastic cannot burn, so it breaks down into pyrolysis oil along with some gas and solid residue.",
+                "analysis": [
+                  "句首 With no oxygen 是介词短语，补充说明反应发生的条件。",
+                  "前半句主干为 the plastic cannot burn，情态动词 cannot 表示不能燃烧。",
+                  "so 连接结果分句 it breaks down，明确呈现“无氧—不燃烧—分解”的因果关系。",
+                  "into pyrolysis oil 表示分解后的主要产物，along with 引出并列副产物。",
+                  "可借鉴 With..., ... so... 组织条件、过程和结果。"
+                ],
+                "translation": "没有氧气时，塑料不会燃烧，因此会分解成热解油，以及一些气体和固体残渣。"
+              },
+              {
+                "original": "Plastic waste will never replace imported oil.",
+                "analysis": [
+                  "句子主干为 Plastic waste will never replace imported oil，主语和谓语关系直接。",
+                  "will never 加动词原形，表达对未来结果的明确否定判断。",
+                  "imported 修饰 oil，限定讨论的是进口石油而非所有能源。",
+                  "该短句先划定技术方案的上限，后文再用数量比较说明其规模有限。",
+                  "可借鉴 will never replace ... 对夸大某项替代技术的说法作让步式限定。"
+                ],
+                "translation": "塑料废弃物永远无法取代进口石油。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-16",
       "status": "ready",
@@ -120,16 +465,66 @@ window.BRIEFING_DATA = {
               "议论文可借鉴“提出担忧—列证据—承认技术价值—限定使用条件”的平衡结构。"
             ],
             "vocabulary": [
-              {"word":"clinician","phonetic":"/klɪˈnɪʃən/","part":"n.","translation":"临床医生"},
-              {"word":"developmental","phonetic":"/ˌdɪveləpˈmentəl/","part":"adj.","translation":"发育的；发展的"},
-              {"word":"consult","phonetic":"/kənˈsʌlt/","part":"v.","translation":"征求意见；咨询"},
-              {"word":"guidance","phonetic":"/ˈɡaɪdəns/","part":"n.","translation":"指导意见；指引"},
-              {"word":"short-sightedness","phonetic":"/ˌʃɔːtˈsaɪtɪdnəs/","part":"n.","translation":"近视"},
-              {"word":"signatory","phonetic":"/ˈsɪɡnətəri/","part":"n.","translation":"签署人"},
-              {"word":"advocate","phonetic":"/ˈædvəkeɪt/","part":"v.","translation":"提倡；主张"},
-              {"word":"critically","phonetic":"/ˈkrɪtɪkli/","part":"adv.","translation":"批判性地"},
-              {"word":"appraise","phonetic":"/əˈpreɪz/","part":"v.","translation":"评估；评价"},
-              {"word":"compound","phonetic":"/kəmˈpaʊnd/","part":"v.","translation":"使加剧；使恶化"}
+              {
+                "word": "clinician",
+                "phonetic": "/klɪˈnɪʃən/",
+                "part": "n.",
+                "translation": "临床医生"
+              },
+              {
+                "word": "developmental",
+                "phonetic": "/ˌdɪveləpˈmentəl/",
+                "part": "adj.",
+                "translation": "发育的；发展的"
+              },
+              {
+                "word": "consult",
+                "phonetic": "/kənˈsʌlt/",
+                "part": "v.",
+                "translation": "征求意见；咨询"
+              },
+              {
+                "word": "guidance",
+                "phonetic": "/ˈɡaɪdəns/",
+                "part": "n.",
+                "translation": "指导意见；指引"
+              },
+              {
+                "word": "short-sightedness",
+                "phonetic": "/ˌʃɔːtˈsaɪtɪdnəs/",
+                "part": "n.",
+                "translation": "近视"
+              },
+              {
+                "word": "signatory",
+                "phonetic": "/ˈsɪɡnətəri/",
+                "part": "n.",
+                "translation": "签署人"
+              },
+              {
+                "word": "advocate",
+                "phonetic": "/ˈædvəkeɪt/",
+                "part": "v.",
+                "translation": "提倡；主张"
+              },
+              {
+                "word": "critically",
+                "phonetic": "/ˈkrɪtɪkli/",
+                "part": "adv.",
+                "translation": "批判性地"
+              },
+              {
+                "word": "appraise",
+                "phonetic": "/əˈpreɪz/",
+                "part": "v.",
+                "translation": "评估；评价"
+              },
+              {
+                "word": "compound",
+                "phonetic": "/kəmˈpaʊnd/",
+                "part": "v.",
+                "translation": "使加剧；使恶化"
+              }
             ],
             "sentences": [
               {
@@ -183,16 +578,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“承认成就—指出分配问题—提出生产率转型”的让步与转折结构。"
             ],
             "vocabulary": [
-              {"word":"prosperity","phonetic":"/prɒˈsperəti/","part":"n.","translation":"繁荣；兴旺"},
-              {"word":"converge","phonetic":"/kənˈvɜːdʒ/","part":"v.","translation":"趋同；接近"},
-              {"word":"brain drain","phonetic":"/ˈbreɪn dreɪn/","part":"n. phr.","translation":"人才外流"},
-              {"word":"influx","phonetic":"/ˈɪnflʌks/","part":"n.","translation":"涌入；流入"},
-              {"word":"inequality","phonetic":"/ˌɪnɪˈkwɒləti/","part":"n.","translation":"不平等"},
-              {"word":"convergence","phonetic":"/kənˈvɜːdʒəns/","part":"n.","translation":"趋同；趋近"},
-              {"word":"bolster","phonetic":"/ˈbəʊlstə/","part":"v.","translation":"加强；支持"},
-              {"word":"stellar","phonetic":"/ˈstelə/","part":"adj.","translation":"出色的；突出的"},
-              {"word":"productivity","phonetic":"/ˌprɒdʌkˈtɪvəti/","part":"n.","translation":"生产率；生产力"},
-              {"word":"unprecedented","phonetic":"/ʌnˈpresɪdentɪd/","part":"adj.","translation":"前所未有的"}
+              {
+                "word": "prosperity",
+                "phonetic": "/prɒˈsperəti/",
+                "part": "n.",
+                "translation": "繁荣；兴旺"
+              },
+              {
+                "word": "converge",
+                "phonetic": "/kənˈvɜːdʒ/",
+                "part": "v.",
+                "translation": "趋同；接近"
+              },
+              {
+                "word": "brain drain",
+                "phonetic": "/ˈbreɪn dreɪn/",
+                "part": "n. phr.",
+                "translation": "人才外流"
+              },
+              {
+                "word": "influx",
+                "phonetic": "/ˈɪnflʌks/",
+                "part": "n.",
+                "translation": "涌入；流入"
+              },
+              {
+                "word": "inequality",
+                "phonetic": "/ˌɪnɪˈkwɒləti/",
+                "part": "n.",
+                "translation": "不平等"
+              },
+              {
+                "word": "convergence",
+                "phonetic": "/kənˈvɜːdʒəns/",
+                "part": "n.",
+                "translation": "趋同；趋近"
+              },
+              {
+                "word": "bolster",
+                "phonetic": "/ˈbəʊlstə/",
+                "part": "v.",
+                "translation": "加强；支持"
+              },
+              {
+                "word": "stellar",
+                "phonetic": "/ˈstelə/",
+                "part": "adj.",
+                "translation": "出色的；突出的"
+              },
+              {
+                "word": "productivity",
+                "phonetic": "/ˌprɒdʌkˈtɪvəti/",
+                "part": "n.",
+                "translation": "生产率；生产力"
+              },
+              {
+                "word": "unprecedented",
+                "phonetic": "/ʌnˈpresɪdentɪd/",
+                "part": "adj.",
+                "translation": "前所未有的"
+              }
             ],
             "sentences": [
               {
@@ -352,16 +797,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“提出指控—呈现回应—检视工具证据—说明未决之处”的平衡论证结构。"
             ],
             "vocabulary": [
-              {"word":"proliferation","phonetic":"/prəˌlɪfəˈreɪʃən/","part":"n.","translation":"大量增加；泛滥"},
-              {"word":"epigraph","phonetic":"/ˈepɪɡræf/","part":"n.","translation":"题词；卷首引语"},
-              {"word":"aphorism","phonetic":"/ˈæfərɪzəm/","part":"n.","translation":"格言；警句"},
-              {"word":"maudlin","phonetic":"/ˈmɔːdlɪn/","part":"adj.","translation":"伤感过度的；多愁善感的"},
-              {"word":"trope","phonetic":"/troʊp/","part":"n.","translation":"惯用表达；常见主题"},
-              {"word":"arbiter","phonetic":"/ˈɑːrbɪtər/","part":"n.","translation":"裁决者；权威"},
-              {"word":"allegation","phonetic":"/ˌæləˈɡeɪʃən/","part":"n.","translation":"指控；未经证实的说法"},
-              {"word":"false positive","phonetic":"/ˌfɔːls ˈpɑːzətɪv/","part":"n. phr.","translation":"假阳性；误报"},
-              {"word":"third-party","phonetic":"/ˌθɜːrd ˈpɑːrti/","part":"adj.","translation":"第三方的"},
-              {"word":"genre","phonetic":"/ˈʒɑːnrə/","part":"n.","translation":"体裁；类型"}
+              {
+                "word": "proliferation",
+                "phonetic": "/prəˌlɪfəˈreɪʃən/",
+                "part": "n.",
+                "translation": "大量增加；泛滥"
+              },
+              {
+                "word": "epigraph",
+                "phonetic": "/ˈepɪɡræf/",
+                "part": "n.",
+                "translation": "题词；卷首引语"
+              },
+              {
+                "word": "aphorism",
+                "phonetic": "/ˈæfərɪzəm/",
+                "part": "n.",
+                "translation": "格言；警句"
+              },
+              {
+                "word": "maudlin",
+                "phonetic": "/ˈmɔːdlɪn/",
+                "part": "adj.",
+                "translation": "伤感过度的；多愁善感的"
+              },
+              {
+                "word": "trope",
+                "phonetic": "/troʊp/",
+                "part": "n.",
+                "translation": "惯用表达；常见主题"
+              },
+              {
+                "word": "arbiter",
+                "phonetic": "/ˈɑːrbɪtər/",
+                "part": "n.",
+                "translation": "裁决者；权威"
+              },
+              {
+                "word": "allegation",
+                "phonetic": "/ˌæləˈɡeɪʃən/",
+                "part": "n.",
+                "translation": "指控；未经证实的说法"
+              },
+              {
+                "word": "false positive",
+                "phonetic": "/ˌfɔːls ˈpɑːzətɪv/",
+                "part": "n. phr.",
+                "translation": "假阳性；误报"
+              },
+              {
+                "word": "third-party",
+                "phonetic": "/ˌθɜːrd ˈpɑːrti/",
+                "part": "adj.",
+                "translation": "第三方的"
+              },
+              {
+                "word": "genre",
+                "phonetic": "/ˈʒɑːnrə/",
+                "part": "n.",
+                "translation": "体裁；类型"
+              }
             ],
             "sentences": [
               {
@@ -415,16 +910,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“环境变化—经济机会—制度争议—长期影响”的层层推进结构。"
             ],
             "vocabulary": [
-              {"word":"traverse","phonetic":"/trəˈvɜːrs/","part":"v.","translation":"横越；穿越"},
-              {"word":"conceptual","phonetic":"/kənˈseptʃuəl/","part":"adj.","translation":"概念上的；理论性的"},
-              {"word":"touchstone","phonetic":"/ˈtʌtʃstoʊn/","part":"n.","translation":"检验标准；典型例证"},
-              {"word":"sovereign","phonetic":"/ˈsɑːvrən/","part":"adj.","translation":"拥有主权的"},
-              {"word":"convention","phonetic":"/kənˈvenʃən/","part":"n.","translation":"公约；惯例"},
-              {"word":"free-for-all","phonetic":"/ˌfriː fər ˈɔːl/","part":"n.","translation":"无规则的争夺；混战"},
-              {"word":"regionalization","phonetic":"/ˌriːdʒənələˈzeɪʃən/","part":"n.","translation":"区域化"},
-              {"word":"bellwether","phonetic":"/ˈbelˌweðər/","part":"n.","translation":"风向标；先兆"},
-              {"word":"commerce","phonetic":"/ˈkɑːmɜːrs/","part":"n.","translation":"商业；贸易"},
-              {"word":"sobering","phonetic":"/ˈsoʊbərɪŋ/","part":"adj.","translation":"令人清醒的；发人深省的"}
+              {
+                "word": "traverse",
+                "phonetic": "/trəˈvɜːrs/",
+                "part": "v.",
+                "translation": "横越；穿越"
+              },
+              {
+                "word": "conceptual",
+                "phonetic": "/kənˈseptʃuəl/",
+                "part": "adj.",
+                "translation": "概念上的；理论性的"
+              },
+              {
+                "word": "touchstone",
+                "phonetic": "/ˈtʌtʃstoʊn/",
+                "part": "n.",
+                "translation": "检验标准；典型例证"
+              },
+              {
+                "word": "sovereign",
+                "phonetic": "/ˈsɑːvrən/",
+                "part": "adj.",
+                "translation": "拥有主权的"
+              },
+              {
+                "word": "convention",
+                "phonetic": "/kənˈvenʃən/",
+                "part": "n.",
+                "translation": "公约；惯例"
+              },
+              {
+                "word": "free-for-all",
+                "phonetic": "/ˌfriː fər ˈɔːl/",
+                "part": "n.",
+                "translation": "无规则的争夺；混战"
+              },
+              {
+                "word": "regionalization",
+                "phonetic": "/ˌriːdʒənələˈzeɪʃən/",
+                "part": "n.",
+                "translation": "区域化"
+              },
+              {
+                "word": "bellwether",
+                "phonetic": "/ˈbelˌweðər/",
+                "part": "n.",
+                "translation": "风向标；先兆"
+              },
+              {
+                "word": "commerce",
+                "phonetic": "/ˈkɑːmɜːrs/",
+                "part": "n.",
+                "translation": "商业；贸易"
+              },
+              {
+                "word": "sobering",
+                "phonetic": "/ˈsoʊbərɪŋ/",
+                "part": "adj.",
+                "translation": "令人清醒的；发人深省的"
+              }
             ],
             "sentences": [
               {
@@ -584,16 +1129,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“提出理念—说明政策工具—给出案例—承认执行局限”的论证路径。"
             ],
             "vocabulary": [
-              {"word":"hand in hand","phonetic":"/ˌhænd ɪn ˈhænd/","part":"adv. phr.","translation":"密切合作；携手"},
-              {"word":"socialise","phonetic":"/ˈsəʊʃəlaɪz/","part":"v.","translation":"由社会或公共部门共同承担"},
-              {"word":"privatise","phonetic":"/ˈpraɪvətaɪz/","part":"v.","translation":"私有化；转由私人取得"},
-              {"word":"equity stake","phonetic":"/ˈekwəti steɪk/","part":"n. phr.","translation":"股权；持股"},
-              {"word":"sovereign wealth fund","phonetic":"/ˌsɒvrɪn ˈwelθ fʌnd/","part":"n. phr.","translation":"主权财富基金"},
-              {"word":"ambiguous","phonetic":"/æmˈbɪɡjuəs/","part":"adj.","translation":"含义不明确的；模糊的"},
-              {"word":"individualistic","phonetic":"/ˌɪndɪvɪdʒuəˈlɪstɪk/","part":"adj.","translation":"个人主义的"},
-              {"word":"inclusive","phonetic":"/ɪnˈkluːsɪv/","part":"adj.","translation":"包容的；不排斥群体的"},
-              {"word":"plausible","phonetic":"/ˈplɔːzəbl/","part":"adj.","translation":"看似合理的；可行的"},
-              {"word":"wellbeing","phonetic":"/ˌwelˈbiːɪŋ/","part":"n.","translation":"福祉；幸福安康"}
+              {
+                "word": "hand in hand",
+                "phonetic": "/ˌhænd ɪn ˈhænd/",
+                "part": "adv. phr.",
+                "translation": "密切合作；携手"
+              },
+              {
+                "word": "socialise",
+                "phonetic": "/ˈsəʊʃəlaɪz/",
+                "part": "v.",
+                "translation": "由社会或公共部门共同承担"
+              },
+              {
+                "word": "privatise",
+                "phonetic": "/ˈpraɪvətaɪz/",
+                "part": "v.",
+                "translation": "私有化；转由私人取得"
+              },
+              {
+                "word": "equity stake",
+                "phonetic": "/ˈekwəti steɪk/",
+                "part": "n. phr.",
+                "translation": "股权；持股"
+              },
+              {
+                "word": "sovereign wealth fund",
+                "phonetic": "/ˌsɒvrɪn ˈwelθ fʌnd/",
+                "part": "n. phr.",
+                "translation": "主权财富基金"
+              },
+              {
+                "word": "ambiguous",
+                "phonetic": "/æmˈbɪɡjuəs/",
+                "part": "adj.",
+                "translation": "含义不明确的；模糊的"
+              },
+              {
+                "word": "individualistic",
+                "phonetic": "/ˌɪndɪvɪdʒuəˈlɪstɪk/",
+                "part": "adj.",
+                "translation": "个人主义的"
+              },
+              {
+                "word": "inclusive",
+                "phonetic": "/ɪnˈkluːsɪv/",
+                "part": "adj.",
+                "translation": "包容的；不排斥群体的"
+              },
+              {
+                "word": "plausible",
+                "phonetic": "/ˈplɔːzəbl/",
+                "part": "adj.",
+                "translation": "看似合理的；可行的"
+              },
+              {
+                "word": "wellbeing",
+                "phonetic": "/ˌwelˈbiːɪŋ/",
+                "part": "n.",
+                "translation": "福祉；幸福安康"
+              }
             ],
             "sentences": [
               {
@@ -647,16 +1242,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“个人处境—调查证据—机构应对—未决伦理问题”的递进结构。"
             ],
             "vocabulary": [
-              {"word":"jobseeker","phonetic":"/ˈdʒɒbˌsiːkə/","part":"n.","translation":"求职者"},
-              {"word":"demoralising","phonetic":"/dɪˈmɒrəlaɪzɪŋ/","part":"adj.","translation":"令人泄气的"},
-              {"word":"hypocritical","phonetic":"/ˌhɪpəˈkrɪtɪkl/","part":"adj.","translation":"虚伪的；言行不一的"},
-              {"word":"screening","phonetic":"/ˈskriːnɪŋ/","part":"n.","translation":"筛选；初步审核"},
-              {"word":"misconduct","phonetic":"/ˌmɪsˈkɒndʌkt/","part":"n.","translation":"不当行为；违规"},
-              {"word":"spray and pray","phonetic":"/ˌspreɪ ən ˈpreɪ/","part":"n. phr.","translation":"广撒网式申请"},
-              {"word":"level playing field","phonetic":"/ˌlevəl ˈpleɪɪŋ fiːld/","part":"n. phr.","translation":"公平竞争环境"},
-              {"word":"authenticity","phonetic":"/ˌɔːθenˈtɪsəti/","part":"n.","translation":"真实性；真诚"},
-              {"word":"grapple with","phonetic":"/ˈɡræpəl wɪð/","part":"v. phr.","translation":"努力应对；设法解决"},
-              {"word":"assessment","phonetic":"/əˈsesmənt/","part":"n.","translation":"评估；考核"}
+              {
+                "word": "jobseeker",
+                "phonetic": "/ˈdʒɒbˌsiːkə/",
+                "part": "n.",
+                "translation": "求职者"
+              },
+              {
+                "word": "demoralising",
+                "phonetic": "/dɪˈmɒrəlaɪzɪŋ/",
+                "part": "adj.",
+                "translation": "令人泄气的"
+              },
+              {
+                "word": "hypocritical",
+                "phonetic": "/ˌhɪpəˈkrɪtɪkl/",
+                "part": "adj.",
+                "translation": "虚伪的；言行不一的"
+              },
+              {
+                "word": "screening",
+                "phonetic": "/ˈskriːnɪŋ/",
+                "part": "n.",
+                "translation": "筛选；初步审核"
+              },
+              {
+                "word": "misconduct",
+                "phonetic": "/ˌmɪsˈkɒndʌkt/",
+                "part": "n.",
+                "translation": "不当行为；违规"
+              },
+              {
+                "word": "spray and pray",
+                "phonetic": "/ˌspreɪ ən ˈpreɪ/",
+                "part": "n. phr.",
+                "translation": "广撒网式申请"
+              },
+              {
+                "word": "level playing field",
+                "phonetic": "/ˌlevəl ˈpleɪɪŋ fiːld/",
+                "part": "n. phr.",
+                "translation": "公平竞争环境"
+              },
+              {
+                "word": "authenticity",
+                "phonetic": "/ˌɔːθenˈtɪsəti/",
+                "part": "n.",
+                "translation": "真实性；真诚"
+              },
+              {
+                "word": "grapple with",
+                "phonetic": "/ˈɡræpəl wɪð/",
+                "part": "v. phr.",
+                "translation": "努力应对；设法解决"
+              },
+              {
+                "word": "assessment",
+                "phonetic": "/əˈsesmənt/",
+                "part": "n.",
+                "translation": "评估；考核"
+              }
             ],
             "sentences": [
               {
@@ -816,16 +1461,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴先呈现争论双方、再区分概念和制度事实、最后评估政策结果的论证结构。"
             ],
             "vocabulary": [
-              {"word":"privatisation","phonetic":"/ˌpraɪvətaɪˈzeɪʃən/","part":"n.","translation":"私有化"},
-              {"word":"unreliable","phonetic":"/ˌʌnrɪˈlaɪəbl/","part":"adj.","translation":"不可靠的"},
-              {"word":"operating costs","phonetic":"/ˈɒpəreɪtɪŋ kɒsts/","part":"n. phr.","translation":"运营成本"},
-              {"word":"subsidy","phonetic":"/ˈsʌbsədi/","part":"n.","translation":"补贴"},
-              {"word":"nationalisation","phonetic":"/ˌnæʃənəlaɪˈzeɪʃən/","part":"n.","translation":"国有化"},
-              {"word":"infrastructure","phonetic":"/ˈɪnfrəstrʌktʃə/","part":"n.","translation":"基础设施"},
-              {"word":"devolved","phonetic":"/dɪˈvɒlvd/","part":"adj.","translation":"权力下放的"},
-              {"word":"fixed fee","phonetic":"/ˌfɪkst ˈfiː/","part":"n. phr.","translation":"固定费用"},
-              {"word":"financial risk","phonetic":"/faɪˌnænʃəl ˈrɪsk/","part":"n. phr.","translation":"财务风险"},
-              {"word":"expire","phonetic":"/ɪkˈspaɪə/","part":"v.","translation":"到期"}
+              {
+                "word": "privatisation",
+                "phonetic": "/ˌpraɪvətaɪˈzeɪʃən/",
+                "part": "n.",
+                "translation": "私有化"
+              },
+              {
+                "word": "unreliable",
+                "phonetic": "/ˌʌnrɪˈlaɪəbl/",
+                "part": "adj.",
+                "translation": "不可靠的"
+              },
+              {
+                "word": "operating costs",
+                "phonetic": "/ˈɒpəreɪtɪŋ kɒsts/",
+                "part": "n. phr.",
+                "translation": "运营成本"
+              },
+              {
+                "word": "subsidy",
+                "phonetic": "/ˈsʌbsədi/",
+                "part": "n.",
+                "translation": "补贴"
+              },
+              {
+                "word": "nationalisation",
+                "phonetic": "/ˌnæʃənəlaɪˈzeɪʃən/",
+                "part": "n.",
+                "translation": "国有化"
+              },
+              {
+                "word": "infrastructure",
+                "phonetic": "/ˈɪnfrəstrʌktʃə/",
+                "part": "n.",
+                "translation": "基础设施"
+              },
+              {
+                "word": "devolved",
+                "phonetic": "/dɪˈvɒlvd/",
+                "part": "adj.",
+                "translation": "权力下放的"
+              },
+              {
+                "word": "fixed fee",
+                "phonetic": "/ˌfɪkst ˈfiː/",
+                "part": "n. phr.",
+                "translation": "固定费用"
+              },
+              {
+                "word": "financial risk",
+                "phonetic": "/faɪˌnænʃəl ˈrɪsk/",
+                "part": "n. phr.",
+                "translation": "财务风险"
+              },
+              {
+                "word": "expire",
+                "phonetic": "/ɪkˈspaɪə/",
+                "part": "v.",
+                "translation": "到期"
+              }
             ],
             "sentences": [
               {
@@ -879,16 +1574,66 @@ window.BRIEFING_DATA = {
               "写作可借鉴“具体事件—结构性解释—群体回应”的组织方式，并用归因限定语避免过度概括。"
             ],
             "vocabulary": [
-              {"word":"conspicuous","phonetic":"/kənˈspɪkjuəs/","part":"adj.","translation":"显眼的；显著的"},
-              {"word":"stereotype","phonetic":"/ˈsteriətaɪp/","part":"n.","translation":"刻板印象"},
-              {"word":"advocate","phonetic":"/ˈædvəkət/","part":"n.","translation":"倡导者；支持者"},
-              {"word":"visible","phonetic":"/ˈvɪzəbl/","part":"adj.","translation":"可见的；显而易见的"},
-              {"word":"resentment","phonetic":"/rɪˈzentmənt/","part":"n.","translation":"怨恨；不满"},
-              {"word":"backlash","phonetic":"/ˈbæklæʃ/","part":"n.","translation":"强烈反对；反弹"},
-              {"word":"status threat","phonetic":"/ˈsteɪtəs θret/","part":"n. phr.","translation":"地位威胁"},
-              {"word":"pragmatism","phonetic":"/ˈpræɡmətɪzəm/","part":"n.","translation":"务实；实用主义"},
-              {"word":"denigrate","phonetic":"/ˈdenɪɡreɪt/","part":"v.","translation":"诋毁；贬低"},
-              {"word":"influx","phonetic":"/ˈɪnflʌks/","part":"n.","translation":"大量涌入"}
+              {
+                "word": "conspicuous",
+                "phonetic": "/kənˈspɪkjuəs/",
+                "part": "adj.",
+                "translation": "显眼的；显著的"
+              },
+              {
+                "word": "stereotype",
+                "phonetic": "/ˈsteriətaɪp/",
+                "part": "n.",
+                "translation": "刻板印象"
+              },
+              {
+                "word": "advocate",
+                "phonetic": "/ˈædvəkət/",
+                "part": "n.",
+                "translation": "倡导者；支持者"
+              },
+              {
+                "word": "visible",
+                "phonetic": "/ˈvɪzəbl/",
+                "part": "adj.",
+                "translation": "可见的；显而易见的"
+              },
+              {
+                "word": "resentment",
+                "phonetic": "/rɪˈzentmənt/",
+                "part": "n.",
+                "translation": "怨恨；不满"
+              },
+              {
+                "word": "backlash",
+                "phonetic": "/ˈbæklæʃ/",
+                "part": "n.",
+                "translation": "强烈反对；反弹"
+              },
+              {
+                "word": "status threat",
+                "phonetic": "/ˈsteɪtəs θret/",
+                "part": "n. phr.",
+                "translation": "地位威胁"
+              },
+              {
+                "word": "pragmatism",
+                "phonetic": "/ˈpræɡmətɪzəm/",
+                "part": "n.",
+                "translation": "务实；实用主义"
+              },
+              {
+                "word": "denigrate",
+                "phonetic": "/ˈdenɪɡreɪt/",
+                "part": "v.",
+                "translation": "诋毁；贬低"
+              },
+              {
+                "word": "influx",
+                "phonetic": "/ˈɪnflʌks/",
+                "part": "n.",
+                "translation": "大量涌入"
+              }
             ],
             "sentences": [
               {
@@ -1588,352 +2333,6 @@ window.BRIEFING_DATA = {
                   "可仿写 aim to broaden ..., and as part of that have secured ...，说明商业策略如何落实。"
                 ],
                 "translation": "他还希望扩大 Hiut 的吸引力，并为此争取到新的经销商，其中包括伦敦的 Liberty 百货。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-10",
-      "status": "ready",
-      "ai": {
-        "intro": "昨日到今日确认 1 项值得学生留意的产品变化，因此将检索范围扩至近 7 天，补入 10 月 7 日的 Google Playground 与 GitHub 秘密检测模型更新；各条按公告真实日期标注。",
-        "updates": [
-          {
-            "event": "Google 推出 Playground 实验游戏平台，可用提示词创建、试玩和分享自定义游戏（2026-10-07）",
-            "summary": "Google 将 Playground 描述为实验性游戏平台：用户用对话提示描述想法即可制作自定义游戏，无需编程经验；可从空白画布开始、改编提示模板或使用引导式支持，生成后立即试玩，并继续调整物理规则、角色和环境。",
-            "howTo": "打开 Google Labs 的 Playground 实验平台，从空白画布开始或改编一个 starter prompt；输入想制作的游戏描述并试玩，再用自然语言要求调整规则、物理效果、角色或场景。",
-            "impact": "学生可把课程概念转成可互动的小型原型，例如设计一个词汇闯关或生态系统模拟，再通过修改规则观察结果；平台降低了初次制作门槛，但生成的游戏仍需自行检查内容和运行效果。",
-            "free": "Google 将其称为实验性平台，但公告没有说明价格、账号资格、开放地区或生成/试玩配额；这些条件官方未说明，实际能否使用以当前 Playground 页面为准。",
-            "category": "生成式 AI / 互动内容创作",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-07",
-              "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
-            }
-          },
-          {
-            "event": "GitHub 将上下文式 AI 秘密检测扩展至更多开发流程（2026-10-07）",
-            "summary": "GitHub 公布一款针对秘密信息检测微调的模型，可结合周边代码识别包括非标准格式密码在内的潜在凭据。已有 GitHub Secret Protection 或 GitHub Advanced Security 的 AI 密码告警用户会自动切换到新模型且不另收费；推送保护的 AI 检查仍处于私有预览，Copilot `/security-review` 的模型检查则公告为即将开放。",
-            "howTo": "若项目已有 GitHub Secret Protection 或 GitHub Advanced Security，可在仓库的 secret-scanning alerts 中查看 AI 检测到的密码告警；推送保护检查需符合资格的管理员开启私有预览。公告中的 `/security-review` 秘密分类检查当时尚未开放，不要把普通安全审查误认为该新检查已启用。",
-            "impact": "维护课程仓库或团队项目时，检测器可能发现不符合常见 token 格式的密码，帮助在凭据泄露前处理；学生应避免把真实密钥提交到仓库，并按 GitHub 指引轮换已暴露凭据。",
-            "free": "AI 密码告警仅对已有 GHSP/GHAS 覆盖的客户包含在原服务中、不另收费；推送保护的 AI 检查需相应付费覆盖并在预览中启用，新的 AI 检查会消耗 GitHub AI Credits。个人 Copilot 的 `/security-review` 新分类检查当时为即将开放，地区和具体配额官方未说明。",
-            "category": "AI 编程安全 / 凭据检测",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-07",
-              "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/"
-            }
-          },
-          {
-            "event": "Copilot 代码审查新增组织付费归属与外部许可证限制（2026-10-08）",
-            "summary": "GitHub 为组织管理员增加两项 Copilot code review 控制：可选择由组织而非成员个人承担已许可成员的审查费用，也可限制只有组织或企业提供 Copilot 许可证的成员才能发起审查。组织付费模式要求启用 AI Credits 付费使用，并可设置预算。",
-            "howTo": "组织所有者可在组织设置的 Copilot → Policies 中将 “Choose how members with a Copilot license are billed” 设为 Organization；需先启用组织 AI Credits 付费使用。若要限制个人外部许可证发起审查，可打开 “Only allow Copilot code review to be triggered by authorized users”。",
-            "impact": "课程团队或实验室若使用组织仓库，可由管理员统一管理代码审查的费用归属，避免成员个人额度意外耗尽；学生使用个人许可证时，可能受组织的授权用户政策限制。",
-            "free": "该设置本身不代表免费审查：选择组织付费需启用 AI Credits 付费使用；默认 Member 模式仍从成员自己的 Copilot entitlement 扣减额度。资格面向 Copilot 代码审查的组织管理场景，地区和具体价格/配额官方未在公告中说明。",
-            "category": "AI 编程 / 组织计费与访问控制",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-08",
-              "url": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Student：经验证学生可免费使用 Copilot 功能",
-            "summary": "GitHub Education 当前列出 Copilot Student 学生计划：验证通过的学生可免费使用 Copilot，包含无限代码补全及一定的 GitHub AI Credits；聊天和 Agent 使用受限，只能自动选择模型，且不包括第三方 Agent。",
-            "howTo": "打开 GitHub Student Developer Pack 的 Copilot Student offer，申请并完成 GitHub Education 学生身份验证，再按页面指引激活该计划；仅验证通过后适用。",
-            "impact": "适合用代码补全练习课程项目、让 Copilot 帮忙解释错误或辅助检查代码；由于聊天和 Agent 有限制，先把额度留给需要多步分析的学习任务。",
-            "free": "学生验证通过后免费；GitHub Student Developer Pack 表示无限代码补全、包含 AI Credits 额度、聊天和 Agent 使用受限且只提供自动模型选择。具体 Credits 数量及聊天/Agent 配额、地区限制和权益截止日期官方未说明。",
-            "category": "学生教育福利 / 免费 AI 编程",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Azure for Students：学生可领取云服务与 100 美元 Azure 额度",
-            "summary": "GitHub Student Developer Pack 列出 Microsoft Azure 学生权益：年满 18 岁的学生可免信用卡使用 25+ 项 Azure 云服务，并获得 100 美元 Azure credit。它可用于教育目的的软件设计、开发、测试或演示等云端实践。",
-            "howTo": "在 GitHub Student Developer Pack 打开 Microsoft Azure offer，按页面指引申请 Azure for Students；启用前确认具体 Azure 服务是否适用学生订阅及信用额度，避免把额度之外的计费误作免费。",
-            "impact": "学生可用来部署课程项目原型、练习云端开发，或在允许的服务范围内试做 AI 应用；建议先设定资源预算并删除不再使用的云资源。",
-            "free": "官方列明年满 18 岁的学生可免信用卡使用 25+ Azure 服务并获 100 美元额度；该权益是有额度上限的学生福利，不等于所有 Azure AI 服务均免费。额度有效期、地区范围及各 AI 服务的具体配额官方未说明。",
-            "category": "学生教育福利 / 云端 AI 项目额度",
-            "source": {
-              "name": "GitHub Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：部分模型输入与输出 token 免费",
-            "summary": "Google AI for Developers 定价页列出 Gemini API 免费层，部分指定模型的输入和输出 token 免费，可从 Google AI Studio 开始使用；免费层内容会用于改进 Google 产品，因此不宜提交未公开论文或个人资料。",
-            "howTo": "进入 Google AI Studio，选择官方定价页明确标为 Free Tier 的模型并创建 API key，再按 Gemini API quickstart 发起调用；每次使用前核对该模型的速率限制和数据条款。",
-            "impact": "可用来练习 API 调用、比较提示词或搭建课程原型；对研究草稿和个人数据，先评估免费层的数据使用规则，不要上传敏感材料。",
-            "free": "只限定价页列出的部分模型，免费层输入/输出 token 免费，且内容可用于改进 Google 产品。模型范围有限；各模型具体调用限额、统一账号资格和地区条件官方未说明，应以所选模型当前页面为准。",
-            "category": "免费 API / AI 开发学习",
-            "source": {
-              "name": "Google AI for Developers 定价文档",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Microsoft Phi-4-mini-instruct：MIT 许可的可下载模型权重",
-            "summary": "Microsoft 官方 Hugging Face 模型卡提供 Phi-4-mini-instruct 权重，列明模型规模为 3.8B 参数、上下文长度 128K，并标注 MIT 许可证。可下载到本地运行；效果、内存和速度需按设备与任务自行测试。",
-            "howTo": "打开 Microsoft 官方模型卡，按 Transformers 示例安装 `transformers` 与 `accelerate`，用 `AutoTokenizer` 和 `AutoModelForCausalLM` 下载并加载 `microsoft/Phi-4-mini-instruct`；先用非敏感文本做本机测试。",
-            "impact": "适合有足够设备资源的学生练习本地模型部署、多语言提示词和结果校验；MIT 权重许可便于学习和原型开发，但不代表输出准确，也不免除硬件成本。",
-            "free": "模型卡公开权重并标注 MIT 许可，下载和本地推理不收模型调用费；硬件、电力和软件环境由使用者承担。模型托管推理价格、地区和配额官方未说明。",
-            "category": "免费开放权重 / 本地学习",
-            "source": {
-              "name": "Microsoft 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
-            }
-          },
-          {
-            "event": "OpenAI Whisper：MIT 许可的本地语音识别与翻译模型",
-            "summary": "OpenAI 官方仓库提供 Whisper 代码和模型权重，支持多语言语音识别、语音翻译和语言识别，并提供多种模型大小供用户按速度与资源取舍。",
-            "howTo": "依官方仓库安装 `openai-whisper` 和 ffmpeg，运行 `whisper lecture.wav --model small` 转写本人有权处理的录音；如需翻译，选择多语言模型并按仓库说明设置任务。",
-            "impact": "可以把课程录音制成复习文本、辅助听力或对照原音练习翻译；语音识别可能有误，需逐句校对，并先确认录音隐私和使用许可。",
-            "free": "代码和模型权重按 MIT 许可证发布，可下载后本地运行，不收模型 API 调用费；需自备兼容硬件与软件环境，托管服务价格、账号、地区和调用配额官方未说明。",
-            "category": "免费开放模型 / 语音学习工具",
-            "source": {
-              "name": "OpenAI GitHub",
-              "published": "官方未说明",
-              "url": "https://github.com/openai/whisper"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期分别从工作场所的分类回收和医疗债务的预防机制切入：练习辨析个人经验、制度执行与成本约束，也学习报道如何将问题证据、政策方案和实施障碍串成完整论证。",
-        "articles": [
-          {
-            "title": "'People don't think recycling at work is part of their job description'",
-            "source": "BBC",
-            "published": "2026-10-09",
-            "url": "https://www.bbc.co.uk/news/articles/cqe8rn65yj2ko",
-            "readingTime": "约 3 分钟",
-            "topic": "环境 / 工作场所回收与公共政策",
-            "summary": "BBC 以威尔士几位工作者的经历呈现工作场所回收与家庭回收之间的差异：有人因单位可回收类别有限而把垃圾带回家，也有人因医院分类标识清楚而在工作中照常分类。报道随后转向制度层面，指出威尔士企业须把废弃物分为六类，但各地收集安排并不一致；Vale of Glamorgan 当地政府称新要求提高了回收物质量。文章最后呈现执行中的成本和额外劳动顾虑，同时引用当地项目负责人关于企业反应积极、分类实践逐渐成为习惯的观察，说明政策效果取决于设施、便利性和组织执行。",
-            "reason": [
-              "环境治理与日常行为相连，适合讨论个人习惯如何受到工作场所设施和公共政策影响。",
-              "结构先列举员工经验，再介绍威尔士分类规定和地方执行，最后对照成本顾虑与实际反馈。",
-              "可练习主旨题、例证作用题、观点态度题，并辨别访谈个案与整体政策效果之间的证据差异。",
-              "industrialised、segregated、collection arrangements、take it in one’s stride 等表达可用于环境与职场主题。",
-              "写作可借鉴“行为障碍—制度要求—执行成本—逐步适应”的论证链，避免只用个人态度解释回收率。"
-            ],
-            "vocabulary": [
-              {
-                "word": "routine",
-                "phonetic": "/ruːˈtiːn/",
-                "part": "n.",
-                "translation": "惯例；日常程序"
-              },
-              {
-                "word": "out and about",
-                "phonetic": "/ˌaʊt ən əˈbaʊt/",
-                "part": "phr.",
-                "translation": "外出时；在外活动时"
-              },
-              {
-                "word": "limited",
-                "phonetic": "/ˈlɪmɪtɪd/",
-                "part": "adj.",
-                "translation": "有限的；受限制的"
-              },
-              {
-                "word": "industrialised",
-                "phonetic": "/ɪnˈdʌstriəlaɪzd/",
-                "part": "adj.",
-                "translation": "工业化的"
-              },
-              {
-                "word": "impact",
-                "phonetic": "/ˈɪmpækt/",
-                "part": "n.",
-                "translation": "影响；作用"
-              },
-              {
-                "word": "category",
-                "phonetic": "/ˈkætəɡəri/",
-                "part": "n.",
-                "translation": "类别；范畴"
-              },
-              {
-                "word": "collection arrangements",
-                "phonetic": "/kəˈlekʃən əˈreɪndʒmənts/",
-                "part": "n. phr.",
-                "translation": "收集/清运安排"
-              },
-              {
-                "word": "segregated",
-                "phonetic": "/ˈseɡrɪɡeɪtɪd/",
-                "part": "adj.",
-                "translation": "分类分开的；隔离的"
-              },
-              {
-                "word": "critical",
-                "phonetic": "/ˈkrɪtɪkəl/",
-                "part": "adj.",
-                "translation": "持批评态度的；关键的"
-              },
-              {
-                "word": "take it in one’s stride",
-                "phonetic": "/teɪk ɪt ɪn wʌnz straɪd/",
-                "part": "idiom",
-                "translation": "从容应对；泰然接受"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "James Jenkins, 30, said he often took rubbish home with him given the limited options where he works.",
-                "analysis": [
-                  "主句主干为 James Jenkins said，后接省略 that 的宾语从句 he often took rubbish home with him。",
-                  "often 是频率副词，修饰 took，提示这不是一次性的行为。",
-                  "given the limited options 作原因状语，说明他把垃圾带回家的背景。",
-                  "where he works 是地点状语从句，限定可选回收设施所在的工作场所。",
-                  "可借鉴 given + 名词短语说明行为背后的条件，而非简单归因于个人态度。"
-                ],
-                "translation": "詹姆斯·詹金斯说，由于工作地点可选的回收方式有限，他常把垃圾带回家。"
-              },
-              {
-                "original": "Although businesses in Wales are now required to sort their waste into six categories, collection arrangements can vary from area to area.",
-                "analysis": [
-                  "Although 引导让步状语从句，先交代威尔士企业共同面对的分类要求。",
-                  "从句主干是 businesses are required，are required 为被动结构，突出制度要求而非执行主体。",
-                  "to sort their waste into six categories 是不定式补足语，说明具体需要完成的动作。",
-                  "主句主干 collection arrangements can vary，from area to area 表示地区间差异。",
-                  "句子以“规则统一—执行条件不同”构成对照，可用于分析政策落实差异。"
-                ],
-                "translation": "尽管威尔士企业现在必须把废弃物分成六类，但各地的收集安排可能不同。"
-              },
-              {
-                "original": "But we've been doing segregated recycling for a couple of years now, and most people just take it in their stride.",
-                "analysis": [
-                  "But 承接前文对成本和额外劳动的担忧，转入当地负责人的经验回应。",
-                  "前半句主干为 we have been doing recycling，现在完成进行时强调分类回收持续了数年。",
-                  "for a couple of years 是持续时间状语，now 与现在完成进行时呼应。",
-                  "and 连接两个并列分句；后半句主干 most people take it，it 指代分类回收的要求或做法。",
-                  "take something in one’s stride 表示从容接受，可借鉴该句呈现一种措施逐步常态化。"
-                ],
-                "translation": "不过，我们实行分类回收已有几年了，大多数人现在都能从容应对。"
-              }
-            ]
-          },
-          {
-            "title": "Medical debt is crushing hospital patients in LA. Health officials may have a fix",
-            "source": "NPR",
-            "published": "2026-10-08",
-            "url": "https://www.npr.org/2026/10/08/nx-s1-5991633/hospital-california-healthcare-medical-debt",
-            "readingTime": "约 5 分钟",
-            "topic": "经济与健康 / 医疗债务和救助资格筛查",
-            "summary": "NPR 报道洛杉矶县试图用“预先判定资格”减少医疗债务：医院可依据公开信息自动筛查低收入患者是否符合财务援助，而不必等患者自行发现并填写复杂申请。文章先以公共卫生部门“上游预防”的理念引出医疗欠债问题，再列出美国与洛杉矶县受债务影响的人数、患者因账单放弃处方或就诊的后果，以及医院追债效率低等证据。随后解释自动筛查如何运作、其他医院报告的援助增长和加州新规，并说明小型医院的成本障碍。结尾介绍医院协会批量采购系统和 L.A. Care 的资金支持，同时指出启动资金、数据准确度和 88 家医院是否加入仍未解决；作者强调筛查虽有助于预防，但不能单独消除医疗债务。",
-            "reason": [
-              "将健康公平、家庭财务负担和医疗机构治理结合起来，是常见的公共政策与社会问题主题。",
-              "报道从预防理念切入，接着说明债务规模和后果，再解释资格筛查机制，最后讨论合作方案及实施不确定性。",
-              "可练习因果链、数字证据作用、方案优缺点和作者结论题，并区分“可能减少”与“彻底解决”。",
-              "upstream、cumbersome、eligible、presumptive eligibility、fiscal 等词汇适用于公共卫生与社会保障论述。",
-              "写作可借鉴“问题成本—机制解释—集体行动—执行障碍”的结构，并用限制语保持结论审慎。"
-            ],
-            "vocabulary": [
-              {
-                "word": "upstream",
-                "phonetic": "/ˌʌpˈstriːm/",
-                "part": "adv./adj.",
-                "translation": "在问题发生前；上游的"
-              },
-              {
-                "word": "initiative",
-                "phonetic": "/ɪˈnɪʃətɪv/",
-                "part": "n.",
-                "translation": "倡议；行动计划"
-              },
-              {
-                "word": "staggering",
-                "phonetic": "/ˈstæɡərɪŋ/",
-                "part": "adj.",
-                "translation": "令人震惊的；惊人的"
-              },
-              {
-                "word": "cumbersome",
-                "phonetic": "/ˈkʌmbərsəm/",
-                "part": "adj.",
-                "translation": "繁琐的；难处理的"
-              },
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合资格的"
-              },
-              {
-                "word": "presumptive eligibility",
-                "phonetic": "/prɪˈzʌmptɪv ˌelɪdʒəˈbɪləti/",
-                "part": "n. phr.",
-                "translation": "推定资格；预先判定资格"
-              },
-              {
-                "word": "fiscal",
-                "phonetic": "/ˈfɪskəl/",
-                "part": "adj.",
-                "translation": "财政的"
-              },
-              {
-                "word": "procure",
-                "phonetic": "/prəˈkjʊr/",
-                "part": "v.",
-                "translation": "采购；取得"
-              },
-              {
-                "word": "safety net",
-                "phonetic": "/ˈseɪfti net/",
-                "part": "n. phr.",
-                "translation": "安全网；社会保障体系"
-              },
-              {
-                "word": "forgo",
-                "phonetic": "/fɔːrˈɡoʊ/",
-                "part": "v.",
-                "translation": "放弃；不再享用"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "We like doing things upstream, meaning before they happen, not after the damage is done.",
-                "analysis": [
-                  "主句主干为 We like doing things，动名词短语作 like 的宾语。",
-                  "upstream 用比喻义表示在问题造成损害前采取行动。",
-                  "meaning before they happen 是补充说明，解释 upstream 的具体含义。",
-                  "not after the damage is done 与 before 对照，强调预防和事后补救的时间差。",
-                  "可借鉴 before..., not after... 简洁表达预防优先的政策理念。"
-                ],
-                "translation": "我们倾向于把事情做在前面，也就是在问题发生之前，而不是等损害已经造成之后。"
-              },
-              {
-                "original": "One potential solution is a system that automatically screens and qualifies low-income patients for financial aid without requiring an application.",
-                "analysis": [
-                  "主句主干为 One potential solution is a system，系表结构提出一种可能方案。",
-                  "that 引导限制性定语从句，修饰 system，说明系统具体如何工作。",
-                  "screens and qualifies 为并列谓语，宾语是 low-income patients，for financial aid 表明资格目标。",
-                  "without requiring an application 是介词短语，requiring 为动名词，说明免去的程序。",
-                  "可借鉴 a system that... without... 描述自动化方案及其减少的手续。"
-                ],
-                "translation": "一种可能的解决办法是建立一套系统，自动筛查并认定低收入患者的援助资格，无需他们提交申请。"
-              },
-              {
-                "original": "But he said the public health department couldn't ignore a problem that affects more county residents than asthma or tobacco use.",
-                "analysis": [
-                  "But 标示转折；主句主干为 he said，后接省略 that 的宾语从句。",
-                  "宾语从句主干为 the department couldn’t ignore a problem，情态动词 couldn’t 表示不能置之不理。",
-                  "that affects more county residents... 是修饰 problem 的定语从句，补充其影响范围。",
-                  "more... than... 构成比较级，借常见健康问题凸显医疗债务覆盖面之广。",
-                  "可借鉴“cannot ignore a problem that...”提出公共机构行动责任。"
-                ],
-                "translation": "但他说，公共卫生部门不能忽视一个影响县内居民人数超过哮喘或烟草使用的问题。"
               }
             ]
           }
