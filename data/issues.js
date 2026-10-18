@@ -1,6 +1,339 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-17T09:17:33+08:00",
+  "updatedAt": "2026-10-18T08:51:26+08:00",
   "issues": [
+    {
+      "date": "2026-10-18",
+      "status": "ready",
+      "ai": {
+        "intro": "近一周官方页面确认三项可试用变化：DeepSeek 更新 V4.1 Flash、Meta 为 Facebook Feed/Reels 加入自然语言推荐控制，Google 将 Gemini 4 Argon 提供给 AI Pro/Ultra 订阅者。各产品的账户、地区及具体额度限制均按来源页说明。",
+        "updates": [
+          {
+            "event": "DeepSeek 发布 V4.1 Flash-1017 模型（2026-10-17）",
+            "summary": "DeepSeek 宣布 V4.1 Flash-1017 已上线网站、App 和 API，并称新版本可更快完成任务、输出更短；同时发布模型权重。官方展示了从零生成完整项目的用例，但未给出可独立复现的外部验证结论。",
+            "howTo": "打开 DeepSeek 网站或 App 开始对话；若通过 API 调用，按官方文档使用模型名 `deepseek-flash`。也可从公告链接进入 Hugging Face 模型卡，按其 inference 指南下载和运行权重。",
+            "impact": "可让它先拆解课程编程项目，再生成初始原型和测试清单；对比修改前后的代码与解释，检查是否真正理解，而不要只照搬生成结果。",
+            "free": "官方公告称模型已在网站、App 和 API 上线，并发布开源权重；公告未说明在线端价格、账户条件、地区开放范围或调用配额。API 费用应以官方价格页和账户实际显示为准。",
+            "category": "AI 模型 / 编程与推理",
+            "source": {
+              "name": "DeepSeek API Docs",
+              "published": "2026-10-17",
+              "url": "https://api-docs.deepseek.com/news/news261017"
+            }
+          },
+          {
+            "event": "Facebook 新增可用自然语言调整 Feed 与 Reels 推荐",
+            "summary": "Meta 为 Facebook 上的 Feed 和 Reels 推出 Your algorithm：用户可管理感兴趣的主题，也可在对帖子选择“感兴趣”或“不感兴趣”后，用自己的话补充偏好，推荐会随反馈调整。Meta 表示其排序系统使用大型语言模型理解自然语言中的兴趣、语境和意图。",
+            "howTo": "在 Facebook Feed 或 Reels 的帖子菜单中点“感兴趣”或“不感兴趣”，按提示补充希望多看或少看的内容；也可从帖子三点菜单打开 Your algorithm 管理主题。",
+            "impact": "可把信息流调向公开课、语言学习或校园活动等内容，减少无关推荐；调整后仍需自行核对信息来源，不能把个性化排序当作事实筛选。",
+            "free": "功能集成在 Facebook 的 Feed/Reels 推荐设置中，Meta 称正在推出；公告未说明是否收费、适用地区、账户资格条件或使用配额，具体开放状态以账户界面为准。",
+            "category": "AI 推荐 / 信息流个性化",
+            "source": {
+              "name": "Meta Newsroom",
+              "published": "2026-10-13",
+              "url": "https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/"
+            }
+          },
+          {
+            "event": "Gemini 4 Argon 开始向 Gemini App 订阅用户开放",
+            "summary": "Google 将 Gemini 4 Argon 接入 Gemini App，称其在复杂任务推理和编程方面有所改进；用户还可在 macOS 版 Gemini 中切换至 Google Antigravity 编程界面。此处是产品上线信息，不把官方的能力描述扩展成未经核实的基准成绩。",
+            "howTo": "登录 Gemini App，在模型选项中查看 Gemini 4 Argon；若要尝试编码，可从 macOS 版 Gemini 切换到 Google Antigravity 界面。需要先确认账户订阅资格和实际入口。",
+            "impact": "可用较长提示让它解释课程代码、规划多步作业或协助调试，再逐步检查修改；复杂任务应分阶段核验输出和代码。",
+            "free": "Google 明确列出 Google AI Pro 和 Ultra 订阅者可访问 Argon；公告未说明免费用户是否可用、订阅价格的地区差异、具体地区开放范围或调用额度。",
+            "category": "AI 模型 / 学习与编程",
+            "source": {
+              "name": "Google Blog",
+              "published": "2026-10-13",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "DeepSeek-V4.1-Flash-1017：MIT 许可的可下载模型权重",
+            "summary": "DeepSeek 官方 Hugging Face 模型卡提供 V4.1-Flash-1017 权重，并明确仓库和权重采用 MIT License；页面给出权重转换与本地推理指南。",
+            "howTo": "打开模型卡，下载仓库文件，并按其中 inference/README.md 的说明转换权重和运行推理；先检查设备存储与算力是否足够。",
+            "impact": "可用于本地试验提示词、代码解释和模型部署流程；离线运行也便于在不上传课程资料的前提下学习推理部署。",
+            "free": "权重按 MIT License 提供；本地运行本身不需调用云 API，但设备、耗电或另租算力可能产生成本。官方未说明最低硬件配置、下载账户要求、地区限制或调用配额。",
+            "category": "开放模型 / 本地推理",
+            "source": {
+              "name": "DeepSeek 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+            }
+          },
+          {
+            "event": "Google Colab：免费 Jupyter 笔记本与浮动 GPU/TPU 资源",
+            "summary": "Google 官方 FAQ 说明 Colab 免费提供托管 Jupyter 笔记本计算资源，包括 GPU 和 TPU，适合机器学习、数据科学和教育；免费资源不保证且使用限制会变化。",
+            "howTo": "打开 Colab 新建笔记本，运行 Python 或课程机器学习示例；确有需要时在运行时选项中尝试 GPU/TPU，并保存代码以便资源中断后继续。",
+            "impact": "可在不先配置本地环境的情况下运行教学 notebook、练习小型模型或完成数据分析；重要作业需定期保存，因为运行时和加速器资源可能被回收或暂不可用。",
+            "free": "官方确认服务免费，含 GPU/TPU 计算资源，但不保证资源且使用额度会波动；FAQ 未说明固定配额、地区覆盖或截止日期。",
+            "category": "免费云计算 / AI 学习环境",
+            "source": {
+              "name": "Google Colab FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Gemini Notebook：免费用户每本笔记本最多 50 个来源",
+            "summary": "Google 支持页说明，Free 用户每本 Gemini Notebook 可加入最多 50 个来源，来源可包括文档、网页、音频和公开视频；可围绕所选来源提问或生成摘要。",
+            "howTo": "在电脑打开 Gemini Notebook，新建笔记本后点 Add sources，加入课程 PDF、网页或有字幕的公开视频，再在聊天框提问并回到原文核对。",
+            "impact": "适合把分散的课程阅读材料集中成可检索资料集，用于复习提纲和跨文档问题；生成内容应与原始来源逐项核验。",
+            "free": "官方明确 Free 用户每本最多 50 个来源，每个来源最多 500,000 词或上传文件 200MB；此页未说明地区限制或权益截止日期。手机 App 的部分功能可能有限制。",
+            "category": "免费学习工具 / 文档问答",
+            "source": {
+              "name": "Google Gemini Notebook Help",
+              "published": "官方未说明",
+              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
+            }
+          },
+          {
+            "event": "Notion AI：可先免费试用有限次数的 AI 回复",
+            "summary": "Notion 帮助页说明所有用户都能免费试用 Notion AI；AI 写作、编辑、提问等操作得到回复时均计为一次，免费赠送次数用完后需升级才能继续使用 AI 功能。",
+            "howTo": "在 Notion 页面中尝试 AI 写作、改写或提问；把免费回复留给课程提纲、段落润色等需要反复核对的任务，并留意每次重试也会计入回复数。",
+            "impact": "可先免费测试它是否适合整理课堂笔记、润色英语表达或生成复习提纲，再决定是否需要付费，不必为单次试用预先购买套餐。",
+            "free": "官方确认可免费试用，但该帮助页未公布具体回复次数、地区范围或截止日期；用完后继续使用需要 Business 或 Enterprise 计划。",
+            "category": "免费试用 / 笔记与写作",
+            "source": {
+              "name": "Notion Help",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/help/complimentary-ai-responses"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：MIT 许可的本地语音转写与翻译",
+            "summary": "OpenAI 官方 GitHub 仓库提供 Whisper 语音识别模型，可做多语种语音识别、语音翻译和语言识别；仓库代码采用 MIT License，并给出安装及命令行使用方法。",
+            "howTo": "安装 `openai-whisper` 和 `ffmpeg`，再运行 `whisper lecture.wav --model medium --language Japanese --task translate` 将日语音频转成英语；转写其他语种时按仓库示例调整语言参数。",
+            "impact": "可把访谈、外语讲座或自有录音转成文本辅助复习；转写可能出错，需对照音频校正专有名词和关键数字。",
+            "free": "官方仓库代码使用 MIT License，可下载模型并本地运行；无在线调用配额，但需要自行准备设备和依赖。仓库未说明最低硬件、地区限制或权益截止日期。",
+            "category": "开放工具 / 音频转写与翻译",
+            "source": {
+              "name": "OpenAI GitHub",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Perspective: Midterm money madness",
+            "source": "NPR",
+            "published": "2026-10-17",
+            "url": "https://www.npr.org/2026/10/17/nx-s1-5997474/perspective-midterm-money-madness",
+            "readingTime": "约 3 分钟（估算）",
+            "topic": "经济与社会 / 竞选广告支出和生活成本",
+            "summary": "文章以 AdImpact 追踪到的本届美国中期选举广告支出超过 100 亿美元开篇，随后列举俄亥俄、得克萨斯、缅因和密歇根等选区的金额，说明资金集中规模。接着解释 Citizens United 判决后超级政治行动委员会（super PAC）可以接受大额捐款、但不能与竞选团队直接协调，并举出两党大额捐助者的例子。文章把竞选广告支出与选民更关心的经济和生活成本并置，指出汽油和食品价格上涨，继而用一连串反问提出这些钱能否用于食物、住房、医疗和公共服务。结尾以“少花竞选经费”的假想承诺和花钱多未必获胜作反讽，质疑广告支出是否真能换来支持。",
+            "reason": [
+              "主题涵盖竞选资金、贫富差距、生活成本与公共服务，适合经济与社会议题阅读。",
+              "篇章从总额和地区案例展开，解释制度背景，再对照选民需求，最后通过反问和反讽表达作者质疑。",
+              "可训练数字细节定位、制度因果、对比关系、修辞问句及作者态度判断。",
+              "steer、ballot、subsidize、spike 等词分别涉及资金影响、选举、公共补贴和价格变化。",
+              "写作可借鉴“先用数据建立问题—交代制度机制—对照社会需求—提出价值追问”的论证路径。"
+            ],
+            "vocabulary": [
+              {
+                "word": "combined",
+                "phonetic": "/kəmˈbaɪnd/",
+                "part": "adj.",
+                "translation": "合计的；合并的"
+              },
+              {
+                "word": "surpassed",
+                "phonetic": "/sərˈpæst/",
+                "part": "v.",
+                "translation": "超过；超出"
+              },
+              {
+                "word": "contest",
+                "phonetic": "/ˈkɑːntest/",
+                "part": "n.",
+                "translation": "竞选；竞争"
+              },
+              {
+                "word": "coordinate",
+                "phonetic": "/koʊˈɔːrdɪneɪt/",
+                "part": "v.",
+                "translation": "协调；协同"
+              },
+              {
+                "word": "steer",
+                "phonetic": "/stɪr/",
+                "part": "v.",
+                "translation": "引导；左右"
+              },
+              {
+                "word": "ballot",
+                "phonetic": "/ˈbælət/",
+                "part": "n.",
+                "translation": "选票；投票"
+              },
+              {
+                "word": "spiked",
+                "phonetic": "/spaɪkt/",
+                "part": "v.",
+                "translation": "急剧上涨"
+              },
+              {
+                "word": "shelter",
+                "phonetic": "/ˈʃeltər/",
+                "part": "n.",
+                "translation": "住所；庇护所"
+              },
+              {
+                "word": "subsidize",
+                "phonetic": "/ˈsʌbsɪdaɪz/",
+                "part": "v.",
+                "translation": "补贴；资助"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Campaign spending for these midterm elections passed 10 billion dollars this week, according to the tracking group AdImpact.",
+                "analysis": [
+                  "主句主干是 Campaign spending passed 10 billion dollars，spending 为主语，passed 为谓语。",
+                  "for these midterm elections 是介词短语，限定这笔竞选支出的用途。",
+                  "this week 作时间状语；according to the tracking group AdImpact 标明数字来源。",
+                  "句子先给出总量，再用来源归属增强信息可核查性。",
+                  "可仿写 X reached ..., according to ...，报告统计数据及出处。"
+                ],
+                "translation": "据追踪机构 AdImpact 统计，本届中期选举的竞选支出本周已超过 100 亿美元。"
+              },
+              {
+                "original": "Meanwhile, voters, whom politicians are trying to win over with all these ads, tell pollsters and reporters that their top issues this fall are the economy and the cost of living.",
+                "analysis": [
+                  "主句主干是 voters tell pollsters and reporters that...，主语后接 tell 的双宾语结构。",
+                  "whom 引导非限制性定语从句，补充说明政客正试图争取这些选民。",
+                  "that 引导 tell 的宾语从句；从句主干为 their top issues are the economy and the cost of living。",
+                  "Meanwhile 标出广告投入与选民关切之间的转折对照。",
+                  "可借鉴 voters, whom ..., say that... 将背景信息嵌入主张。"
+                ],
+                "translation": "与此同时，政客试图用这些广告争取的选民告诉民调人员和记者，他们今秋最关心的是经济和生活成本。"
+              },
+              {
+                "original": "Maybe a candidate could win support these days by declaring, \"And I vow to spend less money on my campaign than my opponent!\"",
+                "analysis": [
+                  "主干为 a candidate could win support，Maybe 使判断带有试探语气。",
+                  "by declaring 是方式状语，说明候选人如何可能争取支持。",
+                  "直接引语具体呈现假想的竞选承诺，构成作者提出的讽刺性设问。",
+                  "less ... than ... 是比较结构，突出“花得比对手少”的反常策略。",
+                  "可借鉴 Maybe ... could ... by doing... 提出一种假设性解决思路。"
+                ],
+                "translation": "也许如今候选人只要宣称“我承诺竞选花的钱比对手少”，就能赢得支持。"
+              }
+            ]
+          },
+          {
+            "title": "How Alberta separatism went from fringe cause to referendum",
+            "source": "PBS NewsHour",
+            "published": "2026-10-17",
+            "url": "https://www.pbs.org/newshour/world/how-alberta-separatism-went-from-fringe-cause-to-referendum",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "社会 / 加拿大联邦关系与阿尔伯塔分离主义",
+            "summary": "文章解释阿尔伯塔省投票并非立即脱离加拿大，而是决定是否开启未来独立公投的法律程序。报道回溯该省长期围绕石油和联邦权力与渥太华的争议，并描述疫情限制和 Freedom Convoy 如何扩大分离主义动员；前省长 Jason Kenney 将其与社交媒体、组织化和筹款联系起来。随后文章呈现总理 Mark Carney 的能源政策如何争取部分阿尔伯塔民众支持、独立运动人士如何赴华盛顿游说，以及当地石油出口对美国的依赖。结尾指出，即使独立支持率远未过半，投票仍可能增强分离主义者的谈判筹码，并将其放入加拿大更广泛的国家统一争论中。",
+            "reason": [
+              "文章围绕地区资源、联邦治理、公共意见和国家统一展开，适合社会政策与政治经济类阅读。",
+              "结构由投票性质切入，回顾历史矛盾和动员因素，再呈现不同人物立场，最后讨论投票的政治后果。",
+              "可训练区分正式独立公投与启动程序的投票、识别因果解释和人物观点归属，以及推断其谈判作用。",
+              "fringe、mobilized、grievance、leverage 等词汇可用于描述边缘运动、社会动员、不满和谈判筹码。",
+              "写作可借鉴“历史背景—利益分歧—动员机制—多方回应—可能后果”的分析框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "fringe",
+                "phonetic": "/frɪndʒ/",
+                "part": "adj.",
+                "translation": "边缘的；非主流的"
+              },
+              {
+                "word": "separatism",
+                "phonetic": "/ˈsepərətɪzəm/",
+                "part": "n.",
+                "translation": "分离主义"
+              },
+              {
+                "word": "referendum",
+                "phonetic": "/ˌrefəˈrendəm/",
+                "part": "n.",
+                "translation": "公民投票；全民公决"
+              },
+              {
+                "word": "imposed",
+                "phonetic": "/ɪmˈpoʊzd/",
+                "part": "v.",
+                "translation": "强加；推行"
+              },
+              {
+                "word": "morphed",
+                "phonetic": "/mɔːrft/",
+                "part": "v.",
+                "translation": "演变；转变"
+              },
+              {
+                "word": "mobilized",
+                "phonetic": "/ˈmoʊbəlaɪzd/",
+                "part": "v.",
+                "translation": "动员；组织起来"
+              },
+              {
+                "word": "grievances",
+                "phonetic": "/ˈɡriːvənsɪz/",
+                "part": "n. pl.",
+                "translation": "不满；委屈"
+              },
+              {
+                "word": "leverage",
+                "phonetic": "/ˈlevərɪdʒ/",
+                "part": "n.",
+                "translation": "影响力；谈判筹码"
+              },
+              {
+                "word": "recede",
+                "phonetic": "/rɪˈsiːd/",
+                "part": "v.",
+                "translation": "减弱；退去"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "For decades, Alberta separatism was a fringe cause.",
+                "analysis": [
+                  "句子主干为 Alberta separatism was a fringe cause，主语、系动词和表语构成完整判断。",
+                  "For decades 是句首时间状语，强调这种运动曾长期处于边缘位置。",
+                  "a fringe 作 cause 的前置修饰语，概括其社会政治地位。",
+                  "短句用过去时建立文章起点，为后文变化形成对照。",
+                  "可借鉴 For decades, ... was ... 引出长期背景。"
+                ],
+                "translation": "几十年来，阿尔伯塔分离主义一直是边缘诉求。"
+              },
+              {
+                "original": "Instead, voters will decide whether the province should remain in Canada or begin the legal process toward a future referendum on separation.",
+                "analysis": [
+                  "主句主干是 voters will decide，Instead 承接并纠正“立即脱离”的误解。",
+                  "whether 引导 decide 的宾语从句，说明选民要决定的具体事项。",
+                  "从句由 or 并列两个选择：留在加拿大，或启动通往未来公投的法律程序。",
+                  "toward a future referendum 是方向性介词短语，说明程序目标而非眼前结果。",
+                  "可借鉴 decide whether ... or ... 清楚区分政策选项。"
+                ],
+                "translation": "相反，选民将决定该省应留在加拿大，还是启动通往未来分离公投的法律程序。"
+              },
+              {
+                "original": "Kenney said people mobilized over anger at globalization, vaccines and pandemic restrictions, while social media allowed previously isolated activists to find one another and organize.",
+                "analysis": [
+                  "主句为 Kenney said...，后接省略 that 的宾语从句。",
+                  "宾语从句前半句 people mobilized 说明动员基础，over 引出不满所针对的议题。",
+                  "while 连接并列对照的后半句，指出社交媒体提供了组织条件。",
+                  "previously isolated 修饰 activists；to find... and organize 是 allowed 的宾语补足结构。",
+                  "可借鉴 while 连接社会情绪与传播工具，解释运动如何形成。"
+                ],
+                "translation": "Kenney 说，人们因对全球化、疫苗和疫情限制的不满而被动员起来，而社交媒体让原本彼此隔绝的活动人士得以相识并组织行动。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-17",
       "status": "ready",
@@ -2000,339 +2333,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 What are the actual benefits? 引出效果评估，并在后文用证据而非期待作答。"
                 ],
                 "translation": "尽管前景可期，专家强调，从这类观察性数据中能够外推的结论有限，因为它依赖自我报告，结果也可能受到其他因素干扰。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-11",
-      "status": "ready",
-      "ai": {
-        "intro": "10月10日至11日仅核实到1项符合条件的新变化，因此扩至近7天，补入10月8日与10月7日发布的公告；下列来源均按真实发布日期标注。",
-        "updates": [
-          {
-            "event": "GitHub Copilot for JetBrains 增加模型、MCP 启动和对话控制（2026-10-10）",
-            "summary": "GitHub 为 JetBrains 插件增加企业托管的默认模型设置、诊断问题的内联 Fix 操作、控制 Copilot 与 Claude MCP 服务器是否自动启动的选项，并改进聊天导航、账户切换和 Agent 会话稳定性。更新要求 JetBrains IDE 2025.2 或更高版本。",
-            "howTo": "更新到最新 GitHub Copilot JetBrains 插件；在代码诊断的 intention 菜单中点 Fix，让 Copilot 在可用时通过 Agent mode、否则通过 Ask mode提出修复；需要手动控制工具时，在 Copilot 的 MCP 设置中关闭服务器自动启动。",
-            "impact": "写课程项目时可从 IDE 诊断直接请求解释和修复建议，并按需启动 MCP 工具，减少在不同窗口间切换；处理建议前仍应检查差异，避免未审阅的更改进入作业或团队仓库。",
-            "free": "需要登录有权使用 Copilot 的 GitHub 账户，并使用 JetBrains IDE 2025.2 或更高版本。公告未说明该批功能适用的具体套餐、地区或独立配额，相关限制官方未说明；公告也未说明这次更新是否另收费。",
-            "category": "AI 编程助手 / IDE 工作流",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-10",
-              "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
-            }
-          },
-          {
-            "event": "Anthropic 为开源项目推出免费周期性 AI 漏洞扫描（2026-10-08）",
-            "summary": "Anthropic 的 OSS Scanner 面向获准加入的开源项目提供最强模型进行的周期性安全扫描，扫描报告直接由模型生成并发给维护者，不经过人工复核。项目需要自愿加入；官方特别提醒，服务适合已有能力跟进高危漏洞报告的项目。",
-            "howTo": "由项目核心维护者检查 OSS Scanner 的资格条件，在 anthropics/oss-scanner 仓库按模板新增 projects/<project>/project.yaml，填写仓库地址、主要联系人和构建用 Dockerfile 路径，再提交 Pull Request 申请；获准后按报告人工核查漏洞和修复建议。",
-            "impact": "维护课程工具或学生开源项目的人可了解真实的漏洞披露与维护流程；报告可能有误且没有人工审核，不能未经验证就把模型发现当作已确认漏洞或直接发布修补。",
-            "free": "被接受加入的开源项目可免费获得周期性扫描；官方以项目对基础设施或用户安全的重要性等条件个案评估，并会人工验证提交者是否为核心维护者。扫描频率、名额、地区和申请截止日期官方未说明。",
-            "category": "免费开源工具 / 代码安全",
-            "source": {
-              "name": "Anthropic News",
-              "published": "2026-10-08",
-              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
-            }
-          },
-          {
-            "event": "Anthropic 发布 Claude Haiku 5.5，面向快速、重复性任务（2026-10-07）",
-            "summary": "Claude Haiku 5.5 是 Anthropic 新一代小模型，面向摘要、分类、压缩上下文和子 Agent 等高频任务，并新增可调 effort 设置，便于在成本与回答能力间取舍。官方称其已在 Claude Platform、AWS、Google Cloud 和 Microsoft Azure 等平台提供。",
-            "howTo": "开发者可在 Claude Platform API 中选择模型 ID `claude-haiku-5-5`，用非敏感课程笔记测试摘要或分类，并尝试调整 effort；先对照原文检查遗漏，再决定是否将它接入项目流程。",
-            "impact": "适合快速整理阅读材料、给小批量访谈文本做初步主题分类，或为编码 Agent 分担范围明确的子任务；它不是复杂研究结论的替代品，输出应回查来源。",
-            "free": "官方模型页列有 API 输入和输出 token 价格，因此 API 调用按用量计费；公告未说明 Claude 免费聊天用户能否选择该型号，也未给出免费调用额度、地区限制或统一配额，均以所在平台实际页面为准，未明确部分官方未说明。",
-            "category": "生成式 AI / 轻量模型",
-            "source": {
-              "name": "Anthropic News",
-              "published": "2026-10-07",
-              "url": "https://www.anthropic.com/claude-haiku-5-5"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Free：每月可用的编程补全与聊天额度",
-            "summary": "GitHub 的 Copilot Free 计划为个人提供无需订阅费的基础编程辅助；官方列出的月额度为 2,000 次代码补全和 50 次聊天请求，Copilot Edits 也计入聊天请求。",
-            "howTo": "打开 GitHub Copilot Plans 页面选择 Free 计划，登录 GitHub 账户后在支持的编辑器安装 Copilot 插件；先用少量代码补全和聊天请求测试课程仓库，留意当月额度。",
-            "impact": "可用于解释报错、生成小段样板代码或练习单元测试，避免为短期课程练习先购买付费计划；不要把生成代码未经检查地提交。",
-            "free": "计划价格为免费；每月 2,000 次代码补全、50 次聊天请求（含 Copilot Edits），额度按月重置。官方页面未说明地区限制或额外账户资格要求，未说明部分官方未说明。",
-            "category": "长期免费 / 编程学习",
-            "source": {
-              "name": "GitHub Copilot Plans & Pricing",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Claude Free：可直接用于日常问答、阅读和写作辅助",
-            "summary": "Claude 定价页列出每人可用的 Free 计划，覆盖日常问题；适合先用来解释概念、梳理阅读提纲或检查一段文字，而不必先订阅。",
-            "howTo": "打开 Claude 定价页进入 Free 计划，登录后在网页或官方应用中粘贴一段非敏感课程材料，要求模型先概括论点，再对照原文校验。",
-            "impact": "能为英语阅读、论文提纲和概念复习提供低门槛的初稿帮助；应核查引文与事实，不上传未公开论文、个人信息或研究参与者资料。",
-            "free": "Free 计划价格为 0；官方说明使用额度按滚动 5 小时窗口重置，但没有固定消息数，实际用量受对话长度、模型和功能影响，也可能有其他限额。具体地区资格官方未说明。",
-            "category": "长期免费 / 学习助手",
-            "source": {
-              "name": "Claude Pricing",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Qwen3-4B-Instruct-2507：可下载的 Apache 2.0 开放权重模型",
-            "summary": "Qwen 官方 Hugging Face 模型卡公开 Qwen3-4B-Instruct-2507 权重并标注 Apache-2.0 许可；模型卡列出 4B 参数和原生 262,144-token 上下文，并提供 Transformers 使用示例。",
-            "howTo": "打开模型卡查看许可与运行示例，按示例准备 Transformers 环境并下载权重；先在本机用不含个人信息的短文本测试，再依据设备内存决定是否继续部署。",
-            "impact": "有合适硬件的学生可以练习本地推理、提示词对照和模型部署，避免把实验文本发往托管聊天服务；本地模型回答仍需核验，模型许可也不代表输出可直接当作事实。",
-            "free": "模型权重以 Apache-2.0 许可公开，可下载后本地运行，不需要为该模型的本地推理支付 API 调用费；硬件、电力和运行环境由使用者承担。托管推理的价格、账户、地区和配额官方未说明。",
-            "category": "免费开放权重 / 本地学习",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
-            }
-          },
-          {
-            "event": "Anthropic OSS Scanner：为获准的开源项目提供免费定期扫描",
-            "summary": "Anthropic 向加入 OSS Scanner 的开源项目免费提供模型安全扫描；核心维护者提交项目配置 PR，经审核加入后可定期收到漏洞报告。",
-            "howTo": "项目核心维护者查看 OSS Scanner 资格说明，按模板在 anthropics/oss-scanner 新建项目配置，填写仓库、联系人和构建环境并提交 PR；获准后人工复核扫描结果。",
-            "impact": "学生维护的公共软件若有足够用户或被其他项目依赖，可把安全扫描纳入维护实践；该服务明确适合能跟进已确认高危报告的项目，不适合把自动报告直接当作已确认漏洞。",
-            "free": "被接受加入的开源项目免费获得周期性扫描；申请需由核心维护者提交并经过人工确认，项目资格按安全影响等因素审核。扫描次数、地区、名额及期限官方未说明。",
-            "category": "免费单次申请 / 开源代码安全",
-            "source": {
-              "name": "Anthropic Cyber Mission",
-              "published": "2026-10-08",
-              "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "本期从文学如何重释古典传统，以及一座威尔士小城如何重建牛仔裤制造业切入；练习对比、让步、因果与转折结构，并区分文化价值主张和企业经营事实。",
-        "articles": [
-          {
-            "title": "Anne Carson’s Nobel-winning, genre-defying work bridges the gap between ancient Greek literature and modern life",
-            "source": "The Conversation",
-            "published": "2026-10-09",
-            "url": "https://theconversation.com/anne-carsons-nobel-winning-genre-defying-work-bridges-the-gap-between-ancient-greek-literature-and-modern-life-294020",
-            "readingTime": "约 6 分钟",
-            "topic": "文化 / 古典文学的当代改写",
-            "summary": "文章以诺贝尔文学奖得主 Anne Carson 为中心，提出她的作品通过翻译、改编与跨媒介创作，让古希腊文学进入当代经验。作者先比较 Christopher Nolan 与 Carson 如何重新讲述古典故事，再以 Carson 将海伦与 Marilyn Monroe 并置、改写《安提戈涅》为例，说明旧文本可以借新的文化视角重获现实意义。随后文章转向《萨福诗选》的残篇处理：Carson 用方括号和留白标示原文缺失，不把不确定之处补成完整叙事；这种选择引发评论者对译者是否应介入古典文本的分歧。结尾把 Carson 的作品概括为过去与现在之间的持续对话，强调其诗人语言感和古典学训练共同使旧文学焕发新意。",
-            "reason": [
-              "古典文化如何进入现代生活，连接文学、翻译与文化记忆，是适合讨论“传统是否需要改写”的文化主题。",
-              "论述先提出跨时代改写的总观点，再举舞台作品与译本为例，继而引入反对意见，最后回到作品的总体价值。",
-              "可练习主旨题、例证功能题、指代题，以及辨析作者如何呈现 Carson 与批评者的不同立场。",
-              "genre-defying、overlay、fragmentary、elide 等词可用于分析文学形式、翻译取舍与文本证据。",
-              "写作可借鉴“传统材料—当代重构—争议边界—文化意义”的展开方式，论证改编时兼顾创新与原作。"
-            ],
-            "vocabulary": [
-              {
-                "word": "defy",
-                "phonetic": "/dɪˈfaɪ/",
-                "part": "v.",
-                "translation": "违背；不受……限制"
-              },
-              {
-                "word": "evoke",
-                "phonetic": "/ɪˈvoʊk/",
-                "part": "v.",
-                "translation": "唤起；使人想起"
-              },
-              {
-                "word": "contemporary",
-                "phonetic": "/kənˈtempəreri/",
-                "part": "adj.",
-                "translation": "当代的；现代的"
-              },
-              {
-                "word": "overlay",
-                "phonetic": "/ˌoʊvərˈleɪ/",
-                "part": "v.",
-                "translation": "叠加；将一种事物置于另一事物之上"
-              },
-              {
-                "word": "fragmentary",
-                "phonetic": "/ˈfræɡmənteri/",
-                "part": "adj.",
-                "translation": "残缺的；片段式的"
-              },
-              {
-                "word": "elide",
-                "phonetic": "/iˈlaɪd/",
-                "part": "v.",
-                "translation": "省略；删去"
-              },
-              {
-                "word": "austerity",
-                "phonetic": "/ɔːˈsterəti/",
-                "part": "n.",
-                "translation": "简朴；（表达方式的）克制"
-              },
-              {
-                "word": "interposition",
-                "phonetic": "/ˌɪntərpəˈzɪʃən/",
-                "part": "n.",
-                "translation": "介入；插入"
-              },
-              {
-                "word": "distinctive",
-                "phonetic": "/dɪˈstɪŋktɪv/",
-                "part": "adj.",
-                "translation": "独特的；有辨识度的"
-              },
-              {
-                "word": "legacy",
-                "phonetic": "/ˈleɡəsi/",
-                "part": "n.",
-                "translation": "遗产；流传下来的影响"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Although Nolan and Carson differ in approach, medium and critical reception, both have sought to make works of ancient Greece new for a contemporary audience.",
-                "analysis": [
-                  "主干是 both have sought to make works ... new，both 指 Nolan 与 Carson；although 引导让步状语从句。",
-                  "in approach, medium and critical reception 并列修饰 differ，概括两人的创作路径、媒介和评论反响差异。",
-                  "make + 宾语 + 形容词补足语（make works ... new）表达“使作品焕然一新”，后接 for 短语说明受众。",
-                  "让步关系先承认两者差异，再强调共同目标，构成“虽不同但有共性”的论证转折。",
-                  "可借鉴 Although A and B differ in ..., both ... 来组织比较类议论文。"
-                ],
-                "translation": "尽管诺兰与卡森在创作方式、媒介和评论反响上各不相同，两人都试图让古希腊作品对当代读者焕发新意。"
-              },
-              {
-                "original": "In it, Carson overlays Helen of Troy with Marilyn Monroe in order to explore the destructive power of beauty.",
-                "analysis": [
-                  "主句核心是 Carson overlays Helen of Troy with Marilyn Monroe；In it 回指上文提到的舞台作品。",
-                  "overlay A with B 表示把 B 的形象叠加到 A 之上，具体说明改编采用的手法。",
-                  "in order to 引出目的状语，说明这种人物并置服务于探讨 beauty 的破坏性力量。",
-                  "destructive 修饰 power，of beauty 作后置介词短语限定力量来源，形成抽象议题表达。",
-                  "可仿写 use/juxtapose A with B in order to explore ...，陈述作品手法与主题之间的关系。"
-                ],
-                "translation": "在这部作品中，卡森将特洛伊的海伦与玛丽莲·梦露叠置，以探讨美的破坏性力量。"
-              },
-              {
-                "original": "Rather than eliding them, Carson ends up bringing attention to these absences – an utterly distinctive choice.",
-                "analysis": [
-                  "主句为 Carson ends up bringing attention to these absences；Rather than 引出与主句形成对照的动名词短语。",
-                  "them 指代前文提到的残缺或模糊文本；these absences 把缺失本身作为关注对象。",
-                  "end up doing 表示最终采取某种做法，带有结果意味；bringing attention to 是“使……受到关注”。",
-                  "破折号后的 an utterly distinctive choice 是同位补充，对前面的处理方式作评价。",
-                  "rather than doing 可用于写作中突出“没有采取常规做法，而选择……”的对比。"
-                ],
-                "translation": "卡森没有把这些残缺删去，反而最终让读者注意到它们——这是一个极具特色的选择。"
-              }
-            ]
-          },
-          {
-            "title": "“Our town is making jeans again”: meet the firm reviving jobs and skills in Wales",
-            "source": "The Guardian",
-            "published": "2026-10-10",
-            "url": "https://www.theguardian.com/business/2026/oct/10/hiut-denim-jeans-cardigan-wales-manufacturing",
-            "readingTime": "约 6 分钟",
-            "topic": "商业 / 地方制造业与技能传承",
-            "summary": "报道考察威尔士 Cardigan 的 Hiut Denim 如何试图重建当地牛仔裤制造业。小镇曾有大型工厂，生产外迁后许多工作岗位消失；2011 年成立的 Hiut 则以小规模手工生产和重新培训工人为核心。文章用昔日每周数万条牛仔裤与如今每周约 120 条、约 20 名员工的反差，说明其并非复制大规模制造，而是以高价、工艺和长期维修服务支撑品牌。随后报道介绍疫情后的资金压力、家族接手、供应链挑战和扩张计划，并指出资深工人即将退休，企业只有有限时间培养新人。结尾呈现这项经营尝试的张力：地方就业与传统技能具有社会价值，但维持本地生产仍须面对成本、人才和市场规模问题。",
-            "reason": [
-              "地方产业、就业与手工技能的存续构成商业与社会交叉主题，可讨论全球化后制造业如何重建。",
-              "文章以城镇制造史开篇，转入企业创立和生产方式，再讨论资金、供应链、接班与扩张，呈现机遇和约束。",
-              "适合主旨题、数字对比题、人物引语作用题，以及判断企业叙事是否足以证明长期盈利能力。",
-              "outsource、heyday、backlog、selvedge、ethos 等表达可用于产业迁移、产能和品牌价值讨论。",
-              "写作可借鉴“产业衰退—小规模重建—商业模式—持续性挑战”的结构，并避免把个案成功直接推及整个行业。"
-            ],
-            "vocabulary": [
-              {
-                "word": "unlikely",
-                "phonetic": "/ʌnˈlaɪkli/",
-                "part": "adj.",
-                "translation": "不大可能的；出人意料的"
-              },
-              {
-                "word": "outsourcing",
-                "phonetic": "/ˈaʊtsɔːrsɪŋ/",
-                "part": "n.",
-                "translation": "外包；将生产转移至外部"
-              },
-              {
-                "word": "heyday",
-                "phonetic": "/ˈheɪdeɪ/",
-                "part": "n.",
-                "translation": "全盛时期；鼎盛期"
-              },
-              {
-                "word": "crank out",
-                "phonetic": "/kræŋk aʊt/",
-                "part": "phr.v.",
-                "translation": "大量快速生产"
-              },
-              {
-                "word": "backlog",
-                "phonetic": "/ˈbæklɔːɡ/",
-                "part": "n.",
-                "translation": "积压的订单；待办事项"
-              },
-              {
-                "word": "premium",
-                "phonetic": "/ˈpriːmiəm/",
-                "part": "adj.",
-                "translation": "高端的；价格较高的"
-              },
-              {
-                "word": "selvedge",
-                "phonetic": "/ˈselvɪdʒ/",
-                "part": "n.",
-                "translation": "（织物的）布边；此处指赤耳丹宁布"
-              },
-              {
-                "word": "logistical",
-                "phonetic": "/ləˈdʒɪstɪkəl/",
-                "part": "adj.",
-                "translation": "物流方面的；后勤的"
-              },
-              {
-                "word": "ethos",
-                "phonetic": "/ˈiːθɑːs/",
-                "part": "n.",
-                "translation": "价值观；精神气质"
-              },
-              {
-                "word": "stockist",
-                "phonetic": "/ˈstɑːkɪst/",
-                "part": "n.",
-                "translation": "经销商；备货零售商"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "When jeans manufacturing in Wales was moved abroad at the start of the century, hundreds of local people lost their jobs and were forced to find work elsewhere.",
-                "analysis": [
-                  "主句核心是 hundreds of local people lost their jobs and were forced to find work；When 从句交代时间和背景。",
-                  "manufacturing 是从句主语，was moved abroad 为被动结构，突出生产转移而非具体决策者。",
-                  "and 连接 lost 与 were forced 两个并列谓语，呈现岗位流失及后续谋生压力。",
-                  "elsewhere 与 abroad 构成空间对照：生产迁往海外，本地工人则不得不外出另找工作。",
-                  "可借鉴 When ... was moved ..., ... were forced to ...，表达政策或产业变化造成的社会后果。"
-                ],
-                "translation": "本世纪初，威尔士的牛仔裤制造业迁往海外时，数百名当地人失去了工作，被迫到别处谋生。"
-              },
-              {
-                "original": "Hiut employs 20 people, who make 120 pairs a week.",
-                "analysis": [
-                  "主句为 Hiut employs 20 people；who 引导非限定性定语从句，补充说明这些员工的生产工作。",
-                  "20 people 与 120 pairs a week 把企业规模和产量具体化，数字用于呈现小规模经营。",
-                  "一般现在时描述企业当前常态；a week 是频率时间状语，修饰 make。",
-                  "非限定从句中的 who 指代 people，不能理解成限制“哪些员工”这一范围。",
-                  "可借鉴“主体 + 规模数据，which/who + 补充产出”写法，将抽象商业模式落到可核实指标。"
-                ],
-                "translation": "Hiut 雇用 20 人，他们每周生产 120 条牛仔裤。"
-              },
-              {
-                "original": "He also wants to broaden Hiut’s appeal, and as part of that has secured new stockists, including Liberty department store in London.",
-                "analysis": [
-                  "句子以 He 为主语，wants to broaden 与 has secured 是由 and 连接的两个谓语，分别表达目标与已采取行动。",
-                  "as part of that 是插入的方式/关联状语，that 指拓宽品牌吸引力这一目标。",
-                  "including 引出例子，说明 new stockists 的具体对象，而不是另起一个完整分句。",
-                  "从“希望拓宽市场”到“取得新经销渠道”形成目的与行动之间的逻辑联系。",
-                  "可仿写 aim to broaden ..., and as part of that have secured ...，说明商业策略如何落实。"
-                ],
-                "translation": "他还希望扩大 Hiut 的吸引力，并为此争取到新的经销商，其中包括伦敦的 Liberty 百货。"
               }
             ]
           }
