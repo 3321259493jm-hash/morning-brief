@@ -1,6 +1,339 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-21T09:33:22.000+08:00",
+  "updatedAt": "2026-10-22T09:31:13.000+08:00",
   "issues": [
+    {
+      "date": "2026-10-22",
+      "status": "ready",
+      "ai": {
+        "intro": "昨日与今日未核实到 3 项符合条件的 AI 更新，因此扩展至近 7 天；本期选入 10 月 19—20 日的 Gemini 与 Copilot 官方更新，并新增 Claude 免费计划、Gemini API 免费层和 Qwen3-4B 开放权重。",
+        "updates": [
+          {
+            "event": "Gemini 为小企业推出品牌和经营工作入口（2026-10-20）",
+            "summary": "Google 公告为 Gemini App 增加小企业专用入口、品牌风格设定、经营内容工具及财务图表能力；用户可上传网站或品牌资料生成风格一致的视觉素材，并连接 Google 与部分第三方业务工具。官方表示功能正于全球向 Gemini App 用户分批推出。",
+            "howTo": "打开 Gemini App，若功能已到账，进入小企业工作入口并上传品牌网站、品牌套件、字体或配色；随后按需调用营销或财务能力。入口尚未出现时，等待官方所说的分批上线。",
+            "impact": "学生创业团队或社团可先用品牌素材起草宣传图文，也可把课程项目中的样例账目整理成图表；对真实财务数据和生成的营销信息仍需逐项核验。",
+            "free": "公告称功能面向 Gemini App 用户并在全球分阶段推出，但价格、额外账号条件及具体配额官方未说明；公告称 rollout 将在未来几天开始。",
+            "category": "Gemini 应用 / 小企业工具",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-10-20",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/"
+            }
+          },
+          {
+            "event": "Gemini Notebook 增加幻灯片与视频概览生成前审阅（2026-10-19）",
+            "summary": "Gemini Notebook 为 Slide Decks 和 Video Overviews 加入共创步骤：用户先查看基于资料生成的大纲或制作说明，再反馈内容顺序、摘要和视觉风格，确认后才渲染成品；原有直接生成方式仍可选。",
+            "howTo": "在 Gemini Notebook 中用已加入的资料提出制作幻灯片或视频概览的请求；打开 Review，在工作区检查幻灯片大纲说明或视频制作说明，提交修改后选择 Proceed。",
+            "impact": "复习时可先检查资料是否被归纳完整，再把讲义转成汇报材料；若需要快速草稿，也可跳过审阅。",
+            "free": "Google 称正向全球 Gemini Notebook 用户逐步推出，预计在一周内推广；公告未说明价格、账号门槛、使用配额或地区限制。",
+            "category": "学习工具 / 资料转演示",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-10-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 模型策略管理 REST API 正式可用（2026-10-19）",
+            "summary": "GitHub 将读取和更新 Copilot 模型策略的 GET、PATCH REST API 推至一般可用，覆盖 enterprise、enterprise team、agent app 和 organization 四个管理层级；它改变的是组织管理能力，并非个人账户新增模型。",
+            "howTo": "组织 Copilot 管理员可从 GitHub 官方公告进入 REST API 文档，先用 GET 查看相应层级的模型策略，再按组织管理模式用 PATCH 修改允许的模型。",
+            "impact": "使用学校或实验室组织账号的学生可向管理员确认可用模型；个人账号用户不需要寻找一个并不存在的个人功能入口。",
+            "free": "这是组织/企业管理员 API，并非个人免费权益。公告未说明单独价格、地区限制或请求配额；使用范围取决于相应 GitHub 组织与 API 权限。",
+            "category": "GitHub Copilot / 组织管理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-19",
+              "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude Free：网页、桌面和移动端的免费计划",
+            "summary": "Claude 官方定价页列出 $0 的 Free 计划，支持网页、桌面和移动端对话，并列出网页搜索、创建文件、运行代码、Artifacts 等功能。",
+            "howTo": "访问 Claude 网页或安装桌面/移动端应用，创建账号后选择 Free 计划；用它整理阅读提纲、探索资料或生成练习题，并在提交前核查答案。",
+            "impact": "可作为写作构思、文件整理和代码练习的免付费起点，适合先验证任务是否适合对话式工具。",
+            "free": "官方标价 $0，称 Free for everyone；使用限制适用，但定价页没有给出具体配额。该页未说明地区限制或额外资格条件。",
+            "category": "长期免费网页/应用访问 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Gemini Developer API 免费层：可免费试做小型原型",
+            "summary": "Google 官方定价页列出 Free 层，提供部分模型的免费输入与输出 token，并可使用 Google AI Studio；免费层仅开放部分模型，官方说明免费层内容可能用于改进产品。",
+            "howTo": "打开 Google AI Studio 获取 API key，在项目中选择定价页标为 Free 的模型并按官方 quickstart 发起请求；开始前查看该模型和项目的实时 rate limits，避免把敏感课程材料发送到免费层。",
+            "impact": "适合课程编程作业或个人原型试做模型调用、结构化输出和提示词实验；超出免费层前应先确认计费设置。",
+            "free": "免费层仅限特定模型，页面未列出固定调用配额；速率限制依模型与项目而异。此定价页未说明地区与账号资格条件，免费层数据可用于改进 Google 产品。",
+            "category": "免费 API 额度 / 原型开发",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-4B：Apache-2.0 许可的可下载开放权重模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B 权重与 Transformers 使用示例；模型卡元数据标注 Apache-2.0 许可，支持思考与非思考模式切换。",
+            "howTo": "打开 Qwen/Qwen3-4B 模型卡，按 Quickstart 安装 Transformers 与所需运行依赖，再下载权重并在本地加载；也可先阅读模型卡的硬件和运行说明。",
+            "impact": "适合在有兼容设备的课程项目中学习本地推理、比较提示模式，或测试中英文本处理；本地模型输出仍需验证。",
+            "free": "模型卡标注 Apache-2.0，可按该许可下载和使用权重；权重下载不收托管 API 调用费，但本地硬件、存储和电力成本由使用者承担。官方模型卡未说明免费托管调用配额、地区或账号资格。",
+            "category": "开放模型权重 / 本地学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student：经验证学生可启用免费权益",
+            "summary": "GitHub 官方学生指南确认，GitHub Education 验证通过的学生可以免费使用 Copilot 功能；学生须主动完成启用，资格每月重新评估。",
+            "howTo": "先通过 GitHub Education 学生验证，再进入 GitHub Settings 的 Education benefits，按页面提示单独启用 Copilot Student；若仍显示 Free 或付费结账，先等待权益生效，不要提交购买。",
+            "impact": "可在课程项目中练习代码补全和理解建议；阅读、测试并理解生成代码仍是学生自己的责任。",
+            "free": "仅面向经 GitHub Education 验证的学生，免费权益需单独启用且资格每月重评；官方指南未列明具体地区名单或请求配额，验证通过后权益可能需数日生效。",
+            "category": "学生教育权益 / 编程辅助",
+            "source": {
+              "name": "GitHub Docs：学生 Copilot 设置",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期一篇报道分析欧盟调查订房平台欺诈风险与平台责任，另一篇法律评论讨论儿童独立活动、家长责任和儿童保护之间的张力；分别练习新闻证据归纳与平衡论证。",
+        "articles": [
+          {
+            "title": "Booking.com under investigation by EU regulators over fake listings and scams",
+            "source": "The Guardian",
+            "published": "2026-10-21",
+            "url": "https://www.theguardian.com/world/2026/oct/21/bookingcom-under-investigation-eu-regulators-fake-listings-scams",
+            "readingTime": "约 6 分钟",
+            "topic": "商业与科技 / 平台治理、消费者保护与网络诈骗",
+            "summary": "欧盟委员会对 Booking.com 展开调查，重点是平台是否充分防范虚假房源、钓鱼信息和账户被盗后的“预订劫持”，并调查付费房源的广告透明度。报道先交代《数字服务法》要求平台评估风险和采取措施，再以消费者组织收到的诈骗投诉、此前媒体测试及用户损失说明问题规模；同时呈现欧盟方面对防护不足的批评和 Booking.com 的回应。文章指出调查尚未预判结果，但若被认定违规可能面临相当于全球年营业额 6% 的罚款，结尾强调平台需加强数据保护和反欺诈防线。",
+            "reason": [
+              "平台诈骗、消费者权益和数字监管是商业与社会治理的交叉主题，适合练习公共政策类阅读。",
+              "文章由调查消息切入，解释法律义务，再以投诉数据和案例补证，随后呈现企业回应与潜在后果。",
+              "可考查调查对象、违规指控与既定结论的区别，也可辨认证据、回应和监管后果之间的关系。",
+              "fraudulent、safeguard、transparency 等词汇可用于讨论网络交易风险与平台责任。",
+              "写作可借鉴“规则—案例—回应—后果”的论证顺序，并用 may、alleged 等词避免把调查指控写成定论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "investigation",
+                "phonetic": "/ɪnˌvestɪˈɡeɪʃən/",
+                "part": "n.",
+                "translation": "调查"
+              },
+              {
+                "word": "alleging",
+                "phonetic": "/əˈledʒɪŋ/",
+                "part": "v.",
+                "translation": "声称；指称"
+              },
+              {
+                "word": "fraudulent",
+                "phonetic": "/ˈfrɔːdʒələnt/",
+                "part": "adj.",
+                "translation": "欺诈的"
+              },
+              {
+                "word": "transparency",
+                "phonetic": "/trænsˈperənsi/",
+                "part": "n.",
+                "translation": "透明度"
+              },
+              {
+                "word": "safeguard",
+                "phonetic": "/ˈseɪfɡɑːrd/",
+                "part": "n.",
+                "translation": "防护措施"
+              },
+              {
+                "word": "impersonate",
+                "phonetic": "/ɪmˈpɜːrsəneɪt/",
+                "part": "v.",
+                "translation": "冒充"
+              },
+              {
+                "word": "turnover",
+                "phonetic": "/ˈtɜːrnoʊvər/",
+                "part": "n.",
+                "translation": "营业额"
+              },
+              {
+                "word": "systemic",
+                "phonetic": "/sɪˈstemɪk/",
+                "part": "adj.",
+                "translation": "系统性的"
+              },
+              {
+                "word": "phishing",
+                "phonetic": "/ˈfɪʃɪŋ/",
+                "part": "n.",
+                "translation": "网络钓鱼"
+              },
+              {
+                "word": "constructively",
+                "phonetic": "/kənˈstrʌktɪvli/",
+                "part": "adv.",
+                "translation": "建设性地"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The commission said that opening the investigation did not prejudge the outcome.",
+                "analysis": [
+                  "主干是 The commission said，that 引导的宾语从句给出委员会的程序性说明。",
+                  "宾语从句中 opening the investigation 是动名词短语作主语，did not prejudge 是谓语。",
+                  "did not 的否定范围落在 prejudge，意为调查启动并未预先决定最终结果。",
+                  "这句限定了新闻结论的力度，区分“展开调查”和“已经认定违规”。",
+                  "可借鉴 said that... 转述机构立场，并用 not prejudge 避免把程序描述成结论。"
+                ],
+                "translation": "委员会表示，启动调查并不意味着预先判定结果。"
+              },
+              {
+                "original": "Booking.com, which is headquartered in Amsterdam and claims to have 28m accommodation listings, said it was engaging constructively with the commission.",
+                "analysis": [
+                  "主句主干为 Booking.com said...，公司名称作主语，said 引出其回应。",
+                  "which 引导的非限制性定语从句补充公司总部所在地及其自称的房源数量。",
+                  "said 后的 it was engaging... 是宾语从句，说明公司称自己正如何回应。",
+                  "constructively 修饰 engaging，描述回应方式；claims to 也提示房源数量是公司的说法。",
+                  "可借鉴非限制性定语从句补充背景，并用 claims to 标记未经独立证实的自述。"
+                ],
+                "translation": "Booking.com 表示正与委员会进行建设性沟通；该公司总部位于阿姆斯特丹，并称有 2,800 万处住宿房源。"
+              },
+              {
+                "original": "These cases were “just the tip of the iceberg”, it said, as many victims would not report to its fraud helpdesk.",
+                "analysis": [
+                  "主干是 These cases were “just the tip of the iceberg”，用隐喻表达已报告案例可能只是表面部分。",
+                  "插入的 it said 标明这句话来自前文提到的荷兰消费者协会。",
+                  "as 引导原因/解释从句，说明许多受害者可能不会向其欺诈求助渠道报告。",
+                  "would not report 使用情态结构描述未发生的可能情况，并非给出受害者总数。",
+                  "可借鉴 as 从句解释数据不完整的原因，同时避免把投诉量等同于全部事件。"
+                ],
+                "translation": "该协会称，这些案例“只是冰山一角”，因为许多受害者不会向其欺诈求助渠道报告。"
+              }
+            ]
+          },
+          {
+            "title": "A pregnant mom let her 5-year-old stay outside to collect goose feathers – and was placed on the child abuse and neglect registry",
+            "source": "The Conversation",
+            "published": "2026-10-19",
+            "url": "https://theconversation.com/a-pregnant-mom-let-her-5-year-old-stay-outside-to-collect-goose-feathers-and-was-placed-on-the-child-abuse-and-neglect-registry-293189",
+            "readingTime": "约 8 分钟",
+            "topic": "社会与教育 / 儿童独立、家长责任与保护制度",
+            "summary": "作者以弗吉尼亚一名母亲因让五岁孩子独自去附近池塘捡羽毛而被调查、定罪并上登记册的案件开篇，指出各州对“疏忽照护”的定义不同且可能含糊。文章随后回顾类似案件、各州修法和儿童自主活动研究，认为过度宽泛的规则会促使家长选择持续看护，压缩孩子练习独立和应对风险的机会。作者也承认儿童保护机构必须避免漏掉严重虐待，并讨论问责压力如何造成过度反应；最后主张在儿童安全与了解具体孩子成熟度之间取得平衡，避免无谓案件消耗有限资源。",
+            "reason": [
+              "儿童独立成长、家庭责任与公共保护制度构成典型社会议题，适合练习抽象观点与具体案例结合的阅读。",
+              "作者从个案提出法律问题，比较法规和研究证据，承认保护儿童的另一面，再提出平衡立场。",
+              "可考查作者态度、例证功能、因果关系，以及文章如何处理相反价值而非简单二分。",
+              "statute、autonomy、scrutiny、imminent 等词汇可迁移到法律、教育和社会政策主题。",
+              "写作可借鉴先承认合理顾虑、再指出制度副作用、最后提出平衡原则的让步论证结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "statute",
+                "phonetic": "/ˈstætʃuːt/",
+                "part": "n.",
+                "translation": "成文法规"
+              },
+              {
+                "word": "neglect",
+                "phonetic": "/nɪˈɡlekt/",
+                "part": "n.",
+                "translation": "疏忽照护；忽视"
+              },
+              {
+                "word": "supervision",
+                "phonetic": "/ˌsuːpərˈvɪʒən/",
+                "part": "n.",
+                "translation": "看护；监督"
+              },
+              {
+                "word": "autonomy",
+                "phonetic": "/ɔːˈtɑːnəmi/",
+                "part": "n.",
+                "translation": "自主；自主权"
+              },
+              {
+                "word": "incentive",
+                "phonetic": "/ɪnˈsentɪv/",
+                "part": "n.",
+                "translation": "激励因素"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "审查；密切关注"
+              },
+              {
+                "word": "frivolous",
+                "phonetic": "/ˈfrɪvələs/",
+                "part": "adj.",
+                "translation": "无实际意义的；轻率的"
+              },
+              {
+                "word": "amend",
+                "phonetic": "/əˈmend/",
+                "part": "v.",
+                "translation": "修订；修改"
+              },
+              {
+                "word": "imminent",
+                "phonetic": "/ˈɪmɪnənt/",
+                "part": "adj.",
+                "translation": "迫近的；即将发生的"
+              },
+              {
+                "word": "overreaction",
+                "phonetic": "/ˌoʊvəriˈrækʃən/",
+                "part": "n.",
+                "translation": "反应过度"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "In other words, the Legislature left it to parents to determine when their child would be mature enough to participate in unsupervised activities.",
+                "analysis": [
+                  "主干是 the Legislature left it to parents，it 作形式宾语，真正的内容由后面的不定式结构表达。",
+                  "to determine... 是宾语补足结构，说明立法机关把判断责任交给了父母。",
+                  "when 引导 determine 的宾语从句，说明家长要判断的具体问题。",
+                  "mature enough to participate... 中 enough 后接不定式，表达参与无人看护活动所需的成熟度。",
+                  "句首 In other words 将前文法规解释归纳成更直接的结论。"
+                ],
+                "translation": "换言之，立法机关把判断孩子何时足够成熟、可以参加无人看护活动的责任留给了家长。"
+              },
+              {
+                "original": "At the same time, it can also foster a culture of overreaction.",
+                "analysis": [
+                  "主干为 it can foster a culture，主语 it 指代前文所述的公共审视或问责压力。",
+                  "At the same time 是篇章连接语，提示作者补充同一现象的另一种后果。",
+                  "can 表示可能性而非必然性，also 表示此处是在已有作用之外补充影响。",
+                  "of overreaction 是介词短语，说明这里所说的文化具有何种特征。",
+                  "这句用简短转折从“促使机构认真调查”转向“可能反应过度”，体现让步结构。"
+                ],
+                "translation": "与此同时，它也可能助长一种反应过度的氛围。"
+              },
+              {
+                "original": "A commonsense approach to child protection balances safety with knowledge of the specific child and parents involved.",
+                "analysis": [
+                  "主干是 A commonsense approach balances safety with knowledge，主语中心词是 approach。",
+                  "to child protection 是介词短语，限定这种方法讨论的领域。",
+                  "balance A with B 表示把两方面纳入权衡，A 为 safety，B 为 knowledge。",
+                  "of the specific child and parents involved 补充说明需要了解的是哪些具体对象；involved 后置修饰 child and parents。",
+                  "可借鉴 balance A with B 表达政策或教育议题中的多方权衡。"
+                ],
+                "translation": "保护儿童的常识性做法，应把安全与对相关儿童及其父母具体情况的了解结合起来。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-21",
       "status": "ready",
@@ -2015,338 +2348,6 @@ window.BRIEFING_DATA = {
                   "该句把总体资本流入与特定群体承受的代价并置，可用于构造平衡的经济论证。"
                 ],
                 "translation": "全球资本的涌入推高了生活成本，使较贫困的华沙居民受到挤压。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-15",
-      "status": "ready",
-      "ai": {
-        "intro": "10月14日至15日官方公告中核实到2项可尝试或值得了解的AI变化；为达到3项，将检索范围扩至近7天并补入10月10日的Copilot更新。免费资源仅列官方明确说明的资格、价格、许可和配额。",
-        "updates": [
-          {
-            "event": "Google Earth AI 扩展早期访问，加入地理分析、风险预测和代理技能（2026-10-14）",
-            "summary": "Google Research 扩展 Earth AI 早期访问，提供三种新能力：在 Google Earth 中进行更深入的地理空间分析、用行星预测引擎评估风险与情景，以及通过实验性 agent-to-agent API 把地理推理技能接入自定义工作流。公告还提到可查询超过 1 亿个公开数据集。",
-            "howTo": "打开 Google Earth 的 Ask Google Earth 入口尝试地理问题；如需使用新实验能力，按公告中的 Early Access 表单申请，并查看其合作伙伴邀请条件。",
-            "impact": "地理、环境和公共卫生方向的学生可用它探索地点与数据、构思风险情景或测试工作流；新能力仍属实验性早期访问，不能把预测结果当成已验证结论。",
-            "free": "公告称正在扩展早期访问并邀请合作伙伴，未说明一般用户是否可直接使用、费用、具体配额或适用地区；实验性地理空间代理能力的开放范围也未说明。",
-            "category": "AI 研究 / 地理空间分析",
-            "source": {
-              "name": "Google Research Blog",
-              "published": "2026-10-14",
-              "url": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 更新 HydraFusion 并推出 HydraFusion Max（2026-10-14）",
-            "summary": "GitHub 更新 HydraFusion 的模型池与多模型编排流程，并推出针对高难任务调整推理力度的 HydraFusion Max。更新还加入审阅后按需修复的 Cascade 判定步骤，以及直接检查工作区、并行审阅的 Critique 流程。",
-            "howTo": "在 VS Code、GitHub Copilot app 或 Copilot CLI 中打开模型选择器，选择 HydraFusion 或 HydraFusion Max；如果选项不可见，先确认客户端、实验功能开关和组织模型策略，再查看官方 HydraFusion 文档。",
-            "impact": "可用来拆分课程编程项目、让代理检查工作区改动或比较不同编排方式；提交前仍应自行运行测试并审阅生成的代码。",
-            "free": "HydraFusion 与 Max 面向 Copilot Pro、Pro+、Business 和 Enterprise，需启用实验或预览功能并遵从组织模型策略；公告未说明单独价格、额度或地区。Copilot Free/Student 不在公告列出的计划中。",
-            "category": "AI 编程工具 / 多模型代理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-14",
-              "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option"
-            }
-          },
-          {
-            "event": "GitHub Copilot for JetBrains 增加诊断修复与 MCP 启动控制（2026-10-10）",
-            "summary": "Copilot 的 JetBrains 插件新增诊断菜单中的 Fix 操作，可在可用时通过 agent mode、否则通过 ask mode 请求修复；另增加 Copilot 和 Claude MCP 服务器的自动启动开关，并改进聊天导航、账户切换与会话可靠性。",
-            "howTo": "将 JetBrains IDE 更新至 2025.2 或更高版本并安装最新版 GitHub Copilot 插件；在诊断的 intention 菜单选 Fix，或在 Copilot 设置中关闭 MCP 服务器自动启动。",
-            "impact": "学生可以在 IDE 内直接把课程代码诊断交给 Copilot 提出修复建议，并明确控制 MCP 工具何时启动；仍要检查补丁是否符合项目要求。",
-            "free": "公告要求 JetBrains IDE 2025.2 或更高版本并提示使用 Copilot 插件，但没有列出适用计划、价格、地区或消息额度；agent mode 是否可用取决于用户当前配置。",
-            "category": "AI 编程工具 / IDE 更新",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-10",
-              "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Student：经验证学生可免费使用学生计划",
-            "summary": "GitHub Education 的学生包列出免费的 Copilot Student：代码补全不限量，并附一定的 GitHub AI Credits；聊天和 agent 使用有限，且模型只能通过自动选择使用。",
-            "howTo": "打开 GitHub Student Developer Pack，登录 GitHub 账号并完成学生身份验证，然后启用 Copilot Student；使用代码补全、有限的聊天或 agent 功能，并在账号中查看 AI Credits。",
-            "impact": "适合课程项目中的代码补全、解释和有限的调试协助；检查生成代码并遵守课程对 AI 使用的要求。",
-            "free": "官方列明经验证学生可免费使用，代码补全不限量；AI Credits 数量及聊天、agent 的具体额度官方未说明。地区适用范围官方未说明，模型仅限自动选择。",
-            "category": "学生教育福利 / AI 编程",
-            "source": {
-              "name": "GitHub Education Student Developer Pack",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Gemini API 免费层：可在 Google AI Studio 试用部分模型",
-            "summary": "Google AI 开发者定价页列出 Gemini API Free 层：仅限部分模型，输入和输出 token 免费，并可使用 Google AI Studio；免费层提交的内容可用于改进 Google 产品。",
-            "howTo": "在 Google AI Studio 创建 API key，按官方定价表选择标注为 Free Tier 的模型进行小型原型测试，并先核对该模型当前的速率限制与数据使用条款。",
-            "impact": "可用于课程原型、文本分类或复习资料草稿，不必先支付模型 token 费用；不要提交敏感材料，因为官方说明免费层内容会用于改进产品。",
-            "free": "只有部分模型在免费层可用，输入和输出 token 免费；各模型具体调用配额、账号资格和地区以官方页面为准，页面未说明的部分不作推定。免费层数据可用于改进产品。",
-            "category": "长期免费 / API 原型",
-            "source": {
-              "name": "Google AI for Developers Pricing",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "OpenRouter 免费模型调用：每日免费请求有明确上限",
-            "summary": "OpenRouter 官方限制文档列出免费模型的请求限额：账户没有 credits 时每天最多 50 次，免费模型速率上限为每分钟 20 次。",
-            "howTo": "创建 OpenRouter API key，在模型目录选择当前可用的免费模型，然后使用官方 API 发起少量测试请求；达到每日或每分钟上限后等待限额恢复。",
-            "impact": "适合用统一 API 对比免费模型、制作简单学习工具或练习客户端调用；不同模型供应方仍可能有各自限制，发送前先确认选择的是免费模型。",
-            "free": "无 credits 的账户可使用免费模型，每天最多 50 次、每分钟最多 20 次；无需先购买 credits 即可使用此基础额度。需要 OpenRouter 账号和 API key，地区资格及具体免费模型的持续可用性官方未说明。",
-            "category": "免费 API / 多模型试用",
-            "source": {
-              "name": "OpenRouter Limits Documentation",
-              "published": "官方未说明",
-              "url": "https://openrouter.ai/docs/api_reference/limits"
-            }
-          },
-          {
-            "event": "Qwen3-4B-Instruct-2507：Apache-2.0 许可的可下载模型",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-4B-Instruct-2507 权重，标注 Apache-2.0 许可、40 亿参数和原生 262,144 token 上下文，并给出 Transformers 加载示例。",
-            "howTo": "在 Hugging Face 模型卡下载公开权重，按卡片示例使用 AutoTokenizer 与 AutoModelForCausalLM 加载；使用最新 Transformers，运行前确认本机内存、显存和依赖。",
-            "impact": "适合在本地练习模型加载、提示设计和多语言文本任务；本地推理便于做课程实验，但硬件不足时应降低上下文长度或改用其他环境。",
-            "free": "模型页公开且标注 Apache-2.0，可下载模型权重；自行运行不收模型调用费，但计算硬件和云端算力成本由使用者承担。托管推理价格、地区及配额官方未说明。",
-            "category": "开放模型 / 本地学习",
-            "source": {
-              "name": "Hugging Face 官方模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Zimbabwean author Simbarashe Kundizeza denies using AI to write prize-winning story",
-            "source": "The Guardian",
-            "published": "2026-10-14",
-            "url": "https://www.theguardian.com/technology/2026/oct/14/zimbabwean-author-simbarashe-kundizeza-denies-ai-story",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "文化与科技 / 文学评奖、AI 检测与作者身份",
-            "summary": "The Guardian 报道围绕津巴布韦作家 Simbarashe Kundizeza 的短篇小说是否由 AI 写作展开的争议。文章先说明该作品获 Caine Prize 后，记者 Vauhini Vara 使用 Pangram 检测并质疑其文风；随后呈现 Kundizeza 的否认，以及奖项主席对检测软件不能成为最终裁决者的担忧。作者再补充其他文学奖项的类似争论，并引用 Pangram 自身研究和一篇同行评审研究，同时指出第三方准确性研究仍有限。文章没有裁定作品是否由 AI 生成，而是呈现检测结果、作者回应和证据局限之间尚未解决的张力。",
-            "reason": [
-              "文学创作、学术诚信与自动化判断的边界连接文化和科技，是适合讨论的综合主题。",
-              "文章按检测指控、作者回应、奖项机构立场、其他案例与研究证据推进，最后落在证据仍有限这一不确定结论。",
-              "可练习辨认消息来源、观点归属和证据强弱，并区分软件判定与经独立验证的事实。",
-              "proliferation、aphorism、arbiter、allegation 等词有助于讨论写作风格、评审权和争议。",
-              "写作可借鉴“提出指控—呈现回应—检视工具证据—说明未决之处”的平衡论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "proliferation",
-                "phonetic": "/prəˌlɪfəˈreɪʃən/",
-                "part": "n.",
-                "translation": "大量增加；泛滥"
-              },
-              {
-                "word": "epigraph",
-                "phonetic": "/ˈepɪɡræf/",
-                "part": "n.",
-                "translation": "题词；卷首引语"
-              },
-              {
-                "word": "aphorism",
-                "phonetic": "/ˈæfərɪzəm/",
-                "part": "n.",
-                "translation": "格言；警句"
-              },
-              {
-                "word": "maudlin",
-                "phonetic": "/ˈmɔːdlɪn/",
-                "part": "adj.",
-                "translation": "伤感过度的；多愁善感的"
-              },
-              {
-                "word": "trope",
-                "phonetic": "/troʊp/",
-                "part": "n.",
-                "translation": "惯用表达；常见主题"
-              },
-              {
-                "word": "arbiter",
-                "phonetic": "/ˈɑːrbɪtər/",
-                "part": "n.",
-                "translation": "裁决者；权威"
-              },
-              {
-                "word": "allegation",
-                "phonetic": "/ˌæləˈɡeɪʃən/",
-                "part": "n.",
-                "translation": "指控；未经证实的说法"
-              },
-              {
-                "word": "false positive",
-                "phonetic": "/ˌfɔːls ˈpɑːzətɪv/",
-                "part": "n. phr.",
-                "translation": "假阳性；误报"
-              },
-              {
-                "word": "third-party",
-                "phonetic": "/ˌθɜːrd ˈpɑːrti/",
-                "part": "adj.",
-                "translation": "第三方的"
-              },
-              {
-                "word": "genre",
-                "phonetic": "/ˈʒɑːnrə/",
-                "part": "n.",
-                "translation": "体裁；类型"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Similar claims have been made recently about other literary prize winners.",
-                "analysis": [
-                  "主干是 Similar claims have been made，使用现在完成时被动语态概述近期出现的类似说法。",
-                  "recently 是时间副词，提示这些事件与当前争论的关联。",
-                  "about other literary prize winners 补充说明 claims 涉及的对象。",
-                  "句子从单一个案转向同类事件，发挥扩展背景的作用。",
-                  "可借鉴 have been made recently about... 概述近期围绕某议题出现的主张。"
-                ],
-                "translation": "近期，其他文学奖得主也遭遇了类似指控。"
-              },
-              {
-                "original": "The Caine prize said in a statement that it was reviewing the allegations that Kundizeza had used AI.",
-                "analysis": [
-                  "主句核心是 The Caine prize said，来源由主语直接标明。",
-                  "that it was reviewing... 是 said 的宾语从句，说明奖项方正在审查。",
-                  "the allegations 后接 that Kundizeza had used AI，构成进一步说明 allegations 内容的同位语从句。",
-                  "had used 是过去完成时，位于过去的 reviewing 语境中，表示被指称的行为在先。",
-                  "双层 that 从句把机构行动与被审查的指控分开，适合用于严谨转述争议。"
-                ],
-                "translation": "Caine 奖在一份声明中表示，正在审查 Kundizeza 使用 AI 的指控。"
-              },
-              {
-                "original": "Its chair questioned the reliability of AI-detection software itself.",
-                "analysis": [
-                  "主干是 Its chair questioned the reliability，主语和谓语表达机构主席对可靠性的质疑。",
-                  "of AI-detection software 是后置介词短语，说明 reliability 所指对象。",
-                  "itself 放在名词短语末尾起强调作用，突出被质疑的是检测软件本身。",
-                  "该句给出对检测工具的保留意见，与前文软件判断形成对照。",
-                  "可借鉴 question the reliability of... 表达对某种方法或证据可靠性的审慎态度。"
-                ],
-                "translation": "该奖项主席质疑 AI 检测软件本身的可靠性。"
-              }
-            ]
-          },
-          {
-            "title": "Aboard an icebreaker, a writer got a closer look at the Arctic's 'Sea Change'",
-            "source": "NPR",
-            "published": "2026-10-14",
-            "url": "https://www.npr.org/2026/10/14/nx-s1-6001592/arctic-sea-change-rana-foroohar",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "环境与经济 / 北极航道、资源和国际竞争",
-            "summary": "NPR 以作者 Rana Foroohar 登上美国海岸警卫队破冰船的经历切入，讨论北极海冰融化后航道开放如何带来贸易机会和大国竞争。访谈援引她的估算，称北极航线在特定情况下可缩短大西洋至太平洋航程所需时间；同时梳理北极海底的油气、稀土和通信电缆等战略资源。文章接着谈到国际海洋法对海上活动的治理，以及美国未签署相关公约所带来的规则争议，再把北极放入全球化转向区域化、势力范围竞争的背景。结尾回到持续变暖对鱼类、风浪和更广区域气候的影响，指出商业、军事和环境变化使北极成为未来政策关注点。",
-            "reason": [
-              "气候变化与贸易、安全和资源治理交织，适合练习环境议题的跨学科阅读。",
-              "文章从破冰船现场观察展开，依次解释航运收益、战略资源、国际规则和气候影响。",
-              "可练习主旨题、例证作用题、引语归属题，以及判断作者如何从区域案例推及全球趋势。",
-              "touchstone、sovereign、regionalization、bellwether 等词可用于讨论国际关系和区域变化。",
-              "写作可借鉴“环境变化—经济机会—制度争议—长期影响”的层层推进结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "traverse",
-                "phonetic": "/trəˈvɜːrs/",
-                "part": "v.",
-                "translation": "横越；穿越"
-              },
-              {
-                "word": "conceptual",
-                "phonetic": "/kənˈseptʃuəl/",
-                "part": "adj.",
-                "translation": "概念上的；理论性的"
-              },
-              {
-                "word": "touchstone",
-                "phonetic": "/ˈtʌtʃstoʊn/",
-                "part": "n.",
-                "translation": "检验标准；典型例证"
-              },
-              {
-                "word": "sovereign",
-                "phonetic": "/ˈsɑːvrən/",
-                "part": "adj.",
-                "translation": "拥有主权的"
-              },
-              {
-                "word": "convention",
-                "phonetic": "/kənˈvenʃən/",
-                "part": "n.",
-                "translation": "公约；惯例"
-              },
-              {
-                "word": "free-for-all",
-                "phonetic": "/ˌfriː fər ˈɔːl/",
-                "part": "n.",
-                "translation": "无规则的争夺；混战"
-              },
-              {
-                "word": "regionalization",
-                "phonetic": "/ˌriːdʒənələˈzeɪʃən/",
-                "part": "n.",
-                "translation": "区域化"
-              },
-              {
-                "word": "bellwether",
-                "phonetic": "/ˈbelˌweðər/",
-                "part": "n.",
-                "translation": "风向标；先兆"
-              },
-              {
-                "word": "commerce",
-                "phonetic": "/ˈkɑːmɜːrs/",
-                "part": "n.",
-                "translation": "商业；贸易"
-              },
-              {
-                "word": "sobering",
-                "phonetic": "/ˈsoʊbərɪŋ/",
-                "part": "adj.",
-                "translation": "令人清醒的；发人深省的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "As polar ice melts in the Arctic, shipping lanes are opening up, making the region a new zone of superpower competition.",
-                "analysis": [
-                  "主句核心是 shipping lanes are opening up，使用现在进行时呈现正在发生的变化。",
-                  "As polar ice melts in the Arctic 是原因/伴随背景从句，说明航道变化的环境条件。",
-                  "making the region... 是现在分词短语，表示航道开放带来的结果。",
-                  "a new zone of superpower competition 是 make 的宾语补足语，点明地理变化的政治后果。",
-                  "可借鉴 As..., ... , making... 的结构，把背景、变化与影响压缩在一句中。"
-                ],
-                "translation": "随着北极海冰融化，航道正在开放，使该地区成为大国竞争的新地带。"
-              },
-              {
-                "original": "There is something called the United Nations Convention on the Law of the Sea, which governs maritime activities, including those in the Arctic.",
-                "analysis": [
-                  "主干是 There is something，there be 结构引出后面的制度名称。",
-                  "called the United Nations Convention... 是过去分词短语，后置修饰 something。",
-                  "which governs maritime activities 是非限制性定语从句，补充说明该公约的作用。",
-                  "including those in the Arctic 中 those 指代 maritime activities，举出适用范围中的一例。",
-                  "可借鉴名词 + called... 引入概念，再用 which 从句说明其功能。"
-                ],
-                "translation": "有一项名为《联合国海洋法公约》的公约，规范海上活动，包括北极地区的活动。"
-              },
-              {
-                "original": "There is going to be more commerce done through this area.",
-                "analysis": [
-                  "there is going to be 是表示未来存在或发生的结构，核心名词是 more commerce。",
-                  "done through this area 是过去分词短语，补充说明贸易将经由何处进行。",
-                  "more 表示数量增加，through this area 则聚焦北极通道的地理作用。",
-                  "这句预测承接前文的航道变化，为文章转向商业和军事利益作铺垫。",
-                  "可借鉴 There is going to be more... done through... 描述某种活动可能增加及其发生路径。"
-                ],
-                "translation": "未来将有更多贸易经由这一地区开展。"
               }
             ]
           }
