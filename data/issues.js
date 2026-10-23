@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-22T09:31:13.000+08:00",
+  "updatedAt": "2026-10-23T09:26:04.000+08:00",
   "issues": [
+    {
+      "date": "2026-10-23",
+      "status": "ready",
+      "ai": {
+        "intro": "10 月 22 日 GitHub 发布三项 Copilot 组织管理更新：未配置功能的默认策略开始分批执行、影响力仪表板增加行业对照、使用量 API 显示更多自定义代理和工具名称。它们面向组织管理员，并非个人账户的新免费功能。",
+        "updates": [
+          {
+            "event": "GitHub Copilot GA 功能全局默认策略开始执行（2026-10-22）",
+            "summary": "GitHub 开始分批执行 Copilot Business 与 Enterprise 的 GA 功能全局默认策略。到 10 月 26 日逐步上线后，尚未配置的合格功能会按管理员选择设为启用、禁用或交由组织决定；已有明确设置不会被覆盖，预览功能仍需选择加入。",
+            "howTo": "Copilot 企业或组织管理员打开 GitHub 的 AI Controls → Copilot → Default policy for new features，查看或选择 Enabled、Disabled 或 Let organizations decide；学生使用组织账号时，可向管理员确认未配置的 GA 功能将如何处理。",
+            "impact": "若课程、实验室或实习单位通过 Business/Enterprise 管理 Copilot，新的默认值可能改变尚未设置的功能或 MCP 能力是否可用；个人账户设置不会因此自动改变。",
+            "free": "这是 Copilot Business/Enterprise 的组织策略更新，不是个人免费权益。官方公告说明分批执行至 2026-10-26，并称只对未配置项作一次性调整；价格、地区与请求配额官方未说明。",
+            "category": "GitHub Copilot / 组织管理",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-22",
+              "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/"
+            }
+          },
+          {
+            "event": "Copilot 影响力仪表板新增行业对照（2026-10-22）",
+            "summary": "Copilot 影响力仪表板新增 Industry comparison，企业及不隶属于企业的组织可将自身 agentic adoption 与 leverage 指标和自愿参与组织的聚合基准比较，并按公司规模与行业查看同类组。参与默认关闭；基准样本不足时可能只显示中位数、扩大比较组或暂不显示排名。",
+            "howTo": "企业所有者或独立组织所有者先确保 Copilot usage metrics policy 已启用，再在影响力仪表板或组织/企业 Copilot policy 中选择加入行业对照；可在同一处关闭参与。",
+            "impact": "使用学校或实验室组织账号的学生可了解机构如何衡量 Copilot 代理采用情况；该对照只在管理仪表板显示，不会出现在个人账号或 usage metrics API 导出中。",
+            "free": "公告将此功能限定于企业及未被企业拥有的组织，并要求指标策略启用及管理员选择加入；它不是个人免费功能。价格、地区总体可用范围和固定配额官方未说明；有数据驻留的 Enterprise Cloud 只与同地区参与者比较。",
+            "category": "GitHub Copilot / 组织分析",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-22",
+              "url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/"
+            }
+          },
+          {
+            "event": "Copilot 使用量 API 开始显示自定义 skills、agents 与 MCP 名称（2026-10-22）",
+            "summary": "GitHub 的 Copilot 使用量报告现在会按名称列出组织自建的 skills、custom agents、MCP servers、slash commands 和 plugins，而不再一概归入 other 或 custom；每个 totals_by_* 列表最多显示 25 项（此前为 5 项），其余活动仍汇总到 other。",
+            "howTo": "组织管理员或有 View Copilot Metrics 权限者，在启用 Copilot usage metrics policy 后调用官方 Copilot usage metrics REST API，检查 totals_by_skill、totals_by_custom_agent、totals_by_mcp 等字段；查看 10 月 22 日之后处理的报告日，并确认客户端版本满足公告要求。",
+            "impact": "课程或实验室组织的管理员可用此报告判断自建技能和代理是否被团队采用；对学生而言，这是组织级使用趋势，不代表个人贡献，也不适合作为精确考核。",
+            "free": "此变化适用于企业和组织的 Copilot 使用量报告；读取权限限于相应管理员或获授权者，并需启用指标策略。官方未说明单独价格、地区限制或固定配额；部分客户端集成需要指定最低版本。",
+            "category": "GitHub Copilot / 使用量 API",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-22",
+              "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini Notebook Standard：免费整理课程资料",
+            "summary": "Google 官方计划说明允许使用 Gmail 账号免费注册 Gemini Notebook Standard；标准计划列出每位用户最多 100 本 notebook、每本最多 50 个来源，并可使用 Custom Chat 与 Analytics。",
+            "howTo": "登录 Gemini Notebook 网页版，使用 Gmail 账号创建 notebook，再上传或添加课程讲义、网页等来源；需要更多来源时先核对官方计划表，不要假设免费额度可叠加。",
+            "impact": "可将课程阅读材料集中到一个 notebook，再围绕已添加来源整理复习提纲或进行资料问答；重要结论应回到原文核对。",
+            "free": "Standard 可免费注册，配额为每用户 100 本 notebook、每本 50 个来源。网页适用于达到当地同意年龄且位于支持国家/地区的用户；官方未说明 Standard 的到期日或更细的每日调用配额。",
+            "category": "长期免费网页访问 / 课程资料整理",
+            "source": {
+              "name": "Google Gemini Notebook 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "Cloudflare Workers AI：每日 10,000 Neurons 免费额度",
+            "summary": "Cloudflare 官方定价页说明 Workers AI 在 Free 与 Paid Workers 计划中提供每日 10,000 Neurons 免费额度；超过后，Free 用户需升级，Paid 用户对超额部分按每 1,000 Neurons $0.011 计费。",
+            "howTo": "创建 Cloudflare Workers 账户后，按 Workers AI 官方文档选择 dashboard、Workers binding 或 REST API 路径建项目；先核对所选模型的价格与账单要求，再少量调用并在控制台监测 Neurons。",
+            "impact": "适合课程原型或小型应用练习服务端模型调用、请求处理和计量；不要将它当作无限制 API，也不要在未检查模型账单要求时提交真实支付方式。",
+            "free": "免费层每天 10,000 Neurons，额度在 00:00 UTC 重置；超出后 Free 计划不能继续使用，Paid 计划超额按 $0.011/1,000 Neurons 收费。部分列出的模型要求付费账单方式；官方未说明地区资格或固定 token 配额。",
+            "category": "每日免费 API 额度 / 原型开发",
+            "source": {
+              "name": "Cloudflare Workers AI 官方定价页",
+              "published": "官方未说明",
+              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student：验证学生可免费使用",
+            "summary": "GitHub 官方学生指南确认，通过 GitHub Education 验证的学生可免费使用 Copilot 功能；学生需在 Education benefits 中单独启用，且资格每月重新评估。",
+            "howTo": "先申请并完成 GitHub Education 学生验证，再访问 github.com/settings/education/benefits，按页面提示启用 Copilot Student；如果仍显示试用或付费结账，等待权益生效，不要提交购买。",
+            "impact": "可在课程项目中练习代码补全和理解建议；生成代码仍应由学生阅读、测试并确认。",
+            "free": "仅适用于经 GitHub Education 验证的学生，免费权益需单独启用且每月重评；验证后权益可能需要数日才应用。官方指南未列明具体地区名单、请求配额或免费权益期限。",
+            "category": "学生教育权益 / 编程辅助",
+            "source": {
+              "name": "GitHub Docs：学生 Copilot 设置",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
+            }
+          },
+          {
+            "event": "Google Colab：免费云端 Jupyter 笔记本",
+            "summary": "Google 官方 FAQ 将 Colab 描述为无需本地设置的托管 Jupyter Notebook 服务，免费提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学和教育。",
+            "howTo": "打开 Google Colab 并新建 notebook，在单元格中运行课程 Python 代码；若要试用 GPU/TPU，先查看 FAQ 中的资源限制，因为免费硬件不保证持续可用。",
+            "impact": "可用于完成 Python 作业、演示数据分析或试跑小型机器学习练习，不必先配置本地环境。",
+            "free": "官方说明 Colab 可免费使用，但免费资源不保证且不无限，使用限制会变化；FAQ 未承诺固定 GPU/TPU 时长、调用配额或地区条件。",
+            "category": "长期免费开发工具 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：可本地运行的多语言语音识别工具",
+            "summary": "OpenAI 的 Whisper 官方仓库提供可下载的通用语音识别模型，支持多语言转写、语音翻译和语言识别；仓库代码采用 MIT 许可，并给出 pip 安装方式。",
+            "howTo": "在兼容的本地 Python 环境安装仓库说明中的 openai-whisper，并配置 ffmpeg；下载模型后用音频文件测试转写或翻译，再对专有名词和识别结果进行人工校对。",
+            "impact": "可把公开讲座或自有录音转成文本，辅助听力复习、字幕制作或多语言学习；处理他人录音前应确认授权和隐私要求。",
+            "free": "官方仓库按 MIT 许可发布代码，可自行下载运行；本地硬件、存储和电力成本由使用者承担。仓库未说明官方托管免费调用额度、地区或账号资格。",
+            "category": "免费单次工具 / 本地语音转写",
+            "source": {
+              "name": "OpenAI Whisper 官方 GitHub 仓库",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期选读 NPR 的厄尔尼诺与伊瓜苏瀑布现场报道，以及 PBS 对美国选民登记审查和选举监票争议的访谈报道；分别练习环境新闻中的现场描写与因果归因、公共议题报道中的多方观点和证据辨析。",
+        "articles": [
+          {
+            "title": "Greetings from the Brazil-Argentina border, where waterfalls are flowing at near-record rates",
+            "source": "NPR",
+            "published": "2026-10-22",
+            "url": "https://www.npr.org/2026/10/22/g-s1-148553/argentina-brazil-iguazu-falls-waterfalls-super-el-nino",
+            "readingTime": "约 2 分钟",
+            "topic": "环境 / 超级厄尔尼诺、极端降雨与瀑布水量",
+            "summary": "NPR 记者从阿根廷与巴西边境的伊瓜苏瀑布现场写起，报道巴西持续降雨使瀑布水量接近历史高位；科学家将这轮降雨与当年的超级厄尔尼诺联系起来。文章用国家公园记录的流量数据说明变化幅度：一次测得每秒近 1,200 万升，约为常态的十倍；随后的水位上涨淹到步道底部，管理方关闭步道。全文由个人观察转向气候背景、数字证据和游客影响，最后以公园负责人“还在下雨”的回答收束。",
+            "reason": [
+              "极端降雨、厄尔尼诺与自然景观变化属于环境类公共议题，可练习从现场材料理解气候影响。",
+              "报道按“现场体验—背景解释—量化数据—管理措施”推进，结尾用当事人原话回扣持续降雨。",
+              "可考查近纪录流量、常态比较和步道关闭之间的关系，并区分科学家提出的联系与确定因果。",
+              "near-record、deluge、precipice 等词兼具新闻表达和语境推断价值。",
+              "写作可借鉴 not just... but... 的扩展结构，并用可比较的数据支撑环境变化描述。"
+            ],
+            "vocabulary": [
+              {
+                "word": "enormity",
+                "phonetic": "/ɪˈnɔːrməti/",
+                "part": "n.",
+                "translation": "巨大；宏大"
+              },
+              {
+                "word": "imposing",
+                "phonetic": "/ɪmˈpoʊzɪŋ/",
+                "part": "adj.",
+                "translation": "雄伟的；令人敬畏的"
+              },
+              {
+                "word": "cascade",
+                "phonetic": "/kæˈskeɪd/",
+                "part": "n.",
+                "translation": "瀑布；倾泻"
+              },
+              {
+                "word": "relentless",
+                "phonetic": "/rɪˈlentləs/",
+                "part": "adj.",
+                "translation": "持续不断的；不减弱的"
+              },
+              {
+                "word": "deluge",
+                "phonetic": "/ˈdeljuːdʒ/",
+                "part": "n.",
+                "translation": "洪水；倾盆大雨"
+              },
+              {
+                "word": "precipice",
+                "phonetic": "/ˈpresəpɪs/",
+                "part": "n.",
+                "translation": "悬崖；峭壁"
+              },
+              {
+                "word": "surge",
+                "phonetic": "/sɜːrdʒ/",
+                "part": "v.",
+                "translation": "涌动；激增"
+              },
+              {
+                "word": "tumble",
+                "phonetic": "/ˈtʌmbəl/",
+                "part": "v.",
+                "translation": "翻滚；倾泻"
+              },
+              {
+                "word": "brave",
+                "phonetic": "/breɪv/",
+                "part": "v.",
+                "translation": "勇敢面对；冒着……而前往"
+              },
+              {
+                "word": "hover",
+                "phonetic": "/ˈhʌvər/",
+                "part": "v.",
+                "translation": "盘旋；悬在……上方"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Iguazú isn't just one imposing fall, but a complex of cascades spanning more than a mile across both countries.",
+                "analysis": [
+                  "主干是 Iguazú isn't just one imposing fall, but a complex of cascades，采用 not just A, but B 的并列结构。",
+                  "spanning more than a mile... 是现在分词短语，后置修饰 cascades，补充瀑布群的范围。",
+                  "across both countries 进一步限定延展范围，说明景观横跨两国。",
+                  "逻辑上先否定单一瀑布的理解，再补充更准确的整体定义。",
+                  "可借鉴 not just..., but... 扩展定义或纠正读者预期。"
+                ],
+                "translation": "伊瓜苏并非只有一条雄伟的瀑布，而是由横跨两国、绵延一英里多的瀑布群组成。"
+              },
+              {
+                "original": "A rain-soaked October in Brazil has sent near-record volumes of water surging over its towering cliffs.",
+                "analysis": [
+                  "主干为 A rain-soaked October... has sent...，现在完成时呈现降雨对当前水量的影响。",
+                  "rain-soaked 是复合形容词，前置修饰 October，浓缩表达当月持续多雨。",
+                  "send + 宾语 + 现在分词构成结果结构：大量水流正涌过高耸的崖壁。",
+                  "near-record 修饰 volumes，表示接近纪录水平而非已经确认刷新纪录。",
+                  "可用“背景条件 + has sent + 结果”表达天气因素与可观察变化之间的联系。"
+                ],
+                "translation": "巴西一个雨水充沛的十月，使接近纪录水平的水量奔涌越过高耸的崖壁。"
+              },
+              {
+                "original": "When asked why access was shut off, the national park's director simply said, \"It just keeps raining.\"",
+                "analysis": [
+                  "主句是 the national park's director simply said，交代发言人及其回答。",
+                  "When asked... 是省略主语和 be 动词的时间状语从句，可还原为 When he was asked。",
+                  "why access was shut off 是 asked 的间接疑问内容，使用陈述语序；was shut off 为被动语态。",
+                  "引语用一般现在时 keeps 描写仍在持续的降雨，和前文水位不断上涨相呼应。",
+                  "可借鉴 When asked..., 主句... 的压缩结构引出受访者回应。"
+                ],
+                "translation": "当被问及为何关闭通道时，国家公园负责人只回答：“雨就是一直下。”"
+              }
+            ]
+          },
+          {
+            "title": "DOJ monitoring plans and DHS voter checks raise concerns of election interference",
+            "source": "PBS NewsHour",
+            "published": "2026-10-22",
+            "url": "https://www.pbs.org/newshour/show/doj-monitoring-plans-and-dhs-voter-checks-raise-concerns-of-election-interference",
+            "readingTime": "约 6 分钟",
+            "topic": "社会与公共治理 / 选民登记审查、法院监督与选举管理",
+            "summary": "PBS NewsHour 通过主持人与白宫记者的问答，梳理联邦部门核查选民登记和派出选举观察员引发的争议。报道先说明加州联邦法官限制国土安全部在九州的相关外勤行动，原因之一是名单可能包含公民；随后区分司法部针对加州邮件选票的诉讼指控与当地登记机构的回应，并指出相关争议仍在诉讼过程中。记者再说明司法部计划派出逾千名观察员，与 2022 年的 388 人作比较，最后呈现不同州务卿对监票行动的不同看法。全文以程序、数据和双方立场构成，提醒读者把机构指控、法院决定和已证实事实区分开。",
+            "reason": [
+              "选民资格、政府权限与选举监督是社会治理主题，适合练习公共政策和公民权利类阅读。",
+              "访谈先交代法院限制，再补充另一项诉讼和名单争议，之后转向全国监票计划及州级回应。",
+              "可考查司法裁定范围、机构指控与地方回应的对应关系，也可练习比较不同年份的数量。",
+              "eligible、restrict、allegation、jurisdiction 等词适用于法律、行政和公共事务语境。",
+              "写作可借鉴先说明程序事实、再呈现争议双方观点的结构，并用 allegedly 等表达避免把指控写成定论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "eligible",
+                "phonetic": "/ˈelɪdʒəbəl/",
+                "part": "adj.",
+                "translation": "有资格的；符合条件的"
+              },
+              {
+                "word": "policing",
+                "phonetic": "/pəˈliːsɪŋ/",
+                "part": "v.",
+                "translation": "监管；监督"
+              },
+              {
+                "word": "restrict",
+                "phonetic": "/rɪˈstrɪkt/",
+                "part": "v.",
+                "translation": "限制"
+              },
+              {
+                "word": "initiative",
+                "phonetic": "/ɪˈnɪʃətɪv/",
+                "part": "n.",
+                "translation": "倡议；专项行动"
+              },
+              {
+                "word": "allege",
+                "phonetic": "/əˈledʒ/",
+                "part": "v.",
+                "translation": "声称；指控"
+              },
+              {
+                "word": "unfounded",
+                "phonetic": "/ʌnˈfaʊndɪd/",
+                "part": "adj.",
+                "translation": "无事实依据的"
+              },
+              {
+                "word": "compile",
+                "phonetic": "/kəmˈpaɪl/",
+                "part": "v.",
+                "translation": "汇编；整理"
+              },
+              {
+                "word": "jurisdiction",
+                "phonetic": "/ˌdʒʊrɪsˈdɪkʃən/",
+                "part": "n.",
+                "translation": "管辖区域；司法管辖权"
+              },
+              {
+                "word": "monitor",
+                "phonetic": "/ˈmɑːnɪtər/",
+                "part": "n.",
+                "translation": "观察员；监测者"
+              },
+              {
+                "word": "passive",
+                "phonetic": "/ˈpæsɪv/",
+                "part": "adj.",
+                "translation": "被动的；不主动干预的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "With the midterm elections less than two weeks away, a new legal battle is raising questions about the federal government's role in policing who is eligible to vote.",
+                "analysis": [
+                  "主句主干是 a new legal battle is raising questions，使用现在进行时呈现争议正在发展。",
+                  "句首 With...away 是独立主格结构，补充中期选举临近这一背景。",
+                  "about 引出 questions 的内容；who is eligible to vote 是 policing 的宾语从句。",
+                  "逻辑上以时间紧迫性引出法律争议及其公共治理问题。",
+                  "可借鉴 With + 名词 + 形容词/副词短语开篇交代背景，再提出核心问题。"
+                ],
+                "translation": "距离中期选举不到两周，一场新的法律争端正引发人们对联邦政府在监督投票资格方面作用的质疑。"
+              },
+              {
+                "original": "The judge is allowing this to go into effect tomorrow, so that the government has time to appeal.",
+                "analysis": [
+                  "主句核心是 The judge is allowing this to go into effect，this 指前文所述的法院限制令。",
+                  "allow + 宾语 + to do 表示允许某事发生；tomorrow 是时间状语。",
+                  "so that 引导目的从句，说明延后生效是为了给政府留下上诉时间。",
+                  "is allowing 使用现在进行时，描述法官当前作出的程序安排。",
+                  "可用 so that + 主语 + 谓语说明某项安排所服务的目的。"
+                ],
+                "translation": "法官允许该命令明天生效，以便政府有时间提出上诉。"
+              },
+              {
+                "original": "The agency regularly monitors elections, but this year is a big spike in that number.",
+                "analysis": [
+                  "前半句主干为 The agency monitors elections，regularly 作频率副词修饰 monitors。",
+                  "but 连接转折关系，提示今年的观察员数量明显偏离常态。",
+                  "this year is a big spike 是口语化表达，省略了“观察员人数”的重复名词。",
+                  "in that number 限定 spike 指前文讨论的监票人数，而非监票活动本身。",
+                  "写作中可用 but 对照常规情况与某年的变化，也可改写为 the number represents a sharp increase。"
+                ],
+                "translation": "该机构通常会监督选举，但今年的监票人数大幅上升。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-22",
       "status": "ready",
@@ -2016,338 +2362,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 will never replace ... 对夸大某项替代技术的说法作让步式限定。"
                 ],
                 "translation": "塑料废弃物永远无法取代进口石油。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-16",
-      "status": "ready",
-      "ai": {
-        "intro": "10月15日至16日核实到2项官方产品变化；为补足3项，将检索范围扩至此前7天，并补入10月13日的Copilot模型更新。免费资源仅列可访问的官方价格、用量或许可说明。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 将于11月16日停用部分模型（2026-10-15）",
-            "summary": "GitHub 公告称，Copilot Chat、内联编辑、ask/agent 模式和代码补全将于2026年11月16日停用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra，并列出替代模型。个人年付订阅者仍可继续使用 Opus 4.8。",
-            "howTo": "查看自己在 Copilot Chat、CLI 或 IDE 工作流中使用的模型；准备切换时，在模型选择器中试用公告列出的替代项。Business 和 Enterprise 管理员可在 Copilot 设置的模型策略中核对启用状态。",
-            "impact": "依赖特定 Copilot 模型的课程项目、代码代理或自动化工作流可提前安排迁移和回归测试，避免模型停用后任务中断。",
-            "free": "停用日期为2026年11月16日；个人年付用户的 Claude Opus 4.8 有例外。公告未说明具体价格、地区或请求额度，也未分别说明 Free/Student 计划适用情况；Business/Enterprise 的可用性还受管理员策略影响。",
-            "category": "AI 编程工具 / 模型生命周期",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-15",
-              "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/"
-            }
-          },
-          {
-            "event": "Gemini 4 Argon 在 GitHub Copilot 中上线（2026-10-13）",
-            "summary": "GitHub 宣布 Gemini 4 Argon 在 Copilot 中正式可用，面向复杂编程、代理和推理任务；公告称模型会检查工作并测试边界情况。它可在 VS Code、Visual Studio、Copilot CLI、JetBrains、Xcode、Eclipse、Copilot app 和 coding agent 中选择。",
-            "howTo": "在支持的 Copilot 客户端打开模型选择器并选择 Gemini 4 Argon；若暂未显示，等待分阶段开放，Business/Enterprise 用户还需检查管理员的模型策略。",
-            "impact": "可用于课程项目的多步编程、CLI 调试和代码代理任务；让模型尝试边界情况测试后，仍应自行检查代码并运行项目测试。",
-            "free": "公告列出的计划为 Copilot Pro+、Max、Business 和 Enterprise；按供应商列表价计费，属于按用量计费，且分阶段推出。具体费用、地区和调用额度以公告所链接的价格页及账户策略为准；公告未称 Free 或 Student 计划可用。",
-            "category": "AI 编程工具 / 新模型",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-13",
-              "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/"
-            }
-          },
-          {
-            "event": "Cloudflare Workers AI 更新逐模型计价说明（2026-10-15）",
-            "summary": "Cloudflare 更新 Workers AI 定价文档，展示更细的逐模型计价单位，同时说明后台仍按 Neurons 计量。页面列出每个模型的输入、输出 token 与 Neurons 价格，并说明免费额度和超额计价规则。",
-            "howTo": "先在官方定价表比较目标模型的输入、输出单价和 Neurons，再按官方入门页通过 Dashboard、Workers binding 或 REST API 创建小规模调用，并在 Dashboard 查看用量。",
-            "impact": "做课程原型或模型对比时，可先估算请求是否落在每日免费额度内；不同模型消耗不同，适合在提交大量实验请求前核对成本。",
-            "free": "Workers Free 每日免费额度为10,000 Neurons，按 UTC 00:00 重置；超过额度需 Workers Paid，超额价格为每1,000 Neurons 0.011美元。部分模型要求付费计费方式；具体型号以官方定价页列出的清单为准。地区条件官方未说明。",
-            "category": "AI 开发平台 / 定价更新",
-            "source": {
-              "name": "Cloudflare Workers AI Pricing",
-              "published": "2026-10-15",
-              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Cloudflare Workers AI：每日10,000 Neurons 免费额度",
-            "summary": "Cloudflare 官方定价页说明，Workers AI 在 Free 和 Paid Workers 计划中提供每日共10,000 Neurons 免费额度；各模型按输入、输出用量折算，超出后需付费计划。",
-            "howTo": "创建 Cloudflare 账号后，从 Workers AI Dashboard、Workers binding 或 REST API 选择未标注付费方式要求的模型进行少量测试，并在 Dashboard 查看 Neurons 用量。",
-            "impact": "适合学生制作简单文本生成、分类或模型 API 原型；每日额度按 UTC 重置，测试前比较模型单价，避免把不同模型的用量视作相同。",
-            "free": "每日10,000 Neurons，UTC 00:00 重置；Workers Free 超出后操作会受限，需转 Workers Paid，官方标价为每1,000 Neurons 0.011美元。部分模型必须绑定付费方式；地区资格官方未说明。",
-            "category": "免费 API / 每日额度",
-            "source": {
-              "name": "Cloudflare Workers AI Pricing",
-              "published": "2026-10-15",
-              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
-            }
-          },
-          {
-            "event": "Claude Free：可免费使用网页、桌面和移动端日常问答",
-            "summary": "Claude 官方价格页列有 Free 计划，覆盖日常问题；网页、桌面、移动端和 Claude Code 共用一组使用额度，免费额度按滚动5小时窗口重置。",
-            "howTo": "登录 Claude，选择 Free 计划，在网页端、桌面端或移动端输入日常学习问题；打开 Settings > Usage 查看当前用量，达到上限后等待重置。",
-            "impact": "可用于解释概念、整理复习问题或润色学习笔记；复杂或长对话会更快消耗共享额度，重要结论应回到课程资料核验。",
-            "free": "官方提供 Free 计划；没有固定消息条数，实际用量随对话长度、模型和功能而变，限制按滚动5小时窗口重置。支持地区按 Claude 官方地区政策；具体地区名单和免费额度数值在价格页未说明。",
-            "category": "长期免费 / 网页与应用",
-            "source": {
-              "name": "Claude Pricing",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Qwen3.8-27B：Apache-2.0 许可的公开模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3.8-27B 权重和 Transformers 格式配置，列出原生262,144 token 上下文以及图像、视频理解能力；官方仓库许可文件为 Apache-2.0。",
-            "howTo": "打开 Qwen 官方模型卡，按其说明下载权重并使用 Transformers、vLLM 或 SGLang 等兼容工具加载；先确认本机或云端硬件能承载27B参数模型。",
-            "impact": "适合练习本地模型部署、多模态资料理解和推理参数设置；本地运行也便于课程实验中控制输入数据，但需要自行评估计算资源。",
-            "free": "模型权重公开，官方许可文件标注 Apache-2.0；下载和本地调用不按 API token 计费，但硬件或云端算力可能产生费用。模型最低硬件要求、托管推理额度和地区条件官方未说明。",
-            "category": "开放模型 / 本地学习",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：在 AI Studio 免费试做小型原型",
-            "summary": "Google AI for Developers 定价页列出 Gemini API Free 层：部分模型可免费使用输入和输出 token，并可访问 Google AI Studio；免费层提交内容可用于改进 Google 产品。",
-            "howTo": "在 Google AI Studio 创建 API key，选择定价表标注 Free Tier 的模型进行小型实验；开始前核对该模型的速率限制，并避免提交敏感或个人资料。",
-            "impact": "可用于课程原型、文本整理或小规模分类实验，不需先承担所选免费模型的 token 费用；免费层的数据使用条款与模型配额仍需留意。",
-            "free": "仅部分模型有 Free Tier，输入和输出 token 免费并可使用 AI Studio；各模型调用限制及支持地区以官方定价和地区页为准，未列明部分官方未说明。官方说明免费层提交内容可用于改进产品。",
-            "category": "免费 API / 原型开发",
-            "source": {
-              "name": "Google AI for Developers Pricing",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
-            "source": "BBC",
-            "published": "2026-10-13",
-            "url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "健康与教育 / 学校屏幕使用和儿童发展",
-            "summary": "BBC 报道一封由150多名临床人员联署的公开信，警告英国学校过度使用平板和电脑可能损害儿童身体及发育健康。联署者称近100万名儿童在大多数课程中使用屏幕，并引用一项涵盖276项研究、540万名参与者的分析，指出儿童近视比例从1990年的约24%升至2023年的近36%。报道同时说明，英国政府正就5至18岁儿童屏幕时间指南征求意见，并认为合理使用技术也能成为有效学习工具。结尾呈现医生对“为适应数字世界而增加屏幕时间”这一理由的反驳，强调睡眠、视力、休息和批判思维。文章报道的是临床人员的警告和他们引用的证据，并未将屏幕使用断言为单一因果。",
-            "reason": [
-              "学校数字化与儿童健康相冲突，兼具教育和公共健康意义，适合练习综合性议论文主题。",
-              "文章由医生公开信提出警告，继而给出使用规模和研究数据，再补入政府立场，最后以医生的反驳收束。",
-              "可练习识别“研究结果—相关风险—因果结论”的差别，并判断数字和观点分别来自谁。",
-              "clinician、developmental、short-sightedness、appraise 等词可用于健康和教育类写作。",
-              "议论文可借鉴“提出担忧—列证据—承认技术价值—限定使用条件”的平衡结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "clinician",
-                "phonetic": "/klɪˈnɪʃən/",
-                "part": "n.",
-                "translation": "临床医生"
-              },
-              {
-                "word": "developmental",
-                "phonetic": "/ˌdɪveləpˈmentəl/",
-                "part": "adj.",
-                "translation": "发育的；发展的"
-              },
-              {
-                "word": "consult",
-                "phonetic": "/kənˈsʌlt/",
-                "part": "v.",
-                "translation": "征求意见；咨询"
-              },
-              {
-                "word": "guidance",
-                "phonetic": "/ˈɡaɪdəns/",
-                "part": "n.",
-                "translation": "指导意见；指引"
-              },
-              {
-                "word": "short-sightedness",
-                "phonetic": "/ˌʃɔːtˈsaɪtɪdnəs/",
-                "part": "n.",
-                "translation": "近视"
-              },
-              {
-                "word": "signatory",
-                "phonetic": "/ˈsɪɡnətəri/",
-                "part": "n.",
-                "translation": "签署人"
-              },
-              {
-                "word": "advocate",
-                "phonetic": "/ˈædvəkeɪt/",
-                "part": "v.",
-                "translation": "提倡；主张"
-              },
-              {
-                "word": "critically",
-                "phonetic": "/ˈkrɪtɪkli/",
-                "part": "adv.",
-                "translation": "批判性地"
-              },
-              {
-                "word": "appraise",
-                "phonetic": "/əˈpreɪz/",
-                "part": "v.",
-                "translation": "评估；评价"
-              },
-              {
-                "word": "compound",
-                "phonetic": "/kəmˈpaʊnd/",
-                "part": "v.",
-                "translation": "使加剧；使恶化"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The government said it was consulting on screen time guidance for children aged five to 18...",
-                "analysis": [
-                  "主干是 The government said，报道以政府为观点来源，避免把意见写成无归属的事实。",
-                  "it was consulting... 是 said 后的宾语从句，说明政府正在征求意见。",
-                  "on screen time guidance 是介词短语，指出咨询议题；for children aged five to 18 限定指南适用对象。",
-                  "was consulting 表示正在进行中的政策程序；省略号表示原句还有后续内容，报道随后补充政府对技术教育价值的看法。",
-                  "可借鉴 report that... is consulting on... 转述政策仍在征询阶段。"
-                ],
-                "translation": "政府表示，正在就面向5至18岁儿童的屏幕时间指南征求意见……"
-              },
-              {
-                "original": "They pointed to an analysis of 276 studies covering 5.4 million participants around the world.",
-                "analysis": [
-                  "主干是 They pointed to an analysis，They 指前文的临床人员，谓语引出其证据来源。",
-                  "of 276 studies 补充说明 analysis 的研究范围。",
-                  "covering 5.4 million participants 是现在分词短语，后置修饰 studies。",
-                  "around the world 修饰 participants，交代研究参与者的地域范围。",
-                  "point to an analysis of... 可用于介绍论证者引用的证据，同时不等于作者独立验证了结论。"
-                ],
-                "translation": "他们提到一项分析，该分析涵盖276项研究和全球540万名参与者。"
-              },
-              {
-                "original": "She said it was a \"lazy argument\" to advocate for screen use to prepare children for a digital world.",
-                "analysis": [
-                  "主干是 She said，后接宾语从句，表明评价属于受访医生而非记者的定论。",
-                  "it was a \"lazy argument\" 是从句核心，评价对象是以数字时代为理由支持屏幕使用的说法。",
-                  "to advocate for screen use 是不定式短语，说明该论点所针对的主张。",
-                  "to prepare children for a digital world 表示支持屏幕使用的目的。",
-                  "引述评价词后再交代其论证对象，适合呈现争议双方立场而不混淆归属。"
-                ],
-                "translation": "她说，以让儿童适应数字世界为由提倡使用屏幕，是一种“站不住脚的论点”。"
-              }
-            ]
-          },
-          {
-            "title": "Poland’s ascent from communist state to top 20 economy reverses the brain drain",
-            "source": "The Guardian",
-            "published": "2026-10-15",
-            "url": "https://www.theguardian.com/world/2026/oct/15/poland-economy-heights-transformed-regional-tech-hub",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "经济与社会 / 波兰转型、人才回流与增长代价",
-            "summary": "文章以华沙新旧建筑并置开篇，把波兰从共产主义时期走向繁荣的转型作为主线。报道引用收入与欧盟平均水平的差距缩小、波兰跻身全球前20大经济体等数据，并通过回国工作的建筑师和科技企业管理者讲述人才回流与产业升级。随后文章没有停留在“经济奇迹”：它指出资本流入推高生活成本、收入不平等和政治分歧等增长代价，也说明低成本劳动力优势正在减弱。结尾转向生产率、教育技能和区域科技中心的建设，强调未来发展不靠所谓捷径，而要从低成本追赶转向更高附加值的工作。",
-            "reason": [
-              "经济转型、移民流动、生活成本与生产率相互关联，适合经济和社会发展主题阅读。",
-              "文章从华沙地标的对比切入，回溯历史和宏观数据，再以回流人才和企业案例展开，最后呈现增长代价与未来挑战。",
-              "可练习区分宏观增长与居民生活感受，并理解人才外流逆转并不代表所有社会问题消失。",
-              "brain drain、converge、influx、inequality、productivity 等词适合经济和人口流动话题。",
-              "写作可借鉴“承认成就—指出分配问题—提出生产率转型”的让步与转折结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "prosperity",
-                "phonetic": "/prɒˈsperəti/",
-                "part": "n.",
-                "translation": "繁荣；兴旺"
-              },
-              {
-                "word": "converge",
-                "phonetic": "/kənˈvɜːdʒ/",
-                "part": "v.",
-                "translation": "趋同；接近"
-              },
-              {
-                "word": "brain drain",
-                "phonetic": "/ˈbreɪn dreɪn/",
-                "part": "n. phr.",
-                "translation": "人才外流"
-              },
-              {
-                "word": "influx",
-                "phonetic": "/ˈɪnflʌks/",
-                "part": "n.",
-                "translation": "涌入；流入"
-              },
-              {
-                "word": "inequality",
-                "phonetic": "/ˌɪnɪˈkwɒləti/",
-                "part": "n.",
-                "translation": "不平等"
-              },
-              {
-                "word": "convergence",
-                "phonetic": "/kənˈvɜːdʒəns/",
-                "part": "n.",
-                "translation": "趋同；趋近"
-              },
-              {
-                "word": "bolster",
-                "phonetic": "/ˈbəʊlstə/",
-                "part": "v.",
-                "translation": "加强；支持"
-              },
-              {
-                "word": "stellar",
-                "phonetic": "/ˈstelə/",
-                "part": "adj.",
-                "translation": "出色的；突出的"
-              },
-              {
-                "word": "productivity",
-                "phonetic": "/ˌprɒdʌkˈtɪvəti/",
-                "part": "n.",
-                "translation": "生产率；生产力"
-              },
-              {
-                "word": "unprecedented",
-                "phonetic": "/ʌnˈpresɪdentɪd/",
-                "part": "adj.",
-                "translation": "前所未有的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Over the four decades since regaining its independence from Soviet-dominated rule, Poland has been transformed.",
-                "analysis": [
-                  "主句核心是 Poland has been transformed，使用现在完成时被动语态概括长期变化及其当前结果。",
-                  "Over the four decades 是时间状语，给出变化持续的跨度。",
-                  "since regaining its independence... 是省略主语的动名词结构，说明时间起点。",
-                  "from Soviet-dominated rule 补充说明 independence 所摆脱的统治状态。",
-                  "可借鉴 Over the past... since... has been transformed 描述历时性的社会转型。"
-                ],
-                "translation": "自摆脱苏联主导的统治、恢复独立以来的四十年间，波兰发生了深刻转型。"
-              },
-              {
-                "original": "National income surpassed $1tn (£755bn) last year, ranking Poland among the world’s 20 largest economies.",
-                "analysis": [
-                  "主干是 National income surpassed $1tn，主语和谓语直接陈述经济指标及其变化。",
-                  "last year 是时间状语，限定数据发生的年份。",
-                  "ranking Poland... 是现在分词短语，补充说明该指标对应的排名结果。",
-                  "among the world’s 20 largest economies 表示所属范围，避免把排名理解成精确的名次。",
-                  "主句数据加分词结果结构，可简洁地把指标与意义连接起来。"
-                ],
-                "translation": "波兰去年国民收入超过1万亿美元，跻身全球最大的20个经济体之列。"
-              },
-              {
-                "original": "The influx of global capital has driven up living costs, squeezing out poor Varsovians.",
-                "analysis": [
-                  "主干是 The influx... has driven up living costs，主语是资本流入，谓语指出生活成本上升。",
-                  "of global capital 是后置介词短语，说明 influx 的来源。",
-                  "has driven up 使用现在完成时，呈现过去资本流入对当前生活成本的影响。",
-                  "squeezing out poor Varsovians 是现在分词结果状语，补充说明成本上升带来的分配后果。",
-                  "该句把总体资本流入与特定群体承受的代价并置，可用于构造平衡的经济论证。"
-                ],
-                "translation": "全球资本的涌入推高了生活成本，使较贫困的华沙居民受到挤压。"
               }
             ]
           }
