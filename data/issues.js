@@ -1,6 +1,459 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-23T09:26:04.000+08:00",
+  "updatedAt": "2026-10-24T09:33:59.000+08:00",
   "issues": [
+    {
+      "date": "2026-10-24",
+      "status": "ready",
+      "ai": {
+        "intro": "本期核对到三项近期变化：Claude Duet 在美国开放研究预览，GitHub Copilot 与 Teams 的集成可从通知推进到代码修改，Copilot 使用量 API 新增按客户端统计。前者需候补且限 Pro/Max，后两项侧重团队协作与组织报告。",
+        "updates": [
+              {
+            "event": "Claude Duet 面向美国 Pro 与 Max 用户开启研究预览（2026-10-21）",
+            "summary": "Anthropic 开放 Claude Duet 研究预览：它会主动整理已连接应用中需要处理的事项，也能在用户离线时继续执行交办任务，并在发送消息、付款或删除内容前等待确认。Duet 可通过独立 iOS/Android 应用及 claude.ai 使用；后台定期检查会计入 Claude 计划用量。",
+            "howTo": "在美国访问 Claude Duet 候补页面登记；获邀后从 iOS、Android 或 claude.ai 打开 Duet，连接所需应用并描述任务。先检查它准备发送或执行的内容，再确认授权。",
+            "impact": "研究生可尝试把课程邮件、社团事务或项目待办交给它整理，并观察其如何区分紧急事项与可延后任务；发送消息等对外操作仍需本人确认，连接账户前应检查权限。",
+            "free": "这是研究预览，不是免费权益：公告限定美国的 Pro 与 Max 计划用户并要求加入候补，且与 Claude 其余功能共用计划用量。公告未说明单独价格、美国以外的开放时间或具体调用额度。",
+            "category": "Claude / 主动式工作代理",
+            "source": {
+              "name": "Claude 官方产品公告",
+              "published": "2026-10-21",
+              "url": "https://claude.com/resources/articles/claude-duet"
+            }
+          },
+          {
+            "event": "GitHub Copilot 可在 Teams 中从通知推进到代码修改（2026-10-23）",
+            "summary": "GitHub 将 Teams 通知与 Copilot 工作流整合：团队成员可在频道、群聊或私聊中收到 GitHub 更新，再 @GitHub 让其调查 issue、修复问题并创建 pull request，之后由团队审查、测试和合并。已有 GitHub 通知应用的用户可更新到整合版；旧版应用计划于 11 月 16 日退役。",
+            "howTo": "在 Microsoft Teams 安装或更新整合后的 GitHub 应用，按提示连接 GitHub 账号并选择仓库；收到 issue 通知后在会话中 @GitHub 发起处理，再由团队审查生成的 pull request。",
+            "impact": "小组项目可在讨论 bug 的同一处试用“通知—排查—提 PR—人工审查”流程，减少在聊天和代码仓库间切换；生成的修改仍需自行测试和审查。",
+            "free": "公告未说明所需 Copilot 订阅、单独价格、支持地区或使用配额，也未称此集成为免费权益。使用需在 Teams 安装整合应用、连接 GitHub 账号并选择仓库；旧版应用将于 2026-11-16 退役。",
+            "category": "GitHub Copilot / Teams 协作",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-23",
+              "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams"
+            }
+          },
+          {
+            "event": "Copilot 使用量 API 新增客户端来源统计（2026-10-23）",
+            "summary": "GitHub Copilot 使用量报告新增 totals_by_client，可按 OpenCode、Claude Code、Codex、Copilot CLI、VS Code 等客户端查看成功模型请求数、会话数和 token 使用量，并可继续按模型及模型选择方式拆分。此前未被 IDE 遥测记录的外部工具请求也可纳入组织报告。",
+            "howTo": "组织管理员先启用 Copilot usage metrics policy，并确认自己拥有企业/组织所有者、账单经理或 View Copilot Metrics 权限；随后在 Copilot usage metrics API 的 1 日或 28 日报告中查看 totals_by_client。",
+            "impact": "使用 Copilot 支持课程开发或实验室协作的团队管理员，可比较不同客户端的请求与 token 用量，决定应维护哪些工具；request_count 是模型调用数而非提示词数，不宜直接当作个人工作量。",
+            "free": "这是一项企业/组织级报告字段，不是个人账户额度。访问需具备相应管理权限并启用 usage metrics policy；公告未说明额外价格、地区范围或新配额。",
+            "category": "GitHub Copilot / 使用量 API",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-23",
+              "url": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini Developer API：AI Studio 免费层",
+            "summary": "Google 官方定价页列出 Gemini API 免费层：部分模型可免费使用输入和输出 token，并可通过 Google AI Studio 开始构建；免费层数据可能用于改进 Google 产品。",
+            "howTo": "登录 Google AI Studio 创建 API key，在 Gemini API 定价页选定标注为 Free Tier 的模型，再按官方快速入门在本地或 Colab 发起少量请求；先核对模型限额及可用地区。",
+            "impact": "可用于课程原型、文本归纳或小型应用实验，练习真实 API 调用与错误处理；不要把免费层视作所有模型都免费或无限调用。",
+            "free": "免费层仅覆盖部分模型；具体 RPM、TPM、RPD 和地区资格取决于模型与当前限额/地区表，官方定价页未给出适用于所有模型的统一调用数。免费层数据可能用于改进产品，敏感资料不宜直接提交。",
+            "category": "免费 API 调用 / 应用原型",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-0.6B：Apache-2.0 许可的可下载模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B 权重与 Transformers 快速上手示例；模型卡列出 0.6B 参数、32,768 token 上下文及 100 多种语言/方言支持，仓库许可证为 Apache-2.0。",
+            "howTo": "打开模型卡并按其示例安装最新版 transformers 与 PyTorch，使用 AutoTokenizer 和 AutoModelForCausalLM 下载权重；在自己的设备运行示例提示词，并按许可证要求保留相关声明。",
+            "impact": "可在本地练习模型加载、提示模板和多语言生成，或为课程项目搭建小型离线原型；本地运行能减少把课程资料发送到托管服务的需要。",
+            "free": "模型权重可从 Hugging Face 下载，模型仓库提供 Apache-2.0 许可证；没有附带的官方托管 API 免费额度。下载、存储及本地推理所需硬件由使用者承担，官方页面未说明地域、期限或硬件最低配置。",
+            "category": "开放模型权重 / 本地学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student：通过学生验证可免费启用",
+            "summary": "GitHub 官方学生指南确认，经 GitHub Education 验证的学生可免费使用 Copilot 功能；验证通过后还要在 Education benefits 页面单独启用，资格每月重新评估。",
+            "howTo": "登录 GitHub Education 提交学生验证；通过后打开 github.com/settings/education/benefits，进入学生开发资源并按提示启用 Copilot Student。若仍显示试用或付费结账，等待权益生效，不要购买。",
+            "impact": "适合在课程代码中练习补全、理解建议和迭代调试；学生应阅读并测试生成内容，而不是直接提交未经验证的代码。",
+            "free": "仅面向通过 GitHub Education 验证的学生，需单独激活且资格每月重评；官方学生指南未列明具体地区、AI credits 数量、聊天/agent 调用额度或权益期限。",
+            "category": "学生教育权益 / 编程辅助",
+            "source": {
+              "name": "GitHub Docs：学生免费使用 Copilot",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
+            }
+          },
+          {
+            "event": "Gemini Notebook Standard：免费整理课程资料",
+            "summary": "Google 官方计划表允许使用 Gmail 账号免费注册 Gemini Notebook Standard；每位用户最多 100 本 notebook、每本最多 50 个来源，并可使用 Custom Chat 与 Analytics。",
+            "howTo": "登录 Gemini Notebook 网页版并用 Gmail 账号创建 notebook，再上传讲义或添加网页来源；围绕已加入的资料提问或整理复习提纲，重要结论回到原文核对。",
+            "impact": "可把课程阅读材料集中管理，并围绕有限来源制作复习问题或梳理主题；适合先用少量讲义验证工作流，再决定是否需要付费计划。",
+            "free": "Standard 可免费注册，每人最多 100 本 notebook、每本 50 个来源；网页版仅对达到当地同意年龄且处于支持国家/地区的用户开放。官方未说明 Standard 的固定每日调用额度或到期日。",
+            "category": "长期免费网页访问 / 课程资料整理",
+            "source": {
+              "name": "Google Gemini Notebook 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "Google Colab：免费云端 Jupyter 笔记本",
+            "summary": "Google 官方 FAQ 确认 Colab 是无需本地安装的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU，面向机器学习、数据科学和教育。",
+            "howTo": "打开 Google Colab 并新建 notebook，上传或从 GitHub 打开课程代码；在代码单元运行 Python。需要 GPU/TPU 时先检查运行时资源情况，并保存重要输出到 Drive。",
+            "impact": "可用于 Python 作业、数据清理、可视化和小型机器学习练习，不必先配置本地开发环境；运行时空闲后会删除，重要文件应另行保存。",
+            "free": "Colab 可免费使用，但资源不保证且不无限，使用限制会变化；免费 GPU/TPU 时长、固定配额及地区条件官方未说明。",
+            "category": "长期免费开发工具 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期选读 BBC 对美加关税调整及英国学校进入印度市场的报道，以及 Smithsonian 对绿海龟保护成效的分析；分别练习经贸政策的多方观点、教育商业模式的因果链和环境新闻的证据与转折。",
+        "articles": [
+          {
+            "title": "White House lifts tariffs on some Canadian goods as midterm elections loom",
+            "source": "BBC",
+            "published": "2026-10-24",
+            "url": "https://www.bbc.com/news/articles/c60qk573yzz8o",
+            "readingTime": "约 4 分钟",
+            "topic": "经济 / 美加关税、贸易争端与选举政治",
+            "summary": "BBC 报道称，白宫宣布自 10 月 30 日起下调对部分加拿大商品的关税，同时对地毯等部分商品加征关税。豁免由缅因州共和党参议员 Susan Collins 先行宣布，她说曾游说争取，理由是减轻本州农业产业压力；此时距中期选举不到两周。文章回顾美方在 8 月谈判破裂后对约 200 亿美元加拿大商品加征 50% 关税、加拿大采取反制，并并列呈现白宫、加拿大贸易部长和民主党对手的说法。结尾把政策放回边境州对加拿大贸易依赖及两国继续谈判的背景，呈现有限减税与更广泛争端并存。",
+            "reason": [
+              "关税与跨境贸易属于经济类公共议题，可练习理解政策变化对产业和边境地区的影响。",
+              "报道按“政策宣布—谈判背景—各方回应—选举与边境州影响”展开，兼有政策信息和政治语境。",
+              "可考查哪些商品获豁免、哪些商品新增关税，以及白宫、加拿大官员和竞选对手之间的立场差异。",
+              "tariff、levy、countermeasure、trade-reliant 等词可用于经贸新闻和社会科学阅读。",
+              "写作可借鉴“政策内容 + 受影响群体 + 不同立场”的论证结构，并用 while、after 等连接词交代让步和背景。"
+            ],
+            "vocabulary": [
+              {
+                "word": "tariff",
+                "phonetic": "/ˈtærɪf/",
+                "part": "n.",
+                "translation": "关税"
+              },
+              {
+                "word": "levy",
+                "phonetic": "/ˈlevi/",
+                "part": "n.",
+                "translation": "征税；税款"
+              },
+              {
+                "word": "exemption",
+                "phonetic": "/ɪɡˈzempʃn/",
+                "part": "n.",
+                "translation": "豁免"
+              },
+              {
+                "word": "countermeasure",
+                "phonetic": "/ˈkaʊntərˌmeʒər/",
+                "part": "n.",
+                "translation": "反制措施"
+              },
+              {
+                "word": "lobbied",
+                "phonetic": "/ˈlɑːbid/",
+                "part": "v.",
+                "translation": "游说；施加影响"
+              },
+              {
+                "word": "standoff",
+                "phonetic": "/ˈstændɔːf/",
+                "part": "n.",
+                "translation": "僵持；对峙"
+              },
+              {
+                "word": "trade-reliant",
+                "phonetic": "/ˈtreɪd rɪˌlaɪənt/",
+                "part": "adj.",
+                "translation": "依赖贸易的"
+              },
+              {
+                "word": "mutually beneficial",
+                "phonetic": "/ˌmjuːtʃuəli ˌbenɪˈfɪʃl/",
+                "part": "phr.",
+                "translation": "互利的"
+              },
+              {
+                "word": "ease",
+                "phonetic": "/iːz/",
+                "part": "v.",
+                "translation": "减轻；缓和"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The US imposed a 50% levy on $20bn (£15bn) of Canadian goods after trade talks between the two countries collapsed in August.",
+                "analysis": [
+                  "主干是 The US imposed a 50% levy，说明美国采取的措施及税率。",
+                  "on $20bn ... of Canadian goods 限定征税对象及货值，on 在此表示针对某类商品征税。",
+                  "after 引导时间状语从句，trade talks 作主语，collapsed 作谓语，交代征税的先行背景。",
+                  "句子按“谈判破裂—征收关税”的顺序建立时间和背景关系，并用数字具体化政策规模。",
+                  "写作可借鉴 impose a levy/tax on... after... 概述政策措施及其背景。"
+                ],
+                "translation": "两国贸易谈判于 8 月破裂后，美国对价值 200 亿美元（150 亿英镑）的加拿大商品征收了 50% 的税。"
+              },
+              {
+                "original": "Maine borders the Canadian provinces New Brunswick and Quebec.",
+                "analysis": [
+                  "主干是 Maine borders the Canadian provinces，Maine 为主语，borders 为一般现在时谓语。",
+                  "the Canadian provinces 是 borders 的宾语，New Brunswick and Quebec 是同位列举，具体说明省份名称。",
+                  "句子以地理关系提供政策背景，解释缅因州为何直接受到美加贸易变化影响。",
+                  "一般现在时在此陈述相对稳定的地理事实，而非一次性的新闻事件。",
+                  "可借鉴简洁的“地点 + borders + 地区/国家”结构交代相邻关系。"
+                ],
+                "translation": "缅因州与加拿大的新不伦瑞克省和魁北克省接壤。"
+              },
+              {
+                "original": "Carney, for his part, said that Canada was open to a mutually beneficial deal, but is willing to wait it out.",
+                "analysis": [
+                  "主句核心是 Carney said，that 引导宾语从句，转述加拿大总理的谈判立场。",
+                  "for his part 是插入语，提示接下来呈现另一方回应，与前文立场形成对照。",
+                  "宾语从句中 but 连接 open to a deal 与 willing to wait it out，表达愿意谈判但不急于接受条件。",
+                  "mutually beneficial 修饰 deal，指出协议必须具有互利性质；it 指当前贸易僵局或等待过程。",
+                  "写作可借鉴 be open to..., but... 表示有条件的合作立场。"
+                ],
+                "translation": "卡尼则表示，加拿大愿意达成互利协议，但也准备继续等待。"
+              }
+            ]
+          },
+          {
+            "title": "Britain's posh schools are heading to India for students and profits",
+            "source": "BBC",
+            "published": "2026-10-24",
+            "url": "https://www.bbc.com/news/articles/c6vgx1ldvz5vo",
+            "readingTime": "约 4 分钟",
+            "topic": "教育与商业 / 英国私校在印度扩张",
+            "summary": "BBC 报道至少六所英国精英私校已在印度设立校区，印度新富家庭对国际化教育的需求为扩张提供市场；与此同时，中国市场监管变化和英国私校学费增值税也推动学校寻找新地区。报道通过校方和家长说明课程、校园传统与全面发展卖点，再补充现实约束：印度本地学校竞争强、家庭对价格敏感，一些合作项目利润率可能降至 1%，高昂寄宿费也限制招生。文章引用行业研究所列海外校区利润数据作背景，最后指出印度市场可能稳步但不会爆发式增长，短期难以弥补中国市场放缓。",
+            "reason": [
+              "跨国教育、家庭选择和私校经营连接教育与商业，是适合讨论教育公平和国际化的综合主题。",
+              "文章先列举校区扩张，再解释印度需求与中英市场变化，继而呈现成本、竞争和价格约束，最后评估增长前景。",
+              "可考查扩张的推力与阻力、不同家庭选择私校的原因，以及为何印度市场难迅速弥补中国市场放缓。",
+              "satellite campus、entrenched、price-sensitive、offset 等表达可用于教育和经济类语篇。",
+              "写作可借鉴先提出市场机会、再用成本与竞争作转折的结构，避免把增长趋势简单等同于成功。"
+            ],
+            "vocabulary": [
+              {
+                "word": "legacy",
+                "phonetic": "/ˈleɡəsi/",
+                "part": "n.",
+                "translation": "历史传承；遗产"
+              },
+              {
+                "word": "satellite campus",
+                "phonetic": "/ˈsætəlaɪt ˈkæmpəs/",
+                "part": "n.",
+                "translation": "分校；卫星校区"
+              },
+              {
+                "word": "burgeoning",
+                "phonetic": "/ˈbɜːrdʒənɪŋ/",
+                "part": "adj.",
+                "translation": "迅速发展的"
+              },
+              {
+                "word": "tailwind",
+                "phonetic": "/ˈteɪlwɪnd/",
+                "part": "n.",
+                "translation": "有利因素；顺风"
+              },
+              {
+                "word": "entrenched",
+                "phonetic": "/ɪnˈtrentʃt/",
+                "part": "adj.",
+                "translation": "根深蒂固的"
+              },
+              {
+                "word": "holistic",
+                "phonetic": "/hoʊˈlɪstɪk/",
+                "part": "adj.",
+                "translation": "全面的；整体的"
+              },
+              {
+                "word": "price-sensitive",
+                "phonetic": "/ˈpraɪs ˌsensətɪv/",
+                "part": "adj.",
+                "translation": "对价格敏感的"
+              },
+              {
+                "word": "margin",
+                "phonetic": "/ˈmɑːrdʒɪn/",
+                "part": "n.",
+                "translation": "利润率；边际"
+              },
+              {
+                "word": "offset",
+                "phonetic": "/ˈɔːfset/",
+                "part": "v.",
+                "translation": "抵消；弥补"
+              },
+              {
+                "word": "explosive",
+                "phonetic": "/ɪkˈsploʊsɪv/",
+                "part": "adj.",
+                "translation": "迅猛的；爆发式的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "For decades, India has been home to well-established local boarding schools modelled on the colonial British public-school system, serving elite, aristocratic families.",
+                "analysis": [
+                  "主干是 India has been home to schools，说明当地长期存在这类寄宿学校。",
+                  "For decades 是时间状语；现在完成时 has been 将过去持续至今的状态连接起来。",
+                  "modelled on... 是过去分词短语，后置修饰 schools，交代其仿效的教育体系。",
+                  "serving... 是现在分词短语，补充说明这些学校服务的群体。",
+                  "可借鉴 has been home to... 表达某地长期拥有某类机构或现象。"
+                ],
+                "translation": "数十年来，印度一直有成熟的本地寄宿学校，它们仿照殖民时期英国公学体系，服务于精英和贵族家庭。"
+              },
+              {
+                "original": "But this market has rapidly expanded with newly wealthy Indian families increasingly aspiring to give their children more global exposure.",
+                "analysis": [
+                  "主干为 this market has rapidly expanded，说明市场已迅速扩张；But 提示与前文形成转折。",
+                  "with + 名词 + 现在分词构成伴随结构，解释市场扩张时同时出现的需求变化。",
+                  "increasingly 修饰 aspiring，表示家庭追求国际化教育的倾向不断增强。",
+                  "aspire to do 表示渴望做某事；give their children... 是不定式内容，说明具体目标。",
+                  "写作可用 with + 名词 + 分词补充解释趋势背后的伴随因素。"
+                ],
+                "translation": "然而，随着新近富裕起来的印度家庭越来越希望让子女获得更多国际视野，这一市场迅速扩大。"
+              },
+              {
+                "original": "But in India, it appears growth is likely to be slow and steady rather than explosive.",
+                "analysis": [
+                  "主句是 it appears，it 为形式主语，后接省略 that 的内容从句 growth is likely...。",
+                  "be likely to do 表示可能性；slow and steady 与 explosive 形成对照。",
+                  "rather than 引出被否定的预期，强调稳步增长而非爆发式增长。",
+                  "句首 But 回扣前文的扩张机会，转向市场规模和成本等限制因素。",
+                  "可用 it appears... rather than... 谨慎总结趋势，并避免过度确定的判断。"
+                ],
+                "translation": "但在印度，市场增长看来更可能是缓慢而稳定的，而不是爆发式的。"
+              }
+            ]
+          },
+          {
+            "title": "Green Sea Turtles Are Making a Remarkable Comeback on the Remote Aldabra Atoll and Around the World. But Their Recovery Is Far From Complete",
+            "source": "Smithsonian Magazine",
+            "published": "2026-10-21",
+            "url": "https://www.smithsonianmag.com/science-nature/green-sea-turtles-are-making-a-remarkable-comeback-on-the-remote-aldabra-atoll-and-around-the-world-but-their-recovery-is-far-from-complete-180989710/",
+            "readingTime": "约 6 分钟",
+            "topic": "环境 / 海龟保护、长期监测与种群差异",
+            "summary": "文章以 Aldabra 环礁夜间观察绿海龟筑巢开篇，回顾 20 世纪狩猎使当地筑巢数量下降，以及 1968 年禁猎后的长期恢复。研究人员估计，2019 年环礁上有超过 15,000 窝卵，比 1980 年增加 173%；全球层面，IUCN 在 2025 年将绿海龟从濒危下调为无危，并估计其数量较 20 世纪 70 年代增加约 28%。作者随即指出全球改善掩盖区域差异：太平洋等地的一些种群仍受兼捕、狩猎和气候变化威胁。文章从局地长期保护扩展到全球评估，最后强调恢复是保护成效而非任务终点。",
+            "reason": [
+              "野生动物保护与生态恢复是常见环境议题，可练习把保护政策和长期生态变化联系起来。",
+              "文章由夜间观察切入，转向历史狩猎、禁猎后的监测数据，再扩展至全球评估和地区差异。",
+              "可考查巢数增长、全球风险等级与区域种群状况之间的区别，避免把总体改善误读为所有地区都安全。",
+              "safeguard、resurgence、clutch、bycatch 等词适合环境新闻和科学普及语境。",
+              "写作可借鉴“总体进展 + 地区例外”的让步结构，并用时间序列数据支撑保护措施的影响。"
+            ],
+            "vocabulary": [
+              {
+                "word": "nesting",
+                "phonetic": "/ˈnestɪŋ/",
+                "part": "n.",
+                "translation": "筑巢；产卵"
+              },
+              {
+                "word": "safeguard",
+                "phonetic": "/ˈseɪfɡɑːrd/",
+                "part": "n.",
+                "translation": "保障；保护措施"
+              },
+              {
+                "word": "hub",
+                "phonetic": "/hʌb/",
+                "part": "n.",
+                "translation": "中心；枢纽"
+              },
+              {
+                "word": "resurgence",
+                "phonetic": "/rɪˈsɜːrdʒəns/",
+                "part": "n.",
+                "translation": "复苏；再度兴起"
+              },
+              {
+                "word": "clutch",
+                "phonetic": "/klʌtʃ/",
+                "part": "n.",
+                "translation": "一窝（鸟蛋或爬行动物的卵）"
+              },
+              {
+                "word": "downlisted",
+                "phonetic": "/ˌdaʊnˈlɪstɪd/",
+                "part": "v.",
+                "translation": "下调保护等级"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              },
+              {
+                "word": "bycatch",
+                "phonetic": "/ˈbaɪkætʃ/",
+                "part": "n.",
+                "translation": "兼捕；误捕"
+              },
+              {
+                "word": "carrying capacity",
+                "phonetic": "/ˈkæriɪŋ kəˈpæsəti/",
+                "part": "n.",
+                "translation": "环境承载量"
+              },
+              {
+                "word": "uneven",
+                "phonetic": "/ʌnˈiːvən/",
+                "part": "adj.",
+                "translation": "不均衡的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Green turtles nest on Aldabra year-round, but fewer are found this time of year.",
+                "analysis": [
+                  "并列句由 but 连接，前半说明全年都筑巢，后半指出当前时段数量较少。",
+                  "Green turtles 是前后分句共用的主语，后半 are found 使用被动语态描述观察到的数量。",
+                  "year-round 与 this time of year 构成时间范围对照，限定一般规律和当前情况。",
+                  "逻辑上先给出长期规律，再以 but 补充季节性例外。",
+                  "可借鉴“普遍情况, but + 局部例外”表达总体趋势中的变化。"
+                ],
+                "translation": "绿海龟全年都会在 Aldabra 筑巢，但每年这个时节观察到的数量较少。"
+              },
+              {
+                "original": "By the 1960s, annual nests on Aldabra had hit a low point of 2,000 to 3,000.",
+                "analysis": [
+                  "主干是 annual nests... had hit a low point，说明年度筑巢数降至低点。",
+                  "By the 1960s 表示到 20 世纪 60 年代时，had hit 使用过去完成时标示此前已形成的结果。",
+                  "on Aldabra 后置限定统计地点；of 2,000 to 3,000 给出低点的具体数值范围。",
+                  "数字证据为后文说明禁猎政策后的恢复提供比较基线。",
+                  "可用 by + 时间点 + 过去完成时呈现某一历史节点前已出现的变化。"
+                ],
+                "translation": "到 20 世纪 60 年代，Aldabra 每年的海龟巢数已降至 2,000 至 3,000 个的低点。"
+              },
+              {
+                "original": "Few places offer such a clean demonstration of what sustained protection can accomplish.",
+                "analysis": [
+                  "主干为 Few places offer a demonstration，意为很少有地方能提供这样的例证。",
+                  "such a clean 修饰 demonstration，clean 在此表示清晰、鲜明，而非“干净”。",
+                  "of what... 引导介词宾语从句；what 在从句中作 accomplish 的宾语。",
+                  "sustained protection 是从句主语，can accomplish 表示长期保护能够实现的效果。",
+                  "可借鉴 demonstration of what... can accomplish 总结某项措施所能带来的结果。"
+                ],
+                "translation": "很少有地方能如此清楚地展示持续保护可以取得什么成效。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-23",
       "status": "ready",
@@ -2017,351 +2470,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 while 连接社会情绪与传播工具，解释运动如何形成。"
                 ],
                 "translation": "Kenney 说，人们因对全球化、疫苗和疫情限制的不满而被动员起来，而社交媒体让原本彼此隔绝的活动人士得以相识并组织行动。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-17",
-      "status": "ready",
-      "ai": {
-        "intro": "10月15日至16日核实到3项可实际尝试的 AI 产品更新，分别涉及备考资料生成、短信防诈与 AI 搜索结果链接。免费资源重新核验后，补充学生 Copilot 权益与可本地运行的 gpt-oss 权重；各项限制以所列官方页面为准。",
-        "updates": [
-          {
-            "event": "Gemini Notebook 新增 60 秒视频概览与互动测验（2026-10-16）",
-            "summary": "Google 的 Gemini Notebook 学习指南介绍了新的短视频概览和互动测验形式：视频概览约 60 秒，测验可用于主动回忆课程材料。公告把它们定位为备考工具，并未给出与旧功能的性能比较。",
-            "howTo": "打开 notebook.google，使用课程讲义或复习资料建立笔记本；在笔记本中生成视频概览或互动测验，先用测验自测，再回到原资料核对错题。",
-            "impact": "可把长讲义先压缩成短视频复习，再用互动题检查概念是否记牢；适合考前快速回顾，但不应把自动生成的题目当作标准答案。",
-            "free": "功能入口为 Gemini Notebook（notebook.google）。该公告未说明价格、账户资格、地区开放范围或生成配额；是否可用以本人页面实际显示为准。",
-            "category": "AI 学习工具 / 备考功能",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-16",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/three-tips-study-gemini-notebook/"
-            }
-          },
-          {
-            "event": "Circle to Search 可检查可疑短信（2026-10-15）",
-            "summary": "Google 介绍了 Android 上 Circle to Search 的短信防诈用法：圈选收到的可疑短信后，AI Overview 会给出风险线索和建议的下一步操作，帮助用户在点击链接或分享个人信息前先检查。",
-            "howTo": "在支持 Circle to Search 的 Android 设备上长按 Home 键或导航栏，圈住可疑短信内容，阅读 AI Overview 的线索；若发现风险，再自行删除短信并拉黑号码。",
-            "impact": "收到陌生人催促转账、索要资料或附带链接的短信时，可先用它整理可疑信号；结果只是辅助判断，仍应通过机构官网等独立渠道核实。",
-            "free": "官方说明该用法适用于 Android 的 Circle to Search，但没有说明价格、账户条件、地区覆盖或调用配额；具体可用性取决于设备上是否提供该功能。",
-            "category": "AI 安全工具 / Android",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-15",
-              "url": "https://blog.google/innovation-and-ai/technology/safety-security/circle-to-search-android-text-message-scams/"
-            }
-          },
-          {
-            "event": "Google Search 调整 AI 回答中的网页链接展示（2026-10-15）",
-            "summary": "Google 宣布在 AI Mode 与 AI Overviews 中更频繁地把行内来源链接放到回答较靠前的位置；同时测试在回答顶部集中呈现完成特定任务所需的官方网页，并附上链接用途说明。重点是让读者更容易跳转到原始网页，而非只看 AI 摘要。",
-            "howTo": "在 Google Search 的 AI Mode 或 AI Overview 中提问；如账户界面已出现较靠前的行内链接或顶部官方链接区，点开来源网页核验原文。顶部专门展示仍属测试，不保证每次搜索都出现。",
-            "impact": "查奖学金申请、学校报名或政府办事流程时，可直接从 AI 答案跳到原始办理页面；写课程论文时也更方便追溯 AI 摘要依据的来源。",
-            "free": "更新涉及 Google Search 的 AI Mode 和 AI Overviews；顶部链接区由官方说明为测试功能。公告未说明价格、账户资格、地区范围或使用配额，也未列出测试用户条件。",
-            "category": "AI 搜索 / 来源可追溯性",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-15",
-              "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Student：经验证学生可免费使用",
-            "summary": "GitHub 官方说明，通过 GitHub Education 验证的学生可免费使用 Copilot 功能；该学生说明页未列明具体功能范围与使用额度。",
-            "howTo": "登录 GitHub 并在 Settings > Education benefits 完成学生验证；通过后按提示单独启用 Copilot Student。检查结账页面，若仍只显示付费计划，不要购买，等待权益同步后重试。",
-            "impact": "可用于课程编程、调试和代码解释练习；启用前先核对账户实际显示的可用功能与额度。",
-            "free": "价格为免费；资格限 GitHub Education 验证通过的学生，GitHub 每月重新核验资格。此说明页未列出具体功能范围、使用额度、地区限制或截止日期，官方未说明。",
-            "category": "学生教育权益 / AI 编程",
-            "source": {
-              "name": "GitHub Docs",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
-            }
-          },
-          {
-            "event": "OpenAI gpt-oss-20b：Apache 2.0 开放权重可本地运行",
-            "summary": "OpenAI 官方 Hugging Face 模型卡提供 gpt-oss-20b 下载，并标注 Apache 2.0 许可；模型卡称其可在约 16GB 内存范围运行，支持可配置推理强度与本地推理工具。下载权重不等于获得免费云端算力。",
-            "howTo": "在具备足够内存的电脑安装 Ollama 后执行 `ollama pull gpt-oss:20b` 和 `ollama run gpt-oss:20b`；也可按模型卡使用 Transformers。先确认设备内存与存储空间，再离线试做总结或代码解释。",
-            "impact": "可用于学习本地部署、提示词测试和模型行为对比，避免把课程资料上传给在线服务；本地设备资源不足时仍需另行承担云算力成本。",
-            "free": "模型权重可下载，模型卡标注 Apache 2.0；本地推理不按 API token 计费，但设备、电力或云端算力可能收费。下载账户要求、地区限制、调用配额和优惠截止日期官方未说明。",
-            "category": "开放模型 / 本地学习",
-            "source": {
-              "name": "OpenAI 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/openai/gpt-oss-20b"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面与移动端日常问答",
-            "summary": "Claude 官方价格页列出 Free 计划，可用于日常问题；网页、桌面、移动端与 Claude Code 共用一组使用额度，限制按滚动 5 小时窗口重置。实际可用量随对话长度、模型和所用功能变化。",
-            "howTo": "登录 Claude 并选择 Free 计划，在网页端、桌面端或移动端输入学习问题；通过 Settings > Usage 查看当前用量，达到上限后等待滚动窗口重置。",
-            "impact": "可用于解释课程概念、生成自测问题或润色笔记；长文档与多轮对话会消耗共享额度，关键结论应回到教材和原始资料核对。",
-            "free": "官方提供免费计划；无固定消息条数，网页、桌面、移动端和 Claude Code 共用额度，按滚动 5 小时窗口重置。具体消息配额、地区资格和免费计划截止日期官方未说明。",
-            "category": "长期免费 / 网页与应用",
-            "source": {
-              "name": "Claude Pricing",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Gemini API Free Tier：部分模型输入与输出 token 免费",
-            "summary": "Google AI for Developers 定价页列出 Gemini API Free Tier：部分模型的输入和输出 token 免费，并可使用 Google AI Studio。官方同时说明免费层提交内容可能用于改进 Google 产品，因此不适合输入敏感资料。",
-            "howTo": "在 Google AI Studio 创建 API key，选用定价表明确标为 Free Tier 的模型进行小规模试验；到 AI Studio 的 rate limits 页面查看项目当前 RPM、TPM 和每日请求限制。",
-            "impact": "可用于课程原型、文本分类或学习 API 调用流程；先核对模型级免费状态与实时限额，避免误把付费模型调用当作免费。",
-            "free": "价格为 $0 的仅限定价表中标注 Free Tier 的模型；各模型 RPM、TPM 与每日额度不同并会随项目层级变化，应在 AI Studio 查看。免费层提交内容可用于改进产品；具体地区资格和免费层截止日期官方未说明。",
-            "category": "免费 API / 原型开发",
-            "source": {
-              "name": "Google AI for Developers Pricing",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Cloudflare Workers AI：每日 10,000 Neurons 免费额度",
-            "summary": "Cloudflare 官方定价页说明，Workers AI 每日提供 10,000 Neurons 免费额度，模型按用量折算，额度在 UTC 00:00 重置。Free 计划超过额度后需升级付费计划；部分模型从一开始就要求付费账单方式。",
-            "howTo": "创建 Cloudflare 账户后，在 Workers AI Dashboard、Workers binding 或 REST API 选用未标注付费要求的模型，先发少量请求，再到 Dashboard 查看 Neurons 用量。",
-            "impact": "适合制作文本生成、分类等轻量 API 原型；不同模型耗用量不同，应先检查逐模型价格和需绑定付费方式的型号。",
-            "free": "Free 与 Paid Workers 每日共享 10,000 Neurons 免费额度，UTC 00:00 重置；Free 超出后需升级至 Workers Paid，Paid 超出部分为每 1,000 Neurons $0.011。部分模型要求付费账单方式；地区资格和截止日期官方未说明。",
-            "category": "免费 API / 每日额度",
-            "source": {
-              "name": "Cloudflare Workers AI Pricing",
-              "published": "2026-10-15",
-              "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Can social media bans protect young people’s mental health? Early research suggests that bans aren’t the answer",
-            "source": "The Conversation",
-            "published": "2026-10-16",
-            "url": "https://theconversation.com/can-social-media-bans-protect-young-peoples-mental-health-early-research-suggests-that-bans-arent-the-answer-291629",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "社会 / 青少年与社交媒体",
-            "summary": "文章从多国讨论限制未成年人使用社交媒体的政策切入，追问禁令是否真能改善青少年心理健康。作者先回顾心理健康担忧和平台风险，再指出社交媒体也能提供社群连接、自我表达与公民参与；现有证据不足以把青少年心理问题简单归因于平台使用。文章随后讨论年龄验证被绕过、隐私数据收集和禁令可能把青少年推向更危险网络空间等执行难题，最后主张以默认安全设置、数字素养教育、适度离屏时间、心理健康支持及让青少年参与讨论等组合措施取代单一禁令。",
-            "reason": [
-              "主题连接青少年心理健康、平台治理与个人隐私，适合社会政策类阅读和“如何平衡保护与权利”写作。",
-              "篇章先提出跨国禁令这一争议，再呈现心理风险与社交媒体益处，继而分析执行和隐私问题，最后给出替代方案，论证层次清楚。",
-              "可练习识别作者立场、区分相关性与因果、判断证据是否支持政策，以及概括反方理由等题型。",
-              "prohibit、precarious、oversight、biometric 等词汇覆盖政策、风险和技术监管语境，适合积累议论文表达。",
-              "写作可借鉴“承认问题—指出单一方案局限—提出多层次替代措施”的结构，并用 rather than、by default 等表达比较与政策设计。"
-            ],
-            "vocabulary": [
-              {
-                "word": "prohibiting",
-                "phonetic": "/prəˈhɪbɪtɪŋ/",
-                "part": "v.",
-                "translation": "禁止；阻止"
-              },
-              {
-                "word": "precarious",
-                "phonetic": "/prɪˈkeriəs/",
-                "part": "adj.",
-                "translation": "不稳定的；脆弱的"
-              },
-              {
-                "word": "compounding",
-                "phonetic": "/kəmˈpaʊndɪŋ/",
-                "part": "v.",
-                "translation": "加剧；使问题更复杂"
-              },
-              {
-                "word": "enacted",
-                "phonetic": "/ɪˈnæktɪd/",
-                "part": "v.",
-                "translation": "颁布；使成为法律"
-              },
-              {
-                "word": "oversight",
-                "phonetic": "/ˈoʊvərsaɪt/",
-                "part": "n.",
-                "translation": "监督；监管"
-              },
-              {
-                "word": "mechanism",
-                "phonetic": "/ˈmekənɪzəm/",
-                "part": "n.",
-                "translation": "机制；方法"
-              },
-              {
-                "word": "work-around",
-                "phonetic": "/ˈwɜːrkəraʊnd/",
-                "part": "n.",
-                "translation": "变通办法；规避方式"
-              },
-              {
-                "word": "biometric",
-                "phonetic": "/ˌbaɪoʊˈmetrɪk/",
-                "part": "adj.",
-                "translation": "生物特征识别的"
-              },
-              {
-                "word": "migrate",
-                "phonetic": "/ˈmaɪɡreɪt/",
-                "part": "v.",
-                "translation": "迁移；转移"
-              },
-              {
-                "word": "vulnerable",
-                "phonetic": "/ˈvʌlnərəbl/",
-                "part": "adj.",
-                "translation": "易受伤害的；脆弱的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The question is, are these bans the solution to the mental health problems young people are facing?",
-                "analysis": [
-                  "前半句主干为 The question is，冒号式逗号后接直接提出的核心疑问。",
-                  "疑问句主干为 are these bans the solution，主语是 these bans，表语为 the solution。",
-                  "to the mental health problems 是介词短语，限定 solution 所针对的问题。",
-                  "young people are facing 是省略关系代词的定语从句，修饰 problems。",
-                  "可借鉴 The question is, ...? 引出政策是否解决问题的讨论。"
-                ],
-                "translation": "问题在于，这些禁令真能解决年轻人正面临的心理健康问题吗？"
-              },
-              {
-                "original": "There isn’t clear evidence that spending time on these platforms is the main cause of their mental health problems.",
-                "analysis": [
-                  "主句是 There isn’t clear evidence，there 作引导词，核心名词为 evidence。",
-                  "that 引导同位语从句，具体说明缺乏的证据内容。",
-                  "从句主干是 spending time ... is the main cause，动名词短语作主语。",
-                  "on these platforms 修饰 spending time；of their mental health problems 修饰 cause。",
-                  "句子限定的是因果证据不足，而非否认心理健康问题存在，适合用于谨慎论证。"
-                ],
-                "translation": "目前没有明确证据表明，在这些平台上花时间是他们心理健康问题的主要成因。"
-              },
-              {
-                "original": "Supporting young people’s mental health is a complex endeavor that will require a combination of people, organizations and resources coming together.",
-                "analysis": [
-                  "主句主干为 Supporting ... is a complex endeavor，动名词短语作主语。",
-                  "young people’s mental health 是 supporting 的宾语，说明支持的对象。",
-                  "that 引导定语从句修饰 endeavor，指出这一努力需要什么。",
-                  "will require 的宾语是 a combination；of people, organizations and resources 列出参与要素。",
-                  "coming together 作后置修饰，强调多方协作；可用于提出综合性政策方案。"
-                ],
-                "translation": "支持年轻人的心理健康是一项复杂工作，需要个人、组织和资源共同参与。"
-              }
-            ]
-          },
-          {
-            "title": "Could your plastic film packaging serve a purpose? We won’t know until recycling laws change",
-            "source": "The Conversation",
-            "published": "2026-10-16",
-            "url": "https://theconversation.com/could-your-plastic-film-packaging-serve-a-purpose-we-wont-know-until-recycling-laws-change-293561",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "环境 / 塑料回收与能源",
-            "summary": "文章讨论面包袋、包装膜等难回收软塑料能否通过热解转化为油，并把焦点放在英国回收规则如何定义“回收”：现行规则不把转成燃料算作回收，可能限制企业试验。作者说明热解在无氧条件下分解塑料，也用美国、荷兰和日本案例呈现产业结果不一；随后权衡潜在减排与污染处理、炼制和最终燃烧排放等代价。结尾强调热解油不能替代进口石油，且若产品外销也难带来本国能源安全收益，因此规则可考虑为真正难回收的残余塑料留出试验空间，同时避免夸大其供能作用。",
-            "reason": [
-              "文章切合环境治理、循环经济与能源安全主题，可用于讨论技术方案如何受法规和市场条件影响。",
-              "结构从日常塑料问题提出设问，解释法律定义，再比较不同地区的产业结果，继而权衡环境代价并回到政策建议。",
-              "适合考查作者主张、案例作用、因果链条以及“方案的潜力与局限”等细节和推断题。",
-              "pyrolysis、residue、incinerator、emissions 等词可拓展环境科技与政策领域的学术词汇。",
-              "写作可借鉴先承认技术潜力、再列出现实限制、最后提出有边界的法规调整，避免把单项技术描述成万能解法。"
-            ],
-            "vocabulary": [
-              {
-                "word": "flimsy",
-                "phonetic": "/ˈflɪmzi/",
-                "part": "adj.",
-                "translation": "薄而易破的；不结实的"
-              },
-              {
-                "word": "notoriously",
-                "phonetic": "/nəˈtɔːriəsli/",
-                "part": "adv.",
-                "translation": "众所周知地（常指负面特点）"
-              },
-              {
-                "word": "scope",
-                "phonetic": "/skoʊp/",
-                "part": "n.",
-                "translation": "范围；余地"
-              },
-              {
-                "word": "residue",
-                "phonetic": "/ˈrezɪduː/",
-                "part": "n.",
-                "translation": "残留物；残渣"
-              },
-              {
-                "word": "refinery",
-                "phonetic": "/rɪˈfaɪnəri/",
-                "part": "n.",
-                "translation": "炼油厂；精炼厂"
-              },
-              {
-                "word": "incinerator",
-                "phonetic": "/ɪnˈsɪnəreɪtər/",
-                "part": "n.",
-                "translation": "焚化炉；焚烧设施"
-              },
-              {
-                "word": "emissions",
-                "phonetic": "/ɪˈmɪʃənz/",
-                "part": "n. pl.",
-                "translation": "排放物；排放量"
-              },
-              {
-                "word": "incentivize",
-                "phonetic": "/ɪnˈsentɪvaɪz/",
-                "part": "v.",
-                "translation": "激励；给予动力"
-              },
-              {
-                "word": "dependence on",
-                "phonetic": "/dɪˈpendəns ɑːn/",
-                "part": "n. phr.",
-                "translation": "对……的依赖"
-              },
-              {
-                "word": "exposed to",
-                "phonetic": "/ɪkˈspoʊzd tuː/",
-                "part": "adj. phr.",
-                "translation": "暴露于；易受……影响"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Plastic film is notoriously tricky to recycle.",
-                "analysis": [
-                  "句子主干为 Plastic film is tricky，主语是 plastic film，系动词后接形容词补足语。",
-                  "notoriously 是方式副词，强调这种难处理特征广为人知。",
-                  "to recycle 是不定式补足语，说明 tricky 的具体方面。",
-                  "句子以日常材料开篇，先用简洁判断建立环境问题。",
-                  "可借鉴 be tricky to do 表达某事做起来困难。"
-                ],
-                "translation": "塑料薄膜众所周知很难回收。"
-              },
-              {
-                "original": "With no oxygen, the plastic cannot burn, so it breaks down into pyrolysis oil along with some gas and solid residue.",
-                "analysis": [
-                  "句首 With no oxygen 是介词短语，补充说明反应发生的条件。",
-                  "前半句主干为 the plastic cannot burn，情态动词 cannot 表示不能燃烧。",
-                  "so 连接结果分句 it breaks down，明确呈现“无氧—不燃烧—分解”的因果关系。",
-                  "into pyrolysis oil 表示分解后的主要产物，along with 引出并列副产物。",
-                  "可借鉴 With..., ... so... 组织条件、过程和结果。"
-                ],
-                "translation": "没有氧气时，塑料不会燃烧，因此会分解成热解油，以及一些气体和固体残渣。"
-              },
-              {
-                "original": "Plastic waste will never replace imported oil.",
-                "analysis": [
-                  "句子主干为 Plastic waste will never replace imported oil，主语和谓语关系直接。",
-                  "will never 加动词原形，表达对未来结果的明确否定判断。",
-                  "imported 修饰 oil，限定讨论的是进口石油而非所有能源。",
-                  "该短句先划定技术方案的上限，后文再用数量比较说明其规模有限。",
-                  "可借鉴 will never replace ... 对夸大某项替代技术的说法作让步式限定。"
-                ],
-                "translation": "塑料废弃物永远无法取代进口石油。"
               }
             ]
           }
