@@ -1,6 +1,491 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-24T09:33:59.000+08:00",
+  "updatedAt": "2026-10-25T09:03:08.000+08:00",
   "issues": [
+    {
+      "date": "2026-10-25",
+      "status": "ready",
+      "ai": {
+        "intro": "近一周 Google 为 Gemini Notebook、Gemini App 与 Android Auto 推出三项功能变化：可先审阅再生成课件与视频、面向小企业的工具陆续开放，以及车载 Gemini 接入个人信息。三项功能均在分批推出，账户与使用限制以官方说明为准。",
+        "updates": [
+          {
+            "event": "Gemini Notebook 开放先审阅再生成幻灯片与视频（2026-10-19）",
+            "summary": "Gemini Notebook 为 Slide Deck 和 Video Overview 增加协作式生成流程：先根据笔记本来源建议主题，再让用户调整内容、视觉风格和格式；开启 Review 后，还可在生成前修改幻灯片提纲或视频制作说明。",
+            "howTo": "打开 Gemini Notebook 并选择含有资料来源的笔记本，在聊天中要求制作 slide deck 或 video overview；启用 Review，检查 outline notes 或 producer notes，补充修改意见后点 Proceed。",
+            "impact": "可把课程阅读材料转成复习课件或视频提要，并在生成前检查主题顺序、摘要和画面方向；把输出逐项与原始资料核对，避免遗漏或误读。",
+            "free": "官方称该功能将在接下来一周内向全球 Gemini Notebook 用户推出；公告未说明额外价格、具体账户资格、地区细分或生成额度，实际入口以账户界面为准。",
+            "category": "Gemini Notebook / 学习材料创作",
+            "source": {
+              "name": "Google 官方产品公告",
+              "published": "2026-10-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
+            }
+          },
+          {
+            "event": "Gemini 为小企业推出品牌、营销与财务工具（2026-10-20）",
+            "summary": "Google 宣布在 Gemini 中增加小企业专属入口、营销和财务技能及更多连接应用。用户可上传网站或品牌素材来保持图片风格一致，也可让 Gemini 把电子表格、收据和采购记录整理成财务图表与交互模型。",
+            "howTo": "在 Gemini App 查看小企业入口是否已开放；上传网站、品牌手册、字体或配色后要求生成品牌视觉素材，也可提供表格并请求财务图表。连接 Google 或第三方应用前先检查授权范围。",
+            "impact": "经营校园社团、学生项目或小型网店时，可试着统一海报视觉、归纳顾客反馈或初步整理收支；生成的图表与品牌素材仍应由本人核对。",
+            "free": "公告称入口、技能和连接应用将在未来几天向全球 Gemini App 用户陆续开放；官方未说明额外收费、账户资格细节、地区分批安排或具体调用额度。",
+            "category": "Gemini App / 视觉与数据整理",
+            "source": {
+              "name": "Google 官方产品公告",
+              "published": "2026-10-20",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/"
+            }
+          },
+          {
+            "event": "Android Auto 开始接入 Gemini Personal Intelligence（2026-10-20）",
+            "summary": "Google 开始把 Personal Intelligence 带入 Android Auto：在用户许可后，Gemini 可结合 Gmail、日历、照片、地图、YouTube 和搜索中的信息回答个性化问题。用户可随时在 Gemini 设置中关闭应用连接；搭载 Google built-in 的汽车将于之后数月陆续支持。",
+            "howTo": "在 Gemini 设置中自行选择是否连接相关 Google 应用；Android Auto 中连接手机后，通过语音询问日历、已保存地点等信息。驾驶时保持注意路况，不要为了查看回答分心。",
+            "impact": "通勤时可用语音询问课程安排或导航到先前保存的地点，减少手动查找；启用前先核对连接的应用与隐私偏好，重要行程信息应自行确认。",
+            "free": "公告称 Gemini 已全球提供给 Android Auto 和搭载 Google built-in 的汽车，Personal Intelligence 自 10 月 20 日起在 Android Auto 推出，车载系统版本将在未来数月推出；需用户授权连接应用。官方未说明价格、精确地区资格或调用额度。",
+            "category": "Gemini / 车载语音助手",
+            "source": {
+              "name": "Google 官方产品公告",
+              "published": "2026-10-20",
+              "url": "https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini Developer API：部分模型免费层",
+            "summary": "Google 官方定价页列出 Gemini API 免费层：部分模型可免费使用输入与输出 token，并可通过 Google AI Studio 开始构建；免费层数据可能用于改进 Google 产品。",
+            "howTo": "登录 Google AI Studio 创建 API key，在 Gemini API 定价页选择标有 Free Tier 的模型，再按官方快速入门从本地或 Colab 发起少量请求；开始前核对模型限额和可用地区。",
+            "impact": "可用来制作课程文本归纳、小型问答原型或练习 API 错误处理；免费层只覆盖特定模型，不应假定所有模型都免费或不限量。",
+            "free": "官方确认部分模型有免费输入与输出 token；具体模型、地区资格和请求限额因模型及账户而异，定价页未给出适用于所有模型的统一配额。官方注明免费层数据可能用于改进产品。",
+            "category": "免费 API / 应用原型",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Hugging Face ZeroGPU：免费试用社区 AI 演示",
+            "summary": "Hugging Face 官方文档说明，现有 ZeroGPU Spaces 可免费使用；免费账户每天包含 5 分钟 GPU 使用额度，未登录用户为 2 分钟。额度从首次使用起每 24 小时重置，剩余额度也会影响排队优先级。",
+            "howTo": "登录 Hugging Face 免费账户，在 Spaces 中搜索 ZeroGPU 演示并打开需要的图像或模型工具；先用短提示词测试，注意每日 5 分钟额度与排队情况。",
+            "impact": "可免去本地安装 GPU 环境，体验图像生成、模型推理或交互式 AI 演示，适合课程展示和快速原型验证；不要把共享演示当作稳定的生产服务。",
+            "free": "官方说明现有 ZeroGPU Spaces 对所有用户免费；免费账户每日 5 分钟、匿名用户每日 2 分钟，额度在首次使用后 24 小时重置。无需订阅付费计划即可使用演示；官方未说明地域限制。",
+            "category": "免费 GPU 演示 / 模型体验",
+            "source": {
+              "name": "Hugging Face 官方 ZeroGPU 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
+            }
+          },
+          {
+            "event": "Adobe Firefly：无付费计划用户可领取每日生成次数",
+            "summary": "Adobe 官方帮助页表示，没有付费计划的 Firefly、Express、Stock、网页版 Photoshop、Acrobat 和 Adobe 移动应用用户，可在精选模型上使用有限的每日生成次数；次数每天刷新。",
+            "howTo": "打开 Firefly 网页版或 Adobe Express，选择文本生成图像等生成式功能并查看账户可用额度；将生成图片用于课程海报或演示草稿前，检查内容与授权要求。",
+            "impact": "适合为课堂汇报制作初步插图、海报构图或视觉素材草案；每日免费生成次数有限，重要设计应保存并自行检查准确性与适用性。",
+            "free": "官方确认无计划用户有有限的每日免费生成次数，额度每日刷新；具体次数、账户要求、地区资格和信用卡要求官方未说明。功能、模型与额度可能调整。",
+            "category": "免费生成工具 / 图片与设计",
+            "source": {
+              "name": "Adobe 官方生成式积分 FAQ",
+              "published": "官方未说明",
+              "url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+            }
+          },
+          {
+            "event": "Qwen3-0.6B：Apache-2.0 许可的可下载模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B 权重与 Transformers 快速上手示例；模型卡列出 0.6B 参数、32,768 token 上下文及 100 多种语言/方言支持，仓库附有 Apache-2.0 许可证。",
+            "howTo": "打开模型卡并按示例安装最新版 transformers 与 PyTorch，使用 AutoTokenizer 和 AutoModelForCausalLM 下载权重；在自己的设备运行示例提示词，并按许可证要求保留相关声明。",
+            "impact": "可在本地练习模型加载、提示模板和多语言生成，或为课程项目搭建小型离线原型；本地运行能减少将课程资料发送到托管服务的需要。",
+            "free": "模型权重可从 Hugging Face 下载，模型仓库提供 Apache-2.0 许可证；没有附带的官方托管 API 免费额度。下载、存储和本地推理所需硬件由使用者承担，官方未说明地域、期限或最低硬件配置。",
+            "category": "开放模型权重 / 本地学习",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student：通过学生验证可免费启用",
+            "summary": "GitHub 官方学生指南确认，经 GitHub Education 验证的学生可免费使用 Copilot 功能；验证通过后还要在 Education benefits 页面单独启用，资格每月重新评估。",
+            "howTo": "登录 GitHub Education 提交学生验证；通过后打开 github.com/settings/education/benefits，进入学生开发资源并按提示启用 Copilot Student。若仍显示试用或付费结账，等待权益生效，不要购买。",
+            "impact": "适合在课程代码中练习补全、理解建议和迭代调试；学生应阅读并测试生成内容，而不是直接提交未经验证的代码。",
+            "free": "仅面向通过 GitHub Education 验证的学生，需单独激活且资格每月重评；官方学生指南未列明具体地区、AI credits 数量、聊天/agent 调用额度或权益期限。",
+            "category": "学生教育权益 / 编程辅助",
+            "source": {
+              "name": "GitHub Docs：学生免费使用 Copilot",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
+            }
+          },
+          {
+            "event": "Gemini Notebook Standard：免费整理课程资料",
+            "summary": "Google 官方计划表允许使用 Gmail 账号免费注册 Gemini Notebook Standard；每位用户最多 100 本 notebook、每本最多 50 个来源，并可使用 Custom Chat 与 Analytics。",
+            "howTo": "登录 Gemini Notebook 网页版并用 Gmail 账号创建 notebook，再上传讲义或添加网页来源；围绕已加入的资料提问或整理复习提纲，重要结论回到原文核对。",
+            "impact": "可把课程阅读材料集中管理，并围绕有限来源制作复习问题或梳理主题；适合先用少量讲义验证工作流，再决定是否需要付费计划。",
+            "free": "Standard 可免费注册，每人最多 100 本 notebook、每本 50 个来源；网页版仅对达到当地同意年龄且处于支持国家/地区的用户开放。官方未说明 Standard 的固定每日调用额度或到期日。",
+            "category": "长期免费网页访问 / 课程资料整理",
+            "source": {
+              "name": "Google Gemini Notebook 官方计划说明",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "Google Colab：免费云端 Jupyter 笔记本",
+            "summary": "Google 官方 FAQ 确认 Colab 是无需本地安装的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU，面向机器学习、数据科学和教育。",
+            "howTo": "打开 Google Colab 并新建 notebook，上传或从 GitHub 打开课程代码；在代码单元运行 Python。需要 GPU/TPU 时先检查运行时资源情况，并保存重要输出到 Drive。",
+            "impact": "可用于 Python 作业、数据清理、可视化和小型机器学习练习，不必先配置本地开发环境；运行时空闲后会删除，重要文件应另行保存。",
+            "free": "Colab 可免费使用，但资源不保证且不无限，使用限制会变化；免费 GPU/TPU 时长、固定配额及地区条件官方未说明。",
+            "category": "长期免费开发工具 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          }
+        ]
+      },
+      "english": {
+        "intro": "本期选读 Guardian 对英格兰“假秋”与 BBC 新闻编辑岗位调整的报道，以及 Al Jazeera 对美国民主党政策变化的梳理；主题覆盖气候适应、教育报道与公共问责、选举社会议题。",
+        "articles": [
+          {
+            "title": "‘False autumn’: stressed trees drop leaves early after scorching English summer",
+            "source": "The Guardian",
+            "published": "2026-10-24",
+            "url": "https://www.theguardian.com/environment/2026/oct/24/false-autumn-stressed-trees-drop-leaves-early-extreme-summer-heat",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "环境 / 极端高温、干旱与树木季节变化",
+            "summary": "Guardian 从萨里郡一棵提前落叶的桦树切入，介绍所谓“假秋”：极端高温和干旱使部分树木过早落叶、提前变色。文章先区分正常秋色由日照缩短、夜间降温和土壤水分触发的过程，再解释浅根树种为何在表层土壤干燥时更易受损，并以英国多地仍处干旱的背景说明影响范围。园艺专家判断今年秋色高峰可能提前且持续较短，皇家园艺学会也在考虑更适应炎热、干燥条件的树种。报道最后强调，未来天气仍存在不同情景，种植选择需要同时考虑炎热夏季和可能出现的寒冬。",
+            "reason": [
+              "气候变化、干旱与生态适应是环境类常见议题，可练习理解局地现象与气候背景的关系。",
+              "文章由一棵桦树的具体变化切入，解释正常季节机制，再补充干旱证据、专家判断和园艺应对。",
+              "可考查“假秋”的定义、浅根树种更脆弱的原因，以及不同专家如何预测季节变化。",
+              "canopy、defoliation、shallow-rooted、succumb 等词适用于环境与自然类阅读。",
+              "写作可借鉴“典型案例—机制解释—影响范围—适应措施”的层层推进结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "conspicuously",
+                "phonetic": "/kənˈspɪkjuəsli/",
+                "part": "adv.",
+                "translation": "显眼地；明显地"
+              },
+              {
+                "word": "canopy",
+                "phonetic": "/ˈkænəpi/",
+                "part": "n.",
+                "translation": "树冠；冠层"
+              },
+              {
+                "word": "drought-sensitive",
+                "phonetic": "/ˈdraʊt ˌsensətɪv/",
+                "part": "adj.",
+                "translation": "易受干旱影响的"
+              },
+              {
+                "word": "defoliation",
+                "phonetic": "/ˌdiːˌfoʊliˈeɪʃn/",
+                "part": "n.",
+                "translation": "落叶；脱叶"
+              },
+              {
+                "word": "premature",
+                "phonetic": "/ˌpriːməˈtʃʊr/",
+                "part": "adj.",
+                "translation": "过早的；未成熟的"
+              },
+              {
+                "word": "shallow-rooted",
+                "phonetic": "/ˌʃæloʊ ˈruːtɪd/",
+                "part": "adj.",
+                "translation": "根系较浅的"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              },
+              {
+                "word": "fleeting",
+                "phonetic": "/ˈfliːtɪŋ/",
+                "part": "adj.",
+                "translation": "短暂的；转瞬即逝的"
+              },
+              {
+                "word": "succumb",
+                "phonetic": "/səˈkʌm/",
+                "part": "v.",
+                "translation": "屈服；经受不住"
+              },
+              {
+                "word": "adaptation",
+                "phonetic": "/ˌædæpˈteɪʃn/",
+                "part": "n.",
+                "translation": "适应；适应性调整"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "This is also known as a “false autumn”, where the stress of extreme summer conditions prompts trees and plants to behave as if the season has changed.",
+                "analysis": [
+                  "主干是 This is also known as a “false autumn”，this 指前文描述的提前落叶现象。",
+                  "where 引导补充说明性从句，解释这种现象形成的情境；从句主干是 the stress prompts trees and plants。",
+                  "of extreme summer conditions 修饰 stress；to behave 是宾语补足成分，as if 引导方式状语从句。",
+                  "句子先命名现象，再说明高温压力如何让植物表现得像季节已改变，构成定义与因果关系。",
+                  "可借鉴 be known as... 和 prompt ... to do 描述现象名称及其作用机制。"
+                ],
+                "translation": "这种现象也被称为“假秋”：极端夏季条件带来的压力促使树木和植物表现得仿佛季节已经改变。"
+              },
+              {
+                "original": "The birch illustrates how extreme weather driven by the climate crisis is reshaping the flow of the UK’s seasons.",
+                "analysis": [
+                  "主句主干是 The birch illustrates how...，The birch 是主语，illustrates 是谓语。",
+                  "how 引导宾语从句，说明桦树所体现的内容；从句主干是 extreme weather is reshaping the flow。",
+                  "driven by the climate crisis 是过去分词短语，后置修饰 extreme weather。",
+                  "句子由单一树种的具体例子推及英国季节变化，体现由个案到总体趋势的逻辑。",
+                  "写作可借鉴 X illustrates how... 引出案例所揭示的更广泛变化。"
+                ],
+                "translation": "这棵桦树说明，气候危机驱动的极端天气正在重塑英国季节变化的节奏。"
+              },
+              {
+                "original": "Normally, autumn’s effect on trees is triggered by shortening daylight, dropping night-time temperatures and adequate ground moisture brought on by rain.",
+                "analysis": [
+                  "主干是 autumn’s effect on trees is triggered，主语中心词为 effect，谓语采用被动语态。",
+                  "Normally 是句首频率副词，提示这是通常情况，为后文异常的提前落叶作对照。",
+                  "by 后并列三个触发条件：shortening daylight、dropping night-time temperatures 和 adequate ground moisture。",
+                  "brought on by rain 是过去分词短语，修饰 ground moisture；整体解释正常季节变化的成因。",
+                  "可借鉴 be triggered by... 并列列出多个因素，说明某现象由哪些条件引起。"
+                ],
+                "translation": "通常，日照缩短、夜间气温下降以及降雨带来的充足土壤水分，会触发树木的秋季变化。"
+              }
+            ]
+          },
+          {
+            "title": "BBC News to axe education editor role in cost-cutting move",
+            "source": "The Guardian",
+            "published": "2026-10-22",
+            "url": "https://www.theguardian.com/media/2026/oct/22/bbc-news-to-axe-education-editor-role-in-cost-cutting-move",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "教育与社会 / 公共媒体削减专职编辑岗位",
+            "summary": "Guardian 报道 BBC News 计划把教育编辑与社会事务编辑合并为一个岗位，并在现任健康编辑离职后取消该职衔；这轮调整属于削减成本计划，涉及 BBC News 的 100 个岗位，预计节省 550 万英镑。管理层称审查考虑了受众需求、编辑要求和部门效率；学校领导、教师工会及社会照护领域人士则担心，失去专职编辑会削弱对教育和社会议题的关注与问责。报道同时呈现反方回应：BBC 表示仍有专门记者团队，能够继续报道这些领域。文章末尾补充，编辑岗位要求也将更强调社交媒体和视频平台，以接触更多年轻受众。",
+            "reason": [
+              "教育报道与公共媒体责任相连，适合讨论成本控制会如何影响公共信息服务。",
+              "篇章先交代岗位调整，再说明管理层理由，随后列举工会与行业人士的担忧，并呈现 BBC 的回应。",
+              "可训练识别新闻机构、工会和学校代表的不同立场，以及区分已宣布措施与受访者判断。",
+              "dedicated、scrutiny、incumbent、duplication 等词汇可迁移到教育治理和媒体政策话题。",
+              "写作可借鉴“政策变化—效率理由—公共利益担忧—机构回应”的平衡式论证结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "dedicated",
+                "phonetic": "/ˈdedɪkeɪtɪd/",
+                "part": "adj.",
+                "translation": "专门的；专职的"
+              },
+              {
+                "word": "cost-cutting",
+                "phonetic": "/ˈkɔːst ˌkʌtɪŋ/",
+                "part": "n./adj.",
+                "translation": "削减成本（的）"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "仔细审查；监督"
+              },
+              {
+                "word": "dilute",
+                "phonetic": "/daɪˈluːt/",
+                "part": "v.",
+                "translation": "削弱；稀释"
+              },
+              {
+                "word": "incumbent",
+                "phonetic": "/ɪnˈkʌmbənt/",
+                "part": "n.",
+                "translation": "现任者；在职者"
+              },
+              {
+                "word": "duplication",
+                "phonetic": "/ˌduːplɪˈkeɪʃn/",
+                "part": "n.",
+                "translation": "重复；重叠"
+              },
+              {
+                "word": "editorial",
+                "phonetic": "/ˌedɪˈtɔːriəl/",
+                "part": "adj.",
+                "translation": "编辑的；编辑部的"
+              },
+              {
+                "word": "puzzled",
+                "phonetic": "/ˈpʌzld/",
+                "part": "adj.",
+                "translation": "困惑的"
+              },
+              {
+                "word": "erode",
+                "phonetic": "/ɪˈroʊd/",
+                "part": "v.",
+                "translation": "逐渐削弱；侵蚀"
+              },
+              {
+                "word": "breadth",
+                "phonetic": "/bredθ/",
+                "part": "n.",
+                "translation": "广度；范围"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "There will also be no health editor title at the BBC when the current incumbent, Hugh Pym, leaves in the spring.",
+                "analysis": [
+                  "主句采用 there be 结构，核心是 There will be no health editor title，表示未来不再设有该职衔。",
+                  "when 引导时间状语从句，从句主干为 the incumbent leaves，说明变化发生的时间条件。",
+                  "current incumbent 与 Hugh Pym 构成同位关系，补充说明现任者身份。",
+                  "also 将健康编辑岗位的调整与前文教育岗位的变化联系起来，形成补充递进。",
+                  "可借鉴 there will be no... when... 描写某项安排何时结束。"
+                ],
+                "translation": "当现任健康编辑休·皮姆于春季离职时，BBC 也将不再保留健康编辑这一职衔。"
+              },
+              {
+                "original": "It appears BBC executives have opted to combine the education and social affairs jobs as they attempt to reduce duplication and cut wage costs.",
+                "analysis": [
+                  "句子以 It appears 作形式主句，后接省略 that 的内容从句，交代记者对管理层决定的判断。",
+                  "内容从句主干是 BBC executives have opted to combine the jobs。",
+                  "to combine 是 opt 的不定式补足语；as 引导状语从句，说明合并岗位时所追求的目标。",
+                  "reduce duplication 和 cut wage costs 并列，呈现机构进行重组的两项效率理由。",
+                  "可借鉴 It appears (that)... have opted to... as...，审慎转述决定及其背景。"
+                ],
+                "translation": "看来，BBC 管理层选择合并教育与社会事务编辑岗位，以减少工作重叠并削减工资成本。"
+              },
+              {
+                "original": "However, others inside the BBC said the issues of education, social affairs and health all had dedicated teams of journalists that would ensure proper coverage.",
+                "analysis": [
+                  "主句主干是 others said，said 后接省略 that 的宾语从句。",
+                  "宾语从句中 the issues... 是主语，had dedicated teams 是谓语和宾语结构。",
+                  "that would ensure proper coverage 是定语从句，修饰 teams，说明团队将承担的作用。",
+                  "However 与前文对报道力度减弱的担忧形成让步和反向回应。",
+                  "可借鉴 However, others said... that... 呈现与批评意见不同的机构观点。"
+                ],
+                "translation": "不过，BBC 内部也有人表示，教育、社会事务和健康领域都有专门的记者团队，能够确保报道得到妥善开展。"
+              }
+            ]
+          },
+          {
+            "title": "How have Democrats’ policies shifted since the last major US election?",
+            "source": "Al Jazeera",
+            "published": "2026-10-24",
+            "url": "https://www.aljazeera.com/economy/2026/10/24/how-have-democrats-policies-shifted-since-the-last-major-us-election",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "社会 / 选民态度与美国政党政策调整",
+            "summary": "Al Jazeera 将民主党候选人的立场变化放在中期选举和选民反馈的背景下，分主题讨论以色列政策、跨性别者权利、移民与边境安全，以及全民医保。文章用民调、竞选广告和候选人表态展示：部分温和派调整措辞以回应摇摆选区的顾虑，而进步派仍要求更强的权利保障和公共政策；党内分歧并未因此消失。报道同时指出，医疗成本等生活议题推动不同派别支持政府更多介入，但具体方案仍有争论。全文通过议题小标题、数据和人物引语说明政策变化并非单一方向，而会随选区、选民需求和党内力量而异。",
+            "reason": [
+              "文章讨论公共意见如何影响政党立场，涉及医疗、移民、权利与选举，适合社会议题阅读。",
+              "作者按多个政策领域分节，先说明选举背景，再用民调、竞选广告和人物引语说明立场变化。",
+              "可考查比较温和派与进步派观点、定位数据支持的结论，以及判断作者如何呈现党内分歧。",
+              "rebuke、stance、resonate、paramount、coalesce 等词适合描述政治表达与社会态度。",
+              "写作可借鉴“总体背景—分领域案例—数据和引语—归纳分歧”的组织方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "rebuke",
+                "phonetic": "/rɪˈbjuːk/",
+                "part": "n./v.",
+                "translation": "严厉批评；斥责"
+              },
+              {
+                "word": "reassess",
+                "phonetic": "/ˌriːəˈses/",
+                "part": "v.",
+                "translation": "重新评估"
+              },
+              {
+                "word": "stance",
+                "phonetic": "/stæns/",
+                "part": "n.",
+                "translation": "立场；态度"
+              },
+              {
+                "word": "a host of",
+                "phonetic": "/ə ˈhoʊst əv/",
+                "part": "phr.",
+                "translation": "许多；一系列"
+              },
+              {
+                "word": "hot-button",
+                "phonetic": "/ˈhɑːt ˌbʌtn/",
+                "part": "adj.",
+                "translation": "引发强烈争议的"
+              },
+              {
+                "word": "resonate",
+                "phonetic": "/ˈrezəneɪt/",
+                "part": "v.",
+                "translation": "引起共鸣；产生共振"
+              },
+              {
+                "word": "alienated",
+                "phonetic": "/ˈeɪliəneɪtɪd/",
+                "part": "adj.",
+                "translation": "疏远的；感到被排斥的"
+              },
+              {
+                "word": "footing",
+                "phonetic": "/ˈfʊtɪŋ/",
+                "part": "n.",
+                "translation": "立足点；地位"
+              },
+              {
+                "word": "paramount",
+                "phonetic": "/ˈpærəmaʊnt/",
+                "part": "adj.",
+                "translation": "最重要的；首要的"
+              },
+              {
+                "word": "coalesce",
+                "phonetic": "/ˌkoʊəˈles/",
+                "part": "v.",
+                "translation": "联合；结合"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Those shifts have resonated with some voters, while others have been alienated as the party tries to find its footing in Trump’s second term and wrestle away control of both houses of Congress from Republicans.",
+                "analysis": [
+                  "主句主干是 Those shifts have resonated with some voters，while 引导并列对照分句。",
+                  "while 分句主干是 others have been alienated，使用现在完成时被动语态表示受到疏远的影响。",
+                  "as 引导背景状语从句，说明党派在第二任期中寻找定位并争取国会控制权的同时发生了不同反应。",
+                  "with some voters 与 others 形成鲜明对照，呈现政策调整带来的分化效果。",
+                  "可借鉴 A resonates with some, while others... 表达同一变化对不同群体产生相反影响。"
+                ],
+                "translation": "这些变化引起了一些选民的共鸣，却也让另一些人感到疏远；与此同时，该党正努力在特朗普第二任期中找到定位，并从共和党手中争取国会两院的控制权。"
+              },
+              {
+                "original": "The most notable shift among Democrats has, arguably, been on Israel.",
+                "analysis": [
+                  "主干是 The most notable shift has been on Israel，主语中心词为 shift。",
+                  "among Democrats 限定变化发生的群体范围；on Israel 说明变化所涉及的议题。",
+                  "arguably 是插入副词，表示这是作者认为可成立但并非绝对的判断。",
+                  "现在完成时 has been 将过去一段时间的变化与当前讨论联系起来。",
+                  "写作可借鉴 The most notable shift has been in/on... 提炼某领域最显著的变化。"
+                ],
+                "translation": "可以说，民主党内部最显著的立场变化出现在以色列问题上。"
+              },
+              {
+                "original": "But how exactly the party addresses rising medical costs remains up for debate.",
+                "analysis": [
+                  "主干是 how... remains up for debate；how 引导的间接疑问从句整体充当主语。",
+                  "从句内部主干为 the party addresses costs，how exactly 强调具体做法尚未确定。",
+                  "rising medical costs 是 addresses 的宾语，rising 作前置修饰语，指出问题正在加剧。",
+                  "句首 But 与前文各派普遍支持介入形成转折，强调对具体政策手段仍有分歧。",
+                  "可借鉴 how exactly... remains up for debate，说明目标趋同但实施路径尚无定论。"
+                ],
+                "translation": "但是，该党究竟如何应对不断上涨的医疗成本，仍有待讨论。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-24",
       "status": "ready",
@@ -2143,338 +2628,6 @@ window.BRIEFING_DATA = {
         ]
       }
     },
-    {
-      "date": "2026-10-18",
-      "status": "ready",
-      "ai": {
-        "intro": "近一周官方页面确认三项可试用变化：DeepSeek 更新 V4.1 Flash、Meta 为 Facebook Feed/Reels 加入自然语言推荐控制，Google 将 Gemini 4 Argon 提供给 AI Pro/Ultra 订阅者。各产品的账户、地区及具体额度限制均按来源页说明。",
-        "updates": [
-          {
-            "event": "DeepSeek 发布 V4.1 Flash-1017 模型（2026-10-17）",
-            "summary": "DeepSeek 宣布 V4.1 Flash-1017 已上线网站、App 和 API，并称新版本可更快完成任务、输出更短；同时发布模型权重。官方展示了从零生成完整项目的用例，但未给出可独立复现的外部验证结论。",
-            "howTo": "打开 DeepSeek 网站或 App 开始对话；若通过 API 调用，按官方文档使用模型名 `deepseek-flash`。也可从公告链接进入 Hugging Face 模型卡，按其 inference 指南下载和运行权重。",
-            "impact": "可让它先拆解课程编程项目，再生成初始原型和测试清单；对比修改前后的代码与解释，检查是否真正理解，而不要只照搬生成结果。",
-            "free": "官方公告称模型已在网站、App 和 API 上线，并发布开源权重；公告未说明在线端价格、账户条件、地区开放范围或调用配额。API 费用应以官方价格页和账户实际显示为准。",
-            "category": "AI 模型 / 编程与推理",
-            "source": {
-              "name": "DeepSeek API Docs",
-              "published": "2026-10-17",
-              "url": "https://api-docs.deepseek.com/news/news261017"
-            }
-          },
-          {
-            "event": "Facebook 新增可用自然语言调整 Feed 与 Reels 推荐",
-            "summary": "Meta 为 Facebook 上的 Feed 和 Reels 推出 Your algorithm：用户可管理感兴趣的主题，也可在对帖子选择“感兴趣”或“不感兴趣”后，用自己的话补充偏好，推荐会随反馈调整。Meta 表示其排序系统使用大型语言模型理解自然语言中的兴趣、语境和意图。",
-            "howTo": "在 Facebook Feed 或 Reels 的帖子菜单中点“感兴趣”或“不感兴趣”，按提示补充希望多看或少看的内容；也可从帖子三点菜单打开 Your algorithm 管理主题。",
-            "impact": "可把信息流调向公开课、语言学习或校园活动等内容，减少无关推荐；调整后仍需自行核对信息来源，不能把个性化排序当作事实筛选。",
-            "free": "功能集成在 Facebook 的 Feed/Reels 推荐设置中，Meta 称正在推出；公告未说明是否收费、适用地区、账户资格条件或使用配额，具体开放状态以账户界面为准。",
-            "category": "AI 推荐 / 信息流个性化",
-            "source": {
-              "name": "Meta Newsroom",
-              "published": "2026-10-13",
-              "url": "https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/"
-            }
-          },
-          {
-            "event": "Gemini 4 Argon 开始向 Gemini App 订阅用户开放",
-            "summary": "Google 将 Gemini 4 Argon 接入 Gemini App，称其在复杂任务推理和编程方面有所改进；用户还可在 macOS 版 Gemini 中切换至 Google Antigravity 编程界面。此处是产品上线信息，不把官方的能力描述扩展成未经核实的基准成绩。",
-            "howTo": "登录 Gemini App，在模型选项中查看 Gemini 4 Argon；若要尝试编码，可从 macOS 版 Gemini 切换到 Google Antigravity 界面。需要先确认账户订阅资格和实际入口。",
-            "impact": "可用较长提示让它解释课程代码、规划多步作业或协助调试，再逐步检查修改；复杂任务应分阶段核验输出和代码。",
-            "free": "Google 明确列出 Google AI Pro 和 Ultra 订阅者可访问 Argon；公告未说明免费用户是否可用、订阅价格的地区差异、具体地区开放范围或调用额度。",
-            "category": "AI 模型 / 学习与编程",
-            "source": {
-              "name": "Google Blog",
-              "published": "2026-10-13",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "DeepSeek-V4.1-Flash-1017：MIT 许可的可下载模型权重",
-            "summary": "DeepSeek 官方 Hugging Face 模型卡提供 V4.1-Flash-1017 权重，并明确仓库和权重采用 MIT License；页面给出权重转换与本地推理指南。",
-            "howTo": "打开模型卡，下载仓库文件，并按其中 inference/README.md 的说明转换权重和运行推理；先检查设备存储与算力是否足够。",
-            "impact": "可用于本地试验提示词、代码解释和模型部署流程；离线运行也便于在不上传课程资料的前提下学习推理部署。",
-            "free": "权重按 MIT License 提供；本地运行本身不需调用云 API，但设备、耗电或另租算力可能产生成本。官方未说明最低硬件配置、下载账户要求、地区限制或调用配额。",
-            "category": "开放模型 / 本地推理",
-            "source": {
-              "name": "DeepSeek 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-            }
-          },
-          {
-            "event": "Google Colab：免费 Jupyter 笔记本与浮动 GPU/TPU 资源",
-            "summary": "Google 官方 FAQ 说明 Colab 免费提供托管 Jupyter 笔记本计算资源，包括 GPU 和 TPU，适合机器学习、数据科学和教育；免费资源不保证且使用限制会变化。",
-            "howTo": "打开 Colab 新建笔记本，运行 Python 或课程机器学习示例；确有需要时在运行时选项中尝试 GPU/TPU，并保存代码以便资源中断后继续。",
-            "impact": "可在不先配置本地环境的情况下运行教学 notebook、练习小型模型或完成数据分析；重要作业需定期保存，因为运行时和加速器资源可能被回收或暂不可用。",
-            "free": "官方确认服务免费，含 GPU/TPU 计算资源，但不保证资源且使用额度会波动；FAQ 未说明固定配额、地区覆盖或截止日期。",
-            "category": "免费云计算 / AI 学习环境",
-            "source": {
-              "name": "Google Colab FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini Notebook：免费用户每本笔记本最多 50 个来源",
-            "summary": "Google 支持页说明，Free 用户每本 Gemini Notebook 可加入最多 50 个来源，来源可包括文档、网页、音频和公开视频；可围绕所选来源提问或生成摘要。",
-            "howTo": "在电脑打开 Gemini Notebook，新建笔记本后点 Add sources，加入课程 PDF、网页或有字幕的公开视频，再在聊天框提问并回到原文核对。",
-            "impact": "适合把分散的课程阅读材料集中成可检索资料集，用于复习提纲和跨文档问题；生成内容应与原始来源逐项核验。",
-            "free": "官方明确 Free 用户每本最多 50 个来源，每个来源最多 500,000 词或上传文件 200MB；此页未说明地区限制或权益截止日期。手机 App 的部分功能可能有限制。",
-            "category": "免费学习工具 / 文档问答",
-            "source": {
-              "name": "Google Gemini Notebook Help",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16215270?hl=en"
-            }
-          },
-          {
-            "event": "Notion AI：可先免费试用有限次数的 AI 回复",
-            "summary": "Notion 帮助页说明所有用户都能免费试用 Notion AI；AI 写作、编辑、提问等操作得到回复时均计为一次，免费赠送次数用完后需升级才能继续使用 AI 功能。",
-            "howTo": "在 Notion 页面中尝试 AI 写作、改写或提问；把免费回复留给课程提纲、段落润色等需要反复核对的任务，并留意每次重试也会计入回复数。",
-            "impact": "可先免费测试它是否适合整理课堂笔记、润色英语表达或生成复习提纲，再决定是否需要付费，不必为单次试用预先购买套餐。",
-            "free": "官方确认可免费试用，但该帮助页未公布具体回复次数、地区范围或截止日期；用完后继续使用需要 Business 或 Enterprise 计划。",
-            "category": "免费试用 / 笔记与写作",
-            "source": {
-              "name": "Notion Help",
-              "published": "官方未说明",
-              "url": "https://www.notion.com/help/complimentary-ai-responses"
-            }
-          },
-          {
-            "event": "OpenAI Whisper：MIT 许可的本地语音转写与翻译",
-            "summary": "OpenAI 官方 GitHub 仓库提供 Whisper 语音识别模型，可做多语种语音识别、语音翻译和语言识别；仓库代码采用 MIT License，并给出安装及命令行使用方法。",
-            "howTo": "安装 `openai-whisper` 和 `ffmpeg`，再运行 `whisper lecture.wav --model medium --language Japanese --task translate` 将日语音频转成英语；转写其他语种时按仓库示例调整语言参数。",
-            "impact": "可把访谈、外语讲座或自有录音转成文本辅助复习；转写可能出错，需对照音频校正专有名词和关键数字。",
-            "free": "官方仓库代码使用 MIT License，可下载模型并本地运行；无在线调用配额，但需要自行准备设备和依赖。仓库未说明最低硬件、地区限制或权益截止日期。",
-            "category": "开放工具 / 音频转写与翻译",
-            "source": {
-              "name": "OpenAI GitHub",
-              "published": "官方未说明",
-              "url": "https://github.com/openai/whisper"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Perspective: Midterm money madness",
-            "source": "NPR",
-            "published": "2026-10-17",
-            "url": "https://www.npr.org/2026/10/17/nx-s1-5997474/perspective-midterm-money-madness",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "经济与社会 / 竞选广告支出和生活成本",
-            "summary": "文章以 AdImpact 追踪到的本届美国中期选举广告支出超过 100 亿美元开篇，随后列举俄亥俄、得克萨斯、缅因和密歇根等选区的金额，说明资金集中规模。接着解释 Citizens United 判决后超级政治行动委员会（super PAC）可以接受大额捐款、但不能与竞选团队直接协调，并举出两党大额捐助者的例子。文章把竞选广告支出与选民更关心的经济和生活成本并置，指出汽油和食品价格上涨，继而用一连串反问提出这些钱能否用于食物、住房、医疗和公共服务。结尾以“少花竞选经费”的假想承诺和花钱多未必获胜作反讽，质疑广告支出是否真能换来支持。",
-            "reason": [
-              "主题涵盖竞选资金、贫富差距、生活成本与公共服务，适合经济与社会议题阅读。",
-              "篇章从总额和地区案例展开，解释制度背景，再对照选民需求，最后通过反问和反讽表达作者质疑。",
-              "可训练数字细节定位、制度因果、对比关系、修辞问句及作者态度判断。",
-              "steer、ballot、subsidize、spike 等词分别涉及资金影响、选举、公共补贴和价格变化。",
-              "写作可借鉴“先用数据建立问题—交代制度机制—对照社会需求—提出价值追问”的论证路径。"
-            ],
-            "vocabulary": [
-              {
-                "word": "combined",
-                "phonetic": "/kəmˈbaɪnd/",
-                "part": "adj.",
-                "translation": "合计的；合并的"
-              },
-              {
-                "word": "surpassed",
-                "phonetic": "/sərˈpæst/",
-                "part": "v.",
-                "translation": "超过；超出"
-              },
-              {
-                "word": "contest",
-                "phonetic": "/ˈkɑːntest/",
-                "part": "n.",
-                "translation": "竞选；竞争"
-              },
-              {
-                "word": "coordinate",
-                "phonetic": "/koʊˈɔːrdɪneɪt/",
-                "part": "v.",
-                "translation": "协调；协同"
-              },
-              {
-                "word": "steer",
-                "phonetic": "/stɪr/",
-                "part": "v.",
-                "translation": "引导；左右"
-              },
-              {
-                "word": "ballot",
-                "phonetic": "/ˈbælət/",
-                "part": "n.",
-                "translation": "选票；投票"
-              },
-              {
-                "word": "spiked",
-                "phonetic": "/spaɪkt/",
-                "part": "v.",
-                "translation": "急剧上涨"
-              },
-              {
-                "word": "shelter",
-                "phonetic": "/ˈʃeltər/",
-                "part": "n.",
-                "translation": "住所；庇护所"
-              },
-              {
-                "word": "subsidize",
-                "phonetic": "/ˈsʌbsɪdaɪz/",
-                "part": "v.",
-                "translation": "补贴；资助"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Campaign spending for these midterm elections passed 10 billion dollars this week, according to the tracking group AdImpact.",
-                "analysis": [
-                  "主句主干是 Campaign spending passed 10 billion dollars，spending 为主语，passed 为谓语。",
-                  "for these midterm elections 是介词短语，限定这笔竞选支出的用途。",
-                  "this week 作时间状语；according to the tracking group AdImpact 标明数字来源。",
-                  "句子先给出总量，再用来源归属增强信息可核查性。",
-                  "可仿写 X reached ..., according to ...，报告统计数据及出处。"
-                ],
-                "translation": "据追踪机构 AdImpact 统计，本届中期选举的竞选支出本周已超过 100 亿美元。"
-              },
-              {
-                "original": "Meanwhile, voters, whom politicians are trying to win over with all these ads, tell pollsters and reporters that their top issues this fall are the economy and the cost of living.",
-                "analysis": [
-                  "主句主干是 voters tell pollsters and reporters that...，主语后接 tell 的双宾语结构。",
-                  "whom 引导非限制性定语从句，补充说明政客正试图争取这些选民。",
-                  "that 引导 tell 的宾语从句；从句主干为 their top issues are the economy and the cost of living。",
-                  "Meanwhile 标出广告投入与选民关切之间的转折对照。",
-                  "可借鉴 voters, whom ..., say that... 将背景信息嵌入主张。"
-                ],
-                "translation": "与此同时，政客试图用这些广告争取的选民告诉民调人员和记者，他们今秋最关心的是经济和生活成本。"
-              },
-              {
-                "original": "Maybe a candidate could win support these days by declaring, \"And I vow to spend less money on my campaign than my opponent!\"",
-                "analysis": [
-                  "主干为 a candidate could win support，Maybe 使判断带有试探语气。",
-                  "by declaring 是方式状语，说明候选人如何可能争取支持。",
-                  "直接引语具体呈现假想的竞选承诺，构成作者提出的讽刺性设问。",
-                  "less ... than ... 是比较结构，突出“花得比对手少”的反常策略。",
-                  "可借鉴 Maybe ... could ... by doing... 提出一种假设性解决思路。"
-                ],
-                "translation": "也许如今候选人只要宣称“我承诺竞选花的钱比对手少”，就能赢得支持。"
-              }
-            ]
-          },
-          {
-            "title": "How Alberta separatism went from fringe cause to referendum",
-            "source": "PBS NewsHour",
-            "published": "2026-10-17",
-            "url": "https://www.pbs.org/newshour/world/how-alberta-separatism-went-from-fringe-cause-to-referendum",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "社会 / 加拿大联邦关系与阿尔伯塔分离主义",
-            "summary": "文章解释阿尔伯塔省投票并非立即脱离加拿大，而是决定是否开启未来独立公投的法律程序。报道回溯该省长期围绕石油和联邦权力与渥太华的争议，并描述疫情限制和 Freedom Convoy 如何扩大分离主义动员；前省长 Jason Kenney 将其与社交媒体、组织化和筹款联系起来。随后文章呈现总理 Mark Carney 的能源政策如何争取部分阿尔伯塔民众支持、独立运动人士如何赴华盛顿游说，以及当地石油出口对美国的依赖。结尾指出，即使独立支持率远未过半，投票仍可能增强分离主义者的谈判筹码，并将其放入加拿大更广泛的国家统一争论中。",
-            "reason": [
-              "文章围绕地区资源、联邦治理、公共意见和国家统一展开，适合社会政策与政治经济类阅读。",
-              "结构由投票性质切入，回顾历史矛盾和动员因素，再呈现不同人物立场，最后讨论投票的政治后果。",
-              "可训练区分正式独立公投与启动程序的投票、识别因果解释和人物观点归属，以及推断其谈判作用。",
-              "fringe、mobilized、grievance、leverage 等词汇可用于描述边缘运动、社会动员、不满和谈判筹码。",
-              "写作可借鉴“历史背景—利益分歧—动员机制—多方回应—可能后果”的分析框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "fringe",
-                "phonetic": "/frɪndʒ/",
-                "part": "adj.",
-                "translation": "边缘的；非主流的"
-              },
-              {
-                "word": "separatism",
-                "phonetic": "/ˈsepərətɪzəm/",
-                "part": "n.",
-                "translation": "分离主义"
-              },
-              {
-                "word": "referendum",
-                "phonetic": "/ˌrefəˈrendəm/",
-                "part": "n.",
-                "translation": "公民投票；全民公决"
-              },
-              {
-                "word": "imposed",
-                "phonetic": "/ɪmˈpoʊzd/",
-                "part": "v.",
-                "translation": "强加；推行"
-              },
-              {
-                "word": "morphed",
-                "phonetic": "/mɔːrft/",
-                "part": "v.",
-                "translation": "演变；转变"
-              },
-              {
-                "word": "mobilized",
-                "phonetic": "/ˈmoʊbəlaɪzd/",
-                "part": "v.",
-                "translation": "动员；组织起来"
-              },
-              {
-                "word": "grievances",
-                "phonetic": "/ˈɡriːvənsɪz/",
-                "part": "n. pl.",
-                "translation": "不满；委屈"
-              },
-              {
-                "word": "leverage",
-                "phonetic": "/ˈlevərɪdʒ/",
-                "part": "n.",
-                "translation": "影响力；谈判筹码"
-              },
-              {
-                "word": "recede",
-                "phonetic": "/rɪˈsiːd/",
-                "part": "v.",
-                "translation": "减弱；退去"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "For decades, Alberta separatism was a fringe cause.",
-                "analysis": [
-                  "句子主干为 Alberta separatism was a fringe cause，主语、系动词和表语构成完整判断。",
-                  "For decades 是句首时间状语，强调这种运动曾长期处于边缘位置。",
-                  "a fringe 作 cause 的前置修饰语，概括其社会政治地位。",
-                  "短句用过去时建立文章起点，为后文变化形成对照。",
-                  "可借鉴 For decades, ... was ... 引出长期背景。"
-                ],
-                "translation": "几十年来，阿尔伯塔分离主义一直是边缘诉求。"
-              },
-              {
-                "original": "Instead, voters will decide whether the province should remain in Canada or begin the legal process toward a future referendum on separation.",
-                "analysis": [
-                  "主句主干是 voters will decide，Instead 承接并纠正“立即脱离”的误解。",
-                  "whether 引导 decide 的宾语从句，说明选民要决定的具体事项。",
-                  "从句由 or 并列两个选择：留在加拿大，或启动通往未来公投的法律程序。",
-                  "toward a future referendum 是方向性介词短语，说明程序目标而非眼前结果。",
-                  "可借鉴 decide whether ... or ... 清楚区分政策选项。"
-                ],
-                "translation": "相反，选民将决定该省应留在加拿大，还是启动通往未来分离公投的法律程序。"
-              },
-              {
-                "original": "Kenney said people mobilized over anger at globalization, vaccines and pandemic restrictions, while social media allowed previously isolated activists to find one another and organize.",
-                "analysis": [
-                  "主句为 Kenney said...，后接省略 that 的宾语从句。",
-                  "宾语从句前半句 people mobilized 说明动员基础，over 引出不满所针对的议题。",
-                  "while 连接并列对照的后半句，指出社交媒体提供了组织条件。",
-                  "previously isolated 修饰 activists；to find... and organize 是 allowed 的宾语补足结构。",
-                  "可借鉴 while 连接社会情绪与传播工具，解释运动如何形成。"
-                ],
-                "translation": "Kenney 说，人们因对全球化、疫苗和疫情限制的不满而被动员起来，而社交媒体让原本彼此隔绝的活动人士得以相识并组织行动。"
-              }
-            ]
-          }
-        ]
-      }
-    }
+
   ]
 };
