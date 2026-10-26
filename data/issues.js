@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-25T09:03:08.000+08:00",
+  "updatedAt": "2026-10-26T09:09:44.770+08:00",
   "issues": [
+    {
+      "date": "2026-10-26",
+      "status": "ready",
+      "ai": {
+        "intro": "本期整理 GitHub Copilot 在 10 月 19—23 日的三项变化：旧模型停用、Visual Studio 新增代码代理工作流，以及在 Teams 对话中把问题转成代码修复。涉及学生免费计划的功能和组织版权限分别标注，开始使用前请核对账户入口。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 停用六个模型并给出替代项（2026-10-19）",
+            "summary": "GitHub 于 10 月 19 日起在 Copilot 的多数体验中停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，并分别建议改用 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6.1 Sol、GPT-6 Luna、GPT-6 Luna 和 Grok 4.7。",
+            "howTo": "在 VS Code 或 GitHub.com 打开 Copilot Chat 的模型选择器，检查当前工作流是否仍选择已停用模型，并改选公告中的替代项；若替代模型未显示，按 GitHub 文档检查账户计划和组织模型策略。",
+            "impact": "写课程项目或练习代码时，若原先固定使用这些模型，切换到官方建议的替代项可避免工作流中断；提交前仍需运行测试并人工检查生成代码。",
+            "free": "公告称这些模型在 Copilot 多数体验中停用，企业版管理员可能需要开放替代模型；公告未说明各替代模型对每个计划、地区的可用性或调用配额，也未说明额外价格。",
+            "category": "GitHub Copilot / 模型更新",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-19",
+              "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
+            }
+          },
+          {
+            "event": "GitHub Copilot for Visual Studio 更新：PR 代理与 NuGet 修复（2026-10-22）",
+            "summary": "GitHub 汇总了 Visual Studio 2026 的 Copilot 更新：Git agent 可在聊天中探索并总结拉取请求；Bring Your Own Model（预览）改为依赖新的 Agent（Preview）；NuGet Audit 警告可触发 Copilot 修复易受影响的软件包。",
+            "howTo": "在 Visual Studio 2026 打开 Copilot Chat，选择 Git agent 并从 Git Repository 窗口附加一个 PR；要试用 NuGet 修复，则在 Copilot Chat 工具菜单启用 NuGet MCP server，再从 Error List 中打开相关 Audit 警告。",
+            "impact": "小组作业或开源贡献中，可先让 Git agent 汇总 PR 讨论和关联文件；维护 .NET 项目时，可用修复动作生成依赖更新建议，再核验变更并运行测试。",
+            "free": "官方称该更新面向所有 Copilot 计划，包括 Free 和 Student。NuGet 修复需要登录 Copilot 并启用 NuGet MCP server；PR 探索需要连接 GitHub 或 Azure DevOps 的 MCP server。BYOM 仍是预览功能。公告未说明地区或额外调用配额。",
+            "category": "GitHub Copilot / Visual Studio 开发辅助",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-22",
+              "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2"
+            }
+          },
+          {
+            "event": "GitHub 将 Copilot 与 Teams 通知整合，可从问题推进到 PR（2026-10-23）",
+            "summary": "新版 GitHub Teams 应用把仓库通知和 Copilot 放进频道、群聊或私聊：成员可提及 @GitHub，让它调查收到的问题、尝试修复并创建拉取请求，随后由团队审查。旧版 GitHub app 将于 11 月 16 日退役。",
+            "howTo": "在 Microsoft Teams 安装或更新 GitHub app；在对话中提及 @GitHub，按提示连接 GitHub 账户并选择仓库，再对收到的问题请求调查和修复。对生成的 PR 进行测试和代码审查；若仍用旧版 app，先迁移到新版。",
+            "impact": "课程团队可把 Teams 中的 bug 报告转为带 PR 的协作任务，减少复制上下文的步骤；Copilot 的修改仍须由组员审查，不应直接合并未经验证的代码。",
+            "free": "官方公告说明需安装新版 Teams 应用、连接 GitHub 账户并选择仓库，但未说明 Copilot 计划资格、额外价格、地区范围或调用配额；旧版应用计划于 2026-11-16 退役。",
+            "category": "GitHub Copilot / Teams 协作",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-23",
+              "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude 免费版：网页、桌面和手机端学习助手",
+            "summary": "Anthropic 官方计划页列出每人可用的 $0 免费版，支持网页、桌面和移动端对话，以及网页搜索、文件创建、代码运行、Artifacts 等功能。",
+            "howTo": "访问 Claude 网页版或安装桌面/移动端应用，使用免费账户开始对话；可上传课程材料后要求解释概念、比较观点或生成复习提纲，并对照原文检查引文。",
+            "impact": "适合把长阅读拆成概念问答、草拟复习提纲或运行小段代码；免费版使用量有限，遇到限额时可稍后再试，不要把它当作无限服务。",
+            "free": "官方标价 $0 且称免费版面向所有人，使用量限制适用；定价页未说明确切额度、地区范围或截止日。",
+            "category": "免费 AI 助手 / 阅读与研究",
+            "source": {
+              "name": "Anthropic Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "Gemini Developer API 免费层：指定模型可免费调用",
+            "summary": "Google 官方定价页显示，免费层可使用部分指定模型并免收输入、输出 token 费用，也可从 Google AI Studio 开始构建；免费层数据可能用于改进 Google 产品。",
+            "howTo": "在 Google AI Studio 创建 API key，查看 Gemini API 定价页中标明 Free Tier 的模型，再按快速入门发送少量测试请求；不要把密钥写入公开仓库。",
+            "impact": "可用来练习 API 调用、制作课程资料问答原型或比较提示词；应留意所选模型是否在免费层，并避免上传敏感或未获授权的材料。",
+            "free": "官方确认部分模型的输入和输出 token 免费，但免费层仅限特定模型；通用配额、地区资格和截止日期官方未说明。官方指出免费层提交的数据可能用于改进产品。",
+            "category": "免费 API / 应用原型",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Hugging Face ZeroGPU：免费体验社区模型演示",
+            "summary": "Hugging Face 官方文档说明，现有 ZeroGPU Spaces 可免费使用；匿名用户每日含 2 分钟 GPU 额度，免费账户每日含 5 分钟。额度从首次使用后每 24 小时重置，剩余额度也会影响排队优先级。",
+            "howTo": "打开 Hugging Face 官方整理的 ZeroGPU Spaces 清单，选择图像或模型演示并运行短任务；登录免费账户可使用每日 5 分钟额度，先查看队列和剩余额度。",
+            "impact": "不必先配置本地 GPU，就能体验图像生成、模型推理或交互式演示，适合课堂展示和快速验证；共享空间的额度和排队不适合作为稳定生产服务。",
+            "free": "官方说明已有 ZeroGPU Spaces 对所有用户免费：匿名每日 2 分钟、免费账户每日 5 分钟，首次使用后每 24 小时重置。地区和活动截止日期官方未说明。",
+            "category": "免费 GPU 演示 / 模型体验",
+            "source": {
+              "name": "Hugging Face 官方 ZeroGPU 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
+            }
+          },
+          {
+            "event": "GitHub Copilot Student：通过学生验证免费使用",
+            "summary": "GitHub 官方计划说明，经过验证的学生可免费使用 Copilot Student；包含 GitHub AI Credits 额度，模型仅支持自动选择，部分聊天和代理能力有限。",
+            "howTo": "先在 GitHub Education 完成学生身份验证，再按 Copilot Student 设置指南启用方案；在 IDE 安装 Copilot 扩展并登录已验证的 GitHub 账户。",
+            "impact": "可用于解释代码、补全课程项目和尝试受限的代理功能；注意学生方案的 AI Credits 与聊天/代理能力有限，核对计划页的当期规则。",
+            "free": "官方明确 Copilot Student 对验证学生免费；包含额度但精确 AI Credits 数量和地区/验证资格细节未在计划页统一说明，模型选择仅限自动模式。",
+            "category": "学生教育权益 / 编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划文档",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/get-started/plans"
+            }
+          },
+          {
+            "event": "EmbeddingGemma 2：Apache-2.0 许可的多模态嵌入模型",
+            "summary": "Google DeepMind 于 10 月 6 日发布 EmbeddingGemma 2 开放权重，可将文本、代码、图像、视频和音频映射到统一向量空间；模型卡标注 Apache 2.0 许可，适合下载到本地练习语义检索。",
+            "howTo": "从 Google 官方公告进入 Hugging Face 模型卡，按 Quick Start 安装 sentence-transformers 与 transformers，并用示例加载 google/embeddinggemma-2；运行前确认本地存储和计算资源足够。",
+            "impact": "可为课程论文资料、图片或录音建立本地语义检索原型，练习向量检索与多模态索引；本地处理可减少把原始资料上传到托管服务的需要。",
+            "free": "官方提供可下载权重并标注 Apache 2.0 许可；公告未提供托管 API 免费额度，也未说明地区、截止日或最低硬件要求。下载存储和本地运算成本由使用者承担。",
+            "category": "开放模型权重 / 本地学习",
+            "source": {
+              "name": "Google AI 官方产品公告",
+              "published": "2026-10-06",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "How much filter is too much filter for kids and teens posting selfies on social media?",
+            "source": "NPR",
+            "published": "2026-10-25",
+            "url": "https://www.npr.org/2026/10/25/nx-s1-6011190/meta-facebook-settlement-beauty-filters-ai",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "社会 / 青少年社交媒体与身体形象",
+            "summary": "NPR 从 Meta 与美国各州就未成年人美容滤镜达成的和解切入，讨论监管者如何界定哪些效果应被限制。报道先用一名青少年讲述滤镜对自我形象的影响，再对照夸张的“整形”效果与仍可能保留的轻微修饰，指出后者更难识别和规管。随后文章梳理平台已有的过滤器限制、AI 标记与检测措施为何仍难以阻止有害内容，并呈现州与州之间、美国与欧洲之间不同的监管路径。结尾强调美容标准和技术持续变化，政策制定者需要倾听青少年，并考虑更广泛的未成年人 AI 保护，而非只争论像素或单一滤镜定义。",
+            "reason": [
+              "主题涉及社交媒体、青少年心理与数字治理，适合社会发展和媒介素养类阅读。",
+              "文章先提出和解背景，再用当事人经历说明影响，之后比较规则边界、平台措施与跨地区监管，最后提出政策方向。",
+              "可考查作者如何区分极端与轻微修饰、引语的论证功能，以及结尾如何从个案上升到治理建议。",
+              "grappling、subtle、manipulation、guardrails 等词可用于分析规则执行和技术风险。",
+              "写作可借鉴“政策背景—个人案例—制度难点—比较视角—建议”的递进结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "grappling",
+                "phonetic": "/ˈɡræpəlɪŋ/",
+                "part": "v.-ing",
+                "translation": "努力处理；设法应对"
+              },
+              {
+                "word": "landmark",
+                "phonetic": "/ˈlændmɑːrk/",
+                "part": "adj.",
+                "translation": "具有里程碑意义的"
+              },
+              {
+                "word": "burden",
+                "phonetic": "/ˈbɜːrdən/",
+                "part": "n.",
+                "translation": "责任；负担"
+              },
+              {
+                "word": "subtle",
+                "phonetic": "/ˈsʌtəl/",
+                "part": "adj.",
+                "translation": "微妙的；不易察觉的"
+              },
+              {
+                "word": "manipulation",
+                "phonetic": "/məˌnɪpjəˈleɪʃən/",
+                "part": "n.",
+                "translation": "操纵；人为修饰"
+              },
+              {
+                "word": "guardrails",
+                "phonetic": "/ˈɡɑːrdreɪlz/",
+                "part": "n. pl.",
+                "translation": "防护措施；约束机制"
+              },
+              {
+                "word": "consensus",
+                "phonetic": "/kənˈsensəs/",
+                "part": "n.",
+                "translation": "共识"
+              },
+              {
+                "word": "obsolete",
+                "phonetic": "/ˌɑːbsəˈliːt/",
+                "part": "adj.",
+                "translation": "过时的；被淘汰的"
+              },
+              {
+                "word": "evolve",
+                "phonetic": "/ɪˈvɑːlv/",
+                "part": "v.",
+                "translation": "演变；发展"
+              },
+              {
+                "word": "enforce",
+                "phonetic": "/ɪnˈfɔːrs/",
+                "part": "v.",
+                "translation": "实施；执行（法规）"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "But defining where harmless fun ends and harmful manipulation begins is far from straightforward.",
+                "analysis": [
+                  "句子主干是 defining ... is far from straightforward，动名词短语作主语，is 后接表语。",
+                  "where 引导的从句作 defining 的内容，其中 harmless fun ends 与 harmful manipulation begins 构成平行对照。",
+                  "But 承接前文规则设想并转向难点，逻辑上形成转折。",
+                  "far from straightforward 表示“远非简单”，比直接说 difficult 更有层次。",
+                  "可仿写 Defining where X ends and Y begins is far from straightforward 来说明边界问题。"
+                ],
+                "translation": "然而，要界定无害的娱乐何时结束、有害的操纵何时开始，远非易事。"
+              },
+              {
+                "original": "Filters that transform users into playful characters, like elves or puppies, will remain available for young people.",
+                "analysis": [
+                  "主句主干为 Filters will remain available，will remain 表示未来仍将保持某种状态。",
+                  "that 引导定语从句修饰 Filters，说明这类滤镜的具体作用。",
+                  "like elves or puppies 是举例插入语，补充 playful characters 的具体形象。",
+                  "for young people 表示适用对象；本句与文章讨论的限制范围形成对比。",
+                  "可借鉴 will remain available for... 表达某项服务或选择继续向特定群体开放。"
+                ],
+                "translation": "把用户变成精灵或小狗等有趣角色的滤镜，仍将向年轻人开放。"
+              },
+              {
+                "original": "They face a moving target, as digital beauty standards evolve rapidly.",
+                "analysis": [
+                  "主句主干是 They face a moving target，They 指前文负责制定指导意见的州官员。",
+                  "a moving target 是比喻，说明监管对象并非固定不变。",
+                  "as 引导原因/背景状语从句，说明目标为何不断变化。",
+                  "digital beauty standards 作从句主语，evolve rapidly 作谓语，简洁呈现变化速度。",
+                  "可仿写 face a moving target as... 描写规则制定落后于快速变化的现象。"
+                ],
+                "translation": "由于数字美容标准迅速演变，他们面对的是一个不断移动的目标。"
+              }
+            ]
+          },
+          {
+            "title": "US inequality is getting worse in ways you might not expect",
+            "source": "The Conversation",
+            "published": "2026-10-19",
+            "url": "https://theconversation.com/us-inequality-is-getting-worse-in-ways-you-might-not-expect-294075",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "经济 / 财富不平等与税收政策",
+            "summary": "本文由研究不平等的经济学者撰写，先用民调说明美国公众对贫富差距的担忧，再用美联储财富分布数据展示顶层与中间群体份额的变化。作者接着解释差距如何在最富有的 0.1% 与其余高收入群体之间扩大，并讨论企业利润、股票持有和税制的作用；随后把视角扩展到医疗补贴、能源成本和关税，说明政策变化对不同收入家庭的影响并不相同。文章最后反驳不平等是不可避免的历史力量这一看法，强调税收和公共支出等政策选择会塑造财富分配。",
+            "reason": [
+              "财富分配、税制与生活成本是经济和社会公平议题，适合练习数据型议论文阅读。",
+              "作者由民意切入，继而列出财富份额数据，再逐项讨论税收、补贴、能源和关税等驱动因素，最后回到政策判断。",
+              "可考查数据如何支持中心论点、段落之间的因果关系，以及作者如何回应“不平等不可避免”的观点。",
+              "affordability、disproportionately、levy、portfolio 等词适用于经济报道和政策分析。",
+              "写作可借鉴“公众感受—统计证据—政策机制—不同群体影响—结论”的论证链。"
+            ],
+            "vocabulary": [
+              {
+                "word": "affordability",
+                "phonetic": "/əˌfɔːrdəˈbɪləti/",
+                "part": "n.",
+                "translation": "可负担性；负担得起的程度"
+              },
+              {
+                "word": "sentiment",
+                "phonetic": "/ˈsentɪmənt/",
+                "part": "n.",
+                "translation": "情绪；普遍看法"
+              },
+              {
+                "word": "disproportionately",
+                "phonetic": "/ˌdɪsprəˈpɔːrʃənətli/",
+                "part": "adv.",
+                "translation": "不成比例地；显著更多地"
+              },
+              {
+                "word": "progressive",
+                "phonetic": "/prəˈɡresɪv/",
+                "part": "adj.",
+                "translation": "累进的；渐进的"
+              },
+              {
+                "word": "trajectory",
+                "phonetic": "/trəˈdʒektəri/",
+                "part": "n.",
+                "translation": "发展轨迹；趋势"
+              },
+              {
+                "word": "levies",
+                "phonetic": "/ˈleviz/",
+                "part": "n. pl.",
+                "translation": "征收的税费；税款"
+              },
+              {
+                "word": "portfolio",
+                "phonetic": "/pɔːrtˈfoʊlioʊ/",
+                "part": "n.",
+                "translation": "投资组合；资产组合"
+              },
+              {
+                "word": "provision",
+                "phonetic": "/prəˈvɪʒən/",
+                "part": "n.",
+                "translation": "条款；规定"
+              },
+              {
+                "word": "inexorable",
+                "phonetic": "/ɪnˈeksərəbəl/",
+                "part": "adj.",
+                "translation": "不可阻挡的；无法避免的"
+              },
+              {
+                "word": "accelerating",
+                "phonetic": "/əkˈseləreɪtɪŋ/",
+                "part": "v.-ing",
+                "translation": "加速；使加快"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "This sentiment has, however, been difficult to convert into political results.",
+                "analysis": [
+                  "句子主干是 This sentiment has been difficult，主语为 This sentiment，系动词结构后接形容词。",
+                  "however 插入句中，标记从公众不满到政治结果之间的转折。",
+                  "to convert into political results 是不定式短语，说明“难”的具体内容。",
+                  "现在完成时 has been 将此前的公众态度与当前政治结果联系起来。",
+                  "可借鉴 difficult to convert into... 描写某种态度难以转化成实际成果。"
+                ],
+                "translation": "然而，这种情绪一直难以转化为政治成果。"
+              },
+              {
+                "original": "Recent federal data shows that wealth inequality continues to grow.",
+                "analysis": [
+                  "主句主干为 Recent federal data shows，data 是主语，shows 是谓语。",
+                  "that 引导宾语从句，说明数据所显示的内容。",
+                  "从句主干是 wealth inequality continues to grow，continues to 后接动词原形。",
+                  "Recent 与 federal 限定 data 的时间和来源，使论断依托具体证据。",
+                  "可借鉴 data shows that... 引入数据支持的研究结论。"
+                ],
+                "translation": "近期联邦数据表明，财富不平等仍在加剧。"
+              },
+              {
+                "original": "But they’re not inexorable forces of history.",
+                "analysis": [
+                  "But 标出反向论证；they 指上文归纳的多种不平等驱动因素。",
+                  "主干是 they are not forces，系动词后接名词短语作表语。",
+                  "inexorable 修饰 forces，否定它们不可改变的属性。",
+                  "of history 作后置修饰语，说明作者所反驳的是历史决定论式理解。",
+                  "可使用 not an inexorable force of... 表达结果并非不可避免。"
+                ],
+                "translation": "但它们并非历史中不可抗拒的力量。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-25",
       "status": "ready",
@@ -2295,339 +2640,6 @@ window.BRIEFING_DATA = {
           }
         ]
       }
-    },
-    {
-      "date": "2026-10-19",
-      "status": "ready",
-      "ai": {
-        "intro": "近一周官方确认 GitHub 三项值得学生留意的变动：公开仓库 PR 可使用 AI Scan 检查更多类型代码；企业版代码扫描可交由 Copilot 生成并验证修复；Copilot 将于 11 月 16 日停用部分模型。前两项受代码安全计划、积分或组织设置限制。",
-        "updates": [
-          {
-            "event": "GitHub AI Scan for pull requests 正式开放（2026-10-15）",
-            "summary": "GitHub 将代码扫描 AI Scan for pull requests 转为正式可用，用于补充 CodeQL 当前未覆盖的语言与框架（公告列举 PHP、Shell、Terraform、Dockerfile、JSP、Blazor 等）。结果附带风险说明和可选修复建议，但仅作提示，不会使检查失败或阻止合并。",
-            "howTo": "在个人或组织拥有的公开仓库中启用 code scanning 和仓库有效的 AI Scan 设置，然后创建 pull request；在 Conversation 或 Files changed 页查看标有 AI 的发现。它不检查来自 fork 或 Dependabot 的 PR。",
-            "impact": "可用于课程项目的公开仓库，补充检查 CodeQL 未覆盖的代码，并把建议修复作为安全学习材料；不要将提示当成完整审计或合并门禁。",
-            "free": "公开仓库可用且不要求 GitHub Copilot 许可证；但会消耗 Code Security AI Credits，官方说明计入 Advanced Security 用量。确切费用、免费额度、账户地区限制及固定配额官方未说明。",
-            "category": "AI 代码安全 / Pull Request",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-15",
-              "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/"
-            }
-          },
-          {
-            "event": "GitHub Agentic Autofix for code scanning alerts 正式开放（2026-10-15）",
-            "summary": "GitHub 将 Agentic Autofix 转为正式可用：Copilot 会探索相关代码、提出修复、重新运行 CodeQL 验证告警是否消失，再创建供人审查的草稿 PR；一次最多可选 25 个告警。",
-            "howTo": "仅在符合条件的 Enterprise Cloud 组织中，由企业管理员先启用 Agentic autofix policy；管理员再开启仓库 Code Security 设置。对默认分支上的代码扫描告警选择 Assign to Copilot，收到草稿 PR 后检查差异和验证记录。",
-            "impact": "适合在有企业安全权益的课程或实习仓库中观察“告警—改码—复测—审查”流程；学生仍应自己检查补丁，不能把自动验证当作代码审查的替代品。",
-            "free": "仅面向 GitHub Code Security 或 GitHub Advanced Security 的 GitHub Enterprise Cloud 客户；还需企业管理员启用且配置 Copilot 计费方式。会消耗 Code Security AI Credits 和 GitHub Actions 分钟，官方未说明精确费用、免费额度、地区或固定配额。",
-            "category": "AI 编程代理 / 安全修复",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-15",
-              "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 将于 11 月 16 日停用三款模型（公告：2026-10-15）",
-            "summary": "GitHub 宣布 2026 年 11 月 16 日在 Copilot Chat、行内编辑、Ask/Agent 模式和代码补全中停用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra；建议分别改用 Claude Opus 5.5、Claude Opus 5.5，以及 GPT-6.1 Sol 或 GPT-6 Luna。Claude Opus 4.8 对年付个人订阅用户保留。",
-            "howTo": "在 GitHub Copilot Chat 的模型选择器确认自己当前选用的模型；在 11 月 16 日前切换到可用替代项，并检查 IDE、脚本或工作流里的模型配置。企业账户若看不到替代项，管理员需检查模型策略。",
-            "impact": "若用 Copilot 做课程代码解释、调试或练习 Agent 模式，提前迁移可避免任务在停用日后失效；替代模型的回答风格可能不同，应重新核对重要代码输出。",
-            "free": "变更适用于公告列出的 Copilot 使用场景；能否选择替代模型取决于账户计划及组织模型策略。公告未说明各模型价格、地区开放范围或使用配额；Claude Opus 4.8 年付个人订阅例外。",
-            "category": "AI 编程助手 / 模型可用性",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-15",
-              "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude Free：网页与应用可免费体验日常问答",
-            "summary": "Claude 官方价格页说明 Free 方案可用于日常问题；网页、桌面、移动端和 Claude Code 的使用共享额度，限额按滚动五小时窗口重置。免费消息数没有固定值，实际用量取决于对话长度、模型和功能。",
-            "howTo": "打开 Claude 网页或应用，使用 Free 方案先让它整理一篇课程阅读、解释词汇或润色一段英语；在 Settings > Usage 查看余量，重要内容回到原文核验。",
-            "impact": "可用来练习英文阅读摘要、整理复习提纲和比较改写版本；因复杂请求消耗不同，不宜将其当作稳定的无限量工具。",
-            "free": "Free 方案免费；官方价格页未说明账户资格或地区清单，也未列出固定消息数。额度按滚动五小时窗口重置，实际可用量随模型、功能和对话长度变化。",
-            "category": "免费 AI 助手 / 阅读与写作",
-            "source": {
-              "name": "Claude Pricing",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Gemini Apps：无 Google AI 订阅也可使用部分功能",
-            "summary": "Google 帮助页说明，未订阅 Google AI 方案的用户可使用 Gemini Apps；不同模型和功能受计算量使用限制，个人账户的额度会按时间刷新，并可能受需求和可用性影响。",
-            "howTo": "用个人 Google 账户打开 Gemini Apps，选择界面当前提供的模型或工具；把课程资料拆成小段提问，并查看帮助页说明的额度刷新规则，避免在高需求时依赖高算力功能。",
-            "impact": "可先用免费可用的模型解释概念、归纳笔记或练习问答；遇到额度上限时等待刷新，并对生成的学习结论回查资料。",
-            "free": "无需 Google AI 付费方案即可使用部分 Gemini Apps 功能；官方称使用限制按五小时刷新，并设有周限额，但未公开无订阅用户的确切次数。部分高算力功能可能在需求高时不可用；页面未列出地区清单，说明适用于个人 Google 账户。",
-            "category": "免费 AI 助手 / 学习问答",
-            "source": {
-              "name": "Google Gemini Apps Help",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemini/answer/16275805?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student：通过验证的学生可免费使用 Copilot",
-            "summary": "GitHub 官方文档确认，GitHub Education 验证通过的学生可免费使用 Copilot 功能；GitHub 每月重新评估资格。学生认证通过后还需单独启用 Copilot Student。",
-            "howTo": "登录 GitHub，打开 Settings > Education benefits 并完成学生验证；通过后按页面提示启用 Copilot Student，再查看 Copilot 设置确认计划已生效。若仍显示付费结账，不要付款，等待权益同步后重试。",
-            "impact": "可用于课程编程时补全代码、解释报错和练习调试；先检查生成代码并理解原因，再纳入自己的作业。",
-            "free": "通过 GitHub Education 验证的学生可免费使用；资格每月重新评估，认证与 Copilot 激活是两个步骤。此文档未说明额度、地区限制或权益截止日期，官方未说明。",
-            "category": "学生教育权益 / AI 编程",
-            "source": {
-              "name": "GitHub Docs",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
-            }
-          },
-          {
-            "event": "Qwen-Image-2.1：可下载的文本生图与图像编辑权重",
-            "summary": "Qwen 官方模型卡提供 Qwen-Image-2.1 权重和本地推理示例，支持文本生成图像、编辑图像以及透明背景输出；模型卡标注其采用 Qwen Research License Agreement。",
-            "howTo": "先阅读模型卡中的许可说明并确认本机算力；按页面安装 PyTorch、Transformers、Diffusers 和 Accelerate，再用 `QwenImage21Pipeline.from_pretrained(\"Qwen/Qwen-Image-2.1\")` 加载权重，尝试生成课程示意图或编辑自有图片。",
-            "impact": "可制作课程海报草图、透明贴图或比较图像编辑提示词效果；本地运行便于练习模型部署，但设备不足时需要额外算力。",
-            "free": "官方模型卡提供可下载权重和本地推理流程，并标注 Qwen Research License Agreement；不能据此默认拥有不受限制的商业使用权，应先核对许可。下载价格、账户资格、地区限制和在线配额官方未说明；本地设备、存储及电力成本自理。",
-            "category": "可下载模型权重 / 图像生成与编辑",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen-Image-2.1"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Wales has an education crisis. Can it be fixed?",
-            "source": "BBC",
-            "published": "2026-10-15",
-            "url": "https://www.bbc.co.uk/news/articles/cw240qv4ygzmo",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "教育 / 威尔士课程改革、学习成绩衡量与公平",
-            "summary": "文章从威尔士最新 PISA 成绩不佳及教育部长称其“令人震惊”切入，追问学校标准是否出了问题。教育部长不主张推倒重来，仍支持现行新课程，承诺检视具体环节、强化读写与数学基础并更清楚追踪小学进展。研究者指出，威尔士缺乏稳定的自我评估基准，使国际 PISA 排名受到过多关注；同时成绩下降并非威尔士独有，法国、德国、意大利和西班牙也呈现相似趋势，而英格兰走出不同方向。校长讲述学校依靠专业投入设计课程，却承认缺乏检查机制，难判断执行是否有效。文章最后呈现对新课程改善未来表现的乐观期待和对一代年轻人被辜负的担忧，指出测评本身不是终点，关键在于学生能否获得技能并找到优质工作。",
-            "reason": [
-              "主题涉及课程改革、基础教育质量、读写与数学能力，以及教育测评的社会后果，适合教育公平与公共政策类考题。",
-              "篇章从 PISA 成绩问题切入，依次呈现部长回应、研究者解释、校长经验和未来判断，兼有数据背景与多方观点。",
-              "可训练定位政策承诺、区分受访者观点与记者叙述，并推断 without consistent benchmarks 和 little consolation 的语境含义。",
-              "wholesale、appetite、benchmarks、consolation、bear fruit 等词有助于表达改革幅度、意愿、评估标准和政策成效。",
-              "写作可借鉴“提出成绩问题—说明测量局限—比较不同立场—讨论长期影响”的论证结构，避免把单一排名直接等同于教育全貌。"
-            ],
-            "vocabulary": [
-              {
-                "word": "wholesale",
-                "phonetic": "/ˈhoʊlseɪl/",
-                "part": "adj.",
-                "translation": "全面的；大规模的"
-              },
-              {
-                "word": "appetite",
-                "phonetic": "/ˈæpɪtaɪt/",
-                "part": "n.",
-                "translation": "意愿；兴趣"
-              },
-              {
-                "word": "literacy",
-                "phonetic": "/ˈlɪtərəsi/",
-                "part": "n.",
-                "translation": "读写能力"
-              },
-              {
-                "word": "numeracy",
-                "phonetic": "/ˈnuːmərəsi/",
-                "part": "n.",
-                "translation": "数理能力"
-              },
-              {
-                "word": "phonics",
-                "phonetic": "/ˈfɑːnɪks/",
-                "part": "n.",
-                "translation": "自然拼读教学"
-              },
-              {
-                "word": "benchmarks",
-                "phonetic": "/ˈbentʃmɑːrks/",
-                "part": "n. pl.",
-                "translation": "基准；衡量标准"
-              },
-              {
-                "word": "consolation",
-                "phonetic": "/ˌkɑːnsəˈleɪʃən/",
-                "part": "n.",
-                "translation": "安慰；慰藉"
-              },
-              {
-                "word": "strived",
-                "phonetic": "/straɪvd/",
-                "part": "v.",
-                "translation": "努力；力求"
-              },
-              {
-                "word": "bear fruit",
-                "phonetic": "/ber fruːt/",
-                "part": "phr.",
-                "translation": "取得成果；见效"
-              },
-              {
-                "word": "implications",
-                "phonetic": "/ˌɪmplɪˈkeɪʃənz/",
-                "part": "n. pl.",
-                "translation": "影响；后果"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The minister has been at pains to emphasise that she's committed to the new curriculum.",
-                "analysis": [
-                  "主句主干是 The minister has been at pains，at pains 表示格外用心或反复强调。",
-                  "to emphasise 是不定式结构，补充说明部长费力去做什么。",
-                  "that 引导 emphasise 的宾语从句，从句主干是 she is committed，说明她支持新课程。",
-                  "to the new curriculum 是 committed 的介词补足语，限定承诺所指。",
-                  "可借鉴 be at pains to do sth. 描写某人刻意强调或努力确保某事。"
-                ],
-                "translation": "部长一直竭力强调，她支持这套新课程。"
-              },
-              {
-                "original": "And without consistent benchmarks, it's not surprising that so much weight has been placed on Pisa's verdict.",
-                "analysis": [
-                  "句子使用形式主语 it，真正说明“不奇怪”的内容由 that 从句承担。",
-                  "without consistent benchmarks 是句首介词短语，交代缺少稳定基准这一背景。",
-                  "that 从句中的主干是 so much weight has been placed，采用现在完成时被动语态。",
-                  "on Pisa’s verdict 补足 place weight on，说明被赋予过大分量的对象。",
-                  "可仿写 Without ..., it is not surprising that ...，由制度缺口解释某种结果。"
-                ],
-                "translation": "缺乏一致的衡量基准，因此人们如此看重 PISA 的评判也就不足为奇。"
-              },
-              {
-                "original": "That's little consolation for those involved in Welsh education.",
-                "analysis": [
-                  "主干是 That is little consolation，That 概括前文所说的其他欧洲地区也出现成绩下降。",
-                  "little consolation 是名词性表语，表达“并不能带来多少安慰”的克制评价。",
-                  "for those involved in Welsh education 指明这项比较对哪些人而言并无慰藉。",
-                  "involved in Welsh education 是过去分词短语，后置修饰 those，相当于 who are involved。",
-                  "短句把数据比较转向现实感受，可用于论证中补充政策数据对具体群体的意义。"
-                ],
-                "translation": "但对威尔士教育界人士来说，这并不能带来多少安慰。"
-              }
-            ]
-          },
-          {
-            "title": "Warning signs could predict inflammatory bowel disease a decade before diagnosis",
-            "source": "The Guardian",
-            "published": "2026-10-18",
-            "url": "https://www.theguardian.com/science/2026/oct/18/research-predict-inflammatory-bowel-disease-decade-before-diagnosis",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "健康 / 炎症性肠病的早期识别与研究证据",
-            "summary": "报道介绍一项对美国军人血液样本开展的研究：团队分析约 2,000 份样本，涉及 500 人，其中 200 人后来患克罗恩病、200 人患溃疡性结肠炎，另有 100 人未患这两种疾病。研究者筛查针对病毒、细菌、食物及人体自身蛋白片段的抗体，发现未来患克罗恩病者在确诊前十年已出现抗体差异，溃疡性结肠炎也呈现另一种抗体模式。文章先说明 IBD 通常在症状和肠道损伤出现后才治疗，再交代研究方法、病种差异及潜在意义：未来可能更早识别风险并研究预防。结尾明确证据边界：结果需要在其他人群中验证，只显示关联而不能证明感染导致 IBD；这类方法仍属研究工具，尚未准备好用于临床。",
-            "reason": [
-              "文章围绕疾病预警、检测与预防展开，兼具健康科学和研究证据解读的主题价值。",
-              "结构从现有治疗局限切入，解释研究样本与抗体筛查，再分述两种病症结果，最后提出应用前景和研究限制。",
-              "可训练提取样本数量与研究对象、区分克罗恩病和溃疡性结肠炎的发现，并判断研究不能证明因果的结论。",
-              "onset、antibodies、inflammation、screened、confirm 等词汇适合健康与科学类说明文阅读。",
-              "写作可借鉴“研究发现—潜在应用—证据限制”的审慎结构，使用 show a link rather than prove... 避免把相关性夸大为因果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "onset",
-                "phonetic": "/ˈɒnset/",
-                "part": "n.",
-                "translation": "发作；开始"
-              },
-              {
-                "word": "antibodies",
-                "phonetic": "/ˈæntɪbɒdiz/",
-                "part": "n. pl.",
-                "translation": "抗体"
-              },
-              {
-                "word": "inflammation",
-                "phonetic": "/ˌɪnfləˈmeɪʃən/",
-                "part": "n.",
-                "translation": "炎症"
-              },
-              {
-                "word": "screened",
-                "phonetic": "/skriːnd/",
-                "part": "v.",
-                "translation": "筛查；检测"
-              },
-              {
-                "word": "fragments",
-                "phonetic": "/ˈfræɡmənts/",
-                "part": "n. pl.",
-                "translation": "碎片；片段"
-              },
-              {
-                "word": "misfiring",
-                "phonetic": "/ˌmɪsˈfaɪərɪŋ/",
-                "part": "adj.",
-                "translation": "失常的；发生错误反应的"
-              },
-              {
-                "word": "chronic",
-                "phonetic": "/ˈkrɑːnɪk/",
-                "part": "adj.",
-                "translation": "慢性的"
-              },
-              {
-                "word": "contribute",
-                "phonetic": "/kənˈtrɪbjuːt/",
-                "part": "v.",
-                "translation": "促成；导致"
-              },
-              {
-                "word": "confirm",
-                "phonetic": "/kənˈfɜːrm/",
-                "part": "v.",
-                "translation": "证实；确认"
-              },
-              {
-                "word": "cautioned",
-                "phonetic": "/ˈkɔːʃənd/",
-                "part": "v.",
-                "translation": "提醒谨慎；告诫"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Crohn’s disease and ulcerative colitis, the two main forms of IBD, are typically treated only after symptoms appear.",
-                "analysis": [
-                  "句子主干是 Crohn’s disease and ulcerative colitis are treated，两个病名构成并列主语。",
-                  "the two main forms of IBD 是插入的同位语，补充解释前面的病名。",
-                  "are treated 是一般现在时被动语态，强调治疗对象而非实施治疗者。",
-                  "only after symptoms appear 是时间状语，only 突出治疗通常发生得较晚。",
-                  "可借鉴 be treated only after... 描写服务或干预启动的时间条件。"
-                ],
-                "translation": "克罗恩病和溃疡性结肠炎这两种主要的 IBD 通常只有在症状出现后才会接受治疗。"
-              },
-              {
-                "original": "The exact cause is unknown, but a misfiring immune system, genetics and microbes living in the gut can all contribute.",
-                "analysis": [
-                  "but 连接两个并列分句，前句说明病因未明，后句列出可能参与其中的因素。",
-                  "后半句主语由 a misfiring immune system、genetics 和 microbes 并列构成，谓语为 can contribute。",
-                  "living in the gut 是现在分词短语，后置修饰 microbes，说明这些微生物所在位置。",
-                  "can 表示可能性而非确定因果，与文章对证据的谨慎表述一致。",
-                  "可仿写 The exact cause is unknown, but... 引出已有研究提示的可能因素。"
-                ],
-                "translation": "确切病因尚不清楚，但免疫系统失常、遗传因素以及肠道微生物都可能有所影响。"
-              },
-              {
-                "original": "But he cautioned that the techniques were “very much a research tool” and not yet ready for the clinic.",
-                "analysis": [
-                  "主句主干为 he cautioned，But 承接前文的研究前景并转向限制。",
-                  "that 引导 cautioned 的宾语从句，说明受访专家提醒了什么。",
-                  "the techniques were ... 是宾语从句的主干，were 后接引语作表语。",
-                  "and 连接 not yet ready for the clinic，与 very much a research tool 并列说明尚未临床可用。",
-                  "可借鉴 caution that... 介绍专家的审慎判断，并以 not yet 表达尚未达到某阶段。"
-                ],
-                "translation": "但他提醒说，这些技术“目前仍是研究工具”，尚未准备好用于临床。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-
+    }
   ]
 };
