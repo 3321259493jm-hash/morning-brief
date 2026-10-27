@@ -1,6 +1,338 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-26T09:09:44.770+08:00",
+  "updatedAt": "2026-10-27T10:00:33+08:00",
   "issues": [
+    {
+      "date": "2026-10-27",
+      "status": "ready",
+      "ai": {
+        "intro": "本期聚焦 GitHub Copilot 新模型、Google Cloud 模型预览与 Zoom AI 协作功能；注意计划资格、渐进开放和付费条件。免费资源补充 Gemini 免费应用、Copilot Free、Hugging Face ZeroGPU 与 Colab。",
+        "updates": [
+          {
+            "event": "GPT-6.1 Terra 已加入 GitHub Copilot（2026-10-26）",
+            "summary": "GitHub 宣布 GPT-6.1 Terra 已在 Copilot 中推出，定位于日常代理式编程和终端工作，价格低于 GPT-6.1 Sol；开放范围为 Copilot Pro、Pro+、Max、Business 和 Enterprise，且正逐步推出。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、GitHub.com、Copilot App、GitHub Mobile、JetBrains、Xcode 或 Eclipse 打开 Copilot 的模型选择器，选择 GPT-6.1 Terra；若暂时看不到，等待分阶段开放。",
+            "impact": "课程项目或终端任务可尝试让代理拆解清晰的小任务、生成代码或解释命令；上线范围不含 Free 和 Student 计划，使用前确认账户计划和用量计费。",
+            "free": "官方列出的可用计划为 Pro、Pro+、Max、Business 和 Enterprise；模型按供应商标价进行用量计费，逐步开放。该公告未说明地区限制、具体价格或调用配额。",
+            "category": "GitHub Copilot / 编程模型",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-26",
+              "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/"
+            }
+          },
+          {
+            "event": "Google Cloud Model Garden 开始预览 OpenAI 模型（2026-10-21）",
+            "summary": "Google Cloud 宣布在 Model Garden 中以私有预览方式提供 GPT-6 Astra、GPT-6.1 Sol 和 GPT-6 Luna；模型通过 Google Cloud Marketplace 计费，当前仅向部分企业客户逐步开放。",
+            "howTo": "有 Google Cloud 企业环境的开发者可在 Model Garden 查看 OpenAI 模型并通过官方意向表申请预览；获准后按 Google Cloud API 文档配置调用，并在 Marketplace 核对账单。",
+            "impact": "高校实验室或课程团队若已有企业云环境，可在统一平台比较不同模型处理研究、编程或日常任务的适配度；这不是面向个人学生的即开即用免费服务。",
+            "free": "官方称模型处于面向部分企业客户的私有预览，可通过 Google Cloud Marketplace 计费；免费额度、具体价格、地区范围和公开开放日期官方未说明。",
+            "category": "Google Cloud / 模型接入",
+            "source": {
+              "name": "Google Cloud 官方博客",
+              "published": "2026-10-21",
+              "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+            }
+          },
+          {
+            "event": "ZoomMate 推出可并行处理项目任务的 AI Agent Teams（2026-10-20）",
+            "summary": "Zoom 在 Zoomtopia 公布 ZoomMate AI Agent Teams：多个专用 AI 代理可并行处理项目不同部分，由协调代理汇总为一份供人审阅的交付物；Zoom 将该能力标为现已可用。",
+            "howTo": "在 Zoom Workplace 中查看 ZoomMate 是否已开放 AI Agent Teams；若可用，描述项目目标和待办事项，让多个代理处理后再审阅汇总结果。公告未提供具体菜单路径。",
+            "impact": "小组课程项目可将资料整理、任务拆分和草稿整合等环节分配给不同代理，再由成员核对来源与结论；它不能替代组员对事实和最终作业的负责。",
+            "free": "官方称 AI Agent Teams 现已可用，但公告未说明需要的具体计划、价格、地区范围或使用配额。",
+            "category": "Zoom / AI 协作",
+            "source": {
+              "name": "Zoom 官方新闻稿",
+              "published": "2026-10-20",
+              "url": "https://news.zoom.com/zoomtopia-2026-ai/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini 免费方案：Google 账户即可使用基础 AI 助手",
+            "summary": "Google 官方订阅页列出每月 0 美元的 Free 方案，使用 Google 账户；Gemini 应用包括 Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gems 等功能。",
+            "howTo": "用 Google 账户打开 Gemini 应用，选择免费方案中的可用功能；遇到使用上限时按页面提示等待或查看当期计划说明。",
+            "impact": "可用于课程概念问答、资料初步整理、图像草稿或研究问题拆解；把生成内容与原始资料核对，尤其是引用和数字。",
+            "free": "官方标价每月 $0，需 Google 账户；功能标注为有限访问，但具体额度、地区资格和截止日期官方未说明。",
+            "category": "免费 AI 助手 / 学习与创作",
+            "source": {
+              "name": "Google Gemini 官方订阅页",
+              "published": "官方未说明",
+              "url": "https://gemini.google/subscriptions/"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页说明，Copilot Free 每月限 2,000 次代码补全，并提供有限的聊天和代理使用；可在常见 IDE、GitHub 网站和移动端使用。",
+            "howTo": "登录 GitHub，在 Copilot 计划页启用 Free 方案；在 VS Code 等支持的 IDE 安装 Copilot 扩展并登录同一账户，查看设置中的月度使用情况。",
+            "impact": "适合练习代码补全、理解项目结构或向聊天提问；每月额度有限，重要代码应自行测试，且应查看个人计划的数据使用设置。",
+            "free": "Free 方案含每月 2,000 次补全以及有限聊天和代理使用；聊天/代理的具体额度、地区资格和截止日期官方未说明。",
+            "category": "免费编程助手 / 代码练习",
+            "source": {
+              "name": "GitHub Copilot 官方计划与定价",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Hugging Face ZeroGPU：免费试用社区模型演示",
+            "summary": "Hugging Face 官方文档称，现有 ZeroGPU Spaces 可免费使用；未登录用户每日有 2 分钟 GPU 额度，免费账户每日有 5 分钟，额度在首次使用 24 小时后重置。",
+            "howTo": "打开 Hugging Face 的 ZeroGPU Spaces 清单，选择一个演示并运行短任务；登录免费账户可获得每日 5 分钟额度，留意排队和剩余时间。",
+            "impact": "可免去本地配置 GPU 的步骤，短暂体验图像生成或模型推理；每日额度、排队优先级和共享演示限制使它不适合长时间任务。",
+            "free": "官方说明现有 Spaces 免费：匿名用户每日 2 分钟，免费账户每日 5 分钟；首次使用后 24 小时重置。地区和活动截止日期官方未说明。",
+            "category": "免费 GPU 演示 / 模型体验",
+            "source": {
+              "name": "Hugging Face 官方 ZeroGPU 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
+            }
+          },
+          {
+            "event": "Google Colab：免费运行 Jupyter 笔记本与机器学习实验",
+            "summary": "Google 官方 FAQ 说明，Colab 是无需本地配置的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU；免费资源并非无限或保证持续可用。",
+            "howTo": "打开 Colab，新建笔记本或上传 `.ipynb` 文件；需要时在 Runtime 菜单选择硬件加速器，并保存代码、数据处理步骤和实验结果。",
+            "impact": "适合课程数据分析、机器学习入门和可复现实验；运行时会因空闲而删除，资源和使用限制会波动，重要文件应另行保存。",
+            "free": "官方确认免费使用并提供 GPU/TPU，但资源不保证且使用限制会变化；固定配额、地区资格和免费服务截止时间官方未说明。",
+            "category": "免费云端工具 / 编程与 AI 实验",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "How a movement of students brought down Serbia's Vučić",
+            "source": "BBC",
+            "published": "2026-10-26",
+            "url": "https://www.bbc.com/news/articles/c574pvy82k0mo",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "社会与教育 / 学生运动、反腐与公共参与",
+            "summary": "BBC 以塞尔维亚学生运动在议会选举中获胜为切入点，回溯其起因：新萨德火车站顶棚坍塌造成 16 人死亡，事件被批评者视为腐败与政府失职的象征。文章梳理学生封锁道路、校园集会和反腐抗议如何从地方行动发展成跨越社会群体的全国运动；随后说明运动如何通过学生大会组织、扩大选民动员并准备候选人名单。报道也指出，候选名单中并没有学生，选举胜利之后仍须兑现反腐、媒体改革等承诺，因此运动能否将街头动员转化为制度改革仍是关键问题。",
+            "reason": [
+              "学生参与公共事务、反腐和公民动员属于社会与教育主题，可联系青年责任和社会治理。",
+              "文章按悲剧背景、运动扩展、组织与选举策略、获胜后的治理挑战递进，结构清楚。",
+              "可考查事件因果、转折词 yet 的让步关系，以及作者如何区分选举胜利与政策兑现。",
+              "emblematic、momentum、abstention、manifesto 等词适合社会运动和公共政策阅读。",
+              "写作可借鉴“导火索—集体行动—组织化—制度结果—后续挑战”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "tragedy",
+                "phonetic": "/ˈtrædʒədi/",
+                "part": "n.",
+                "translation": "悲剧；惨剧"
+              },
+              {
+                "word": "blockading",
+                "phonetic": "/blɑːˈkeɪdɪŋ/",
+                "part": "v.-ing",
+                "translation": "封锁；阻塞"
+              },
+              {
+                "word": "negligence",
+                "phonetic": "/ˈneɡlɪdʒəns/",
+                "part": "n.",
+                "translation": "疏忽；失职"
+              },
+              {
+                "word": "emblematic",
+                "phonetic": "/ˌembləˈmætɪk/",
+                "part": "adj.",
+                "translation": "象征性的；典型的"
+              },
+              {
+                "word": "referendum",
+                "phonetic": "/ˌrefəˈrendəm/",
+                "part": "n.",
+                "translation": "公民投票；全民公决"
+              },
+              {
+                "word": "momentum",
+                "phonetic": "/moʊˈmentəm/",
+                "part": "n.",
+                "translation": "势头；动力"
+              },
+              {
+                "word": "abstention",
+                "phonetic": "/əbˈstenʃən/",
+                "part": "n.",
+                "translation": "弃权；不投票"
+              },
+              {
+                "word": "manifesto",
+                "phonetic": "/ˌmænɪˈfestoʊ/",
+                "part": "n.",
+                "translation": "宣言；纲领"
+              },
+              {
+                "word": "electorate",
+                "phonetic": "/ɪˈlektərət/",
+                "part": "n.",
+                "translation": "全体选民"
+              },
+              {
+                "word": "fulfil",
+                "phonetic": "/fʊlˈfɪl/",
+                "part": "v.",
+                "translation": "履行；实现"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Theirs is a movement born from tragedy that began with students blockading streets and turned into almost daily protests and a national movement against corruption and government negligence.",
+                "analysis": [
+                  "主干是 Theirs is a movement，Theirs 指学生们的行动；born from tragedy 是过去分词短语，补充 movement 的起源。",
+                  "that 引导定语从句修饰 movement，began 与 turned 并列，交代行动从封路发展为抗议。",
+                  "against corruption and government negligence 后置修饰 protests and a national movement，点明抗议对象。",
+                  "句子用 from...to... 的发展逻辑压缩运动演变过程，兼有背景和结果。",
+                  "可借鉴 a movement born from... that began... and turned into... 描写社会行动的起点与扩展。"
+                ],
+                "translation": "这场运动源于一场悲剧，起初学生封锁街道，随后发展为几乎每天举行的抗议，并成为反对腐败和政府失职的全国性运动。"
+              },
+              {
+                "original": "They have no obvious leaders and have no grounding in politics, and yet the \"Student List-Students Win\" movement attracted anti-government voters across Serbian society.",
+                "analysis": [
+                  "句子前半由 and 连接两个并列谓语 have no obvious leaders 与 have no grounding in politics。",
+                  "and yet 连接转折结果，强调缺少传统领导和政治根基并未阻止运动吸引广泛支持。",
+                  "the \"Student List-Students Win\" movement 是后半句主语，attracted 是谓语，voters 是宾语。",
+                  "across Serbian society 表示支持者范围，修饰 attracted 的社会覆盖面。",
+                  "可用 and yet 表达与预期相反的结果，适合议论文中的让步转折。"
+                ],
+                "translation": "他们没有明显的领袖，也缺乏政治根基，然而“学生名单——学生获胜”运动仍吸引了塞尔维亚社会各界的反政府选民。"
+              },
+              {
+                "original": "Measuring the electoral impact of online mobilisation, however, is notoriously difficult.",
+                "analysis": [
+                  "主干是 Measuring ... is difficult；动名词短语作主语，notoriously difficult 作表语。",
+                  "the electoral impact of online mobilisation 是 measuring 的宾语，说明难以衡量的具体对象。",
+                  "however 插入句中，标示报道从支持者对网络动员的评价转向谨慎分析。",
+                  "notoriously 加强 difficult，指出这一问题广为人知地难以处理。",
+                  "可仿写 Measuring the impact of... is notoriously difficult，谨慎表述难以量化的社会影响。"
+                ],
+                "translation": "然而，衡量网络动员对选举产生的影响，一向是件极其困难的事。"
+              }
+            ]
+          },
+          {
+            "title": "Trump administration pushes for food assistance card upgrade to fight fraud",
+            "source": "NPR",
+            "published": "2026-10-26",
+            "url": "https://www.npr.org/2026/10/26/nx-s1-6017810/snap-benefits-ebt-card-chip-usda-rule",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "社会与经济 / 食品援助、支付安全与公共预算",
+            "summary": "NPR 报道美国农业部提出新规，要求各州把 SNAP 食品援助卡升级为芯片卡，并要求零售商终端支持非接触支付，以应对磁条卡遭盗刷的问题。文章先解释盗刷如何让低收入家庭失去补助，再引用政府审计与调查数据说明损失规模，以及多数州尚未完成卡片升级。随后分析成本障碍：芯片卡制造成本更高，州政府也面临联邦项目经费压力，因此部分州可能推迟投资。文章最后说明新规仍在征求公众意见，最终规则和实施时间尚未确定，并呈现联邦部门、州政府和倡议者对责任与资金安排的不同看法。",
+            "reason": [
+              "食品援助、网络支付安全和公共预算交织，适合社会保障与数字治理类主题。",
+              "文章由个案和诈骗机制切入，再列政策方案与成本证据，最后交代执行争议和意见征集。",
+              "可考查 proposed rule 与 final rule 的区别、成本为何构成障碍，以及各方引语的论证功能。",
+              "bolster、vulnerable、upfront、allocate、impasse 等词适用于政策和经济报道。",
+              "写作可借鉴“问题案例—技术原因—政策回应—执行成本—后续程序”的结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "bolster",
+                "phonetic": "/ˈboʊlstər/",
+                "part": "v.",
+                "translation": "加强；支持"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbəl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              },
+              {
+                "word": "adopt",
+                "phonetic": "/əˈdɑːpt/",
+                "part": "v.",
+                "translation": "采用；采纳"
+              },
+              {
+                "word": "proposal",
+                "phonetic": "/prəˈpoʊzəl/",
+                "part": "n.",
+                "translation": "提议；方案"
+              },
+              {
+                "word": "upfront",
+                "phonetic": "/ˌʌpˈfrʌnt/",
+                "part": "adj./adv.",
+                "translation": "预先支付的；前期的"
+              },
+              {
+                "word": "barrier",
+                "phonetic": "/ˈbæriər/",
+                "part": "n.",
+                "translation": "障碍；壁垒"
+              },
+              {
+                "word": "allocate",
+                "phonetic": "/ˈæləkeɪt/",
+                "part": "v.",
+                "translation": "分配；拨付"
+              },
+              {
+                "word": "administrative",
+                "phonetic": "/ədˈmɪnɪstreɪtɪv/",
+                "part": "adj.",
+                "translation": "行政的；管理的"
+              },
+              {
+                "word": "impasse",
+                "phonetic": "/ˈɪmpæs/",
+                "part": "n.",
+                "translation": "僵局；绝境"
+              },
+              {
+                "word": "recourse",
+                "phonetic": "/ˈriːkɔːrs/",
+                "part": "n.",
+                "translation": "求助；补救途径"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Most SNAP cards rely on a magnetic stripe for swipe payment – which tends to be vulnerable to skimming because it does a poor job of securing the data stored on cards.",
+                "analysis": [
+                  "主干是 Most SNAP cards rely on a magnetic stripe，rely on 表示依赖某种支付技术。",
+                  "for swipe payment 说明磁条的用途；破折号后的 which 从句补充说明该支付方式的风险。",
+                  "because 引导原因状语从句，解释它为何容易遭盗刷；it 指磁条支付方式。",
+                  "stored on cards 是过去分词短语，后置修饰 data，说明被保护的数据。",
+                  "可借鉴 rely on... which tends to... because...，先陈述依赖，再说明其风险及原因。"
+                ],
+                "translation": "大多数 SNAP 卡依靠磁条刷卡支付，而这种方式容易遭盗刷，因为它在保护卡片数据方面效果不佳。"
+              },
+              {
+                "original": "Now, under the proposed rule released by the USDA last week, all states would have to adopt chip-enabled EBT cards.",
+                "analysis": [
+                  "句子主干为 all states would have to adopt...，would have to 表示拟议规则下的要求。",
+                  "Now 引出政策新进展；under the proposed rule 是句首介词短语，说明要求的依据。",
+                  "released by the USDA last week 是过去分词短语，修饰 proposed rule，交代规则由谁发布及时间。",
+                  "chip-enabled 作复合形容词修饰 EBT cards，概括卡片技术特征。",
+                  "应注意 proposed rule 表示提议中的规则，不等于已经生效的最终法规。"
+                ],
+                "translation": "根据美国农业部上周发布的拟议规则，现在各州将必须采用带芯片的 EBT 卡。"
+              },
+              {
+                "original": "The biggest barrier to chip-enabled cards is cost.",
+                "analysis": [
+                  "句子主干是 The biggest barrier is cost，系动词 is 连接主语与表语。",
+                  "to chip-enabled cards 是介词短语，说明障碍针对的目标。",
+                  "biggest 是最高级，突出成本在多项阻碍中的重要性。",
+                  "短句以 cost 收束前文技术方案，起到转入执行难题的段落提示作用。",
+                  "可仿写 The biggest barrier to... is...，简洁概括政策或技术推广的主要困难。"
+                ],
+                "translation": "芯片卡推广面临的最大障碍是成本。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-26",
       "status": "ready",
@@ -2290,351 +2622,6 @@ window.BRIEFING_DATA = {
                   "可用 be down on + 数字/基准描述指标下降，并用 But 连接反向证据。"
                 ],
                 "translation": "但这一数字明显低于拜登任期最后一年每月新增的 12.2 万个岗位。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-20",
-      "status": "ready",
-      "ai": {
-        "intro": "今日有 MiniMax 与 Mistral 两项新模型发布；因昨日到今日不足三项，再扩至近7天，补充 10 月 15 日 Meta 开放权重模型。模型发布不等于免费在线使用，注意各自的价格、授权和硬件门槛。",
-        "updates": [
-          {
-            "event": "MiniMax 发布 M3.1 Flash，面向编程与代理任务（2026-10-20）",
-            "summary": "MiniMax 宣布 M3.1 Flash 已上线，定位于代理任务、编程和计算机操作；官方列出的 API 价格为每百万 token 输入 0.15 美元、输出 0.60 美元、缓存输入 0.015 美元。公告称模型可经 MiniMax API、M Plan 和 MiniMax Code 使用。",
-            "howTo": "在 MiniMax Code 桌面应用中选择 M3.1 Flash，或在 MiniMax 平台开通 API 后按模型名调用；先用一项可核验的小任务（如解释一段代码并提出测试步骤）试用，再检查结果。",
-            "impact": "可把它用于课程代码的分步解释、调试思路或小型自动化尝试；代码修改要自己复核并运行测试，使用 API 前按 token 单价估算成本。",
-            "free": "API 按官方列明的 token 价格收费；M Plan 与 MiniMax Code 的价格、免费额度、账户及地区条件、调用配额，公告均未说明。公告称模型权重日后发布，当前不应当作已开放下载。",
-            "category": "AI 模型 / 编程与代理",
-            "source": {
-              "name": "MiniMax 官方博客",
-              "published": "2026-10-20",
-              "url": "https://www.minimax.io/blog/minimax-m31f"
-            }
-          },
-          {
-            "event": "Mistral 推出 Timestral 时间序列预测模型系列（2026-10-20）",
-            "summary": "Mistral 发布首个时间序列基础模型系列 Timestral，包含 5M、28M、123M 和 209M 四种规模，可对多变量数据作概率预测并接受历史及已知未来协变量。官方代码库提供独立推理示例，称模型推理可使用 CPU。",
-            "howTo": "在 Mistral 官方 GitHub 仓库按说明安装 `timestral`，下载相应 Hugging Face 权重；从小规模模型开始，准备课程项目的时间序列数据后调用 `TimestralForecaster.from_pretrained(...)` 并运行 `forecast`。",
-            "impact": "可用于比较不同模型规模如何预测传感器读数、能耗或其他时间序列，并观察概率分位数如何表达不确定性；预测结果仍需与基线方法和真实数据对照。",
-            "free": "官方 GitHub 提供代码和权重下载入口；代码采用 Apache 2.0，模型权重另用 Modified MIT 许可。公告未说明托管 API 的免费额度、账户或地区条件；本地运行无需 GPU，但设备与运行成本自理。",
-            "category": "开源模型 / 时间序列预测",
-            "source": {
-              "name": "Mistral 官方博客",
-              "published": "2026-10-20",
-              "url": "https://mistral.ai/news/timestral/"
-            }
-          },
-          {
-            "event": "Meta 发布 Muse Spark Open 开放权重多模态模型（2026-10-15）",
-            "summary": "Meta 的 Muse Spark Open 是一个总计 816B、每 token 激活约 42B 参数的开放权重模型，可接收文本、图像、音频和视频输入，模型卡列出最长 1M token 上下文。它的权重访问需要先通过 Hugging Face 模型页的身份及组织信息表单，且所需部署资源远超普通个人电脑。",
-            "howTo": "先阅读模型卡的 Muse Model License 与使用政策；若要下载，登录 Hugging Face 并按表单提供法定全名、出生日期及完整组织名称，再等待访问权限。获准后按官方示例选择 Transformers、vLLM 或 SGLang 部署，并核对硬件要求。",
-            "impact": "适合学生了解开放权重模型的多模态输入、许可和部署门槛；可先研读模型卡与架构说明，不要把“开放权重”误解成无需申请、可在普通电脑运行或有免费的云端聊天服务。",
-            "free": "Muse Model License 授权条款写明可免费取得模型软件与权重，但模型页要求提交完整身份及组织信息后申请访问。官方发布说明称 BF16 权重约 1.5 TB、需 4 台各含 8 张 H200 的节点；NVFP4 版本面向单台 B200：https://huggingface.co/blog/meta-muse-spark-open。托管价格、地区和配额官方未说明。",
-            "category": "开放权重模型 / 多模态",
-            "source": {
-              "name": "Meta Muse Spark Open 模型卡（Hugging Face）",
-              "published": "2026-10-15",
-              "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini Notebook Standard：免费整理课程资料与生成学习内容",
-            "summary": "Google 帮助页显示 Standard 方案可免费注册，额度为每位用户 100 个 notebooks、每个 notebook 50 个 sources；可用来源开展资料问答和整理。页面当前将产品称为 Gemini Notebook。",
-            "howTo": "使用 Gmail 账户打开 Gemini Notebook 并新建 notebook，添加课程讲义或指定阅读材料，再围绕这些来源提问、生成摘要或复习提纲；先检查上传文件是否适合云端处理。",
-            "impact": "可把多份课程材料集中起来做有来源依据的问答和复习提纲，并回到原文件核对答案；50 个来源是每个 notebook 的上限，不是每条对话的额度。",
-            "free": "Standard 可免费使用；官方列出每位用户最多 100 个 notebooks、每个 notebook 50 个 sources。可用 Gmail 注册，也可使用符合条件的 Workspace 或 Workspace for Education 许可；仅在官方支持的国家和地区提供，免费生成次数的具体额度官方未说明。",
-            "category": "免费学习工具 / 资料问答",
-            "source": {
-              "name": "Google Gemini Notebook Help",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "Google AI Studio：部分 Gemini API 模型有免费层",
-            "summary": "Google 开发者定价页列明，Gemini API 免费层可访问部分模型，输入与输出 token 免费，并可从 AI Studio 开始；免费层内容可能用于改进 Google 产品。",
-            "howTo": "在官方定价页确认目标模型标有 Free Tier，进入 AI Studio 创建 API key，再按快速入门示例调用；测试时不要提交个人隐私、课程未公开资料或其他敏感内容。",
-            "impact": "可在不先支付 token 费用的情况下制作小型摘要、分类或问答原型；应先核对具体模型的速率限制，并把 API key 保存在环境变量而非公开代码仓库。",
-            "free": "仅部分模型免费，使用受模型各自的 rate limits 限制；免费额度的统一次数和账号资格，定价页未说明。免费层内容可能用于改进 Google 产品。AI Studio 支持地区及 18+ 年龄要求见官方页面：https://ai.google.dev/gemini-api/docs/available-regions",
-            "category": "免费 API / 原型开发",
-            "source": {
-              "name": "Google AI for Developers Pricing",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Timestral：可在本地 CPU 上试验的公开时间序列模型",
-            "summary": "Mistral 官方代码库提供 Timestral 独立推理代码及四种尺寸的 Hugging Face 权重入口；代码为 Apache 2.0，模型权重各自采用 Modified MIT 许可。仓库给出从 NumPy 时间序列产生概率预测的示例。",
-            "howTo": "阅读仓库中的许可和安装说明，安装 Python 依赖后先选 5M 或 28M 权重；用 `TimestralForecaster.from_pretrained(\"mistralai/Timestral-5M\")` 加载，再把自己的时间序列传给 `forecast`。",
-            "impact": "可用公开数据练习时间序列预测、协变量和不确定性分析；在实验报告中注明使用的权重及其 Modified MIT 条款，并与简单基线比较。",
-            "free": "代码和模型权重可从官方仓库链接下载；模型权重适用 Modified MIT，代码适用 Apache 2.0。推理可用 CPU，但硬件、存储和运行成本自理；托管服务的免费额度、账号或地区条件官方未说明。",
-            "category": "公开模型权重 / 数据分析",
-            "source": {
-              "name": "Mistral 官方 GitHub",
-              "published": "官方未说明",
-              "url": "https://github.com/mistralai/timestral"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student：认证学生可免费使用 Copilot",
-            "summary": "GitHub 文档确认，经 GitHub Education 验证的学生可免费使用 Copilot 功能；教育资格每月重新评估，学生还需单独启用 Copilot Student。",
-            "howTo": "登录 GitHub，前往 Settings > Education benefits 完成或检查学生验证；在免费开发者资源中按提示启用 Copilot Student，再到 Copilot 设置确认计划已生效。",
-            "impact": "可用于课程编程时补全代码、解释报错和练习调试；把建议当作待检查的草稿，先理解代码并运行测试再采用。",
-            "free": "须通过 GitHub Education 学生验证，且需单独激活；资格每月重新评估。文档未说明聊天或代理的具体免费用量、地区清单或权益截止日期，官方未说明。",
-            "category": "学生教育权益 / AI 编程",
-            "source": {
-              "name": "GitHub Docs",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面和手机端免费使用",
-            "summary": "Anthropic 价格页列出 $0 的 Free 方案，包含网页、桌面和移动应用聊天，以及搜索网页、创建文件和运行代码等功能；使用受限额约束。",
-            "howTo": "在 Claude 网页或应用选择 Free 方案，尝试整理一篇课程阅读、解释词汇或运行简单代码；查看使用限制提示，重要信息回到原始资料核实。",
-            "impact": "适合做英语阅读理解、摘要提纲和小型代码练习；免费使用量有限，长篇资料或反复追问可能触及限制，不宜将它当作无限量工具。",
-            "free": "价格页标为 $0、Free for everyone；页面未列具体消息额度、刷新周期、账户资格或地区清单，并说明需遵守 usage limits。升级方案需付费。",
-            "category": "免费 AI 助手 / 阅读与写作",
-            "source": {
-              "name": "Claude Pricing",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
-            "source": "EFE",
-            "published": "2026-10-20",
-            "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "社会与科技 / 社交平台、选举公平与数字主权",
-            "summary": "EFE 报道巴西圣保罗约 200 名卢拉支持者在 Meta 总部外抗议，指称平台偏袒反对派候选人弗拉维奥·博索纳罗；Meta 否认干预选举。文章交代两名候选人均向选举法院投诉，法院要求 Meta 在 24 小时内说明如何保障两方竞选活动受到平等对待，并补充报道者提出的背景：抗议者称 Instagram 是巴西民众获取新闻的重要渠道。后半部分转向抗议者对平台排序影响公共讨论的担忧，并引述数字主权与“数字殖民主义”的观点。报道呈现的是抗议者的指控、Meta 的否认和法院要求，并未证明平台确有偏袒。",
-            "reason": [
-              "社交平台如何影响选举信息分发，连接数字治理、公共讨论和公平竞争，是社会议题类阅读材料。",
-              "文章按抗议事件、双方指控与回应、法院行动、平台影响及数字主权观点推进，兼具新闻事实和引述观点。",
-              "可练习区分记者陈述、抗议者主张和公司回应，并判断法院要求说明是否等同于认定平台违规。",
-              "electoral、interference、favor、disadvantaged、sovereignty 等词适用于选举、公平与数字治理语境。",
-              "写作可借鉴“事件—各方立场—制度回应—更广泛影响”的结构，并用 allege 或 deny 准确标示未证实主张。"
-            ],
-            "vocabulary": [
-              {
-                "word": "headquarters",
-                "phonetic": "/ˌhedˈkwɔːrtərz/",
-                "part": "n. pl.",
-                "translation": "总部"
-              },
-              {
-                "word": "favor",
-                "phonetic": "/ˈfeɪvər/",
-                "part": "v.",
-                "translation": "偏袒；有利于"
-              },
-              {
-                "word": "opposition",
-                "phonetic": "/ˌɑːpəˈzɪʃən/",
-                "part": "n.",
-                "translation": "反对派"
-              },
-              {
-                "word": "electoral",
-                "phonetic": "/ɪˈlektərəl/",
-                "part": "adj.",
-                "translation": "选举的"
-              },
-              {
-                "word": "interference",
-                "phonetic": "/ˌɪntərˈfɪrəns/",
-                "part": "n.",
-                "translation": "干预；介入"
-              },
-              {
-                "word": "guarantee",
-                "phonetic": "/ˌɡærənˈtiː/",
-                "part": "v.",
-                "translation": "保证；确保"
-              },
-              {
-                "word": "disadvantaged",
-                "phonetic": "/ˌdɪsədˈvæntɪdʒd/",
-                "part": "adj.",
-                "translation": "处于不利地位的"
-              },
-              {
-                "word": "rally",
-                "phonetic": "/ˈræli/",
-                "part": "n.",
-                "translation": "集会；抗议活动"
-              },
-              {
-                "word": "sovereignty",
-                "phonetic": "/ˈsɑːvrənti/",
-                "part": "n.",
-                "translation": "主权"
-              },
-              {
-                "word": "autonomy",
-                "phonetic": "/ɔːˈtɑːnəmi/",
-                "part": "n.",
-                "translation": "自主权；自治"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "They accused the company of favoring content from opposition candidate Flávio Bolsonaro.",
-                "analysis": [
-                  "主干是 They accused the company，They 指代前文的抗议者。",
-                  "accuse somebody of doing something 是固定结构，of 后的 favoring 表明这是抗议者提出的指控。",
-                  "content 是 favoring 的宾语；from opposition candidate Flávio Bolsonaro 后置说明内容来自谁。",
-                  "句子陈述的是指控而非已证实事实，理解时要结合报道后文 Meta 的否认。",
-                  "可借鉴 accuse A of doing B 转述争议，同时用主语明确标出观点来源。"
-                ],
-                "translation": "他们指控该公司偏袒反对派候选人弗拉维奥·博索纳罗发布的内容。"
-              },
-              {
-                "original": "The company has denied any interference in the elections.",
-                "analysis": [
-                  "句子主干是 The company has denied any interference，主语与谓语直接呈现公司的回应。",
-                  "has denied 是现在完成时，表示公司已作出否认，结果与当前争议相关。",
-                  "any 修饰 interference，强调公司否认存在任何选举干预。",
-                  "in the elections 限定 interference 的范围；本句与前文指控形成对照。",
-                  "可借鉴 deny any + 名词概括一方回应，但需与另一方主张分开呈现。"
-                ],
-                "translation": "该公司否认曾以任何方式干预选举。"
-              },
-              {
-                "original": "Both Lula and Bolsonaro have filed complaints with the electoral court, alleging that their political content is disadvantaged on Meta’s platforms.",
-                "analysis": [
-                  "主句主干是 Both Lula and Bolsonaro have filed complaints，Both...and... 并列两位投诉者。",
-                  "with the electoral court 补充投诉对象；现在完成时 have filed 表示投诉已提出。",
-                  "alleging 是现在分词短语，补充说明投诉所涉及的主张。",
-                  "that 引导 alleging 的宾语从句，主干为 their political content is disadvantaged，使用被动语态突出内容受到的不利影响。",
-                  "可借鉴 Both...and... have filed...，再用 alleging that... 报告未经裁定的申诉内容。"
-                ],
-                "translation": "卢拉和博索纳罗都已向选举法院提出投诉，称各自的政治内容在 Meta 平台上受到不利对待。"
-              }
-            ]
-          },
-          {
-            "title": "A Kelvin wave raised sea levels on the West Coast. More are coming",
-            "source": "NPR",
-            "published": "2026-10-19",
-            "url": "https://www.npr.org/2026/10/19/nx-s1-6001744/el-nino-kelvin-wave-west-coast",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "环境 / 厄尔尼诺、海平面与沿海洪水风险",
-            "summary": "NPR 以今年厄尔尼诺期间一支沿美国西海岸移动的开尔文波为切入点，解释这种深海波如何从赤道向东移动，到达南美后沿海岸分流，并逐步抬高海平面。报道借助科学家解释和“晃动的浴缸”比喻说明机制，同时强调它不是海啸或冲岸巨浪：开尔文波本身不会造成洪水，而是抬高背景海平面、增加风暴潮和高潮叠加时发生洪水的可能性。文章用南加州海平面高于常态约 6 至 8 英寸、热带风暴带来积水作例子，也说明暖水可能影响海洋生态；结尾援引研究者预期，秋冬还会有更多波到来。",
-            "reason": [
-              "气候现象、海平面变化和沿海风险结合，适合环境保护与公共风险类主题。",
-              "文章先解释现象和移动机制，再以科学家引述说明风险条件，随后补充生态影响和未来预期。",
-              "可训练辨析“提高洪水概率”与“直接造成洪水”的区别，理解类比、因果链和预测性证据。",
-              "phenomenon、erosion、elevated、triggering、subside 等词有助于阅读环境和气候报道。",
-              "写作可借鉴“解释机制—区分直接与间接影响—引用具体例子—说明不确定性”的审慎论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "phenomena",
-                "phonetic": "/fəˈnɑːmənə/",
-                "part": "n. pl.",
-                "translation": "现象"
-              },
-              {
-                "word": "vast",
-                "phonetic": "/væst/",
-                "part": "adj.",
-                "translation": "广阔的；巨大的"
-              },
-              {
-                "word": "gradually",
-                "phonetic": "/ˈɡrædʒuəli/",
-                "part": "adv.",
-                "translation": "逐渐地"
-              },
-              {
-                "word": "elevated",
-                "phonetic": "/ˈelɪveɪtɪd/",
-                "part": "adj.",
-                "translation": "升高的"
-              },
-              {
-                "word": "erosion",
-                "phonetic": "/ɪˈroʊʒən/",
-                "part": "n.",
-                "translation": "侵蚀"
-              },
-              {
-                "word": "favorable",
-                "phonetic": "/ˈfeɪvərəbəl/",
-                "part": "adj.",
-                "translation": "有利的；适宜的"
-              },
-              {
-                "word": "triggering",
-                "phonetic": "/ˈtrɪɡərɪŋ/",
-                "part": "adj.",
-                "translation": "触发性的"
-              },
-              {
-                "word": "surge",
-                "phonetic": "/sɜːrdʒ/",
-                "part": "n.",
-                "translation": "激增；（风暴）潮"
-              },
-              {
-                "word": "subside",
-                "phonetic": "/səbˈsaɪd/",
-                "part": "v.",
-                "translation": "减退；消退"
-              },
-              {
-                "word": "nutrient-dense",
-                "phonetic": "/ˈnuːtriənt dens/",
-                "part": "adj.",
-                "translation": "富含营养的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "One of the first major signs of this year's \"Super El Niño\" has reached the U.S.",
-                "analysis": [
-                  "主干是 One ... has reached the U.S.，谓语现在完成时强调现象已经抵达且与当前相关。",
-                  "主语中心词是 One，of the first major signs 是介词短语，说明它属于哪些迹象之一。",
-                  "of this year's Super El Niño 进一步限定 signs 的来源和时间背景。",
-                  "has reached 描写从发生到抵达的变化，开篇把气候模式与美国沿海影响连接起来。",
-                  "可借鉴 One of the first signs of... has reached... 描写宏观现象的早期可见影响。"
-                ],
-                "translation": "今年“超级厄尔尼诺”的首批主要迹象之一已经抵达美国。"
-              },
-              {
-                "original": "By themselves, Kelvin waves don't cause flooding, Amaya says.",
-                "analysis": [
-                  "主干是 Kelvin waves don't cause flooding，主语复数与助动词 don't 搭配。",
-                  "By themselves 是句首状语，强调开尔文波单独作用时的因果边界。",
-                  "Amaya says 是句末引述语，说明这一判断来自受访科学家。",
-                  "否定句为后文“提高风险而非直接致洪”设定限制，避免把相关影响夸大成直接因果。",
-                  "可借鉴 By itself, X does not cause Y 区分促成风险的因素和直接原因。"
-                ],
-                "translation": "Amaya 说，开尔文波本身并不会造成洪水。"
-              },
-              {
-                "original": "Instead, they load the dice, making flooding more likely by raising sea levels.",
-                "analysis": [
-                  "主句核心是 they load the dice，they 回指前句的 Kelvin waves。",
-                  "Instead 标示转向，说明波虽不直接造成洪水，却会改变风险条件。",
-                  "making flooding more likely 是现在分词结果结构，说明 load the dice 的影响。",
-                  "by raising sea levels 是方式状语，解释洪水概率增加的具体机制。",
-                  "可借鉴 Instead,... making... more likely by...，表达间接因素如何提高某种结果发生的可能性。"
-                ],
-                "translation": "相反，它们会增加风险：海平面升高使洪水更有可能发生。"
               }
             ]
           }
