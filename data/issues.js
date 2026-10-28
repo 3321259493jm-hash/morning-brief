@@ -1,6 +1,338 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-27T10:00:33+08:00",
+  "updatedAt": "2026-10-28T10:11:06+08:00",
   "issues": [
+    {
+      "date": "2026-10-28",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Claude API 与 SDK 更新、Claude 接入 Google Cloud，以及 Copilot 组织级影响面板；留意破坏性变更、云端计费和组织数据的自愿参与。",
+        "updates": [
+          {
+            "event": "Claude API 2026-10-21 版本与多语言 SDK 发布",
+            "summary": "Anthropic 发布 API 版本 2026-10-21，并同步更新 Python、TypeScript、C#、Go、Java、PHP、Ruby SDK 与 ant CLI，使其默认发送这一 API 版本。新 SDK/CLI 另有不依赖 API 版本的破坏性变更，许可从 MIT 改为 Apache 2.0。",
+            "howTo": "维护 Claude API 项目的学生可先读官方迁移指南，再将 Python SDK 更新至 anthropic 2.0.0（`pip install anthropic==2.0.0`），按指南处理 SDK 破坏性变更；其他语言使用对应的新版本。",
+            "impact": "课程原型若使用 Claude API，可检查请求版本和依赖升级对现有代码的影响；新 SDK/CLI 的 Apache 2.0 许可也适合需要核对依赖许可的项目。",
+            "free": "官方确认 SDK/CLI 许可为 Apache 2.0；该版本说明未注明 API 的免费层、价格、调用配额或地区限制，不能据此认定 API 调用免费。",
+            "category": "Claude / API 与开发工具",
+            "source": {
+              "name": "Anthropic Claude Platform 官方发布说明",
+              "published": "2026-10-21",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            }
+          },
+          {
+            "event": "Claude API 可通过 Google Cloud 项目使用（2026-10-22）",
+            "summary": "Anthropic 将其托管的 Claude API 接入 Google Cloud 项目；Google Cloud IAM 控制访问，Google Cloud Marketplace 处理账单。这是不同于 Google 托管模型的 Anthropic 托管选项。",
+            "howTo": "在 Google Cloud Marketplace 找到 Claude Models on Google Cloud（Anthropic managed）并订阅；按官方接入文档启用两个服务、激活 Anthropic 组织，再通过 Claude Console 配置 IAM 权限和 API 调用。",
+            "impact": "已有 Google Cloud 课程或实验室项目的开发者可在现有云项目中评估 Claude API；开始前应让项目负责人确认权限和账单归属。",
+            "free": "官方文档说明需经 Marketplace 订阅并由 Google Cloud 处理账单，但未说明价格、免费额度、调用配额或地区范围；不应把它当作免费服务。",
+            "category": "Claude / 云端 API",
+            "source": {
+              "name": "Anthropic Claude Platform 官方发布说明",
+              "published": "2026-10-22",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            }
+          },
+          {
+            "event": "Copilot 影响面板新增行业对比（2026-10-22）",
+            "summary": "GitHub 为 Copilot impact dashboard 增加行业对比：符合条件的企业和非企业所属组织可自愿加入，与参与组织比较 agent-first/multi-agent 使用比例及相关 PR 合并率；参与默认关闭，基准按 28 天周期计算。",
+            "howTo": "企业所有者或非企业所属组织的所有者，在 Copilot 用量指标政策已启用的前提下，从影响面板或组织/企业 Copilot 政策中选择加入，再按公司规模和行业查看对比；普通成员需有面板查看权限。",
+            "impact": "在实习团队或课程组织中使用 Copilot 的学生，可借面板了解组织采用情况及比较口径；对比是汇总指标而非个人排名，是否贡献数据由组织选择。",
+            "free": "公告仅说明组织级适用范围和自愿参与方式，未说明费用、个人免费资格或调用配额；数据仅用于面板比较，退出后停止展示并在下一次每日更新中排除，汇总数据 30 天后删除。",
+            "category": "GitHub Copilot / 组织分析",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-22",
+              "url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google AI 高校学生优惠：兑换后 12 个月订阅权益",
+            "summary": "Google 为符合条件的高校学生提供兑换后 12 个月的 Google AI 订阅权益；订阅档位取决于学校所在国家或地区。官方说明美国对应 Google AI Pro，140 多个国家/地区对应 Google AI Plus。",
+            "howTo": "先核对官方优惠条款，再使用个人 Google 账号完成 SheerID 学生验证和 Google Payments 付款方式设置，按页面提示兑换；若不准备续订，需在优惠期结束前取消。",
+            "impact": "适合用 Gemini 学生中心和学习笔记功能整理课程材料、准备课堂复习；兑换前确认本地档位和续费日期，避免优惠结束后产生标准月费。",
+            "free": "优惠期 12 个月免订阅费，须年满 18 岁、在支持地区（不含香港、澳门和突尼斯）的高等教育机构就读并通过 SheerID 验证，另需个人 Google 账号及合格付款方式；2026-12-31 前兑换。期满自动按当地标准月费续订（法律要求同意的地区除外），可取消；使用额度可能不同且会变化。",
+            "category": "教育优惠 / Google AI",
+            "source": {
+              "name": "Google One 官方学生优惠条款",
+              "published": "2026-08-19",
+              "url": "https://one.google.com/offer/studentoffer8?g1_landing_page=0"
+            }
+          },
+          {
+            "event": "DeepL Translator 免费版：每月 50,000 字符翻译",
+            "summary": "DeepL 官方计划对比页列出免费版每位用户每月 50,000 个字符的文本翻译额度，并提供每月 1 个、最大 5 MB 的文件翻译。",
+            "howTo": "在 DeepL Translator 粘贴英语段落或上传课程文档进行初译；对照原文检查术语、语气和逻辑连接，再自行修改，不把机器译文直接当作作业答案。",
+            "impact": "阅读论文摘要或核对英文材料时，可先获得中文草译，再回到原文学习句法和术语；月度字符与文档限制适合短材料，不适合整本书批量翻译。",
+            "free": "免费版文本额度为每用户每月 50,000 字符，文件翻译每月 1 个、文件最大 5 MB；官方计划页未说明地区资格、额外账号条件或截止日期。",
+            "category": "免费学习工具 / 翻译",
+            "source": {
+              "name": "DeepL 官方计划与定价页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "Ollama：MIT 许可的本地开放模型运行器",
+            "summary": "Ollama 官方 GitHub 仓库提供 macOS、Windows、Linux 安装方式，并支持在本机运行开放模型；项目代码按 MIT 许可发布。",
+            "howTo": "从 Ollama 官方下载页安装对应系统版本，启动后在终端运行 `ollama run gemma4`，按提示下载并开始对话；可查看官方模型库选择其他模型。",
+            "impact": "可用来练习本地模型问答、比较不同模型对同一课程问题的回答；模型权重许可和运行所需硬件需分别检查。",
+            "free": "运行器源码采用 MIT 许可；本地运行需要自行承担设备、存储和电力成本，模型权重另有各自许可。官方仓库未说明最低硬件要求、地区限制或固定使用配额。",
+            "category": "开放模型工具 / 本地运行",
+            "source": {
+              "name": "Ollama 官方 GitHub 仓库",
+              "published": "官方未说明",
+              "url": "https://github.com/ollama/ollama"
+            }
+          },
+          {
+            "event": "Phi-4-mini-instruct：MIT 许可的多语言开放权重",
+            "summary": "Microsoft 官方 Hugging Face 模型卡提供 Phi-4-mini-instruct 权重下载，标注 MIT 许可；模型为 3.8B 参数、支持最长 128K token 上下文，面向多语言指令与推理任务。",
+            "howTo": "打开 Microsoft 模型卡下载权重；按卡片中的 Transformers 示例安装 `transformers` 与 `accelerate`，再用 `microsoft/Phi-4-mini-instruct` 加载模型并运行本地推理。",
+            "impact": "适合有本地计算环境的学生尝试摘要、问答或小型原型，并与托管模型对照；模型卡提醒其规模限制可能导致事实错误，重要内容仍需核查。",
+            "free": "模型权重按 MIT 许可提供，可下载使用；模型卡未说明官方托管 API 免费额度、地区资格、截止日期或最低硬件配置。本地推理仍需自行准备算力和存储。",
+            "category": "开放模型权重 / 多语言",
+            "source": {
+              "name": "Microsoft 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Would you pay to have the ‘best baby’? Liberal eugenics and the troubling quest for human perfection",
+            "source": "The Guardian",
+            "published": "2026-10-27",
+            "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/27/would-you-pay-to-have-the-best-baby-liberal-eugenics-and-the-troubling-quest-for-human-perfection",
+            "readingTime": "约 12 分钟（估算）",
+            "topic": "社会与健康 / 基因筛选、残障权利与优生学伦理",
+            "summary": "作者从自己童年被诊断为脊髓性肌萎缩症、后来发现诊断有误的经历出发，回顾优生学如何从国家主导的人口管理转向以个人选择为名的胚胎筛选。文章借商业基因公司的“最佳婴儿”宣传，指出群体层面的遗传统计并不能可靠决定单个孩子的特征；更深层的风险是把生产力与竞争优势当作理想人生标准，令残障者及其家庭承受新的压力。作者并不否定治疗，而主张改善社会环境、承认人的差异，而非追求单一的完美标准。",
+            "reason": [
+              "主题把基因技术、家庭选择、残障权利与社会公平联系起来，适合科技伦理和社会政策类考题。",
+              "结构由个人叙事引出历史背景，再分析当代商业化筛选，最后提出“改善社会而非改造人”的立场。",
+              "可练习识别作者态度、论据与结论，也可讨论一项技术的个人收益和社会代价。",
+              "词汇覆盖 eugenics、hereditary、imperative、repressive 等抽象社会科学表达。",
+              "写作可借鉴让步与转折：承认治疗的价值，同时质疑把选择扩展为单一完美标准。"
+            ],
+            "vocabulary": [
+              {
+                "word": "eugenics",
+                "phonetic": "/juːˈdʒenɪks/",
+                "part": "n.",
+                "translation": "优生学"
+              },
+              {
+                "word": "hereditary",
+                "phonetic": "/həˈredɪtəri/",
+                "part": "adj.",
+                "translation": "遗传的"
+              },
+              {
+                "word": "imperative",
+                "phonetic": "/ɪmˈperətɪv/",
+                "part": "n.",
+                "translation": "迫切要求；必要之事"
+              },
+              {
+                "word": "consumerist",
+                "phonetic": "/kənˈsjuːmərɪst/",
+                "part": "adj.",
+                "translation": "消费主义的"
+              },
+              {
+                "word": "repressive",
+                "phonetic": "/rɪˈpresɪv/",
+                "part": "adj.",
+                "translation": "压制性的"
+              },
+              {
+                "word": "population-level",
+                "phonetic": "/ˌpɒpjʊˈleɪʃən ˈlevəl/",
+                "part": "adj.",
+                "translation": "群体层面的"
+              },
+              {
+                "word": "genomics",
+                "phonetic": "/dʒɪˈnəʊmɪks/",
+                "part": "n.",
+                "translation": "基因组学"
+              },
+              {
+                "word": "individualist",
+                "phonetic": "/ˌɪndɪˈvɪdʒuəlɪst/",
+                "part": "adj.",
+                "translation": "个人主义的"
+              },
+              {
+                "word": "accommodate",
+                "phonetic": "/əˈkɒmədeɪt/",
+                "part": "v.",
+                "translation": "适应；容纳"
+              },
+              {
+                "word": "variation",
+                "phonetic": "/ˌveəriˈeɪʃn/",
+                "part": "n.",
+                "translation": "差异；变异"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "It is hard to be young and to know that you are growing weaker rather than stronger.",
+                "analysis": [
+                  "主干是 It is hard，it 作形式主语，真正主语由后面的不定式结构承担。",
+                  "to be young 与 to know 并列，说明作者认为困难的两件事。",
+                  "that 引导 know 的宾语从句；you are growing weaker 是从句主干。",
+                  "rather than 连接 weaker 与 stronger，形成“变弱而非变强”的对照。",
+                  "可借鉴 It is hard to... 描述某种经历或处境带来的困难。"
+                ],
+                "translation": "年轻时得知自己正在变弱而非变强，是一件很难承受的事。"
+              },
+              {
+                "original": "Although we may not be immortality-seeking billionaires, we are all constantly living under the relentless imperative to strive for human perfection, in our own generation and the next.",
+                "analysis": [
+                  "Although 引导让步状语从句，先承认普通人并非追求永生的亿万富翁。",
+                  "主句主干是 we are living under the imperative，all、constantly 修饰主句谓语。",
+                  "relentless 修饰 imperative；to strive for... 是不定式，说明这种要求指向什么行动。",
+                  "in our own generation and the next 补充说明追求延伸到当代与下一代。",
+                  "可用 Although..., ... 引出“即便不是极端情况，普遍压力仍存在”的论证。"
+                ],
+                "translation": "尽管我们未必是追求永生的亿万富翁，却都不断承受着追求人类完美的强烈要求，并把它延伸到自己这一代和下一代。"
+              },
+              {
+                "original": "The goal is not to abolish cures, but to abolish the idea that only cures, or the prenatal optimisation of an embryo, can make for a life worth living.",
+                "analysis": [
+                  "主干是 The goal is not A, but B，用 not...but... 澄清作者反对的对象。",
+                  "A 与 B 都是不定式短语，平行结构突出“反对治愈”与“反对单一生命标准”的区别。",
+                  "that 引导 idea 的同位语从句，解释作者要质疑的观念。",
+                  "only cures 与 prenatal optimisation 并列为限制性条件；worth living 后置修饰 life。",
+                  "可借鉴 not to reject X, but to question Y，避免把复杂立场简化成二选一。"
+                ],
+                "translation": "目标并非废除治疗，而是废除这样一种观念：只有治愈疾病或在产前优化胚胎，生命才值得一过。"
+              }
+            ]
+          },
+          {
+            "title": "Looted by Nazis and Recently Restituted, a Kaleidoscopic Kandinsky Painting Just Sold for Nearly $42 Million",
+            "source": "Smithsonian Magazine",
+            "published": "2026-10-27",
+            "url": "https://www.smithsonianmag.com/smart-news/looted-by-nazi-and-recently-restituted-a-kaleidoscopic-kandinsky-painting-just-sold-for-nearly-42-million-180989763/",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "文化 / 纳粹掠夺艺术、文物归还与拍卖市场",
+            "summary": "文章以康定斯基《多彩生活》以约 4,200 万美元成交为切入点，回溯作品的创作背景、俄罗斯民间传说与法国野兽派影响，以及荷兰犹太收藏家 Lewenstein 家族的收藏史。纳粹占领荷兰后，画作未经家族授权便被拍卖；作品后来进入德国银行收藏并在慕尼黑博物馆长期展出。经过后代多年追索，德国咨询委员会于 2023 年建议归还，作品最终回到家族继承人手中再进入拍卖。文章以这次交易既结束家族寻回之路、又开启作品新篇章作结。",
+            "reason": [
+              "文化遗产、战争掠夺和归还机制构成历史与公共记忆类主题，适合文化保护和正义议题。",
+              "行文按拍卖新闻、作品背景、产权流转、司法/委员会建议到家族追索结果推进，时间线清晰。",
+              "可练习根据时间标记复原事件顺序，并区分事实报道、历史背景与结尾评价。",
+              "词汇涉及 restitution、heirs、auction、proceeds、impasse 等文化遗产和法律语境表达。",
+              "写作可用“事件结果—历史来由—制度处理—意义评价”的结构讨论文物返还。"
+            ],
+            "vocabulary": [
+              {
+                "word": "restituted",
+                "phonetic": "/ˈrestɪtjuːtɪd/",
+                "part": "adj.",
+                "translation": "已归还的；已返还的"
+              },
+              {
+                "word": "rightful",
+                "phonetic": "/ˈraɪtfəl/",
+                "part": "adj.",
+                "translation": "合法拥有的；正当的"
+              },
+              {
+                "word": "heirs",
+                "phonetic": "/eəz/",
+                "part": "n.",
+                "translation": "继承人"
+              },
+              {
+                "word": "auction",
+                "phonetic": "/ˈɔːkʃn/",
+                "part": "n.",
+                "translation": "拍卖"
+              },
+              {
+                "word": "estimate",
+                "phonetic": "/ˈestɪmət/",
+                "part": "n.",
+                "translation": "估价；估算"
+              },
+              {
+                "word": "saleroom",
+                "phonetic": "/ˈseɪlruːm/",
+                "part": "n.",
+                "translation": "拍卖大厅"
+              },
+              {
+                "word": "proceeds",
+                "phonetic": "/ˈprəʊsiːdz/",
+                "part": "n.",
+                "translation": "收益；所得款项"
+              },
+              {
+                "word": "impasse",
+                "phonetic": "/ˈɪmpɑːs/",
+                "part": "n.",
+                "translation": "僵局"
+              },
+              {
+                "word": "triumphant",
+                "phonetic": "/traɪˈʌmfənt/",
+                "part": "adj.",
+                "translation": "胜利的；成功的"
+              },
+              {
+                "word": "multi-generational",
+                "phonetic": "/ˌmʌlti dʒenəˈreɪʃənəl/",
+                "part": "adj.",
+                "translation": "跨越数代的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Over six tense minutes, bids flooded the packed saleroom and telephone banks.",
+                "analysis": [
+                  "主干是 bids flooded the saleroom and telephone banks，主语 bids 与并列宾语构成现场画面。",
+                  "Over six tense minutes 是时间状语，tense 修饰 minutes，营造紧张气氛。",
+                  "packed 是过去分词形容词，修饰 saleroom；telephone banks 与其并列。",
+                  "flooded 在此用作比喻动词，强调竞价迅速涌入。",
+                  "可用 Over + 时间状语引出一段事件，并以生动动词浓缩场面。"
+                ],
+                "translation": "在紧张的六分钟里，竞价不断涌入拥挤的拍卖大厅和电话竞拍席。"
+              },
+              {
+                "original": "The family never authorized the transaction, nor did they receive any proceeds.",
+                "analysis": [
+                  "前半句主干为 The family never authorized the transaction，never 强调从未授权。",
+                  "nor 引出否定并列分句，表示“也没有”；助动词 did 前置形成倒装。",
+                  "they receive any proceeds 与前句共享同一主语，any 用于否定语境。",
+                  "两项否定并列呈现交易的不公：没有授权，也没有得到收益。",
+                  "可用 ..., nor did + 主语 + 动词补充第二项否定事实。"
+                ],
+                "translation": "家族从未授权这笔交易，也没有收到任何收益。"
+              },
+              {
+                "original": "The legal impasse finally broke in 2023, when Germany’s advisory commission on Nazi-looted art recommended that the painting should be returned to the family.",
+                "analysis": [
+                  "主句主干是 The legal impasse broke，finally 和 in 2023 标出僵局结束的时间。",
+                  "when 引导非限制性时间从句，交代僵局打破时发生的关键制度行动。",
+                  "recommended 后接 that 宾语从句；从句用 should be returned 被动结构突出画作。",
+                  "on Nazi-looted art 修饰 commission，说明委员会讨论的专业领域。",
+                  "可用 when 从句把事件结果与具体制度节点连接起来。"
+                ],
+                "translation": "法律僵局终于在 2023 年打破；当时德国纳粹掠夺艺术品咨询委员会建议将这幅画归还家族。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-27",
       "status": "ready",
@@ -2289,339 +2621,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 balance A with B 表达政策或教育议题中的多方权衡。"
                 ],
                 "translation": "保护儿童的常识性做法，应把安全与对相关儿童及其父母具体情况的了解结合起来。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-21",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Gemini 面向小企业的品牌工具、Notebook 生成前审阅，以及 GitHub Copilot 组织模型策略管理；逐项区分分阶段上线与企业管理范围。",
-        "updates": [
-          {
-            "event": "Gemini App 增加小企业品牌与经营工作入口（2026-10-20）",
-            "summary": "Google 公告为小企业主提供品牌风格工作区、经营内容与财务可视化等工具，帮助把品牌资料和业务任务放进 Gemini 的工作流程；官方称将于未来几天向全球 Gemini App 用户逐步推出。",
-            "howTo": "打开 Gemini App，待功能出现在应用后进入小企业相关工作入口；按提示提供品牌资料或经营任务，再使用生成的内容与可视化结果。若暂未出现，等待分批开放。",
-            "impact": "经营社团、学生创业项目可用它整理品牌语气、准备宣传素材和查看业务数据表达；提交前仍应核对生成内容与原始财务数据。",
-            "free": "公告未说明价格、账号额外条件或使用配额；明确的可用范围是 Gemini App 用户，全球分阶段推出，预计未来几天完成。",
-            "category": "Gemini 应用 / 小企业与品牌内容",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-10-20",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/"
-            }
-          },
-          {
-            "event": "Gemini Notebook 允许先审阅再生成幻灯片和视频概览（2026-10-19）",
-            "summary": "Google 为 Slides 与 Video Overviews 增加生成前共创步骤：用户可先查看幻灯片大纲或视频制作说明，调整结构与视觉风格并反馈，再继续生成；官方称将在未来一周向全球 Gemini Notebook 用户推出。",
-            "howTo": "在 Gemini Notebook 打开一个已加入资料的 notebook，发起幻灯片或视频概览生成；开启 Review/审阅步骤，检查大纲或制作说明，提交调整意见后再继续生成。",
-            "impact": "复习时可先检查讲义要点是否被正确组织，再生成汇报幻灯片或学习视频；比直接接受成品更容易发现遗漏和调整表达。",
-            "free": "公告未说明该共创功能的价格、账号条件或专属配额；上线范围为全球 Gemini Notebook 用户，分阶段推送约一周。",
-            "category": "学习工具 / Notebook 内容生成",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-10-19",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/co-create-slides-videos/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 模型策略管理 API 开放使用（2026-10-19）",
-            "summary": "GitHub changelog 宣布 Copilot model policy API 一般可用，提供 GET 与 PATCH 接口，让企业、团队、组织及 agent app 管理模型策略；这是组织级配置能力，不是个人 Copilot 新模型或个人账户功能。",
-            "howTo": "组织的 Copilot 管理者可按 GitHub 官方 changelog 中的 API 文档，针对相应 enterprise、organization、team 或 agent app 策略读取当前配置（GET），再用 PATCH 更新允许的模型策略。",
-            "impact": "若课程或实验室通过组织账号使用 Copilot，可向管理员确认哪些模型已获准；自行使用个人账号的学生无需把这项管理 API 当作新功能入口。",
-            "free": "这不是个人免费权益。公告确认的是企业/组织层级的 Copilot 策略 API；价格、具体账号权限、地区限制与请求配额均未在该公告说明。",
-            "category": "GitHub Copilot / 组织管理",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-19",
-              "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "OpenAI Whisper：可本地运行的开源语音识别工具",
-            "summary": "OpenAI 官方仓库提供多语言语音识别、语音翻译和语言识别模型与命令行工具；仓库许可证为 MIT，代码和模型可依许可证使用。",
-            "howTo": "安装仓库说明中的依赖与 ffmpeg 后运行 `pip install -U openai-whisper`，再执行 `whisper lecture.mp3 --language Chinese` 生成转写文本；也可按 README 示例使用 Python 接口。",
-            "impact": "可把外语讲座或自己的录音转成文字，便于检索、制作复习稿和字幕；本地运行也便于在上传前控制资料流向。",
-            "free": "MIT 许可，不收取在线服务调用费；需自行准备兼容设备、存储、运行时间及依赖。官方仓库未说明账号、地区或调用配额，因为它不是托管 API。",
-            "category": "免费开源工具 / 转写与翻译",
-            "source": {
-              "name": "OpenAI Whisper 官方 GitHub 仓库",
-              "published": "官方未说明",
-              "url": "https://github.com/openai/whisper"
-            }
-          },
-          {
-            "event": "Google Colab：免费云端 Jupyter 笔记本",
-            "summary": "Google Colab 提供无需本地安装的托管 Jupyter 环境，免费使用者可能获得 GPU 或 TPU；官方明确说明硬件可用性和使用限制会变化，资源不保证。",
-            "howTo": "访问 Colab，新建 notebook 并运行 Python 单元；需要硬件加速时从 Runtime 菜单选择 Change runtime type，再选择可用的 GPU/TPU。",
-            "impact": "可在浏览器完成课程 Python 作业、运行数据分析示例或试用小型机器学习代码，避免先配置本地开发环境。",
-            "free": "官方提供免费使用，GPU/TPU 不保证可用，资源和使用限制会浮动；FAQ 未说明固定配额、账号条件或地区名单。",
-            "category": "免费云端工具 / 编程与计算",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini Notebook Standard：免费整理课程资料",
-            "summary": "Google 官方计划页列出免费 Standard：每位用户最多 100 个 notebooks、每个 notebook 50 个 sources；支持网页端，需在支持的国家或地区且达到当地同意年龄。",
-            "howTo": "使用 Gmail 免费注册或符合条件的 Workspace/Workspace for Education 账号登录网页端，新建 notebook 并添加课程资料作为 sources，再通过对话或生成工具复习。",
-            "impact": "可把讲义、网页和阅读材料放进独立资料集，围绕原始来源提问、制作复习材料，适合按课程或专题分 notebook。",
-            "free": "免费 Standard：100 notebooks/用户、50 sources/notebook。需 Gmail 或合格 Workspace/Education 许可，并受支持国家/地区及当地同意年龄要求限制；具体模型调用配额官方未说明。",
-            "category": "免费学习工具 / 资料整理",
-            "source": {
-              "name": "Google Gemini Notebook 官方计划说明",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student：通过学生验证可启用学生权益",
-            "summary": "GitHub 官方学生指南说明，经 GitHub Education 验证的学生可设置 Copilot Student；须按指南单独启用，资格会按月重新评估。",
-            "howTo": "先完成 GitHub Education 学生身份验证，打开官方指南中的 Copilot 学生设置流程并启用权益；若失效，检查 Education 状态并重新确认资格。",
-            "impact": "适合在课程项目中用代码补全和解释辅助学习；提交前仍应阅读、测试并理解生成的代码。",
-            "free": "面向通过 GitHub Education 学生验证的合资格用户；需要主动启用，资格每月重新评估。该指南未列明具体国家名单或请求配额。",
-            "category": "学生权益 / 编程辅助",
-            "source": {
-              "name": "GitHub Docs：Copilot 学生设置",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students"
-            }
-          }
-        ]
-      },
-      "english": {
-        "intro": "两篇免费全文分别从心理科学与宏观经济切入：一篇解释大脑如何应对不确定性，另一篇以数据核验美国经济表现，适合练习因果、比较和证据归纳。",
-        "articles": [
-          {
-            "title": "How Your Brain Learns to Cope with Uncertainty",
-            "source": "Scientific American",
-            "published": "2026-10-20",
-            "url": "https://www.scientificamerican.com/article/how-your-brain-learns-to-cope-with-uncertainty/",
-            "readingTime": "约 10 分钟",
-            "topic": "健康与心理 / 不确定性、压力与韧性",
-            "summary": "文章从洛杉矶山火期间两位神经科学家的判断经历切入，介绍大脑会依据既有经验预测环境，并用预测误差更新对危险的判断。作者随后说明，长期且难以预测的压力可能使身体持续处于警戒状态，回避行为又会强化原有恐惧；文章借助预测加工、熵和心理治疗研究解释这种循环。后半部分区分脆弱、耐受、韧性和主动寻求信息等应对路径，并指出灵活重估压力、寻求支持、从小挑战练习适应，有助于逐步增强面对不确定性的能力。结尾回到火灾后的儿童教育场景，强调压力并非总是有害，改变策略和建立备选方案也可以成为学习的一部分。",
-            "reason": [
-              "主题涉及压力管理、心理健康与个人韧性，属于健康和社会生活类常见议题。",
-              "文章由真实经历引出理论，再解释机制、比较应对类型，最后给出实践建议，论证层次清楚。",
-              "可练习主旨归纳、因果推断、概念辨析，以及作者如何用案例支持科学解释。",
-              "包含 uncertainty、resilience、prediction error 等抽象词汇和关系从句、条件句等结构。",
-              "写作可借鉴“提出问题—解释机制—给出可行策略”的展开方式，并避免把相关性夸大为确定因果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "uncertainty",
-                "phonetic": "/ʌnˈsɜːrtnti/",
-                "part": "n.",
-                "translation": "不确定性"
-              },
-              {
-                "word": "foreseeable",
-                "phonetic": "/fɔːrˈsiːəbəl/",
-                "part": "adj.",
-                "translation": "可预见的"
-              },
-              {
-                "word": "entropy",
-                "phonetic": "/ˈentrəpi/",
-                "part": "n.",
-                "translation": "熵；无序程度"
-              },
-              {
-                "word": "prediction error",
-                "phonetic": "/prɪˈdɪkʃən ˈerər/",
-                "part": "n. phr.",
-                "translation": "预测误差"
-              },
-              {
-                "word": "cortisol",
-                "phonetic": "/ˈkɔːrtɪsɔːl/",
-                "part": "n.",
-                "translation": "皮质醇"
-              },
-              {
-                "word": "chronic",
-                "phonetic": "/ˈkrɑːnɪk/",
-                "part": "adj.",
-                "translation": "长期的；慢性的"
-              },
-              {
-                "word": "resilience",
-                "phonetic": "/rɪˈzɪliəns/",
-                "part": "n.",
-                "translation": "韧性；恢复力"
-              },
-              {
-                "word": "adaptive",
-                "phonetic": "/əˈdæptɪv/",
-                "part": "adj.",
-                "translation": "适应性的"
-              },
-              {
-                "word": "inflexible",
-                "phonetic": "/ɪnˈfleksəbəl/",
-                "part": "adj.",
-                "translation": "僵化的；不灵活的"
-              },
-              {
-                "word": "avoidance",
-                "phonetic": "/əˈvɔɪdəns/",
-                "part": "n.",
-                "translation": "回避；逃避"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Evolution prepared us for a world that is uncertain but with hazards that are often foreseeable and, to some extent, calculable.",
-                "analysis": [
-                  "主干是 Evolution prepared us：Evolution 为主语，prepared 为谓语，us 为宾语。",
-                  "for a world 补充“为怎样的世界做准备”；that is uncertain 是修饰 world 的关系从句。",
-                  "but with hazards 构成对照：世界虽不确定，危险仍可能具有可预见性。",
-                  "that are often foreseeable and ... calculable 修饰 hazards；often 与 to some extent 都限制断言强度。",
-                  "可借鉴 be prepared for... 描写适应环境，并列形容词呈现两面特征。"
-                ],
-                "translation": "进化使我们能够应对一个充满不确定性的世界，但其中的危险往往可以预见，并在一定程度上加以估量。"
-              },
-              {
-                "original": "In the long run, this strategy won’t work.",
-                "analysis": [
-                  "主干为 this strategy won’t work，主语 this strategy，谓语 won’t work。",
-                  "句首 In the long run 是时间状语，意为“从长远来看”。",
-                  "won’t work 是对未来效果的否定判断；这里承接前文对长期回避策略的讨论。",
-                  "逻辑上以短期似乎有效与长期失效形成对照，适合转入后果分析。",
-                  "写作中可用 In the long run, ... 引出长期影响，再用 work 表示“奏效”。"
-                ],
-                "translation": "从长远来看，这种策略行不通。"
-              },
-              {
-                "original": "“If you expect to be surprised, you can come back more quickly,” she says.",
-                "analysis": [
-                  "引语主体是 If 从句加主句：If you expect to be surprised 为条件，you can come back more quickly 为结果。",
-                  "to be surprised 是不定式被动结构，作 expect 的补足内容，表达“预期会遇到意外”。",
-                  "can 表示能力或可能性；more quickly 是比较级副词，修饰 come back。",
-                  "引语后的 she says 是叙述者交代来源的插入式表达，英语引语常用逗号衔接。",
-                  "条件句适合表达建议的适用情境；come back 在此指更快恢复，而非字面“回来”。"
-                ],
-                "translation": "她说：“如果你预料到会遇到意外，就能更快地恢复过来。”"
-              }
-            ]
-          },
-          {
-            "title": "How is the US economy really doing under President Trump?",
-            "source": "BBC",
-            "published": "2026-10-20",
-            "url": "https://www.bbc.co.uk/news/articles/cv98ze40jz18o",
-            "readingTime": "约 5 分钟",
-            "topic": "经济 / 美国增长、通胀与生活成本",
-            "summary": "BBC Verify 逐项核查特朗普对经济的乐观表述，指出整体表现并非单向好坏。美国经济仍在增长，年度化 GDP 增速为 2.2%，人工智能数据中心投资提供支撑；但通胀升至 3.7%，高于其 2025 年初的水平，文章将关税和中东能源供应受扰列为推高物价的因素。家庭收入中位数虽继续上升，智库估算不同收入群体受到税收、补贴到期和价格上涨的影响并不相同。就业增长放慢，政府借款收益率和房贷利率上升，又加重购房负担。文章通过增长、物价、收入、就业和借贷成本等指标对照政治主张，结论是宏观增长不能单独代表普通家庭的生活压力。",
-            "reason": [
-              "以经济增长和生活成本检验政治主张，属于经济、商业与公共政策类阅读主题。",
-              "正文按 GDP、通胀、收入、就业、借贷成本分节，用不同指标拼合出复杂结论。",
-              "适合练习数字信息定位、比较趋势、识别归因措辞和概括“总体增长但家庭感受分化”的主旨。",
-              "词汇涵盖 tariff、inflation、median、deficit、yield 等宏观经济常用表达。",
-              "写作可模仿先呈现主张、再按证据分项核验、最后限定结论的平衡论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "boast",
-                "phonetic": "/bəʊst/",
-                "part": "v.",
-                "translation": "自夸；夸耀"
-              },
-              {
-                "word": "faring",
-                "phonetic": "/ˈfeərɪŋ/",
-                "part": "v.",
-                "translation": "进展；表现"
-              },
-              {
-                "word": "sweeping",
-                "phonetic": "/ˈswiːpɪŋ/",
-                "part": "adj.",
-                "translation": "大范围的；全面的"
-              },
-              {
-                "word": "tariff",
-                "phonetic": "/ˈtærɪf/",
-                "part": "n.",
-                "translation": "关税"
-              },
-              {
-                "word": "annualised",
-                "phonetic": "/ˈænjuəlaɪzd/",
-                "part": "adj.",
-                "translation": "按年计算的"
-              },
-              {
-                "word": "forecast",
-                "phonetic": "/ˈfɔːrkæst/",
-                "part": "n./v.",
-                "translation": "预测；预报"
-              },
-              {
-                "word": "median",
-                "phonetic": "/ˈmiːdiən/",
-                "part": "n./adj.",
-                "translation": "中位数；中间值的"
-              },
-              {
-                "word": "expiry",
-                "phonetic": "/ɪkˈspaɪəri/",
-                "part": "n.",
-                "translation": "到期；失效"
-              },
-              {
-                "word": "deficit",
-                "phonetic": "/ˈdefɪsɪt/",
-                "part": "n.",
-                "translation": "赤字；亏空"
-              },
-              {
-                "word": "yield",
-                "phonetic": "/jiːld/",
-                "part": "n.",
-                "translation": "收益率"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The US economy is also being helped by an AI investment boom, and could falter if that spending were to dry up.",
-                "analysis": [
-                  "前半句主干是 The US economy is being helped，主语 economy 与 be helped 构成被动进行时。",
-                  "by an AI investment boom 指明推动增长的因素；also 表示这并非唯一支撑。",
-                  "and 连接第二个谓语 could falter；if 引导条件从句，说明投资支出减少时可能出现的结果。",
-                  "were to dry up 是较正式的假设表达，dry up 表示枯竭或突然减少。",
-                  "句子同时呈现当前支撑与潜在风险，适合用于平衡分析。"
-                ],
-                "translation": "人工智能投资热潮也在支撑美国经济；如果这类支出枯竭，经济可能会走弱。"
-              },
-              {
-                "original": "Average US household incomes are still rising under Trump.",
-                "analysis": [
-                  "主干为 Average US household incomes are rising，主语是 incomes，谓语是现在进行时。",
-                  "Average、US、household 依次修饰 incomes，限定为美国平均家庭收入。",
-                  "still 表示这一趋势仍在持续；under Trump 是时间/背景状语。",
-                  "后文进一步区分不同收入群体，提醒读者总量上升不等于人人受益相同。",
-                  "可用 still + 进行时描述正在延续的趋势，再用 however 引出限制。"
-                ],
-                "translation": "特朗普执政期间，美国平均家庭收入仍在上升。"
-              },
-              {
-                "original": "But that is significantly down on the 122,000 jobs added each month in the final year of Biden's presidency.",
-                "analysis": [
-                  "But 标出转折；that 指代前文特朗普重返白宫后每月新增的 34,000 个岗位。",
-                  "主干是 that is down on...，down on 在此表示低于某一比较基准。",
-                  "significantly 作程度副词修饰 down，强调差距显著。",
-                  "added each month 是过去分词短语，后置修饰 122,000 jobs；in the final year... 限定比较时期。",
-                  "可用 be down on + 数字/基准描述指标下降，并用 But 连接反向证据。"
-                ],
-                "translation": "但这一数字明显低于拜登任期最后一年每月新增的 12.2 万个岗位。"
               }
             ]
           }
