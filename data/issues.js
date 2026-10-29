@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-28T10:11:06+08:00",
+  "updatedAt": "2026-10-29T10:17:10+08:00",
   "issues": [
+    {
+      "date": "2026-10-29",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Copilot 图片生成、跨仓库 Projects 与 GitHub Agentic Workflows GA；注意预览资格、AI credits 和工作流的模型成本。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 聊天新增图片生成与编辑",
+            "summary": "GitHub Copilot 可在聊天中按自然语言生成或编辑图片，先在对话中预览，再直接保存到项目工作区，减少切换到独立图像工具的步骤。",
+            "howTo": "在 VS Code、GitHub Copilot app 或 Copilot CLI 打开 Copilot chat，描述所需图片；查看内嵌预览后按需继续修改，图片会保存到当前工作区。",
+            "impact": "学生可为课程原型、展示页或报告草拟配图，并在同一开发环境中继续修改项目；提交前仍应核查图片内容和使用权。",
+            "free": "官方公告称此功能处于 public preview，适用于 Copilot Pro、Pro+、Business 和 Enterprise；图片生成按 image tokens 单独计费并计入套餐 AI credits。公告未说明地区范围或单独配额，Copilot Free 不在公告列出的适用计划中。",
+            "category": "GitHub Copilot / 图片生成",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/"
+            }
+          },
+          {
+            "event": "GitHub Copilot app 推出跨仓库 Projects 预览",
+            "summary": "Copilot app 的 Projects 可围绕一个持续目标汇集多个仓库、设计稿、Slack 讨论和笔记，由 Copilot 协调多个 agent 并集中呈现结果；单仓库任务仍可直接从仓库启动 session。",
+            "howTo": "更新或打开 GitHub Copilot app，在 Projects 旁新建项目，描述目标并添加相关仓库或资料，再选择可用模型与工具并提交任务；在项目概览中跟进进度、审阅结果。",
+            "impact": "小组课程项目可用它汇总需求、设计和多个仓库的任务状态，或先整理资料再分配实现工作；正式合并代码前仍需人工审阅 agent 结果。",
+            "free": "官方文档将 Projects 标为 public preview，但未说明各 Copilot 套餐的可用资格、地区、价格或使用额度；需在 Copilot app 中查看账号当前可用功能。",
+            "category": "GitHub Copilot / 项目协作",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases"
+            }
+          },
+          {
+            "event": "GitHub Agentic Workflows 正式发布",
+            "summary": "GitHub Next 的开源 Agentic Workflows 正式可用：开发者用自然语言 Markdown 定义任务，再编译为标准 GitHub Actions YAML，让编码 agent 在 Actions 中处理 issue 分类、CI 失败分析、文档更新或测试编写。",
+            "howTo": "在有写权限且启用了 GitHub Actions 的仓库，安装 GitHub CLI 扩展（`gh extension install github/gh-aw`），用 `gh aw add-wizard` 添加示例工作流；先检查模型引擎、权限和成本设置，再触发运行。",
+            "impact": "学生团队可将重复的 issue 整理或测试辅助工作做成可审阅的仓库自动化，也能练习用 Markdown 定义 agent 任务、用 Actions 执行的开发流程。",
+            "free": "官方称该功能在 github.com 面向 GitHub Free、Team 和 Enterprise 可用；若使用默认 GitHub Copilot CLI 引擎则需要 Copilot 许可。公告未说明 Actions 分钟数、第三方模型费用、地区或具体调用额度。",
+            "category": "GitHub Agentic Workflows / 自动化",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：免费体验基础编程辅助",
+            "summary": "GitHub 官方计划页列出 Copilot Free，提供有限范围的 Copilot 功能，可免费尝试 AI 编程辅助；学生也可在页面核验是否符合单独的 Copilot Student 资格。",
+            "howTo": "打开 GitHub Copilot plans 页面，选择 Start using Copilot Free，按页面提示启用后在支持的 Copilot 客户端中尝试当前开放的 AI 编程辅助功能。",
+            "impact": "适合初学者在课程项目中试用 AI 编程辅助，并练习核对建议、运行测试和独立判断结果；不要提交未经检查的代码。",
+            "free": "官方计划页将 Copilot Free 标为免费，但功能有限；页面未列明其具体调用配额、地区资格或截止日期。Copilot Student 另需学生验证，不能与 Free 计划资格混为一谈。",
+            "category": "长期免费服务 / 编程辅助",
+            "source": {
+              "name": "GitHub 官方 Copilot 计划说明",
+              "published": "官方未说明",
+              "url": "https://docs.github.com/en/copilot/get-started/plans"
+            }
+          },
+          {
+            "event": "Qwen3-0.6B：Apache 2.0 许可的可下载开放模型",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B 权重，标注 Apache 2.0 许可；卡片列出 0.6B 参数和 32,768 token 上下文，并给出 Transformers 加载示例。",
+            "howTo": "打开模型卡查看许可和硬件要求；按 Quickstart 安装最新版 `transformers`，用 `Qwen/Qwen3-0.6B` 加载 tokenizer 与模型，在本地输入课程问答或翻译示例进行实验。",
+            "impact": "有合适本地设备的学生可下载小型模型，练习本地推理、比较提示词或搭建无托管 API 的原型；应自行评估输出准确性与设备资源占用。",
+            "free": "模型权重按 Apache 2.0 许可提供下载使用；模型卡未说明官方托管 API 的免费额度、地区资格或截止日期。本地推理的硬件、存储和电力成本由使用者承担。",
+            "category": "开放模型权重 / 本地实验",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+            }
+          },
+          {
+            "event": "Google AI 高校学生优惠：兑换后 12 个月订阅权益",
+            "summary": "Google One 官方条款为符合条件的高校学生提供兑换后 12 个月的订阅权益，具体订阅计划取决于学校所在国家或地区。",
+            "howTo": "先核对官方优惠条款，再使用个人 Google 账号完成 SheerID 学生验证和 Google Payments 付款方式设置，按页面提示兑换；若不准备续订，需在优惠期结束前取消。",
+            "impact": "学生可在优惠期内使用所在地区实际提供的 Google AI 订阅权益整理课程材料或辅助复习；兑换前确认本地权益、使用限制和续费日期。",
+            "free": "兑换后 12 个月免订阅费；须年满 18 岁、在支持地区（不含香港、澳门和突尼斯）的高等教育机构就读并通过 SheerID 验证，另需个人 Google 账号及合格付款方式；2026-12-31 前兑换。期满自动按当地标准月费续订（法律要求同意的地区除外），可取消；使用额度可能不同且会变化。",
+            "category": "教育优惠 / Google AI",
+            "source": {
+              "name": "Google One 官方学生优惠条款",
+              "published": "2026-08-19",
+              "url": "https://one.google.com/offer/studentoffer8?g1_landing_page=0"
+            }
+          },
+          {
+            "event": "DeepL Translator 免费版：每月 50,000 字符翻译",
+            "summary": "DeepL 官方计划对比页列出免费版每位用户每月 50,000 个字符的文本翻译额度，以及 1 个、最大 5 MB 的文件翻译。",
+            "howTo": "在 DeepL Translator 粘贴英语段落或上传课程文档进行初译；对照原文检查术语、语气和逻辑连接，再自行修改，不把机器译文直接当作作业答案。",
+            "impact": "阅读论文摘要或核对英文材料时，可先获得中文草译，再回到原文学习句法和术语；月度字符与文档限制适合短材料，不适合整本书批量翻译。",
+            "free": "免费版文本额度为每用户每月 50,000 字符，文件翻译为 1 个、最大 5 MB；官方计划页未说明该文件额度的周期、地区资格、额外账号条件或截止日期。",
+            "category": "免费学习工具 / 翻译",
+            "source": {
+              "name": "DeepL 官方计划与定价页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "Ollama：MIT 许可的本地开放模型运行器",
+            "summary": "Ollama 官方仓库按 MIT 许可发布运行器，并提供 macOS、Windows、Linux 安装方式及在本机运行开放模型的命令示例。",
+            "howTo": "从 Ollama 官方下载页安装对应系统版本，打开终端运行 `ollama run gemma4`，按提示下载模型并开始对话；可在官方模型库选择其他模型并单独核对其许可。",
+            "impact": "可用来练习本地模型问答、比较同一课程问题在不同模型上的回答；适合希望试验本地推理、且拥有足够设备存储与算力的学生。",
+            "free": "Ollama 运行器代码采用 MIT 许可；本地运行需要自行承担设备、存储和电力成本，模型权重另有各自许可。官方仓库未说明最低硬件要求、地区限制或固定使用配额。",
+            "category": "开放模型工具 / 本地运行",
+            "source": {
+              "name": "Ollama 官方 GitHub 仓库",
+              "published": "官方未说明",
+              "url": "https://github.com/ollama/ollama"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Working-class academics are still struggling to fit in at university",
+            "source": "The Conversation",
+            "published": "2026-10-26",
+            "url": "https://theconversation.com/working-class-academics-are-still-struggling-to-fit-in-at-university-293049",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "教育与社会 / 高校阶层包容、学术职业与身份认同",
+            "summary": "文章指出，大学扩大弱势背景学生入学机会，并不代表高校教职员工也实现了同等包容：英国高校并未常规收集学者的社会经济背景数据，因此代表性仍难以量化。作者结合研究与自身经历说明，工作阶层学者往往被默认为需要适应中产规范，例如弱化口音或隐去出身；这种融入成本会消耗情感精力并损害真实表达。文章继而把问题从个人适应转向制度责任：少数员工网络只能作为起点，大学还应审视奖励机制与既有规范，建立无需个人压抑身份也能获得认同的环境。结论强调，若包容仍以同化为条件，高等教育就会继续复制历史不平等。",
+            "reason": [
+              "主题将教育机会、阶层流动与职场公平结合，适合教育公平和社会流动类考题。",
+              "行文从数据缺口切入，继而结合研究解释同化压力及个人代价，最后提出制度层面的解决方向。",
+              "可练习概括中心论点、区分个体经验与结构性证据，并判断作者为何把责任归于机构。",
+              "词汇涉及 socioeconomic、assimilation、authenticity、systemic 等抽象社会科学表达。",
+              "写作可借鉴“扩大机会不等于实现平等”的对照，以及由个体困境转向制度责任的论证路径。"
+            ],
+            "vocabulary": [
+              {
+                "word": "under-represented",
+                "phonetic": "/ˌʌndəˌreprɪˈzentɪd/",
+                "part": "adj.",
+                "translation": "代表性不足的"
+              },
+              {
+                "word": "socioeconomic",
+                "phonetic": "/ˌsəʊsiəʊˌiːkəˈnɒmɪk/",
+                "part": "adj.",
+                "translation": "社会经济的"
+              },
+              {
+                "word": "systemic",
+                "phonetic": "/sɪˈstemɪk/",
+                "part": "adj.",
+                "translation": "系统性的"
+              },
+              {
+                "word": "conditional",
+                "phonetic": "/kənˈdɪʃənəl/",
+                "part": "adj.",
+                "translation": "有条件的"
+              },
+              {
+                "word": "authenticity",
+                "phonetic": "/ˌɔːθenˈtɪsəti/",
+                "part": "n.",
+                "translation": "真实性；真实表达"
+              },
+              {
+                "word": "assimilate",
+                "phonetic": "/əˈsɪməleɪt/",
+                "part": "v.",
+                "translation": "同化；融入"
+              },
+              {
+                "word": "onus",
+                "phonetic": "/ˈəʊnəs/",
+                "part": "n.",
+                "translation": "责任；义务"
+              },
+              {
+                "word": "erode",
+                "phonetic": "/ɪˈrəʊd/",
+                "part": "v.",
+                "translation": "逐渐损害；削弱"
+              },
+              {
+                "word": "implicitly",
+                "phonetic": "/ɪmˈplɪsɪtli/",
+                "part": "adv.",
+                "translation": "含蓄地；不明说地"
+              },
+              {
+                "word": "perpetuate",
+                "phonetic": "/pəˈpetʃueɪt/",
+                "part": "v.",
+                "translation": "使持续；使永久化"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Higher education is not a neutral space.",
+                "analysis": [
+                  "主干是 Higher education is a space，系动词后由名词短语作表语。",
+                  "not 否定 neutral，直接提出全文的核心判断，而非描述校园的物理空间。",
+                  "这句承接标题中的“融入困难”，把讨论从个人经历提升到制度环境。",
+                  "可借鉴 not a neutral space 概括机构如何承载既有权力关系。",
+                  "简短判断句为后续历史背景和研究证据建立论述框架。"
+                ],
+                "translation": "高等教育并不是一个中立的空间。"
+              },
+              {
+                "original": "There is a hidden cost of fitting in.",
+                "analysis": [
+                  "There is 是存在句，真正的语义中心是 a hidden cost。",
+                  "of fitting in 是介词短语，说明这种隐性代价与融入行为相关。",
+                  "hidden 与 cost 组合，把外表上的适应转化为需要揭示的心理和情感负担。",
+                  "这句由前文的适应要求转向其后果，是段落论证的转折点。",
+                  "可使用 the hidden cost of... 引出某种做法未被看见的代价。"
+                ],
+                "translation": "融入其中存在一种隐性的代价。"
+              },
+              {
+                "original": "Universities do not just shape knowledge.",
+                "analysis": [
+                  "主干为 Universities shape knowledge，do not just 对谓语进行否定和限制。",
+                  "just 暗示大学的作用不止于知识生产，后文将补充其对知识生产者的影响。",
+                  "此处以 not just 引出超出表面功能的另一层作用，形成递进。",
+                  "该句位于结尾，呼应文章从学者个人经历扩展到高校制度责任的结构。",
+                  "可借鉴 do not just X，为后续补充更深层影响留出论证空间。"
+                ],
+                "translation": "大学塑造的不只是知识。"
+              }
+            ]
+          },
+          {
+            "title": "What is ‘human composting’ – and how does it work?",
+            "source": "The Conversation",
+            "published": "2026-10-26",
+            "url": "https://theconversation.com/what-is-human-composting-and-how-does-it-work-294951",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "环境与文化 / 绿色殡葬、遗体处理与公共政策",
+            "summary": "文章从人死后遗体如何处理这一个人选择出发，介绍澳大利亚新南威尔士州通过允许“人体堆肥”的立法，并解释自然有机还原如何在受控容器中借助木屑、稻草等材料和微生物加速分解。作者先梳理传统土葬、绿色葬礼及其空间和环境问题，再比较新方法与其他选择，指出这一过程并非所有材料都会自然分解，且需要后续处理。文章也提醒，立法通过不等于设施已可用，实施仍需监管、专门设施和足够需求；各种方式的可持续性都需要审视，目前资料不足以作简单优劣排序。结尾回到价值判断：遗体最终都会进入自然循环，关键在于以知情讨论决定方式、地点与时间。",
+            "reason": [
+              "主题兼有环境可持续性、文化习俗与殡葬政策，适合公共议题和生活方式类阅读。",
+              "文章按提出新选择、解释原理、比较替代方案、指出证据局限的顺序展开，结构清晰。",
+              "可练习辨析事实说明与价值判断，并理解作者为何拒绝给出简单的优劣结论。",
+              "词汇覆盖 decomposition、legislation、scrutiny、offset 等环境与政策议题常用词。",
+              "写作可借鉴先说明技术机制、再讨论外部影响与限制，最后回到个人选择的层次安排。"
+            ],
+            "vocabulary": [
+              {
+                "word": "decomposition",
+                "phonetic": "/ˌdiːkɒmpəˈzɪʃən/",
+                "part": "n.",
+                "translation": "分解；腐解"
+              },
+              {
+                "word": "cemetery",
+                "phonetic": "/ˈsemətri/",
+                "part": "n.",
+                "translation": "墓地；公墓"
+              },
+              {
+                "word": "sustainable",
+                "phonetic": "/səˈsteɪnəbəl/",
+                "part": "adj.",
+                "translation": "可持续的"
+              },
+              {
+                "word": "microorganisms",
+                "phonetic": "/ˌmaɪkrəʊˈɔːɡənɪzəmz/",
+                "part": "n.",
+                "translation": "微生物"
+              },
+              {
+                "word": "legislation",
+                "phonetic": "/ˌledʒɪsˈleɪʃən/",
+                "part": "n.",
+                "translation": "立法；法律"
+              },
+              {
+                "word": "terramation",
+                "phonetic": "/ˌterəˈmeɪʃən/",
+                "part": "n.",
+                "translation": "人体堆肥；自然有机还原"
+              },
+              {
+                "word": "nutrient-rich",
+                "phonetic": "/ˈnjuːtriənt rɪtʃ/",
+                "part": "adj.",
+                "translation": "富含养分的"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "仔细审查；审视"
+              },
+              {
+                "word": "offset",
+                "phonetic": "/ˌɒfˈset/",
+                "part": "v.",
+                "translation": "抵消；弥补"
+              },
+              {
+                "word": "closure",
+                "phonetic": "/ˈkləʊʒə/",
+                "part": "n.",
+                "translation": "了结感；情感上的释怀"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "There is no simple answer.",
+                "analysis": [
+                  "There is 是存在句，no simple answer 是其核心信息。",
+                  "no 否定 answer 的存在，simple 限定的是答案难以简化，而非问题无解。",
+                  "这句承接前文列出的多种遗体处理方式，提示比较需要考虑多个因素。",
+                  "它为后文讨论各选项的利弊和证据不足作出让步式铺垫。",
+                  "可借鉴 There is no simple answer to... 引出复杂议题中的多方权衡。"
+                ],
+                "translation": "这个问题没有简单的答案。"
+              },
+              {
+                "original": "Terramation speeds up natural decomposition under controlled conditions.",
+                "analysis": [
+                  "句子主干是 Terramation speeds up decomposition，主语为处理方式，谓语为 speeds up。",
+                  "natural 修饰 decomposition，说明被加速的是自然分解过程。",
+                  "under controlled conditions 是介词短语，交代过程发生的条件。",
+                  "作者用一般现在时说明该方法的工作原理，而不是某次个案结果。",
+                  "可借鉴 speed up... under... 描述某种条件如何改变一个过程。"
+                ],
+                "translation": "人体堆肥会在受控条件下加快自然分解。"
+              },
+              {
+                "original": "The question is not whether we decompose, but how, where and how quickly.",
+                "analysis": [
+                  "主干为 The question is not A, but B，通过 not...but... 重设讨论重点。",
+                  "whether we decompose 是 whether 引导的表语从句，指出分解这一事实并非真正争议。",
+                  "how、where、how quickly 并列，分别追问方式、地点和速度。",
+                  "逻辑从“是否发生”转向“以何种方式发生”，为比较政策和个人选择收束全文。",
+                  "可借鉴 not whether..., but how... 将论证从既定事实推进到可选择的方案。"
+                ],
+                "translation": "问题不在于我们是否会分解，而在于如何分解、在哪里分解，以及分解得多快。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-28",
       "status": "ready",
@@ -2627,5 +2972,5 @@ window.BRIEFING_DATA = {
         ]
       }
     }
-  ]
+  ].slice(0, 7)
 };
