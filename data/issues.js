@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-10-30T10:30:00+08:00",
+  "updatedAt": "2026-10-31T10:16:00+08:00",
   "issues": [
+    {
+      "date": "2026-10-31",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Gemini 文件生成与教材接入、Copilot 图像生成预览；免费资源覆盖翻译、代码辅助、图像创作、云端笔记本和开放模型。",
+        "updates": [
+          {
+            "event": "Gemini 支持在对话中生成、预览和编辑学习文件",
+            "summary": "Gemini app 新增文件生成与编辑：可在聊天中创建并预览 PDF、文档、演示文稿、表格、代码等，再直接编辑文件或选中文字让 Gemini 修改。PDF 的预览和编辑支持网页与移动端，其他格式目前仅支持网页。",
+            "howTo": "打开 Gemini 网页版或应用，在对话中上传课堂笔记并要求生成 PDF 复习指南；打开预览后可手动编辑或选中内容要求修改。若要处理 Google Docs、Sheets、幻灯片、Markdown、TXT 或代码文件，请使用网页版。",
+            "impact": "学生可把手写课堂笔记整理成可检查的复习资料，并在原文件中迭代提纲或表格；应逐项核对生成内容与课程材料，避免把文件排版正确误当作事实准确。",
+            "free": "Google 称功能向 Gemini app 已开放地区的所有用户提供；公告未说明是否需付费订阅、具体账号条件、地区清单或使用额度。PDF 支持网页和移动端，其他列出的文件格式仅支持网页。",
+            "category": "Google Gemini / 文件生成与编辑",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-10-29",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/"
+            }
+          },
+          {
+            "event": "Gemini Notebook 为学生开放数百本教材",
+            "summary": "Gemini Notebook 新增教材目录，学生可从 OpenStax、Open Textbook Library、S Chand Publishing 等美国和印度的提供方添加数百本教材。Notebook 的回答会以教材内容为依据，并附行内引用和回到原始来源的链接，也可据此生成学习指南、练习测验和闪卡。",
+            "howTo": "打开 Gemini Notebook 并进入一个 notebook，选择“Add sources（添加来源）”再选“Textbooks（教材）”；从目录添加课程教材后，可要求它制作带教材依据的学习指南、练习题或闪卡。",
+            "impact": "学生可用指定教材而不是泛化网络答案来复习，并沿引用链接核实依据；可用练习题检查知识点，但仍应以授课教师指定版本为准。",
+            "free": "Google 明确称这些教材可免费使用，当前目录来自美国和印度的提供方；具体可用教材、其他地区开放情况、账号要求和使用额度官方未说明。",
+            "category": "Google Gemini Notebook / 免费教材学习",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-10-29",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 可在编码对话中生成并编辑图像",
+            "summary": "Copilot 新增自然语言图像生成和编辑：所选推理模型可调用由 GPT Image 2.5 Flare 驱动的专用图像工具，生成结果在对话内预览并保存到项目，减少从编码任务切换到其他图像工具的步骤。",
+            "howTo": "在 VS Code、GitHub Copilot app 或 Copilot CLI 中打开 Copilot Chat，用自然语言描述所需图片；查看对话中的预览并确认项目内保存的结果。组织管理员可通过模型策略关闭该图像模型。",
+            "impact": "做课程项目或原型的学生可在同一编码上下文中试做界面素材，再检查并调整视觉结果；发布前应确认素材适用性，并注意默认不会添加“Made with AI”水印。",
+            "free": "目前为公开预览，仅公告列出的 Copilot Pro、Pro+、Business 和 Enterprise 计划可用；图像 token 会另行计费并计入计划 AI credits。公告未列出 Free 或 Student 计划资格，也未说明单张价格、具体额度和地区范围；可选择开启可见的 AI 水印，默认关闭。",
+            "category": "GitHub Copilot / 图像生成与编辑",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "DeepL 免费版：每月 50,000 字符翻译",
+            "summary": "DeepL 官方方案对比页列出免费版每位用户每月 50,000 个字符的文本翻译额度；另列每月 1 次文件翻译（文件最大 5 MB）和 1 条已保存翻译。",
+            "howTo": "打开 DeepL 翻译网页，粘贴一段英文阅读材料并选择目标语言；翻译文档前先确认文件不超过 5 MB，并留意免费版每月一次的文件额度。",
+            "impact": "适合对照阅读论文摘要、检查生词和理解句间关系；机器译文可用于辅助理解，不应替代原文精读或未经核对地用于正式写作。",
+            "free": "官方方案页标注免费版每用户每月 50,000 字符、1 次文件翻译（最多 5 MB）和 1 条已保存翻译；地区、是否需注册及免费期限官方未说明。",
+            "category": "长期免费工具 / 翻译与阅读",
+            "source": {
+              "name": "DeepL 官方方案页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：免费代码补全和有限聊天",
+            "summary": "GitHub 官方方案页列出 Copilot Free，可在受支持的 IDE、GitHub、CLI 等环境使用有限的聊天和 agent 功能，并提供每月 2,000 次代码补全。",
+            "howTo": "登录 GitHub 后进入 Copilot Free 方案并按指引启用；在 VS Code 等受支持 IDE 安装 Copilot 扩展，先用小型课程代码练习补全和提问，并在设置页查看用量。",
+            "impact": "适合练习代码解释、补全和小型调试任务；免费层模型和聊天/agent 用量有限，生成代码应自行运行测试并理解后再提交。",
+            "free": "官方方案页标注 Free 计划每月 2,000 次代码补全，并提供有限聊天和 agent 使用；聊天/agent 的具体额度、地区资格及免费期限官方未说明。图像生成等付费预览功能不包含在此权益说明内。",
+            "category": "长期免费工具 / 编程学习",
+            "source": {
+              "name": "GitHub Copilot 官方方案页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Adobe Firefly 免费用户：每日补充生成次数",
+            "summary": "Adobe 官方帮助页称，没有付费方案的 Firefly、Express、Stock、Photoshop 网页版、Acrobat 和 Adobe 移动应用用户，可在精选模型上使用有限的免费每日生成次数；次数每天刷新。",
+            "howTo": "打开 Adobe Firefly 或 Adobe Express，登录后选择一个免费生成式功能，先用小规模提示词试做学习海报或插图；可在账户中检查生成额度，达到限制后等待刷新。",
+            "impact": "适合制作课程展示的概念草图或视觉素材初稿；免费层只提供精选模型和有限生成，正式使用前应复核内容并遵守素材与版权要求。",
+            "free": "官方确认无付费方案的用户可获得有限的每日生成次数，额度每天刷新；具体次数、模型名单、账号条件、地区和持续期限官方未说明，且功能和模型可能调整。",
+            "category": "每日免费生成 / 图像与创作",
+            "source": {
+              "name": "Adobe 官方帮助中心",
+              "published": "官方未说明",
+              "url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+            }
+          },
+          {
+            "event": "Google Colab：免费运行 Jupyter 学习笔记本",
+            "summary": "Google 官方 FAQ 确认 Colab 是无需本地安装的托管 Jupyter Notebook 服务，免费提供包括 GPU 和 TPU 在内的计算资源，适用于教育、数据科学和机器学习。",
+            "howTo": "打开 Colab，新建笔记本或从 GitHub 上传已有 notebook；在代码单元中运行课程示例，并在运行时菜单查看当前可用硬件。",
+            "impact": "可用于练习 Python、数据分析和小型机器学习实验，不必先配置本地环境；免费资源不保证可用，长任务应保存代码和输出并准备本地替代方案。",
+            "free": "Google 明确称 Colab 免费提供计算资源，包括 GPU/TPU，但资源不保证且不无限，使用限制会变化；固定配额、地区和账号要求官方未说明。",
+            "category": "免费云端计算 / 编程与数据学习",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Phi-4-mini-instruct：MIT 许可的可下载开放模型",
+            "summary": "Microsoft 官方 Hugging Face 模型卡提供 Phi-4-mini-instruct 权重，许可标注为 MIT；模型卡说明其适用于多语言指令任务，并提供 Transformers 本地推理示例。",
+            "howTo": "打开官方模型卡核对使用说明和设备要求，使用 Transformers 按模型 ID `microsoft/Phi-4-mini-instruct` 下载权重并本地加载；先用无敏感内容的短问题测试输出。",
+            "impact": "适合在课程项目中学习模型下载、本地推理和指令格式，也能在不依赖托管 API 的情况下搭建小型原型；模型卡提醒其可能产生事实错误，重要内容需查证。",
+            "free": "模型卡标注 MIT 许可并公开提供权重；托管推理额度、地区和账号条件官方未说明，本地运行仍需自行承担兼容硬件、存储和电力成本。",
+            "category": "开放模型权重 / 本地推理实验",
+            "source": {
+              "name": "Microsoft 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Twice as many plants and animals sold in wildlife trade as previously thought, says report",
+            "source": "The Guardian",
+            "published": "2026-10-30",
+            "url": "https://www.theguardian.com/environment/2026/oct/30/twice-as-many-plants-and-animals-sold-in-wildlife-trade-as-previously-thought-says-report",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "环境与社会 / 野生动物贸易规模、数据盲区与保护监管",
+            "summary": "文章从一项研究的新估算切入：全球被使用或交易的野生动植物物种达到 107,356 种，是此前约 50,000 种估值的两倍多。报道解释研究为何得到更大数字——数据集更完整，也纳入了线上装饰品和异宠交易等新研究；随后指出估算仍可能偏低，现有贸易监测和国际保护名录覆盖不足，合法与非法交易之间也存在监管漏洞。文章并未将所有野生动物贸易都等同于走私，而是区分渔业、木材、时尚和装饰品等不同领域及其可持续性。结尾回到政策问题：缺少代表性、系统的数据会妨碍识别风险和衡量国际保护目标进展，因此需要更有效的监测与信息共享。",
+            "reason": [
+              "野生动物贸易、生态保护和跨境监管兼具环境与社会治理属性，是常见的公共议题型阅读主题。",
+              "文章按新估值、数据来源、现有盲区、贸易类型和政策需求推进，适合梳理研究证据如何导向治理结论。",
+              "可练习比较新旧估值、识别作者对数字仍可能低估的限定，以及区分合法贸易和非法走私。",
+              "representative、underestimate、loophole、sustainable 等词汇可迁移到环境政策与社会科学论述。",
+              "写作可借鉴“量化问题—说明证据改进—指出监测缺口—提出政策条件”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "species",
+                "phonetic": "/ˈspiːʃiːz/",
+                "part": "n.",
+                "translation": "物种"
+              },
+              {
+                "word": "estimate",
+                "phonetic": "/ˈestɪmeɪt/",
+                "part": "n.",
+                "translation": "估算；估值"
+              },
+              {
+                "word": "representative",
+                "phonetic": "/ˌreprɪˈzentətɪv/",
+                "part": "adj.",
+                "translation": "有代表性的"
+              },
+              {
+                "word": "ornamental",
+                "phonetic": "/ˌɔːrnəˈmentl/",
+                "part": "adj.",
+                "translation": "装饰性的"
+              },
+              {
+                "word": "underestimate",
+                "phonetic": "/ˌʌndərˈestɪmeɪt/",
+                "part": "v.",
+                "translation": "低估"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbəl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              },
+              {
+                "word": "sustainable",
+                "phonetic": "/səˈsteɪnəbəl/",
+                "part": "adj.",
+                "translation": "可持续的"
+              },
+              {
+                "word": "loophole",
+                "phonetic": "/ˈluːphoʊl/",
+                "part": "n.",
+                "translation": "漏洞；规则空子"
+              },
+              {
+                "word": "extinction",
+                "phonetic": "/ɪkˈstɪŋkʃən/",
+                "part": "n.",
+                "translation": "灭绝"
+              },
+              {
+                "word": "systematic",
+                "phonetic": "/ˌsɪstəˈmætɪk/",
+                "part": "adj.",
+                "translation": "系统性的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The dimensions of trade have changed.",
+                "analysis": [
+                  "主干是 The dimensions have changed，主语中心词 dimensions，谓语为现在完成时 have changed。",
+                  "of trade 是介词短语，后置限定 dimensions，说明发生变化的是贸易的规模和形态。",
+                  "现在完成时把过去变化与当前状态相连，为下文解释旧估值为何不够提供逻辑起点。",
+                  "这句话是研究者的直接引语，先提出判断，再由线上交易和新数据集补充证据。",
+                  "可借鉴 the dimensions of X have changed 表达某议题的规模或条件已经发生变化。"
+                ],
+                "translation": "贸易的规模和形态已经发生变化。"
+              },
+              {
+                "original": "Even assessing the value of the legal trade compared with the illegal trade is challenging.",
+                "analysis": [
+                  "主干是 assessing ... is challenging；动名词短语 assessing the value 作句子主语。",
+                  "Even 是强调副词，突出连合法与非法贸易价值的比较都难以完成。",
+                  "of the legal trade 限定 value 的对象，compared with the illegal trade 补充比较基准。",
+                  "句子以证据和衡量难题解释监管边界不清，推动论证从物种数量转向治理困难。",
+                  "可借鉴 Even doing X is challenging 表达某项看似基础的衡量工作仍有难度。"
+                ],
+                "translation": "即使是评估合法贸易相较于非法贸易的价值，也很困难。"
+              },
+              {
+                "original": "Most countries lack any systematic data outside Cites, the study says.",
+                "analysis": [
+                  "主句主干为 Most countries lack data，主语 Most countries，谓语 lack，宾语中心词 data。",
+                  "any systematic 作限定和修饰，强调缺少的是系统性数据，而非泛指所有资料。",
+                  "outside Cites 是介词短语，限定数据缺口的范围；Cites 是《濒危野生动植物种国际贸易公约》的简称。",
+                  "句末 the study says 是报道来源标记，提示这是研究的说法，而非记者无归属的断言。",
+                  "可借鉴 lack systematic data outside X 描述某领域在既有监测机制之外的证据空缺。"
+                ],
+                "translation": "研究称，大多数国家在 CITES 体系之外缺乏任何系统性数据。"
+              }
+            ]
+          },
+          {
+            "title": "Nearly 2 out of 3 teens and tweens use AI chatbots, new research shows",
+            "source": "NPR",
+            "published": "2026-10-30",
+            "url": "https://www.npr.org/2026/10/30/nx-s1-6022278/ai-artificial-intelligence-teens-jed-common-sense-media",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "教育与健康 / 青少年使用聊天机器人、情绪支持与心理健康",
+            "summary": "NPR 报道两项关于美国青少年的调查：Common Sense Media 发现近半数 9 至 12 岁儿童曾使用 AI 聊天机器人或陪伴型工具，13 岁时这一比例接近四分之三；JED Foundation 对 5,500 名 9 至 17 岁学生的调查则发现九成曾使用聊天机器人，近三分之二既用于作业，也用于陪伴或应对压力。文章先呈现学习、任务安排和情绪支持等真实用法，再讨论 JED 调查中聊天机器人使用与较差心理健康指标的相关性。受访研究者明确提醒，数据不能证明因果方向：本已承受困扰的学生可能更常求助 AI，也存在过度依赖削弱日常压力应对能力的可能。报道因此以谨慎而非定论收束，强调还需研究厘清影响机制。",
+            "reason": [
+              "青少年教育、数字工具使用和心理健康相互交叉，适合科技与社会议题的综合阅读。",
+              "文章从两项调查数据出发，转入学生个案和研究者解释，再以因果限制修正初步印象。",
+              "可考查比例与样本来源、调查相关性是否等于因果，以及不同受访者观点的作用。",
+              "correlate、causal、overreliant、distress 等词可用于描述证据强度和心理状态。",
+              "写作可借鉴先呈现数据、再说明局限、最后提出谨慎结论的证据型论证。"
+            ],
+            "vocabulary": [
+              {
+                "word": "survey",
+                "phonetic": "/ˈsɜːrveɪ/",
+                "part": "n.",
+                "translation": "调查；问卷调查"
+              },
+              {
+                "word": "companionship",
+                "phonetic": "/kəmˈpæniənʃɪp/",
+                "part": "n.",
+                "translation": "陪伴"
+              },
+              {
+                "word": "overwhelmed",
+                "phonetic": "/ˌoʊvərˈwelmd/",
+                "part": "adj.",
+                "translation": "不堪重负的"
+              },
+              {
+                "word": "emotional support",
+                "phonetic": "/ɪˈmoʊʃənəl səˈpɔːrt/",
+                "part": "n. phr.",
+                "translation": "情感支持"
+              },
+              {
+                "word": "distress",
+                "phonetic": "/dɪˈstres/",
+                "part": "n.",
+                "translation": "痛苦；忧虑"
+              },
+              {
+                "word": "correlate",
+                "phonetic": "/ˈkɔːrəleɪt/",
+                "part": "v.",
+                "translation": "相关；相互关联"
+              },
+              {
+                "word": "causal",
+                "phonetic": "/ˈkɔːzəl/",
+                "part": "adj.",
+                "translation": "因果关系的"
+              },
+              {
+                "word": "preliminary",
+                "phonetic": "/prɪˈlɪməneri/",
+                "part": "adj.",
+                "translation": "初步的"
+              },
+              {
+                "word": "overreliant",
+                "phonetic": "/ˌoʊvərɪˈlaɪənt/",
+                "part": "adj.",
+                "translation": "过度依赖的"
+              },
+              {
+                "word": "tolerate",
+                "phonetic": "/ˈtɑːləreɪt/",
+                "part": "v.",
+                "translation": "承受；忍受"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Two new surveys show that nearly two-thirds of tweens and teens use AI chatbots.",
+                "analysis": [
+                  "主干是 Two new surveys show，主语 surveys，谓语 show 引出调查结果。",
+                  "that 引导宾语从句，nearly two-thirds of tweens and teens 是从句主语，use 是谓语。",
+                  "nearly 限定比例，避免把接近三分之二误读为精确的三分之二。",
+                  "句子先用复数调查结果建立报道的证据基础，后文再分别说明调查来源和样本。",
+                  "可借鉴 surveys show that... 引入调查发现，并用 nearly 保留数据精度。"
+                ],
+                "translation": "两项新调查显示，接近三分之二的青少年和较年幼的青少年使用 AI 聊天机器人。"
+              },
+              {
+                "original": "But the data don't suggest a causal link, cautions Anderson.",
+                "analysis": [
+                  "核心判断是 the data don't suggest a causal link，主语 data，谓语 don't suggest，宾语 causal link。",
+                  "But 句首转折，限制上一段相关性发现可以推出的结论。",
+                  "a causal 修饰 link，指出数据没有证明 AI 使用与心理健康结果之间存在因果联系。",
+                  "句末 cautions Anderson 是倒装式引语标记，交代这项方法论提醒来自研究者。",
+                  "可借鉴 data do not suggest a causal link 谨慎区分统计相关与因果关系。"
+                ],
+                "translation": "但安德森提醒，这些数据并不能说明存在因果联系。"
+              },
+              {
+                "original": "That, she explains, can lead to worse mental health.",
+                "analysis": [
+                  "主干是 That can lead to worse mental health，That 指代前文所述的依赖 AI、未能练习应对压力的情况。",
+                  "she explains 是插入语，说明判断来自受访研究者的解释。",
+                  "情态动词 can 表示可能结果，不是必然因果；worse 修饰 mental health。",
+                  "该句承接可能机制，把即时情绪缓解与长期应对能力不足连接起来，但仍保留推测语气。",
+                  "可借鉴 X can lead to Y 表达风险路径，并用 can 避免把可能性夸大为确定结论。"
+                ],
+                "translation": "她解释说，这可能导致更差的心理健康状况。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-10-30",
       "status": "ready",
