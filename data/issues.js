@@ -1,6 +1,327 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-01T10:08:47+08:00",
+  "updatedAt": "2026-11-02T10:24:44+08:00",
   "issues": [
+    {
+      "date": "2026-11-02",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 GitHub Agentic Workflows 正式开放，以及 Gemini 两项新模型的受限测试；免费资源包括 Claude、Gemini API、学生开发者权益和 Qwen 开放权重。",
+        "updates": [
+          {
+            "event": "GitHub Agentic Workflows 面向所有 GitHub 计划正式可用",
+            "summary": "GitHub Agentic Workflows 从公开预览转为正式可用。用户可用 Markdown 自然语言文件定义自动化，再由工具编译成 Actions YAML；适用任务包括 issue 分类、CI 失败分析、文档更新和测试编写。",
+            "howTo": "按官方 quickstart 安装 gh-aw CLI 扩展，在课程仓库添加一个 Markdown workflow（例如整理 issue 或起草测试），触发 GitHub Actions 后逐项检查输出，再决定是否合并。",
+            "impact": "小组课程项目可把重复的 issue 整理、构建失败摘要和文档维护交给工作流处理，把时间留给调试与复核；生成的改动仍应由学生审阅。",
+            "free": "GitHub 称该功能已在 GitHub Free、Team 和 Enterprise 上正式开放；若以默认 GitHub Copilot CLI 引擎运行，需要 Copilot 许可。其他引擎的费用、具体额度和地区限制官方未说明。",
+            "category": "GitHub / Agentic Workflows",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
+            }
+          },
+          {
+            "event": "Gemini 4 Carbon 发布，先面向网络防御者受限开放",
+            "summary": "Google 发布 Gemini 4 Carbon，称其面向更长程的编程与 agent 任务，并加强网络防御相关能力。目前先向一部分网络防御者开放，再逐步扩展到受信任伙伴；尚未向普通用户开放。",
+            "howTo": "普通学生目前无法直接试用；符合条件的网络防御者可查看 Fairwind Program 的参与信息。其他用户可等待 Google 后续通过产品渠道逐步开放。",
+            "impact": "学习软件开发或网络防御的学生可关注其受限测试与价格，判断未来是否适合防御性代码审查课程；当前不能把它当作可直接使用的公开工具。",
+            "free": "Google 公布的 introductory API 价格为每百万输入 token 2 美元、每百万输出 token 10 美元；当前先向部分网络防御者和受信任伙伴开放，普通用户尚不能使用。学生资格、免费层、公开开放日期、配额和完整地区条件官方未说明。",
+            "category": "Google Gemini / 模型发布与受限测试",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-10-28",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+            }
+          },
+          {
+            "event": "Google DeepMind 发布 Genie 4 实时交互式世界模型研究预览",
+            "summary": "Genie 4 可按自然语言生成并实时操控模拟场景，例如移动镜头、改变天气或加入角色，同时生成环境音、音乐和互动对白。Google 称目前仅向一小组受信任测试者开放。",
+            "howTo": "现在没有面向普通学生的公开试用入口；受邀测试者可通过测试渠道体验，其他人可先从官方公告链接查看演示，等待其后续进入 Google AI Ultra、Gemini API 或 AI Studio。",
+            "impact": "动画、游戏或新闻传播课程可留意它对场景原型和互动叙事的用途；现阶段学生主要能分析官方演示，不能假设自己已有模型访问权。",
+            "free": "目前只有少量受信任测试者可用；公告称未来将面向 Google AI Ultra 订阅者及 API、AI Studio 的早期合作伙伴开放。订阅价格、免费额度、普通用户资格、地区和具体开放日官方未说明。",
+            "category": "Google DeepMind / 交互式模拟",
+            "source": {
+              "name": "Google DeepMind 官方博客",
+              "published": "2026-10-27",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Claude Free 免费使用网页、桌面和移动端学习工具",
+            "summary": "Claude 定价页列出每月 0 美元的 Free 方案，可在网页、桌面和手机上聊天，并使用网页搜索、文件创建、代码运行和 Artifacts。",
+            "howTo": "打开 Claude 网页版或应用，选择 Free 方案；可让它解释课程代码、整理阅读笔记或把提纲生成文件，再核对引用和结果。",
+            "impact": "适合把阅读材料转成复习提纲、用自然语言理解代码，或制作可继续修改的学习文档；免费使用量有限，不适合作为稳定的大批量处理接口。",
+            "free": "官方标价 0 美元；使用量每 5 小时及每周受限，实际消耗取决于模型、对话长度和文件大小。具体消息数、地区和账号条件官方未说明。",
+            "category": "免费网页与应用 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "通过 GitHub Education 认证可领取学生开发者权益",
+            "summary": "GitHub 为认证学生提供免费 GitHub Pro，包括无限仓库、每月 3,000 分钟 Actions、180 小时 Codespaces，以及 Student Developer Pack 中的开发工具和合作伙伴权益。",
+            "howTo": "在 GitHub Education 学生页面点击加入并提交学校邮箱或带日期的在读证明；通过认证后启用 Pro，再查看 Student Developer Pack 的具体权益。",
+            "impact": "可用于私有课程项目、云端编程环境和自动化测试；适合没有本地开发环境或需要多人协作的学生团队。",
+            "free": "官方资格为年满 13 岁且就读于可授予学位或文凭的课程，并需学校邮箱和/或官方在读证明。页面标出每月 3,000 Actions 分钟、180 Codespaces 小时、2 GB Packages 与 20 GB Codespaces 存储；地区和权益期限官方未说明。",
+            "category": "学生教育权益 / 编程与云端开发",
+            "source": {
+              "name": "GitHub Education 官方学生页面",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Qwen3-8B 开放权重可下载并按 Apache 2.0 许可使用",
+            "summary": "Qwen 官方模型卡提供 Qwen3-8B 权重、Transformers 加载示例和本地部署说明；模型约 8.2B 参数，支持思考与非思考模式。",
+            "howTo": "打开 Qwen/Qwen3-8B 模型卡下载权重，按卡片的 Transformers 示例加载 tokenizer 与模型，再用一段中英互译或代码解释任务做小规模测试。",
+            "impact": "适合在具备兼容算力的设备上练习模型部署、比较中英输出或搭建课程原型；本地运行所需硬件因环境而异，模型卡没有给出统一配置。",
+            "free": "官方 Hugging Face 模型资料标注 Apache 2.0 许可且模型公开可取；这是权重许可，不等于托管推理或硬件免费。账号要求、地区、调用额度和使用期限官方未说明。",
+            "category": "开放模型权重 / 本地学习与实验",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-8B"
+            }
+          },
+          {
+            "event": "Gemini API 为部分模型提供免费输入与输出 token",
+            "summary": "Google Gemini API 定价页列出免费层：部分模型的输入和输出 token 不收费，并可使用 Google AI Studio；免费层仅开放特定模型。",
+            "howTo": "在 Google AI Studio 创建 API key，先从官方定价页确认某个模型标有 Free，再用少量非敏感课程文本测试简单的摘要或词汇卡片原型。",
+            "impact": "适合学生练习调用模型 API、制作小型复习工具或验证课程项目想法；免费层生成内容可能用于改进 Google 产品，不要提交敏感资料。",
+            "free": "免费层仅适用于部分模型，定价页没有列出统一固定调用配额；具体限制随模型而异，应查看官方 rate limits。免费层内容可用于改进 Google 产品；账号与地区条件未在此定价页说明。",
+            "category": "免费 API 层 / 原型开发",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Manga Are Black, White and Read All Over. Treasures of the Globally Popular Japanese Comic Book Medium Are on View in New York",
+            "source": "Smithsonian Magazine",
+            "published": "2026-10-30",
+            "url": "https://www.smithsonianmag.com/smart-news/manga-are-black-white-and-read-all-over-treasures-of-the-globally-popular-japanese-comic-book-medium-are-on-view-in-new-york-180989788/",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "文化 / 漫画艺术与跨文化传播",
+            "summary": "文章以布鲁克林博物馆的 “Art of Manga” 展览为切入点，说明漫画已从美国读者曾经陌生的媒介，发展为具有广泛影响的日本视觉艺术。报道先简要介绍漫画通常由单一创作者绘制、以黑白呈现并从右向左阅读，再借展览中 10 个展厅、600 多幅原作和多位漫画家的作品，展示其风格、历史与创作过程。策展人引语指出，原稿让观众看到漫画如何构造人物与世界；文章最后把漫画置于跨文化传播和博物馆收藏的讨论中，主张这种视觉叙事值得获得与文字艺术相当的文化空间。",
+            "reason": [
+              "文化传播与艺术表达是常见阅读主题，文章讨论日本漫画如何进入美国主流展览空间。",
+              "结构由媒介定义与流行变化推进到展览细节，再用策展人观点解释原作的价值。",
+              "可练习主旨题、细节题和例证作用题，尤其要区分展览事实与受访者评价。",
+              "medium、influential、cross-cultural 等词可迁移到艺术、出版与文化交流话题。",
+              "写作可借鉴“先交代媒介背景—呈现具体展品—讨论文化意义”的论证路径。"
+            ],
+            "vocabulary": [
+              {
+                "word": "medium",
+                "phonetic": "/ˈmiːdiəm/",
+                "part": "n.",
+                "translation": "媒介；艺术形式"
+              },
+              {
+                "word": "graphic novel",
+                "phonetic": "/ˈɡræfɪk ˌnɑːvəl/",
+                "part": "n.",
+                "translation": "图像小说"
+              },
+              {
+                "word": "mangaka",
+                "phonetic": "/ˌmæŋˈɡɑːkə/",
+                "part": "n.",
+                "translation": "日本漫画创作者"
+              },
+              {
+                "word": "boom",
+                "phonetic": "/buːm/",
+                "part": "v.",
+                "translation": "迅速增长；繁荣"
+              },
+              {
+                "word": "centerpiece",
+                "phonetic": "/ˈsentərpiːs/",
+                "part": "n.",
+                "translation": "核心部分；中心展品"
+              },
+              {
+                "word": "evolution",
+                "phonetic": "/ˌevəˈluːʃən/",
+                "part": "n.",
+                "translation": "演变；发展"
+              },
+              {
+                "word": "relatable",
+                "phonetic": "/rɪˈleɪtəbəl/",
+                "part": "adj.",
+                "translation": "能引起共鸣的"
+              },
+              {
+                "word": "cross-cultural",
+                "phonetic": "/ˌkrɔːs ˈkʌltʃərəl/",
+                "part": "adj.",
+                "translation": "跨文化的"
+              },
+              {
+                "word": "influential",
+                "phonetic": "/ˌɪnfluˈɛnʃəl/",
+                "part": "adj.",
+                "translation": "有影响力的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Manga are Japanese comic books and graphic novels.",
+                "analysis": [
+                  "主干为 Manga are comic books and graphic novels，主语 Manga 由系动词 are 连接两个并列表语。",
+                  "Japanese 作前置定语，说明漫画的来源属性；comic books 与 graphic novels 是并列类别。",
+                  "句子用简短定义为后文的艺术媒介讨论建立共同背景。",
+                  "可借鉴 X is/are A and B 的结构并列概括一种文化产品的形态。"
+                ],
+                "translation": "漫画是日本的漫画书和图像小说。"
+              },
+              {
+                "original": "They are usually printed in black and white and read right-to-left.",
+                "analysis": [
+                  "主语 They 指代前句的 manga，后接两个并列的被动谓语 are printed 与 (are) read。",
+                  "usually 修饰两个动作，表示常见特征而非绝对规则。",
+                  "in black and white 描述印刷形式，right-to-left 说明阅读方向。",
+                  "可借鉴 be printed in X and read Y 的并列结构，压缩介绍媒介特征。"
+                ],
+                "translation": "它们通常以黑白印刷，并按从右向左的顺序阅读。"
+              },
+              {
+                "original": "Manga’s popularity is booming in the United States.",
+                "analysis": [
+                  "句子主干为 Manga’s popularity is booming，主语中心词是 popularity，谓语为现在进行时。",
+                  "Manga’s 是名词所有格，限定 popularity 的对象。",
+                  "in the United States 是地点状语，限定增长发生的范围。",
+                  "现在进行时突出正在发生的趋势；可借鉴 X’s popularity is booming in Y 表达某文化现象走红。"
+                ],
+                "translation": "漫画在美国的人气正在迅速上升。"
+              }
+            ]
+          },
+          {
+            "title": "Parents, let your kids eat as much candy as they want – less restriction could help reduce the urge to overeat",
+            "source": "The Conversation",
+            "published": "2026-11-01",
+            "url": "https://theconversation.com/parents-let-your-kids-eat-as-much-candy-as-they-want-less-restriction-could-help-reduce-the-urge-to-overeat-294113",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "健康与社会 / 儿童饮食、家庭养育",
+            "summary": "作者以家长如何处理孩子的糖果为问题，指出把食物划分成“好”与“坏”可能让进食带上道德评判。她援引相关研究，解释显性的食物限制可能让孩子更关注被禁止的零食，进而更难留意饥饿和饱腹信号；文章同时区分孩子能察觉的限制与家长通过不购买来实现的隐性限制。随后，作者介绍直觉式进食和“喂养责任划分”：家长决定何时提供什么食物，孩子决定是否吃以及吃多少。结尾给出菜单计划、避免评论孩子吃了什么、成人反思自身习惯等建议，主张以中性语言和适度自主权培养更平衡的饮食关系。",
+            "reason": [
+              "健康、家庭教育与儿童自主是社会类阅读常见主题，材料也适合辨析建议与证据。",
+              "文章从家长的日常难题切入，依次解释限制的潜在影响、介绍方法框架并给出实践建议。",
+              "可练习主旨题、指代题、因果推断题，以及区分作者经验和研究性表述。",
+              "restriction、preoccupied、autonomy 等词可用于健康行为和教育方式的讨论。",
+              "写作可借鉴“界定问题—解释机制—提供可执行做法”的结构，并注意用 may 等措辞限定结论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "restriction",
+                "phonetic": "/rɪˈstrɪkʃən/",
+                "part": "n.",
+                "translation": "限制；约束"
+              },
+              {
+                "word": "autonomy",
+                "phonetic": "/ɔːˈtɑːnəmi/",
+                "part": "n.",
+                "translation": "自主权"
+              },
+              {
+                "word": "preoccupied",
+                "phonetic": "/priˈɑːkjupaɪd/",
+                "part": "adj.",
+                "translation": "全神贯注的；心思被占据的"
+              },
+              {
+                "word": "overt",
+                "phonetic": "/oʊˈvɜːrt/",
+                "part": "adj.",
+                "translation": "公开的；明显的"
+              },
+              {
+                "word": "covert",
+                "phonetic": "/ˈkoʊvɜːrt/",
+                "part": "adj.",
+                "translation": "隐蔽的；不公开的"
+              },
+              {
+                "word": "cue",
+                "phonetic": "/kjuː/",
+                "part": "n.",
+                "translation": "信号；提示"
+              },
+              {
+                "word": "intuitive",
+                "phonetic": "/ɪnˈtuːɪtɪv/",
+                "part": "adj.",
+                "translation": "直觉的；凭直觉的"
+              },
+              {
+                "word": "savor",
+                "phonetic": "/ˈseɪvər/",
+                "part": "v.",
+                "translation": "细细品味；享受"
+              },
+              {
+                "word": "judgment",
+                "phonetic": "/ˈdʒʌdʒmənt/",
+                "part": "n.",
+                "translation": "评判；判断"
+              },
+              {
+                "word": "nourish",
+                "phonetic": "/ˈnɜːrɪʃ/",
+                "part": "v.",
+                "translation": "滋养；为……提供营养"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The idea of food restriction often sounds punishing.",
+                "analysis": [
+                  "主干是 The idea sounds punishing，主语中心词 idea，系动词 sounds，表语 punishing。",
+                  "of food restriction 是介词短语，后置修饰 idea，指出讨论对象。",
+                  "often 限定判断频率，避免把感受说成绝对事实。",
+                  "可借鉴 the idea of X sounds Y 表达某种做法给人的初步印象。"
+                ],
+                "translation": "限制食物这一想法听起来往往像是在惩罚孩子。"
+              },
+              {
+                "original": "But for kids, restricting certain foods may lead them to become preoccupied with those foods.",
+                "analysis": [
+                  "主干为 restricting certain foods may lead them to become preoccupied，动名词短语作主语。",
+                  "for kids 是视角状语，说明这一影响发生在孩子身上；But 与前文形成转折。",
+                  "lead + 宾语 + to do 表示“导致某人……”，其中 them 指 kids。",
+                  "may 表示可能性而非必然结果；with those foods 补足 preoccupied 的搭配。",
+                  "可借鉴 restricting X may lead someone to do Y 表达限制可能带来的后果。"
+                ],
+                "translation": "但是，对孩子而言，限制某些食物可能会让他们总想着这些食物。"
+              },
+              {
+                "original": "Kids are always watching, and your own food behaviors often speak louder than words.",
+                "analysis": [
+                  "and 连接两个并列分句：孩子一直在观察，成人自身的饮食行为往往比语言更有影响。",
+                  "your own food behaviors 是第二分句主语，own 强调成人自身的行为示范。",
+                  "speak louder than words 是比较结构，也用比喻表达行为胜于口头劝说。",
+                  "often 再次限定语气；可借鉴 actions speak louder than words 讨论榜样作用。"
+                ],
+                "translation": "孩子一直在观察，而你自己的饮食行为往往比言语更有说服力。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-01",
       "status": "ready",
@@ -2127,351 +2448,6 @@ window.BRIEFING_DATA = {
                   "可仿写 The biggest barrier to... is...，简洁概括政策或技术推广的主要困难。"
                 ],
                 "translation": "芯片卡推广面临的最大障碍是成本。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-26",
-      "status": "ready",
-      "ai": {
-        "intro": "本期整理 GitHub Copilot 在 10 月 19—23 日的三项变化：旧模型停用、Visual Studio 新增代码代理工作流，以及在 Teams 对话中把问题转成代码修复。涉及学生免费计划的功能和组织版权限分别标注，开始使用前请核对账户入口。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 停用六个模型并给出替代项（2026-10-19）",
-            "summary": "GitHub 于 10 月 19 日起在 Copilot 的多数体验中停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，并分别建议改用 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6.1 Sol、GPT-6 Luna、GPT-6 Luna 和 Grok 4.7。",
-            "howTo": "在 VS Code 或 GitHub.com 打开 Copilot Chat 的模型选择器，检查当前工作流是否仍选择已停用模型，并改选公告中的替代项；若替代模型未显示，按 GitHub 文档检查账户计划和组织模型策略。",
-            "impact": "写课程项目或练习代码时，若原先固定使用这些模型，切换到官方建议的替代项可避免工作流中断；提交前仍需运行测试并人工检查生成代码。",
-            "free": "公告称这些模型在 Copilot 多数体验中停用，企业版管理员可能需要开放替代模型；公告未说明各替代模型对每个计划、地区的可用性或调用配额，也未说明额外价格。",
-            "category": "GitHub Copilot / 模型更新",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-19",
-              "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
-            }
-          },
-          {
-            "event": "GitHub Copilot for Visual Studio 更新：PR 代理与 NuGet 修复（2026-10-22）",
-            "summary": "GitHub 汇总了 Visual Studio 2026 的 Copilot 更新：Git agent 可在聊天中探索并总结拉取请求；Bring Your Own Model（预览）改为依赖新的 Agent（Preview）；NuGet Audit 警告可触发 Copilot 修复易受影响的软件包。",
-            "howTo": "在 Visual Studio 2026 打开 Copilot Chat，选择 Git agent 并从 Git Repository 窗口附加一个 PR；要试用 NuGet 修复，则在 Copilot Chat 工具菜单启用 NuGet MCP server，再从 Error List 中打开相关 Audit 警告。",
-            "impact": "小组作业或开源贡献中，可先让 Git agent 汇总 PR 讨论和关联文件；维护 .NET 项目时，可用修复动作生成依赖更新建议，再核验变更并运行测试。",
-            "free": "官方称该更新面向所有 Copilot 计划，包括 Free 和 Student。NuGet 修复需要登录 Copilot 并启用 NuGet MCP server；PR 探索需要连接 GitHub 或 Azure DevOps 的 MCP server。BYOM 仍是预览功能。公告未说明地区或额外调用配额。",
-            "category": "GitHub Copilot / Visual Studio 开发辅助",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-22",
-              "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2"
-            }
-          },
-          {
-            "event": "GitHub 将 Copilot 与 Teams 通知整合，可从问题推进到 PR（2026-10-23）",
-            "summary": "新版 GitHub Teams 应用把仓库通知和 Copilot 放进频道、群聊或私聊：成员可提及 @GitHub，让它调查收到的问题、尝试修复并创建拉取请求，随后由团队审查。旧版 GitHub app 将于 11 月 16 日退役。",
-            "howTo": "在 Microsoft Teams 安装或更新 GitHub app；在对话中提及 @GitHub，按提示连接 GitHub 账户并选择仓库，再对收到的问题请求调查和修复。对生成的 PR 进行测试和代码审查；若仍用旧版 app，先迁移到新版。",
-            "impact": "课程团队可把 Teams 中的 bug 报告转为带 PR 的协作任务，减少复制上下文的步骤；Copilot 的修改仍须由组员审查，不应直接合并未经验证的代码。",
-            "free": "官方公告说明需安装新版 Teams 应用、连接 GitHub 账户并选择仓库，但未说明 Copilot 计划资格、额外价格、地区范围或调用配额；旧版应用计划于 2026-11-16 退役。",
-            "category": "GitHub Copilot / Teams 协作",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-23",
-              "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude 免费版：网页、桌面和手机端学习助手",
-            "summary": "Anthropic 官方计划页列出每人可用的 $0 免费版，支持网页、桌面和移动端对话，以及网页搜索、文件创建、代码运行、Artifacts 等功能。",
-            "howTo": "访问 Claude 网页版或安装桌面/移动端应用，使用免费账户开始对话；可上传课程材料后要求解释概念、比较观点或生成复习提纲，并对照原文检查引文。",
-            "impact": "适合把长阅读拆成概念问答、草拟复习提纲或运行小段代码；免费版使用量有限，遇到限额时可稍后再试，不要把它当作无限服务。",
-            "free": "官方标价 $0 且称免费版面向所有人，使用量限制适用；定价页未说明确切额度、地区范围或截止日。",
-            "category": "免费 AI 助手 / 阅读与研究",
-            "source": {
-              "name": "Anthropic Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Gemini Developer API 免费层：指定模型可免费调用",
-            "summary": "Google 官方定价页显示，免费层可使用部分指定模型并免收输入、输出 token 费用，也可从 Google AI Studio 开始构建；免费层数据可能用于改进 Google 产品。",
-            "howTo": "在 Google AI Studio 创建 API key，查看 Gemini API 定价页中标明 Free Tier 的模型，再按快速入门发送少量测试请求；不要把密钥写入公开仓库。",
-            "impact": "可用来练习 API 调用、制作课程资料问答原型或比较提示词；应留意所选模型是否在免费层，并避免上传敏感或未获授权的材料。",
-            "free": "官方确认部分模型的输入和输出 token 免费，但免费层仅限特定模型；通用配额、地区资格和截止日期官方未说明。官方指出免费层提交的数据可能用于改进产品。",
-            "category": "免费 API / 应用原型",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Hugging Face ZeroGPU：免费体验社区模型演示",
-            "summary": "Hugging Face 官方文档说明，现有 ZeroGPU Spaces 可免费使用；匿名用户每日含 2 分钟 GPU 额度，免费账户每日含 5 分钟。额度从首次使用后每 24 小时重置，剩余额度也会影响排队优先级。",
-            "howTo": "打开 Hugging Face 官方整理的 ZeroGPU Spaces 清单，选择图像或模型演示并运行短任务；登录免费账户可使用每日 5 分钟额度，先查看队列和剩余额度。",
-            "impact": "不必先配置本地 GPU，就能体验图像生成、模型推理或交互式演示，适合课堂展示和快速验证；共享空间的额度和排队不适合作为稳定生产服务。",
-            "free": "官方说明已有 ZeroGPU Spaces 对所有用户免费：匿名每日 2 分钟、免费账户每日 5 分钟，首次使用后每 24 小时重置。地区和活动截止日期官方未说明。",
-            "category": "免费 GPU 演示 / 模型体验",
-            "source": {
-              "name": "Hugging Face 官方 ZeroGPU 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
-            }
-          },
-          {
-            "event": "GitHub Copilot Student：通过学生验证免费使用",
-            "summary": "GitHub 官方计划说明，经过验证的学生可免费使用 Copilot Student；包含 GitHub AI Credits 额度，模型仅支持自动选择，部分聊天和代理能力有限。",
-            "howTo": "先在 GitHub Education 完成学生身份验证，再按 Copilot Student 设置指南启用方案；在 IDE 安装 Copilot 扩展并登录已验证的 GitHub 账户。",
-            "impact": "可用于解释代码、补全课程项目和尝试受限的代理功能；注意学生方案的 AI Credits 与聊天/代理能力有限，核对计划页的当期规则。",
-            "free": "官方明确 Copilot Student 对验证学生免费；包含额度但精确 AI Credits 数量和地区/验证资格细节未在计划页统一说明，模型选择仅限自动模式。",
-            "category": "学生教育权益 / 编程助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划文档",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "EmbeddingGemma 2：Apache-2.0 许可的多模态嵌入模型",
-            "summary": "Google DeepMind 于 10 月 6 日发布 EmbeddingGemma 2 开放权重，可将文本、代码、图像、视频和音频映射到统一向量空间；模型卡标注 Apache 2.0 许可，适合下载到本地练习语义检索。",
-            "howTo": "从 Google 官方公告进入 Hugging Face 模型卡，按 Quick Start 安装 sentence-transformers 与 transformers，并用示例加载 google/embeddinggemma-2；运行前确认本地存储和计算资源足够。",
-            "impact": "可为课程论文资料、图片或录音建立本地语义检索原型，练习向量检索与多模态索引；本地处理可减少把原始资料上传到托管服务的需要。",
-            "free": "官方提供可下载权重并标注 Apache 2.0 许可；公告未提供托管 API 免费额度，也未说明地区、截止日或最低硬件要求。下载存储和本地运算成本由使用者承担。",
-            "category": "开放模型权重 / 本地学习",
-            "source": {
-              "name": "Google AI 官方产品公告",
-              "published": "2026-10-06",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "How much filter is too much filter for kids and teens posting selfies on social media?",
-            "source": "NPR",
-            "published": "2026-10-25",
-            "url": "https://www.npr.org/2026/10/25/nx-s1-6011190/meta-facebook-settlement-beauty-filters-ai",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "社会 / 青少年社交媒体与身体形象",
-            "summary": "NPR 从 Meta 与美国各州就未成年人美容滤镜达成的和解切入，讨论监管者如何界定哪些效果应被限制。报道先用一名青少年讲述滤镜对自我形象的影响，再对照夸张的“整形”效果与仍可能保留的轻微修饰，指出后者更难识别和规管。随后文章梳理平台已有的过滤器限制、AI 标记与检测措施为何仍难以阻止有害内容，并呈现州与州之间、美国与欧洲之间不同的监管路径。结尾强调美容标准和技术持续变化，政策制定者需要倾听青少年，并考虑更广泛的未成年人 AI 保护，而非只争论像素或单一滤镜定义。",
-            "reason": [
-              "主题涉及社交媒体、青少年心理与数字治理，适合社会发展和媒介素养类阅读。",
-              "文章先提出和解背景，再用当事人经历说明影响，之后比较规则边界、平台措施与跨地区监管，最后提出政策方向。",
-              "可考查作者如何区分极端与轻微修饰、引语的论证功能，以及结尾如何从个案上升到治理建议。",
-              "grappling、subtle、manipulation、guardrails 等词可用于分析规则执行和技术风险。",
-              "写作可借鉴“政策背景—个人案例—制度难点—比较视角—建议”的递进结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "grappling",
-                "phonetic": "/ˈɡræpəlɪŋ/",
-                "part": "v.-ing",
-                "translation": "努力处理；设法应对"
-              },
-              {
-                "word": "landmark",
-                "phonetic": "/ˈlændmɑːrk/",
-                "part": "adj.",
-                "translation": "具有里程碑意义的"
-              },
-              {
-                "word": "burden",
-                "phonetic": "/ˈbɜːrdən/",
-                "part": "n.",
-                "translation": "责任；负担"
-              },
-              {
-                "word": "subtle",
-                "phonetic": "/ˈsʌtəl/",
-                "part": "adj.",
-                "translation": "微妙的；不易察觉的"
-              },
-              {
-                "word": "manipulation",
-                "phonetic": "/məˌnɪpjəˈleɪʃən/",
-                "part": "n.",
-                "translation": "操纵；人为修饰"
-              },
-              {
-                "word": "guardrails",
-                "phonetic": "/ˈɡɑːrdreɪlz/",
-                "part": "n. pl.",
-                "translation": "防护措施；约束机制"
-              },
-              {
-                "word": "consensus",
-                "phonetic": "/kənˈsensəs/",
-                "part": "n.",
-                "translation": "共识"
-              },
-              {
-                "word": "obsolete",
-                "phonetic": "/ˌɑːbsəˈliːt/",
-                "part": "adj.",
-                "translation": "过时的；被淘汰的"
-              },
-              {
-                "word": "evolve",
-                "phonetic": "/ɪˈvɑːlv/",
-                "part": "v.",
-                "translation": "演变；发展"
-              },
-              {
-                "word": "enforce",
-                "phonetic": "/ɪnˈfɔːrs/",
-                "part": "v.",
-                "translation": "实施；执行（法规）"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "But defining where harmless fun ends and harmful manipulation begins is far from straightforward.",
-                "analysis": [
-                  "句子主干是 defining ... is far from straightforward，动名词短语作主语，is 后接表语。",
-                  "where 引导的从句作 defining 的内容，其中 harmless fun ends 与 harmful manipulation begins 构成平行对照。",
-                  "But 承接前文规则设想并转向难点，逻辑上形成转折。",
-                  "far from straightforward 表示“远非简单”，比直接说 difficult 更有层次。",
-                  "可仿写 Defining where X ends and Y begins is far from straightforward 来说明边界问题。"
-                ],
-                "translation": "然而，要界定无害的娱乐何时结束、有害的操纵何时开始，远非易事。"
-              },
-              {
-                "original": "Filters that transform users into playful characters, like elves or puppies, will remain available for young people.",
-                "analysis": [
-                  "主句主干为 Filters will remain available，will remain 表示未来仍将保持某种状态。",
-                  "that 引导定语从句修饰 Filters，说明这类滤镜的具体作用。",
-                  "like elves or puppies 是举例插入语，补充 playful characters 的具体形象。",
-                  "for young people 表示适用对象；本句与文章讨论的限制范围形成对比。",
-                  "可借鉴 will remain available for... 表达某项服务或选择继续向特定群体开放。"
-                ],
-                "translation": "把用户变成精灵或小狗等有趣角色的滤镜，仍将向年轻人开放。"
-              },
-              {
-                "original": "They face a moving target, as digital beauty standards evolve rapidly.",
-                "analysis": [
-                  "主句主干是 They face a moving target，They 指前文负责制定指导意见的州官员。",
-                  "a moving target 是比喻，说明监管对象并非固定不变。",
-                  "as 引导原因/背景状语从句，说明目标为何不断变化。",
-                  "digital beauty standards 作从句主语，evolve rapidly 作谓语，简洁呈现变化速度。",
-                  "可仿写 face a moving target as... 描写规则制定落后于快速变化的现象。"
-                ],
-                "translation": "由于数字美容标准迅速演变，他们面对的是一个不断移动的目标。"
-              }
-            ]
-          },
-          {
-            "title": "US inequality is getting worse in ways you might not expect",
-            "source": "The Conversation",
-            "published": "2026-10-19",
-            "url": "https://theconversation.com/us-inequality-is-getting-worse-in-ways-you-might-not-expect-294075",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "经济 / 财富不平等与税收政策",
-            "summary": "本文由研究不平等的经济学者撰写，先用民调说明美国公众对贫富差距的担忧，再用美联储财富分布数据展示顶层与中间群体份额的变化。作者接着解释差距如何在最富有的 0.1% 与其余高收入群体之间扩大，并讨论企业利润、股票持有和税制的作用；随后把视角扩展到医疗补贴、能源成本和关税，说明政策变化对不同收入家庭的影响并不相同。文章最后反驳不平等是不可避免的历史力量这一看法，强调税收和公共支出等政策选择会塑造财富分配。",
-            "reason": [
-              "财富分配、税制与生活成本是经济和社会公平议题，适合练习数据型议论文阅读。",
-              "作者由民意切入，继而列出财富份额数据，再逐项讨论税收、补贴、能源和关税等驱动因素，最后回到政策判断。",
-              "可考查数据如何支持中心论点、段落之间的因果关系，以及作者如何回应“不平等不可避免”的观点。",
-              "affordability、disproportionately、levy、portfolio 等词适用于经济报道和政策分析。",
-              "写作可借鉴“公众感受—统计证据—政策机制—不同群体影响—结论”的论证链。"
-            ],
-            "vocabulary": [
-              {
-                "word": "affordability",
-                "phonetic": "/əˌfɔːrdəˈbɪləti/",
-                "part": "n.",
-                "translation": "可负担性；负担得起的程度"
-              },
-              {
-                "word": "sentiment",
-                "phonetic": "/ˈsentɪmənt/",
-                "part": "n.",
-                "translation": "情绪；普遍看法"
-              },
-              {
-                "word": "disproportionately",
-                "phonetic": "/ˌdɪsprəˈpɔːrʃənətli/",
-                "part": "adv.",
-                "translation": "不成比例地；显著更多地"
-              },
-              {
-                "word": "progressive",
-                "phonetic": "/prəˈɡresɪv/",
-                "part": "adj.",
-                "translation": "累进的；渐进的"
-              },
-              {
-                "word": "trajectory",
-                "phonetic": "/trəˈdʒektəri/",
-                "part": "n.",
-                "translation": "发展轨迹；趋势"
-              },
-              {
-                "word": "levies",
-                "phonetic": "/ˈleviz/",
-                "part": "n. pl.",
-                "translation": "征收的税费；税款"
-              },
-              {
-                "word": "portfolio",
-                "phonetic": "/pɔːrtˈfoʊlioʊ/",
-                "part": "n.",
-                "translation": "投资组合；资产组合"
-              },
-              {
-                "word": "provision",
-                "phonetic": "/prəˈvɪʒən/",
-                "part": "n.",
-                "translation": "条款；规定"
-              },
-              {
-                "word": "inexorable",
-                "phonetic": "/ɪnˈeksərəbəl/",
-                "part": "adj.",
-                "translation": "不可阻挡的；无法避免的"
-              },
-              {
-                "word": "accelerating",
-                "phonetic": "/əkˈseləreɪtɪŋ/",
-                "part": "v.-ing",
-                "translation": "加速；使加快"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "This sentiment has, however, been difficult to convert into political results.",
-                "analysis": [
-                  "句子主干是 This sentiment has been difficult，主语为 This sentiment，系动词结构后接形容词。",
-                  "however 插入句中，标记从公众不满到政治结果之间的转折。",
-                  "to convert into political results 是不定式短语，说明“难”的具体内容。",
-                  "现在完成时 has been 将此前的公众态度与当前政治结果联系起来。",
-                  "可借鉴 difficult to convert into... 描写某种态度难以转化成实际成果。"
-                ],
-                "translation": "然而，这种情绪一直难以转化为政治成果。"
-              },
-              {
-                "original": "Recent federal data shows that wealth inequality continues to grow.",
-                "analysis": [
-                  "主句主干为 Recent federal data shows，data 是主语，shows 是谓语。",
-                  "that 引导宾语从句，说明数据所显示的内容。",
-                  "从句主干是 wealth inequality continues to grow，continues to 后接动词原形。",
-                  "Recent 与 federal 限定 data 的时间和来源，使论断依托具体证据。",
-                  "可借鉴 data shows that... 引入数据支持的研究结论。"
-                ],
-                "translation": "近期联邦数据表明，财富不平等仍在加剧。"
-              },
-              {
-                "original": "But they’re not inexorable forces of history.",
-                "analysis": [
-                  "But 标出反向论证；they 指上文归纳的多种不平等驱动因素。",
-                  "主干是 they are not forces，系动词后接名词短语作表语。",
-                  "inexorable 修饰 forces，否定它们不可改变的属性。",
-                  "of history 作后置修饰语，说明作者所反驳的是历史决定论式理解。",
-                  "可使用 not an inexorable force of... 表达结果并非不可避免。"
-                ],
-                "translation": "但它们并非历史中不可抗拒的力量。"
               }
             ]
           }
