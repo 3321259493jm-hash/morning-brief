@@ -1,6 +1,333 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-02T10:24:44+08:00",
+  "updatedAt": "2026-11-03T11:58:24+08:00",
   "issues": [
+    {
+      "date": "2026-11-03",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 GitHub Copilot Fusion 多模型编排转为正式可用、Microsoft Copilot 扩充财务技能，以及 Google 在轨 TPU 首次回传 AI 生成内容；免费资源新增 Copilot Free 与 EmbeddingGemma 2 开放权重。",
+        "updates": [
+          {
+            "event": "GitHub Copilot Fusion 正式可用，自动编排多模型完成编码任务",
+            "summary": "GitHub Copilot Fusion 从预览转为正式可用。用户不必为每一步手动挑选模型：Fusion 会按任务路由和协调模型，并提供 Standard、High、Max 三档工作强度；流程可能由单模型完成，也可能采用级联或交叉评审。",
+            "howTo": "更新 VS Code、GitHub Copilot 应用、Copilot CLI 或 JetBrains 客户端，在模型选择器中选 Copilot Fusion，再选 Standard、High 或 Max；用课程代码的解释、测试草拟或调试任务试用，并逐项检查结果。",
+            "impact": "小组项目可比较不同工作强度对解释代码、生成测试和检查方案的帮助；自动路由减少逐步换模型的操作，但代码改动仍需人工运行和审阅。",
+            "free": "官方称 Fusion 可用于所有 Copilot 计划；实际使用按它调用的各模型标准费率计费，付费 Copilot 计划在有限时期内可享模型费用 30% 折扣。公告未说明折扣截止日、地区范围或统一免费调用额度。",
+            "category": "GitHub Copilot / 多模型编排与编码",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
+            }
+          },
+          {
+            "event": "Microsoft Copilot 增加 25 项以上财务技能与合作伙伴插件",
+            "summary": "Microsoft 扩展 Copilot 的财务工作流，新增 25 项以上财务技能和合作伙伴插件，覆盖会计、资本市场等场景。示例包括对账、起草会计分录、分析财务表现，以及把多份表格和材料整理成供团队复核的工作包。",
+            "howTo": "在可用的 Copilot in Excel 中查找 Finance skills；若具备 Cowork 权限，可从插件目录选择 Finance 或 Capital Markets 插件。用课程练习数据试做对账或预算差异说明，并逐项核实输入、公式和来源。",
+            "impact": "会计、金融和商科学生可观察 AI 如何把表格分析扩展为多步骤工作流，并练习复核会计分录、差异解释和投资分析；这类输出应作为草稿而非财务结论。",
+            "free": "官方称 Copilot in Excel 财务技能和 Cowork 的 Finance、Capital Markets 插件已正式可用；部分会计能力仍在 Frontier。文章未说明免费价格、学生资格、地区或调用配额；第三方插件可能另需授权、订阅、认证或管理员启用。",
+            "category": "Microsoft Copilot / 财务技能与插件",
+            "source": {
+              "name": "Microsoft Copilot Blog",
+              "published": "2026-10-29",
+              "url": "https://www.microsoft.com/en-us/copilot/blog/2026/10/29/microsoft-copilot-for-finance-purpose-built-for-the-way-finance-teams-work/"
+            }
+          },
+          {
+            "event": "Google Project Suncatcher 卫星首次回传由在轨 TPU 生成的 AI 内容",
+            "summary": "Google 报告其 Project Suncatcher 原型卫星在轨运行 Google TPU，并首次从搭载的 Gemma 4 开放模型返回 AI 生成的诗句。团队称这是验证芯片能够在轨执行机器学习任务的早期节点，接下来将测试热应力和辐射影响。",
+            "howTo": "阅读 Google Research 的试验记录，梳理提示词上行、卫星生成和地面站接收的步骤；课堂报告可把这次原型测试与公告所述后续热应力、辐射测试分开讨论。公告未提供可供公众操作的卫星试用界面。",
+            "impact": "计算机、航天或能源课程可据此讨论在轨 AI 计算的验证目标与工程约束，同时区分一次原型演示与可规模化的数据中心服务。",
+            "free": "这是研究原型的进展公告，不是面向用户的公开产品说明；公告未说明公众试用入口、价格、账号资格、地区或配额。",
+            "category": "Google Research / 空间 AI 计算研究",
+            "source": {
+              "name": "Google Research 官方博客",
+              "published": "2026-10-30",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 当前计划页列出每月 0 美元的 Copilot Free，无需信用卡，并支持常见 IDE、GitHub 和命令行；免费计划还包含有限的聊天与 Agent 使用。",
+            "howTo": "打开 GitHub Copilot 官方计划页选择 Free，按页面指引在 VS Code 等支持的 IDE 启用 Copilot；可用代码补全起草课程项目函数，再通过测试确认行为。",
+            "impact": "适合学生在小型课程项目中试用行内补全、理解代码上下文或快速写出测试草稿；聊天和 Agent 用量有限，超出后应改为手动完成或查阅文档。",
+            "free": "官方标价 0 美元且无需信用卡；每月 2,000 次代码补全，聊天与 Agent 使用受限但具体额度未说明。地区可用范围和账号资格的额外条件官方未说明。",
+            "category": "免费编程助手 / IDE 与代码补全",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "EmbeddingGemma 2 开放权重：在本地检索文本、图像、音频和视频",
+            "summary": "Google DeepMind 的 EmbeddingGemma 2 模型卡提供 740M 参数的多模态嵌入模型，可将文本、代码、图像、视频和音频映射到共同向量空间，用于语义检索、相似度、分类和聚类。",
+            "howTo": "从官方 Hugging Face 模型卡下载 google/embeddinggemma-2，按 Quick Start 安装 sentence-transformers 与 transformers；先给课程笔记和查询文本编码，再用相似度结果测试语义检索。",
+            "impact": "可用于建立课程阅读材料或本地多媒体资料的语义搜索原型；它生成向量而不是回答问题，适合练习检索系统、分类和多模态信息组织。",
+            "free": "模型权重可从官方 Hugging Face 页面获取，标注 Apache 2.0 许可；本地运行仍需自备硬件。托管推理额度、地区和账号要求官方未说明。",
+            "category": "开放模型权重 / 多模态语义检索",
+            "source": {
+              "name": "Google DeepMind 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/google/embeddinggemma-2"
+            }
+          },
+          {
+            "event": "Claude Free：网页、桌面和手机上的免费学习助手",
+            "summary": "Claude 官方定价页列出每月 0 美元的 Free 方案，可在网页、桌面和移动端聊天，并提供网页搜索、文件创建、代码运行、记忆、连接工具和 Artifacts；Claude Design、Slides、Docs 也列在 Free 方案中。",
+            "howTo": "打开 Claude 网页或官方应用，选择 Free；可让它把一段非敏感课程材料整理成提纲、制作词汇卡或生成可编辑文档，再回到原文核对。",
+            "impact": "适合做低频阅读整理、概念解释和可编辑学习材料；使用量会因模型、对话长度和文件大小变化，不适合作为稳定的大批量接口。",
+            "free": "官方标价每月 0 美元；使用量每 5 小时及每周受限，实际额度取决于模型、对话长度和文件大小。具体消息数、地区和额外账号条件官方未说明。",
+            "category": "免费网页与应用 / 学习助手",
+            "source": {
+              "name": "Claude 官方定价页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "通过 GitHub Education 验证可领取学生开发者权益",
+            "summary": "GitHub 为符合条件并通过验证的学生提供免费 GitHub Pro，包括无限仓库、每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并可访问 Student Developer Pack。",
+            "howTo": "在 GitHub Education 学生页面点击加入并提交学校邮箱和/或带日期的官方在读证明；通过验证后启用 Pro，再查看 Student Developer Pack 当前列出的工具权益。",
+            "impact": "适合私有课程项目、云端开发环境和自动化测试；小组可用仓库协作、Codespaces 与 Actions 完成代码实践，而无需先搭建本地环境。",
+            "free": "官方资格为年满 13 岁且就读于可授予学位或文凭的课程，需学校邮箱和/或官方在读证明；页面列出每月 3,000 Actions 分钟、180 Codespaces 小时、2 GB Packages 与 20 GB Codespaces 存储。地区和权益期限官方未说明。",
+            "category": "学生教育权益 / 编程与云端开发",
+            "source": {
+              "name": "GitHub Education 官方学生页面",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Gemini API 免费层：部分模型提供免费输入与输出 token",
+            "summary": "Google Gemini API 定价页仍列有免费层，可在 Google AI Studio 使用部分模型，输入和输出 token 免费；免费层内容会用于改进 Google 产品。",
+            "howTo": "在 Google AI Studio 查看当前可选模型，并先到官方定价页确认模型标注为 Free；用少量非敏感课程文本建立摘要或词汇卡原型，避免提交隐私材料。",
+            "impact": "适合练习模型 API 调用、快速验证学习工具想法或做低流量课程原型；免费模型范围有限，生产用途需重新核对速率和收费。",
+            "free": "官方列出部分模型的免费输入与输出 token，但没有在此页给出统一固定配额；免费层内容可用于改进 Google 产品。具体模型额度、地区、账号资格和期限官方未说明。",
+            "category": "免费 API 层 / 学习原型开发",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Could virtual reality speed up learning?",
+            "source": "NPR",
+            "published": "2026-11-02",
+            "url": "https://www.npr.org/2026/11/02/nx-s1-6023397/body-learning-virtual-reality-vr",
+            "readingTime": "约 3 分钟（估算）",
+            "topic": "教育与科技 / 身体动作、虚拟现实与学习",
+            "summary": "NPR 报道佛罗里达大西洋大学与布朗大学的一项实验，研究身体动作是否影响复杂学习。参与者戴上 VR 设备，在游戏中把不同条纹图案分到不同类别；一组按按钮作答，另一组做更大的动作，例如挥动类似光剑的控制器或击打反应装置。研究者报告，大幅动作组学得快得多，受访研究者称速度约为按钮组的 4 至 6 倍。文章由具体实验设计推进到结果，再回到动作可能如何帮助某些学习任务；它呈现的是实验室中的特定分类任务，不足以单独证明所有课堂学习都会因此加速。",
+            "reason": [
+              "教育技术与学习机制是常见考试主题，文章把 VR 体验与认知学习问题联系起来。",
+              "论述按研究问题、实验分组、结果和解释展开，适合练习辨认研究设计与作者结论。",
+              "可考查实验组对照、数字结果的指代，以及标题中 speed up 的范围是否被正文支持。",
+              "categorize、participant、outcome 等词可迁移到教育、心理与实验研究语境。",
+              "写作可借鉴“提出问题—说明实验—报告发现—限定适用范围”的证据型结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "categorize",
+                "phonetic": "/ˈkætəɡəraɪz/",
+                "part": "v.",
+                "translation": "分类；归类"
+              },
+              {
+                "word": "stripe",
+                "phonetic": "/straɪp/",
+                "part": "n.",
+                "translation": "条纹"
+              },
+              {
+                "word": "participant",
+                "phonetic": "/pɑːrˈtɪsɪpənt/",
+                "part": "n.",
+                "translation": "参与者"
+              },
+              {
+                "word": "motion",
+                "phonetic": "/ˈmoʊʃən/",
+                "part": "n.",
+                "translation": "动作；运动"
+              },
+              {
+                "word": "dramatically",
+                "phonetic": "/drəˈmætɪkli/",
+                "part": "adv.",
+                "translation": "显著地；大幅度地"
+              },
+              {
+                "word": "complex",
+                "phonetic": "/kəmˈpleks/",
+                "part": "adj.",
+                "translation": "复杂的"
+              },
+              {
+                "word": "outcome",
+                "phonetic": "/ˈaʊtkʌm/",
+                "part": "n.",
+                "translation": "结果；后果"
+              },
+              {
+                "word": "response box",
+                "phonetic": "/rɪˈspɑːns bɑːks/",
+                "part": "n.",
+                "translation": "反应装置；应答盒"
+              },
+              {
+                "word": "laboratory",
+                "phonetic": "/ˈlæbrətɔːri/",
+                "part": "n.",
+                "translation": "实验室"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "movement dramatically helps with certain kinds of complex learning.",
+                "analysis": [
+                  "该片段位于 found that 引出的宾语从句中；从句主干是 movement helps with learning。",
+                  "movement 作主语，helps 为谓语，dramatically 修饰 helps，说明程度而非动作方式。",
+                  "certain kinds of 与 complex 分别限定 learning 的范围和性质，避免把发现泛化为所有学习。",
+                  "helps with 是“有助于……”的搭配，可用来谨慎表达某因素对特定任务的作用。"
+                ],
+                "translation": "动作显著有助于某些类型的复杂学习。"
+              },
+              {
+                "original": "participants learned how to categorize the stripes into one bucket or another.",
+                "analysis": [
+                  "主干为 participants learned；原句前面的 As the game went along 提供游戏进行时的时间背景。",
+                  "how to categorize 是 learned 的内容，属于“疑问词 + 不定式”结构。",
+                  "the stripes 是 categorize 的对象，into one bucket or another 表示分入两个备选类别。",
+                  "“learn how to do”可说明学习者掌握的操作步骤，适合描述实验任务或技能训练。"
+                ],
+                "translation": "参与者学会了如何把这些条纹分到其中一个类别。"
+              },
+              {
+                "original": "The difference in learning outcomes was dramatic.",
+                "analysis": [
+                  "句子主干为 The difference was dramatic，主语中心词是 difference，系动词 was 连接表语 dramatic。",
+                  "in learning outcomes 是介词短语，限定差异体现在哪个方面。",
+                  "这句承接按钮组与大幅动作组的对照，dramatic 是对实验结果的概括性评价。",
+                  "“The difference in X was Y”可用于先概括比较结果，再在后文补充具体数据。"
+                ],
+                "translation": "学习结果之间的差异非常显著。"
+              }
+            ]
+          },
+          {
+            "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
+            "source": "The Guardian",
+            "published": "2026-10-30",
+            "url": "https://www.theguardian.com/business/2026/oct/30/sinkholes-scarred-land-scapegoats-illegal-gold-mining-johannesburg",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "环境与经济 / 南非非法采矿、沉陷与社区生计",
+            "summary": "文章以约翰内斯堡西部一处动物救助组织缺水的经历开篇：淘金者使用场地水源处理矿砂，突显废弃矿区问题如何影响日常生活。报道接着对照警方公布的逮捕行动与研究者对非法采矿规模、黄金走私的估计，并回溯金价、失业、贫困、腐败及矿企未封闭旧矿井等驱动因素。随后文章把焦点转向地面塌陷，指出地方政客常把责任归于非法矿工，但受访专家强调，正式工业采矿长期抽排地下水也是重要背景，个别非法采掘可能导致局部结构坍塌，却不能被当成所有沉陷的起因。文章还呈现矿区暴力、被剥削劳工和依赖采矿收入的社区，结尾借一位社区组织者的经历说明地下采矿如何成为缺少合法就业机会者的生计选择。",
+            "reason": [
+              "环境治理与就业、生计交织，是适合研究生英语阅读的复合型社会议题。",
+              "文章从个体缺水场景引出规模数据，再交代历史背景、地质解释和社区经济，层层扩展论点。",
+              "可练习主旨题、事实与估算的辨析、专家引语作用题，以及识别“替罪羊”这一反向论证。",
+              "scourge、derelict、porous、scapegoat 等词汇可迁移到城市治理、环境风险和责任归因话题。",
+              "写作可借鉴用具体案例引入结构性成因，并呈现相互竞争解释、避免单因归责的论证方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "soar",
+                "phonetic": "/sɔːr/",
+                "part": "v.",
+                "translation": "急剧上升；飙升"
+              },
+              {
+                "word": "abandoned",
+                "phonetic": "/əˈbændənd/",
+                "part": "adj.",
+                "translation": "废弃的；被遗弃的"
+              },
+              {
+                "word": "illegal mining",
+                "phonetic": "/ɪˈliːɡəl ˈmaɪnɪŋ/",
+                "part": "n.",
+                "translation": "非法采矿"
+              },
+              {
+                "word": "derelict",
+                "phonetic": "/ˈderəlɪkt/",
+                "part": "adj.",
+                "translation": "荒废的；被弃置的"
+              },
+              {
+                "word": "rehabilitate",
+                "phonetic": "/ˌriːhəˈbɪlɪteɪt/",
+                "part": "v.",
+                "translation": "修复；恢复"
+              },
+              {
+                "word": "porous",
+                "phonetic": "/ˈpɔːrəs/",
+                "part": "adj.",
+                "translation": "多孔的；可渗透的"
+              },
+              {
+                "word": "culprit",
+                "phonetic": "/ˈkʌlprɪt/",
+                "part": "n.",
+                "translation": "肇事者；根源"
+              },
+              {
+                "word": "scapegoat",
+                "phonetic": "/ˈskeɪpɡoʊt/",
+                "part": "v.",
+                "translation": "把……当替罪羊；归咎于"
+              },
+              {
+                "word": "punctuated by",
+                "phonetic": "/ˈpʌŋktʃueɪtɪd baɪ/",
+                "part": "phr.",
+                "translation": "遍布着；点缀着"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "so too has activity in the abandoned mine shafts that mark the area.",
+                "analysis": [
+                  "这是原句 “as the price of gold has soared, so too has activity...” 的后半部分，意为活动也随之增加。",
+                  "so too 引出附加的相似变化；助动词 has 置于主语 activity 之前，构成倒装。",
+                  "in the abandoned mine shafts 是地点状语，that mark the area 是修饰 mine shafts 的定语从句。",
+                  "“as X changes, so too does Y”可用来并列描述两个相伴变化，语气比简单重复更凝练。"
+                ],
+                "translation": "废弃矿井中的采矿活动也随之增加。"
+              },
+              {
+                "original": "researchers put the number of illegal miners in the tens of thousands.",
+                "analysis": [
+                  "主干是 researchers put the number；主语明确标出估算来源，而不是把数字写成官方普查结果。",
+                  "put 在此表示估计，the number of illegal miners 是估算对象，in the tens of thousands 补充数量范围。",
+                  "原句用 However 与前文警方行动形成对照，强调执法数字与研究者对总体规模的判断不同。",
+                  "“put the number at/in...”可用于转述某一机构或研究者的估算，写作时应保留归属来源。"
+                ],
+                "translation": "研究者估计非法矿工人数达数万人。"
+              },
+              {
+                "original": "experts say zama zamas are being scapegoated.",
+                "analysis": [
+                  "原句以 when it comes to sinkholes 限定讨论范围，再由主句 experts say 引出专家判断。",
+                  "say 后接省略 that 的宾语从句；从句主语 zama zamas 与谓语 are being scapegoated 构成被动关系。",
+                  "现在进行时被动语态突出持续发生的归责过程，而不是断言所有非法采矿都无害。",
+                  "“专家认为某群体正被归咎”形成对前文政治指责的反论点，是文章辨析因果归责的关键。"
+                ],
+                "translation": "专家认为，非法矿工正在被当作替罪羊。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-02",
       "status": "ready",
@@ -2116,338 +2443,6 @@ window.BRIEFING_DATA = {
                   "可用 when 从句把事件结果与具体制度节点连接起来。"
                 ],
                 "translation": "法律僵局终于在 2023 年打破；当时德国纳粹掠夺艺术品咨询委员会建议将这幅画归还家族。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-27",
-      "status": "ready",
-      "ai": {
-        "intro": "本期聚焦 GitHub Copilot 新模型、Google Cloud 模型预览与 Zoom AI 协作功能；注意计划资格、渐进开放和付费条件。免费资源补充 Gemini 免费应用、Copilot Free、Hugging Face ZeroGPU 与 Colab。",
-        "updates": [
-          {
-            "event": "GPT-6.1 Terra 已加入 GitHub Copilot（2026-10-26）",
-            "summary": "GitHub 宣布 GPT-6.1 Terra 已在 Copilot 中推出，定位于日常代理式编程和终端工作，价格低于 GPT-6.1 Sol；开放范围为 Copilot Pro、Pro+、Max、Business 和 Enterprise，且正逐步推出。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI、GitHub.com、Copilot App、GitHub Mobile、JetBrains、Xcode 或 Eclipse 打开 Copilot 的模型选择器，选择 GPT-6.1 Terra；若暂时看不到，等待分阶段开放。",
-            "impact": "课程项目或终端任务可尝试让代理拆解清晰的小任务、生成代码或解释命令；上线范围不含 Free 和 Student 计划，使用前确认账户计划和用量计费。",
-            "free": "官方列出的可用计划为 Pro、Pro+、Max、Business 和 Enterprise；模型按供应商标价进行用量计费，逐步开放。该公告未说明地区限制、具体价格或调用配额。",
-            "category": "GitHub Copilot / 编程模型",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-26",
-              "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/"
-            }
-          },
-          {
-            "event": "Google Cloud Model Garden 开始预览 OpenAI 模型（2026-10-21）",
-            "summary": "Google Cloud 宣布在 Model Garden 中以私有预览方式提供 GPT-6 Astra、GPT-6.1 Sol 和 GPT-6 Luna；模型通过 Google Cloud Marketplace 计费，当前仅向部分企业客户逐步开放。",
-            "howTo": "有 Google Cloud 企业环境的开发者可在 Model Garden 查看 OpenAI 模型并通过官方意向表申请预览；获准后按 Google Cloud API 文档配置调用，并在 Marketplace 核对账单。",
-            "impact": "高校实验室或课程团队若已有企业云环境，可在统一平台比较不同模型处理研究、编程或日常任务的适配度；这不是面向个人学生的即开即用免费服务。",
-            "free": "官方称模型处于面向部分企业客户的私有预览，可通过 Google Cloud Marketplace 计费；免费额度、具体价格、地区范围和公开开放日期官方未说明。",
-            "category": "Google Cloud / 模型接入",
-            "source": {
-              "name": "Google Cloud 官方博客",
-              "published": "2026-10-21",
-              "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
-            }
-          },
-          {
-            "event": "ZoomMate 推出可并行处理项目任务的 AI Agent Teams（2026-10-20）",
-            "summary": "Zoom 在 Zoomtopia 公布 ZoomMate AI Agent Teams：多个专用 AI 代理可并行处理项目不同部分，由协调代理汇总为一份供人审阅的交付物；Zoom 将该能力标为现已可用。",
-            "howTo": "在 Zoom Workplace 中查看 ZoomMate 是否已开放 AI Agent Teams；若可用，描述项目目标和待办事项，让多个代理处理后再审阅汇总结果。公告未提供具体菜单路径。",
-            "impact": "小组课程项目可将资料整理、任务拆分和草稿整合等环节分配给不同代理，再由成员核对来源与结论；它不能替代组员对事实和最终作业的负责。",
-            "free": "官方称 AI Agent Teams 现已可用，但公告未说明需要的具体计划、价格、地区范围或使用配额。",
-            "category": "Zoom / AI 协作",
-            "source": {
-              "name": "Zoom 官方新闻稿",
-              "published": "2026-10-20",
-              "url": "https://news.zoom.com/zoomtopia-2026-ai/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini 免费方案：Google 账户即可使用基础 AI 助手",
-            "summary": "Google 官方订阅页列出每月 0 美元的 Free 方案，使用 Google 账户；Gemini 应用包括 Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gems 等功能。",
-            "howTo": "用 Google 账户打开 Gemini 应用，选择免费方案中的可用功能；遇到使用上限时按页面提示等待或查看当期计划说明。",
-            "impact": "可用于课程概念问答、资料初步整理、图像草稿或研究问题拆解；把生成内容与原始资料核对，尤其是引用和数字。",
-            "free": "官方标价每月 $0，需 Google 账户；功能标注为有限访问，但具体额度、地区资格和截止日期官方未说明。",
-            "category": "免费 AI 助手 / 学习与创作",
-            "source": {
-              "name": "Google Gemini 官方订阅页",
-              "published": "官方未说明",
-              "url": "https://gemini.google/subscriptions/"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页说明，Copilot Free 每月限 2,000 次代码补全，并提供有限的聊天和代理使用；可在常见 IDE、GitHub 网站和移动端使用。",
-            "howTo": "登录 GitHub，在 Copilot 计划页启用 Free 方案；在 VS Code 等支持的 IDE 安装 Copilot 扩展并登录同一账户，查看设置中的月度使用情况。",
-            "impact": "适合练习代码补全、理解项目结构或向聊天提问；每月额度有限，重要代码应自行测试，且应查看个人计划的数据使用设置。",
-            "free": "Free 方案含每月 2,000 次补全以及有限聊天和代理使用；聊天/代理的具体额度、地区资格和截止日期官方未说明。",
-            "category": "免费编程助手 / 代码练习",
-            "source": {
-              "name": "GitHub Copilot 官方计划与定价",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Hugging Face ZeroGPU：免费试用社区模型演示",
-            "summary": "Hugging Face 官方文档称，现有 ZeroGPU Spaces 可免费使用；未登录用户每日有 2 分钟 GPU 额度，免费账户每日有 5 分钟，额度在首次使用 24 小时后重置。",
-            "howTo": "打开 Hugging Face 的 ZeroGPU Spaces 清单，选择一个演示并运行短任务；登录免费账户可获得每日 5 分钟额度，留意排队和剩余时间。",
-            "impact": "可免去本地配置 GPU 的步骤，短暂体验图像生成或模型推理；每日额度、排队优先级和共享演示限制使它不适合长时间任务。",
-            "free": "官方说明现有 Spaces 免费：匿名用户每日 2 分钟，免费账户每日 5 分钟；首次使用后 24 小时重置。地区和活动截止日期官方未说明。",
-            "category": "免费 GPU 演示 / 模型体验",
-            "source": {
-              "name": "Hugging Face 官方 ZeroGPU 文档",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
-            }
-          },
-          {
-            "event": "Google Colab：免费运行 Jupyter 笔记本与机器学习实验",
-            "summary": "Google 官方 FAQ 说明，Colab 是无需本地配置的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU；免费资源并非无限或保证持续可用。",
-            "howTo": "打开 Colab，新建笔记本或上传 `.ipynb` 文件；需要时在 Runtime 菜单选择硬件加速器，并保存代码、数据处理步骤和实验结果。",
-            "impact": "适合课程数据分析、机器学习入门和可复现实验；运行时会因空闲而删除，资源和使用限制会波动，重要文件应另行保存。",
-            "free": "官方确认免费使用并提供 GPU/TPU，但资源不保证且使用限制会变化；固定配额、地区资格和免费服务截止时间官方未说明。",
-            "category": "免费云端工具 / 编程与 AI 实验",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "How a movement of students brought down Serbia's Vučić",
-            "source": "BBC",
-            "published": "2026-10-26",
-            "url": "https://www.bbc.com/news/articles/c574pvy82k0mo",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "社会与教育 / 学生运动、反腐与公共参与",
-            "summary": "BBC 以塞尔维亚学生运动在议会选举中获胜为切入点，回溯其起因：新萨德火车站顶棚坍塌造成 16 人死亡，事件被批评者视为腐败与政府失职的象征。文章梳理学生封锁道路、校园集会和反腐抗议如何从地方行动发展成跨越社会群体的全国运动；随后说明运动如何通过学生大会组织、扩大选民动员并准备候选人名单。报道也指出，候选名单中并没有学生，选举胜利之后仍须兑现反腐、媒体改革等承诺，因此运动能否将街头动员转化为制度改革仍是关键问题。",
-            "reason": [
-              "学生参与公共事务、反腐和公民动员属于社会与教育主题，可联系青年责任和社会治理。",
-              "文章按悲剧背景、运动扩展、组织与选举策略、获胜后的治理挑战递进，结构清楚。",
-              "可考查事件因果、转折词 yet 的让步关系，以及作者如何区分选举胜利与政策兑现。",
-              "emblematic、momentum、abstention、manifesto 等词适合社会运动和公共政策阅读。",
-              "写作可借鉴“导火索—集体行动—组织化—制度结果—后续挑战”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "tragedy",
-                "phonetic": "/ˈtrædʒədi/",
-                "part": "n.",
-                "translation": "悲剧；惨剧"
-              },
-              {
-                "word": "blockading",
-                "phonetic": "/blɑːˈkeɪdɪŋ/",
-                "part": "v.-ing",
-                "translation": "封锁；阻塞"
-              },
-              {
-                "word": "negligence",
-                "phonetic": "/ˈneɡlɪdʒəns/",
-                "part": "n.",
-                "translation": "疏忽；失职"
-              },
-              {
-                "word": "emblematic",
-                "phonetic": "/ˌembləˈmætɪk/",
-                "part": "adj.",
-                "translation": "象征性的；典型的"
-              },
-              {
-                "word": "referendum",
-                "phonetic": "/ˌrefəˈrendəm/",
-                "part": "n.",
-                "translation": "公民投票；全民公决"
-              },
-              {
-                "word": "momentum",
-                "phonetic": "/moʊˈmentəm/",
-                "part": "n.",
-                "translation": "势头；动力"
-              },
-              {
-                "word": "abstention",
-                "phonetic": "/əbˈstenʃən/",
-                "part": "n.",
-                "translation": "弃权；不投票"
-              },
-              {
-                "word": "manifesto",
-                "phonetic": "/ˌmænɪˈfestoʊ/",
-                "part": "n.",
-                "translation": "宣言；纲领"
-              },
-              {
-                "word": "electorate",
-                "phonetic": "/ɪˈlektərət/",
-                "part": "n.",
-                "translation": "全体选民"
-              },
-              {
-                "word": "fulfil",
-                "phonetic": "/fʊlˈfɪl/",
-                "part": "v.",
-                "translation": "履行；实现"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Theirs is a movement born from tragedy that began with students blockading streets and turned into almost daily protests and a national movement against corruption and government negligence.",
-                "analysis": [
-                  "主干是 Theirs is a movement，Theirs 指学生们的行动；born from tragedy 是过去分词短语，补充 movement 的起源。",
-                  "that 引导定语从句修饰 movement，began 与 turned 并列，交代行动从封路发展为抗议。",
-                  "against corruption and government negligence 后置修饰 protests and a national movement，点明抗议对象。",
-                  "句子用 from...to... 的发展逻辑压缩运动演变过程，兼有背景和结果。",
-                  "可借鉴 a movement born from... that began... and turned into... 描写社会行动的起点与扩展。"
-                ],
-                "translation": "这场运动源于一场悲剧，起初学生封锁街道，随后发展为几乎每天举行的抗议，并成为反对腐败和政府失职的全国性运动。"
-              },
-              {
-                "original": "They have no obvious leaders and have no grounding in politics, and yet the \"Student List-Students Win\" movement attracted anti-government voters across Serbian society.",
-                "analysis": [
-                  "句子前半由 and 连接两个并列谓语 have no obvious leaders 与 have no grounding in politics。",
-                  "and yet 连接转折结果，强调缺少传统领导和政治根基并未阻止运动吸引广泛支持。",
-                  "the \"Student List-Students Win\" movement 是后半句主语，attracted 是谓语，voters 是宾语。",
-                  "across Serbian society 表示支持者范围，修饰 attracted 的社会覆盖面。",
-                  "可用 and yet 表达与预期相反的结果，适合议论文中的让步转折。"
-                ],
-                "translation": "他们没有明显的领袖，也缺乏政治根基，然而“学生名单——学生获胜”运动仍吸引了塞尔维亚社会各界的反政府选民。"
-              },
-              {
-                "original": "Measuring the electoral impact of online mobilisation, however, is notoriously difficult.",
-                "analysis": [
-                  "主干是 Measuring ... is difficult；动名词短语作主语，notoriously difficult 作表语。",
-                  "the electoral impact of online mobilisation 是 measuring 的宾语，说明难以衡量的具体对象。",
-                  "however 插入句中，标示报道从支持者对网络动员的评价转向谨慎分析。",
-                  "notoriously 加强 difficult，指出这一问题广为人知地难以处理。",
-                  "可仿写 Measuring the impact of... is notoriously difficult，谨慎表述难以量化的社会影响。"
-                ],
-                "translation": "然而，衡量网络动员对选举产生的影响，一向是件极其困难的事。"
-              }
-            ]
-          },
-          {
-            "title": "Trump administration pushes for food assistance card upgrade to fight fraud",
-            "source": "NPR",
-            "published": "2026-10-26",
-            "url": "https://www.npr.org/2026/10/26/nx-s1-6017810/snap-benefits-ebt-card-chip-usda-rule",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "社会与经济 / 食品援助、支付安全与公共预算",
-            "summary": "NPR 报道美国农业部提出新规，要求各州把 SNAP 食品援助卡升级为芯片卡，并要求零售商终端支持非接触支付，以应对磁条卡遭盗刷的问题。文章先解释盗刷如何让低收入家庭失去补助，再引用政府审计与调查数据说明损失规模，以及多数州尚未完成卡片升级。随后分析成本障碍：芯片卡制造成本更高，州政府也面临联邦项目经费压力，因此部分州可能推迟投资。文章最后说明新规仍在征求公众意见，最终规则和实施时间尚未确定，并呈现联邦部门、州政府和倡议者对责任与资金安排的不同看法。",
-            "reason": [
-              "食品援助、网络支付安全和公共预算交织，适合社会保障与数字治理类主题。",
-              "文章由个案和诈骗机制切入，再列政策方案与成本证据，最后交代执行争议和意见征集。",
-              "可考查 proposed rule 与 final rule 的区别、成本为何构成障碍，以及各方引语的论证功能。",
-              "bolster、vulnerable、upfront、allocate、impasse 等词适用于政策和经济报道。",
-              "写作可借鉴“问题案例—技术原因—政策回应—执行成本—后续程序”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "bolster",
-                "phonetic": "/ˈboʊlstər/",
-                "part": "v.",
-                "translation": "加强；支持"
-              },
-              {
-                "word": "vulnerable",
-                "phonetic": "/ˈvʌlnərəbəl/",
-                "part": "adj.",
-                "translation": "易受伤害的；脆弱的"
-              },
-              {
-                "word": "adopt",
-                "phonetic": "/əˈdɑːpt/",
-                "part": "v.",
-                "translation": "采用；采纳"
-              },
-              {
-                "word": "proposal",
-                "phonetic": "/prəˈpoʊzəl/",
-                "part": "n.",
-                "translation": "提议；方案"
-              },
-              {
-                "word": "upfront",
-                "phonetic": "/ˌʌpˈfrʌnt/",
-                "part": "adj./adv.",
-                "translation": "预先支付的；前期的"
-              },
-              {
-                "word": "barrier",
-                "phonetic": "/ˈbæriər/",
-                "part": "n.",
-                "translation": "障碍；壁垒"
-              },
-              {
-                "word": "allocate",
-                "phonetic": "/ˈæləkeɪt/",
-                "part": "v.",
-                "translation": "分配；拨付"
-              },
-              {
-                "word": "administrative",
-                "phonetic": "/ədˈmɪnɪstreɪtɪv/",
-                "part": "adj.",
-                "translation": "行政的；管理的"
-              },
-              {
-                "word": "impasse",
-                "phonetic": "/ˈɪmpæs/",
-                "part": "n.",
-                "translation": "僵局；绝境"
-              },
-              {
-                "word": "recourse",
-                "phonetic": "/ˈriːkɔːrs/",
-                "part": "n.",
-                "translation": "求助；补救途径"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Most SNAP cards rely on a magnetic stripe for swipe payment – which tends to be vulnerable to skimming because it does a poor job of securing the data stored on cards.",
-                "analysis": [
-                  "主干是 Most SNAP cards rely on a magnetic stripe，rely on 表示依赖某种支付技术。",
-                  "for swipe payment 说明磁条的用途；破折号后的 which 从句补充说明该支付方式的风险。",
-                  "because 引导原因状语从句，解释它为何容易遭盗刷；it 指磁条支付方式。",
-                  "stored on cards 是过去分词短语，后置修饰 data，说明被保护的数据。",
-                  "可借鉴 rely on... which tends to... because...，先陈述依赖，再说明其风险及原因。"
-                ],
-                "translation": "大多数 SNAP 卡依靠磁条刷卡支付，而这种方式容易遭盗刷，因为它在保护卡片数据方面效果不佳。"
-              },
-              {
-                "original": "Now, under the proposed rule released by the USDA last week, all states would have to adopt chip-enabled EBT cards.",
-                "analysis": [
-                  "句子主干为 all states would have to adopt...，would have to 表示拟议规则下的要求。",
-                  "Now 引出政策新进展；under the proposed rule 是句首介词短语，说明要求的依据。",
-                  "released by the USDA last week 是过去分词短语，修饰 proposed rule，交代规则由谁发布及时间。",
-                  "chip-enabled 作复合形容词修饰 EBT cards，概括卡片技术特征。",
-                  "应注意 proposed rule 表示提议中的规则，不等于已经生效的最终法规。"
-                ],
-                "translation": "根据美国农业部上周发布的拟议规则，现在各州将必须采用带芯片的 EBT 卡。"
-              },
-              {
-                "original": "The biggest barrier to chip-enabled cards is cost.",
-                "analysis": [
-                  "句子主干是 The biggest barrier is cost，系动词 is 连接主语与表语。",
-                  "to chip-enabled cards 是介词短语，说明障碍针对的目标。",
-                  "biggest 是最高级，突出成本在多项阻碍中的重要性。",
-                  "短句以 cost 收束前文技术方案，起到转入执行难题的段落提示作用。",
-                  "可仿写 The biggest barrier to... is...，简洁概括政策或技术推广的主要困难。"
-                ],
-                "translation": "芯片卡推广面临的最大障碍是成本。"
               }
             ]
           }
