@@ -1,6 +1,338 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-03T11:58:24+08:00",
+  "updatedAt": "2026-11-04T11:01:11+08:00",
   "issues": [
+    {
+      "date": "2026-11-04",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Copilot 的 JetBrains Air 集成、用量 API 的 BYOK 统计和安全扩展预览；免费资源包括 Gemini、Firefly 与两款可本地部署模型。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 接入 JetBrains Air",
+            "summary": "GitHub Copilot 现可在 JetBrains Air 的 agent picker 中调用，支持 IDE 内和云端编码任务；用户可跟踪多个 agent session、利用项目上下文与 IDE 工具，并在代码旁审阅改动。",
+            "howTo": "在 JetBrains IDE 安装 Air 插件，选择 GitHub Copilot 并连接 GitHub 账号后提交本地任务。运行云端任务则从 Air 浏览器或 IDE 选择 Cloud 环境、仓库和分支，再发送任务描述。",
+            "impact": "学生可让 Copilot 并行处理课程项目中的解释、测试或小型修复，并在 IDE 中对照代码审阅结果；云端任务运行在隔离环境中，不会改动本地环境。",
+            "free": "需已有 GitHub Copilot 订阅；云端任务还需加入启用 Air Teams 的企业组织并由 Air 管理员开启 Copilot。公告称云端任务使用 Copilot 计划而非 JetBrains AI credits，但未说明地区、独立调用额度或额外价格。",
+            "category": "GitHub Copilot / IDE 与云端编码",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-11-03",
+              "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air/"
+            }
+          },
+          {
+            "event": "Copilot 用量指标 API 新增 BYOK 与企业自定义模型统计",
+            "summary": "Copilot usage metrics API 新增本地 BYOK 活动字段及企业自定义模型标记，可在用户级和汇总报告中区分自带密钥、本地模型与 Copilot 托管模型用量；报告提供 1 日和 28 日视图。",
+            "howTo": "由有权限的组织或企业管理员调用 Copilot usage metrics API，读取 `totals_by_local_byok` 和 `is_custom_enterprise_model` 等字段，再按用户、客户端或报告周期核对用量；本地 BYOK 统计依赖客户端遥测。",
+            "impact": "学生团队若在组织仓库使用自带模型或本地模型，可把这类请求与 Copilot 托管模型分开查看，避免仅凭模型名称误判使用来源或成本。",
+            "free": "需企业所有者、企业账单管理员、组织所有者，或获授 `View Copilot Metrics` 权限的自定义角色；组织或企业必须启用 Copilot usage metrics policy。公告未说明 API 的价格、地区或调用额度；遥测关闭时本地 BYOK 统计可能偏低。",
+            "category": "GitHub Copilot / 用量分析 API",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-11-04",
+              "url": "https://github.blog/changelog/2026-11-04-byok-and-enterprise-custom-models-in-the-copilot-usage-api/"
+            }
+          },
+          {
+            "event": "GitHub Copilot app 安全扩展进入公开预览",
+            "summary": "安全扩展可在 GitHub Copilot app 中浏览仓库现有 code scanning alerts，并让 Copilot 解释或修复选定问题；用户还可对当前改动运行 `/security-review`，在提交 pull request 前查看发现。",
+            "howTo": "在终端运行 `copilot plugin install github-security@awesome-copilot`，或在 Copilot app 的 Customize 中搜索并安装 github-security；打开仓库的 Security canvas 查看告警，或对当前改动运行 `/security-review`。",
+            "impact": "学生可在课程仓库中先读懂静态扫描告警，再检查 Copilot 提出的本地修复，并在发起 pull request 前复查代码；应自行审阅改动而不是直接提交。",
+            "free": "公开预览适用于 github.com 和启用数据驻留的 GitHub Enterprise Cloud，不支持 GitHub Enterprise Server。任何 Copilot 计划都可安装并对本地改动运行 `/security-review`；Explain、Fix 和 review 会消耗 AI credits，浏览告警不消耗。查看私有仓库告警需要 GitHub Code Security。",
+            "category": "GitHub Copilot / 代码安全",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-10-28",
+              "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini 免费版：可使用研究、写作与图像功能",
+            "summary": "Google 官方订阅页列出每月 0 美元的 Free 方案，包含 Gemini app、Flash-Lite、图像生成与编辑、Deep Research、Gemini Live、Canvas、Gems 和 Gemini Notebook。",
+            "howTo": "使用 Google 账号打开 Gemini app，选择一个课程主题，先让 Gemini Notebook 或 Deep Research 整理公开资料，再核对引用来源；也可用 Canvas 修改学习提纲或生成图像草稿。",
+            "impact": "适合把公开课程资料整理成复习提纲、比较不同来源的观点，或为展示稿制作图像草稿；重要事实仍应回到原始来源核实。",
+            "free": "官方标价每月 0 美元，需 Google 账号。免费方案的具体使用次数、限额及各功能可用地区官方未说明。",
+            "category": "长期免费 AI 服务 / 学习与研究",
+            "source": {
+              "name": "Google Gemini 官方订阅页",
+              "published": "官方未说明",
+              "url": "https://gemini.google/subscriptions/"
+            }
+          },
+          {
+            "event": "Adobe Firefly 免费计划：生成式点数按月分配",
+            "summary": "Adobe 官方 FAQ 说明，免费计划会在首次使用 Firefly 生成功能时分配生成式点数；该批点数一个月后到期，后续月份也在首次使用时重新分配。",
+            "howTo": "登录 Adobe Firefly，使用 Text to Image 等功能制作课程海报或插图草稿；在账号菜单查看剩余生成式点数和到期时间，避免把点数额度误当成无限生成。",
+            "impact": "可用作课程展示和学习笔记的视觉草稿工具；点数会过期，适合先准备提示词与素材再生成，并逐项检查输出。",
+            "free": "官方 FAQ 确认免费计划会分配生成式点数，但未在该页面说明免费额度的具体数量、地区资格或截止日期；首次使用后一个月到期。",
+            "category": "长期免费 AI 服务 / 图像生成",
+            "source": {
+              "name": "Adobe 官方生成式点数 FAQ",
+              "published": "官方未说明",
+              "url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+            }
+          },
+          {
+            "event": "Whisper large-v3-turbo：MIT 许可的语音识别开放权重",
+            "summary": "OpenAI 的 Hugging Face 模型卡提供 Whisper large-v3-turbo 权重，标注 MIT 许可，支持自动语音识别与语音翻译；相较 large-v3，它把解码层从 32 层减至 4 层，以更快推理为目标，模型卡同时提示质量略有下降。",
+            "howTo": "按模型卡安装 Transformers、Datasets 和 Accelerate，加载 `openai/whisper-large-v3-turbo`，再把本地音频路径传给 ASR pipeline；翻译任务可按示例设置 `task: translate`。",
+            "impact": "可将获准处理的课程录音转成文字，或尝试把外语语音转译为英语，再人工校正专有名词和听写错误。",
+            "free": "模型权重按 MIT 许可下载；本地运行需自行承担算力和存储。官方模型卡未说明托管推理的免费额度、地区或截止日期。",
+            "category": "开放模型权重 / 语音转写与翻译",
+            "source": {
+              "name": "OpenAI 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/openai/whisper-large-v3-turbo"
+            }
+          },
+          {
+            "event": "BGE-M3：MIT 许可的多语言检索模型",
+            "summary": "BAAI 的 Hugging Face 模型卡标注 MIT 许可；BGE-M3 支持 100 多种语言，可进行 dense、multi-vector 与 sparse 检索，并能处理最长 8192 tokens 的文本。",
+            "howTo": "从模型卡进入官方 FlagEmbedding 仓库，按 Quick Start 加载 `BAAI/bge-m3`，把自己的课程笔记切分后建立检索索引，再用问题检索相关段落并检查原文。",
+            "impact": "适合练习构建多语言课程笔记检索原型，或从较长材料中找回相关段落；检索结果是候选内容，仍应核对原文语境。",
+            "free": "模型权重采用 MIT 许可，可下载并本地运行；本地设备资源由使用者承担。官方模型卡未说明托管 API 的免费额度、地区或截止日期。",
+            "category": "开放模型权重 / 多语言检索",
+            "source": {
+              "name": "BAAI 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/BAAI/bge-m3"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Scammers using AI-generated images of missing pets to demand reward money",
+            "source": "BBC",
+            "published": "2026-11-04",
+            "url": "https://www.bbc.co.uk/news/articles/cdx8080nq74o",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "科技与社会 / AI 图像诈骗、宠物失踪与网络安全",
+            "summary": "BBC 以三名宠物主人遭遇的诈骗为例，说明骗子如何用 AI 伪造宠物照片、编造找回宠物的故事，再以礼品卡或转账为由索要报酬，甚至在受害者拒绝后发出威胁。报道穿插受害者经历，展示逼真的图片如何放大失宠者的希望与焦虑；随后引述反诈机构和学者，指出 AI 降低了制作假证据的门槛，也让诈骗者更容易制造紧迫感。文章最后转向实用防范：付款前当面确认宠物、在安全地点核实身份、询问只有真正找到宠物的人才知道的细节，并向相关机构报告。论证由个案、诈骗机制推进到可执行的核验步骤，强调不能让逼真图像取代独立验证。",
+            "reason": [
+              "文章把生成式 AI 与网络诈骗、情绪操纵和消费者保护结合，适合科技伦理与社会风险类考题。",
+              "结构由受害者个案扩展到诈骗手法和专家解释，最后以机构建议收束，便于梳理问题—机制—对策。",
+              "可练习识别举例的论证功能、区分受害者陈述与专家观点，并概括文章提出的核验措施。",
+              "词汇涉及 prey on、authenticity、fraudster、urgency 等，可用于讨论欺诈、证据可信度和风险感知。",
+              "写作可借鉴先呈现具体案例，再解释技术如何放大既有问题，最后提出可操作的防范建议。"
+            ],
+            "vocabulary": [
+              {
+                "word": "prey on",
+                "phonetic": "/preɪ ɒn/",
+                "part": "phr. v.",
+                "translation": "利用；欺骗（弱势者）"
+              },
+              {
+                "word": "conjure up",
+                "phonetic": "/ˈkʌndʒə(r) ʌp/",
+                "part": "phr. v.",
+                "translation": "凭空编造；想象出"
+              },
+              {
+                "word": "backstory",
+                "phonetic": "/ˈbækˌstɔːri/",
+                "part": "n.",
+                "translation": "背景故事"
+              },
+              {
+                "word": "fraudster",
+                "phonetic": "/ˈfrɔːdstə(r)/",
+                "part": "n.",
+                "translation": "诈骗者"
+              },
+              {
+                "word": "authenticity",
+                "phonetic": "/ˌɔːθenˈtɪsəti/",
+                "part": "n.",
+                "translation": "真实性；可信性"
+              },
+              {
+                "word": "bombard",
+                "phonetic": "/bɒmˈbɑːd/",
+                "part": "v.",
+                "translation": "连续轰炸；接连施压"
+              },
+              {
+                "word": "foster carer",
+                "phonetic": "/ˈfɒstə ˌkeərə(r)/",
+                "part": "n.",
+                "translation": "寄养照护者"
+              },
+              {
+                "word": "urgency",
+                "phonetic": "/ˈɜːdʒənsi/",
+                "part": "n.",
+                "translation": "紧迫感"
+              },
+              {
+                "word": "cautious",
+                "phonetic": "/ˈkɔːʃəs/",
+                "part": "adj.",
+                "translation": "谨慎的"
+              },
+              {
+                "word": "evidence",
+                "phonetic": "/ˈevɪdəns/",
+                "part": "n.",
+                "translation": "证据；依据"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "They prey on owners by using AI to fake images of their pets and conjuring up detailed backstories and fake evidence to claim them as found, before bombarding victims with abuse.",
+                "analysis": [
+                  "主干是 They prey on owners，by 引出诈骗者利用的手段。",
+                  "using AI 与 conjuring up 并列，说明伪造图片和编造背景故事两种做法。",
+                  "to claim them as found 交代假证据服务的目的，before 引导后续动作发生的时间关系。",
+                  "句尾 before bombarding victims with abuse 展示诈骗升级为骚扰的过程。",
+                  "可借鉴 by doing ... before doing ... 描写手段、目的与后续结果。"
+                ],
+                "translation": "他们利用人工智能伪造宠物照片、编造详细背景和假证据，谎称找到了宠物，随后不断辱骂受害者。"
+              },
+              {
+                "original": "Just because it looks genuine, doesn't make it real.",
+                "analysis": [
+                  "句子由让步性原因状语 Just because it looks genuine 和主句 doesn't make it real 构成。",
+                  "第一个 it 指看起来逼真的图像，第二个 it 指图像所呈现的内容，代词需结合语境判断。",
+                  "doesn't make 表示外观不能证明真实性，否定的是从“看起来真”到“事实为真”的推断。",
+                  "句子以简洁对照概括报道的核心提醒，语气直接有力。",
+                  "可借鉴 Just because ..., doesn't mean/make ... 表达不能仅凭表象下结论。"
+                ],
+                "translation": "看起来逼真，并不代表它就是真的。"
+              },
+              {
+                "original": "The organisation advises people to arrange a meeting to see their pet in person before handing over any money, and to \"stay alert\" to criminals.",
+                "analysis": [
+                  "主干是 The organisation advises people，后面由两个并列的不定式说明建议内容。",
+                  "to arrange a meeting 后接 to see their pet，后一不定式说明会面的目的。",
+                  "before handing over any money 是时间状语，提醒先核验再付款。",
+                  "in person 强调当面确认；引号中的 stay alert 保留机构建议中的警示措辞。",
+                  "可借鉴 advise sb to do ... before doing ... 给出有先后顺序的安全建议。"
+                ],
+                "translation": "该机构建议人们先安排见面、当面查看宠物，再支付任何款项，并对犯罪者保持警惕。"
+              }
+            ]
+          },
+          {
+            "title": "‘This is direct’: positive early feedback from pilot community mental health hub in Cumbria",
+            "source": "The Guardian",
+            "published": "2026-11-03",
+            "url": "https://www.theguardian.com/society/2026/nov/03/early-feedback-pilot-community-mental-health-hub-cumbria-whitehaven",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "健康与社会 / 社区心理健康服务、预防与公共政策",
+            "summary": "The Guardian 以 Whitehaven 的 Hope Haven 为例，介绍英格兰六个社区心理健康中心试点中的一种开放式服务：全天候接待，不要求诊断或转介，并把多种社区支持集中在一处。报道以使用者深夜求助后获得即时接待和次日预约的经历开篇，再列出运营前五个月约 3,000 人使用服务、近半数此前未接触 NHS 心理健康服务，以及当地住院治疗人数同期同比下降 24% 等早期数据。文章随后交代其他试点地点、未来扩展安排及 Trieste 模式的背景，并呈现当地服务短缺和员工观察。结尾引用社区代表对服务的积极评价，但整体材料仍是试点早期反馈和同期变化，不能单独证明中心造成了住院率下降；文章由此呈现可及性优势，也保留了评估成效的必要性。",
+            "reason": [
+              "主题连接心理健康、基层服务可及性与公共资源配置，适合健康政策和社会福利类考题。",
+              "文章从个人求助经历切入，继而给出试点数据、政策背景和社区意见，形成由个案到制度的展开。",
+              "可练习区分服务使用人数与效果指标，判断同期变化是否足以证明因果关系。",
+              "词汇涵盖 preventive、open-access、referral、holistic 等公共服务与政策表达。",
+              "写作可借鉴以个案引题、用数据呈现规模，再以证据边界和后续评估审慎收束。"
+            ],
+            "vocabulary": [
+              {
+                "word": "preventive",
+                "phonetic": "/prɪˈventɪv/",
+                "part": "adj.",
+                "translation": "预防性的"
+              },
+              {
+                "word": "open-access",
+                "phonetic": "/ˌəʊpən ˈækses/",
+                "part": "adj.",
+                "translation": "开放准入的；无需转介即可使用的"
+              },
+              {
+                "word": "diagnosis",
+                "phonetic": "/ˌdaɪəɡˈnəʊsɪs/",
+                "part": "n.",
+                "translation": "诊断"
+              },
+              {
+                "word": "referral",
+                "phonetic": "/rɪˈfɜːrəl/",
+                "part": "n.",
+                "translation": "转介；转诊"
+              },
+              {
+                "word": "inpatient",
+                "phonetic": "/ˈɪnˌpeɪʃənt/",
+                "part": "n.",
+                "translation": "住院病人"
+              },
+              {
+                "word": "holistic",
+                "phonetic": "/həʊˈlɪstɪk/",
+                "part": "adj.",
+                "translation": "整体性的；综合性的"
+              },
+              {
+                "word": "deprivation",
+                "phonetic": "/ˌdeprɪˈveɪʃən/",
+                "part": "n.",
+                "translation": "贫困；匮乏"
+              },
+              {
+                "word": "turning point",
+                "phonetic": "/ˈtɜːnɪŋ pɔɪnt/",
+                "part": "n.",
+                "translation": "转折点"
+              },
+              {
+                "word": "low-stigma",
+                "phonetic": "/ˌləʊ ˈstɪɡmə/",
+                "part": "adj.",
+                "translation": "污名感较低的"
+              },
+              {
+                "word": "walk-in",
+                "phonetic": "/ˈwɔːk ɪn/",
+                "part": "adj.",
+                "translation": "无需预约即可到访的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "It offers preventive, open-access care 24/7, meaning people do not need a diagnosis or referral to access its services.",
+                "analysis": [
+                  "主干是 It offers care，preventive、open-access 和 24/7 分别补充服务性质与时间安排。",
+                  "meaning 引出结果说明，解释开放服务如何降低进入门槛。",
+                  "people do not need a diagnosis or referral 是 meaning 后的内容，or 连接两项不必具备的条件。",
+                  "to access its services 是目的不定式，说明诊断和转介与服务使用的关系。",
+                  "可借鉴 ..., meaning ... 说明某项制度安排带来的实际影响。"
+                ],
+                "translation": "它提供全天候的预防性开放服务，人们无需诊断或转介即可使用。"
+              },
+              {
+                "original": "In its first five months from March to July, about 3,000 people accessed support either digitally or in person.",
+                "analysis": [
+                  "主干是 about 3,000 people accessed support，数字量化了试点服务使用规模。",
+                  "In its first five months from March to July 是时间状语，限定数据的统计区间。",
+                  "either digitally or in person 构成并列选择，说明服务可通过线上或线下获得。",
+                  "about 表明数字为近似值，概括统计时不宜写成精确总数。",
+                  "可借鉴 In its first ... months, about ... 交代项目早期覆盖规模。"
+                ],
+                "translation": "从 3 月到 7 月的头五个月里，约有 3,000 人通过线上或线下方式获得支持。"
+              },
+              {
+                "original": "The hubs build on the Trieste model of mental health care, a 24-hour holistic approach which started in 1980s Italy.",
+                "analysis": [
+                  "主干是 The hubs build on the Trieste model，build on 表示在既有模式基础上发展。",
+                  "of mental health care 限定 Trieste model 的领域。",
+                  "逗号后的 a 24-hour holistic approach 是同位语，对该模式作补充说明。",
+                  "which started in 1980s Italy 是定语从句，修饰 approach 并交代其历史起点。",
+                  "可借鉴 build on ... 将新方案与已有实践或理论联系起来。"
+                ],
+                "translation": "这些中心以的里雅斯特心理健康照护模式为基础；该模式是一种起源于 20 世纪 80 年代意大利的全天候综合方法。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-03",
       "status": "ready",
@@ -2111,338 +2443,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 not whether..., but how... 将论证从既定事实推进到可选择的方案。"
                 ],
                 "translation": "问题不在于我们是否会分解，而在于如何分解、在哪里分解，以及分解得多快。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-28",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Claude API 与 SDK 更新、Claude 接入 Google Cloud，以及 Copilot 组织级影响面板；留意破坏性变更、云端计费和组织数据的自愿参与。",
-        "updates": [
-          {
-            "event": "Claude API 2026-10-21 版本与多语言 SDK 发布",
-            "summary": "Anthropic 发布 API 版本 2026-10-21，并同步更新 Python、TypeScript、C#、Go、Java、PHP、Ruby SDK 与 ant CLI，使其默认发送这一 API 版本。新 SDK/CLI 另有不依赖 API 版本的破坏性变更，许可从 MIT 改为 Apache 2.0。",
-            "howTo": "维护 Claude API 项目的学生可先读官方迁移指南，再将 Python SDK 更新至 anthropic 2.0.0（`pip install anthropic==2.0.0`），按指南处理 SDK 破坏性变更；其他语言使用对应的新版本。",
-            "impact": "课程原型若使用 Claude API，可检查请求版本和依赖升级对现有代码的影响；新 SDK/CLI 的 Apache 2.0 许可也适合需要核对依赖许可的项目。",
-            "free": "官方确认 SDK/CLI 许可为 Apache 2.0；该版本说明未注明 API 的免费层、价格、调用配额或地区限制，不能据此认定 API 调用免费。",
-            "category": "Claude / API 与开发工具",
-            "source": {
-              "name": "Anthropic Claude Platform 官方发布说明",
-              "published": "2026-10-21",
-              "url": "https://platform.claude.com/docs/en/release-notes/overview"
-            }
-          },
-          {
-            "event": "Claude API 可通过 Google Cloud 项目使用（2026-10-22）",
-            "summary": "Anthropic 将其托管的 Claude API 接入 Google Cloud 项目；Google Cloud IAM 控制访问，Google Cloud Marketplace 处理账单。这是不同于 Google 托管模型的 Anthropic 托管选项。",
-            "howTo": "在 Google Cloud Marketplace 找到 Claude Models on Google Cloud（Anthropic managed）并订阅；按官方接入文档启用两个服务、激活 Anthropic 组织，再通过 Claude Console 配置 IAM 权限和 API 调用。",
-            "impact": "已有 Google Cloud 课程或实验室项目的开发者可在现有云项目中评估 Claude API；开始前应让项目负责人确认权限和账单归属。",
-            "free": "官方文档说明需经 Marketplace 订阅并由 Google Cloud 处理账单，但未说明价格、免费额度、调用配额或地区范围；不应把它当作免费服务。",
-            "category": "Claude / 云端 API",
-            "source": {
-              "name": "Anthropic Claude Platform 官方发布说明",
-              "published": "2026-10-22",
-              "url": "https://platform.claude.com/docs/en/release-notes/overview"
-            }
-          },
-          {
-            "event": "Copilot 影响面板新增行业对比（2026-10-22）",
-            "summary": "GitHub 为 Copilot impact dashboard 增加行业对比：符合条件的企业和非企业所属组织可自愿加入，与参与组织比较 agent-first/multi-agent 使用比例及相关 PR 合并率；参与默认关闭，基准按 28 天周期计算。",
-            "howTo": "企业所有者或非企业所属组织的所有者，在 Copilot 用量指标政策已启用的前提下，从影响面板或组织/企业 Copilot 政策中选择加入，再按公司规模和行业查看对比；普通成员需有面板查看权限。",
-            "impact": "在实习团队或课程组织中使用 Copilot 的学生，可借面板了解组织采用情况及比较口径；对比是汇总指标而非个人排名，是否贡献数据由组织选择。",
-            "free": "公告仅说明组织级适用范围和自愿参与方式，未说明费用、个人免费资格或调用配额；数据仅用于面板比较，退出后停止展示并在下一次每日更新中排除，汇总数据 30 天后删除。",
-            "category": "GitHub Copilot / 组织分析",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-22",
-              "url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google AI 高校学生优惠：兑换后 12 个月订阅权益",
-            "summary": "Google 为符合条件的高校学生提供兑换后 12 个月的 Google AI 订阅权益；订阅档位取决于学校所在国家或地区。官方说明美国对应 Google AI Pro，140 多个国家/地区对应 Google AI Plus。",
-            "howTo": "先核对官方优惠条款，再使用个人 Google 账号完成 SheerID 学生验证和 Google Payments 付款方式设置，按页面提示兑换；若不准备续订，需在优惠期结束前取消。",
-            "impact": "适合用 Gemini 学生中心和学习笔记功能整理课程材料、准备课堂复习；兑换前确认本地档位和续费日期，避免优惠结束后产生标准月费。",
-            "free": "优惠期 12 个月免订阅费，须年满 18 岁、在支持地区（不含香港、澳门和突尼斯）的高等教育机构就读并通过 SheerID 验证，另需个人 Google 账号及合格付款方式；2026-12-31 前兑换。期满自动按当地标准月费续订（法律要求同意的地区除外），可取消；使用额度可能不同且会变化。",
-            "category": "教育优惠 / Google AI",
-            "source": {
-              "name": "Google One 官方学生优惠条款",
-              "published": "2026-08-19",
-              "url": "https://one.google.com/offer/studentoffer8?g1_landing_page=0"
-            }
-          },
-          {
-            "event": "DeepL Translator 免费版：每月 50,000 字符翻译",
-            "summary": "DeepL 官方计划对比页列出免费版每位用户每月 50,000 个字符的文本翻译额度，并提供每月 1 个、最大 5 MB 的文件翻译。",
-            "howTo": "在 DeepL Translator 粘贴英语段落或上传课程文档进行初译；对照原文检查术语、语气和逻辑连接，再自行修改，不把机器译文直接当作作业答案。",
-            "impact": "阅读论文摘要或核对英文材料时，可先获得中文草译，再回到原文学习句法和术语；月度字符与文档限制适合短材料，不适合整本书批量翻译。",
-            "free": "免费版文本额度为每用户每月 50,000 字符，文件翻译每月 1 个、文件最大 5 MB；官方计划页未说明地区资格、额外账号条件或截止日期。",
-            "category": "免费学习工具 / 翻译",
-            "source": {
-              "name": "DeepL 官方计划与定价页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "Ollama：MIT 许可的本地开放模型运行器",
-            "summary": "Ollama 官方 GitHub 仓库提供 macOS、Windows、Linux 安装方式，并支持在本机运行开放模型；项目代码按 MIT 许可发布。",
-            "howTo": "从 Ollama 官方下载页安装对应系统版本，启动后在终端运行 `ollama run gemma4`，按提示下载并开始对话；可查看官方模型库选择其他模型。",
-            "impact": "可用来练习本地模型问答、比较不同模型对同一课程问题的回答；模型权重许可和运行所需硬件需分别检查。",
-            "free": "运行器源码采用 MIT 许可；本地运行需要自行承担设备、存储和电力成本，模型权重另有各自许可。官方仓库未说明最低硬件要求、地区限制或固定使用配额。",
-            "category": "开放模型工具 / 本地运行",
-            "source": {
-              "name": "Ollama 官方 GitHub 仓库",
-              "published": "官方未说明",
-              "url": "https://github.com/ollama/ollama"
-            }
-          },
-          {
-            "event": "Phi-4-mini-instruct：MIT 许可的多语言开放权重",
-            "summary": "Microsoft 官方 Hugging Face 模型卡提供 Phi-4-mini-instruct 权重下载，标注 MIT 许可；模型为 3.8B 参数、支持最长 128K token 上下文，面向多语言指令与推理任务。",
-            "howTo": "打开 Microsoft 模型卡下载权重；按卡片中的 Transformers 示例安装 `transformers` 与 `accelerate`，再用 `microsoft/Phi-4-mini-instruct` 加载模型并运行本地推理。",
-            "impact": "适合有本地计算环境的学生尝试摘要、问答或小型原型，并与托管模型对照；模型卡提醒其规模限制可能导致事实错误，重要内容仍需核查。",
-            "free": "模型权重按 MIT 许可提供，可下载使用；模型卡未说明官方托管 API 免费额度、地区资格、截止日期或最低硬件配置。本地推理仍需自行准备算力和存储。",
-            "category": "开放模型权重 / 多语言",
-            "source": {
-              "name": "Microsoft 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Would you pay to have the ‘best baby’? Liberal eugenics and the troubling quest for human perfection",
-            "source": "The Guardian",
-            "published": "2026-10-27",
-            "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/27/would-you-pay-to-have-the-best-baby-liberal-eugenics-and-the-troubling-quest-for-human-perfection",
-            "readingTime": "约 12 分钟（估算）",
-            "topic": "社会与健康 / 基因筛选、残障权利与优生学伦理",
-            "summary": "作者从自己童年被诊断为脊髓性肌萎缩症、后来发现诊断有误的经历出发，回顾优生学如何从国家主导的人口管理转向以个人选择为名的胚胎筛选。文章借商业基因公司的“最佳婴儿”宣传，指出群体层面的遗传统计并不能可靠决定单个孩子的特征；更深层的风险是把生产力与竞争优势当作理想人生标准，令残障者及其家庭承受新的压力。作者并不否定治疗，而主张改善社会环境、承认人的差异，而非追求单一的完美标准。",
-            "reason": [
-              "主题把基因技术、家庭选择、残障权利与社会公平联系起来，适合科技伦理和社会政策类考题。",
-              "结构由个人叙事引出历史背景，再分析当代商业化筛选，最后提出“改善社会而非改造人”的立场。",
-              "可练习识别作者态度、论据与结论，也可讨论一项技术的个人收益和社会代价。",
-              "词汇覆盖 eugenics、hereditary、imperative、repressive 等抽象社会科学表达。",
-              "写作可借鉴让步与转折：承认治疗的价值，同时质疑把选择扩展为单一完美标准。"
-            ],
-            "vocabulary": [
-              {
-                "word": "eugenics",
-                "phonetic": "/juːˈdʒenɪks/",
-                "part": "n.",
-                "translation": "优生学"
-              },
-              {
-                "word": "hereditary",
-                "phonetic": "/həˈredɪtəri/",
-                "part": "adj.",
-                "translation": "遗传的"
-              },
-              {
-                "word": "imperative",
-                "phonetic": "/ɪmˈperətɪv/",
-                "part": "n.",
-                "translation": "迫切要求；必要之事"
-              },
-              {
-                "word": "consumerist",
-                "phonetic": "/kənˈsjuːmərɪst/",
-                "part": "adj.",
-                "translation": "消费主义的"
-              },
-              {
-                "word": "repressive",
-                "phonetic": "/rɪˈpresɪv/",
-                "part": "adj.",
-                "translation": "压制性的"
-              },
-              {
-                "word": "population-level",
-                "phonetic": "/ˌpɒpjʊˈleɪʃən ˈlevəl/",
-                "part": "adj.",
-                "translation": "群体层面的"
-              },
-              {
-                "word": "genomics",
-                "phonetic": "/dʒɪˈnəʊmɪks/",
-                "part": "n.",
-                "translation": "基因组学"
-              },
-              {
-                "word": "individualist",
-                "phonetic": "/ˌɪndɪˈvɪdʒuəlɪst/",
-                "part": "adj.",
-                "translation": "个人主义的"
-              },
-              {
-                "word": "accommodate",
-                "phonetic": "/əˈkɒmədeɪt/",
-                "part": "v.",
-                "translation": "适应；容纳"
-              },
-              {
-                "word": "variation",
-                "phonetic": "/ˌveəriˈeɪʃn/",
-                "part": "n.",
-                "translation": "差异；变异"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "It is hard to be young and to know that you are growing weaker rather than stronger.",
-                "analysis": [
-                  "主干是 It is hard，it 作形式主语，真正主语由后面的不定式结构承担。",
-                  "to be young 与 to know 并列，说明作者认为困难的两件事。",
-                  "that 引导 know 的宾语从句；you are growing weaker 是从句主干。",
-                  "rather than 连接 weaker 与 stronger，形成“变弱而非变强”的对照。",
-                  "可借鉴 It is hard to... 描述某种经历或处境带来的困难。"
-                ],
-                "translation": "年轻时得知自己正在变弱而非变强，是一件很难承受的事。"
-              },
-              {
-                "original": "Although we may not be immortality-seeking billionaires, we are all constantly living under the relentless imperative to strive for human perfection, in our own generation and the next.",
-                "analysis": [
-                  "Although 引导让步状语从句，先承认普通人并非追求永生的亿万富翁。",
-                  "主句主干是 we are living under the imperative，all、constantly 修饰主句谓语。",
-                  "relentless 修饰 imperative；to strive for... 是不定式，说明这种要求指向什么行动。",
-                  "in our own generation and the next 补充说明追求延伸到当代与下一代。",
-                  "可用 Although..., ... 引出“即便不是极端情况，普遍压力仍存在”的论证。"
-                ],
-                "translation": "尽管我们未必是追求永生的亿万富翁，却都不断承受着追求人类完美的强烈要求，并把它延伸到自己这一代和下一代。"
-              },
-              {
-                "original": "The goal is not to abolish cures, but to abolish the idea that only cures, or the prenatal optimisation of an embryo, can make for a life worth living.",
-                "analysis": [
-                  "主干是 The goal is not A, but B，用 not...but... 澄清作者反对的对象。",
-                  "A 与 B 都是不定式短语，平行结构突出“反对治愈”与“反对单一生命标准”的区别。",
-                  "that 引导 idea 的同位语从句，解释作者要质疑的观念。",
-                  "only cures 与 prenatal optimisation 并列为限制性条件；worth living 后置修饰 life。",
-                  "可借鉴 not to reject X, but to question Y，避免把复杂立场简化成二选一。"
-                ],
-                "translation": "目标并非废除治疗，而是废除这样一种观念：只有治愈疾病或在产前优化胚胎，生命才值得一过。"
-              }
-            ]
-          },
-          {
-            "title": "Looted by Nazis and Recently Restituted, a Kaleidoscopic Kandinsky Painting Just Sold for Nearly $42 Million",
-            "source": "Smithsonian Magazine",
-            "published": "2026-10-27",
-            "url": "https://www.smithsonianmag.com/smart-news/looted-by-nazi-and-recently-restituted-a-kaleidoscopic-kandinsky-painting-just-sold-for-nearly-42-million-180989763/",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "文化 / 纳粹掠夺艺术、文物归还与拍卖市场",
-            "summary": "文章以康定斯基《多彩生活》以约 4,200 万美元成交为切入点，回溯作品的创作背景、俄罗斯民间传说与法国野兽派影响，以及荷兰犹太收藏家 Lewenstein 家族的收藏史。纳粹占领荷兰后，画作未经家族授权便被拍卖；作品后来进入德国银行收藏并在慕尼黑博物馆长期展出。经过后代多年追索，德国咨询委员会于 2023 年建议归还，作品最终回到家族继承人手中再进入拍卖。文章以这次交易既结束家族寻回之路、又开启作品新篇章作结。",
-            "reason": [
-              "文化遗产、战争掠夺和归还机制构成历史与公共记忆类主题，适合文化保护和正义议题。",
-              "行文按拍卖新闻、作品背景、产权流转、司法/委员会建议到家族追索结果推进，时间线清晰。",
-              "可练习根据时间标记复原事件顺序，并区分事实报道、历史背景与结尾评价。",
-              "词汇涉及 restitution、heirs、auction、proceeds、impasse 等文化遗产和法律语境表达。",
-              "写作可用“事件结果—历史来由—制度处理—意义评价”的结构讨论文物返还。"
-            ],
-            "vocabulary": [
-              {
-                "word": "restituted",
-                "phonetic": "/ˈrestɪtjuːtɪd/",
-                "part": "adj.",
-                "translation": "已归还的；已返还的"
-              },
-              {
-                "word": "rightful",
-                "phonetic": "/ˈraɪtfəl/",
-                "part": "adj.",
-                "translation": "合法拥有的；正当的"
-              },
-              {
-                "word": "heirs",
-                "phonetic": "/eəz/",
-                "part": "n.",
-                "translation": "继承人"
-              },
-              {
-                "word": "auction",
-                "phonetic": "/ˈɔːkʃn/",
-                "part": "n.",
-                "translation": "拍卖"
-              },
-              {
-                "word": "estimate",
-                "phonetic": "/ˈestɪmət/",
-                "part": "n.",
-                "translation": "估价；估算"
-              },
-              {
-                "word": "saleroom",
-                "phonetic": "/ˈseɪlruːm/",
-                "part": "n.",
-                "translation": "拍卖大厅"
-              },
-              {
-                "word": "proceeds",
-                "phonetic": "/ˈprəʊsiːdz/",
-                "part": "n.",
-                "translation": "收益；所得款项"
-              },
-              {
-                "word": "impasse",
-                "phonetic": "/ˈɪmpɑːs/",
-                "part": "n.",
-                "translation": "僵局"
-              },
-              {
-                "word": "triumphant",
-                "phonetic": "/traɪˈʌmfənt/",
-                "part": "adj.",
-                "translation": "胜利的；成功的"
-              },
-              {
-                "word": "multi-generational",
-                "phonetic": "/ˌmʌlti dʒenəˈreɪʃənəl/",
-                "part": "adj.",
-                "translation": "跨越数代的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Over six tense minutes, bids flooded the packed saleroom and telephone banks.",
-                "analysis": [
-                  "主干是 bids flooded the saleroom and telephone banks，主语 bids 与并列宾语构成现场画面。",
-                  "Over six tense minutes 是时间状语，tense 修饰 minutes，营造紧张气氛。",
-                  "packed 是过去分词形容词，修饰 saleroom；telephone banks 与其并列。",
-                  "flooded 在此用作比喻动词，强调竞价迅速涌入。",
-                  "可用 Over + 时间状语引出一段事件，并以生动动词浓缩场面。"
-                ],
-                "translation": "在紧张的六分钟里，竞价不断涌入拥挤的拍卖大厅和电话竞拍席。"
-              },
-              {
-                "original": "The family never authorized the transaction, nor did they receive any proceeds.",
-                "analysis": [
-                  "前半句主干为 The family never authorized the transaction，never 强调从未授权。",
-                  "nor 引出否定并列分句，表示“也没有”；助动词 did 前置形成倒装。",
-                  "they receive any proceeds 与前句共享同一主语，any 用于否定语境。",
-                  "两项否定并列呈现交易的不公：没有授权，也没有得到收益。",
-                  "可用 ..., nor did + 主语 + 动词补充第二项否定事实。"
-                ],
-                "translation": "家族从未授权这笔交易，也没有收到任何收益。"
-              },
-              {
-                "original": "The legal impasse finally broke in 2023, when Germany’s advisory commission on Nazi-looted art recommended that the painting should be returned to the family.",
-                "analysis": [
-                  "主句主干是 The legal impasse broke，finally 和 in 2023 标出僵局结束的时间。",
-                  "when 引导非限制性时间从句，交代僵局打破时发生的关键制度行动。",
-                  "recommended 后接 that 宾语从句；从句用 should be returned 被动结构突出画作。",
-                  "on Nazi-looted art 修饰 commission，说明委员会讨论的专业领域。",
-                  "可用 when 从句把事件结果与具体制度节点连接起来。"
-                ],
-                "translation": "法律僵局终于在 2023 年打破；当时德国纳粹掠夺艺术品咨询委员会建议将这幅画归还家族。"
               }
             ]
           }
