@@ -1,6 +1,358 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-04T11:01:11+08:00",
+  "updatedAt": "2026-11-05T11:27:16+08:00",
   "issues": [
+    {
+      "date": "2026-11-05",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Copilot 接入 Xcode 原生编程助手、Google Classroom 的 Guided Learning 全球开放，以及 Google 分享健康 AI 评估框架；免费资源涵盖 Gemini、Notebook、Copilot、DeepL、Mistral 与 Gemma。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 接入 Xcode 内置编程助手",
+            "summary": "GitHub Copilot 已在 Xcode 内置 coding assistant 中进入公开预览。学生可在原生 Xcode 工作流中直接使用 Copilot；现有 Copilot for Xcode 扩展仍是另一种独立方式。",
+            "howTo": "从 Apple Developer Downloads 安装 Xcode 27.3 beta，在 Xcode > Settings > Intelligence 设置 GitHub Copilot；需运行 macOS Tahoe 26.6 或更新版本。",
+            "impact": "修读 Swift 或 iOS 开发课程的学生可在 Xcode 中直接提问、理解项目代码并迭代编程任务，不必切换到另一个编辑器；仍应检查生成代码与测试结果。",
+            "free": "GitHub 公告称所有 Copilot 计划均支持此集成；需 Xcode 27.3 beta 和 macOS Tahoe 26.6 或更新版本。公告未说明地区、独立调用额度或额外费用。",
+            "category": "GitHub Copilot / Xcode 编程助手",
+            "source": {
+              "name": "GitHub 官方 Changelog",
+              "published": "2026-11-04",
+              "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant/"
+            }
+          },
+          {
+            "event": "Google Classroom 全球开放教师布置的 Guided Learning",
+            "summary": "Google 将 Guided Learning 能力带入 Google Classroom：教师可布置基于课程材料的逐步辅导活动，学生按步骤理解概念，教师可查看学生互动与进度洞察。",
+            "howTo": "教师在 Google Classroom 中基于课程材料布置 Guided Learning 活动；学生打开老师分配的活动，围绕指定课程内容逐步提问和练习。",
+            "impact": "学生遇到统计或物理难题时，可以先沿着提示拆解概念、练习解题，而不是只抄最终答案；教师也能据进度洞察发现需要额外帮助的知识点。",
+            "free": "Google 称教师主导的 Guided Learning 已在 Google Classroom 全球开放；K-12 学生账号的相关 AI 产品默认关闭，须由学校管理员主动启用。产品价格、个人账号资格及使用配额官方未说明。",
+            "category": "Google Classroom / 引导式学习",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-03",
+              "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+            }
+          },
+          {
+            "event": "Google 分享健康 AI 安全与实用性评估框架",
+            "summary": "Google 发布一套评估健康 AI 使用场景的方法，分别考察准确性、安全性和实用性，并结合封闭式问题基准、自动评分器与专家人工审查；公司称会继续用该框架评估自家模型，并公开方法以促进透明度。",
+            "howTo": "打开 Google 公告中的白皮书，按准确性、安全性、实用性三项整理检查表；做健康主题课程作业时，用它逐项核对 AI 回答与可信医疗来源，不把模型回答当作诊断。",
+            "impact": "学生在写健康传播或数字医疗作业时，可把“答案是否正确”与“是否安全、是否有用”分开评估，识别单一基准分数无法覆盖的高风险场景。",
+            "free": "Google 公告提供公开白皮书链接；这是一套评估方法，不是面向个人的健康 AI 应用。账户、地区、使用配额及实际部署成本官方未说明。",
+            "category": "Google AI / 健康与安全评估",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-04",
+              "url": "https://blog.google/innovation-and-ai/technology/health/evaluating-health-ai-at-scale/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Gemini 免费方案：学习、研究与图像功能",
+            "summary": "Google 官方订阅页标明 Free 方案为每月 0 美元，需 Google 账号；包括 Gemini app、Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gems 和 Gemini Notebook。",
+            "howTo": "用 Google 账号打开 Gemini，上传或整理课程资料并要求生成提纲；可用 Deep Research 收集线索，再回到原始来源核实，或用 Canvas 修改学习计划。",
+            "impact": "可用于建立复习提纲、比较资料观点、生成展示稿草图；把 AI 输出当作起点，重要事实逐条核验。",
+            "free": "官方标价每月 0 美元，需 Google 账号。免费方案的具体使用次数、使用地区及期限官方未说明。",
+            "category": "长期免费 AI 服务 / 学习与研究",
+            "source": {
+              "name": "Google Gemini 官方订阅页",
+              "published": "官方未说明",
+              "url": "https://gemini.google/subscriptions/"
+            }
+          },
+          {
+            "event": "Gemini Notebook Standard：免费整理课程资料",
+            "summary": "Google 帮助页说明，Gemini Notebook Standard 可免费注册；标准版列出每位用户最多 100 个 notebook、每个 notebook 最多 50 个来源，并提供自定义聊天与分析功能。",
+            "howTo": "用 Gmail 账号登录 Gemini Notebook，新建一个课程主题 notebook，添加讲义或网页来源，再用自定义聊天围绕这些材料提问并检查回答依据。",
+            "impact": "适合把分散的阅读材料集中成复习空间，按来源追问概念、生成学习问题；来源数量有上限，引用仍需回到原文确认。",
+            "free": "标准版免费注册需 Gmail 账号；官方列出每用户 100 个 notebook、每个 notebook 50 个来源，限额可能变化。浏览器版仅面向达到当地法定同意年龄且位于支持地区的用户；具体地区见官方支持列表。",
+            "category": "长期免费 AI 服务 / 资料阅读与研究",
+            "source": {
+              "name": "Google Gemini Notebook 官方帮助中心",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出每月 0 美元的 Free 方案，包含每月 2,000 次代码补全以及有限的聊天和 agent 使用；无需信用卡。",
+            "howTo": "登录 GitHub，在支持的编辑器安装 Copilot 后选择 Free 方案；用它解释课程代码或补全小段函数，并在提交前运行测试、逐行审阅改动。",
+            "impact": "适合编程入门、课程作业中的代码解释和小规模补全；留意聊天与 agent 有限额，避免把生成代码未经核验直接交付。",
+            "free": "官方标价每月 0 美元；每月 2,000 次代码补全，聊天与 agent 使用受限，无需信用卡。地区资格与聊天/agent 的具体额度官方未说明。",
+            "category": "长期免费 AI 服务 / 编程辅助",
+            "source": {
+              "name": "GitHub Copilot 官方计划与价格页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "DeepL 免费版：每月 50,000 字符文本翻译",
+            "summary": "DeepL 官方计划对比页列出 Free version 每用户每月 50,000 个文本翻译字符，文件翻译大小上限为 5 MB。",
+            "howTo": "打开 DeepL Translator 粘贴待译的论文摘要或课程材料；长文档可按官方支持的文件格式上传，并在提交前核对术语、专名和原文语气。",
+            "impact": "可辅助阅读外文论文摘要、课程说明和短文；文本额度按月计算，免费文件翻译有大小限制。",
+            "free": "官方免费版每用户每月 50,000 个文本翻译字符，文件翻译上限 5 MB；账户要求、地区资格和续用期限官方未说明。",
+            "category": "长期免费工具 / 翻译",
+            "source": {
+              "name": "DeepL 官方计划对比页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "Google Gemma 3 4B：可下载的多模态开放权重",
+            "summary": "Google 的 Gemma 3 模型卡提供 4B 指令微调模型开放权重，支持文本与图像输入、文本输出；模型卡列出 128K 上下文和 140 多种语言，并要求遵循 Gemma Terms of Use。",
+            "howTo": "按模型卡安装 Transformers，加载 `google/gemma-3-4b-it` 和对应 processor；先用短文本或公开图片测试问答、摘要，再按 Gemma 使用条款处理输入数据。",
+            "impact": "有合适设备的学生可在本地实验多模态问答或资料摘要，减少把课程素材上传到在线聊天服务的需要；结果仍要核验，模型性能取决于设备与设置。",
+            "free": "模型卡提供开放权重并链接 Gemma Terms of Use；未说明下载注册要求、地区限制或配额。运行所需设备/算力及其费用取决于使用者环境。",
+            "category": "开放权重模型 / 本地多模态学习",
+            "source": {
+              "name": "Google Gemma 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/google/gemma-3-4b-it"
+            }
+          },
+          {
+            "event": "Mistral Free：网页与移动端 AI 学习助手",
+            "summary": "Mistral 官方价格页列出 Free 方案，包含有限消息、网页搜索和 coding sessions，以及基础图像生成与编辑。",
+            "howTo": "打开 Mistral 的网页或移动端服务，使用 Free 方案尝试检索课程主题、整理问题或制作基础图像草稿；对照原始网页检查搜索答案。",
+            "impact": "可作为与其他助手交叉核对资料的免费入口，也能做简单图像草稿；消息、搜索和编码会话均有限制。",
+            "free": "官方价格页列有 Free 方案，但未说明具体消息/搜索/编码额度、账号条件、支持地区或到期日。",
+            "category": "长期免费 AI 服务 / 搜索与创作",
+            "source": {
+              "name": "Mistral 官方价格页",
+              "published": "官方未说明",
+              "url": "https://mistral.ai/pricing/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Are schools a great equalizer? They help kids catch up, but wealthier children still pull ahead",
+            "source": "The Conversation",
+            "published": "2026-11-04",
+            "url": "https://theconversation.com/are-schools-a-great-equalizer-they-help-kids-catch-up-but-wealthier-children-still-pull-ahead-295330",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "教育与社会 / 学校如何缩小儿童资源差距",
+            "summary": "文章重新审视公共教育是否真能成为“机会均等器”。作者先回顾研究对家庭背景与学校作用的争论，再说明团队如何整合 10 项全国代表性调查、追踪 77 类教育与成长投入。数据显示，学校入学后最贫困与最富裕儿童的总投入差距从 24% 缩至 12%，学校为弱势学生提供更多辅导和特殊教育；但这些资源多用于追赶，而富裕家庭仍能通过经验更丰富的教师、音乐、体育和课外活动帮助孩子继续领先。文章最后指出，公共教育确实缩小了部分投入差距，却不能单靠校内补差消除入学前形成的不平等；政策还须关注住房、托育及有助于学生发展的资源。",
+            "reason": [
+              "主题关联教育公平、家庭背景与公共服务，适合讨论社会流动和机会平等的考研英语议题。",
+              "论证先梳理研究争议，再交代数据口径和发现，继而区分“补差”与“领先资源”，最后提出政策含义，结构清楚。",
+              "可练习概括研究结论、解释百分比变化、区分投入差距与成绩差距，以及判断让步转折的论证功能。",
+              "equalizer、achievement gap、enrichment 等词可用于教育政策和社会不平等主题写作。",
+              "写作可借鉴“承认制度的改善作用—指出作用边界—提出配套支持”的平衡论证方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "equalizer",
+                "phonetic": "/ˈiːkwəlaɪzə(r)/",
+                "part": "n.",
+                "translation": "均衡因素；缩小差距的力量"
+              },
+              {
+                "word": "achievement gap",
+                "phonetic": "/əˈtʃiːvmənt ɡæp/",
+                "part": "n. phr.",
+                "translation": "学业成绩差距"
+              },
+              {
+                "word": "representative",
+                "phonetic": "/ˌreprɪˈzentətɪv/",
+                "part": "adj.",
+                "translation": "有代表性的"
+              },
+              {
+                "word": "investment",
+                "phonetic": "/ɪnˈvestmənt/",
+                "part": "n.",
+                "translation": "投入；投资"
+              },
+              {
+                "word": "transition",
+                "phonetic": "/trænˈzɪʃn/",
+                "part": "n./v.",
+                "translation": "过渡；转变"
+              },
+              {
+                "word": "catch-up",
+                "phonetic": "/ˈkætʃ ʌp/",
+                "part": "n./adj.",
+                "translation": "补差；追赶"
+              },
+              {
+                "word": "enrichment",
+                "phonetic": "/ɪnˈrɪtʃmənt/",
+                "part": "n.",
+                "translation": "拓展性培养；丰富"
+              },
+              {
+                "word": "starker",
+                "phonetic": "/ˈstɑːrkər/",
+                "part": "adj. 比较级",
+                "translation": "更鲜明的；更悬殊的"
+              },
+              {
+                "word": "extracurricular",
+                "phonetic": "/ˌekstrəkəˈrɪkjələ(r)/",
+                "part": "adj.",
+                "translation": "课外的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "By some measures, schools really are an equalizer for children from different backgrounds – but this finding has its limits.",
+                "analysis": [
+                  "主句核心是 schools are an equalizer，说明学校在某些方面具有均衡作用。",
+                  "句首 By some measures 限定判断范围，避免把结论说成绝对规律。",
+                  "for children from different backgrounds 修饰 equalizer，指出受益对象。",
+                  "破折号后的 but this finding has its limits 是转折并列分句，对前述结论作限制。",
+                  "可借鉴 By some measures, ... – but ... 表达“承认作用，同时说明边界”。"
+                ],
+                "translation": "从某些衡量角度看，学校确实能缩小不同背景儿童之间的差距——但这一发现也有局限。"
+              },
+              {
+                "original": "The gap in total investment between the richest and poorest children is cut in half, from 24% to 12%.",
+                "analysis": [
+                  "主干为 The gap ... is cut，主语是 gap，谓语使用被动语态。",
+                  "in total investment 说明差距衡量的是总投入；between ... children 补充比较双方。",
+                  "in half 表示缩减幅度，from 24% to 12% 用具体数字说明变化。",
+                  "被动表达把焦点放在差距变化上，而非执行缩减的主体。",
+                  "可借鉴 is cut in half, from A to B 简洁报告比例变化。"
+                ],
+                "translation": "最富裕与最贫困儿童之间的总投入差距缩小了一半，从 24% 降至 12%。"
+              },
+              {
+                "original": "But equal spending is not equal opportunity.",
+                "analysis": [
+                  "句子主干是 equal spending is not equal opportunity，结构简短完整。",
+                  "But 承接前文并引出反向限定，提示读者区分“投入相等”和“机会相等”。",
+                  "句中没有从句；equal 分别修饰 spending 与 opportunity，形成平行对照。",
+                  "is not 否定两者等同，逻辑上指出相同投入未必带来相同结果。",
+                  "可借鉴 equal X is not equal Y 作为议论文中澄清概念差异的句式。"
+                ],
+                "translation": "但投入相等并不意味着机会平等。"
+              }
+            ]
+          },
+          {
+            "title": "Swapping from dairy to plant-based milk, cheese and yoghurt ‘could lead to micronutrient deficiencies’",
+            "source": "The Guardian",
+            "published": "2026-11-04",
+            "url": "https://www.theguardian.com/science/2026/nov/04/swapping-dairy-milk-cheese-yoghurt-plant-based-vegan-alternatives-deficiencies-micronutrients-iodine",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "健康与环境 / 植物基替代品的营养强化",
+            "summary": "报道介绍一项针对英国市场植物基奶、酸奶和奶酪的研究，提醒以未强化替代品替换乳制品可能降低碘、钙、核黄素和维生素 B12 摄入。研究团队检查了 146 种非乳奶、76 种酸奶和 67 种奶酪，发现添加碘的比例尤其低，并据此模拟不同替代比例下的摄入变化；模拟显示，替换三分之一乳制品会使碘摄入下降，全部改用非乳替代品时，部分青少年可能摄入不足。报道同时引述营养学者和厂商，指出并非每位转食者都会缺乏营养，整体饮食也重要；可行建议是查看标签、选择有碘强化的产品，而不是把群体建模结果等同于个人诊断。",
+            "reason": [
+              "把饮食选择、公共健康和食品政策连接起来，适合营养、消费决策与健康素养类议题。",
+              "文章先提出研究结论，再说明模拟数据和强化比例，随后补充专家与企业观点，最后给出实际选购建议。",
+              "可练习区分模型预测与个人结果、识别限定语，并概括研究方法、数据和政策含义。",
+              "micronutrient、fortify、prevalence 等词汇可用于讨论营养不足、食品配方和风险。",
+              "写作可借鉴先呈现风险，再纳入反方限定，最后给出可执行建议的健康传播结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "substitute",
+                "phonetic": "/ˈsʌbstɪtjuːt/",
+                "part": "n.",
+                "translation": "替代品"
+              },
+              {
+                "word": "micronutrient",
+                "phonetic": "/ˌmaɪkrəʊˈnjuːtriənt/",
+                "part": "n.",
+                "translation": "微量营养素"
+              },
+              {
+                "word": "fortify",
+                "phonetic": "/ˈfɔːtɪfaɪ/",
+                "part": "v.",
+                "translation": "强化（食品）"
+              },
+              {
+                "word": "deficiency",
+                "phonetic": "/dɪˈfɪʃnsi/",
+                "part": "n.",
+                "translation": "缺乏；不足"
+              },
+              {
+                "word": "trace element",
+                "phonetic": "/ˈtreɪs ˌelɪmənt/",
+                "part": "n. phr.",
+                "translation": "微量元素"
+              },
+              {
+                "word": "prevalence",
+                "phonetic": "/ˈprevələns/",
+                "part": "n.",
+                "translation": "患病率；普遍程度"
+              },
+              {
+                "word": "modelling",
+                "phonetic": "/ˈmɒdəlɪŋ/",
+                "part": "n.",
+                "translation": "建模；模型分析"
+              },
+              {
+                "word": "iodine",
+                "phonetic": "/ˈaɪədiːn/",
+                "part": "n.",
+                "translation": "碘"
+              },
+              {
+                "word": "inadequate",
+                "phonetic": "/ɪnˈædɪkwət/",
+                "part": "adj.",
+                "translation": "不足的"
+              },
+              {
+                "word": "fortification",
+                "phonetic": "/ˌfɔːtɪfɪˈkeɪʃn/",
+                "part": "n.",
+                "translation": "营养强化"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Some companies already fortify their dairy substitutes.",
+                "analysis": [
+                  "主干是 Some companies fortify substitutes，主语、谓语和宾语清楚。",
+                  "Some 限定公司范围，their dairy 修饰 substitutes，说明产品所属类别。",
+                  "already 是时间副词，强调强化措施目前已存在。",
+                  "这是简单陈述句，没有从句；语义上为后文提供已有企业做法的例证。",
+                  "可借鉴 Some companies already ... 介绍行业中已出现的实践。"
+                ],
+                "translation": "一些公司已经对其乳制品替代品进行营养强化。"
+              },
+              {
+                "original": "There is no formal requirement for plant-based milk alternatives to be fortified with micronutrients.",
+                "analysis": [
+                  "句子采用 There is ... 的存在句型，核心信息是 no formal requirement。",
+                  "for plant-based milk alternatives 是 requirement 的补充，指出要求适用的对象。",
+                  "to be fortified 是被动不定式，表示这些替代品被添加微量营养素。",
+                  "with micronutrients 补充 fortify 的内容；句子讨论制度要求，不等于断言所有产品都未强化。",
+                  "可借鉴 there is no formal requirement for X to be done 表达监管空缺。"
+                ],
+                "translation": "目前没有正式规定要求植物基奶类替代品必须强化微量营养素。"
+              },
+              {
+                "original": "The researchers looked at the impact of replacing dairy with plant-based alternatives on the UK market, including 146 non-dairy milks, 76 yoghurts and 67 cheeses.",
+                "analysis": [
+                  "主句核心是 The researchers looked at the impact，说明研究者考察了影响。",
+                  "of replacing dairy with plant-based alternatives 是介词 of 后的动名词短语，具体说明所考察的影响。",
+                  "on the UK market 限定研究范围；including 后列出三类样本及数量。",
+                  "主句陈述研究动作，句末数据清单补充研究材料，形成“方法—样本”的信息递进。",
+                  "可借鉴 look at the impact of doing ... , including ... 交代研究对象与样本。"
+                ],
+                "translation": "研究者考察了英国市场以植物基替代品替换乳制品的影响，样本包括 146 种非乳奶、76 种酸奶和 67 种奶酪。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-04",
       "status": "ready",
@@ -2098,351 +2450,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 could still ... if ... 表达附带条件的长期收益，而不把政策效果说成必然。"
                 ],
                 "translation": "不过从长远看，如果就业支持确实有效，这种做法仍可能节省福利支出。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-29",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Copilot 图片生成、跨仓库 Projects 与 GitHub Agentic Workflows GA；注意预览资格、AI credits 和工作流的模型成本。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 聊天新增图片生成与编辑",
-            "summary": "GitHub Copilot 可在聊天中按自然语言生成或编辑图片，先在对话中预览，再直接保存到项目工作区，减少切换到独立图像工具的步骤。",
-            "howTo": "在 VS Code、GitHub Copilot app 或 Copilot CLI 打开 Copilot chat，描述所需图片；查看内嵌预览后按需继续修改，图片会保存到当前工作区。",
-            "impact": "学生可为课程原型、展示页或报告草拟配图，并在同一开发环境中继续修改项目；提交前仍应核查图片内容和使用权。",
-            "free": "官方公告称此功能处于 public preview，适用于 Copilot Pro、Pro+、Business 和 Enterprise；图片生成按 image tokens 单独计费并计入套餐 AI credits。公告未说明地区范围或单独配额，Copilot Free 不在公告列出的适用计划中。",
-            "category": "GitHub Copilot / 图片生成",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/"
-            }
-          },
-          {
-            "event": "GitHub Copilot app 推出跨仓库 Projects 预览",
-            "summary": "Copilot app 的 Projects 可围绕一个持续目标汇集多个仓库、设计稿、Slack 讨论和笔记，由 Copilot 协调多个 agent 并集中呈现结果；单仓库任务仍可直接从仓库启动 session。",
-            "howTo": "更新或打开 GitHub Copilot app，在 Projects 旁新建项目，描述目标并添加相关仓库或资料，再选择可用模型与工具并提交任务；在项目概览中跟进进度、审阅结果。",
-            "impact": "小组课程项目可用它汇总需求、设计和多个仓库的任务状态，或先整理资料再分配实现工作；正式合并代码前仍需人工审阅 agent 结果。",
-            "free": "官方文档将 Projects 标为 public preview，但未说明各 Copilot 套餐的可用资格、地区、价格或使用额度；需在 Copilot app 中查看账号当前可用功能。",
-            "category": "GitHub Copilot / 项目协作",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases"
-            }
-          },
-          {
-            "event": "GitHub Agentic Workflows 正式发布",
-            "summary": "GitHub Next 的开源 Agentic Workflows 正式可用：开发者用自然语言 Markdown 定义任务，再编译为标准 GitHub Actions YAML，让编码 agent 在 Actions 中处理 issue 分类、CI 失败分析、文档更新或测试编写。",
-            "howTo": "在有写权限且启用了 GitHub Actions 的仓库，安装 GitHub CLI 扩展（`gh extension install github/gh-aw`），用 `gh aw add-wizard` 添加示例工作流；先检查模型引擎、权限和成本设置，再触发运行。",
-            "impact": "学生团队可将重复的 issue 整理或测试辅助工作做成可审阅的仓库自动化，也能练习用 Markdown 定义 agent 任务、用 Actions 执行的开发流程。",
-            "free": "官方称该功能在 github.com 面向 GitHub Free、Team 和 Enterprise 可用；若使用默认 GitHub Copilot CLI 引擎则需要 Copilot 许可。公告未说明 Actions 分钟数、第三方模型费用、地区或具体调用额度。",
-            "category": "GitHub Agentic Workflows / 自动化",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Free：免费体验基础编程辅助",
-            "summary": "GitHub 官方计划页列出 Copilot Free，提供有限范围的 Copilot 功能，可免费尝试 AI 编程辅助；学生也可在页面核验是否符合单独的 Copilot Student 资格。",
-            "howTo": "打开 GitHub Copilot plans 页面，选择 Start using Copilot Free，按页面提示启用后在支持的 Copilot 客户端中尝试当前开放的 AI 编程辅助功能。",
-            "impact": "适合初学者在课程项目中试用 AI 编程辅助，并练习核对建议、运行测试和独立判断结果；不要提交未经检查的代码。",
-            "free": "官方计划页将 Copilot Free 标为免费，但功能有限；页面未列明其具体调用配额、地区资格或截止日期。Copilot Student 另需学生验证，不能与 Free 计划资格混为一谈。",
-            "category": "长期免费服务 / 编程辅助",
-            "source": {
-              "name": "GitHub 官方 Copilot 计划说明",
-              "published": "官方未说明",
-              "url": "https://docs.github.com/en/copilot/get-started/plans"
-            }
-          },
-          {
-            "event": "Qwen3-0.6B：Apache 2.0 许可的可下载开放模型",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-0.6B 权重，标注 Apache 2.0 许可；卡片列出 0.6B 参数和 32,768 token 上下文，并给出 Transformers 加载示例。",
-            "howTo": "打开模型卡查看许可和硬件要求；按 Quickstart 安装最新版 `transformers`，用 `Qwen/Qwen3-0.6B` 加载 tokenizer 与模型，在本地输入课程问答或翻译示例进行实验。",
-            "impact": "有合适本地设备的学生可下载小型模型，练习本地推理、比较提示词或搭建无托管 API 的原型；应自行评估输出准确性与设备资源占用。",
-            "free": "模型权重按 Apache 2.0 许可提供下载使用；模型卡未说明官方托管 API 的免费额度、地区资格或截止日期。本地推理的硬件、存储和电力成本由使用者承担。",
-            "category": "开放模型权重 / 本地实验",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-0.6B"
-            }
-          },
-          {
-            "event": "Google AI 高校学生优惠：兑换后 12 个月订阅权益",
-            "summary": "Google One 官方条款为符合条件的高校学生提供兑换后 12 个月的订阅权益，具体订阅计划取决于学校所在国家或地区。",
-            "howTo": "先核对官方优惠条款，再使用个人 Google 账号完成 SheerID 学生验证和 Google Payments 付款方式设置，按页面提示兑换；若不准备续订，需在优惠期结束前取消。",
-            "impact": "学生可在优惠期内使用所在地区实际提供的 Google AI 订阅权益整理课程材料或辅助复习；兑换前确认本地权益、使用限制和续费日期。",
-            "free": "兑换后 12 个月免订阅费；须年满 18 岁、在支持地区（不含香港、澳门和突尼斯）的高等教育机构就读并通过 SheerID 验证，另需个人 Google 账号及合格付款方式；2026-12-31 前兑换。期满自动按当地标准月费续订（法律要求同意的地区除外），可取消；使用额度可能不同且会变化。",
-            "category": "教育优惠 / Google AI",
-            "source": {
-              "name": "Google One 官方学生优惠条款",
-              "published": "2026-08-19",
-              "url": "https://one.google.com/offer/studentoffer8?g1_landing_page=0"
-            }
-          },
-          {
-            "event": "DeepL Translator 免费版：每月 50,000 字符翻译",
-            "summary": "DeepL 官方计划对比页列出免费版每位用户每月 50,000 个字符的文本翻译额度，以及 1 个、最大 5 MB 的文件翻译。",
-            "howTo": "在 DeepL Translator 粘贴英语段落或上传课程文档进行初译；对照原文检查术语、语气和逻辑连接，再自行修改，不把机器译文直接当作作业答案。",
-            "impact": "阅读论文摘要或核对英文材料时，可先获得中文草译，再回到原文学习句法和术语；月度字符与文档限制适合短材料，不适合整本书批量翻译。",
-            "free": "免费版文本额度为每用户每月 50,000 字符，文件翻译为 1 个、最大 5 MB；官方计划页未说明该文件额度的周期、地区资格、额外账号条件或截止日期。",
-            "category": "免费学习工具 / 翻译",
-            "source": {
-              "name": "DeepL 官方计划与定价页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "Ollama：MIT 许可的本地开放模型运行器",
-            "summary": "Ollama 官方仓库按 MIT 许可发布运行器，并提供 macOS、Windows、Linux 安装方式及在本机运行开放模型的命令示例。",
-            "howTo": "从 Ollama 官方下载页安装对应系统版本，打开终端运行 `ollama run gemma4`，按提示下载模型并开始对话；可在官方模型库选择其他模型并单独核对其许可。",
-            "impact": "可用来练习本地模型问答、比较同一课程问题在不同模型上的回答；适合希望试验本地推理、且拥有足够设备存储与算力的学生。",
-            "free": "Ollama 运行器代码采用 MIT 许可；本地运行需要自行承担设备、存储和电力成本，模型权重另有各自许可。官方仓库未说明最低硬件要求、地区限制或固定使用配额。",
-            "category": "开放模型工具 / 本地运行",
-            "source": {
-              "name": "Ollama 官方 GitHub 仓库",
-              "published": "官方未说明",
-              "url": "https://github.com/ollama/ollama"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Working-class academics are still struggling to fit in at university",
-            "source": "The Conversation",
-            "published": "2026-10-26",
-            "url": "https://theconversation.com/working-class-academics-are-still-struggling-to-fit-in-at-university-293049",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "教育与社会 / 高校阶层包容、学术职业与身份认同",
-            "summary": "文章指出，大学扩大弱势背景学生入学机会，并不代表高校教职员工也实现了同等包容：英国高校并未常规收集学者的社会经济背景数据，因此代表性仍难以量化。作者结合研究与自身经历说明，工作阶层学者往往被默认为需要适应中产规范，例如弱化口音或隐去出身；这种融入成本会消耗情感精力并损害真实表达。文章继而把问题从个人适应转向制度责任：少数员工网络只能作为起点，大学还应审视奖励机制与既有规范，建立无需个人压抑身份也能获得认同的环境。结论强调，若包容仍以同化为条件，高等教育就会继续复制历史不平等。",
-            "reason": [
-              "主题将教育机会、阶层流动与职场公平结合，适合教育公平和社会流动类考题。",
-              "行文从数据缺口切入，继而结合研究解释同化压力及个人代价，最后提出制度层面的解决方向。",
-              "可练习概括中心论点、区分个体经验与结构性证据，并判断作者为何把责任归于机构。",
-              "词汇涉及 socioeconomic、assimilation、authenticity、systemic 等抽象社会科学表达。",
-              "写作可借鉴“扩大机会不等于实现平等”的对照，以及由个体困境转向制度责任的论证路径。"
-            ],
-            "vocabulary": [
-              {
-                "word": "under-represented",
-                "phonetic": "/ˌʌndəˌreprɪˈzentɪd/",
-                "part": "adj.",
-                "translation": "代表性不足的"
-              },
-              {
-                "word": "socioeconomic",
-                "phonetic": "/ˌsəʊsiəʊˌiːkəˈnɒmɪk/",
-                "part": "adj.",
-                "translation": "社会经济的"
-              },
-              {
-                "word": "systemic",
-                "phonetic": "/sɪˈstemɪk/",
-                "part": "adj.",
-                "translation": "系统性的"
-              },
-              {
-                "word": "conditional",
-                "phonetic": "/kənˈdɪʃənəl/",
-                "part": "adj.",
-                "translation": "有条件的"
-              },
-              {
-                "word": "authenticity",
-                "phonetic": "/ˌɔːθenˈtɪsəti/",
-                "part": "n.",
-                "translation": "真实性；真实表达"
-              },
-              {
-                "word": "assimilate",
-                "phonetic": "/əˈsɪməleɪt/",
-                "part": "v.",
-                "translation": "同化；融入"
-              },
-              {
-                "word": "onus",
-                "phonetic": "/ˈəʊnəs/",
-                "part": "n.",
-                "translation": "责任；义务"
-              },
-              {
-                "word": "erode",
-                "phonetic": "/ɪˈrəʊd/",
-                "part": "v.",
-                "translation": "逐渐损害；削弱"
-              },
-              {
-                "word": "implicitly",
-                "phonetic": "/ɪmˈplɪsɪtli/",
-                "part": "adv.",
-                "translation": "含蓄地；不明说地"
-              },
-              {
-                "word": "perpetuate",
-                "phonetic": "/pəˈpetʃueɪt/",
-                "part": "v.",
-                "translation": "使持续；使永久化"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Higher education is not a neutral space.",
-                "analysis": [
-                  "主干是 Higher education is a space，系动词后由名词短语作表语。",
-                  "not 否定 neutral，直接提出全文的核心判断，而非描述校园的物理空间。",
-                  "这句承接标题中的“融入困难”，把讨论从个人经历提升到制度环境。",
-                  "可借鉴 not a neutral space 概括机构如何承载既有权力关系。",
-                  "简短判断句为后续历史背景和研究证据建立论述框架。"
-                ],
-                "translation": "高等教育并不是一个中立的空间。"
-              },
-              {
-                "original": "There is a hidden cost of fitting in.",
-                "analysis": [
-                  "There is 是存在句，真正的语义中心是 a hidden cost。",
-                  "of fitting in 是介词短语，说明这种隐性代价与融入行为相关。",
-                  "hidden 与 cost 组合，把外表上的适应转化为需要揭示的心理和情感负担。",
-                  "这句由前文的适应要求转向其后果，是段落论证的转折点。",
-                  "可使用 the hidden cost of... 引出某种做法未被看见的代价。"
-                ],
-                "translation": "融入其中存在一种隐性的代价。"
-              },
-              {
-                "original": "Universities do not just shape knowledge.",
-                "analysis": [
-                  "主干为 Universities shape knowledge，do not just 对谓语进行否定和限制。",
-                  "just 暗示大学的作用不止于知识生产，后文将补充其对知识生产者的影响。",
-                  "此处以 not just 引出超出表面功能的另一层作用，形成递进。",
-                  "该句位于结尾，呼应文章从学者个人经历扩展到高校制度责任的结构。",
-                  "可借鉴 do not just X，为后续补充更深层影响留出论证空间。"
-                ],
-                "translation": "大学塑造的不只是知识。"
-              }
-            ]
-          },
-          {
-            "title": "What is ‘human composting’ – and how does it work?",
-            "source": "The Conversation",
-            "published": "2026-10-26",
-            "url": "https://theconversation.com/what-is-human-composting-and-how-does-it-work-294951",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境与文化 / 绿色殡葬、遗体处理与公共政策",
-            "summary": "文章从人死后遗体如何处理这一个人选择出发，介绍澳大利亚新南威尔士州通过允许“人体堆肥”的立法，并解释自然有机还原如何在受控容器中借助木屑、稻草等材料和微生物加速分解。作者先梳理传统土葬、绿色葬礼及其空间和环境问题，再比较新方法与其他选择，指出这一过程并非所有材料都会自然分解，且需要后续处理。文章也提醒，立法通过不等于设施已可用，实施仍需监管、专门设施和足够需求；各种方式的可持续性都需要审视，目前资料不足以作简单优劣排序。结尾回到价值判断：遗体最终都会进入自然循环，关键在于以知情讨论决定方式、地点与时间。",
-            "reason": [
-              "主题兼有环境可持续性、文化习俗与殡葬政策，适合公共议题和生活方式类阅读。",
-              "文章按提出新选择、解释原理、比较替代方案、指出证据局限的顺序展开，结构清晰。",
-              "可练习辨析事实说明与价值判断，并理解作者为何拒绝给出简单的优劣结论。",
-              "词汇覆盖 decomposition、legislation、scrutiny、offset 等环境与政策议题常用词。",
-              "写作可借鉴先说明技术机制、再讨论外部影响与限制，最后回到个人选择的层次安排。"
-            ],
-            "vocabulary": [
-              {
-                "word": "decomposition",
-                "phonetic": "/ˌdiːkɒmpəˈzɪʃən/",
-                "part": "n.",
-                "translation": "分解；腐解"
-              },
-              {
-                "word": "cemetery",
-                "phonetic": "/ˈsemətri/",
-                "part": "n.",
-                "translation": "墓地；公墓"
-              },
-              {
-                "word": "sustainable",
-                "phonetic": "/səˈsteɪnəbəl/",
-                "part": "adj.",
-                "translation": "可持续的"
-              },
-              {
-                "word": "microorganisms",
-                "phonetic": "/ˌmaɪkrəʊˈɔːɡənɪzəmz/",
-                "part": "n.",
-                "translation": "微生物"
-              },
-              {
-                "word": "legislation",
-                "phonetic": "/ˌledʒɪsˈleɪʃən/",
-                "part": "n.",
-                "translation": "立法；法律"
-              },
-              {
-                "word": "terramation",
-                "phonetic": "/ˌterəˈmeɪʃən/",
-                "part": "n.",
-                "translation": "人体堆肥；自然有机还原"
-              },
-              {
-                "word": "nutrient-rich",
-                "phonetic": "/ˈnjuːtriənt rɪtʃ/",
-                "part": "adj.",
-                "translation": "富含养分的"
-              },
-              {
-                "word": "scrutiny",
-                "phonetic": "/ˈskruːtəni/",
-                "part": "n.",
-                "translation": "仔细审查；审视"
-              },
-              {
-                "word": "offset",
-                "phonetic": "/ˌɒfˈset/",
-                "part": "v.",
-                "translation": "抵消；弥补"
-              },
-              {
-                "word": "closure",
-                "phonetic": "/ˈkləʊʒə/",
-                "part": "n.",
-                "translation": "了结感；情感上的释怀"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "There is no simple answer.",
-                "analysis": [
-                  "There is 是存在句，no simple answer 是其核心信息。",
-                  "no 否定 answer 的存在，simple 限定的是答案难以简化，而非问题无解。",
-                  "这句承接前文列出的多种遗体处理方式，提示比较需要考虑多个因素。",
-                  "它为后文讨论各选项的利弊和证据不足作出让步式铺垫。",
-                  "可借鉴 There is no simple answer to... 引出复杂议题中的多方权衡。"
-                ],
-                "translation": "这个问题没有简单的答案。"
-              },
-              {
-                "original": "Terramation speeds up natural decomposition under controlled conditions.",
-                "analysis": [
-                  "句子主干是 Terramation speeds up decomposition，主语为处理方式，谓语为 speeds up。",
-                  "natural 修饰 decomposition，说明被加速的是自然分解过程。",
-                  "under controlled conditions 是介词短语，交代过程发生的条件。",
-                  "作者用一般现在时说明该方法的工作原理，而不是某次个案结果。",
-                  "可借鉴 speed up... under... 描述某种条件如何改变一个过程。"
-                ],
-                "translation": "人体堆肥会在受控条件下加快自然分解。"
-              },
-              {
-                "original": "The question is not whether we decompose, but how, where and how quickly.",
-                "analysis": [
-                  "主干为 The question is not A, but B，通过 not...but... 重设讨论重点。",
-                  "whether we decompose 是 whether 引导的表语从句，指出分解这一事实并非真正争议。",
-                  "how、where、how quickly 并列，分别追问方式、地点和速度。",
-                  "逻辑从“是否发生”转向“以何种方式发生”，为比较政策和个人选择收束全文。",
-                  "可借鉴 not whether..., but how... 将论证从既定事实推进到可选择的方案。"
-                ],
-                "translation": "问题不在于我们是否会分解，而在于如何分解、在哪里分解，以及分解得多快。"
               }
             ]
           }
