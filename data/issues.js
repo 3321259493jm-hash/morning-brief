@@ -1,6 +1,358 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-05T11:27:16+08:00",
+  "updatedAt": "2026-11-06T11:22:00+08:00",
   "issues": [
+    {
+      "date": "2026-11-06",
+      "status": "ready",
+      "ai": {
+        "intro": "本期更新 Gemini Omni 1.2 Flash、Google Vids 免费视频额度和 Gemini Canvas 草图转应用；资源包括免费 API、开放模型和学习工具。",
+        "updates": [
+          {
+            "event": "Gemini Omni 1.2 Flash 支持 15 秒视频与对话式编辑",
+            "summary": "Google 发布 Gemini Omni 1.2 Flash，原生生成和编辑最长 15 秒视频，支持多轮对话修改，并提升参考素材的一致性。官方 API 720p 价格为每秒 0.07 美元，较 Omni 1.1 降低 30%。",
+            "howTo": "在 Google AI Studio 选择 gemini-omni-1.2-flash，输入场景描述并设定 3 至 15 秒；生成后用后续提示调整片段，也可上传参考图引导角色或场景。",
+            "impact": "可为课程展示、实验说明或社团活动制作短片草稿，并逐轮调整背景或细节；涉及事实的画面和旁白仍需核对。",
+            "free": "Gemini API 的 720p 视频按每秒 0.07 美元计价，免费 API 配额官方未说明。Gemini app 的 15 秒视频正在向 Google AI Ultra 订阅用户推出；各地区上线时间官方未说明。",
+            "category": "生成式视频 / Gemini Omni",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-05",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+            }
+          },
+          {
+            "event": "Google Vids 每月免费生成 3 段 15 秒视频",
+            "summary": "Google Vids 接入 Omni 1.2 Flash，个人 Google 账号或 Google Workspace 订阅用户每月可免费生成最多 3 段 15 秒视频；官方举例可把参考图转成连贯场景并生成自然旁白。",
+            "howTo": "打开 vids.new 并登录 Google 账号或 Workspace；描述课程主题，或上传项目图片作为参考，再生成最长 15 秒的视频并在 Vids 中编辑。",
+            "impact": "学生可用有限的免费额度制作演讲开场、课程概念短片或项目宣传草稿；提交前检查旁白、图片来源和生成内容准确性。",
+            "free": "官方说明每月最多 3 段、每段 15 秒，可由 Google 账号或 Google Workspace 订阅用户免费使用。支持地区及额度重置的具体时间官方未说明。",
+            "category": "免费生成式视频 / Google Vids",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-05",
+              "url": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/"
+            }
+          },
+          {
+            "event": "Gemini Canvas 将草图转换为可预览的应用原型",
+            "summary": "Gemini 新增从手绘草图生成应用原型的流程：上传界面草图，选择 Canvas 并要求 Gemini 编写应用代码，然后在预览窗口测试并调整颜色、字体或功能。",
+            "howTo": "拍摄应用界面、习惯追踪器或棋盘游戏草图，在 Gemini 上传图片并选择 Canvas；输入“Can you code this app?”，在预览窗口测试后继续要求修改。",
+            "impact": "没有完整编程基础的学生也能把课程项目构想变成可交互的原型，便于讨论布局和需求；原型代码仍需测试，不能视为已完成的软件。",
+            "free": "Google 公告未说明该功能的价格、账号套餐、地区范围、使用配额或分批开放安排。",
+            "category": "原型开发 / Gemini Canvas",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-05",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google Vids：每月 3 段免费 AI 视频",
+            "summary": "Google Vids 使用 Omni 1.2 Flash；官方说明个人 Google 账号或 Workspace 订阅用户每月可免费生成最多 3 段、每段 15 秒的视频。",
+            "howTo": "打开 vids.new，登录 Google 账号或 Workspace，输入主题描述或上传参考图片，生成视频后在 Vids 中继续编辑。",
+            "impact": "适合制作课程展示片段、社团活动预告或概念演示；每月额度有限，交付前应核对事实和素材使用权。",
+            "free": "每月最多 3 段 15 秒视频，免费；个人 Google 账号或 Google Workspace 订阅均可。支持地区和额度重置具体时间官方未说明。",
+            "category": "免费生成式视频 / 学习与展示",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-05",
+              "url": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/"
+            }
+          },
+          {
+            "event": "Gemini Developer API 免费层",
+            "summary": "Google 官方定价页列出免费层：部分模型的输入与输出 token 免费，并可通过 Google AI Studio 使用；免费层内容可能用于改进 Google 产品。",
+            "howTo": "在 Google AI Studio 创建 API key，先查看定价页确认目标模型当前是否列在 Free 层，再按 Gemini API Quickstart 运行小规模学习项目。",
+            "impact": "可练习模型 API 调用、课程文本摘要或小型应用原型，不必先支付免费层模型的 token 费用；不要提交敏感资料。",
+            "free": "仅部分模型提供免费输入和输出 token；具体请求额度因模型而异。免费层内容可能用于改进产品；地区、账号要求和资格期限官方未说明。",
+            "category": "免费 API / 开发实验",
+            "source": {
+              "name": "Google AI for Developers 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Qwen3-4B-Instruct-2507：Apache-2.0 开放权重",
+            "summary": "Qwen 官方模型卡提供 Qwen3-4B-Instruct-2507 权重下载，模型为 4B 参数、原生支持 262,144 token 上下文，许可标注为 Apache-2.0。",
+            "howTo": "按模型卡使用最新 Transformers，加载 Qwen/Qwen3-4B-Instruct-2507；先用短文本测试摘要或问答，并根据本机显存情况缩短上下文。",
+            "impact": "有合适设备的学生可在本地实验文本生成或课程资料归纳，并探索离线运行；下载模型不等于免除设备、存储和算力成本。",
+            "free": "官方 Hugging Face 模型卡提供公开权重，许可为 Apache-2.0；模型卡未说明下载配额、地区或注册要求。本地运行所需硬件和成本由使用者承担。",
+            "category": "开放权重模型 / 本地学习实验",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+            }
+          },
+          {
+            "event": "Gemini Notebook Standard：免费整理课程资料",
+            "summary": "Google 帮助页说明 Gemini Notebook Standard 可用 Gmail 账号免费注册，标准版列出每位用户最多 100 个 notebook、每个 notebook 最多 50 个来源，并提供自定义聊天与分析功能。",
+            "howTo": "使用 Gmail 账号登录 Gemini Notebook，新建课程主题 notebook，添加讲义或网页来源，再围绕材料提问并回到原文核对引用。",
+            "impact": "适合把分散的阅读资料集中起来复习、比较观点和生成练习问题；来源数量有上限，回答仍需对照原始材料。",
+            "free": "标准版可免费注册，需 Gmail 账号；官方列出每用户 100 个 notebook、每个 notebook 50 个来源。浏览器版面向达到当地法定同意年龄且位于支持地区的用户。",
+            "category": "长期免费 AI 服务 / 资料阅读",
+            "source": {
+              "name": "Google Gemini Notebook 官方帮助中心",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出每月 0 美元的 Free 方案，包含每月 2,000 次代码补全、有限的聊天与 agent 使用，无需信用卡。",
+            "howTo": "登录 GitHub 并选择 Copilot Free，在支持的编辑器安装 Copilot；用它解释课程代码或补全小函数，再运行测试并逐行检查改动。",
+            "impact": "适合编程课程中的代码解释和小规模补全；聊天与 agent 有限额，生成的代码应由学生自行验证。",
+            "free": "每月 0 美元、每月 2,000 次代码补全且无需信用卡；聊天和 agent 使用受限，其具体额度、地区资格和期限官方未说明。",
+            "category": "长期免费 AI 服务 / 编程辅助",
+            "source": {
+              "name": "GitHub Copilot 官方计划与价格页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Mistral Free：网页与移动端 AI 助手",
+            "summary": "Mistral 官方价格页列出 Free 方案，可在网页和移动端使用，包含有限消息、网页搜索和 coding sessions，以及基础图像生成与编辑。",
+            "howTo": "打开 Mistral 网页或移动端服务，用 Free 方案试做课程主题检索、问题整理或图像草稿，并对照原始网页核实检索结果。",
+            "impact": "可作为交叉核对资料的免费入口，也能制作简单视觉草稿；消息、搜索和编码会话均有限制。",
+            "free": "官方价格页列有 Free 方案，但未说明具体消息、搜索或编码额度、账号条件、支持地区和期限。",
+            "category": "长期免费 AI 服务 / 搜索与创作",
+            "source": {
+              "name": "Mistral 官方价格页",
+              "published": "官方未说明",
+              "url": "https://mistral.ai/pricing/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Delhi's toxic winter air is back - is the Indian capital prepared for pollution?",
+            "source": "BBC",
+            "published": "2026-11-05",
+            "url": "https://www.bbc.co.uk/news/articles/cm78p0n09q3xo",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "环境与社会 / 德里冬季污染、政策执行与区域协作",
+            "summary": "报道从德里居民每年备战冬季雾霾切入，解释低温、弱风会使污染物滞留，农作物残留焚烧、车辆、工厂和扬尘又叠加排放。文章介绍当地政府在污染高峰前推出的冬季行动计划，包括限制高排放车辆、暂停部分扬尘工程、鼓励远程办公和加强公共交通；专家肯定提前规划，但强调措施成效取决于执行，还需要为电力、工业和交通等部门设定减排目标。由于污染会从邻近地区飘入德里，单靠城市自身政策有限。结尾回到居民生活与健康代价，指出污染每年反复，需持续、跨区域治理。",
+            "reason": [
+              "主题把城市环境、公共健康和治理责任联系起来，适合讨论空气污染与公共政策的考研英语议题。",
+              "文章从居民经验解释污染成因，再介绍政府计划、引入专家对执行的质疑，最后扩大到跨区域治理和健康影响。",
+              "可练习归纳多重污染源、区分政策出台与政策落实，并概括地方行动的边界。",
+              "disperse、emissions、enforcement 等词可用于环境治理和政策执行类写作。",
+              "写作可借鉴“呈现行动—承认进展—指出执行条件—提出协作方案”的平衡论证结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "trap",
+                "phonetic": "/træp/",
+                "part": "v.",
+                "translation": "使滞留；困住"
+              },
+              {
+                "word": "disperse",
+                "phonetic": "/dɪˈspɜːs/",
+                "part": "v.",
+                "translation": "驱散；散开"
+              },
+              {
+                "word": "residue",
+                "phonetic": "/ˈrezɪdjuː/",
+                "part": "n.",
+                "translation": "残留物"
+              },
+              {
+                "word": "emissions",
+                "phonetic": "/ɪˈmɪʃənz/",
+                "part": "n. pl.",
+                "translation": "排放物；排放量"
+              },
+              {
+                "word": "enforcement",
+                "phonetic": "/ɪnˈfɔːsmənt/",
+                "part": "n.",
+                "translation": "执行；实施"
+              },
+              {
+                "word": "collectively",
+                "phonetic": "/kəˈlektɪvli/",
+                "part": "adv.",
+                "translation": "共同地；整体上"
+              },
+              {
+                "word": "restrict",
+                "phonetic": "/rɪˈstrɪkt/",
+                "part": "v.",
+                "translation": "限制"
+              },
+              {
+                "word": "breathlessness",
+                "phonetic": "/ˈbreθləsnəs/",
+                "part": "n.",
+                "translation": "气促；呼吸困难"
+              },
+              {
+                "word": "commuter",
+                "phonetic": "/kəˈmjuːtə(r)/",
+                "part": "n.",
+                "translation": "通勤者"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Falling temperatures and slower winds trap pollutants close to the ground instead of allowing them to disperse.",
+                "analysis": [
+                  "主干是 temperatures and winds trap pollutants，两个并列主语共同搭配谓语 trap。",
+                  "Falling 和 slower 分别修饰 temperatures 与 winds，交代导致污染滞留的气象条件。",
+                  "close to the ground 是地点补足语，说明污染物被困的位置。",
+                  "instead of allowing them to disperse 表示结果与预期相反；them 指 pollutants，to disperse 是 allow 的宾语补足结构。",
+                  "可借鉴 A trap B ... instead of allowing ... 表达某种条件如何阻碍预期变化。"
+                ],
+                "translation": "气温下降、风力减弱会使污染物滞留在近地面，而不是让它们扩散。"
+              },
+              {
+                "original": "This means that measures taken by Delhi can achieve only so much.",
+                "analysis": [
+                  "主句核心是 This means that ...，that 引导 means 的宾语从句。",
+                  "从句主干为 measures can achieve so much，taken by Delhi 是过去分词短语，修饰 measures。",
+                  "only so much 表示能力有限，语气上承认德里措施有作用，同时限定其效果。",
+                  "This 回指前文污染会从邻近地区流入德里的事实，构成原因到政策边界的推论。",
+                  "可借鉴 This means that ... can achieve only so much 概括单一主体的治理上限。"
+                ],
+                "translation": "这意味着德里采取的措施所能达到的效果终究有限。"
+              },
+              {
+                "original": "The arrival of another winter fills her family with dread, but unlike many others, they are not planning to move out of Delhi.",
+                "analysis": [
+                  "but 连接两个分句：冬季到来令她的家人恐惧；他们却没有计划搬离德里。",
+                  "第一个分句主干是 The arrival fills her family with dread，of another winter 修饰 arrival。",
+                  "unlike many others 是比较状语，省略了与他们不同的其他居民。",
+                  "第二个分句的 they 指 her family，plan to move out of Delhi 中不定式作 plan 的补足语。",
+                  "可借鉴 A, but unlike ..., B 表达相同处境下不同群体的选择差异。"
+                ],
+                "translation": "又一个冬天的到来让她一家心生恐惧，但与许多人不同，他们并不打算搬离德里。"
+              }
+            ]
+          },
+          {
+            "title": "First-time homebuyers remain scarce, but a record share of them pay all cash",
+            "source": "NPR",
+            "published": "2026-11-05",
+            "url": "https://www.npr.org/2026/11/05/nx-s1-6022491/real-estate-all-cash-offer",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "经济与社会 / 首次购房、代际财富与住房可负担性",
+            "summary": "NPR 根据美国全国房地产经纪人协会的新报告指出，首次购房者仅占买家的 22%，接近历史低位；但在成功购房者中，完全以现金支付的比例达到 10%，为该项数据自 2003 年开始收集以来的最高值。首次购房者中位年龄升至 40 岁，现金购房者更达到 54 岁；报道将现金交易增加与遗产、家庭赠与和出售继承房产所得联系起来，也提到高房贷利率让现金出价更具吸引力。随后以一对背负债务、选择继续租房的年轻买家作对照，呈现房价和首付压力如何扩大住房机会差距。文章最后指出，代际财富转移可能让已有家庭资产支持的人更易入市，而独立储蓄者更可能被挤出市场。",
+            "reason": [
+              "文章讨论住房可负担性、财富传承和代际不平等，适合经济与社会公平类考题。",
+              "先用行业报告和比例概述趋势，再解释继承与利率等原因，继而用年轻租户案例呈现另一面，最后归纳分化。",
+              "可练习概括统计数据、辨析相关因素，并比较现金购房者与依靠储蓄者的处境。",
+              "inheritance、down payment、equity 等词汇适用于住房、家庭财富和经济差距主题。",
+              "写作可借鉴“数据呈现趋势—解释机制—个案对照—总结分配影响”的论证路径。"
+            ],
+            "vocabulary": [
+              {
+                "word": "scarce",
+                "phonetic": "/skeəs/",
+                "part": "adj.",
+                "translation": "稀少的；不足的"
+              },
+              {
+                "word": "sideline",
+                "phonetic": "/ˈsaɪdlaɪn/",
+                "part": "v.",
+                "translation": "使靠边；使无法参与"
+              },
+              {
+                "word": "inheritance",
+                "phonetic": "/ɪnˈherɪtəns/",
+                "part": "n.",
+                "translation": "遗产；继承物"
+              },
+              {
+                "word": "proceeds",
+                "phonetic": "/ˈprəʊsiːdz/",
+                "part": "n. pl.",
+                "translation": "收益；所得款项"
+              },
+              {
+                "word": "median",
+                "phonetic": "/ˈmiːdiən/",
+                "part": "adj./n.",
+                "translation": "中位数的；中位数"
+              },
+              {
+                "word": "down payment",
+                "phonetic": "/ˌdaʊn ˈpeɪmənt/",
+                "part": "n. phr.",
+                "translation": "首付款"
+              },
+              {
+                "word": "mortgage",
+                "phonetic": "/ˈmɔːɡɪdʒ/",
+                "part": "n.",
+                "translation": "住房抵押贷款"
+              },
+              {
+                "word": "equity",
+                "phonetic": "/ˈekwəti/",
+                "part": "n.",
+                "translation": "房屋净值；资产净值"
+              },
+              {
+                "word": "refinance",
+                "phonetic": "/ˌriːfaɪˈnæns/",
+                "part": "v.",
+                "translation": "重新融资；再贷款"
+              },
+              {
+                "word": "burdened",
+                "phonetic": "/ˈbɜːdənd/",
+                "part": "adj.",
+                "translation": "负担沉重的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The share of first-time homebuyers remains at a near-record low of 22% as a housing shortage and high prices sideline many.",
+                "analysis": [
+                  "主句主干是 The share remains at a low，主语中心词 share，谓语 remains。",
+                  "of first-time homebuyers 修饰 share；at a near-record low of 22% 给出程度和具体比例。",
+                  "as 引导原因状语从句，说明住房短缺和高价格如何使许多人无法进入市场。",
+                  "a housing shortage and high prices 是并列主语，sideline many 表示把不少潜在买家排除在外。",
+                  "可借鉴 remains at ... as ... 用数据陈述趋势并在同句补充原因。"
+                ],
+                "translation": "首次购房者所占比例仍处于接近历史低位的 22%，因为住房短缺和高房价让许多人难以入市。"
+              },
+              {
+                "original": "Inheritances are really driving this.",
+                "analysis": [
+                  "句子主干为 Inheritances are driving this，主语是复数名词 inheritances。",
+                  "really 是程度副词，强调遗产在当前趋势中的推动作用。",
+                  "this 是指示代词，回指前文首次购房者现金支付比例上升的现象。",
+                  "现在进行时 are driving 将遗产描述为正在发挥作用的原因，而非唯一原因。",
+                  "可借鉴 X is driving this 简洁指出某项趋势背后的主要推动因素。"
+                ],
+                "translation": "遗产确实是推动这一现象的重要因素。"
+              },
+              {
+                "original": "The median age of all first-time buyers remains at 40, a record high.",
+                "analysis": [
+                  "主干是 The median age remains at 40，核心名词为 age，谓语 remains。",
+                  "of all first-time buyers 限定年龄统计对象，避免误读为所有购房者。",
+                  "at 40 是年龄数值补足语，句末 a record high 是对 40 的同位说明。",
+                  "remains 表明这一数值维持在该水平，记录性判断由 a record high 补充。",
+                  "可借鉴 remains at ..., a record high 用简洁结构报告统计值及其历史位置。"
+                ],
+                "translation": "所有首次购房者的年龄中位数仍为 40 岁，创下历史新高。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-05",
       "status": "ready",
@@ -2118,338 +2470,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 X can lead to Y 表达风险路径，并用 can 避免把可能性夸大为确定结论。"
                 ],
                 "translation": "她解释说，这可能导致更差的心理健康状况。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-10-30",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Copilot Fusion 多模型编排、Genie 4 研究预览，以及 Gemini 4 Carbon 的有限测试范围。",
-        "updates": [
-          {
-            "event": "GitHub Copilot Fusion 正式推出多模型编排",
-            "summary": "Copilot Fusion 正式可用：它会按任务自动选择并协同不同模型，支持单模型处理、逐级升级和交叉审阅三种工作流，用户只需选择 Standard、High 或 Max 努力级别。",
-            "howTo": "更新 VS Code、GitHub Copilot app、Copilot CLI 或 JetBrains IDE，在 Copilot 模型选择器中选 Copilot Fusion，再选 Standard、High 或 Max，并用一个课程代码任务比较不同努力级别。",
-            "impact": "学生可让日常代码问题先由合适模型处理，把更难的调试交给更高努力级别；对照任务记录模型如何升级或复核，有助理解多模型编排而非只比较单一模型。",
-            "free": "官方公告称所有 Copilot 计划均可使用，且列出 VS Code、Copilot app、Copilot CLI 和 JetBrains IDE；每次使用按实际调用模型的标准费率计费，付费 Copilot 计划暂享模型费用 30% 折扣。折扣截止日、地区资格及具体额度官方未说明。",
-            "category": "GitHub Copilot / 多模型编排",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion"
-            }
-          },
-          {
-            "event": "Google DeepMind 发布 Genie 4 互动世界模型研究预览",
-            "summary": "Genie 4 可根据文字指令实时生成并调整可交互场景，同时生成环境声音和角色对话；研究预览先开放给受邀测试者，Google 表示之后将面向 Project Genie 的 Google AI Ultra 用户及 Gemini API、Google AI Studio 的早期合作伙伴逐步开放。",
-            "howTo": "普通用户目前可通过 Google DeepMind 公告中的 Project Genie waitlist 登记关注；若已属于受邀测试者，可在预览环境用文字改变场景、天气或角色，并观察模拟如何随输入变化。",
-            "impact": "学生可将它用于历史场景、环境事件或游戏原型的交互式构想；目前仍是早期研究预览，物体持续性、复杂物理互动和长时一致性等方面仍在改进，不宜将生成结果当作可靠事实模拟。",
-            "free": "目前仅受信任测试者可用；公告称之后将向 Google AI Ultra 用户及 Gemini API、Google AI Studio 早期合作伙伴开放，并提供 Project Genie 等候名单。具体价格、免费额度、地区和正式开放日期官方未说明。",
-            "category": "Google DeepMind / 交互式生成",
-            "source": {
-              "name": "Google DeepMind 官方 Blog",
-              "published": "2026-10-27",
-              "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
-            }
-          },
-          {
-            "event": "Gemini 4 Carbon 开始面向网络防御人员有限测试",
-            "summary": "Google 发布 Gemini 4 Carbon，称其面向长流程软件工程和网络防御任务；首阶段只向部分网络防御人员开放，后续才计划逐步扩展到可信合作伙伴以及开发者、企业和消费者产品。",
-            "howTo": "普通学生目前无法直接调用 Carbon；可阅读官方公告了解其测试范围。公告称首批使用者由 Google 逐步开放，后续开发者、企业和消费者入口尚待推出。",
-            "impact": "做软件工程或安全治理课程的学生可关注模型从受控测试到公开产品的分阶段发布方式；目前不应将 Carbon 当作可公开注册或可立即试用的编程工具。",
-            "free": "官方公告称本周起仅向部分网络防御人员提供，并计划逐步扩大至可信伙伴；开发者、企业和消费者产品入口尚未开放。官方所列 API 价格为每百万输入 token 2 美元、每百万输出 token 10 美元；现阶段个人试用资格、地区和免费额度官方未说明。",
-            "category": "Google Gemini / 模型发布与分阶段开放",
-            "source": {
-              "name": "Google 官方 Blog",
-              "published": "2026-10-28",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Claude Free：免费使用网页与移动端 AI 助手",
-            "summary": "Claude 官方定价页列出每月 0 美元的 Free 计划，可在网页、桌面端和移动端聊天，并提供网页搜索、文件创建与代码运行、Artifacts 等功能。",
-            "howTo": "打开 Claude 官方定价页选择 Free，登录或注册 Claude 账号后在网页或应用中开始对话；可用一段课程材料试做提纲，再核对引用和输出。",
-            "impact": "适合用来整理阅读问题、试运行小段代码或制作可视化草稿；免费计划存在使用限制，重要作业仍需自行验证准确性。",
-            "free": "官方标价每月 0 美元并称 Free 对所有人开放；使用受官方 usage limits 约束，具体额度、支持地区和优惠期限官方未说明。",
-            "category": "长期免费服务 / 学习助手",
-            "source": {
-              "name": "Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Gemini 免费版：Google 账号可使用学习与创作功能",
-            "summary": "Gemini 官方订阅页列出每月 0 美元的 Free 计划，使用 Google 账号即可开始；页面列出的功能包括 Gemini app、Flash-Lite、图像生成与编辑、Deep Research、Gemini Live、Canvas、Gems 和 Gemini Notebook。",
-            "howTo": "打开 Gemini 官方订阅页并点击 Free 计划的 Get started，使用 Google 账号进入 Gemini；可用 Notebook 整理一份课程阅读资料，或用 Canvas 起草项目大纲。",
-            "impact": "学生可先用免费层练习资料归纳、提纲构思和图像草稿；提交前应回看原始资料，并留意免费版的使用限制。",
-            "free": "官方标价每月 0 美元，要求 Google 账号；免费层的具体使用额度、地区限制及期限官方未说明。",
-            "category": "长期免费服务 / 研究与写作",
-            "source": {
-              "name": "Google Gemini 官方订阅页",
-              "published": "官方未说明",
-              "url": "https://gemini.google/subscriptions/"
-            }
-          },
-          {
-            "event": "Gemini Developer API 免费层：部分模型免输入与输出 token 费",
-            "summary": "Google 官方 API 定价页列出 Free 层，部分模型可免费使用输入和输出 token，并可通过 Google AI Studio 创建项目和 API key；免费层请求内容可能用于改进 Google 产品。",
-            "howTo": "进入 Google AI Studio 创建 API key，在官方定价表确认所选模型是否支持 Free 层，再按 Gemini API Quickstart 发起少量课程摘要或分类请求；不要把敏感资料放入免费层。",
-            "impact": "适合学生练习调用模型 API、验证小型学习工具原型，而不必先支付 token 费用；开始前应核对数据使用条款和当前项目的速率限制。",
-            "free": "仅部分模型提供免费输入与输出 token；具体请求额度按模型和项目而异，应在 AI Studio 查看当前限制。官方说明免费层内容可用于改进产品；地区和免费资格期限官方未说明。",
-            "category": "免费 API / 开发实验",
-            "source": {
-              "name": "Google AI for Developers 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Qwen3Guard-Gen-0.6B：Apache 2.0 许可的安全分类模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供可下载的 Qwen3Guard-Gen-0.6B 权重，用于对提示词或模型回答进行安全分类；模型卡介绍 Safe、Controversial、Unsafe 等类别，并提供 Transformers 加载示例。",
-            "howTo": "打开官方模型卡核对许可与硬件要求，安装 Transformers 4.51.0 或更新版本，再用 `Qwen/Qwen3Guard-Gen-0.6B` 下载并运行模型卡中的 moderation 示例；不要把分类结果当作人工审核的替代品。",
-            "impact": "学生可在本地实验文本分类、内容审核和多语言模型评估，也可比较不同风险标签的适用边界；下载权重不代表免除本地算力与存储成本。",
-            "free": "Hugging Face 官方模型 API 将许可标为 Apache-2.0，模型卡提供公开权重和运行示例；托管 API 配额、地区和期限官方未说明，本地运行需自行承担设备资源成本。",
-            "category": "开放模型权重 / 内容审核实验",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3Guard-Gen-0.6B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "What killed 500-plus penguins? How scientists solved the mystery",
-            "source": "NPR",
-            "published": "2026-10-29",
-            "url": "https://www.npr.org/2026/10/29/nx-s1-6020451/avian-flu-penguins-pathogen-antarctica-cholera",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境与健康 / 南极企鹅疫病、病原体迁移与跨国监测",
-            "summary": "文章从南极危险群岛发现的大量企鹅尸体切入：研究团队最初怀疑禽流感，却发现病毒载量低，后续组织检查指向禽霍乱。作者把这次调查与禽流感进入澳大利亚、病原体跨区域传播联系起来，说明候鸟迁徙和南极生态并非孤立问题。报道进一步指出，科学家对禽霍乱的发生频率仍缺乏监测，单一病原体假设可能漏掉其他疾病；结尾强调持续检测和跨国合作对理解全球病原体网络的重要性。",
-            "reason": [
-              "以野生动物疾病为入口，延伸到生态联系、公共卫生和国际合作，适合环境与健康类考题。",
-              "文章按现场调查、排除最初假设、发现病因、扩大到全球传播意义的顺序推进，叙事与解释结合。",
-              "可练习概括研究如何修正初始判断、区分禽流感与禽霍乱证据，并分析结尾的政策含义。",
-              "词汇涵盖 culprit、carcass、panzootic、pathogen 等报道和科学讨论常见表达。",
-              "写作可借鉴“先提出疑问—检验假设—指出监测缺口—提出协作需求”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "culprit",
-                "phonetic": "/ˈkʌlprɪt/",
-                "part": "n.",
-                "translation": "罪魁祸首；元凶"
-              },
-              {
-                "word": "carcass",
-                "phonetic": "/ˈkɑːrkəs/",
-                "part": "n.",
-                "translation": "动物尸体"
-              },
-              {
-                "word": "sweep through",
-                "phonetic": "/swiːp θruː/",
-                "part": "phr.v.",
-                "translation": "席卷；迅速蔓延"
-              },
-              {
-                "word": "expedition",
-                "phonetic": "/ˌekspəˈdɪʃən/",
-                "part": "n.",
-                "translation": "考察队；远征"
-              },
-              {
-                "word": "panzootic",
-                "phonetic": "/ˌpænzuːˈɒtɪk/",
-                "part": "n.",
-                "translation": "动物大流行"
-              },
-              {
-                "word": "puzzling",
-                "phonetic": "/ˈpʌzəlɪŋ/",
-                "part": "adj.",
-                "translation": "令人困惑的"
-              },
-              {
-                "word": "pathogen",
-                "phonetic": "/ˈpæθədʒən/",
-                "part": "n.",
-                "translation": "病原体"
-              },
-              {
-                "word": "strain",
-                "phonetic": "/streɪn/",
-                "part": "n.",
-                "translation": "菌株；毒株"
-              },
-              {
-                "word": "outbreak",
-                "phonetic": "/ˈaʊtbreɪk/",
-                "part": "n.",
-                "translation": "（疾病）暴发"
-              },
-              {
-                "word": "collaboration",
-                "phonetic": "/kəˌlæbəˈreɪʃən/",
-                "part": "n.",
-                "translation": "合作；协作"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "There were dead penguins but a virus was not to blame.",
-                "analysis": [
-                  "前半句是 There were dead penguins 的存在句，核心信息是现场确有企鹅死亡。",
-                  "but 连接转折分句，指出死亡事实与团队最初怀疑的病毒病因并不相同。",
-                  "a virus 是后半句主语，was not to blame 是表示“并非罪因”的系表结构。",
-                  "整句从现场现象转向推翻初始假设，是报道调查叙事的关键转折。",
-                  "可借鉴 X was not to blame 表达证据排除某种常见归因。"
-                ],
-                "translation": "企鹅确实死了，但并非病毒造成的。"
-              },
-              {
-                "original": "That was a little bit puzzling.",
-                "analysis": [
-                  "主干是 That was puzzling，that 回指前文检测到病毒但载量偏低这一结果。",
-                  "a little bit 作程度修饰语，弱化形容词 puzzling，呈现受访者克制的口语表达。",
-                  "系动词 was 将研究结果与研究者的判断联系起来，而非直接宣布结论。",
-                  "该句标示证据与预期不符，推动文章从初步检测进入后续显微镜检查。",
-                  "可借鉴 That was ... 描述前述证据引发的判断或疑问。"
-                ],
-                "translation": "这多少令人有些困惑。"
-              },
-              {
-                "original": "We really need international collaboration.",
-                "analysis": [
-                  "句子主干为 We need collaboration，主语是 We，宾语中心词是 collaboration。",
-                  "really 加强 need 的语气，international 限定合作的跨国范围。",
-                  "句子出现在报道结尾，把个案调查提升为共同监测病原体的行动主张。",
-                  "其逻辑由前文病原体跨越遥远地域，推导出单一国家难以独立追踪。",
-                  "可借鉴 We need X 用简洁主张收束问题分析并提出行动方向。"
-                ],
-                "translation": "我们确实需要国际合作。"
-              }
-            ]
-          },
-          {
-            "title": "What are the government's options for reducing welfare spending?",
-            "source": "BBC",
-            "published": "2026-10-29",
-            "url": "https://www.bbc.com/news/articles/cwy7l1lrkmk2o",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "经济与社会 / 福利支出、就业支持与公共预算",
-            "summary": "BBC 从英国预算预测入手，指出未来几年福利支出按现金额预计增加 790 亿英镑，但占 GDP 的比例预计只从目前的 11.1% 升至 2032 年的 11.3%；总量变化与各项支出的分化需要分开理解。报道继而聚焦疫情后增长较快的健康及残障相关福利，并解释“削减福利”可能指降低相对预期支出，而非现金总额绝对下降。文中列出收紧个人独立支付资格、降低相关给付等选项，同时提醒就业支持可能增加近期其他部门开支；只有支持措施有效，长期才可能节省福利支出。",
-            "reason": [
-              "文章围绕福利制度、青年就业和财政取舍展开，适合公共政策与社会保障类考题。",
-              "结构由预算数字和整体趋势转向增长较快的项目，再区分相对削减与绝对削减，最后讨论政策成本。",
-              "可练习读懂百分比与现金额的差异、辨析政策目标，并识别作者对长期效果所设的条件。",
-              "词汇涵盖 trajectory、anticipated、absolute、offset 等分析经济数据和政策成本的表达。",
-              "写作可借鉴先量化问题、再区分口径、最后用短期与长期权衡评估政策方案。"
-            ],
-            "vocabulary": [
-              {
-                "word": "welfare",
-                "phonetic": "/ˈwelfeə(r)/",
-                "part": "n.",
-                "translation": "福利；社会救济"
-              },
-              {
-                "word": "forecast",
-                "phonetic": "/ˈfɔːkɑːst/",
-                "part": "n.",
-                "translation": "预测；预报"
-              },
-              {
-                "word": "thorny",
-                "phonetic": "/ˈθɔːni/",
-                "part": "adj.",
-                "translation": "棘手的；复杂难解的"
-              },
-              {
-                "word": "trajectory",
-                "phonetic": "/trəˈdʒektəri/",
-                "part": "n.",
-                "translation": "发展轨迹；趋势"
-              },
-              {
-                "word": "dramatic",
-                "phonetic": "/drəˈmætɪk/",
-                "part": "adj.",
-                "translation": "显著的；急剧的"
-              },
-              {
-                "word": "relative",
-                "phonetic": "/ˈrelətɪv/",
-                "part": "adj.",
-                "translation": "相对的"
-              },
-              {
-                "word": "absolute",
-                "phonetic": "/ˈæbsəluːt/",
-                "part": "adj.",
-                "translation": "绝对的；完全的"
-              },
-              {
-                "word": "anticipated",
-                "phonetic": "/ænˈtɪsɪpeɪtɪd/",
-                "part": "adj.",
-                "translation": "预期的；预计的"
-              },
-              {
-                "word": "offset",
-                "phonetic": "/ˌɒfˈset/",
-                "part": "v.",
-                "translation": "抵消；补偿"
-              },
-              {
-                "word": "effective",
-                "phonetic": "/ɪˈfektɪv/",
-                "part": "adj.",
-                "translation": "有效的；产生预期效果的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "But there are some welfare costs that are rising rapidly.",
-                "analysis": [
-                  "主干是 there are some welfare costs，使用 there be 句型引出正在上升的支出项目。",
-                  "that are rising rapidly 是限制性定语从句，修饰 costs 并说明其变化趋势。",
-                  "But 与前文福利支出占 GDP 比例变化不大形成转折，强调总量稳定不代表各项支出都稳定。",
-                  "some 限定范围，避免把部分项目的增长概括成所有福利支出都急剧上升。",
-                  "可借鉴 there are some ... that ... 从整体趋势中提出值得关注的例外。"
-                ],
-                "translation": "但有些福利支出正在迅速上升。"
-              },
-              {
-                "original": "The final Milburn report is expected in the coming weeks.",
-                "analysis": [
-                  "句子主干是 The report is expected，采用一般现在时被动语态表达预期。",
-                  "final 和 Milburn 前置限定 report，说明报告性质及所属审查。",
-                  "in the coming weeks 是时间状语，标明可能提供新政策信息的时间窗口。",
-                  "这句承接福利改革方案讨论，提示现阶段判断仍等待后续证据。",
-                  "可借鉴 is expected in ... weeks 表达某项政策材料的预计发布时间。"
-                ],
-                "translation": "最终版米尔本报告预计将在未来几周内公布。"
-              },
-              {
-                "original": "However, in the long term this approach could still deliver welfare savings if the employment support was effective.",
-                "analysis": [
-                  "主句核心是 this approach could deliver welfare savings，could 表示可能性而非确定结果。",
-                  "However 转折前文短期内节省可能被其他部门新增支出抵消的判断。",
-                  "in the long term 是时间状语，限定结论成立的时间尺度；still 强调尽管有近期成本仍可能节省。",
-                  "if the employment support was effective 是条件状语从句，说明长期节省依赖支持措施发挥作用。",
-                  "可借鉴 could still ... if ... 表达附带条件的长期收益，而不把政策效果说成必然。"
-                ],
-                "translation": "不过从长远看，如果就业支持确实有效，这种做法仍可能节省福利支出。"
               }
             ]
           }
