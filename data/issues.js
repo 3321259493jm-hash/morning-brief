@@ -1,6 +1,364 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-07T10:43:16+08:00",
+  "updatedAt": "2026-11-08T10:20:51+08:00",
   "issues": [
+    {
+      "date": "2026-11-08",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 GitHub Copilot 代码审查与开发工具更新，以及 Anthropic 对 AI 科学建模的研究；免费资源包括可下载模型、Gemini 学习工具、编程辅助和翻译服务。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 代码审查新增管理与概览信息",
+            "summary": "GitHub 为 Copilot 代码审查新增 REST 和 GraphQL 管理设置，提供审查来源归属等信息，并精简概览、集中显示未审查文件及排除原因；用户还可对概览反馈。公告说明这些改进面向指定 Copilot 计划。",
+            "howTo": "提交课程项目 PR 后查看 review overview，检查 Files not reviewed 及排除原因；若概览建议不准确或冗长，可点踩后选择 Add a reason。仓库管理员可按官方文档配置 REST 或 GraphQL 设置。",
+            "impact": "团队作业中可更清楚地核对自动审查意见及其来源，减少把模型建议直接当成正确结论的风险；代码仍应通过测试并由组员复核。",
+            "free": "公告列出 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划，未列 Free 计划，不能据此认定免费层可用。地区、独立调用额度及具体开放时间官方未说明。",
+            "category": "编程助手 / 代码审查",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-06",
+              "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates/"
+            }
+          },
+          {
+            "event": "GitHub Copilot CLI 与 VS Code 开发体验更新",
+            "summary": "GitHub 11 月 6 日周报介绍 Copilot CLI 的 /settings 统一设置界面，以及 VS Code 1.145 的实验性聊天视图、远程浏览器预览与 canvas、按 cron 表达式安排本地自动化等更新。",
+            "howTo": "在 Copilot CLI 输入 `/settings` 查看统一设置；使用 VS Code 1.145 的用户可阅读周报中对应功能说明，并按需启用远程浏览器支持、canvas 或本地定时自动化。先用无敏感内容的课程小项目试运行，再检查生成的任务和结果。",
+            "impact": "学生可用定时任务重复执行低风险的资料整理或项目检查，也可在浏览器预览课堂演示；实验性功能可能变化，重要作业不应依赖未经检查的自动操作。",
+            "free": "该周报未说明这些 CLI/VS Code 更新的具体价格、账户计划、地区或配额；远程预览及 canvas 等相关体验标注为预览功能，实际可用性以产品内显示为准。",
+            "category": "编程助手 / CLI 与编辑器",
+            "source": {
+              "name": "GitHub Copilot 官方周报",
+              "published": "2026-11-06",
+              "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2/"
+            }
+          },
+          {
+            "event": "Anthropic 发布 AI 科学建模研究文章",
+            "summary": "Anthropic 研究团队以 Hodgkin–Huxley 神经模型为例，梳理科学建模的三个步骤：构建模型、用测量数据约束参数、解释模型所揭示的机制。文章强调拟合数据并不等于揭示真实机制；它是研究文章，不是新发布的 Claude 功能。",
+            "howTo": "阅读文章并把其建模思路用于课程数据：先写出问题和假设，再标注模型变量与假设，最后比较预测和观测数据，并记录其他可能解释；不要把拟合结果直接写成因果证明。",
+            "impact": "做论文阅读、实验报告或社会调查时，学生可用这套区分检查“模型解释了数据”与“模型证明了机制”之间的差别，并在结论中交代不确定性。",
+            "free": "Anthropic 官网可直接阅读这篇研究文章；它不代表 Claude 新功能。文章未说明 Claude 服务的价格、地区、账号要求或使用配额。",
+            "category": "AI 研究 / 科学建模",
+            "source": {
+              "name": "Anthropic 官方研究文章",
+              "published": "2026-11-06",
+              "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Qwen3 Embedding 0.6B：可下载的多语言文本向量模型",
+            "summary": "Qwen 官方模型卡提供 Qwen3 Embedding 0.6B 权重，定位于文本嵌入任务，支持多语言检索、分类和聚类等用途，模型采用 Apache-2.0 许可证。它是嵌入模型，不是对话模型。",
+            "howTo": "打开官方 Hugging Face 模型卡，按其使用说明安装 Sentence Transformers 或 Transformers 并加载 `Qwen/Qwen3-Embedding-0.6B`；用课程笔记和一个查询句生成向量，再比较相似度以寻找相关段落。",
+            "impact": "适合搭建课程资料的语义检索小实验，或比较中英文笔记的关联；结果是相关性排序，不等于事实核验，也不能直接代替阅读原文。",
+            "free": "官方模型卡提供可下载权重，许可证为 Apache-2.0；硬件要求、运行成本、地区和账号限制官方未说明。",
+            "category": "开源模型 / 文本嵌入",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
+            }
+          },
+          {
+            "event": "DeepSeek-R1-Distill-Qwen-1.5B：MIT 许可开放权重",
+            "summary": "DeepSeek 官方模型卡提供 1.5B 参数的 R1 蒸馏模型权重，并以 MIT 许可证发布；模型卡介绍了其推理用途和运行示例，适合学习者自行试用而非视为答案保证。",
+            "howTo": "从官方 Hugging Face 模型卡进入 Files and versions 下载权重，并按卡片中的 Transformers 示例配置环境；用教材中的一道数学或逻辑题测试输出，再对照标准解答逐步检查。",
+            "impact": "学生可以观察较小型推理模型如何组织解题步骤，比较不同提示下的结果；本地运行所需硬件因环境而异，必须自行评估。",
+            "free": "模型权重可按模型卡下载，许可证为 MIT；硬件、运行成本、地区和账号要求官方未说明。",
+            "category": "开源模型 / 推理实验",
+            "source": {
+              "name": "DeepSeek 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+            }
+          },
+          {
+            "event": "Gemini API：部分模型提供免费层级",
+            "summary": "Google AI Studio 的官方价格表为部分 Gemini 模型列出 Free 层级；可在开发者环境中试做文本生成或学习项目。价格表同时说明免费层内容可能用于改进 Google 产品。",
+            "howTo": "登录 Google AI Studio，选择价格表标为 Free 的模型，在提示窗口试写一个不含个人或课程敏感信息的小任务；开发前查看所选模型的速率限制和数据使用说明。",
+            "impact": "适合初学者以小规模 API 调用练习提示设计、文本分类或课程原型，不必先承诺付费；不要上传保密研究数据。",
+            "free": "官方价格表仅对指定模型列出免费层，速率限制因模型而异；免费层内容可能用于改进 Google 产品。账号资格、地区和个人可保证的具体额度官方未说明，请以实时价格表为准。",
+            "category": "免费 API / 模型试用",
+            "source": {
+              "name": "Google AI for Developers 官方价格表",
+              "published": "官方未说明",
+              "url": "https://aistudio.google.com/docs/pricing"
+            }
+          },
+          {
+            "event": "NotebookLM Standard：免费方案可建笔记本并添加来源",
+            "summary": "Google 帮助页列出 NotebookLM Standard 的使用上限：每位用户最多 100 个笔记本，每个笔记本最多 50 个来源，并说明可使用 Gmail 账号注册。",
+            "howTo": "用 Gmail 账号打开 NotebookLM，新建笔记本并添加课程讲义或公开文章作为来源；针对来源提问并回到原文核对引用内容。",
+            "impact": "适合按课程或论文主题整理阅读材料、生成复习问题；来源数量有上限，且模型回答应与原始资料交叉核对。",
+            "free": "官方支持页列出的 Standard 上限为每位用户 100 个笔记本、每个笔记本 50 个来源；可用地区、账号年龄资格以及其他功能的使用额度按官方页面为准，未明确部分官方未说明。",
+            "category": "长期免费工具 / 资料阅读",
+            "source": {
+              "name": "Google NotebookLM 官方帮助页",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出 Copilot Free，包含每月 2,000 次代码补全，以及受限的聊天和 agent 功能。",
+            "howTo": "用 GitHub 账号开通 Copilot Free，在支持的编辑器安装官方扩展；先让它解释一段课程代码或补全小函数，再运行测试并检查输出。",
+            "impact": "可用于入门编程中的语法提示、代码解释和小型练习，补全结果应由学生理解并测试，而不是直接提交。",
+            "free": "官方计划页标价为免费，并列出每月 2,000 次代码补全；聊天和 agent 使用受限。具体地区、账号资格及这些功能的细分配额官方未说明。",
+            "category": "长期免费工具 / 编程学习",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "DeepL Free：每月 50,000 字符文本翻译",
+            "summary": "DeepL 官方方案页列出免费版每月最多翻译 50,000 个字符，并支持单个文件翻译，文件大小上限为 5 MB。",
+            "howTo": "在 DeepL 网页版粘贴一段英文摘要或上传符合大小限制的文件进行翻译；把译文与原文逐句比对，重点核对术语、否定关系和长句逻辑。",
+            "impact": "可辅助理解英文论文和练习双语表达；机器译文适合作为理解起点，不应未经核对地引用或替代自己的翻译。",
+            "free": "官方方案页列出的额度为每月 50,000 字符，单个文件翻译上限 5 MB；地区、账号资格及不同文件类型的细节官方未说明。",
+            "category": "长期免费工具 / 翻译学习",
+            "source": {
+              "name": "DeepL 官方方案页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "This Wooden Wardrobe in Pompeii Remained Sealed for Nearly 2,000 Years. Archaeologists Just Opened It for the First Time",
+            "source": "Smithsonian Magazine",
+            "published": "2026-11-06",
+            "url": "https://www.smithsonianmag.com/smart-news/this-wooden-wardrobe-in-pompeii-remained-sealed-for-nearly-2000-years-archaeologists-just-opened-it-for-the-first-time-180989831/",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "文化与考古 / 庞贝日常生活",
+            "summary": "文章以庞贝一只近两千年未开启的木柜为线索，介绍考古人员在住宅中发现的灯具、梳妆用品、玻璃器皿、钱币和护身符项链等物品，并借这些生活遗物讨论居民的日常习惯与身份线索。作者随后说明，考古学家根据贵重物品推测屋主可能在火山喷发时匆忙离开，但目前仍无法确定他们的命运；文章以这种证据与未知并存的状态收束，提醒读者遗物能提供线索，却不能补齐全部历史。",
+            "reason": [
+              "考古与日常生活兼具文化主题，适合练习从具体遗物概括社会生活。",
+              "文章按发现现场、器物细节、研究者推断到未知结论展开，结构清楚且有证据层级。",
+              "可练习细节定位、推断依据判断，以及区分事实与作者保留意见的题型。",
+              "eclectic、trove、utilitarian 等词汇可用于描述多样性、发现物与用途。",
+              "写作时可借鉴“观察证据—提出有限推断—承认未知”的审慎论证方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "eclectic",
+                "phonetic": "/ɪˈklektɪk/",
+                "part": "adj.",
+                "translation": "多种来源或风格混合的"
+              },
+              {
+                "word": "trove",
+                "phonetic": "/troʊv/",
+                "part": "n.",
+                "translation": "珍藏；大量有价值的发现物"
+              },
+              {
+                "word": "utilitarian",
+                "phonetic": "/ˌjuːtɪlɪˈteriən/",
+                "part": "adj.",
+                "translation": "实用的；功利性的"
+              },
+              {
+                "word": "cache",
+                "phonetic": "/kæʃ/",
+                "part": "n.",
+                "translation": "藏匿的一批物品"
+              },
+              {
+                "word": "adornment",
+                "phonetic": "/əˈdɔːrnmənt/",
+                "part": "n.",
+                "translation": "装饰物；装饰"
+              },
+              {
+                "word": "suspect",
+                "phonetic": "/səˈspekt/",
+                "part": "v.",
+                "translation": "推测；怀疑"
+              },
+              {
+                "word": "renovation",
+                "phonetic": "/ˌrenəˈveɪʃn/",
+                "part": "n.",
+                "translation": "修缮；翻新"
+              },
+              {
+                "word": "depict",
+                "phonetic": "/dɪˈpɪkt/",
+                "part": "v.",
+                "translation": "描绘；描述"
+              },
+              {
+                "word": "occupant",
+                "phonetic": "/ˈɑːkjəpənt/",
+                "part": "n.",
+                "translation": "居住者；占用者"
+              },
+              {
+                "word": "identifiable",
+                "phonetic": "/aɪˌdentəˈfaɪəbəl/",
+                "part": "adj.",
+                "translation": "可识别的；可确认身份的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Nearly 2,000 years ago, residents of the ancient Roman city of Pompeii stashed an eclectic mix of objects in a wooden wardrobe.",
+                "analysis": [
+                  "主干是 residents stashed an eclectic mix of objects，交代“居民藏放物品”这一核心事件。",
+                  "句首 Nearly 2,000 years ago 是时间状语，限定事件发生年代。",
+                  "of the ancient Roman city of Pompeii 修饰 residents，交代居民所属地点。",
+                  "in a wooden wardrobe 是地点状语；stashed 比普通的 put 更含有藏放意味。",
+                  "eclectic mix of objects 用概括性名词组为后文列举各类器物作铺垫。"
+                ],
+                "translation": "近两千年前，庞贝古城的居民把一批风格各异的物品藏在一只木柜里。"
+              },
+              {
+                "original": "Based on the number of valuables found in the wardrobe, archaeologists suspect that the house’s owners left in a hurry, perhaps during the eruption of Mount Vesuvius in 79 C.E.",
+                "analysis": [
+                  "句首 Based on... 是依据状语，说明推断来自柜内贵重物品的数量。",
+                  "主句主干为 archaeologists suspect that...，真正的判断是“考古学家推测”。",
+                  "that 引导宾语从句，内容是屋主仓促离开；found in the wardrobe 后置修饰 valuables。",
+                  "perhaps 表示可能性，作者没有把离开时间写成确定事实。",
+                  "句子呈现“证据—推断—保留”的逻辑，写作时可用于审慎表达结论。"
+                ],
+                "translation": "根据柜内发现的大量贵重物品，考古学家推测房屋主人可能是在仓促中离开的，也许正值公元79年维苏威火山喷发之际。"
+              },
+              {
+                "original": "Much about the building and its onetime occupants remains unknown.",
+                "analysis": [
+                  "主干是 Much remains unknown，说明仍有大量信息未知。",
+                  "Much 是不可数意义的代词，作单数主语，因此谓语使用 remains。",
+                  "about the building and its onetime occupants 补充说明未知信息的范围。",
+                  "onetime 表示“曾经的”，与 occupants 合用指昔日居住者。",
+                  "remains unknown 是简洁的系表结构，可用于概括证据边界。"
+                ],
+                "translation": "关于这栋建筑及其昔日居住者的许多情况仍不为人知。"
+              }
+            ]
+          },
+          {
+            "title": "In Alaska’s capital, food comes by water, air or, most often, community sharing",
+            "source": "The Guardian",
+            "published": "2026-11-06",
+            "url": "https://www.theguardian.com/environment/2026/nov/06/alaska-juneau-food-access",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "社会与环境 / 食物获取与社区互助",
+            "summary": "文章以阿拉斯加州首府朱诺为例，指出常用的食品进口比例难以呈现当地真实供给。作者先介绍当地依赖海运和空运、耕地稀少且生长季短，再分析小规模农业和市场销售难以保障可负担供应；后文转向传统采集分享、社区互助和面向弱势群体的营养项目。文章由此把焦点从进口比例等总量指标转向食物如何被获取、分享和负担，强调多种社区渠道共同支撑食物保障。",
+            "reason": [
+              "文章把社会公平与环境、地理条件相连，适合练习公共议题类阅读。",
+              "文章从常被引用的进口比例与实际共享、采集食物之间的差异切入，再分析地理和市场限制及社区方案。",
+              "适合考查转折、原因推断、例证作用和作者如何限定解决方案。",
+              "arable、subsistence、provisioning 等词可用于讨论土地、供给和生计。",
+              "议论文可借鉴其从总量指标转向分配机制，并用个案补足统计盲点的写法。"
+            ],
+            "vocabulary": [
+              {
+                "word": "arable",
+                "phonetic": "/ˈærəbəl/",
+                "part": "adj.",
+                "translation": "可耕种的"
+              },
+              {
+                "word": "vulnerable",
+                "phonetic": "/ˈvʌlnərəbəl/",
+                "part": "adj.",
+                "translation": "易受伤害的；脆弱的"
+              },
+              {
+                "word": "subsistence",
+                "phonetic": "/səbˈsɪstəns/",
+                "part": "n.",
+                "translation": "生计；维持生存的最低生活"
+              },
+              {
+                "word": "transacted",
+                "phonetic": "/trænˈzæktɪd/",
+                "part": "v.",
+                "translation": "办理；进行交易"
+              },
+              {
+                "word": "mutual provisioning",
+                "phonetic": "/ˈmjuːtʃuəl prəˈvɪʒənɪŋ/",
+                "part": "n. phr.",
+                "translation": "相互供给；互助性供给"
+              },
+              {
+                "word": "harvest",
+                "phonetic": "/ˈhɑːrvɪst/",
+                "part": "v./n.",
+                "translation": "收获；收成"
+              },
+              {
+                "word": "cultivates",
+                "phonetic": "/ˈkʌltɪveɪts/",
+                "part": "v.",
+                "translation": "耕种；培育"
+              },
+              {
+                "word": "modest",
+                "phonetic": "/ˈmɑːdɪst/",
+                "part": "adj.",
+                "translation": "不大的；适度的"
+              },
+              {
+                "word": "streamlined",
+                "phonetic": "/ˈstriːmlaɪnd/",
+                "part": "adj.",
+                "translation": "精简的；效率更高的"
+              },
+              {
+                "word": "afford",
+                "phonetic": "/əˈfɔːrd/",
+                "part": "v.",
+                "translation": "负担得起；支付得起"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Forty miles north-west of Alaska’s capital, the highway just ends.",
+                "analysis": [
+                  "主干是 the highway ends，使用极简句式交代道路在此终止。",
+                  "Forty miles north-west of Alaska’s capital 是句首地点状语，先定位地理环境。",
+                  "just 强调道路“到此为止”的限制，为后文解释偏远社区的交通条件铺垫。",
+                  "作者先写空间边界而非抽象统计，形成具体、有画面感的开篇。",
+                  "阅读时应区分地点事实与后文关于食物获取的因果分析。"
+                ],
+                "translation": "在阿拉斯加首府西北方向四十英里处，公路就到头了。"
+              },
+              {
+                "original": "That figure cannot measure how Juneau feeds itself, sharing and harvesting from the land.",
+                "analysis": [
+                  "主句主干是 That figure cannot measure...，指出某项统计数字存在衡量盲区。",
+                  "how Juneau feeds itself 是 measure 的宾语从句，说明未被统计的对象。",
+                  "sharing and harvesting from the land 是补充性现在分词结构，举出社区获得食物的方式。",
+                  "cannot 与后面的社区实践形成对照，论证市场数据不足以涵盖真实供给。",
+                  "句中把统计口径问题与日常互助联系起来，是社会议题文章常见的论证推进。"
+                ],
+                "translation": "这个数字无法衡量朱诺如何养活自己——包括分享食物以及从土地上收获食物。"
+              },
+              {
+                "original": "Operations like Krapek’s and Orsi’s can’t feed a community on their own.",
+                "analysis": [
+                  "主干是 Operations can’t feed a community，明确指出单靠这些经营项目无法满足整个社区。",
+                  "like Krapek’s and Orsi’s 用两个具体案例说明 operations 所指范围。",
+                  "on their own 是限制性状语，强调“单独依靠它们”不够，而非否定其价值。",
+                  "情态动词 can’t 表达能力边界，避免把个案写成完整解决方案。",
+                  "该句为前文案例加上限定，也为强调多方协作铺路。"
+                ],
+                "translation": "像 Krapek 和 Orsi 这样的经营项目，单靠自身无法养活整个社区。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-07",
       "status": "ready",
@@ -2011,452 +2369,6 @@ window.BRIEFING_DATA = {
                   "often 再次限定语气；可借鉴 actions speak louder than words 讨论榜样作用。"
                 ],
                 "translation": "孩子一直在观察，而你自己的饮食行为往往比言语更有说服力。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-01",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Apple 创作应用 AI 功能更新、Copilot 多模型编排与 Gemini 文件编辑；免费资源覆盖教材研读、翻译、编程、云端计算和创意生成。",
-        "updates": [
-          {
-            "event": "Gemini 可在对话中生成、预览和编辑学习文件",
-            "summary": "Gemini app 新增文件生成与编辑：可在聊天中创建 PDF、文档、演示文稿、表格和代码文件，再预览、直接修改或选中文字让 Gemini 调整。PDF 支持网页和移动端；Google Docs、Sheets、幻灯片、Markdown、TXT 和代码文件目前仅支持网页版。",
-            "howTo": "打开 Gemini 网页版并上传课堂笔记，要求生成 PDF 复习指南；在预览中直接编辑，或选中文字让 Gemini 修改。PDF 也可在 Gemini 移动端预览和编辑；其他列出的文件格式请使用网页版。",
-            "impact": "可把课堂材料整理成可编辑的提纲、表格或复习指南，并在原对话中迭代；提交前对照课程资料核实内容，避免把格式完整误当成事实准确。",
-            "free": "Google 称此功能向 Gemini app 已开放地区的所有用户提供；公告未说明付费订阅要求、账号条件、具体地区清单或使用额度。PDF 支持网页和移动端，其他文件格式仅支持网页。",
-            "category": "Google Gemini / 文件生成与编辑",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-10-29",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/"
-            }
-          },
-          {
-            "event": "GitHub Copilot Fusion 正式提供自动多模型编排",
-            "summary": "GitHub Copilot Fusion 正式推出：用户在模型选择器中选 Fusion 并设置投入程度后，Copilot 会按任务选择并协调模型；需要时可采用单模型、先快后强的级联检查，或由另一模型评审再修订的流程。",
-            "howTo": "更新 VS Code、GitHub Copilot app、Copilot CLI 或 JetBrains IDE 中的 Copilot，在模型选择器选择 Copilot Fusion，再选 Standard、High 或 Max 投入程度；向它描述一个需要解释、规划或调试的课程代码任务。",
-            "impact": "学生可减少为不同编程步骤手动切换模型的负担，并用评审式流程检查作业代码；仍要查看生成的改动、运行测试并理解结果。",
-            "free": "GitHub 称该功能在所有 Copilot 计划和公告列出的客户端提供；Fusion 使用的每个模型按其标准费率计费，付费 Copilot 计划目前有模型费用限时 30% 折扣。免费计划的具体 Fusion 额度、实际单次费用、折扣截止日和地区官方未说明。",
-            "category": "GitHub Copilot / 多模型编排",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion"
-            }
-          },
-          {
-            "event": "Apple Creator Studio 宣布创作应用新增生成式 AI 功能",
-            "summary": "Apple 宣布为 Pixelmator Pro 增加 Generate Fill，可按文字描述改动选定图像区域；Logic Pro for Mac 将加入制作助手，Keynote、Pages 和 Numbers 也将获得理解文档上下文的助手及 MCP 工作流支持。Apple 表示这批更新将于 11 月通过 App Store 提供。",
-            "howTo": "待 App Store 更新上线后，在 Pixelmator Pro 选中图像区域并描述要生成的改动；在 Logic Pro for Mac 用助手规划歌曲或设置人声轨；在 Keynote、Pages 或 Numbers 查看文档上下文助手。",
-            "impact": "做课程展示、社团海报或音乐项目的学生可直接试做局部图像改动，也可让办公软件助手结合文档上下文协助操作；上线前不要把公告中的功能当成已可用，生成结果仍需检查。",
-            "free": "Apple 称更新对现有 Apple Creator Studio 订阅者免费；公告没有给出新用户价格、学生优惠、地区清单或 11 月的具体上线日。部分助手功能标为 beta，公告未说明其额度。",
-            "category": "Apple Creator Studio / 创作应用 AI",
-            "source": {
-              "name": "Apple Newsroom",
-              "published": "2026-10-27",
-              "url": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini Notebook 免费接入数百本教材并生成学习材料",
-            "summary": "Google 称 Gemini Notebook 可免费添加来自 OpenStax、Open Textbook Library、S Chand Publishing 等提供方的数百本教材；基于教材回答时附行内引用和原始来源链接，并可生成学习指南、测验和闪卡。",
-            "howTo": "打开 Gemini Notebook 中的一个 notebook，选择 Add sources（添加来源）再选 Textbooks（教材），从目录加入课程教材；随后要求制作复习提纲、练习测验或闪卡，并点引用回看教材原文。",
-            "impact": "适合按指定教材归纳章节和自测，引用也便于核对答案出处；目录来自美国和印度的提供方，选书时仍需确认版本是否符合课程要求。",
-            "free": "Google 明确称教材可免费使用；目录覆盖哪些具体教材、所在地区是否都能访问、账号要求及使用额度官方未说明。",
-            "category": "免费 AI 学习资源 / 教材与复习",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-10-29",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/"
-            }
-          },
-          {
-            "event": "DeepAI 免费试用图像、视频、音乐和 AI 对话工具",
-            "summary": "DeepAI 官方介绍称，用户可在浏览器免费探索文本生成图像、照片编辑、联网 AI 对话、短视频、原创音乐和语音对话等工具，无需创建账号。",
-            "howTo": "打开 DeepAI 官网，选择图像生成、照片编辑、视频、音乐或 AI Chat 等工具并输入任务描述；先用不含个人信息的素材试用，保存结果后自行检查准确性和使用许可。",
-            "impact": "可为课程展示试做配图、短视频或音乐草稿，也可用 AI 对话辅助查找资料；涉及事实的回答应回到可靠来源核对，避免上传隐私材料。",
-            "free": "官方称可免费探索且无需账号；免费使用的额度、地区、生成限制和免费期限官方未说明。DeepAI Pro 标价为每月 9.99 美元，免费访问不包含其所述高用量权益。",
-            "category": "长期免费网页工具 / 图像、视频与音频",
-            "source": {
-              "name": "DeepAI 官方网站",
-              "published": "官方未说明",
-              "url": "https://deepai.org/"
-            }
-          },
-          {
-            "event": "DeepL 免费版每月可翻译 50,000 字符",
-            "summary": "DeepL 官方方案对比页为免费版列出每位用户每月 50,000 个字符的文本翻译、每月 1 次文件翻译（最多 5 MB）和 1 条已保存翻译。",
-            "howTo": "打开 DeepL 翻译网页，粘贴英文阅读材料并选择目标语言；翻译文档前确认文件不超过 5 MB，并留意免费版每月一次的文件额度。",
-            "impact": "适合对照阅读论文摘要、检查生词和理解句间关系；机器译文仅作辅助，应回看原文并核对术语。",
-            "free": "官方方案页标注每用户每月 50,000 字符、1 次文件翻译（最多 5 MB）和 1 条已保存翻译；是否需注册、地区和免费期限官方未说明。",
-            "category": "长期免费工具 / 翻译与阅读",
-            "source": {
-              "name": "DeepL 官方方案页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free 提供每月 2,000 次代码补全",
-            "summary": "GitHub 官方方案页列出 Copilot Free：每月 2,000 次代码补全，并提供有限的聊天和 agent 使用；免费计划也支持 Copilot CLI 与 agent mode。",
-            "howTo": "登录 GitHub 并启用 Copilot Free，在 VS Code 等支持的 IDE 安装 Copilot 扩展；用小型课程代码练习补全或解释，并在设置中查看用量。",
-            "impact": "适合练习代码解释、补全和小型调试；免费聊天与 agent 用量有限，生成代码应运行测试并理解后再提交。",
-            "free": "官方方案页标注每月 2,000 次代码补全及有限聊天和 agent 使用；聊天/agent 的具体额度、地区资格和免费期限官方未说明。",
-            "category": "长期免费工具 / 编程学习",
-            "source": {
-              "name": "GitHub Copilot 官方方案页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Google Colab 免费运行 Jupyter 学习笔记本",
-            "summary": "Google 官方 FAQ 确认 Colab 是无需本地安装的托管 Jupyter Notebook 服务，免费提供计算资源，包括 GPU 和 TPU，适用于教育、数据科学和机器学习。",
-            "howTo": "打开 Colab，新建笔记本或从 GitHub 上传已有 notebook；在代码单元运行课程示例，并在运行时菜单查看当前可用硬件。",
-            "impact": "可用于练习 Python、数据分析和小型机器学习实验而无需先配置本地环境；免费资源不保证可用，重要代码和输出应及时保存。",
-            "free": "Google 明确称 Colab 免费提供计算资源，包括 GPU/TPU，但资源不保证且不无限，使用限制会变化；固定配额、地区和账号要求官方未说明。",
-            "category": "免费云端计算 / 编程与数据学习",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Mixed economic forecast weighs heavy ahead of midterms",
-            "source": "NPR",
-            "published": "2026-10-31",
-            "url": "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "经济与社会 / 生活成本、就业与选举判断",
-            "summary": "文章以美国中期选举前的经济数据为背景，解释为何增长数字未能转化为选民的经济安全感。报道先指出通胀仍高于此前水平、工资追不上生活成本，随后呈现表面矛盾：第三季度 GDP 增长加快，但增长主要受 AI 投资推动，并未伴随新就业明显增加。接着，记者讨论招聘低迷、工资增速放慢和房贷利率偏高如何影响家庭支出与购房能力。文章最后将宏观指标与选民日常感受联系起来，指出生活成本可能影响选举中的执政党评价。",
-            "reason": [
-              "生活成本、就业和选举是经济与社会类阅读常见主题，材料中的数据也便于练习概括证据。",
-              "文章从选举背景切入，依次讨论通胀、GDP、就业、工资与住房，呈现宏观增长和家庭感受之间的落差。",
-              "可练习解释题、因果题和态度题，尤其要辨析 GDP 增长与就业改善并非同一概念。",
-              "affordability、sluggish、mortgage 等词可迁移到消费、劳动市场和住房政策话题。",
-              "写作可借鉴“呈现总量指标—补充分配与就业细节—落到家庭经验”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "affordability",
-                "phonetic": "/əˌfɔːrdəˈbɪləti/",
-                "part": "n.",
-                "translation": "负担得起的程度；可负担性"
-              },
-              {
-                "word": "keep pace",
-                "phonetic": "/kiːp peɪs/",
-                "part": "phr.",
-                "translation": "跟上；与……同步"
-              },
-              {
-                "word": "inflation",
-                "phonetic": "/ɪnˈfleɪʃən/",
-                "part": "n.",
-                "translation": "通货膨胀"
-              },
-              {
-                "word": "stewardship",
-                "phonetic": "/ˈstuːərdʃɪp/",
-                "part": "n.",
-                "translation": "管理；治理责任"
-              },
-              {
-                "word": "perk up",
-                "phonetic": "/pɜːrk ʌp/",
-                "part": "v.",
-                "translation": "回升；改善"
-              },
-              {
-                "word": "sluggish",
-                "phonetic": "/ˈslʌɡɪʃ/",
-                "part": "adj.",
-                "translation": "低迷的；迟缓的"
-              },
-              {
-                "word": "be accompanied by",
-                "phonetic": "/bi əˈkʌmpənid baɪ/",
-                "part": "phr.",
-                "translation": "伴随；同时发生"
-              },
-              {
-                "word": "mortgage rate",
-                "phonetic": "/ˈmɔːrɡɪdʒ reɪt/",
-                "part": "n.",
-                "translation": "抵押贷款利率"
-              },
-              {
-                "word": "on the sidelines",
-                "phonetic": "/ɑːn ðə ˈsaɪdlaɪnz/",
-                "part": "phr.",
-                "translation": "暂不参与；处于观望状态"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The cost of living keeps going up, and people's paychecks are not keeping pace.",
-                "analysis": [
-                  "由 and 连接两个并列分句：第一分句说明生活成本上涨，第二分句说明工资未能同步。",
-                  "The cost of living 是第一分句主语，keeps going up 用现在时描述持续趋势。",
-                  "people's paychecks 是第二分句主语，are not keeping pace 用现在进行时突出当前落差。",
-                  "两个分句构成对照因果：物价持续上涨而收入跟不上，解释家庭为何感到难以负担。",
-                  "可借鉴 A keeps rising, while B fails to keep pace 表达两类经济指标的背离。"
-                ],
-                "translation": "生活成本不断上升，而人们的工资却没有跟上。"
-              },
-              {
-                "original": "GDP, which is the broadest measure of economic activity, grew at an annual rate of 3.4% in July, August and September.",
-                "analysis": [
-                  "主干为 GDP grew at an annual rate，主语 GDP，谓语 grew，后接增长速度。",
-                  "which 引导非限制性定语从句，补充解释 GDP 是衡量经济活动的广义指标。",
-                  "in July, August and September 是时间状语，限定数据所覆盖的季度月份。",
-                  "定语从句先界定指标，再给数值，体现新闻报道常见的“术语释义—数据陈述”结构。",
-                  "可借鉴 which is the broadest measure of X 插入对抽象指标的简短解释。"
-                ],
-                "translation": "作为衡量经济活动最广泛的指标，GDP 在 7、8、9 月按年率增长了 3.4%。"
-              },
-              {
-                "original": "This burst of economic growth has not been accompanied by a burst of new jobs.",
-                "analysis": [
-                  "句子主干为 This burst of economic growth has not been accompanied by a burst of new jobs。",
-                  "主语中心词 burst 指一阵快速增长；of economic growth 和 of new jobs 分别限定两次 burst。",
-                  "has not been accompanied by 是现在完成时被动结构，强调增长至今没有伴随新增就业。",
-                  "否定对照揭示宏观产出与就业改善之间的脱节，承接前文 GDP 增长数据。",
-                  "可借鉴 X has not been accompanied by Y 表达某种变化未带来预期的配套结果。"
-                ],
-                "translation": "这波经济增长并未伴随新就业岗位的增加。"
-              }
-            ]
-          },
-          {
-            "title": "The fight to save Canadian town threatened by Trump's tariffs",
-            "source": "BBC",
-            "published": "2026-10-31",
-            "url": "https://www.bbc.co.uk/news/articles/cmly016ep243o",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "经济与社会 / 关税冲击、地方就业与社区自救",
-            "summary": "报道以魁北克小镇 Témiscaming 的纸厂停工和工人失业开篇，说明这家百年工厂如何支撑当地就业、房价和公共服务。文章随后对照全国失业率相对稳定与木材、纸浆等受关税行业的局部重创，并追踪停工对周边锯木厂和运输业的连锁影响。中段回顾当地工人曾在 1970 年代买下工厂的先例，介绍居民再次组织收购的计划及其对政府援助的需求。结尾呈现联邦和省级措施、贸易谈判的不确定性，以及冬季设备受损可能令复工更难的风险。",
-            "reason": [
-              "关税、产业就业和小城镇转型构成经济与社会议题，适合联系贸易保护与区域发展。",
-              "报道从工人和小镇生活切入，再对照全国数据、供应链影响、历史先例及政策回应。",
-              "可练习主旨题、细节定位和推断题，尤其注意全国总体指标与地方个案之间的对比。",
-              "economic anchor、livelihood、ripple effect、viability 等表达适用于产业和就业议题。",
-              "写作可借鉴“个案呈现冲击—数据扩大背景—提出自救与政策条件—指出不确定性”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "economic anchor",
-                "phonetic": "/ˌiːkəˈnɑːmɪk ˈæŋkər/",
-                "part": "n. phr.",
-                "translation": "经济支柱"
-              },
-              {
-                "word": "idle",
-                "phonetic": "/ˈaɪdəl/",
-                "part": "adj.",
-                "translation": "停工的；闲置的"
-              },
-              {
-                "word": "shuttering",
-                "phonetic": "/ˈʃʌtərɪŋ/",
-                "part": "n.",
-                "translation": "关闭；停业"
-              },
-              {
-                "word": "livelihood",
-                "phonetic": "/ˈlaɪvlihʊd/",
-                "part": "n.",
-                "translation": "生计；谋生手段"
-              },
-              {
-                "word": "weather",
-                "phonetic": "/ˈweðər/",
-                "part": "v.",
-                "translation": "经受住；安然渡过"
-              },
-              {
-                "word": "tepid",
-                "phonetic": "/ˈtepɪd/",
-                "part": "adj.",
-                "translation": "不温不火的；乏力的"
-              },
-              {
-                "word": "ripple effect",
-                "phonetic": "/ˈrɪpəl ɪˌfekt/",
-                "part": "n. phr.",
-                "translation": "连锁反应"
-              },
-              {
-                "word": "viability",
-                "phonetic": "/ˌvaɪəˈbɪləti/",
-                "part": "n.",
-                "translation": "可行性；持续经营能力"
-              },
-              {
-                "word": "indefinite",
-                "phonetic": "/ɪnˈdefɪnət/",
-                "part": "adj.",
-                "translation": "期限不确定的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Most of the mill's 360 employees are out of work, kept afloat for the moment with partial pay from government tariff-relief.",
-                "analysis": [
-                  "主干是 Most of the mill’s 360 employees are out of work，说明多数员工失业。",
-                  "Most of the mill’s 360 employees 是主语；of 短语限定 Most 的范围。",
-                  "句尾 kept afloat 是过去分词短语，补充说明员工暂时靠部分政府补助维持生活。",
-                  "逗号后的补充成分形成让步意味：虽然失业，短期收入仍有部分支撑。",
-                  "可借鉴 keep someone afloat with X 表达某种援助暂时维持个人或机构运转。"
-                ],
-                "translation": "纸厂 360 名员工中的大多数失去了工作，目前靠政府关税救助提供的部分工资维持生计。"
-              },
-              {
-                "original": "At a high level, Canada's economy has weathered the ongoing trade war with the US, its largest customer.",
-                "analysis": [
-                  "主干为 Canada’s economy has weathered the trade war，has weathered 是现在完成时。",
-                  "At a high level 作句首状语，提示这是宏观层面的概括。",
-                  "ongoing 修饰 trade war；with the US 补充冲突对象。",
-                  "逗号后的 its largest customer 是同位语，说明美国对加拿大经济的重要性。",
-                  "句子与后文局部行业承压形成宏观与微观对照；可借鉴 at a high level 引出总体判断。"
-                ],
-                "translation": "从宏观层面看，加拿大经济经受住了与其最大客户美国持续进行的贸易战。"
-              },
-              {
-                "original": "The last time the town faced a threat this existential was in 1973, when the mill's then-American owner threatened to shut it down.",
-                "analysis": [
-                  "主句主干为 The last time ... was in 1973，系动词 was 将时间与年份对应。",
-                  "the town faced a threat this existential 是修饰 The last time 的定语从句，省略关系副词 when。",
-                  "逗号后 when 引导时间状语从句，交代当时工厂所有者曾威胁关闭纸厂。",
-                  "this existential 强调威胁关乎小镇存续，随后用历史事件解释当前困境并非首次发生。",
-                  "可借鉴 The last time X happened was in Y, when ... 回溯先例并补充背景。"
-                ],
-                "translation": "上一次小镇面临如此关乎存亡的威胁是在 1973 年，当时纸厂的美国业主曾威胁要关闭工厂。"
-              }
-            ]
-          },
-          {
-            "title": "India's opposition set to hold mega rally seeking election chief's resignation",
-            "source": "BBC",
-            "published": "2026-11-01",
-            "url": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "社会与政治 / 选民名册争议、抗议与制度信任",
-            "summary": "BBC 报道印度国大党及反对派联盟计划在德里举行大型集会，要求首席选举专员辞职并推动选举改革。争议焦点是选民名册修订：选举委员会称此举旨在删除已故或迁居者，反对派则担心合资格选民被移除、执政党因此获益，相关指控遭到否认。报道补充媒体调查、此前抗议、学生团体参与和警方设定的集会条件，并呈现商户对节庆期间抗议活动的不同看法。文章通过各方说法和现场安排，展示选举程序、公众表达和商业活动之间的张力。",
-            "reason": [
-              "选举程序、公众参与与制度信任是社会政治类阅读常见议题，也能联系公民权利。",
-              "文章先交代集会诉求，再说明名册修订争议，随后呈现官方回应、调查报道、抗议和商业影响。",
-              "可练习区分事实与指控、比较不同主体立场，并判断段落如何补充争议背景。",
-              "revision、eligible、allege、disenfranchise 等词适用于选举制度和公共治理主题。",
-              "写作可借鉴“界定程序—呈现争议双方—补充社会影响—指出制度信任问题”的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "opposition",
-                "phonetic": "/ˌɑːpəˈzɪʃən/",
-                "part": "n.",
-                "translation": "反对派；反对力量"
-              },
-              {
-                "word": "rally",
-                "phonetic": "/ˈræli/",
-                "part": "n.",
-                "translation": "集会；群众大会"
-              },
-              {
-                "word": "resignation",
-                "phonetic": "/ˌrezɪɡˈneɪʃən/",
-                "part": "n.",
-                "translation": "辞职；辞呈"
-              },
-              {
-                "word": "electoral",
-                "phonetic": "/ɪˈlektərəl/",
-                "part": "adj.",
-                "translation": "选举的"
-              },
-              {
-                "word": "revision",
-                "phonetic": "/rɪˈvɪʒən/",
-                "part": "n.",
-                "translation": "修订；修改"
-              },
-              {
-                "word": "draft roll",
-                "phonetic": "/dræft roʊl/",
-                "part": "n. phr.",
-                "translation": "选民名册草案"
-              },
-              {
-                "word": "purge",
-                "phonetic": "/pɜːrdʒ/",
-                "part": "v.",
-                "translation": "清除；清理"
-              },
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合资格的"
-              },
-              {
-                "word": "allege",
-                "phonetic": "/əˈledʒ/",
-                "part": "v.",
-                "translation": "声称；指称"
-              },
-              {
-                "word": "disenfranchise",
-                "phonetic": "/ˌdɪsɪnˈfræntʃaɪz/",
-                "part": "v.",
-                "translation": "剥夺……的选举权"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The rally comes amid growing criticism of a voter-list revision exercise that has removed 130 million names from the draft rolls across India.",
-                "analysis": [
-                  "主句主干为 The rally comes amid criticism，说明集会发生在批评声渐增之际。",
-                  "growing 修饰 criticism；of a voter-list revision exercise 说明批评对象。",
-                  "that 引导定语从句修饰 exercise，具体交代该名册修订已从草案中移除大量名字。",
-                  "amid 表示背景并置，报道先呈现制度争议，再引出集会诉求。",
-                  "可借鉴 X comes amid growing criticism of Y 表达某事件发生时的争议背景。"
-                ],
-                "translation": "这场集会是在针对选民名册修订行动的批评声不断增大的背景下举行的；该行动已从印度各地的名册草案中移除 1.3 亿个名字。"
-              },
-              {
-                "original": "Both the BJP and the ECI have denied the allegations.",
-                "analysis": [
-                  "主语由 Both A and B 构成，谓语 have denied 与复数主语一致。",
-                  "the allegations 是 deny 的宾语，指代前文反对派提出的相关指控。",
-                  "现在完成时说明否认这一回应与当前争议相关，而非只限于过去某个时点。",
-                  "短句在争议报道中提供对立一方回应，提醒读者区分指控与已确认事实。",
-                  "可借鉴 Both A and B have denied the allegations 简洁转述多方共同否认。"
-                ],
-                "translation": "印度人民党和印度选举委员会都否认了这些指控。"
-              },
-              {
-                "original": "The Election Commission said differences of opinion were normal in any institution and did not affect its functioning.",
-                "analysis": [
-                  "主句为 The Election Commission said，后接省略 that 的宾语从句。",
-                  "宾语从句内 differences of opinion 作主语，were normal 与 did not affect 并列说明官方回应。",
-                  "in any institution 限定“意见不同”的适用范围；its 指代前面的 Election Commission。",
-                  "该句呈现机构的自我解释，与前文反对派质疑形成对照。",
-                  "可借鉴 X said ... were normal and did not affect ... 转述机构对争议的回应。"
-                ],
-                "translation": "选举委员会称，任何机构中出现意见分歧都很正常，也不会影响其运作。"
               }
             ]
           }
