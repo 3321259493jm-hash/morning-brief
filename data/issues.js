@@ -1,6 +1,345 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-09T10:36:25+08:00",
+  "updatedAt": "2026-11-10T12:37:06+08:00",
   "issues": [
+    {
+      "date": "2026-11-10",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Claude Fable 5.2 发布及其进入 Copilot、Google Research 的多语言互动工具；另核查学生开发权益、免费算力、模型 API 与开放模型。",
+        "updates": [
+          {
+            "event": "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2",
+            "summary": "Anthropic 发布 Fable 5.2 和 Mythos 5.2，称新版本在编码、推理与视觉等方面改进，输出速度最高较前代快 30%，并公布 API 输入每百万 token 8 美元、输出 40 美元的价格。Fable 与 Mythos 基于同一模型，但 Fable 配有网络安全和生物学安全防护。",
+            "howTo": "在 Claude Code 的模型选择界面查找 Claude Fable 5.2，给它一个范围明确的课程代码或资料整理任务；逐项检查其方案和结果，再运行测试或对照原始文献。",
+            "impact": "适合试做跨文件代码修改、复杂推理或资料分析；完成时间和输出质量仍需人工核验，模型不应替代课程资料与测试。",
+            "free": "官方列出的 API 价格为每百万输入 token 8 美元、输出 40 美元；可选快速模式为 16/80 美元。官方未说明地区、Claude 应用账户计划及具体免费额度或配额。",
+            "category": "生成式 AI / 编程与研究",
+            "source": {
+              "name": "Anthropic 官方产品公告",
+              "published": "2026-11-09",
+              "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+            }
+          },
+          {
+            "event": "Claude Fable 5.2 进入 GitHub Copilot",
+            "summary": "GitHub 宣布 Claude Fable 5.2 已在 Copilot 中正式可用，可用于大型代码库的复杂多步骤编程任务。该模型默认需要数据保留以运行 Anthropic 安全分类器；特定符合条件的企业客户可申请零数据保留访问。",
+            "howTo": "在 VS Code 或 Copilot CLI 打开模型选择器并选择 Claude Fable 5.2；Copilot Business/Enterprise 组织需由管理员先在 Copilot 设置中启用该策略。用课程仓库中的小任务试跑并审阅所有改动。",
+            "impact": "使用 Copilot 的项目组可以尝试把复杂任务拆解后交由模型辅助完成；使用前应确认组织的数据保留要求，并人工审查生成的代码。",
+            "free": "仅 Copilot Pro+、Max、Business 和 Enterprise 计划可用，且按供应商标价进行用量计费；Business/Enterprise 需管理员启用，逐步开放。默认保留提示与输出；零数据保留仅面向符合条件的企业客户。免费计划、地区及个人配额官方未说明。",
+            "category": "编程助手 / GitHub Copilot",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-09",
+              "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/"
+            }
+          },
+          {
+            "event": "Google Research 推出 Language Explorer 多语言互动网站",
+            "summary": "Google Research 发布 Language Explorer 在线平台，以可视化和数据呈现全球语言多样性；页面展示语言、人口、国家或地区与文字系统等信息，底层数据包括 Google Research 的 LinguaMeta 开源数据集。它是语言探索工具，不是对话模型。",
+            "howTo": "打开 Google Research Language Explorer，浏览世界概览、语言、人口、国家或地区及文字系统视图；选一个课程主题涉及的语言或地区，比较页面数据并记录来源，再用于课堂展示或研究选题。",
+            "impact": "可用于语言学、教育或跨文化课程的选题探索，帮助学生把语言分布与地区、人口和文字系统联系起来；页面数据适合作为发现线索，引用前应回查相关资料。",
+            "free": "官方提供可直接打开的互动网页；公告没有说明价格、账户要求、地区限制或使用配额，相关信息官方未说明。",
+            "category": "多语言研究 / 互动工具",
+            "source": {
+              "name": "Google Research 官方博客",
+              "published": "2026-11-09",
+              "url": "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Student Developer Pack：验证学生身份可领开发权益",
+            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro，列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储；Pack 还提供合作伙伴工具权益。",
+            "howTo": "打开 GitHub Education 学生页面并申请验证，按要求提交学校邮箱和/或带日期的官方在读证明；通过后查看 Student Developer Pack 中当前可领取的合作权益。",
+            "impact": "可用私有仓库协作课程代码，在 Codespaces 中开展云端开发，并用 Actions 自动运行项目检查；提交前核对实际额度。",
+            "free": "需年满 13 岁并就读于授予学位或文凭的课程；验证材料为学校邮箱和/或官方在读证明。页面列出上述月度额度，但未说明地区范围和申请截止日期；合作权益依各伙伴条款而定。",
+            "category": "学生权益 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方学生权益页",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Google Colab：免费使用托管 Jupyter 与部分 GPU/TPU 算力",
+            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
+            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看 Runtime 的硬件选项，重要文件保存到 Drive 或下载笔记本。",
+            "impact": "可练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，而不必先配置本地环境。",
+            "free": "官方确认免费使用，但资源不保证且不无限，使用限制会变化；免费托管运行时还受活动限制。具体配额、地区与账号申请条件官方未说明。",
+            "category": "免费算力 / 学习环境",
+            "source": {
+              "name": "Google Colab 官方常见问题",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Gemini Developer API：特定模型提供免费层级",
+            "summary": "Google AI Studio 官方价格页列出 Gemini API Free 层级，包含对部分模型的有限访问、免费输入与输出 token，以及 AI Studio 使用权限；免费层内容会用于改进 Google 产品。",
+            "howTo": "登录 Google AI Studio，在官方价格页确认某个模型标有 Free 后选择它，尝试处理不含个人或保密内容的课程文本；先核对该模型的速率限制和数据使用说明。",
+            "impact": "可用于小规模练习提示设计、文本处理或课程原型，不必先承诺付费；敏感笔记和未发表研究数据不应提交到免费层。",
+            "free": "仅价格页列出的特定模型提供免费层，模型访问和速率有限；官方说明免费层内容会用于改进产品。不同模型的具体额度需查对应价格表；地区、账户资格及统一配额官方未说明。",
+            "category": "免费 API / 模型试用",
+            "source": {
+              "name": "Google AI for Developers 官方价格表",
+              "published": "官方未说明",
+              "url": "https://aistudio.google.com/docs/pricing"
+            }
+          },
+          {
+            "event": "Gemini Notebook（原 NotebookLM）：免费浏览器使用",
+            "summary": "Google 帮助页说明可用 Gmail 账号免费注册 Gemini Notebook；免费方案每位用户最多 100 个笔记本，每个笔记本最多 50 个来源（笔记来源另计）。",
+            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建笔记本并添加课程讲义或公开文章；围绕来源提问后回到原文核对回答和出处。",
+            "impact": "适合按课程或论文主题整理阅读材料、生成复习问题；来源数量有上限，且模型生成内容仍应对照原始资料。",
+            "free": "可免费注册；浏览器服务仅在官方列出的支持国家和地区向达到当地同意年龄的用户提供。免费版上限为 100 个笔记本/用户、50 个来源/笔记本；地区清单和年龄规则以官方页面为准。",
+            "category": "免费学习工具 / 资料整理",
+            "source": {
+              "name": "Google Gemini Notebook 官方帮助页",
+              "published": "官方未说明",
+              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "Qwen3-Embedding-0.6B：Apache-2.0 许可的多语言嵌入模型",
+            "summary": "Qwen 官方模型卡提供可下载的 0.6B 文本嵌入模型，标注支持 100 多种语言、32K 上下文，模型仓库采用 Apache-2.0 许可。它用于文本检索、分类和聚类，不是对话模型。",
+            "howTo": "打开 Qwen 官方模型卡，按示例安装 Sentence Transformers 并加载 `Qwen/Qwen3-Embedding-0.6B`；将课程笔记和查询句编码后比较相似度，找出相关段落并回读原文。",
+            "impact": "可制作小型课程资料语义检索实验，或比较中英文笔记的关联；相似度仅表示文本相关性，不代表事实核验。",
+            "free": "权重可从官方模型仓库下载，许可证为 Apache-2.0；无需申请访问许可。硬件要求、运行成本、地区和账号限制官方未说明。",
+            "category": "开放模型 / 文本检索",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "California voters defeat billionaire tax proposal that divided Democrats",
+            "source": "NPR",
+            "published": "2026-11-09",
+            "url": "https://www.npr.org/2026/11/09/g-s1-151625/california-billionaire-tax-referendum",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "经济与社会 / 财富税、医疗筹资与党内分歧",
+            "summary": "报道首先交代加州选民否决一项一次性向亿万富翁征收 5% 财富税的提案。支持者称该税可能筹得 1,000 亿美元用于医疗，认为联邦削减医疗项目后州内富人应补足资金；反对者则警告富人迁出会损害税收与经济。文章随后呈现提案如何造成民主党内部的分歧：州党和部分政治人物支持，州长及州长候选人反对，教师工会也质疑拨给学校的比例。报道还以竞选资金差距、科技企业家参与反对运动及配套选票提案说明利益集团的影响，最后回到选举结果，呈现公共服务筹资与财富流动担忧之间的政策冲突。",
+            "reason": [
+              "财富税、医疗筹资与公共服务分配是经济政策和社会公平类阅读常见主题，可练习识别政策目标与潜在代价。",
+              "文章先报投票结果，再交代提案内容与双方论点，继而呈现党内分歧、工会立场和竞选资源，层层补充背景。",
+              "适合考查支持者与反对者观点归属、细节定位、因果主张以及 But 等转折标记的作用。",
+              "可学习 proposal、proponent、revenue、oppose、ballot 等政策与选举词汇，并注意 could raise 表示预测而非已实现收入。",
+              "写作可借鉴“政策目的—支持理由—反对风险—政治背景—结果”的平衡论述框架，避免把倡议方估算写成实际效果。"
+            ],
+            "vocabulary": [
+              {
+                "word": "proposal",
+                "phonetic": "/prəˈpoʊzəl/",
+                "part": "n.",
+                "translation": "提议；方案"
+              },
+              {
+                "word": "one-time",
+                "phonetic": "/ˌwʌn ˈtaɪm/",
+                "part": "adj.",
+                "translation": "一次性的"
+              },
+              {
+                "word": "wealth",
+                "phonetic": "/welθ/",
+                "part": "n.",
+                "translation": "财富；资产"
+              },
+              {
+                "word": "proponent",
+                "phonetic": "/prəˈpoʊnənt/",
+                "part": "n.",
+                "translation": "倡议者；支持者"
+              },
+              {
+                "word": "revenue",
+                "phonetic": "/ˈrevənuː/",
+                "part": "n.",
+                "translation": "收入；财政收入"
+              },
+              {
+                "word": "oppose",
+                "phonetic": "/əˈpoʊz/",
+                "part": "v.",
+                "translation": "反对"
+              },
+              {
+                "word": "divide",
+                "phonetic": "/dɪˈvaɪd/",
+                "part": "v.",
+                "translation": "使产生分歧"
+              },
+              {
+                "word": "surge",
+                "phonetic": "/sɜːrdʒ/",
+                "part": "n.",
+                "translation": "激增；涌现"
+              },
+              {
+                "word": "ballot",
+                "phonetic": "/ˈbælət/",
+                "part": "n.",
+                "translation": "选票；投票"
+              },
+              {
+                "word": "set aside",
+                "phonetic": "/set əˈsaɪd/",
+                "part": "phr.v.",
+                "translation": "留出；拨出"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The novel proposal would have charged billionaires a one-time 5% tax on most of their overall wealth, including their ownership in companies.",
+                "analysis": [
+                  "主干是 The proposal would have charged billionaires a tax，说明提案拟向亿万富翁征税。",
+                  "would have charged 表示对未获通过方案的假设性描述，不是已经征收的事实。",
+                  "a one-time 5% tax 交代税率和一次性特征，on most of their overall wealth 补充计税对象。",
+                  "including 引出补充范围，说明财富还包括公司持股；可用 including 引入具体例证。"
+                ],
+                "translation": "这项新提案原本会对亿万富翁的大部分总财富征收一次性 5% 的税，其中包括他们持有的公司股权。"
+              },
+              {
+                "original": "Proponents said the tax could raise $100 billion for healthcare.",
+                "analysis": [
+                  "主句主干是 Proponents said，交代这是支持者提出的说法。",
+                  "the tax could raise $100 billion 是 said 后的宾语从句，that 被省略。",
+                  "could 表示可能性或预期，不能据此认定税款已筹得。",
+                  "for healthcare 表示资金用途，可借此结构概括政策收入的指定去向。"
+                ],
+                "translation": "支持者称，这项税收可能为医疗筹集 1,000 亿美元。"
+              },
+              {
+                "original": "But the measure divided Democrats in a state where they heavily outnumber Republicans.",
+                "analysis": [
+                  "But 承接前文并引出转折，提示读者从支持理由转向政治分歧。",
+                  "主句主干是 the measure divided Democrats，measure 指前文税收提案。",
+                  "where 引导定语从句修饰 a state，补充加州两党人数背景。",
+                  "heavily outnumber 表示人数上显著多于；该句说明党派优势并未消除内部意见分化。"
+                ],
+                "translation": "然而，这项提案在民主党人数远超共和党的加州引发了党内分歧。"
+              }
+            ]
+          },
+          {
+            "title": "Auckland hit by swarms of bees after milder than usual New Zealand winter",
+            "source": "The Guardian",
+            "published": "2026-11-09",
+            "url": "https://www.theguardian.com/environment/2026/nov/10/bee-swarm-nz-auckland-swarming-bees-new-zealand",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "环境与社会 / 暖冬、蜂群行为与城市生态",
+            "summary": "报道从奥克兰蜂群数量异常增加切入：当地养蜂协会称每天接到约五至十通移除蜂群的求助电话，较往年每天不到五通增加，累计已有至少百次出勤。文章先解释春夏分蜂是蜂群扩张后寻找新巢或食物的自然过程，再引述养蜂人和生态学者讨论较温和的冬季、春季提前可能使蜂群更早、更大规模分出；新西兰 2026 年冬季为有记录以来第三暖。报道也指出未管理的蜂群若携带瓦螨可能威胁其他蜂类，同时蜂群较早增殖也可能是今年蜂群状况良好的信号。结尾保留不同影响并存的判断，没有把单一暖冬简单定为已证实的唯一原因。",
+            "reason": [
+              "文章连接气候异常、城市生活和传粉昆虫，适合讨论气候变化如何通过生态过程影响社区。",
+              "结构由奥克兰求助电话增加的新闻切入，解释分蜂机制，再引述养蜂人和生态学者，最后呈现风险与潜在积极信号。",
+              "适合考查数据比较、专家观点归属、因果推断以及末段如何修正前文的单一负面印象。",
+              "可学习 swarm、colony、brood、exacerbate、unpredictable 等生态与变化类表达，并辨析 might 表示推测而非确定因果。",
+              "写作可借鉴“可观察现象—机制解释—风险—另一种可能结果”的结构，论证环境议题时保留证据边界。"
+            ],
+            "vocabulary": [
+              {
+                "word": "swarming",
+                "phonetic": "/ˈswɔːrmɪŋ/",
+                "part": "n.",
+                "translation": "蜂群分蜂；蜂群聚集"
+              },
+              {
+                "word": "exacerbate",
+                "phonetic": "/ɪɡˈzæsərbeɪt/",
+                "part": "v.",
+                "translation": "加剧；使恶化"
+              },
+              {
+                "word": "field (calls)",
+                "phonetic": "/fiːld/",
+                "part": "v.",
+                "translation": "接听；处理（来电或问题）"
+              },
+              {
+                "word": "call-out",
+                "phonetic": "/ˈkɔːl aʊt/",
+                "part": "n.",
+                "translation": "出勤处理；上门服务"
+              },
+              {
+                "word": "colony",
+                "phonetic": "/ˈkɑːləni/",
+                "part": "n.",
+                "translation": "蜂群；群体"
+              },
+              {
+                "word": "hive",
+                "phonetic": "/haɪv/",
+                "part": "n.",
+                "translation": "蜂巢；蜂箱"
+              },
+              {
+                "word": "brood",
+                "phonetic": "/bruːd/",
+                "part": "n.",
+                "translation": "（蜂的）幼虫群"
+              },
+              {
+                "word": "placid",
+                "phonetic": "/ˈplæsɪd/",
+                "part": "adj.",
+                "translation": "温顺的；平静的"
+              },
+              {
+                "word": "unmanaged",
+                "phonetic": "/ˌʌnˈmænɪdʒd/",
+                "part": "adj.",
+                "translation": "未受管理的"
+              },
+              {
+                "word": "unpredictable",
+                "phonetic": "/ˌʌnprɪˈdɪktəbəl/",
+                "part": "adj.",
+                "translation": "难以预测的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "In past years, it was under five a day.",
+                "analysis": [
+                  "主干是 it was under five，it 指前文协会每天接到的求助电话数。",
+                  "In past years 是时间状语，限定比较的历史时期。",
+                  "under five a day 是省略表达，完整含义为每天少于五通电话。",
+                  "该句与紧邻的 five to 10 calls a day 构成数量对比，可用于概括趋势证据。"
+                ],
+                "translation": "往年每天不到五通。"
+              },
+              {
+                "original": "New Zealand experienced its third warmest winter on record in 2026, according to Earth Sciences NZ.",
+                "analysis": [
+                  "主干是 New Zealand experienced its third warmest winter，说明当年冬季的记录排名。",
+                  "on record 限定比较范围，意为“有记录以来”。",
+                  "in 2026 是时间状语；third warmest 表示第三暖，而非最暖。",
+                  "according to Earth Sciences NZ 标明信息来源，写作时可用该结构区分报道依据和作者判断。"
+                ],
+                "translation": "据新西兰地球科学机构称，新西兰 2026 年的冬季为有记录以来第三暖。"
+              },
+              {
+                "original": "Milder temperatures over winter might mean a colony develops a larger brood of eggs, larvae and pupae.",
+                "analysis": [
+                  "主干为 Milder temperatures might mean...，提出一种可能的解释。",
+                  "over winter 作时间状语，说明温度变化发生在冬季期间。",
+                  "a colony develops a larger brood 是 mean 的宾语从句，that 被省略。",
+                  "might mean 降低因果断言强度；eggs, larvae and pupae 列举 brood 的组成阶段。"
+                ],
+                "translation": "冬季气温较暖可能意味着蜂群会繁育出更多卵、幼虫和蛹。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-09",
       "status": "ready",
@@ -2052,333 +2391,7 @@ window.BRIEFING_DATA = {
           }
         ]
       }
-    },
-    {
-      "date": "2026-11-03",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 GitHub Copilot Fusion 多模型编排转为正式可用、Microsoft Copilot 扩充财务技能，以及 Google 在轨 TPU 首次回传 AI 生成内容；免费资源新增 Copilot Free 与 EmbeddingGemma 2 开放权重。",
-        "updates": [
-          {
-            "event": "GitHub Copilot Fusion 正式可用，自动编排多模型完成编码任务",
-            "summary": "GitHub Copilot Fusion 从预览转为正式可用。用户不必为每一步手动挑选模型：Fusion 会按任务路由和协调模型，并提供 Standard、High、Max 三档工作强度；流程可能由单模型完成，也可能采用级联或交叉评审。",
-            "howTo": "更新 VS Code、GitHub Copilot 应用、Copilot CLI 或 JetBrains 客户端，在模型选择器中选 Copilot Fusion，再选 Standard、High 或 Max；用课程代码的解释、测试草拟或调试任务试用，并逐项检查结果。",
-            "impact": "小组项目可比较不同工作强度对解释代码、生成测试和检查方案的帮助；自动路由减少逐步换模型的操作，但代码改动仍需人工运行和审阅。",
-            "free": "官方称 Fusion 可用于所有 Copilot 计划；实际使用按它调用的各模型标准费率计费，付费 Copilot 计划在有限时期内可享模型费用 30% 折扣。公告未说明折扣截止日、地区范围或统一免费调用额度。",
-            "category": "GitHub Copilot / 多模型编排与编码",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-10-28",
-              "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
-            }
-          },
-          {
-            "event": "Microsoft Copilot 增加 25 项以上财务技能与合作伙伴插件",
-            "summary": "Microsoft 扩展 Copilot 的财务工作流，新增 25 项以上财务技能和合作伙伴插件，覆盖会计、资本市场等场景。示例包括对账、起草会计分录、分析财务表现，以及把多份表格和材料整理成供团队复核的工作包。",
-            "howTo": "在可用的 Copilot in Excel 中查找 Finance skills；若具备 Cowork 权限，可从插件目录选择 Finance 或 Capital Markets 插件。用课程练习数据试做对账或预算差异说明，并逐项核实输入、公式和来源。",
-            "impact": "会计、金融和商科学生可观察 AI 如何把表格分析扩展为多步骤工作流，并练习复核会计分录、差异解释和投资分析；这类输出应作为草稿而非财务结论。",
-            "free": "官方称 Copilot in Excel 财务技能和 Cowork 的 Finance、Capital Markets 插件已正式可用；部分会计能力仍在 Frontier。文章未说明免费价格、学生资格、地区或调用配额；第三方插件可能另需授权、订阅、认证或管理员启用。",
-            "category": "Microsoft Copilot / 财务技能与插件",
-            "source": {
-              "name": "Microsoft Copilot Blog",
-              "published": "2026-10-29",
-              "url": "https://www.microsoft.com/en-us/copilot/blog/2026/10/29/microsoft-copilot-for-finance-purpose-built-for-the-way-finance-teams-work/"
-            }
-          },
-          {
-            "event": "Google Project Suncatcher 卫星首次回传由在轨 TPU 生成的 AI 内容",
-            "summary": "Google 报告其 Project Suncatcher 原型卫星在轨运行 Google TPU，并首次从搭载的 Gemma 4 开放模型返回 AI 生成的诗句。团队称这是验证芯片能够在轨执行机器学习任务的早期节点，接下来将测试热应力和辐射影响。",
-            "howTo": "阅读 Google Research 的试验记录，梳理提示词上行、卫星生成和地面站接收的步骤；课堂报告可把这次原型测试与公告所述后续热应力、辐射测试分开讨论。公告未提供可供公众操作的卫星试用界面。",
-            "impact": "计算机、航天或能源课程可据此讨论在轨 AI 计算的验证目标与工程约束，同时区分一次原型演示与可规模化的数据中心服务。",
-            "free": "这是研究原型的进展公告，不是面向用户的公开产品说明；公告未说明公众试用入口、价格、账号资格、地区或配额。",
-            "category": "Google Research / 空间 AI 计算研究",
-            "source": {
-              "name": "Google Research 官方博客",
-              "published": "2026-10-30",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 当前计划页列出每月 0 美元的 Copilot Free，无需信用卡，并支持常见 IDE、GitHub 和命令行；免费计划还包含有限的聊天与 Agent 使用。",
-            "howTo": "打开 GitHub Copilot 官方计划页选择 Free，按页面指引在 VS Code 等支持的 IDE 启用 Copilot；可用代码补全起草课程项目函数，再通过测试确认行为。",
-            "impact": "适合学生在小型课程项目中试用行内补全、理解代码上下文或快速写出测试草稿；聊天和 Agent 用量有限，超出后应改为手动完成或查阅文档。",
-            "free": "官方标价 0 美元且无需信用卡；每月 2,000 次代码补全，聊天与 Agent 使用受限但具体额度未说明。地区可用范围和账号资格的额外条件官方未说明。",
-            "category": "免费编程助手 / IDE 与代码补全",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "EmbeddingGemma 2 开放权重：在本地检索文本、图像、音频和视频",
-            "summary": "Google DeepMind 的 EmbeddingGemma 2 模型卡提供 740M 参数的多模态嵌入模型，可将文本、代码、图像、视频和音频映射到共同向量空间，用于语义检索、相似度、分类和聚类。",
-            "howTo": "从官方 Hugging Face 模型卡下载 google/embeddinggemma-2，按 Quick Start 安装 sentence-transformers 与 transformers；先给课程笔记和查询文本编码，再用相似度结果测试语义检索。",
-            "impact": "可用于建立课程阅读材料或本地多媒体资料的语义搜索原型；它生成向量而不是回答问题，适合练习检索系统、分类和多模态信息组织。",
-            "free": "模型权重可从官方 Hugging Face 页面获取，标注 Apache 2.0 许可；本地运行仍需自备硬件。托管推理额度、地区和账号要求官方未说明。",
-            "category": "开放模型权重 / 多模态语义检索",
-            "source": {
-              "name": "Google DeepMind 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/google/embeddinggemma-2"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面和手机上的免费学习助手",
-            "summary": "Claude 官方定价页列出每月 0 美元的 Free 方案，可在网页、桌面和移动端聊天，并提供网页搜索、文件创建、代码运行、记忆、连接工具和 Artifacts；Claude Design、Slides、Docs 也列在 Free 方案中。",
-            "howTo": "打开 Claude 网页或官方应用，选择 Free；可让它把一段非敏感课程材料整理成提纲、制作词汇卡或生成可编辑文档，再回到原文核对。",
-            "impact": "适合做低频阅读整理、概念解释和可编辑学习材料；使用量会因模型、对话长度和文件大小变化，不适合作为稳定的大批量接口。",
-            "free": "官方标价每月 0 美元；使用量每 5 小时及每周受限，实际额度取决于模型、对话长度和文件大小。具体消息数、地区和额外账号条件官方未说明。",
-            "category": "免费网页与应用 / 学习助手",
-            "source": {
-              "name": "Claude 官方定价页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "通过 GitHub Education 验证可领取学生开发者权益",
-            "summary": "GitHub 为符合条件并通过验证的学生提供免费 GitHub Pro，包括无限仓库、每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并可访问 Student Developer Pack。",
-            "howTo": "在 GitHub Education 学生页面点击加入并提交学校邮箱和/或带日期的官方在读证明；通过验证后启用 Pro，再查看 Student Developer Pack 当前列出的工具权益。",
-            "impact": "适合私有课程项目、云端开发环境和自动化测试；小组可用仓库协作、Codespaces 与 Actions 完成代码实践，而无需先搭建本地环境。",
-            "free": "官方资格为年满 13 岁且就读于可授予学位或文凭的课程，需学校邮箱和/或官方在读证明；页面列出每月 3,000 Actions 分钟、180 Codespaces 小时、2 GB Packages 与 20 GB Codespaces 存储。地区和权益期限官方未说明。",
-            "category": "学生教育权益 / 编程与云端开发",
-            "source": {
-              "name": "GitHub Education 官方学生页面",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Gemini API 免费层：部分模型提供免费输入与输出 token",
-            "summary": "Google Gemini API 定价页仍列有免费层，可在 Google AI Studio 使用部分模型，输入和输出 token 免费；免费层内容会用于改进 Google 产品。",
-            "howTo": "在 Google AI Studio 查看当前可选模型，并先到官方定价页确认模型标注为 Free；用少量非敏感课程文本建立摘要或词汇卡原型，避免提交隐私材料。",
-            "impact": "适合练习模型 API 调用、快速验证学习工具想法或做低流量课程原型；免费模型范围有限，生产用途需重新核对速率和收费。",
-            "free": "官方列出部分模型的免费输入与输出 token，但没有在此页给出统一固定配额；免费层内容可用于改进 Google 产品。具体模型额度、地区、账号资格和期限官方未说明。",
-            "category": "免费 API 层 / 学习原型开发",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Could virtual reality speed up learning?",
-            "source": "NPR",
-            "published": "2026-11-02",
-            "url": "https://www.npr.org/2026/11/02/nx-s1-6023397/body-learning-virtual-reality-vr",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "教育与科技 / 身体动作、虚拟现实与学习",
-            "summary": "NPR 报道佛罗里达大西洋大学与布朗大学的一项实验，研究身体动作是否影响复杂学习。参与者戴上 VR 设备，在游戏中把不同条纹图案分到不同类别；一组按按钮作答，另一组做更大的动作，例如挥动类似光剑的控制器或击打反应装置。研究者报告，大幅动作组学得快得多，受访研究者称速度约为按钮组的 4 至 6 倍。文章由具体实验设计推进到结果，再回到动作可能如何帮助某些学习任务；它呈现的是实验室中的特定分类任务，不足以单独证明所有课堂学习都会因此加速。",
-            "reason": [
-              "教育技术与学习机制是常见考试主题，文章把 VR 体验与认知学习问题联系起来。",
-              "论述按研究问题、实验分组、结果和解释展开，适合练习辨认研究设计与作者结论。",
-              "可考查实验组对照、数字结果的指代，以及标题中 speed up 的范围是否被正文支持。",
-              "categorize、participant、outcome 等词可迁移到教育、心理与实验研究语境。",
-              "写作可借鉴“提出问题—说明实验—报告发现—限定适用范围”的证据型结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "categorize",
-                "phonetic": "/ˈkætəɡəraɪz/",
-                "part": "v.",
-                "translation": "分类；归类"
-              },
-              {
-                "word": "stripe",
-                "phonetic": "/straɪp/",
-                "part": "n.",
-                "translation": "条纹"
-              },
-              {
-                "word": "participant",
-                "phonetic": "/pɑːrˈtɪsɪpənt/",
-                "part": "n.",
-                "translation": "参与者"
-              },
-              {
-                "word": "motion",
-                "phonetic": "/ˈmoʊʃən/",
-                "part": "n.",
-                "translation": "动作；运动"
-              },
-              {
-                "word": "dramatically",
-                "phonetic": "/drəˈmætɪkli/",
-                "part": "adv.",
-                "translation": "显著地；大幅度地"
-              },
-              {
-                "word": "complex",
-                "phonetic": "/kəmˈpleks/",
-                "part": "adj.",
-                "translation": "复杂的"
-              },
-              {
-                "word": "outcome",
-                "phonetic": "/ˈaʊtkʌm/",
-                "part": "n.",
-                "translation": "结果；后果"
-              },
-              {
-                "word": "response box",
-                "phonetic": "/rɪˈspɑːns bɑːks/",
-                "part": "n.",
-                "translation": "反应装置；应答盒"
-              },
-              {
-                "word": "laboratory",
-                "phonetic": "/ˈlæbrətɔːri/",
-                "part": "n.",
-                "translation": "实验室"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "movement dramatically helps with certain kinds of complex learning.",
-                "analysis": [
-                  "该片段位于 found that 引出的宾语从句中；从句主干是 movement helps with learning。",
-                  "movement 作主语，helps 为谓语，dramatically 修饰 helps，说明程度而非动作方式。",
-                  "certain kinds of 与 complex 分别限定 learning 的范围和性质，避免把发现泛化为所有学习。",
-                  "helps with 是“有助于……”的搭配，可用来谨慎表达某因素对特定任务的作用。"
-                ],
-                "translation": "动作显著有助于某些类型的复杂学习。"
-              },
-              {
-                "original": "participants learned how to categorize the stripes into one bucket or another.",
-                "analysis": [
-                  "主干为 participants learned；原句前面的 As the game went along 提供游戏进行时的时间背景。",
-                  "how to categorize 是 learned 的内容，属于“疑问词 + 不定式”结构。",
-                  "the stripes 是 categorize 的对象，into one bucket or another 表示分入两个备选类别。",
-                  "“learn how to do”可说明学习者掌握的操作步骤，适合描述实验任务或技能训练。"
-                ],
-                "translation": "参与者学会了如何把这些条纹分到其中一个类别。"
-              },
-              {
-                "original": "The difference in learning outcomes was dramatic.",
-                "analysis": [
-                  "句子主干为 The difference was dramatic，主语中心词是 difference，系动词 was 连接表语 dramatic。",
-                  "in learning outcomes 是介词短语，限定差异体现在哪个方面。",
-                  "这句承接按钮组与大幅动作组的对照，dramatic 是对实验结果的概括性评价。",
-                  "“The difference in X was Y”可用于先概括比较结果，再在后文补充具体数据。"
-                ],
-                "translation": "学习结果之间的差异非常显著。"
-              }
-            ]
-          },
-          {
-            "title": "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
-            "source": "The Guardian",
-            "published": "2026-10-30",
-            "url": "https://www.theguardian.com/business/2026/oct/30/sinkholes-scarred-land-scapegoats-illegal-gold-mining-johannesburg",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境与经济 / 南非非法采矿、沉陷与社区生计",
-            "summary": "文章以约翰内斯堡西部一处动物救助组织缺水的经历开篇：淘金者使用场地水源处理矿砂，突显废弃矿区问题如何影响日常生活。报道接着对照警方公布的逮捕行动与研究者对非法采矿规模、黄金走私的估计，并回溯金价、失业、贫困、腐败及矿企未封闭旧矿井等驱动因素。随后文章把焦点转向地面塌陷，指出地方政客常把责任归于非法矿工，但受访专家强调，正式工业采矿长期抽排地下水也是重要背景，个别非法采掘可能导致局部结构坍塌，却不能被当成所有沉陷的起因。文章还呈现矿区暴力、被剥削劳工和依赖采矿收入的社区，结尾借一位社区组织者的经历说明地下采矿如何成为缺少合法就业机会者的生计选择。",
-            "reason": [
-              "环境治理与就业、生计交织，是适合研究生英语阅读的复合型社会议题。",
-              "文章从个体缺水场景引出规模数据，再交代历史背景、地质解释和社区经济，层层扩展论点。",
-              "可练习主旨题、事实与估算的辨析、专家引语作用题，以及识别“替罪羊”这一反向论证。",
-              "scourge、derelict、porous、scapegoat 等词汇可迁移到城市治理、环境风险和责任归因话题。",
-              "写作可借鉴用具体案例引入结构性成因，并呈现相互竞争解释、避免单因归责的论证方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "soar",
-                "phonetic": "/sɔːr/",
-                "part": "v.",
-                "translation": "急剧上升；飙升"
-              },
-              {
-                "word": "abandoned",
-                "phonetic": "/əˈbændənd/",
-                "part": "adj.",
-                "translation": "废弃的；被遗弃的"
-              },
-              {
-                "word": "illegal mining",
-                "phonetic": "/ɪˈliːɡəl ˈmaɪnɪŋ/",
-                "part": "n.",
-                "translation": "非法采矿"
-              },
-              {
-                "word": "derelict",
-                "phonetic": "/ˈderəlɪkt/",
-                "part": "adj.",
-                "translation": "荒废的；被弃置的"
-              },
-              {
-                "word": "rehabilitate",
-                "phonetic": "/ˌriːhəˈbɪlɪteɪt/",
-                "part": "v.",
-                "translation": "修复；恢复"
-              },
-              {
-                "word": "porous",
-                "phonetic": "/ˈpɔːrəs/",
-                "part": "adj.",
-                "translation": "多孔的；可渗透的"
-              },
-              {
-                "word": "culprit",
-                "phonetic": "/ˈkʌlprɪt/",
-                "part": "n.",
-                "translation": "肇事者；根源"
-              },
-              {
-                "word": "scapegoat",
-                "phonetic": "/ˈskeɪpɡoʊt/",
-                "part": "v.",
-                "translation": "把……当替罪羊；归咎于"
-              },
-              {
-                "word": "punctuated by",
-                "phonetic": "/ˈpʌŋktʃueɪtɪd baɪ/",
-                "part": "phr.",
-                "translation": "遍布着；点缀着"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "so too has activity in the abandoned mine shafts that mark the area.",
-                "analysis": [
-                  "这是原句 “as the price of gold has soared, so too has activity...” 的后半部分，意为活动也随之增加。",
-                  "so too 引出附加的相似变化；助动词 has 置于主语 activity 之前，构成倒装。",
-                  "in the abandoned mine shafts 是地点状语，that mark the area 是修饰 mine shafts 的定语从句。",
-                  "“as X changes, so too does Y”可用来并列描述两个相伴变化，语气比简单重复更凝练。"
-                ],
-                "translation": "废弃矿井中的采矿活动也随之增加。"
-              },
-              {
-                "original": "researchers put the number of illegal miners in the tens of thousands.",
-                "analysis": [
-                  "主干是 researchers put the number；主语明确标出估算来源，而不是把数字写成官方普查结果。",
-                  "put 在此表示估计，the number of illegal miners 是估算对象，in the tens of thousands 补充数量范围。",
-                  "原句用 However 与前文警方行动形成对照，强调执法数字与研究者对总体规模的判断不同。",
-                  "“put the number at/in...”可用于转述某一机构或研究者的估算，写作时应保留归属来源。"
-                ],
-                "translation": "研究者估计非法矿工人数达数万人。"
-              },
-              {
-                "original": "experts say zama zamas are being scapegoated.",
-                "analysis": [
-                  "原句以 when it comes to sinkholes 限定讨论范围，再由主句 experts say 引出专家判断。",
-                  "say 后接省略 that 的宾语从句；从句主语 zama zamas 与谓语 are being scapegoated 构成被动关系。",
-                  "现在进行时被动语态突出持续发生的归责过程，而不是断言所有非法采矿都无害。",
-                  "“专家认为某群体正被归咎”形成对前文政治指责的反论点，是文章辨析因果归责的关键。"
-                ],
-                "translation": "专家认为，非法矿工正在被当作替罪羊。"
-              }
-            ]
-          }
-        ]
-      }
     }
+
   ]
 };
