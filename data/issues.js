@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-11T10:43:51+08:00",
+  "updatedAt": "2026-11-12T11:46:35+08:00",
   "issues": [
+    {
+      "date": "2026-11-12",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 AlphaGenome 2 的细胞类型预测、Gemini Robotics 2.5 的实体操作能力和 Gemini 4 Carbon 接入 Copilot；另复核学生可用的免费开发与学习工具。",
+        "updates": [
+          {
+            "event": "AlphaGenome 2：按细胞类型预测 DNA 变异影响",
+            "summary": "Google DeepMind 于 11 月 11 日发布 AlphaGenome 2，可在输入 DNA 序列的同时指定组织、细胞类型或细胞状态，预测变异对基因调控的影响。模型使用逾 1 亿个单细胞数据训练，并可对新单细胞实验中的细胞状态作预测；非商业研究可通过 API 使用，商业研究为私测。",
+            "howTo": "打开官方 AlphaGenome API 文档，申请 API key，并按 Getting started 与 Colab 教程提交 DNA 序列和目标细胞条件；先用公开研究数据验证预测，再对照实验资料解释结果。",
+            "impact": "生物学、遗传学和计算生物学学生可用它筛选候选变异、比较不同细胞环境下的调控预测，帮助确定后续实验方向；预测不能替代实验验证或临床诊断。",
+            "free": "官方公告说明非商业研究可通过 AlphaGenome API 使用，商业研究处于私测；官方 API 文档（https://www.alphagenomedocs.com/）说明非商业用途免费，但查询速率随需求变化。公告未说明固定配额、支持地区或账户资格。",
+            "category": "科研 AI / 基因组学",
+            "source": {
+              "name": "Google DeepMind 官方博客",
+              "published": "2026-11-11",
+              "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+            }
+          },
+          {
+            "event": "Gemini Robotics 2.5 面向机器人推出新一代视觉-语言-动作模型",
+            "summary": "Google DeepMind 于 11 月 10 日发布 Gemini Robotics 2.5，改进机器人执行灵巧操作、适应任务和安全避障的能力，目标是让机器人应对更复杂的真实环境。目前正向机器人合作伙伴开放。",
+            "howTo": "访问官方 Gemini Robotics 2.5 页面提交 early-access waitlist；若所在实验室获准接入，再按官方合作方流程配置支持的机器人并设计受控操作测试。公开页面目前仅提供申请入口。",
+            "impact": "机器人与具身智能方向的学生可关注模型如何把视觉和语言指令转成实体动作，并在实验室中评估精细操作和安全避障；普通用户目前不能直接把它当作通用聊天模型试用。",
+            "free": "官方公告称模型正向机器人合作伙伴逐步开放，产品页提供 early-access waitlist；是否获批、价格、账号要求、地区和调用配额均未说明，提交申请不代表已获得访问权限。",
+            "category": "具身智能 / 机器人模型",
+            "source": {
+              "name": "Google DeepMind 官方博客",
+              "published": "2026-11-10",
+              "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+            }
+          },
+          {
+            "event": "Gemini 4 Carbon 加入 GitHub Copilot",
+            "summary": "GitHub 于 11 月 10 日宣布 Gemini 4 Carbon 在 Copilot 中正式可用，面向复杂编程、agent 工作流和推理任务。用户可在支持的 IDE、Copilot CLI、GitHub 网站及移动端的模型选择器中切换；功能分批开放。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI 或其他受支持客户端打开模型选择器并选择 Gemini 4 Carbon；若尚未出现，稍后再检查。Business 与 Enterprise 组织用户还需管理员在 Copilot 设置中允许该模型。",
+            "impact": "适合已有相应 Copilot 计划的学生开发者尝试多文件调试、复杂代码任务和代码审查；先让模型说明改动方案，再用测试和人工检查验证结果。",
+            "free": "仅列于 Copilot Pro+、Max、Business 和 Enterprise 计划，且分阶段开放；使用按模型提供方的标价计费。免费计划不在公告列出的可用计划中；具体 token 价格见 GitHub 官方计费表，公告未说明地区限制或固定用量配额。",
+            "category": "编程助手 / 模型接入",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-10",
+              "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Student Developer Pack：验证学生身份领取开发权益",
+            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro；官方页面列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并提供免费的合作伙伴开发权益。",
+            "howTo": "进入 GitHub Education 学生权益页申请验证，按提示提交学校邮箱和/或带日期的官方在读证明；通过后在 Student Developer Pack 查看当前可领取的合作权益。",
+            "impact": "可用私有仓库协作课程代码，在 Codespaces 中远程开发，并以 Actions 自动运行项目检查；申请前确认课程和证明材料符合资格。",
+            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需学校邮箱和/或官方在读证明。官方列出上述月度额度；地区范围和申请截止日期官方未说明，合作伙伴权益依各自条款。",
+            "category": "学生权益 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方学生权益页",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 与部分 GPU/TPU 算力",
+            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方 FAQ 确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
+            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看运行时硬件选项，重要文件保存到 Drive 或下载笔记本。",
+            "impact": "适合练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，无需先配置本地开发环境。",
+            "free": "官方确认免费使用；资源不保证且不无限，使用限制会变化，托管运行时还可能提前终止。具体配额、地区与账号条件官方未说明。",
+            "category": "免费算力 / 学习环境",
+            "source": {
+              "name": "Google Colab 官方常见问题",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Gemini Notebook：Gmail 用户可免费使用基础版",
+            "summary": "Google 帮助页说明可用 Gmail 账号免费注册 Gemini Notebook。基础版每位用户最多 100 个笔记本；每个笔记本最多 50 个非笔记类来源，另有每本 500 个 notes 来源的额度。",
+            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建课程笔记本并添加讲义或公开文章；围绕已添加来源提问，再回到原文核对回答和出处。",
+            "impact": "可按课程或论文主题整理材料、生成复习问题；来源数量有上限，模型生成内容仍应对照原始资料。",
+            "free": "可免费注册；浏览器版仅向官方支持国家/地区中达到当地同意年龄的用户提供。基础版为每用户 100 个笔记本、每本 50 个非笔记来源及 500 个 notes 来源；地区与年龄要求以官方页面为准。",
+            "category": "免费学习工具 / 资料整理",
+            "source": {
+              "name": "Google Gemini Notebook 官方帮助页",
+              "published": "官方未说明",
+              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "Claude Free：网页、桌面和手机端的免费使用层",
+            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和手机端聊天、搜索网页、创建文件和运行代码；使用量受每 5 小时及每周限制。",
+            "howTo": "打开 Claude 官方免费方案入口并登录，在网页、桌面或手机端选择课程文本任务；可试用网页搜索、文件创建或代码运行，接近限制时缩小任务并保存结果。",
+            "impact": "适合低成本练习文本概括、网页资料初筛、生成学习文件或运行小段代码；复杂任务和较长对话可能更快触及用量限制。",
+            "free": "官方标价每月 0 美元，免费方案每 5 小时及每周均有使用限制，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
+            "category": "免费 AI 应用 / 学习助手",
+            "source": {
+              "name": "Claude 官方价格页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：免费代码补全和有限聊天",
+            "summary": "GitHub 官方计划页列出每月 2,000 次代码补全、Copilot CLI 和有限的聊天及 agent 使用；Free 计划无需信用卡。",
+            "howTo": "进入 GitHub Copilot Free 计划并启用相应 IDE 扩展，在 VS Code 等支持环境中使用代码补全；需要聊天或 agent 功能时按官方页面的 Free 计划说明查看可用额度。",
+            "impact": "可用于课程代码的行内补全、解释和小规模调试练习；应检查生成代码并运行测试，聊天与 agent 使用量受限。",
+            "free": "官方标价 0 美元、无需信用卡，每月 2,000 次代码补全；聊天和 agent 使用受限但未公布固定额度。账户条件和地区范围官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "DeepL 免费版：文本翻译与小型文件翻译额度",
+            "summary": "DeepL 官方计划对比页列出免费版本每月最多翻译 50,000 个字符，并支持单个不超过 5 MB 的文件翻译，可用于阅读外文资料和核对译文。",
+            "howTo": "打开 DeepL 翻译器，将课程段落粘贴到文本框，或上传不超过 5 MB 的文件；对专业术语和关键句回看原文，不直接把机器译文当作定稿。",
+            "impact": "适合快速理解外文文献、对照中英术语和初步翻译短材料；免费版额度有限，译文仍需人工校对。",
+            "free": "官方计划页列出免费版每月 50,000 字符和每月 1 次文件翻译、单文件最多 5 MB；免费版本的地区、账号要求官方未说明。",
+            "category": "免费翻译工具",
+            "source": {
+              "name": "DeepL 官方计划页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Some under-25s should get less benefits, Milburn review to say",
+            "source": "BBC",
+            "published": "2026-11-12",
+            "url": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "社会与福利政策 / 青年就业与保障",
+            "summary": "BBC 报道一项尚未公布的政府委托评估：Alan Milburn 预计建议 25 岁以下人士不再领取 Universal Credit 的健康津贴或个人独立支付，改为基本津贴，部分人可另领疾病相关费用补贴；重度残障且无法工作者则可能获得较高的新福利。评估也预计建议增加就业支持资金、岗位补贴和个人顾问，但部分申领者可能因此少领福利，且若落实，财政节省或需近十年才出现。报道以就业扶持与短期收入保障的取舍呈现争议；这些仍是预计建议，并非已生效政策。",
+            "reason": [
+              "青年福利、就业支持与公共财政是社会政策类阅读常见主题，文章同时呈现受益者保障和就业激励两种目标。",
+              "行文先交代评估建议，再说明不同群体待遇、就业措施和可能的财政影响，最后引入争议与政府表态。",
+              "适合考查提案与现行政策的区别、不同青年群体将受何影响，以及作者如何用条件句和引语呈现尚未定案的变化。",
+              "可积累 entitlement、claimant、allowance、subsidy 等福利政策词汇，并注意 could、would、expected 等表示不确定性的用法。",
+              "写作可借鉴“政策目标—群体影响—短长期权衡—执行争议”的结构，论证时也应区分建议、预测和已通过的法律。"
+            ],
+            "vocabulary": [
+              {
+                "word": "overhaul",
+                "phonetic": "/ˌoʊvərˈhɔːl/",
+                "part": "n.",
+                "translation": "全面改革"
+              },
+              {
+                "word": "entitled",
+                "phonetic": "/ɪnˈtaɪtld/",
+                "part": "adj.",
+                "translation": "有资格获得的；应得的"
+              },
+              {
+                "word": "claimant",
+                "phonetic": "/ˈkleɪmənt/",
+                "part": "n.",
+                "translation": "申领者；索赔人"
+              },
+              {
+                "word": "allowance",
+                "phonetic": "/əˈlaʊəns/",
+                "part": "n.",
+                "translation": "津贴；补助"
+              },
+              {
+                "word": "placement",
+                "phonetic": "/ˈpleɪsmənt/",
+                "part": "n.",
+                "translation": "安置；实习岗位"
+              },
+              {
+                "word": "subsidy",
+                "phonetic": "/ˈsʌbsədi/",
+                "part": "n.",
+                "translation": "补贴；津贴"
+              },
+              {
+                "word": "legislation",
+                "phonetic": "/ˌledʒɪsˈleɪʃn/",
+                "part": "n.",
+                "translation": "立法；法律"
+              },
+              {
+                "word": "controversial",
+                "phonetic": "/ˌkɑːntrəˈvɜːrʃl/",
+                "part": "adj.",
+                "translation": "有争议的"
+              },
+              {
+                "word": "monetary",
+                "phonetic": "/ˈmɑːnəteri/",
+                "part": "adj.",
+                "translation": "货币的；财政的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Some could be eligible for a new “additional cost allowance” to cover day-to-day costs related to their conditions.",
+                "analysis": [
+                  "主干是 Some could be eligible for an allowance，说明部分人可能符合领取津贴的资格。",
+                  "to cover day-to-day costs 是目的不定式，说明该津贴拟用于覆盖什么支出。",
+                  "related to their conditions 是过去分词短语，后置修饰 costs，限定费用与健康状况有关。",
+                  "could 表示可能性而非确定承诺；Some 也与上下文中的 many claimants 形成范围对照。",
+                  "可借鉴 be eligible for ... to cover ... 表达资格和政策用途。"
+                ],
+                "translation": "部分人可能有资格领取一项新的“额外费用津贴”，以支付与自身健康状况有关的日常开销。"
+              },
+              {
+                "original": "But many claimants would receive less under the plans, which the government is set to take forward into legislation in the new year.",
+                "analysis": [
+                  "主句核心是 many claimants would receive less，指出计划下不少申领者会少领福利。",
+                  "But 连接前后对照，转折出就业支持方案可能带来的收入损失。",
+                  "which 引导非限制性定语从句，补充说明政府拟如何推进这些计划。",
+                  "is set to 表示预期或安排；would 和 in the new year 共同体现未来性，不能误读为已经立法。",
+                  "可借鉴 But ... , which ... 先提出限制，再补充政策进程。"
+                ],
+                "translation": "但在这些计划下，许多申领者将会少领福利；政府准备在新年将计划推进为立法。"
+              },
+              {
+                "original": "If Milburn's recommendations were approved, it could take almost a decade for the British state to see monetary savings.",
+                "analysis": [
+                  "句子以 If 引导条件从句，主句为 it could take almost a decade。",
+                  "were approved 是虚拟语气的被动形式，表示建议尚未获批。",
+                  "for the British state to see monetary savings 说明时间所对应的结果，即国家实现财政节省。",
+                  "almost a decade 强调政策成本收益出现得较晚，支撑文章对短期与长期效果的权衡。",
+                  "可借鉴 If ... were approved, it could take ... for ... to ... 表达有条件的政策预测。"
+                ],
+                "translation": "如果 Milburn 的建议获批，英国政府可能要近十年才能看到财政节省。"
+              }
+            ]
+          },
+          {
+            "title": "Historic US ocean liner sinks near Florida to become world’s largest artificial reef",
+            "source": "The Guardian",
+            "published": "2026-11-11",
+            "url": "https://www.theguardian.com/us-news/2026/nov/11/ss-united-states-sinks-florida-reef",
+            "readingTime": "约 3 分钟（估算）",
+            "topic": "文化与环境 / 历史船舶改造为人工鱼礁",
+            "summary": "文章报道远洋客轮 SS United States 在佛罗里达州 Destin 外海沉没，转作人工鱼礁。该船 1952 年下水，处女航创下横渡大西洋速度纪录，服役 17 年后于 1969 年退役；长期停泊费和维护成本使保存计划难以为继。Okaloosa County 于 2024 年以 100 万美元购入，并把船体改造后沉放于墨西哥湾海床。当地官员预计礁体将成为鱼类栖息地和潜水目的地，文章由此串联船只的历史价值、保存成本与新的旅游和生态用途。",
+            "reason": [
+              "文章把交通史、文化遗产保护和人工鱼礁结合起来，适合练习分析旧设施再利用所涉及的成本与公共价值。",
+              "叙述从沉船事件回溯其航海纪录和退役经历，再解释保存困难、地方政府购入与改造计划，结构清晰。",
+              "适合考查时间线、数字信息、转折关系，以及 distinguish 已发生的沉船事实与官员对生态效益的预期。",
+              "可学习 ocean liner、maiden voyage、dockage fee、habitat 等历史和环境词汇，以及过去分词短语的压缩表达。",
+              "写作可借鉴“历史背景—现实困境—替代方案—预期收益”的案例论证框架，并对预测性结论保留限定。"
+            ],
+            "vocabulary": [
+              {
+                "word": "ocean liner",
+                "phonetic": "/ˈoʊʃən ˌlaɪnər/",
+                "part": "n. phr.",
+                "translation": "远洋客轮"
+              },
+              {
+                "word": "maiden voyage",
+                "phonetic": "/ˌmeɪdn ˈvɔɪɪdʒ/",
+                "part": "n. phr.",
+                "translation": "处女航；首次航行"
+              },
+              {
+                "word": "transatlantic",
+                "phonetic": "/ˌtrænzətˈlæntɪk/",
+                "part": "adj.",
+                "translation": "横渡大西洋的"
+              },
+              {
+                "word": "deployed",
+                "phonetic": "/dɪˈplɔɪd/",
+                "part": "v.",
+                "translation": "被投放；被部署"
+              },
+              {
+                "word": "hull",
+                "phonetic": "/hʌl/",
+                "part": "n.",
+                "translation": "船体；船壳"
+              },
+              {
+                "word": "dockage fee",
+                "phonetic": "/ˈdɑːkɪdʒ fiː/",
+                "part": "n. phr.",
+                "translation": "停泊费"
+              },
+              {
+                "word": "conservancy",
+                "phonetic": "/kənˈsɜːrvənsi/",
+                "part": "n.",
+                "translation": "保护协会；资源保护组织"
+              },
+              {
+                "word": "artificial reef",
+                "phonetic": "/ˌɑːrtɪˈfɪʃl riːf/",
+                "part": "n. phr.",
+                "translation": "人工鱼礁"
+              },
+              {
+                "word": "habitat",
+                "phonetic": "/ˈhæbɪtæt/",
+                "part": "n.",
+                "translation": "栖息地"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The ship carried thousands of passengers across the Atlantic over 17 years of operation before being retired in 1969.",
+                "analysis": [
+                  "主干是 The ship carried thousands of passengers，说明客轮运送了大量乘客。",
+                  "across the Atlantic 补充航行范围，over 17 years of operation 交代持续时间。",
+                  "before being retired 是被动动名词短语，表示服役结束后退役的时间顺序。",
+                  "句子用时间和数量把抽象的航运历史具体化，服务于后文的历史价值说明。",
+                  "可借鉴 over ... years ... before being ... 压缩叙述经历与后续变化。"
+                ],
+                "translation": "这艘船在 17 年运营期间横渡大西洋，载运了数千名乘客，之后于 1969 年退役。"
+              },
+              {
+                "original": "For years, the SS United States remained docked in Philadelphia, as various owners attempted to save and restore it.",
+                "analysis": [
+                  "主句核心是 the SS United States remained docked，说明船只长期停泊在费城。",
+                  "For years 前置强调持续时间，地点状语 in Philadelphia 补充停泊地点。",
+                  "as 引导从句，说明船只停泊期间不同所有者一直试图挽救并修复它。",
+                  "主从句构成“长期停泊—持续尝试”的背景关系，为后文转作人工鱼礁的方案作铺垫。",
+                  "可借鉴 remain ... as ... attempted to ... 描写困境与并行努力。"
+                ],
+                "translation": "多年来，SS United States 一直停泊在费城，不同所有者曾试图挽救并修复它。"
+              },
+              {
+                "original": "On Wednesday, the ship was deployed at approximately 2.40pm ET, with the sinking process beginning shortly before 5pm.",
+                "analysis": [
+                  "主干是 the ship was deployed，采用一般过去时被动语态突出船只被投放这一事件。",
+                  "On Wednesday 和 at approximately 2.40pm ET 分别标明日期和大致时间。",
+                  "with the sinking process beginning ... 是 with 复合结构，补充后续沉船过程的开始时间。",
+                  "approximately 与 shortly before 都是限定表达，表明文中时间为近似值而非精确测量。",
+                  "可借鉴 with + 名词 + -ing 补充同时或随后发生的背景事件。"
+                ],
+                "translation": "周三约美国东部时间下午 2 点 40 分，船只被投放入海；沉船过程在下午 5 点前不久开始。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-11",
       "status": "ready",
@@ -2035,358 +2381,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 remains at ..., a record high 用简洁结构报告统计值及其历史位置。"
                 ],
                 "translation": "所有首次购房者的年龄中位数仍为 40 岁，创下历史新高。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-05",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Copilot 接入 Xcode 原生编程助手、Google Classroom 的 Guided Learning 全球开放，以及 Google 分享健康 AI 评估框架；免费资源涵盖 Gemini、Notebook、Copilot、DeepL、Mistral 与 Gemma。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 接入 Xcode 内置编程助手",
-            "summary": "GitHub Copilot 已在 Xcode 内置 coding assistant 中进入公开预览。学生可在原生 Xcode 工作流中直接使用 Copilot；现有 Copilot for Xcode 扩展仍是另一种独立方式。",
-            "howTo": "从 Apple Developer Downloads 安装 Xcode 27.3 beta，在 Xcode > Settings > Intelligence 设置 GitHub Copilot；需运行 macOS Tahoe 26.6 或更新版本。",
-            "impact": "修读 Swift 或 iOS 开发课程的学生可在 Xcode 中直接提问、理解项目代码并迭代编程任务，不必切换到另一个编辑器；仍应检查生成代码与测试结果。",
-            "free": "GitHub 公告称所有 Copilot 计划均支持此集成；需 Xcode 27.3 beta 和 macOS Tahoe 26.6 或更新版本。公告未说明地区、独立调用额度或额外费用。",
-            "category": "GitHub Copilot / Xcode 编程助手",
-            "source": {
-              "name": "GitHub 官方 Changelog",
-              "published": "2026-11-04",
-              "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant/"
-            }
-          },
-          {
-            "event": "Google Classroom 全球开放教师布置的 Guided Learning",
-            "summary": "Google 将 Guided Learning 能力带入 Google Classroom：教师可布置基于课程材料的逐步辅导活动，学生按步骤理解概念，教师可查看学生互动与进度洞察。",
-            "howTo": "教师在 Google Classroom 中基于课程材料布置 Guided Learning 活动；学生打开老师分配的活动，围绕指定课程内容逐步提问和练习。",
-            "impact": "学生遇到统计或物理难题时，可以先沿着提示拆解概念、练习解题，而不是只抄最终答案；教师也能据进度洞察发现需要额外帮助的知识点。",
-            "free": "Google 称教师主导的 Guided Learning 已在 Google Classroom 全球开放；K-12 学生账号的相关 AI 产品默认关闭，须由学校管理员主动启用。产品价格、个人账号资格及使用配额官方未说明。",
-            "category": "Google Classroom / 引导式学习",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-03",
-              "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
-            }
-          },
-          {
-            "event": "Google 分享健康 AI 安全与实用性评估框架",
-            "summary": "Google 发布一套评估健康 AI 使用场景的方法，分别考察准确性、安全性和实用性，并结合封闭式问题基准、自动评分器与专家人工审查；公司称会继续用该框架评估自家模型，并公开方法以促进透明度。",
-            "howTo": "打开 Google 公告中的白皮书，按准确性、安全性、实用性三项整理检查表；做健康主题课程作业时，用它逐项核对 AI 回答与可信医疗来源，不把模型回答当作诊断。",
-            "impact": "学生在写健康传播或数字医疗作业时，可把“答案是否正确”与“是否安全、是否有用”分开评估，识别单一基准分数无法覆盖的高风险场景。",
-            "free": "Google 公告提供公开白皮书链接；这是一套评估方法，不是面向个人的健康 AI 应用。账户、地区、使用配额及实际部署成本官方未说明。",
-            "category": "Google AI / 健康与安全评估",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-04",
-              "url": "https://blog.google/innovation-and-ai/technology/health/evaluating-health-ai-at-scale/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Gemini 免费方案：学习、研究与图像功能",
-            "summary": "Google 官方订阅页标明 Free 方案为每月 0 美元，需 Google 账号；包括 Gemini app、Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gems 和 Gemini Notebook。",
-            "howTo": "用 Google 账号打开 Gemini，上传或整理课程资料并要求生成提纲；可用 Deep Research 收集线索，再回到原始来源核实，或用 Canvas 修改学习计划。",
-            "impact": "可用于建立复习提纲、比较资料观点、生成展示稿草图；把 AI 输出当作起点，重要事实逐条核验。",
-            "free": "官方标价每月 0 美元，需 Google 账号。免费方案的具体使用次数、使用地区及期限官方未说明。",
-            "category": "长期免费 AI 服务 / 学习与研究",
-            "source": {
-              "name": "Google Gemini 官方订阅页",
-              "published": "官方未说明",
-              "url": "https://gemini.google/subscriptions/"
-            }
-          },
-          {
-            "event": "Gemini Notebook Standard：免费整理课程资料",
-            "summary": "Google 帮助页说明，Gemini Notebook Standard 可免费注册；标准版列出每位用户最多 100 个 notebook、每个 notebook 最多 50 个来源，并提供自定义聊天与分析功能。",
-            "howTo": "用 Gmail 账号登录 Gemini Notebook，新建一个课程主题 notebook，添加讲义或网页来源，再用自定义聊天围绕这些材料提问并检查回答依据。",
-            "impact": "适合把分散的阅读材料集中成复习空间，按来源追问概念、生成学习问题；来源数量有上限，引用仍需回到原文确认。",
-            "free": "标准版免费注册需 Gmail 账号；官方列出每用户 100 个 notebook、每个 notebook 50 个来源，限额可能变化。浏览器版仅面向达到当地法定同意年龄且位于支持地区的用户；具体地区见官方支持列表。",
-            "category": "长期免费 AI 服务 / 资料阅读与研究",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出每月 0 美元的 Free 方案，包含每月 2,000 次代码补全以及有限的聊天和 agent 使用；无需信用卡。",
-            "howTo": "登录 GitHub，在支持的编辑器安装 Copilot 后选择 Free 方案；用它解释课程代码或补全小段函数，并在提交前运行测试、逐行审阅改动。",
-            "impact": "适合编程入门、课程作业中的代码解释和小规模补全；留意聊天与 agent 有限额，避免把生成代码未经核验直接交付。",
-            "free": "官方标价每月 0 美元；每月 2,000 次代码补全，聊天与 agent 使用受限，无需信用卡。地区资格与聊天/agent 的具体额度官方未说明。",
-            "category": "长期免费 AI 服务 / 编程辅助",
-            "source": {
-              "name": "GitHub Copilot 官方计划与价格页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "DeepL 免费版：每月 50,000 字符文本翻译",
-            "summary": "DeepL 官方计划对比页列出 Free version 每用户每月 50,000 个文本翻译字符，文件翻译大小上限为 5 MB。",
-            "howTo": "打开 DeepL Translator 粘贴待译的论文摘要或课程材料；长文档可按官方支持的文件格式上传，并在提交前核对术语、专名和原文语气。",
-            "impact": "可辅助阅读外文论文摘要、课程说明和短文；文本额度按月计算，免费文件翻译有大小限制。",
-            "free": "官方免费版每用户每月 50,000 个文本翻译字符，文件翻译上限 5 MB；账户要求、地区资格和续用期限官方未说明。",
-            "category": "长期免费工具 / 翻译",
-            "source": {
-              "name": "DeepL 官方计划对比页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "Google Gemma 3 4B：可下载的多模态开放权重",
-            "summary": "Google 的 Gemma 3 模型卡提供 4B 指令微调模型开放权重，支持文本与图像输入、文本输出；模型卡列出 128K 上下文和 140 多种语言，并要求遵循 Gemma Terms of Use。",
-            "howTo": "按模型卡安装 Transformers，加载 `google/gemma-3-4b-it` 和对应 processor；先用短文本或公开图片测试问答、摘要，再按 Gemma 使用条款处理输入数据。",
-            "impact": "有合适设备的学生可在本地实验多模态问答或资料摘要，减少把课程素材上传到在线聊天服务的需要；结果仍要核验，模型性能取决于设备与设置。",
-            "free": "模型卡提供开放权重并链接 Gemma Terms of Use；未说明下载注册要求、地区限制或配额。运行所需设备/算力及其费用取决于使用者环境。",
-            "category": "开放权重模型 / 本地多模态学习",
-            "source": {
-              "name": "Google Gemma 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/google/gemma-3-4b-it"
-            }
-          },
-          {
-            "event": "Mistral Free：网页与移动端 AI 学习助手",
-            "summary": "Mistral 官方价格页列出 Free 方案，包含有限消息、网页搜索和 coding sessions，以及基础图像生成与编辑。",
-            "howTo": "打开 Mistral 的网页或移动端服务，使用 Free 方案尝试检索课程主题、整理问题或制作基础图像草稿；对照原始网页检查搜索答案。",
-            "impact": "可作为与其他助手交叉核对资料的免费入口，也能做简单图像草稿；消息、搜索和编码会话均有限制。",
-            "free": "官方价格页列有 Free 方案，但未说明具体消息/搜索/编码额度、账号条件、支持地区或到期日。",
-            "category": "长期免费 AI 服务 / 搜索与创作",
-            "source": {
-              "name": "Mistral 官方价格页",
-              "published": "官方未说明",
-              "url": "https://mistral.ai/pricing/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Are schools a great equalizer? They help kids catch up, but wealthier children still pull ahead",
-            "source": "The Conversation",
-            "published": "2026-11-04",
-            "url": "https://theconversation.com/are-schools-a-great-equalizer-they-help-kids-catch-up-but-wealthier-children-still-pull-ahead-295330",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "教育与社会 / 学校如何缩小儿童资源差距",
-            "summary": "文章重新审视公共教育是否真能成为“机会均等器”。作者先回顾研究对家庭背景与学校作用的争论，再说明团队如何整合 10 项全国代表性调查、追踪 77 类教育与成长投入。数据显示，学校入学后最贫困与最富裕儿童的总投入差距从 24% 缩至 12%，学校为弱势学生提供更多辅导和特殊教育；但这些资源多用于追赶，而富裕家庭仍能通过经验更丰富的教师、音乐、体育和课外活动帮助孩子继续领先。文章最后指出，公共教育确实缩小了部分投入差距，却不能单靠校内补差消除入学前形成的不平等；政策还须关注住房、托育及有助于学生发展的资源。",
-            "reason": [
-              "主题关联教育公平、家庭背景与公共服务，适合讨论社会流动和机会平等的考研英语议题。",
-              "论证先梳理研究争议，再交代数据口径和发现，继而区分“补差”与“领先资源”，最后提出政策含义，结构清楚。",
-              "可练习概括研究结论、解释百分比变化、区分投入差距与成绩差距，以及判断让步转折的论证功能。",
-              "equalizer、achievement gap、enrichment 等词可用于教育政策和社会不平等主题写作。",
-              "写作可借鉴“承认制度的改善作用—指出作用边界—提出配套支持”的平衡论证方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "equalizer",
-                "phonetic": "/ˈiːkwəlaɪzə(r)/",
-                "part": "n.",
-                "translation": "均衡因素；缩小差距的力量"
-              },
-              {
-                "word": "achievement gap",
-                "phonetic": "/əˈtʃiːvmənt ɡæp/",
-                "part": "n. phr.",
-                "translation": "学业成绩差距"
-              },
-              {
-                "word": "representative",
-                "phonetic": "/ˌreprɪˈzentətɪv/",
-                "part": "adj.",
-                "translation": "有代表性的"
-              },
-              {
-                "word": "investment",
-                "phonetic": "/ɪnˈvestmənt/",
-                "part": "n.",
-                "translation": "投入；投资"
-              },
-              {
-                "word": "transition",
-                "phonetic": "/trænˈzɪʃn/",
-                "part": "n./v.",
-                "translation": "过渡；转变"
-              },
-              {
-                "word": "catch-up",
-                "phonetic": "/ˈkætʃ ʌp/",
-                "part": "n./adj.",
-                "translation": "补差；追赶"
-              },
-              {
-                "word": "enrichment",
-                "phonetic": "/ɪnˈrɪtʃmənt/",
-                "part": "n.",
-                "translation": "拓展性培养；丰富"
-              },
-              {
-                "word": "starker",
-                "phonetic": "/ˈstɑːrkər/",
-                "part": "adj. 比较级",
-                "translation": "更鲜明的；更悬殊的"
-              },
-              {
-                "word": "extracurricular",
-                "phonetic": "/ˌekstrəkəˈrɪkjələ(r)/",
-                "part": "adj.",
-                "translation": "课外的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "By some measures, schools really are an equalizer for children from different backgrounds – but this finding has its limits.",
-                "analysis": [
-                  "主句核心是 schools are an equalizer，说明学校在某些方面具有均衡作用。",
-                  "句首 By some measures 限定判断范围，避免把结论说成绝对规律。",
-                  "for children from different backgrounds 修饰 equalizer，指出受益对象。",
-                  "破折号后的 but this finding has its limits 是转折并列分句，对前述结论作限制。",
-                  "可借鉴 By some measures, ... – but ... 表达“承认作用，同时说明边界”。"
-                ],
-                "translation": "从某些衡量角度看，学校确实能缩小不同背景儿童之间的差距——但这一发现也有局限。"
-              },
-              {
-                "original": "The gap in total investment between the richest and poorest children is cut in half, from 24% to 12%.",
-                "analysis": [
-                  "主干为 The gap ... is cut，主语是 gap，谓语使用被动语态。",
-                  "in total investment 说明差距衡量的是总投入；between ... children 补充比较双方。",
-                  "in half 表示缩减幅度，from 24% to 12% 用具体数字说明变化。",
-                  "被动表达把焦点放在差距变化上，而非执行缩减的主体。",
-                  "可借鉴 is cut in half, from A to B 简洁报告比例变化。"
-                ],
-                "translation": "最富裕与最贫困儿童之间的总投入差距缩小了一半，从 24% 降至 12%。"
-              },
-              {
-                "original": "But equal spending is not equal opportunity.",
-                "analysis": [
-                  "句子主干是 equal spending is not equal opportunity，结构简短完整。",
-                  "But 承接前文并引出反向限定，提示读者区分“投入相等”和“机会相等”。",
-                  "句中没有从句；equal 分别修饰 spending 与 opportunity，形成平行对照。",
-                  "is not 否定两者等同，逻辑上指出相同投入未必带来相同结果。",
-                  "可借鉴 equal X is not equal Y 作为议论文中澄清概念差异的句式。"
-                ],
-                "translation": "但投入相等并不意味着机会平等。"
-              }
-            ]
-          },
-          {
-            "title": "Swapping from dairy to plant-based milk, cheese and yoghurt ‘could lead to micronutrient deficiencies’",
-            "source": "The Guardian",
-            "published": "2026-11-04",
-            "url": "https://www.theguardian.com/science/2026/nov/04/swapping-dairy-milk-cheese-yoghurt-plant-based-vegan-alternatives-deficiencies-micronutrients-iodine",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "健康与环境 / 植物基替代品的营养强化",
-            "summary": "报道介绍一项针对英国市场植物基奶、酸奶和奶酪的研究，提醒以未强化替代品替换乳制品可能降低碘、钙、核黄素和维生素 B12 摄入。研究团队检查了 146 种非乳奶、76 种酸奶和 67 种奶酪，发现添加碘的比例尤其低，并据此模拟不同替代比例下的摄入变化；模拟显示，替换三分之一乳制品会使碘摄入下降，全部改用非乳替代品时，部分青少年可能摄入不足。报道同时引述营养学者和厂商，指出并非每位转食者都会缺乏营养，整体饮食也重要；可行建议是查看标签、选择有碘强化的产品，而不是把群体建模结果等同于个人诊断。",
-            "reason": [
-              "把饮食选择、公共健康和食品政策连接起来，适合营养、消费决策与健康素养类议题。",
-              "文章先提出研究结论，再说明模拟数据和强化比例，随后补充专家与企业观点，最后给出实际选购建议。",
-              "可练习区分模型预测与个人结果、识别限定语，并概括研究方法、数据和政策含义。",
-              "micronutrient、fortify、prevalence 等词汇可用于讨论营养不足、食品配方和风险。",
-              "写作可借鉴先呈现风险，再纳入反方限定，最后给出可执行建议的健康传播结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "substitute",
-                "phonetic": "/ˈsʌbstɪtjuːt/",
-                "part": "n.",
-                "translation": "替代品"
-              },
-              {
-                "word": "micronutrient",
-                "phonetic": "/ˌmaɪkrəʊˈnjuːtriənt/",
-                "part": "n.",
-                "translation": "微量营养素"
-              },
-              {
-                "word": "fortify",
-                "phonetic": "/ˈfɔːtɪfaɪ/",
-                "part": "v.",
-                "translation": "强化（食品）"
-              },
-              {
-                "word": "deficiency",
-                "phonetic": "/dɪˈfɪʃnsi/",
-                "part": "n.",
-                "translation": "缺乏；不足"
-              },
-              {
-                "word": "trace element",
-                "phonetic": "/ˈtreɪs ˌelɪmənt/",
-                "part": "n. phr.",
-                "translation": "微量元素"
-              },
-              {
-                "word": "prevalence",
-                "phonetic": "/ˈprevələns/",
-                "part": "n.",
-                "translation": "患病率；普遍程度"
-              },
-              {
-                "word": "modelling",
-                "phonetic": "/ˈmɒdəlɪŋ/",
-                "part": "n.",
-                "translation": "建模；模型分析"
-              },
-              {
-                "word": "iodine",
-                "phonetic": "/ˈaɪədiːn/",
-                "part": "n.",
-                "translation": "碘"
-              },
-              {
-                "word": "inadequate",
-                "phonetic": "/ɪnˈædɪkwət/",
-                "part": "adj.",
-                "translation": "不足的"
-              },
-              {
-                "word": "fortification",
-                "phonetic": "/ˌfɔːtɪfɪˈkeɪʃn/",
-                "part": "n.",
-                "translation": "营养强化"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Some companies already fortify their dairy substitutes.",
-                "analysis": [
-                  "主干是 Some companies fortify substitutes，主语、谓语和宾语清楚。",
-                  "Some 限定公司范围，their dairy 修饰 substitutes，说明产品所属类别。",
-                  "already 是时间副词，强调强化措施目前已存在。",
-                  "这是简单陈述句，没有从句；语义上为后文提供已有企业做法的例证。",
-                  "可借鉴 Some companies already ... 介绍行业中已出现的实践。"
-                ],
-                "translation": "一些公司已经对其乳制品替代品进行营养强化。"
-              },
-              {
-                "original": "There is no formal requirement for plant-based milk alternatives to be fortified with micronutrients.",
-                "analysis": [
-                  "句子采用 There is ... 的存在句型，核心信息是 no formal requirement。",
-                  "for plant-based milk alternatives 是 requirement 的补充，指出要求适用的对象。",
-                  "to be fortified 是被动不定式，表示这些替代品被添加微量营养素。",
-                  "with micronutrients 补充 fortify 的内容；句子讨论制度要求，不等于断言所有产品都未强化。",
-                  "可借鉴 there is no formal requirement for X to be done 表达监管空缺。"
-                ],
-                "translation": "目前没有正式规定要求植物基奶类替代品必须强化微量营养素。"
-              },
-              {
-                "original": "The researchers looked at the impact of replacing dairy with plant-based alternatives on the UK market, including 146 non-dairy milks, 76 yoghurts and 67 cheeses.",
-                "analysis": [
-                  "主句核心是 The researchers looked at the impact，说明研究者考察了影响。",
-                  "of replacing dairy with plant-based alternatives 是介词 of 后的动名词短语，具体说明所考察的影响。",
-                  "on the UK market 限定研究范围；including 后列出三类样本及数量。",
-                  "主句陈述研究动作，句末数据清单补充研究材料，形成“方法—样本”的信息递进。",
-                  "可借鉴 look at the impact of doing ... , including ... 交代研究对象与样本。"
-                ],
-                "translation": "研究者考察了英国市场以植物基替代品替换乳制品的影响，样本包括 146 种非乳奶、76 种酸奶和 67 种奶酪。"
               }
             ]
           }
