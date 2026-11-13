@@ -1,6 +1,352 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-12T11:46:35+08:00",
+  "updatedAt": "2026-11-13T11:19:38+08:00",
   "issues": [
+    {
+      "date": "2026-11-13",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Gemini 4 Hydrogen 进入 Gemini 与 Search、Google Flow 新增创作工具，并复核学生可用的免费模型、算力和学习服务。",
+        "updates": [
+          {
+            "event": "Gemini 4 Hydrogen 上线 Gemini 应用、Search 与开发平台",
+            "summary": "Google 于 11 月 12 日发布 Gemini 4 Hydrogen，定位为面向日常编码和 agent 工作流的快速模型，提供四档思考级别。模型开始全球上线至 Gemini 应用、Google Search、AI Studio、Gemini API 等；免费 Gemini 用户通过自动模型选择，在系统判断合适时可用 Hydrogen。",
+            "howTo": "在 Gemini 应用保留自动模型选择并提出需要多步推理的课程或编程问题；也可直接用 Google Search 提问，比较答案中的来源链接。开发者可在 AI Studio 的 Hydrogen 模型页试用，API 调用先查看价格和额度。",
+            "impact": "学生可让它协助拆解编程任务、解释复杂概念、整理长资料或起草学习提纲；用 Search 初筛资料时仍要打开原始链接核对，代码和事实结论也应自行验证。",
+            "free": "Google 公告称全球上线；Gemini 免费用户通过自动模型选择，在系统认为适合时可使用 Hydrogen，并非承诺每次提问都调用该模型。Gemini API 公布标准输入每百万 token 1.50 美元、输出 7.50 美元；Antigravity 和 Sheets 中的 Hydrogen 需 Google AI Pro 或 Ultra。API 免费资格、配额和账号条件未在公告中说明。",
+            "category": "生成式 AI / Gemini 模型",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-12",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+            }
+          },
+          {
+            "event": "Google Search 全球接入 Gemini 4 Hydrogen",
+            "summary": "Google 于 11 月 12 日宣布 Search 开始使用 Gemini 4 Hydrogen。更新强调更能理解多部分、自然表达或有拼写错误的问题，改进并行扩展相关查询与链接发现，并提供更适配问题的图像、结构化答复、比较表和工具；支持的 AI Mode 语言也获得更细致的语言理解。",
+            "howTo": "打开 Google Search，用自然语言提出含多个条件的问题，例如比较两种复习方案并要求列出证据；检查返回的结构化内容，再逐个打开引用链接核实关键结论。",
+            "impact": "适合学生为论文选题找不同角度、比较课程资料或拆分复杂检索问题；结果中的摘要和链接可作为检索起点，不能代替阅读原始材料和引用来源。",
+            "free": "官方称 Hydrogen 已在 Google Search 全球面向所有用户提供；公告没有具体说明费用、账号要求、各地区逐步开放节奏或查询配额，相关限制官方未说明。",
+            "category": "搜索与研究 / AI 搜索",
+            "source": {
+              "name": "Google 官方博客（Search）",
+              "published": "2026-11-12",
+              "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+            }
+          },
+          {
+            "event": "Google Flow 新增 5 款创作者设计的 AI 影像工具",
+            "summary": "Google 于 11 月 12 日为 Flow 发布五款由视觉创作者设计的工具：Character Poster 将故事概念转为海报；Character Arc 展示角色跨年龄变化；Pixel Machine 生成像素、ASCII、CRT 等视觉效果；Lucid Glass 模拟折射与光晕；Pocket Studio 将手机拍摄素材生成多机位效果并提升画面质感。",
+            "howTo": "打开 Google Flow 公告中对应的工具入口，按页面提示尝试 Character Poster、Character Arc、Pixel Machine、Lucid Glass 或 Pocket Studio；生成视觉草案后检查人物连续性和素材使用权。",
+            "impact": "可用于课程短片分镜、角色设定、海报和视频效果的低成本草稿，帮助创意项目快速比较视觉方向；生成内容应标注并核实素材与肖像授权。",
+            "free": "官方页面介绍了五款工具并提供 Flow 入口，但未说明价格、账户和地区资格、分批开放安排或免费生成配额；相关限制官方未说明。",
+            "category": "创意 AI / 影像制作",
+            "source": {
+              "name": "Google 官方博客（Google Labs）",
+              "published": "2026-11-12",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Student Developer Pack：验证学生身份领取开发权益",
+            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro；官方页面列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并提供免费的合作伙伴开发权益。",
+            "howTo": "进入 GitHub Education 学生权益页申请验证，按提示提交学校邮箱和/或带日期的官方在读证明；通过后在 Student Developer Pack 查看当前可领取的合作权益。",
+            "impact": "可用私有仓库协作课程代码，在 Codespaces 中远程开发，并以 Actions 自动运行项目检查；申请前确认课程和证明材料符合资格。",
+            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需学校邮箱和/或官方在读证明。官方列出上述月度额度；地区范围和申请截止日期官方未说明，合作伙伴权益依各自条款。",
+            "category": "学生权益 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方学生权益页",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 与部分 GPU/TPU 算力",
+            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方 FAQ 确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
+            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看运行时硬件选项，重要文件保存到 Drive 或下载笔记本。",
+            "impact": "适合练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，无需先配置本地开发环境。",
+            "free": "官方确认免费使用并提供 GPU/TPU；资源不保证且不无限，使用限制会变化，托管运行时也可能提前终止。具体配额、地区和账号条件官方未说明。",
+            "category": "免费算力 / 学习环境",
+            "source": {
+              "name": "Google Colab 官方常见问题",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Claude Free：网页、桌面和手机端的免费学习助手",
+            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和手机端聊天、搜索网页、创建文件和运行代码；使用量受每 5 小时及每周限制。",
+            "howTo": "打开 Claude 官方免费方案入口并登录，在网页、桌面或手机端尝试概括课程文本、搜索背景资料、创建学习文件或运行小段代码；接近限制时缩小任务并保存结果。",
+            "impact": "适合低成本练习文本概括、网页资料初筛、生成学习文件或运行小段代码；较长对话和复杂任务可能更快触及用量限制。",
+            "free": "官方标价每月 0 美元，免费方案每 5 小时及每周均有使用限制，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
+            "category": "免费 AI 应用 / 学习助手",
+            "source": {
+              "name": "Claude 官方价格页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "DeepL 免费版：文本翻译与小型文件翻译额度",
+            "summary": "DeepL 官方计划对比页列出免费版本每月最多翻译 50,000 个字符，并提供 1 次文件翻译额度，单个文件不超过 5 MB，可用于阅读外文资料和核对译文。",
+            "howTo": "打开 DeepL 翻译器，将课程段落粘贴到文本框，或上传不超过 5 MB 的文件；对专业术语和关键句回看原文，不直接把机器译文当作定稿。",
+            "impact": "适合快速理解外文文献、对照中英术语和初步翻译短材料；免费版额度有限，译文仍需人工校对。",
+            "free": "官方计划页列出免费版每月 50,000 字符、1 次文件翻译及单文件最多 5 MB；文件翻译额度周期、地区和账号要求官方未说明。",
+            "category": "免费翻译工具",
+            "source": {
+              "name": "DeepL 官方计划页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "Gemini 免费用户可自动获得 Gemini 4 Hydrogen",
+            "summary": "Google 官方发布说明称，Gemini 应用免费用户会在自动模型选择判断合适时使用 Gemini 4 Hydrogen；该模型于 11 月 12 日开始全球上线。",
+            "howTo": "打开 Gemini 应用并保留自动模型选择，提出需要多步推理的学习问题；若要确认本次使用的模型，可查看应用模型选择说明。",
+            "impact": "学生可尝试让模型分解复杂概念、按要求整理提纲或起草代码练习，随后用教材、课程资料和测试检查内容。",
+            "free": "官方说明免费用户通过自动模型选择、在系统判断合适时可获得 Hydrogen，并称模型全球上线；未说明账号资格细节、手动选择权限、固定使用配额或各地区开放时间。",
+            "category": "免费 AI 应用 / Gemini",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-12",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+            }
+          },
+          {
+            "event": "OpenAI Whisper：MIT 许可的本地语音识别与转写模型",
+            "summary": "OpenAI 官方 Whisper 仓库将代码和模型权重以 MIT License 发布；模型支持多语言语音识别、语音翻译和语言识别，可下载权重并在本机运行。",
+            "howTo": "按仓库说明安装 Python 依赖和 ffmpeg，再运行 `pip install -U openai-whisper`；用 `whisper lecture.mp3 --model small` 转写课程录音，并人工校对专有名词。",
+            "impact": "适合把访谈、讲座或外语听力转成文字，便于检索和复习；本地运行能减少上传音频的需要，但识别表现会因语言、语速和硬件而异。",
+            "free": "官方仓库说明代码和模型权重均采用 MIT License，可免费取得；运行需要自备兼容设备、存储和本地算力，设备规格、账号与地区限制官方未说明。",
+            "category": "开放模型 / 语音转写",
+            "source": {
+              "name": "OpenAI 官方 GitHub 仓库",
+              "published": "官方未说明",
+              "url": "https://github.com/openai/whisper"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "'Punch in the gut': Homes sales fall to their lowest in 16 years",
+            "source": "NPR",
+            "published": "2026-11-12",
+            "url": "https://www.npr.org/2026/11/12/nx-s1-6038940/punch-in-the-gut-homes-sales-fall-to-their-lowest-in-16-years",
+            "readingTime": "约 3 分钟（估算）",
+            "topic": "经济与商业 / 美国住房市场与利率",
+            "summary": "NPR 报道美国 10 月成屋销售降至年化 375 万套，较上年同期下降 8.8%，创 2010 年以来低位。文章先用房地产市场长期停滞后再度下滑引出问题，再把高按揭利率（30 年期固定利率一度达 7.40%）列为主要原因；随后解释通胀和债券收益率推高借贷成本，并联系美联储为抑制通胀而提高基准利率的政策逻辑。报道最后指出，进一步加息可能继续压低房市和其他消费活动，呈现稳定物价与住房需求之间的短期取舍。",
+            "reason": [
+              "住房可负担性、借贷成本和通胀治理都是经济类阅读的常见主题，文章用房屋销售把宏观利率政策落到家庭决策。",
+              "结构从销售数据和历史低位切入，解释按揭利率，再追溯美联储政策目标，最后说明潜在的后续影响。",
+              "适合考查数字与比较对象、因果链条、政策意图，以及作者如何通过专家引语呈现市场预期。",
+              "可积累 mortgage、benchmark、borrowing、inflation 等金融与宏观经济词汇，并区分 sales、rates 与 economic activity 的关系。",
+              "写作可借鉴“现象数据—直接原因—政策背景—预期代价”的论证顺序，避免把相关性直接写成单一因果。"
+            ],
+            "vocabulary": [
+              {
+                "word": "stagnant",
+                "phonetic": "/ˈstæɡnənt/",
+                "part": "adj.",
+                "translation": "停滞的；不景气的"
+              },
+              {
+                "word": "holding pattern",
+                "phonetic": "/ˈhoʊldɪŋ ˌpætərn/",
+                "part": "n. phr.",
+                "translation": "停滞状态；维持现状"
+              },
+              {
+                "word": "mortgage",
+                "phonetic": "/ˈmɔːrɡɪdʒ/",
+                "part": "n.",
+                "translation": "抵押贷款；房贷"
+              },
+              {
+                "word": "benchmark",
+                "phonetic": "/ˈbentʃmɑːrk/",
+                "part": "n.",
+                "translation": "基准；衡量标准"
+              },
+              {
+                "word": "borrowing",
+                "phonetic": "/ˈbɑːroʊɪŋ/",
+                "part": "n.",
+                "translation": "借款；借贷"
+              },
+              {
+                "word": "inflation",
+                "phonetic": "/ɪnˈfleɪʃn/",
+                "part": "n.",
+                "translation": "通货膨胀"
+              },
+              {
+                "word": "policymaker",
+                "phonetic": "/ˈpɑːləsimeɪkər/",
+                "part": "n.",
+                "translation": "政策制定者"
+              },
+              {
+                "word": "signal",
+                "phonetic": "/ˈsɪɡnəl/",
+                "part": "v.",
+                "translation": "表明；发出信号"
+              },
+              {
+                "word": "slowdown",
+                "phonetic": "/ˈsloʊdaʊn/",
+                "part": "n.",
+                "translation": "放缓；减速"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Existing home sales in October fell to 3.75 million, making an 8.8% decline in sales from a year earlier.",
+                "analysis": [
+                  "主干是 Existing home sales fell，先交代美国成屋销售下滑这一核心事实。",
+                  "in October 和 to 3.75 million 分别补充时间与结果数值，from a year earlier 给出同比参照。",
+                  "making an 8.8% decline 是现在分词短语，补充解释这一销量所对应的同比变化。",
+                  "数字与时间比较共同构成证据，适合用于说明经济趋势而不只作抽象判断。",
+                  "可借鉴“数据变化 + making + 名词短语”压缩表达指标及其含义。"
+                ],
+                "translation": "10 月美国成屋销售降至 375 万套，较一年前下降 8.8%。"
+              },
+              {
+                "original": "The drop is mainly due to high mortgage rates.",
+                "analysis": [
+                  "主干为 The drop is due to rates，直接把销售下滑与按揭利率联系起来。",
+                  "mainly 限定原因的重要程度，表示主要原因而非唯一原因。",
+                  "high 修饰 mortgage rates，说明文章所指的是较高的借贷成本。",
+                  "此句承接数据并引出后文的利率机制，是简洁的因果主题句。",
+                  "可借鉴 be mainly due to ... 表述主要原因，同时避免过度断言唯一成因。"
+                ],
+                "translation": "销售下滑主要是由于按揭利率高。"
+              },
+              {
+                "original": "Fewer home sales and other purchases mean less economic activity, which the Fed wants in order to reach its goal of lowering inflation.",
+                "analysis": [
+                  "主句核心是 Fewer ... purchases mean less economic activity，解释消费减少与经济活动放缓的关系。",
+                  "which 引导非限制性定语从句，指代前面的 less economic activity，并说明这是美联储希望实现的结果。",
+                  "in order to reach its goal 是目的状语，后接 of lowering inflation 说明目标内容。",
+                  "逻辑链为减少购买—放缓经济—降低通胀，展示政策目标及其传导机制。",
+                  "可借鉴 mean + 名词短语、which 补充评价和 in order to + 动词的层次组合。"
+                ],
+                "translation": "房屋销售和其他购买减少意味着经济活动减弱，而这正是美联储为实现降低通胀目标所希望看到的。"
+              }
+            ]
+          },
+          {
+            "title": "Time running out for young people to receive meningitis B vaccines in UK",
+            "source": "The Guardian",
+            "published": "2026-11-12",
+            "url": "https://www.theguardian.com/society/2026/nov/12/time-running-out-young-people-meningitis-b-vaccines-uk",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "健康与社会 / 青年疫苗接种与公共卫生",
+            "summary": "《卫报》报道英国面向部分青年推出的一次性、限时 MenB 疫苗计划接种率偏低：18 至 19 岁符合条件者中只有 28.2% 接种了第一剂。文章回顾年内肯特等地的疫情及后续计划，说明两剂需至少间隔 28 天，符合条件者包括特定出生年份的青年，以及当年首次进入大学或寄宿制继续教育机构、未满 25 岁者。卫生部门提醒第一剂需在 12 月 31 日前接种，第二剂可安排至 2027 年 3 月底；公共卫生专家担心低接种率赶不上冬季高发期，也提出延长宣传、改为年度接种安排或纳入常规青少年免疫计划。文章由此讨论限时疫苗政策的成本效果与覆盖面之间的张力。",
+            "reason": [
+              "疫苗接种、青年健康和公共卫生覆盖率是健康与社会议题的常见考点，文章用真实接种数据呈现政策执行问题。",
+              "文章先提出接种时间紧迫，再回顾疫情背景和计划规则，继而呈现接种率与专家建议，最后讨论是否转为常规安排。",
+              "适合考查数据比例、政策资格条件、截止日期，以及专家观点与官方安排之间的区别。",
+              "可积累 eligible、uptake、one-off、booster、invasive 等公共卫生词汇，注意 uptake 表示实际参与或接种情况。",
+              "写作可借鉴“风险背景—干预方案—覆盖不足—改进建议”的结构，论证时区分个体选择和群体免疫目标。"
+            ],
+            "vocabulary": [
+              {
+                "word": "eligible",
+                "phonetic": "/ˈelɪdʒəbəl/",
+                "part": "adj.",
+                "translation": "符合资格的"
+              },
+              {
+                "word": "one-off",
+                "phonetic": "/ˌwʌn ˈɔːf/",
+                "part": "adj.",
+                "translation": "一次性的"
+              },
+              {
+                "word": "time-limited",
+                "phonetic": "/ˌtaɪm ˈlɪmɪtɪd/",
+                "part": "adj.",
+                "translation": "有时间限制的"
+              },
+              {
+                "word": "uptake",
+                "phonetic": "/ˈʌpteɪk/",
+                "part": "n.",
+                "translation": "采用率；接种率"
+              },
+              {
+                "word": "strain",
+                "phonetic": "/streɪn/",
+                "part": "n.",
+                "translation": "菌株；毒株"
+              },
+              {
+                "word": "outbreak",
+                "phonetic": "/ˈaʊtbreɪk/",
+                "part": "n.",
+                "translation": "疫情暴发；疾病暴发"
+              },
+              {
+                "word": "booster",
+                "phonetic": "/ˈbuːstər/",
+                "part": "n.",
+                "translation": "加强针；加强剂"
+              },
+              {
+                "word": "invasive",
+                "phonetic": "/ɪnˈveɪsɪv/",
+                "part": "adj.",
+                "translation": "侵袭性的"
+              },
+              {
+                "word": "routine",
+                "phonetic": "/ruːˈtiːn/",
+                "part": "adj.",
+                "translation": "常规的；例行的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The clock is ticking for young people in the UK to receive vaccinations to protect against meningitis B, ...",
+                "analysis": [
+                  "主干是 The clock is ticking，使用“时钟在走”这一隐喻表达时间紧迫。",
+                  "for young people in the UK 指出需要行动的群体，to receive vaccinations 说明其具体行动。",
+                  "to protect against meningitis B 是目的不定式，解释接种的保护目标。",
+                  "句子以紧迫性引出公共卫生问题，随后用接种比例和截止日提供证据。",
+                  "可借鉴 the clock is ticking for sb. to do sth. 表达某项行动的时间窗口正在收窄。"
+                ],
+                "translation": "英国年轻人接种疫苗以预防 B 型脑膜炎的时间已经不多了。"
+              },
+              {
+                "original": "But figures from the UK Health Security Agency have revealed just 28.2% of 18- and 19-year-olds have received a first dose.",
+                "analysis": [
+                  "主句主干是 figures have revealed，数据作为主语，突出统计结果而非个人判断。",
+                  "from the UK Health Security Agency 后置修饰 figures，交代数据来源。",
+                  "just 28.2% 强调比例偏低；of 18- and 19-year-olds 限定百分比的适用群体。",
+                  "have received a first dose 使用现在完成时，强调截至报道时的接种进展。",
+                  "可借鉴 figures reveal + 比例/事实来引入调查数据，并用 just 表示低于预期。"
+                ],
+                "translation": "但英国卫生安全局的数据表明，18 至 19 岁人群中仅有 28.2% 接种了第一剂。"
+              },
+              {
+                "original": "Two doses of the vaccine, given at least 28 days apart, are needed for protection, and UKHSA says second doses will be available until 31 March 2027.",
+                "analysis": [
+                  "并列结构前半句的主干为 Two doses are needed，明确获得保护所需的剂次数量；后半句说明第二剂的可接种期限。",
+                  "of the vaccine 修饰 doses，说明剂次所属的疫苗。",
+                  "given at least 28 days apart 是过去分词短语，补充两剂之间的最短间隔。",
+                  "for protection 表示目的或所需结果，说明方案要求与免疫保护之间的关系。",
+                  "可借鉴“名词 + 过去分词短语”补充条件，以及 be needed for ... 表达必要性。"
+                ],
+                "translation": "要获得保护需要接种两剂疫苗，两剂至少间隔 28 天。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-12",
       "status": "ready",
@@ -2029,358 +2375,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 “There are steps you can take to...” 引出可行的解决办法。"
                 ],
                 "translation": "专家表示，你可以采取一些措施，让过渡更加顺利。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-06",
-      "status": "ready",
-      "ai": {
-        "intro": "本期更新 Gemini Omni 1.2 Flash、Google Vids 免费视频额度和 Gemini Canvas 草图转应用；资源包括免费 API、开放模型和学习工具。",
-        "updates": [
-          {
-            "event": "Gemini Omni 1.2 Flash 支持 15 秒视频与对话式编辑",
-            "summary": "Google 发布 Gemini Omni 1.2 Flash，原生生成和编辑最长 15 秒视频，支持多轮对话修改，并提升参考素材的一致性。官方 API 720p 价格为每秒 0.07 美元，较 Omni 1.1 降低 30%。",
-            "howTo": "在 Google AI Studio 选择 gemini-omni-1.2-flash，输入场景描述并设定 3 至 15 秒；生成后用后续提示调整片段，也可上传参考图引导角色或场景。",
-            "impact": "可为课程展示、实验说明或社团活动制作短片草稿，并逐轮调整背景或细节；涉及事实的画面和旁白仍需核对。",
-            "free": "Gemini API 的 720p 视频按每秒 0.07 美元计价，免费 API 配额官方未说明。Gemini app 的 15 秒视频正在向 Google AI Ultra 订阅用户推出；各地区上线时间官方未说明。",
-            "category": "生成式视频 / Gemini Omni",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-05",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
-            }
-          },
-          {
-            "event": "Google Vids 每月免费生成 3 段 15 秒视频",
-            "summary": "Google Vids 接入 Omni 1.2 Flash，个人 Google 账号或 Google Workspace 订阅用户每月可免费生成最多 3 段 15 秒视频；官方举例可把参考图转成连贯场景并生成自然旁白。",
-            "howTo": "打开 vids.new 并登录 Google 账号或 Workspace；描述课程主题，或上传项目图片作为参考，再生成最长 15 秒的视频并在 Vids 中编辑。",
-            "impact": "学生可用有限的免费额度制作演讲开场、课程概念短片或项目宣传草稿；提交前检查旁白、图片来源和生成内容准确性。",
-            "free": "官方说明每月最多 3 段、每段 15 秒，可由 Google 账号或 Google Workspace 订阅用户免费使用。支持地区及额度重置的具体时间官方未说明。",
-            "category": "免费生成式视频 / Google Vids",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-05",
-              "url": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/"
-            }
-          },
-          {
-            "event": "Gemini Canvas 将草图转换为可预览的应用原型",
-            "summary": "Gemini 新增从手绘草图生成应用原型的流程：上传界面草图，选择 Canvas 并要求 Gemini 编写应用代码，然后在预览窗口测试并调整颜色、字体或功能。",
-            "howTo": "拍摄应用界面、习惯追踪器或棋盘游戏草图，在 Gemini 上传图片并选择 Canvas；输入“Can you code this app?”，在预览窗口测试后继续要求修改。",
-            "impact": "没有完整编程基础的学生也能把课程项目构想变成可交互的原型，便于讨论布局和需求；原型代码仍需测试，不能视为已完成的软件。",
-            "free": "Google 公告未说明该功能的价格、账号套餐、地区范围、使用配额或分批开放安排。",
-            "category": "原型开发 / Gemini Canvas",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-05",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google Vids：每月 3 段免费 AI 视频",
-            "summary": "Google Vids 使用 Omni 1.2 Flash；官方说明个人 Google 账号或 Workspace 订阅用户每月可免费生成最多 3 段、每段 15 秒的视频。",
-            "howTo": "打开 vids.new，登录 Google 账号或 Workspace，输入主题描述或上传参考图片，生成视频后在 Vids 中继续编辑。",
-            "impact": "适合制作课程展示片段、社团活动预告或概念演示；每月额度有限，交付前应核对事实和素材使用权。",
-            "free": "每月最多 3 段 15 秒视频，免费；个人 Google 账号或 Google Workspace 订阅均可。支持地区和额度重置具体时间官方未说明。",
-            "category": "免费生成式视频 / 学习与展示",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-05",
-              "url": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/"
-            }
-          },
-          {
-            "event": "Gemini Developer API 免费层",
-            "summary": "Google 官方定价页列出免费层：部分模型的输入与输出 token 免费，并可通过 Google AI Studio 使用；免费层内容可能用于改进 Google 产品。",
-            "howTo": "在 Google AI Studio 创建 API key，先查看定价页确认目标模型当前是否列在 Free 层，再按 Gemini API Quickstart 运行小规模学习项目。",
-            "impact": "可练习模型 API 调用、课程文本摘要或小型应用原型，不必先支付免费层模型的 token 费用；不要提交敏感资料。",
-            "free": "仅部分模型提供免费输入和输出 token；具体请求额度因模型而异。免费层内容可能用于改进产品；地区、账号要求和资格期限官方未说明。",
-            "category": "免费 API / 开发实验",
-            "source": {
-              "name": "Google AI for Developers 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Qwen3-4B-Instruct-2507：Apache-2.0 开放权重",
-            "summary": "Qwen 官方模型卡提供 Qwen3-4B-Instruct-2507 权重下载，模型为 4B 参数、原生支持 262,144 token 上下文，许可标注为 Apache-2.0。",
-            "howTo": "按模型卡使用最新 Transformers，加载 Qwen/Qwen3-4B-Instruct-2507；先用短文本测试摘要或问答，并根据本机显存情况缩短上下文。",
-            "impact": "有合适设备的学生可在本地实验文本生成或课程资料归纳，并探索离线运行；下载模型不等于免除设备、存储和算力成本。",
-            "free": "官方 Hugging Face 模型卡提供公开权重，许可为 Apache-2.0；模型卡未说明下载配额、地区或注册要求。本地运行所需硬件和成本由使用者承担。",
-            "category": "开放权重模型 / 本地学习实验",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
-            }
-          },
-          {
-            "event": "Gemini Notebook Standard：免费整理课程资料",
-            "summary": "Google 帮助页说明 Gemini Notebook Standard 可用 Gmail 账号免费注册，标准版列出每位用户最多 100 个 notebook、每个 notebook 最多 50 个来源，并提供自定义聊天与分析功能。",
-            "howTo": "使用 Gmail 账号登录 Gemini Notebook，新建课程主题 notebook，添加讲义或网页来源，再围绕材料提问并回到原文核对引用。",
-            "impact": "适合把分散的阅读资料集中起来复习、比较观点和生成练习问题；来源数量有上限，回答仍需对照原始材料。",
-            "free": "标准版可免费注册，需 Gmail 账号；官方列出每用户 100 个 notebook、每个 notebook 50 个来源。浏览器版面向达到当地法定同意年龄且位于支持地区的用户。",
-            "category": "长期免费 AI 服务 / 资料阅读",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出每月 0 美元的 Free 方案，包含每月 2,000 次代码补全、有限的聊天与 agent 使用，无需信用卡。",
-            "howTo": "登录 GitHub 并选择 Copilot Free，在支持的编辑器安装 Copilot；用它解释课程代码或补全小函数，再运行测试并逐行检查改动。",
-            "impact": "适合编程课程中的代码解释和小规模补全；聊天与 agent 有限额，生成的代码应由学生自行验证。",
-            "free": "每月 0 美元、每月 2,000 次代码补全且无需信用卡；聊天和 agent 使用受限，其具体额度、地区资格和期限官方未说明。",
-            "category": "长期免费 AI 服务 / 编程辅助",
-            "source": {
-              "name": "GitHub Copilot 官方计划与价格页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Mistral Free：网页与移动端 AI 助手",
-            "summary": "Mistral 官方价格页列出 Free 方案，可在网页和移动端使用，包含有限消息、网页搜索和 coding sessions，以及基础图像生成与编辑。",
-            "howTo": "打开 Mistral 网页或移动端服务，用 Free 方案试做课程主题检索、问题整理或图像草稿，并对照原始网页核实检索结果。",
-            "impact": "可作为交叉核对资料的免费入口，也能制作简单视觉草稿；消息、搜索和编码会话均有限制。",
-            "free": "官方价格页列有 Free 方案，但未说明具体消息、搜索或编码额度、账号条件、支持地区和期限。",
-            "category": "长期免费 AI 服务 / 搜索与创作",
-            "source": {
-              "name": "Mistral 官方价格页",
-              "published": "官方未说明",
-              "url": "https://mistral.ai/pricing/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Delhi's toxic winter air is back - is the Indian capital prepared for pollution?",
-            "source": "BBC",
-            "published": "2026-11-05",
-            "url": "https://www.bbc.co.uk/news/articles/cm78p0n09q3xo",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "环境与社会 / 德里冬季污染、政策执行与区域协作",
-            "summary": "报道从德里居民每年备战冬季雾霾切入，解释低温、弱风会使污染物滞留，农作物残留焚烧、车辆、工厂和扬尘又叠加排放。文章介绍当地政府在污染高峰前推出的冬季行动计划，包括限制高排放车辆、暂停部分扬尘工程、鼓励远程办公和加强公共交通；专家肯定提前规划，但强调措施成效取决于执行，还需要为电力、工业和交通等部门设定减排目标。由于污染会从邻近地区飘入德里，单靠城市自身政策有限。结尾回到居民生活与健康代价，指出污染每年反复，需持续、跨区域治理。",
-            "reason": [
-              "主题把城市环境、公共健康和治理责任联系起来，适合讨论空气污染与公共政策的考研英语议题。",
-              "文章从居民经验解释污染成因，再介绍政府计划、引入专家对执行的质疑，最后扩大到跨区域治理和健康影响。",
-              "可练习归纳多重污染源、区分政策出台与政策落实，并概括地方行动的边界。",
-              "disperse、emissions、enforcement 等词可用于环境治理和政策执行类写作。",
-              "写作可借鉴“呈现行动—承认进展—指出执行条件—提出协作方案”的平衡论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "trap",
-                "phonetic": "/træp/",
-                "part": "v.",
-                "translation": "使滞留；困住"
-              },
-              {
-                "word": "disperse",
-                "phonetic": "/dɪˈspɜːs/",
-                "part": "v.",
-                "translation": "驱散；散开"
-              },
-              {
-                "word": "residue",
-                "phonetic": "/ˈrezɪdjuː/",
-                "part": "n.",
-                "translation": "残留物"
-              },
-              {
-                "word": "emissions",
-                "phonetic": "/ɪˈmɪʃənz/",
-                "part": "n. pl.",
-                "translation": "排放物；排放量"
-              },
-              {
-                "word": "enforcement",
-                "phonetic": "/ɪnˈfɔːsmənt/",
-                "part": "n.",
-                "translation": "执行；实施"
-              },
-              {
-                "word": "collectively",
-                "phonetic": "/kəˈlektɪvli/",
-                "part": "adv.",
-                "translation": "共同地；整体上"
-              },
-              {
-                "word": "restrict",
-                "phonetic": "/rɪˈstrɪkt/",
-                "part": "v.",
-                "translation": "限制"
-              },
-              {
-                "word": "breathlessness",
-                "phonetic": "/ˈbreθləsnəs/",
-                "part": "n.",
-                "translation": "气促；呼吸困难"
-              },
-              {
-                "word": "commuter",
-                "phonetic": "/kəˈmjuːtə(r)/",
-                "part": "n.",
-                "translation": "通勤者"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Falling temperatures and slower winds trap pollutants close to the ground instead of allowing them to disperse.",
-                "analysis": [
-                  "主干是 temperatures and winds trap pollutants，两个并列主语共同搭配谓语 trap。",
-                  "Falling 和 slower 分别修饰 temperatures 与 winds，交代导致污染滞留的气象条件。",
-                  "close to the ground 是地点补足语，说明污染物被困的位置。",
-                  "instead of allowing them to disperse 表示结果与预期相反；them 指 pollutants，to disperse 是 allow 的宾语补足结构。",
-                  "可借鉴 A trap B ... instead of allowing ... 表达某种条件如何阻碍预期变化。"
-                ],
-                "translation": "气温下降、风力减弱会使污染物滞留在近地面，而不是让它们扩散。"
-              },
-              {
-                "original": "This means that measures taken by Delhi can achieve only so much.",
-                "analysis": [
-                  "主句核心是 This means that ...，that 引导 means 的宾语从句。",
-                  "从句主干为 measures can achieve so much，taken by Delhi 是过去分词短语，修饰 measures。",
-                  "only so much 表示能力有限，语气上承认德里措施有作用，同时限定其效果。",
-                  "This 回指前文污染会从邻近地区流入德里的事实，构成原因到政策边界的推论。",
-                  "可借鉴 This means that ... can achieve only so much 概括单一主体的治理上限。"
-                ],
-                "translation": "这意味着德里采取的措施所能达到的效果终究有限。"
-              },
-              {
-                "original": "The arrival of another winter fills her family with dread, but unlike many others, they are not planning to move out of Delhi.",
-                "analysis": [
-                  "but 连接两个分句：冬季到来令她的家人恐惧；他们却没有计划搬离德里。",
-                  "第一个分句主干是 The arrival fills her family with dread，of another winter 修饰 arrival。",
-                  "unlike many others 是比较状语，省略了与他们不同的其他居民。",
-                  "第二个分句的 they 指 her family，plan to move out of Delhi 中不定式作 plan 的补足语。",
-                  "可借鉴 A, but unlike ..., B 表达相同处境下不同群体的选择差异。"
-                ],
-                "translation": "又一个冬天的到来让她一家心生恐惧，但与许多人不同，他们并不打算搬离德里。"
-              }
-            ]
-          },
-          {
-            "title": "First-time homebuyers remain scarce, but a record share of them pay all cash",
-            "source": "NPR",
-            "published": "2026-11-05",
-            "url": "https://www.npr.org/2026/11/05/nx-s1-6022491/real-estate-all-cash-offer",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "经济与社会 / 首次购房、代际财富与住房可负担性",
-            "summary": "NPR 根据美国全国房地产经纪人协会的新报告指出，首次购房者仅占买家的 22%，接近历史低位；但在成功购房者中，完全以现金支付的比例达到 10%，为该项数据自 2003 年开始收集以来的最高值。首次购房者中位年龄升至 40 岁，现金购房者更达到 54 岁；报道将现金交易增加与遗产、家庭赠与和出售继承房产所得联系起来，也提到高房贷利率让现金出价更具吸引力。随后以一对背负债务、选择继续租房的年轻买家作对照，呈现房价和首付压力如何扩大住房机会差距。文章最后指出，代际财富转移可能让已有家庭资产支持的人更易入市，而独立储蓄者更可能被挤出市场。",
-            "reason": [
-              "文章讨论住房可负担性、财富传承和代际不平等，适合经济与社会公平类考题。",
-              "先用行业报告和比例概述趋势，再解释继承与利率等原因，继而用年轻租户案例呈现另一面，最后归纳分化。",
-              "可练习概括统计数据、辨析相关因素，并比较现金购房者与依靠储蓄者的处境。",
-              "inheritance、down payment、equity 等词汇适用于住房、家庭财富和经济差距主题。",
-              "写作可借鉴“数据呈现趋势—解释机制—个案对照—总结分配影响”的论证路径。"
-            ],
-            "vocabulary": [
-              {
-                "word": "scarce",
-                "phonetic": "/skeəs/",
-                "part": "adj.",
-                "translation": "稀少的；不足的"
-              },
-              {
-                "word": "sideline",
-                "phonetic": "/ˈsaɪdlaɪn/",
-                "part": "v.",
-                "translation": "使靠边；使无法参与"
-              },
-              {
-                "word": "inheritance",
-                "phonetic": "/ɪnˈherɪtəns/",
-                "part": "n.",
-                "translation": "遗产；继承物"
-              },
-              {
-                "word": "proceeds",
-                "phonetic": "/ˈprəʊsiːdz/",
-                "part": "n. pl.",
-                "translation": "收益；所得款项"
-              },
-              {
-                "word": "median",
-                "phonetic": "/ˈmiːdiən/",
-                "part": "adj./n.",
-                "translation": "中位数的；中位数"
-              },
-              {
-                "word": "down payment",
-                "phonetic": "/ˌdaʊn ˈpeɪmənt/",
-                "part": "n. phr.",
-                "translation": "首付款"
-              },
-              {
-                "word": "mortgage",
-                "phonetic": "/ˈmɔːɡɪdʒ/",
-                "part": "n.",
-                "translation": "住房抵押贷款"
-              },
-              {
-                "word": "equity",
-                "phonetic": "/ˈekwəti/",
-                "part": "n.",
-                "translation": "房屋净值；资产净值"
-              },
-              {
-                "word": "refinance",
-                "phonetic": "/ˌriːfaɪˈnæns/",
-                "part": "v.",
-                "translation": "重新融资；再贷款"
-              },
-              {
-                "word": "burdened",
-                "phonetic": "/ˈbɜːdənd/",
-                "part": "adj.",
-                "translation": "负担沉重的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The share of first-time homebuyers remains at a near-record low of 22% as a housing shortage and high prices sideline many.",
-                "analysis": [
-                  "主句主干是 The share remains at a low，主语中心词 share，谓语 remains。",
-                  "of first-time homebuyers 修饰 share；at a near-record low of 22% 给出程度和具体比例。",
-                  "as 引导原因状语从句，说明住房短缺和高价格如何使许多人无法进入市场。",
-                  "a housing shortage and high prices 是并列主语，sideline many 表示把不少潜在买家排除在外。",
-                  "可借鉴 remains at ... as ... 用数据陈述趋势并在同句补充原因。"
-                ],
-                "translation": "首次购房者所占比例仍处于接近历史低位的 22%，因为住房短缺和高房价让许多人难以入市。"
-              },
-              {
-                "original": "Inheritances are really driving this.",
-                "analysis": [
-                  "句子主干为 Inheritances are driving this，主语是复数名词 inheritances。",
-                  "really 是程度副词，强调遗产在当前趋势中的推动作用。",
-                  "this 是指示代词，回指前文首次购房者现金支付比例上升的现象。",
-                  "现在进行时 are driving 将遗产描述为正在发挥作用的原因，而非唯一原因。",
-                  "可借鉴 X is driving this 简洁指出某项趋势背后的主要推动因素。"
-                ],
-                "translation": "遗产确实是推动这一现象的重要因素。"
-              },
-              {
-                "original": "The median age of all first-time buyers remains at 40, a record high.",
-                "analysis": [
-                  "主干是 The median age remains at 40，核心名词为 age，谓语 remains。",
-                  "of all first-time buyers 限定年龄统计对象，避免误读为所有购房者。",
-                  "at 40 是年龄数值补足语，句末 a record high 是对 40 的同位说明。",
-                  "remains 表明这一数值维持在该水平，记录性判断由 a record high 补充。",
-                  "可借鉴 remains at ..., a record high 用简洁结构报告统计值及其历史位置。"
-                ],
-                "translation": "所有首次购房者的年龄中位数仍为 40 岁，创下历史新高。"
               }
             ]
           }
