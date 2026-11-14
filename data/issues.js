@@ -1,6 +1,332 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-13T11:19:38+08:00",
+  "updatedAt": "2026-11-14T11:03:58+08:00",
   "issues": [
+    {
+      "date": "2026-11-14",
+      "status": "ready",
+      "ai": {
+        "intro": "本期核验 Gemini 的多模态判定 API、Gemini 4 Carbon 和 Android 端新功能，并整理可免费学习、试用或下载的资源。",
+        "updates": [
+          {
+            "event": "Gemini Decisions API：一次请求完成多项多模态判定",
+            "summary": "Google 于 2026-11-11 发布 Gemini Decisions API 和 Gemini Decision 1。它可处理文本、图像、音频、视频和 PDF，在单次请求中评估至多 1,000 个是/否、选项或量表问题，并返回概率及置信度；AI Studio 提供用于原型开发的免费层。",
+            "howTo": "在 Google AI Studio 创建 API key，打开 Decisions API 文档，使用 Python、JavaScript 或 REST 指南调用 `gemini-decision-1`；为同一输入设置是/否、选择题或评分标准，并查看返回的置信度。",
+            "impact": "可用于课程项目中给资料片段分类、按自定义量表初筛文本，或对图片做有限选项判断；将低置信度结果交由人工复核，不把分类分数当作事实结论。",
+            "free": "Google 称 API 有免费层可用于原型；付费价格为每百万输入 token 0.10 美元、输出 token 0 美元。免费层的具体配额、地区资格、账号条件及开放节奏官方未说明；调用需在 AI Studio 创建 API key。",
+            "category": "生成式 AI / 多模态 API",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-11",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+            }
+          },
+          {
+            "event": "Gemini 4 Carbon 开放给付费开发者与 Ultra 用户",
+            "summary": "Google 于 2026-11-10 宣布 Gemini 4 Carbon 面向付费开发者、企业及消费者开放，重点面向长流程、多步骤编码、知识工作和科学推理；消费者端通过 Google AI Ultra 分批获得 Gemini 应用、Search AI Mode 与 Antigravity 使用权限。",
+            "howTo": "开发者可在 Google AI Studio 选择 `gemini-4-carbon` 并按 API 文档调用；持有 Google AI Ultra 的用户可在开放后到 Gemini 应用、Search AI Mode 或 Antigravity 试用。",
+            "impact": "适合学生在复杂编程作业中让模型协助分解调试步骤，或先整理多份资料形成研究草稿；代码、引用和推理仍需用课程材料或测试核对。",
+            "free": "官方列出的 API 价格为每百万输入 token 2 美元、输出 token 10 美元，API 面向付费开发者和企业；Gemini 应用、Search AI Mode 和 Antigravity 正向 Google AI Ultra 订阅者开放。免费使用资格、配额、地区和完整 rollout 时间官方未说明。",
+            "category": "生成式 AI / Gemini 模型",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-10",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+            }
+          },
+          {
+            "event": "Gemini Intelligence 扩展至更多 Android 设备并增加小组件功能",
+            "summary": "Google 于 2026-11-10 公布 Android 端 Gemini Intelligence 新功能并扩展设备支持：Pixel 10 系列获得相关能力，Motorola signature 27 将加入；Create My Widget 可按文字描述生成个性化小组件并读取 Gmail、Calendar 和 Search 信息，另有设备协助功能及扩展至英国、印度、日本的任务自动化。",
+            "howTo": "在符合条件的 Pixel 10 或其他支持设备上留意 Gemini Intelligence 更新；Create My Widget 将分批推出，开放后用自然语言描述所需的小组件。任务自动化可在 Gemini 应用中检查地区可用性。",
+            "impact": "学生可尝试把课程日程、邮件和搜索信息汇总到主屏小组件，也可让设备协助完成手机设置；使用前检查数据权限，并确认功能已在自己的设备和地区开放。",
+            "free": "官方称部分功能仅在指定国家和语言提供，部分仅限 18 岁以上；设备、语言和地区会影响可用性，部分功能高用量可能需要订阅。Create My Widget 预计数周内分批推出；具体费用、固定配额、完整地区清单和账号资格官方未说明。",
+            "category": "生成式 AI / Android 助手",
+            "source": {
+              "name": "Google 官方博客（Android）",
+              "published": "2026-11-10",
+              "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Kaggle Learn：免费数据科学与机器学习短课程",
+            "summary": "Kaggle Learn 官方课程页提供无费用的实用课程，涵盖 Python、数据可视化、Pandas 等数据技能，适合按短课逐步练习。",
+            "howTo": "打开 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按课程单元阅读说明并完成练习。",
+            "impact": "可用来补齐数据处理基础，再把课程方法用于论文数据清理、图表制作或入门机器学习练习。",
+            "free": "官方将这些课程标为 no-cost；课程数量、账号或注册要求、地区限制及完成额度官方未说明。",
+            "category": "免费课程 / 数据科学",
+            "source": {
+              "name": "Kaggle 官方 Learn 课程页",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "AWS Educate：免费云计算与 AI 学习路径和动手实验",
+            "summary": "AWS Educate 面向个人免费提供自定进度的云计算与 AI 学习资源，包含存储、计算、网络、数据库和云运维等实践课程及数字徽章。",
+            "howTo": "进入 AWS Educate 注册页面，用电子邮箱创建学习者账号，再从课程目录选择云计算或 AI 相关学习路径和实验。",
+            "impact": "适合为云服务、数据库和 AI 应用课程建立入门概念，并通过实验练习基础的云端操作；开始前确认实验内容不会要求额外付费的 AWS 服务。",
+            "free": "官方说明年满 13 岁的学习者可用电子邮箱注册，无需信用卡，并可使用免费课程和动手实验；地区、实验配额和截止日期官方未说明。",
+            "category": "免费 AI 学习 / 云计算教育",
+            "source": {
+              "name": "AWS 官方教育项目页",
+              "published": "官方未说明",
+              "url": "https://aws.amazon.com/education/awseducate/"
+            }
+          },
+          {
+            "event": "Qwen3-Next-80B-A3B-Instruct：Apache 2.0 开放模型权重",
+            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 的模型文件和 Transformers 使用示例；仓库元数据显示模型采用 Apache-2.0 许可证。模型总参数量为 80B，卡片说明其原生上下文长度为 262,144 tokens。",
+            "howTo": "从模型卡的 Files and versions 获取文件，或按 Quickstart 安装最新版 Transformers 并加载 `Qwen/Qwen3-Next-80B-A3B-Instruct`；本地部署前先确认可用存储和算力。",
+            "impact": "可在课程项目或本地实验中测试开放模型的文本生成与长文档处理，并比较不同模型的输出；80B 总参数模型对本地设备要求高，实际部署需自行评估。",
+            "free": "模型仓库提供可下载权重，许可证为 Apache-2.0；模型文件下载配额、账号和地区要求及最低运行硬件官方未说明，运行所需设备和算力需自备。",
+            "category": "开放模型 / 下载权重",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
+            }
+          },
+          {
+            "event": "Gemini Decisions API：AI Studio 免费层可用于原型开发",
+            "summary": "Gemini Decisions API 官方发布页确认 API 提供无费用层，可在 Google AI Studio 用于原型；该端点可对多模态输入执行是/否、选项和评分判定。",
+            "howTo": "在 Google AI Studio 打开 Decisions API Playground 体验示例，或创建 API key 后依官方文档将输入和判定问题提交给 `gemini-decision-1`。",
+            "impact": "可低成本验证课程项目中的文本分类、图像核验或量表评分流程，再决定是否扩展为正式应用。",
+            "free": "官方称 API 有免费层用于原型，付费价为每百万输入 token 0.10 美元、输出 token 0 美元；免费额度、地区和账号资格官方未说明。",
+            "category": "免费 API / 多模态判定",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-11",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Vanessa delivers pizza after work to pay rent. Many Australians are ‘scrambling’ as cracks appear in the economy",
+            "source": "The Guardian",
+            "published": "2026-11-13",
+            "url": "https://www.theguardian.com/australia-news/2026/nov/14/vanessa-delivers-pizza-after-work-to-pay-rent-many-australians-are-scrambling-as-cracks-appear-in-the-economy",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "经济与社会 / 澳大利亚生活成本、就业与住房压力",
+            "summary": "文章以悉尼白领 Vanessa Freitas 下班后兼职送披萨、仍无力购房的经历切入，呈现高房租与家庭预算压力。随后将个人故事扩展到宏观背景：近期利率上升、物价持续走高和裁员使公众对经济更悲观，求助热线接到创纪录的来电，部分家庭开始拖欠贷款、削减医疗和日常开支。报道再并置不同指标：消费和部分经济活动仍有韧性，但消费者信心接近衰退时期水平，失业率上行、企业裁员也加剧担忧。结尾引用专家判断澳大利亚可能避免衰退和大规模失业，却仍会面临求职时间拉长、工资增长放缓；由此突出宏观数据稳定与家庭切身压力并存。",
+            "reason": [
+              "住房负担、通胀、利率与就业是经济类阅读常见主题，文章用个人生活讲述引出宏观指标和社会影响。",
+              "论述依次采用人物故事、求助数据、信心与就业指标、专家预测，体现由个案到整体再回到前景判断的结构。",
+              "适合考查细节与数据对应、转折关系、引语功能，以及“经济并未衰退”与“家庭感受恶化”如何并置。",
+              "可学习 optimistic、arrears、deteriorate、cohesion 等表达，区分经济指标、情绪和家庭财务状况。",
+              "写作可借鉴以具体人物导入议题，再用多类证据补充、对照并以审慎预测收束的方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "optimistic",
+                "phonetic": "/ˌɑːptɪˈmɪstɪk/",
+                "part": "adj.",
+                "translation": "乐观的"
+              },
+              {
+                "word": "white-collar",
+                "phonetic": "/ˌwaɪt ˈkɑːlər/",
+                "part": "adj.",
+                "translation": "白领的；办公室工作的"
+              },
+              {
+                "word": "barely",
+                "phonetic": "/ˈberli/",
+                "part": "adv.",
+                "translation": "几乎不；勉强"
+              },
+              {
+                "word": "fuel",
+                "phonetic": "/ˈfjuːəl/",
+                "part": "v.",
+                "translation": "加剧；助长"
+              },
+              {
+                "word": "slump",
+                "phonetic": "/slʌmp/",
+                "part": "v.",
+                "translation": "骤降；大幅下滑"
+              },
+              {
+                "word": "helpline",
+                "phonetic": "/ˈhelplaɪn/",
+                "part": "n.",
+                "translation": "求助热线"
+              },
+              {
+                "word": "deteriorate",
+                "phonetic": "/dɪˈtɪriəreɪt/",
+                "part": "v.",
+                "translation": "恶化；变差"
+              },
+              {
+                "word": "arrears",
+                "phonetic": "/əˈrɪrz/",
+                "part": "n.",
+                "translation": "欠款；逾期款项"
+              },
+              {
+                "word": "cohesion",
+                "phonetic": "/koʊˈhiːʒən/",
+                "part": "n.",
+                "translation": "凝聚力；团结"
+              },
+              {
+                "word": "redundancy",
+                "phonetic": "/rɪˈdʌndənsi/",
+                "part": "n.",
+                "translation": "裁员；冗余"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "“We are both on wages that should be enough, right?”",
+                "analysis": [
+                  "句子主干是 We are on wages；both 表示说话者和伴侣两人都处于这一收入状况。",
+                  "that should be enough 是定语从句，修饰 wages，说明这份工资按理应足够生活。",
+                  "right? 是附加疑问式的确认请求，表现说话者对现实与预期落差的困惑。",
+                  "should be enough 将“合理预期”与下文经济吃紧形成对照，可用于表达预期落空。"
+                ],
+                "translation": "“我们两个人的工资按理都该够用，对吧？”"
+              },
+              {
+                "original": "With a long wait ahead, households are starting to ask how much worse it will get.",
+                "analysis": [
+                  "主句主干是 households are starting to ask，households 是主语，are starting to ask 是谓语。",
+                  "句首 With a long wait ahead 是介词短语，交代未来仍需等待这一背景。",
+                  "how much worse it will get 是 ask 的宾语从句，疑问词 how much 修饰比较级 worse。",
+                  "背景状语与间接疑问结合，呈现不确定感，可用于引出趋势和公众担忧。"
+                ],
+                "translation": "在还要等待很久的情况下，家庭开始追问，情况还会恶化到什么程度。"
+              },
+              {
+                "original": "The RBA expects the economy to grow by at least 1% next year, helped by steady spending.",
+                "analysis": [
+                  "主句主干是 The RBA expects the economy to grow，expect 后接宾语 economy 和不定式补语 to grow。",
+                  "by at least 1% next year 补充增长幅度与时间，at least 表示最低预期。",
+                  "helped by steady spending 是过去分词短语，补充说明预期增长的支撑因素。",
+                  "该句先陈述预测、再交代原因，适合练习“观点/预测 + 依据”的经济报道句式。"
+                ],
+                "translation": "澳大利亚储备银行预计，受稳定消费支撑，经济明年将至少增长 1%。"
+              }
+            ]
+          },
+          {
+            "title": "GPs are now ‘prescribing’ time in nature. Is it likely to improve your health?",
+            "source": "The Conversation",
+            "published": "2026-11-12",
+            "url": "https://theconversation.com/gps-are-now-prescribing-time-in-nature-is-it-likely-to-improve-your-health-296469",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "健康与社会 / 自然接触、公共卫生与健康公平",
+            "summary": "文章介绍澳大利亚全科医生组织认可自然处方资源，建议人们每天花约 20 分钟留意自然环境，并追问这种建议是否真能改善健康。作者先梳理研究证据：一项涵盖 47 项试验的综述中，部分研究发现心理健康改善；森林活动研究也观察到血压、心率变异性和压力激素方面的变化，但不同指标结果不一。文章随后区分“接触自然与健康相关”与“医生开出自然处方能带来因果改善”：每周两小时的建议主要来自观察性研究，不能证明时间本身导致健康变好；处方项目的实施方式和测量标准也不一致。结尾指出安全绿地、时间、健康状况和当地活动资源影响参与机会，因此自然处方可能有益，但仍需更严格研究、个性化转介和更公平的环境支持。",
+            "reason": [
+              "文章讨论健康促进、预防医学与环境公平，兼具社会政策和日常生活主题，适合健康类议论文阅读。",
+              "结构从新做法提出问题，回顾研究证据，再辨析相关与因果，最后讨论可及性并给出审慎结论。",
+              "适合考查研究结果与作者结论的区别、让步转折、数据证据边界，以及作者如何限定主张。",
+              "可积累 endorse、rigorous、observational、exposure 和 referral 等学术健康词汇。",
+              "写作可借鉴“呈现潜在益处—说明证据限制—讨论实施条件—提出公平性要求”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "endorse",
+                "phonetic": "/ɪnˈdɔːrs/",
+                "part": "v.",
+                "translation": "认可；支持"
+              },
+              {
+                "word": "wellbeing",
+                "phonetic": "/ˌwelˈbiːɪŋ/",
+                "part": "n.",
+                "translation": "身心健康；幸福感"
+              },
+              {
+                "word": "rigorous",
+                "phonetic": "/ˈrɪɡərəs/",
+                "part": "adj.",
+                "translation": "严谨的；严格的"
+              },
+              {
+                "word": "consistent",
+                "phonetic": "/kənˈsɪstənt/",
+                "part": "adj.",
+                "translation": "一致的；稳定的"
+              },
+              {
+                "word": "observational",
+                "phonetic": "/ˌɑːbzərˈveɪʃənəl/",
+                "part": "adj.",
+                "translation": "观察性的"
+              },
+              {
+                "word": "exposure",
+                "phonetic": "/ɪkˈspoʊʒər/",
+                "part": "n.",
+                "translation": "接触；暴露"
+              },
+              {
+                "word": "association",
+                "phonetic": "/əˌsoʊsiˈeɪʃən/",
+                "part": "n.",
+                "translation": "关联；联系"
+              },
+              {
+                "word": "prescribing",
+                "phonetic": "/prɪˈskraɪbɪŋ/",
+                "part": "n./gerund",
+                "translation": "开具处方；建议采用"
+              },
+              {
+                "word": "accessible",
+                "phonetic": "/əkˈsesəbəl/",
+                "part": "adj.",
+                "translation": "可获得的；易到达的"
+              },
+              {
+                "word": "referral",
+                "phonetic": "/rɪˈfɜːrəl/",
+                "part": "n.",
+                "translation": "转介；转诊"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The strength of evidence varies depending on the activity and health outcome being measured.",
+                "analysis": [
+                  "句子主干是 The strength of evidence varies，主语为 evidence 的 strength，谓语为 varies。",
+                  "depending on the activity and health outcome 是现在分词短语，补充说明证据强弱取决于什么。",
+                  "being measured 是现在分词被动结构，修饰 activity and health outcome，强调被评估的对象。",
+                  "该句以限定语避免一概而论，可借 varies depending on 表达结论受条件影响。"
+                ],
+                "translation": "证据的强弱会因所考察的活动和健康结果而有所不同。"
+              },
+              {
+                "original": "However, this was an observational study.",
+                "analysis": [
+                  "主干为 this was an observational study，this 指代前文提及的每周两小时与健康状况相关的研究结果。",
+                  "However 是句首转折副词，提示读者重新评估前文看似明确的发现。",
+                  "observational 作定语限定 study 的研究设计类型，暗示证据可以显示关联而非直接证明因果。",
+                  "短句独立成句形成强调，可用于引出研究局限或对前述证据作审慎限定。"
+                ],
+                "translation": "然而，这是一项观察性研究。"
+              },
+              {
+                "original": "The challenge is ensuring everyone has opportunities to enjoy the benefits.",
+                "analysis": [
+                  "句子主干是 The challenge is ensuring...，主语为 The challenge，系动词 is 后接动名词短语作表语。",
+                  "everyone has opportunities to enjoy the benefits 是 ensuring 的宾语从句，说明需要确保的具体内容。",
+                  "to enjoy the benefits 是不定式，作 opportunities 的补足成分，表达机会所指向的行动。",
+                  "这一结构把讨论重点从“是否有效”转向“如何让所有人都能受益”，适合提出政策实施难题。"
+                ],
+                "translation": "真正的挑战在于确保每个人都有机会享受到这些益处。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-13",
       "status": "ready",
@@ -2043,338 +2369,6 @@ window.BRIEFING_DATA = {
                   "该句为前文案例加上限定，也为强调多方协作铺路。"
                 ],
                 "translation": "像 Krapek 和 Orsi 这样的经营项目，单靠自身无法养活整个社区。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-07",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 GPT-6 Cyber 的受限防御访问、腾讯 Hy4 多模态能力与 OpenAI Images 2.6；免费资源包括 ChatGPT、Claude、Copilot 及腾讯限时免费工具。",
-        "updates": [
-          {
-            "event": "GPT-6 Cyber 面向受信任的防御安全工作开放",
-            "summary": "OpenAI 发布专用于经授权安全工作的 GPT-6 Cyber，面向安全代码审查和安全研究场景，并通过受限访问流程和额外防护强调遵守任务授权范围。",
-            "howTo": "普通学生可阅读官方公告与系统卡；实际访问须通过 Daybreak Red 可信访问流程。符合条件的组织需完成身份核验及组织级安全控制，个人不能把它当作公开通用模型试用。",
-            "impact": "计算机与网络安全方向的学生可借此了解专业安全模型的发布方式如何把授权、身份验证和组织治理纳入使用条件；日常课程学习不需要调用该受限模型。",
-            "free": "访问受 Daybreak Red 限制，并要求身份核验及组织安全控制；个人资格、地区、价格和使用配额官方未说明，不能视为公开免费服务。",
-            "category": "受限访问 / 网络安全防御",
-            "source": {
-              "name": "OpenAI 官方公告",
-              "published": "2026-11-05",
-              "url": "https://openai.com/index/introducing-gpt-6-cyber/"
-            }
-          },
-          {
-            "event": "腾讯 Hy4 新增视觉理解与电脑操作能力",
-            "summary": "腾讯于 11 月 4 日发布 Hy4，新增视觉理解和电脑操作能力，并改进指令遵循、长上下文理解及长程任务处理；官方列出的用途包括图表分析、图像处理和通过命令行或图形界面操作软件。",
-            "howTo": "打开腾讯 WorkBuddy、CodeBuddy 或 Yuanbao 等官方列出的接入产品，在可用模型中选择 Hy4；可用课程图表测试识图与解释，再对照原图核验数据。",
-            "impact": "学生可尝试让模型解释图表、整理多步骤资料或辅助制作演示内容；数字结论、引用和电脑操作结果仍应逐项检查。",
-            "free": "腾讯公告称 WorkBuddy 和 CodeBuddy 于 2026-11-04 至 2026-11-15 免费开放；支持地区、账号要求、具体功能范围及配额官方未说明。",
-            "category": "多模态助手 / 视觉理解与电脑操作",
-            "source": {
-              "name": "腾讯官方公告",
-              "published": "2026-11-04",
-              "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
-            }
-          },
-          {
-            "event": "OpenAI Images 2.6 支持 GIF 生成与更快迭代",
-            "summary": "OpenAI 发布 Images 2.6，可生成 GIF，并加强连续编辑时的人物、产品和品牌细节一致性；官方称生成速度较此前提升 50%，API 还增加图像标注编辑和 SVG 导出。",
-            "howTo": "在 ChatGPT 的图像生成功能中描述主体、动作和循环方式，生成后继续提示修改；在网页、桌面或移动端均可使用。",
-            "impact": "学生可为课堂展示制作循环示意图或故事板，并通过多轮编辑调整构图；提交前仍需检查文字、事实和画面细节。",
-            "free": "OpenAI 称该功能已在全球 ChatGPT 和 Codex 的所有订阅层级推出；免费版图像生成受限，但具体额度、账号条件及各地区开放时间官方未说明。",
-            "category": "图像与动图生成 / ChatGPT Images",
-            "source": {
-              "name": "OpenAI 官方公告",
-              "published": "2026-11-04",
-              "url": "https://openai.com/index/introducing-images-2-6/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "腾讯 WorkBuddy 与 CodeBuddy 限时免费",
-            "summary": "腾讯公告称 WorkBuddy 和 CodeBuddy 在 2026 年 11 月 4 日至 15 日免费开放，可体验 Hy4 支持的办公协作和编程辅助能力。",
-            "howTo": "在活动期间打开腾讯 WorkBuddy 或 CodeBuddy，按产品页面提示体验；可从课程笔记整理、代码讲解等低风险任务开始。",
-            "impact": "适合试做资料归纳、演示文稿准备或代码解释；结果仍需对照课程资料和自行运行验证。",
-            "free": "官方公布的免费期为 2026-11-04 至 2026-11-15。具体地区、账号要求、功能范围和使用配额官方未说明。",
-            "category": "限时免费 / 学习与办公工具",
-            "source": {
-              "name": "腾讯官方公告",
-              "published": "2026-11-04",
-              "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
-            }
-          },
-          {
-            "event": "ChatGPT Free：免费文字对话与有限图像功能",
-            "summary": "OpenAI 价格页列出 Free 方案，提供受防滥用规则约束的无限文字对话，以及有限的文件上传、图像生成、语音、深度研究和 Codex 使用。",
-            "howTo": "打开 chatgpt.com 或官方移动应用，使用 Free 方案提问、练习解释概念或生成复习提纲；上传材料和图像功能有使用限制。",
-            "impact": "可用于整理课程问题、拆解概念和构思学习提纲；重要结论应回到教材、讲义或原始网页核对。",
-            "free": "官方将 Free 列为免费方案；文字对话标注为无限但受防滥用规则约束，图像、上传、语音、深度研究和 Codex 均有限。其具体额度、地区和账号资格要求官方未说明。",
-            "category": "长期免费 AI 服务 / 学习问答",
-            "source": {
-              "name": "OpenAI ChatGPT 官方价格页",
-              "published": "官方未说明",
-              "url": "https://chatgpt.com/pricing/"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面及移动端 AI 助手",
-            "summary": "Claude 官方价格页列出免费方案，支持网页、桌面和移动端对话，并包含网页搜索、文件创建、代码运行和 Artifacts 等功能。",
-            "howTo": "打开 Claude 网页或官方桌面、移动应用，选择 Free 方案；可用网页搜索整理资料，或上传课程文件后让它协助提问和归纳。",
-            "impact": "可作为阅读、资料整理和代码练习的补充入口；使用回答时要检查引用来源和计算结果。",
-            "free": "官方列价为每月 0 美元、面向所有人，但每 5 小时及每周均有使用限制，官方未公布具体消息数量；账号和地区资格细则官方未说明。",
-            "category": "长期免费 AI 服务 / 阅读与写作",
-            "source": {
-              "name": "Anthropic Claude 官方价格页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出每月 0 美元的 Free 方案，含每月 2,000 次代码补全、Copilot CLI，以及有限的聊天和 agent 使用，无需信用卡。",
-            "howTo": "在 GitHub 选择 Copilot Free，并在支持的编辑器安装 Copilot；可用它解释课程代码或补全小函数，再运行测试并检查改动。",
-            "impact": "适合编程课程中的代码解释和小规模补全；聊天及 agent 有限制，生成代码应由学生自行验证。",
-            "free": "官方列价每月 0 美元、每月 2,000 次代码补全且无需信用卡；聊天和 agent 的具体额度、地区及账号资格限制官方未说明。",
-            "category": "长期免费 AI 服务 / 编程辅助",
-            "source": {
-              "name": "GitHub Copilot 官方计划与价格页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Across a Fevered Pacific Ocean, Seabirds Are Starving",
-            "source": "National Geographic",
-            "published": "2026-11-04",
-            "url": "https://www.nationalgeographic.com/environment/article/el-nino-murre-sea-bird-deaths-wildlife-rehabilitation-california",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境与生态 / 海洋热浪、厄尔尼诺与海鸟搁浅",
-            "summary": "报道从一名母亲把在海滩发现的海鸦送往野生动物救护中心切入，说明加州海洋热浪与厄尔尼诺使饵料鱼潜入更深、更冷的水层，海鸦反复潜水消耗过多能量；换羽期间保温能力下降，又令饥饿和失温风险加重。Pacific Wildlife Care 在 9 月 1 日至 11 月 2 日收治 922 只海鸦，远高于典型年份约 100 只，也超过 2015 年的 556 只。文章随后把加州搁浅事件放进太平洋生态变化及 2015—2016 年大规模死亡的历史背景，同时提醒岸边发现只占实际死亡的一小部分。结尾转向救护中心的喂养、复健与放归，指出救援人员仍在为冬季可能持续的搁浅做准备。",
-            "reason": [
-              "主题把极端气候、海洋食物网和野生动物保护联系起来，适合环境治理与生态风险类阅读。",
-              "文章先用海滩救援的具体场景引入，再解释因果链、对照历史数据，最后转向救护行动和未来风险。",
-              "可练习从案例提炼主旨、比较年度统计，并辨析搁浅数量与实际死亡总量之间的差异。",
-              "emaciated、forage fish、compound、deficit 等词汇可用于环境与生物多样性主题。",
-              "写作可借鉴“个案开篇—机制解释—历史参照—现实应对”的递进结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "emaciated",
-                "phonetic": "/ɪˈmeɪsieɪtɪd/",
-                "part": "adj.",
-                "translation": "极度消瘦的"
-              },
-              {
-                "word": "murre",
-                "phonetic": "/ˈmɜːr/",
-                "part": "n.",
-                "translation": "海鸦"
-              },
-              {
-                "word": "forage fish",
-                "phonetic": "/ˈfɒrɪdʒ fɪʃ/",
-                "part": "n. phr.",
-                "translation": "饵料鱼"
-              },
-              {
-                "word": "plunge",
-                "phonetic": "/plʌndʒ/",
-                "part": "v.",
-                "translation": "骤降；猛扎"
-              },
-              {
-                "word": "compound",
-                "phonetic": "/kəmˈpaʊnd/",
-                "part": "v.",
-                "translation": "加重；使恶化"
-              },
-              {
-                "word": "deficit",
-                "phonetic": "/ˈdefɪsɪt/",
-                "part": "n.",
-                "translation": "不足；缺口"
-              },
-              {
-                "word": "sap",
-                "phonetic": "/sæp/",
-                "part": "v.",
-                "translation": "逐渐削弱"
-              },
-              {
-                "word": "influx",
-                "phonetic": "/ˈɪnflʌks/",
-                "part": "n.",
-                "translation": "大量涌入"
-              },
-              {
-                "word": "mortality",
-                "phonetic": "/mɔːˈtæləti/",
-                "part": "n.",
-                "translation": "死亡；死亡率"
-              },
-              {
-                "word": "converge",
-                "phonetic": "/kənˈvɜːdʒ/",
-                "part": "v.",
-                "translation": "汇聚；同时发生"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "In typical years without major marine heat waves, PWC admits around 100 murres, a duck-sized seabird commonly found along the West Coast.",
-                "analysis": [
-                  "主干是 PWC admits around 100 murres，主语为救护中心缩写，谓语 admits 后接数量宾语。",
-                  "句首 In typical years without major marine heat waves 是时间状语，限定数据所对应的常态条件。",
-                  "a duck-sized seabird 是 murres 的同位说明，后面的 commonly found along the West Coast 为过去分词短语，修饰 seabird。",
-                  "around 表示约数，语气不同于精确统计；without 引出的条件也为后文异常年份作对照。",
-                  "可借鉴 “In typical years..., ... admits around...” 引入常态基线。"
-                ],
-                "translation": "在没有重大海洋热浪的典型年份，PWC 会接收约 100 只海鸦；这种海鸟体型约与鸭子相当，常见于美国西海岸。"
-              },
-              {
-                "original": "Between September 1 and November 2 of this year, the center has already received an unprecedented 922 murres.",
-                "analysis": [
-                  "句首 Between ... and ... 构成时间范围状语，说明统计涵盖的起止日期。",
-                  "主句主干为 the center has received 922 murres，使用现在完成时呈现截至当前已累计的结果。",
-                  "already 强调截至报道时数量已经达到该水平，unprecedented 修饰 922 murres 并突出其异常性。",
-                  "this year 依赖文章发表时间理解，阅读时应结合上下文而不能脱离日期。",
-                  "可借鉴 “Between A and B, ... has already received...” 报告一段时间内的累计数据。"
-                ],
-                "translation": "从当年 9 月 1 日到 11 月 2 日，该中心已经接收了创纪录的 922 只海鸦。"
-              },
-              {
-                "original": "With ocean temperatures showing little sign of immediate relief, incoming El Niño storms threaten to drive even more exhausted murres onto the sand.",
-                "analysis": [
-                  "主句主干是 incoming El Niño storms threaten to drive murres onto the sand，主语为即将到来的厄尔尼诺风暴。",
-                  "句首 With ocean temperatures showing... 是 with 复合结构，ocean temperatures 为逻辑主语，showing 是现在分词。",
-                  "little sign of immediate relief 描写海温短期内缺少缓解迹象，为主句提供背景条件。",
-                  "threaten to do 表示可能造成不利结果，而不是断言结果必然发生；even more 强调数量增加。",
-                  "可借鉴 “With..., ... threaten to...” 将背景变化与潜在风险连接起来。"
-                ],
-                "translation": "海水温度短期内几乎没有缓解迹象，接踵而来的厄尔尼诺风暴可能会把更多筋疲力尽的海鸦推上沙滩。"
-              }
-            ]
-          },
-          {
-            "title": "How to ‘fall back’ this weekend without losing your mind",
-            "source": "Scientific American",
-            "published": "2026-10-31",
-            "url": "https://www.scientificamerican.com/article/how-to-fall-back-this-weekend-without-losing-your-mind/",
-            "readingTime": "3 分钟",
-            "topic": "健康与生活 / 时钟调整、昼夜节律与睡眠",
-            "summary": "文章以美国周末调回标准时间为引子，说明回拨会带来较早的日出、较暗的傍晚和额外一小时睡眠。随后对比秋季回拨与春季前拨对健康的影响：研究者在春季调整后观察到更多睡眠损失和心脏病发作，而秋季相关风险较低；一些研究提示两次调整前后卒中风险可能上升，但春季死亡风险较高。作者进一步解释晨间光照有助于身体昼夜节律与外界同步，同时承认标准时间会缩短户外活动时间，黄昏通勤也可能增加碰撞风险。文章最后给出专家建议，包括避免缺觉、增加晨间光照、在天暗时保持通勤警觉并建立规律作息，并介绍医学组织支持永久标准时间的立场。",
-            "reason": [
-              "文章以健康和日常作息为主题，兼顾公共政策与个人生活，适合健康议题阅读。",
-              "结构从时间调整的事实切入，比较两种切换的风险，再解释生理机制、讨论代价并给出建议。",
-              "可练习辨析研究证据的限定语，比较春秋两种情况，并归纳作者提出的应对措施。",
-              "circadian rhythm、disruption、complication 等表达可用于健康与生活方式类话题。",
-              "写作可借鉴“说明利弊—引入专家观点—给出可执行建议”的实用论证结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "standard time",
-                "phonetic": "/ˈstændəd taɪm/",
-                "part": "n. phr.",
-                "translation": "标准时间"
-              },
-              {
-                "word": "circadian rhythm",
-                "phonetic": "/sɜːrˈkeɪdiən ˈrɪðəm/",
-                "part": "n. phr.",
-                "translation": "昼夜节律"
-              },
-              {
-                "word": "align",
-                "phonetic": "/əˈlaɪn/",
-                "part": "v.",
-                "translation": "使一致；使协调"
-              },
-              {
-                "word": "disruption",
-                "phonetic": "/dɪsˈrʌpʃən/",
-                "part": "n.",
-                "translation": "扰乱；中断"
-              },
-              {
-                "word": "complication",
-                "phonetic": "/ˌkɒmplɪˈkeɪʃən/",
-                "part": "n.",
-                "translation": "并发症；复杂问题"
-              },
-              {
-                "word": "stroke",
-                "phonetic": "/strəʊk/",
-                "part": "n.",
-                "translation": "中风"
-              },
-              {
-                "word": "commute",
-                "phonetic": "/kəˈmjuːt/",
-                "part": "n./v.",
-                "translation": "通勤；上下班往返"
-              },
-              {
-                "word": "sleep-deprived",
-                "phonetic": "/ˌsliːp dɪˈpraɪvd/",
-                "part": "adj.",
-                "translation": "睡眠不足的"
-              },
-              {
-                "word": "transition",
-                "phonetic": "/trænˈzɪʃən/",
-                "part": "n.",
-                "translation": "转变；过渡"
-              },
-              {
-                "word": "relish",
-                "phonetic": "/ˈrelɪʃ/",
-                "part": "v.",
-                "translation": "享受；欣然接受"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "At 2 A.M. on Sunday, most of the U.S. will set the clocks back by an hour.",
-                "analysis": [
-                  "句首 At 2 A.M. on Sunday 是具体时间状语，交代动作发生的时点。",
-                  "主干为 most of the U.S. will set the clocks back，主语指美国大多数地区，谓语使用一般将来时。",
-                  "the clocks 是 set 的宾语，back 是方向副词；by an hour 表示回拨的幅度。",
-                  "句子用简洁的时间与动作信息交代新闻背景，为后文讨论健康影响铺垫。",
-                  "可借鉴 “will set ... back by...” 描述制度或时间调整的方向和幅度。"
-                ],
-                "translation": "周日凌晨 2 点，美国大部分地区将把时钟拨回一小时。"
-              },
-              {
-                "original": "Research suggests standard time better aligns with our circadian rhythm, or internal clock, and reduces the risk of health complications.",
-                "analysis": [
-                  "主句核心是 Research suggests...，suggests 后省略 that，引出研究所支持的观点。",
-                  "从句主语是 standard time，谓语由 aligns 和 reduces 并列构成，共用同一主语。",
-                  "better 修饰 aligns；or internal clock 是对 circadian rhythm 的补充解释。",
-                  "reduces 的宾语为 the risk，of health complications 后置说明风险内容。",
-                  "可借鉴 “Research suggests ... and reduces the risk of...” 概括研究结论及其影响。"
-                ],
-                "translation": "研究表明，标准时间与我们的昼夜节律（即生物钟）更加协调，并能降低健康并发问题的风险。"
-              },
-              {
-                "original": "There are certain steps you can take to ensure a more smooth transition, experts say.",
-                "analysis": [
-                  "There are 是存在句型，真正的名词中心为 certain steps。",
-                  "you can take 是省略关系代词的定语从句，修饰 steps；take 后省略了作宾语的关系代词。",
-                  "to ensure a more smooth transition 是目的不定式，说明采取这些步骤的目标。",
-                  "experts say 是插入式消息来源，提示建议来自专家而非作者个人断言。",
-                  "可借鉴 “There are steps you can take to...” 引出可行的解决办法。"
-                ],
-                "translation": "专家表示，你可以采取一些措施，让过渡更加顺利。"
               }
             ]
           }
