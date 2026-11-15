@@ -1,6 +1,332 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-14T11:03:58+08:00",
+  "updatedAt": "2026-11-15T10:34:37+08:00",
   "issues": [
+    {
+      "date": "2026-11-15",
+      "status": "ready",
+      "ai": {
+        "intro": "本期核验 GitHub Copilot 的新模型、模型退役安排与企业服务器连接方式，并复核可免费用于学习、写作和编程的资源。",
+        "updates": [
+          {
+            "event": "Gemini 4 Hydrogen 上线 GitHub Copilot",
+            "summary": "GitHub 于 2026-11-13 宣布，Google 的 Gemini 4 Hydrogen Flash 模型已在 Copilot 中正式提供，面向快速、有效率的代理式编码、工具使用和多步骤工作流，并改进了相较 Gemini 3.8 Flash 的指令遵循。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、github.com 等已支持的 Copilot 端打开模型选择器，选 Gemini 4 Hydrogen 后用小型课程代码任务测试；若尚未出现，官方说明正在逐步开放，可稍后再检查。",
+            "impact": "可让它先拆解课程项目的多步骤编码任务、调用工具或协助定位问题；把它生成的代码放进本地测试，并检查每一步，不要直接提交未经验证的改动。",
+            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，未列 Free 计划；按模型供应商公开价格计费，具体价格见 Copilot 模型计费页。需要相应 Copilot 账户，地区资格官方未说明，功能逐步开放。",
+            "category": "编程助手 / 模型更新",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-13",
+              "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 将于 12 月 14 日下架指定模型",
+            "summary": "GitHub 于 2026-11-13 公布，2026-12-14 起在 Copilot 各体验中退役 Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6 和 Kimi K3，并为前五者分别列出替代模型；Kimi K3 的替代项尚待公布。年度订阅个人用户仍可使用 Claude Haiku 4.5。",
+            "howTo": "如果课程项目或编辑器设置仍选用上述模型，先查看 Copilot Chat、内联编辑、代理模式和代码补全的模型配置，再按公告切换到建议的替代模型；Kimi K3 用户需等待官方后续通知。",
+            "impact": "提前切换可避免 12 月 14 日后课程仓库脚本、提示词或个人开发流程因模型不可用而中断；保留一份模型无关的任务说明，便于切换时复测结果。",
+            "free": "公告给出的退役日期为 2026-12-14；除年度订阅个人用户的 Claude Haiku 4.5 例外外，调整覆盖 Copilot 各体验。具体免费计划、地区和调用额度未在公告中说明。",
+            "category": "编程助手 / 模型生命周期",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-13",
+              "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december/"
+            }
+          },
+          {
+            "event": "Copilot 应用正式支持连接 GitHub Enterprise Server",
+            "summary": "GitHub 于 2026-11-13 将 Copilot 应用连接 GitHub Enterprise Server（GHES）的功能从选择加入预览版转为正式可用；连接后可在应用中处理 GHES 远程仓库、议题和拉取请求。",
+            "howTo": "先用 GitHub.com 或 GHE.com 账户登录 Copilot 应用，再进入 Settings > Accounts > Add account，选择 GitHub Enterprise Server 并添加服务器账户；确认应用版本为 1.2.0 或更高。",
+            "impact": "如果学校实验室或团队把课程仓库托管在 GHES，学生可在 Copilot 应用里查看并处理相关仓库、议题和 PR；需注意官方明确说明 GHES 云端会话不可用。",
+            "free": "变更日志未说明该功能的价格、免费计划资格、地区或额度；需先登录 GitHub.com 或 GHE.com 账户，且要求 Copilot 应用 1.2.0+。GHES 云端会话不可用。",
+            "category": "编程助手 / 企业仓库协作",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-13",
+              "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "ChatGPT Free：免费日常问答与有限工具使用",
+            "summary": "OpenAI 的个人 Free 方案标价为每月 0 美元，提供日常文字对话；文件上传、图像生成、语音、深度研究、记忆与上下文、Codex 等功能有使用限制。",
+            "howTo": "打开 ChatGPT 定价页，选择 Get Free 并按页面提示进入账户；可用它梳理课程概念、列出论文提纲或解释英文段落，再回到教材和原文核对。",
+            "impact": "适合先做低成本的概念问答、写作结构练习和复习计划；遇到上传或研究额度限制时，改用分段提问并保留原始资料核验答案。",
+            "free": "Free 方案为 0 美元/月；文字对话标为不限量但受滥用防护约束，文件、图片、语音、深度研究等为有限使用。此定价页未说明免费账号的地区名单、注册具体要求及各工具的准确额度。",
+            "category": "免费聊天助手 / 学习与写作",
+            "source": {
+              "name": "OpenAI ChatGPT 官方定价页",
+              "published": "官方未说明",
+              "url": "https://chatgpt.com/pricing/"
+            }
+          },
+          {
+            "event": "Gemini 免费方案：Google 账号可用的学习助手",
+            "summary": "Google 的 Gemini Free 方案为每月 0 美元，需 Google 账号；官方方案页列出 Gemini 应用、Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gemini Notebook 等功能。",
+            "howTo": "打开 Gemini 官方方案页，选择 Free 后用 Google 账号进入 Gemini；可将一节课的概念、阅读提纲或学习计划拆成具体问题，并逐项核对回答。",
+            "impact": "可在不订阅付费计划的情况下进行课程概念解释、资料初步整理和图像草稿尝试；免费方案的模型与功能额度有限，重要结论仍应查阅原始材料。",
+            "free": "官方列价为 0 美元/月，要求 Google 账号；方案页说明所列功能可用，但未给出 Free 的精确用量、地区名单或功能配额。",
+            "category": "免费聊天助手 / 多模态学习",
+            "source": {
+              "name": "Google Gemini 官方方案页",
+              "published": "官方未说明",
+              "url": "https://gemini.google/subscriptions/"
+            }
+          },
+          {
+            "event": "Gemini Notebook（NotebookLM）免费研究笔记本",
+            "summary": "Google 帮助页说明，可用 Gmail 账号免费注册 Gemini Notebook（NotebookLM）；免费方案上限为每位用户 100 本笔记本、每本 50 个非笔记来源、每本 500 个笔记来源，并支持所有用户使用自定义聊天和分析功能。",
+            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建课程笔记本并添加获准使用的讲义或阅读材料，再围绕材料提问、整理复习要点；确认每本来源数不超过免费方案上限。",
+            "impact": "可把多份课程阅读材料集中起来做主题比较、概念复习和论文前期梳理；上传前检查课程和版权要求，输出中的引文与事实须回到原文确认。",
+            "free": "可用 Gmail 账号免费注册；免费层为 100 本/用户、50 个非笔记来源/本、500 个笔记来源/本，额度可能变动。网页端仅在官方支持的国家和地区、达到当地同意年龄的用户可用；高级分享为付费功能。",
+            "category": "免费研究工具 / 资料问答",
+            "source": {
+              "name": "Google Gemini Notebook 官方帮助中心",
+              "published": "官方未说明",
+              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 的 Copilot Free 方案价格为 0 美元，官方列出每月 2,000 次代码补全、有限的聊天与代理使用，并说明无需信用卡；已验证学生另可使用 GitHub Copilot Student 方案。",
+            "howTo": "用 GitHub 账号进入 Copilot 官方方案页，选择 Free，再在 VS Code 或其他支持的编辑器安装 Copilot 扩展并登录；先让它解释一段课程代码或补全小型练习，并运行测试。",
+            "impact": "可为入门编程、样板代码和报错解释提供免费辅助；把月度补全次数留给重复性编码，聊天和代理额度有限，生成代码须逐行理解并测试。",
+            "free": "Free 为 0 美元且无需信用卡；每月 2,000 次代码补全，聊天与代理使用有限。GitHub 表示已验证学生可使用 Student 方案；Free 的地区名单和聊天/代理确切额度官方未说明。",
+            "category": "免费编程助手 / 学生权益",
+            "source": {
+              "name": "GitHub Copilot 官方方案页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
+            "source": "BBC",
+            "published": "2026-11-15",
+            "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "消费与文化 / 美妆降临日历的营销与性价比",
+            "summary": "文章以消费者 Julia 对美妆降临日历的挑选标准开篇，借近期 Skims 日历遭批评并退款的事件引出核心问题：高价礼盒是否真的划算。报道先呈现购买者视角：有人看重按小包装试用和单品折扣，有人认为多数产品不合心意；接着说明品牌的限量话术和网红开箱如何制造稀缺感与惊喜，并引用 Ipsos 数据称美妆日历约占全部降临日历销量的 15%。随后，消费者和美学专家反驳“标价总和便宜即划算”的判断，指出不需要或不会用完的商品会削弱实际价值。文章以人们交换不需要的产品收尾，整体结论是性价比取决于个人需求和实际使用，而非表面折扣。",
+            "reason": [
+              "文章讨论节日消费、营销影响和理性购物，适合消费文化与商业类阅读主题。",
+              "结构由个人购买经历引题，转向市场数据与营销策略，再并置不同消费者和专家意见，最后回到实际使用价值。",
+              "可考查人物观点匹配、数据所支持的结论、转折词作用，以及作者如何呈现正反评价。",
+              "词汇涵盖消费选择、广告策略和价值判断，可用于理解消费者行为类文章。",
+              "写作可借鉴“生活案例—市场证据—异议与专家判断—限定结论”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "appeal",
+                "phonetic": "/əˈpiːl/",
+                "part": "n.",
+                "translation": "吸引力；感染力"
+              },
+              {
+                "word": "unsentimental",
+                "phonetic": "/ˌʌnˌsentɪˈmentl/",
+                "part": "adj.",
+                "translation": "不感情用事的；务实的"
+              },
+              {
+                "word": "splurge",
+                "phonetic": "/splɜːdʒ/",
+                "part": "v.",
+                "translation": "挥霍；大手笔消费"
+              },
+              {
+                "word": "sophisticated",
+                "phonetic": "/səˈfɪstɪkeɪtɪd/",
+                "part": "adj.",
+                "translation": "复杂精细的；老练的"
+              },
+              {
+                "word": "infectious",
+                "phonetic": "/ɪnˈfekʃəs/",
+                "part": "adj.",
+                "translation": "有感染力的；易传播的"
+              },
+              {
+                "word": "savvier",
+                "phonetic": "/ˈsæviər/",
+                "part": "adj.",
+                "translation": "更精明的；更懂行的"
+              },
+              {
+                "word": "menial",
+                "phonetic": "/ˈmiːniəl/",
+                "part": "adj.",
+                "translation": "微不足道的；乏味的"
+              },
+              {
+                "word": "bombarded with",
+                "phonetic": "/bɑːmˈbɑːrdɪd wɪð/",
+                "part": "phr.",
+                "translation": "被大量……信息轰炸"
+              },
+              {
+                "word": "dwindle",
+                "phonetic": "/ˈdwɪndl/",
+                "part": "v.",
+                "translation": "逐渐减少；衰减"
+              },
+              {
+                "word": "mark-up",
+                "phonetic": "/ˈmɑːrk ʌp/",
+                "part": "n.",
+                "translation": "加价幅度；溢价"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "But she takes quite an unsentimental approach.",
+                "analysis": [
+                  "主干为 she takes an approach，主语 she、谓语 takes、宾语 an approach。",
+                  "句首 But 与前文“容易被吸引”形成转折，提示人物采取了不同于冲动消费的做法。",
+                  "quite 修饰 an unsentimental approach，unsentimental 描写其务实、不被情绪左右。",
+                  "可借鉴 take a ... approach 表达某人处理问题的方式，并用 But 引入对照。"
+                ],
+                "translation": "但她采取了相当务实、不感情用事的做法。"
+              },
+              {
+                "original": "But in the face of that tsunami of marketing, customers seem to be getting savvier.",
+                "analysis": [
+                  "主句主干是 customers seem to be getting savvier，customers 为主语，seem 为系动词性谓语。",
+                  "in the face of that tsunami of marketing 是句首介词短语，表示面对铺天盖地的营销。",
+                  "that tsunami of marketing 使用海啸比喻营销声势；getting savvier 表示消费者逐渐变得更精明。",
+                  "But 引出与营销影响力相反的趋势；seem to 表示作者谨慎判断而非绝对断言。"
+                ],
+                "translation": "然而，面对海量营销宣传，消费者似乎正变得更加精明。"
+              },
+              {
+                "original": "But it is exceptionally unlikely that you would use all the products inside them, so they're probably not worth it.",
+                "analysis": [
+                  "句子由 so 连接因果两部分：前半指出全部用完的可能性极低，后半推出“不太值得”的判断。",
+                  "前半采用形式主语 it；真正的内容由 that 引导的从句 that you would use all the products inside them 承担。",
+                  "exceptionally 修饰 unlikely，强化“极不可能”；would use 表示假设情境中的使用行为。",
+                  "so 引出结论，probably 则限制结论强度；可借鉴 it is unlikely that... 表达审慎推断。"
+                ],
+                "translation": "但你极不可能用完里面的所有产品，因此它们可能并不值得购买。"
+              }
+            ]
+          },
+          {
+            "title": "Indigenous students retrace Lewis and Clark’s historic journey: ‘We can’t protect what we cannot see’",
+            "source": "The Guardian",
+            "published": "2026-11-14",
+            "url": "https://www.theguardian.com/us-news/2026/nov/14/lewis-clark-indigenous-students",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "环境与社会 / 原住民学生、生态调查与知识主权",
+            "summary": "文章把 19 世纪 Lewis 与 Clark 探险队的自然观察放在殖民扩张背景中，指出原住民社群早已熟悉当地生态，且其在早期探险中的贡献常被淡化。随后报道 Smithsonian 与部落学院合作，以沿线相机陷阱重新调查野生动物，并让部落学生参与数据采集、解释与有薪实习。文章也呈现社群对数据外流和土地被研究者利用的担忧，说明参与者如何尝试把传统生态知识与新数据结合，以支持本地保护决策。报道接着介绍记录到的动物变化、数据缺口及 AI 识别后由志愿科学家验证的流程；项目数据完成后将开放给研究者和土地管理者。结尾回到学生的职业选择与主权意识，强调由社群参与研究不仅补充生态资料，也使其对土地与知识的决策权得到更多承认。",
+            "reason": [
+              "文章结合生物多样性、原住民知识与研究伦理，覆盖环境保护和社会公平等常见议题。",
+              "行文先回顾历史叙事，再介绍调查设计与社群顾虑，继而呈现数据发现，最后落到知识主权与保护意义。",
+              "可考查历史背景的作用、引语态度、调查方法与结论之间的关系，以及转折如何修正单一叙事。",
+              "词汇涉及生态研究、社区自治和证据可靠性，适合积累跨学科社会议题表达。",
+              "写作可借鉴“历史语境—现实项目—潜在风险—参与者收益”的层次组织，并区分数据与价值判断。"
+            ],
+            "vocabulary": [
+              {
+                "word": "dispatch",
+                "phonetic": "/dɪˈspætʃ/",
+                "part": "v.",
+                "translation": "派遣；派出"
+              },
+              {
+                "word": "ardent",
+                "phonetic": "/ˈɑːdənt/",
+                "part": "adj.",
+                "translation": "热情的；热切的"
+              },
+              {
+                "word": "meticulous",
+                "phonetic": "/məˈtɪkjələs/",
+                "part": "adj.",
+                "translation": "一丝不苟的；极仔细的"
+              },
+              {
+                "word": "pivotal",
+                "phonetic": "/ˈpɪvətl/",
+                "part": "adj.",
+                "translation": "关键的；核心的"
+              },
+              {
+                "word": "invasion",
+                "phonetic": "/ɪnˈveɪʒn/",
+                "part": "n.",
+                "translation": "入侵；侵略"
+              },
+              {
+                "word": "downplay",
+                "phonetic": "/ˌdaʊnˈpleɪ/",
+                "part": "v.",
+                "translation": "淡化；轻描淡写"
+              },
+              {
+                "word": "stipend",
+                "phonetic": "/ˈstaɪpend/",
+                "part": "n.",
+                "translation": "津贴；实习补助"
+              },
+              {
+                "word": "integral",
+                "phonetic": "/ɪnˈteɡrəl/",
+                "part": "adj.",
+                "translation": "不可或缺的；构成整体的"
+              },
+              {
+                "word": "sovereignty",
+                "phonetic": "/ˈsɒvrənti/",
+                "part": "n.",
+                "translation": "主权；自主权"
+              },
+              {
+                "word": "overdue",
+                "phonetic": "/ˌəʊvəˈdjuː/",
+                "part": "adj.",
+                "translation": "迟来的；早该得到的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "These observations were pivotal in shaping an early understanding of North American biodiversity.",
+                "analysis": [
+                  "主干是 These observations were pivotal，These observations 为主语，were pivotal 为系表结构。",
+                  "in shaping an early understanding 是介词短语，说明这些观察在哪方面具有关键作用。",
+                  "shaping 为动名词，后接宾语 an early understanding；of North American biodiversity 补充说明理解的内容。",
+                  "句子把历史记录与知识形成相连，可借鉴 be pivotal in doing 表达某事对某过程至关重要。"
+                ],
+                "translation": "这些观察对早期形成北美生物多样性认知起到了关键作用。"
+              },
+              {
+                "original": "These “discoveries” were hardly new to the Indigenous tribes who had occupied the Great Plains and west for millennia, however.",
+                "analysis": [
+                  "主干为 These “discoveries” were hardly new，主语是带引号的 discoveries，表语为 hardly new。",
+                  "to the Indigenous tribes 是说明“对谁而言并不新鲜”的介词短语。",
+                  "who had occupied... 是修饰 tribes 的定语从句；过去完成时 had occupied 强调其长期居住先于相关探险叙事。",
+                  "hardly 表示“几乎不”，句末 however 标示转折；引号也提示作者对“发现”这一说法保持距离。"
+                ],
+                "translation": "然而，对早已在大平原和西部生活了数千年的原住民部族而言，这些所谓的“发现”并不新鲜。"
+              },
+              {
+                "original": "We cannot protect what we cannot see or don’t understand.",
+                "analysis": [
+                  "句子主干为 We cannot protect...，主语 we 和情态动词 cannot 表达集体能力或条件限制。",
+                  "what we cannot see or don’t understand 是 what 引导的自由关系从句，整体充当 protect 的宾语。",
+                  "从句内部由 or 并列 cannot see 与 don’t understand，形成“看不见/不了解”的递进式并列。",
+                  "重复 cannot 构成简洁有力的平行结构；可用于概括证据、认知与治理行动之间的关系。"
+                ],
+                "translation": "我们无法保护自己看不见或不了解的事物。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-14",
       "status": "ready",
@@ -2011,364 +2337,6 @@ window.BRIEFING_DATA = {
                   "does not guarantee 使用否定表达，指“不能保证”，不等于断言学生必然失败。"
                 ],
                 "translation": "调查发现，白人工人阶级家庭中越来越多人认为，现行教育体系无法保证未来成功。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-08",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 GitHub Copilot 代码审查与开发工具更新，以及 Anthropic 对 AI 科学建模的研究；免费资源包括可下载模型、Gemini 学习工具、编程辅助和翻译服务。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 代码审查新增管理与概览信息",
-            "summary": "GitHub 为 Copilot 代码审查新增 REST 和 GraphQL 管理设置，提供审查来源归属等信息，并精简概览、集中显示未审查文件及排除原因；用户还可对概览反馈。公告说明这些改进面向指定 Copilot 计划。",
-            "howTo": "提交课程项目 PR 后查看 review overview，检查 Files not reviewed 及排除原因；若概览建议不准确或冗长，可点踩后选择 Add a reason。仓库管理员可按官方文档配置 REST 或 GraphQL 设置。",
-            "impact": "团队作业中可更清楚地核对自动审查意见及其来源，减少把模型建议直接当成正确结论的风险；代码仍应通过测试并由组员复核。",
-            "free": "公告列出 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划，未列 Free 计划，不能据此认定免费层可用。地区、独立调用额度及具体开放时间官方未说明。",
-            "category": "编程助手 / 代码审查",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-06",
-              "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates/"
-            }
-          },
-          {
-            "event": "GitHub Copilot CLI 与 VS Code 开发体验更新",
-            "summary": "GitHub 11 月 6 日周报介绍 Copilot CLI 的 /settings 统一设置界面，以及 VS Code 1.145 的实验性聊天视图、远程浏览器预览与 canvas、按 cron 表达式安排本地自动化等更新。",
-            "howTo": "在 Copilot CLI 输入 `/settings` 查看统一设置；使用 VS Code 1.145 的用户可阅读周报中对应功能说明，并按需启用远程浏览器支持、canvas 或本地定时自动化。先用无敏感内容的课程小项目试运行，再检查生成的任务和结果。",
-            "impact": "学生可用定时任务重复执行低风险的资料整理或项目检查，也可在浏览器预览课堂演示；实验性功能可能变化，重要作业不应依赖未经检查的自动操作。",
-            "free": "该周报未说明这些 CLI/VS Code 更新的具体价格、账户计划、地区或配额；远程预览及 canvas 等相关体验标注为预览功能，实际可用性以产品内显示为准。",
-            "category": "编程助手 / CLI 与编辑器",
-            "source": {
-              "name": "GitHub Copilot 官方周报",
-              "published": "2026-11-06",
-              "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2/"
-            }
-          },
-          {
-            "event": "Anthropic 发布 AI 科学建模研究文章",
-            "summary": "Anthropic 研究团队以 Hodgkin–Huxley 神经模型为例，梳理科学建模的三个步骤：构建模型、用测量数据约束参数、解释模型所揭示的机制。文章强调拟合数据并不等于揭示真实机制；它是研究文章，不是新发布的 Claude 功能。",
-            "howTo": "阅读文章并把其建模思路用于课程数据：先写出问题和假设，再标注模型变量与假设，最后比较预测和观测数据，并记录其他可能解释；不要把拟合结果直接写成因果证明。",
-            "impact": "做论文阅读、实验报告或社会调查时，学生可用这套区分检查“模型解释了数据”与“模型证明了机制”之间的差别，并在结论中交代不确定性。",
-            "free": "Anthropic 官网可直接阅读这篇研究文章；它不代表 Claude 新功能。文章未说明 Claude 服务的价格、地区、账号要求或使用配额。",
-            "category": "AI 研究 / 科学建模",
-            "source": {
-              "name": "Anthropic 官方研究文章",
-              "published": "2026-11-06",
-              "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Qwen3 Embedding 0.6B：可下载的多语言文本向量模型",
-            "summary": "Qwen 官方模型卡提供 Qwen3 Embedding 0.6B 权重，定位于文本嵌入任务，支持多语言检索、分类和聚类等用途，模型采用 Apache-2.0 许可证。它是嵌入模型，不是对话模型。",
-            "howTo": "打开官方 Hugging Face 模型卡，按其使用说明安装 Sentence Transformers 或 Transformers 并加载 `Qwen/Qwen3-Embedding-0.6B`；用课程笔记和一个查询句生成向量，再比较相似度以寻找相关段落。",
-            "impact": "适合搭建课程资料的语义检索小实验，或比较中英文笔记的关联；结果是相关性排序，不等于事实核验，也不能直接代替阅读原文。",
-            "free": "官方模型卡提供可下载权重，许可证为 Apache-2.0；硬件要求、运行成本、地区和账号限制官方未说明。",
-            "category": "开源模型 / 文本嵌入",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
-            }
-          },
-          {
-            "event": "DeepSeek-R1-Distill-Qwen-1.5B：MIT 许可开放权重",
-            "summary": "DeepSeek 官方模型卡提供 1.5B 参数的 R1 蒸馏模型权重，并以 MIT 许可证发布；模型卡介绍了其推理用途和运行示例，适合学习者自行试用而非视为答案保证。",
-            "howTo": "从官方 Hugging Face 模型卡进入 Files and versions 下载权重，并按卡片中的 Transformers 示例配置环境；用教材中的一道数学或逻辑题测试输出，再对照标准解答逐步检查。",
-            "impact": "学生可以观察较小型推理模型如何组织解题步骤，比较不同提示下的结果；本地运行所需硬件因环境而异，必须自行评估。",
-            "free": "模型权重可按模型卡下载，许可证为 MIT；硬件、运行成本、地区和账号要求官方未说明。",
-            "category": "开源模型 / 推理实验",
-            "source": {
-              "name": "DeepSeek 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
-            }
-          },
-          {
-            "event": "Gemini API：部分模型提供免费层级",
-            "summary": "Google AI Studio 的官方价格表为部分 Gemini 模型列出 Free 层级；可在开发者环境中试做文本生成或学习项目。价格表同时说明免费层内容可能用于改进 Google 产品。",
-            "howTo": "登录 Google AI Studio，选择价格表标为 Free 的模型，在提示窗口试写一个不含个人或课程敏感信息的小任务；开发前查看所选模型的速率限制和数据使用说明。",
-            "impact": "适合初学者以小规模 API 调用练习提示设计、文本分类或课程原型，不必先承诺付费；不要上传保密研究数据。",
-            "free": "官方价格表仅对指定模型列出免费层，速率限制因模型而异；免费层内容可能用于改进 Google 产品。账号资格、地区和个人可保证的具体额度官方未说明，请以实时价格表为准。",
-            "category": "免费 API / 模型试用",
-            "source": {
-              "name": "Google AI for Developers 官方价格表",
-              "published": "官方未说明",
-              "url": "https://aistudio.google.com/docs/pricing"
-            }
-          },
-          {
-            "event": "NotebookLM Standard：免费方案可建笔记本并添加来源",
-            "summary": "Google 帮助页列出 NotebookLM Standard 的使用上限：每位用户最多 100 个笔记本，每个笔记本最多 50 个来源，并说明可使用 Gmail 账号注册。",
-            "howTo": "用 Gmail 账号打开 NotebookLM，新建笔记本并添加课程讲义或公开文章作为来源；针对来源提问并回到原文核对引用内容。",
-            "impact": "适合按课程或论文主题整理阅读材料、生成复习问题；来源数量有上限，且模型回答应与原始资料交叉核对。",
-            "free": "官方支持页列出的 Standard 上限为每位用户 100 个笔记本、每个笔记本 50 个来源；可用地区、账号年龄资格以及其他功能的使用额度按官方页面为准，未明确部分官方未说明。",
-            "category": "长期免费工具 / 资料阅读",
-            "source": {
-              "name": "Google NotebookLM 官方帮助页",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出 Copilot Free，包含每月 2,000 次代码补全，以及受限的聊天和 agent 功能。",
-            "howTo": "用 GitHub 账号开通 Copilot Free，在支持的编辑器安装官方扩展；先让它解释一段课程代码或补全小函数，再运行测试并检查输出。",
-            "impact": "可用于入门编程中的语法提示、代码解释和小型练习，补全结果应由学生理解并测试，而不是直接提交。",
-            "free": "官方计划页标价为免费，并列出每月 2,000 次代码补全；聊天和 agent 使用受限。具体地区、账号资格及这些功能的细分配额官方未说明。",
-            "category": "长期免费工具 / 编程学习",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "DeepL Free：每月 50,000 字符文本翻译",
-            "summary": "DeepL 官方方案页列出免费版每月最多翻译 50,000 个字符，并支持单个文件翻译，文件大小上限为 5 MB。",
-            "howTo": "在 DeepL 网页版粘贴一段英文摘要或上传符合大小限制的文件进行翻译；把译文与原文逐句比对，重点核对术语、否定关系和长句逻辑。",
-            "impact": "可辅助理解英文论文和练习双语表达；机器译文适合作为理解起点，不应未经核对地引用或替代自己的翻译。",
-            "free": "官方方案页列出的额度为每月 50,000 字符，单个文件翻译上限 5 MB；地区、账号资格及不同文件类型的细节官方未说明。",
-            "category": "长期免费工具 / 翻译学习",
-            "source": {
-              "name": "DeepL 官方方案页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "This Wooden Wardrobe in Pompeii Remained Sealed for Nearly 2,000 Years. Archaeologists Just Opened It for the First Time",
-            "source": "Smithsonian Magazine",
-            "published": "2026-11-06",
-            "url": "https://www.smithsonianmag.com/smart-news/this-wooden-wardrobe-in-pompeii-remained-sealed-for-nearly-2000-years-archaeologists-just-opened-it-for-the-first-time-180989831/",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "文化与考古 / 庞贝日常生活",
-            "summary": "文章以庞贝一只近两千年未开启的木柜为线索，介绍考古人员在住宅中发现的灯具、梳妆用品、玻璃器皿、钱币和护身符项链等物品，并借这些生活遗物讨论居民的日常习惯与身份线索。作者随后说明，考古学家根据贵重物品推测屋主可能在火山喷发时匆忙离开，但目前仍无法确定他们的命运；文章以这种证据与未知并存的状态收束，提醒读者遗物能提供线索，却不能补齐全部历史。",
-            "reason": [
-              "考古与日常生活兼具文化主题，适合练习从具体遗物概括社会生活。",
-              "文章按发现现场、器物细节、研究者推断到未知结论展开，结构清楚且有证据层级。",
-              "可练习细节定位、推断依据判断，以及区分事实与作者保留意见的题型。",
-              "eclectic、trove、utilitarian 等词汇可用于描述多样性、发现物与用途。",
-              "写作时可借鉴“观察证据—提出有限推断—承认未知”的审慎论证方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "eclectic",
-                "phonetic": "/ɪˈklektɪk/",
-                "part": "adj.",
-                "translation": "多种来源或风格混合的"
-              },
-              {
-                "word": "trove",
-                "phonetic": "/troʊv/",
-                "part": "n.",
-                "translation": "珍藏；大量有价值的发现物"
-              },
-              {
-                "word": "utilitarian",
-                "phonetic": "/ˌjuːtɪlɪˈteriən/",
-                "part": "adj.",
-                "translation": "实用的；功利性的"
-              },
-              {
-                "word": "cache",
-                "phonetic": "/kæʃ/",
-                "part": "n.",
-                "translation": "藏匿的一批物品"
-              },
-              {
-                "word": "adornment",
-                "phonetic": "/əˈdɔːrnmənt/",
-                "part": "n.",
-                "translation": "装饰物；装饰"
-              },
-              {
-                "word": "suspect",
-                "phonetic": "/səˈspekt/",
-                "part": "v.",
-                "translation": "推测；怀疑"
-              },
-              {
-                "word": "renovation",
-                "phonetic": "/ˌrenəˈveɪʃn/",
-                "part": "n.",
-                "translation": "修缮；翻新"
-              },
-              {
-                "word": "depict",
-                "phonetic": "/dɪˈpɪkt/",
-                "part": "v.",
-                "translation": "描绘；描述"
-              },
-              {
-                "word": "occupant",
-                "phonetic": "/ˈɑːkjəpənt/",
-                "part": "n.",
-                "translation": "居住者；占用者"
-              },
-              {
-                "word": "identifiable",
-                "phonetic": "/aɪˌdentəˈfaɪəbəl/",
-                "part": "adj.",
-                "translation": "可识别的；可确认身份的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Nearly 2,000 years ago, residents of the ancient Roman city of Pompeii stashed an eclectic mix of objects in a wooden wardrobe.",
-                "analysis": [
-                  "主干是 residents stashed an eclectic mix of objects，交代“居民藏放物品”这一核心事件。",
-                  "句首 Nearly 2,000 years ago 是时间状语，限定事件发生年代。",
-                  "of the ancient Roman city of Pompeii 修饰 residents，交代居民所属地点。",
-                  "in a wooden wardrobe 是地点状语；stashed 比普通的 put 更含有藏放意味。",
-                  "eclectic mix of objects 用概括性名词组为后文列举各类器物作铺垫。"
-                ],
-                "translation": "近两千年前，庞贝古城的居民把一批风格各异的物品藏在一只木柜里。"
-              },
-              {
-                "original": "Based on the number of valuables found in the wardrobe, archaeologists suspect that the house’s owners left in a hurry, perhaps during the eruption of Mount Vesuvius in 79 C.E.",
-                "analysis": [
-                  "句首 Based on... 是依据状语，说明推断来自柜内贵重物品的数量。",
-                  "主句主干为 archaeologists suspect that...，真正的判断是“考古学家推测”。",
-                  "that 引导宾语从句，内容是屋主仓促离开；found in the wardrobe 后置修饰 valuables。",
-                  "perhaps 表示可能性，作者没有把离开时间写成确定事实。",
-                  "句子呈现“证据—推断—保留”的逻辑，写作时可用于审慎表达结论。"
-                ],
-                "translation": "根据柜内发现的大量贵重物品，考古学家推测房屋主人可能是在仓促中离开的，也许正值公元79年维苏威火山喷发之际。"
-              },
-              {
-                "original": "Much about the building and its onetime occupants remains unknown.",
-                "analysis": [
-                  "主干是 Much remains unknown，说明仍有大量信息未知。",
-                  "Much 是不可数意义的代词，作单数主语，因此谓语使用 remains。",
-                  "about the building and its onetime occupants 补充说明未知信息的范围。",
-                  "onetime 表示“曾经的”，与 occupants 合用指昔日居住者。",
-                  "remains unknown 是简洁的系表结构，可用于概括证据边界。"
-                ],
-                "translation": "关于这栋建筑及其昔日居住者的许多情况仍不为人知。"
-              }
-            ]
-          },
-          {
-            "title": "In Alaska’s capital, food comes by water, air or, most often, community sharing",
-            "source": "The Guardian",
-            "published": "2026-11-06",
-            "url": "https://www.theguardian.com/environment/2026/nov/06/alaska-juneau-food-access",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "社会与环境 / 食物获取与社区互助",
-            "summary": "文章以阿拉斯加州首府朱诺为例，指出常用的食品进口比例难以呈现当地真实供给。作者先介绍当地依赖海运和空运、耕地稀少且生长季短，再分析小规模农业和市场销售难以保障可负担供应；后文转向传统采集分享、社区互助和面向弱势群体的营养项目。文章由此把焦点从进口比例等总量指标转向食物如何被获取、分享和负担，强调多种社区渠道共同支撑食物保障。",
-            "reason": [
-              "文章把社会公平与环境、地理条件相连，适合练习公共议题类阅读。",
-              "文章从常被引用的进口比例与实际共享、采集食物之间的差异切入，再分析地理和市场限制及社区方案。",
-              "适合考查转折、原因推断、例证作用和作者如何限定解决方案。",
-              "arable、subsistence、provisioning 等词可用于讨论土地、供给和生计。",
-              "议论文可借鉴其从总量指标转向分配机制，并用个案补足统计盲点的写法。"
-            ],
-            "vocabulary": [
-              {
-                "word": "arable",
-                "phonetic": "/ˈærəbəl/",
-                "part": "adj.",
-                "translation": "可耕种的"
-              },
-              {
-                "word": "vulnerable",
-                "phonetic": "/ˈvʌlnərəbəl/",
-                "part": "adj.",
-                "translation": "易受伤害的；脆弱的"
-              },
-              {
-                "word": "subsistence",
-                "phonetic": "/səbˈsɪstəns/",
-                "part": "n.",
-                "translation": "生计；维持生存的最低生活"
-              },
-              {
-                "word": "transacted",
-                "phonetic": "/trænˈzæktɪd/",
-                "part": "v.",
-                "translation": "办理；进行交易"
-              },
-              {
-                "word": "mutual provisioning",
-                "phonetic": "/ˈmjuːtʃuəl prəˈvɪʒənɪŋ/",
-                "part": "n. phr.",
-                "translation": "相互供给；互助性供给"
-              },
-              {
-                "word": "harvest",
-                "phonetic": "/ˈhɑːrvɪst/",
-                "part": "v./n.",
-                "translation": "收获；收成"
-              },
-              {
-                "word": "cultivates",
-                "phonetic": "/ˈkʌltɪveɪts/",
-                "part": "v.",
-                "translation": "耕种；培育"
-              },
-              {
-                "word": "modest",
-                "phonetic": "/ˈmɑːdɪst/",
-                "part": "adj.",
-                "translation": "不大的；适度的"
-              },
-              {
-                "word": "streamlined",
-                "phonetic": "/ˈstriːmlaɪnd/",
-                "part": "adj.",
-                "translation": "精简的；效率更高的"
-              },
-              {
-                "word": "afford",
-                "phonetic": "/əˈfɔːrd/",
-                "part": "v.",
-                "translation": "负担得起；支付得起"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Forty miles north-west of Alaska’s capital, the highway just ends.",
-                "analysis": [
-                  "主干是 the highway ends，使用极简句式交代道路在此终止。",
-                  "Forty miles north-west of Alaska’s capital 是句首地点状语，先定位地理环境。",
-                  "just 强调道路“到此为止”的限制，为后文解释偏远社区的交通条件铺垫。",
-                  "作者先写空间边界而非抽象统计，形成具体、有画面感的开篇。",
-                  "阅读时应区分地点事实与后文关于食物获取的因果分析。"
-                ],
-                "translation": "在阿拉斯加首府西北方向四十英里处，公路就到头了。"
-              },
-              {
-                "original": "That figure cannot measure how Juneau feeds itself, sharing and harvesting from the land.",
-                "analysis": [
-                  "主句主干是 That figure cannot measure...，指出某项统计数字存在衡量盲区。",
-                  "how Juneau feeds itself 是 measure 的宾语从句，说明未被统计的对象。",
-                  "sharing and harvesting from the land 是补充性现在分词结构，举出社区获得食物的方式。",
-                  "cannot 与后面的社区实践形成对照，论证市场数据不足以涵盖真实供给。",
-                  "句中把统计口径问题与日常互助联系起来，是社会议题文章常见的论证推进。"
-                ],
-                "translation": "这个数字无法衡量朱诺如何养活自己——包括分享食物以及从土地上收获食物。"
-              },
-              {
-                "original": "Operations like Krapek’s and Orsi’s can’t feed a community on their own.",
-                "analysis": [
-                  "主干是 Operations can’t feed a community，明确指出单靠这些经营项目无法满足整个社区。",
-                  "like Krapek’s and Orsi’s 用两个具体案例说明 operations 所指范围。",
-                  "on their own 是限制性状语，强调“单独依靠它们”不够，而非否定其价值。",
-                  "情态动词 can’t 表达能力边界，避免把个案写成完整解决方案。",
-                  "该句为前文案例加上限定，也为强调多方协作铺路。"
-                ],
-                "translation": "像 Krapek 和 Orsi 这样的经营项目，单靠自身无法养活整个社区。"
               }
             ]
           }
