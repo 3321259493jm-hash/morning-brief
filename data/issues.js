@@ -1,6 +1,358 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-15T10:34:37+08:00",
+  "updatedAt": "2026-11-16T10:41:24+08:00",
   "issues": [
+    {
+      "date": "2026-11-16",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 Claude Meetings 会议协作与 GitHub Copilot 的模型更新，并筛选可用于学习、转录和开发的免费资源。",
+        "updates": [
+          {
+            "event": "Claude Meetings 开始测试：可加入 Google Meet 会议",
+            "summary": "Anthropic 于 2026-11-12 宣布，Claude Meetings 在 Claude 和 Claude Desktop 的 Team、Enterprise 方案中开启 beta：作为可见参会者加入 Google Meet，实时记录、回答问题并制作文档、白板和幻灯片；会后可查看摘要、行动项和文字稿。",
+            "howTo": "在 Claude 的 Meetings 页面连接 Google Calendar，选中日历中的会议并点 Add Claude；组织所有者需先启用 Google Calendar。使用自动加入前，先征得所有参会者同意转录。",
+            "impact": "小组讨论课程项目或线上研讨时，可让 Claude 整理讨论要点、行动清单和共享文档；参会者都能看到它加入，仍应检查纪要并避免未经同意转录。",
+            "free": "目前仅向 Team 和 Enterprise 组织 beta 开放，部分启用零数据保留、HIPAA 配置或客户管理加密密钥的组织不可用；地区和调用配额官方未说明。会议笔记、文字稿及不调用连接器的回答包含在这两类方案中；会议文档和白板免费至 2027-02-10，连接工具可能产生组织费用。",
+            "category": "AI 协作 / 会议记录",
+            "source": {
+              "name": "Claude 官方发布说明",
+              "published": "2026-11-12",
+              "url": "https://support.claude.com/en/articles/12138966-release-notes"
+            }
+          },
+          {
+            "event": "Gemini 4 Carbon 上线 GitHub Copilot",
+            "summary": "GitHub 于 2026-11-10 宣布，Gemini 4 Carbon 已在 GitHub Copilot 正式提供，面向复杂编码、代理任务和推理，并强调安全代码生成。",
+            "howTo": "在 VS Code、Visual Studio、Copilot CLI、JetBrains、Xcode、github.com 等支持的 Copilot 端打开模型选择器并选 Gemini 4 Carbon；用一项可测试的小型课程代码任务比较输出。",
+            "impact": "可让它协助拆解多文件编程任务、解释代码或检查安全相关实现；把建议放进本地测试和代码审查流程，不要直接采纳未经验证的改动。",
+            "free": "公告列出的方案为 Copilot Pro+、Max、Business 和 Enterprise；按模型供应商价格进行用量计费。免费方案资格、具体价格、调用配额及地区官方未说明；正在逐步开放，企业管理员可管理模型策略。",
+            "category": "编程助手 / 模型更新",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-10",
+              "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/"
+            }
+          },
+          {
+            "event": "Claude Fable 5.2 在 GitHub Copilot 正式开放",
+            "summary": "GitHub 于 2026-11-09 将 Anthropic Claude Fable 5.2 加入 Copilot，面向大型代码库中的复杂、多步骤编码任务；使用该模型时，Anthropic 默认会保留提示词和输出以运行安全分类器，官方称这些保留数据不用于训练模型。",
+            "howTo": "在 Copilot 支持的 IDE、命令行或网页端模型选择器中选择 Claude Fable 5.2；Business 与 Enterprise 组织需由管理员在 Copilot 设置中启用该模型策略。",
+            "impact": "可以让它先规划跨文件的课程项目修改，再逐步检查补丁、测试和解释；若处理课程或团队的非公开代码，先确认组织的数据保留要求。",
+            "free": "限 Copilot Pro+、Max、Business 和 Enterprise 方案，按供应商公开价格进行用量计费，逐步开放。该模型默认要求数据保留；符合条件的企业可申请限时零数据保留豁免，至 2026 年底，其他地区和具体调用额度官方未说明。",
+            "category": "编程助手 / 模型更新",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-09",
+              "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "AWS Educate：免费云计算与 AI 学习路径和动手实验",
+            "summary": "AWS Educate 为个人提供免费的自定进度云技能课程及动手实验，主题包括存储、计算、网络、数据库和云运维；部分课程提供可分享的数字徽章。",
+            "howTo": "打开 AWS Educate 官方页面并用电子邮箱注册，进入学习路径；可从存储、计算或数据库实验开始，按步骤完成课程练习。",
+            "impact": "适合练习云计算基础、理解云端部署与网络配置，或通过实验熟悉 AI 相关云技能；开始前确认实验内容不会创建额外付费资源。",
+            "free": "课程和动手实验免费；年满 13 岁可仅用电子邮箱注册且无需信用卡。官方未说明地区限制、具体实验配额或截止日期。",
+            "category": "免费学习 / 云计算与 AI",
+            "source": {
+              "name": "AWS 官方 Educate 项目页",
+              "published": "官方未说明",
+              "url": "https://aws.amazon.com/education/awseducate/"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack：验证学生可领开发权益",
+            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro，含私有仓库、每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 和 20 GB Codespaces 存储，并可申请 Student Developer Pack 合作伙伴权益。",
+            "howTo": "访问 GitHub Education 学生页面并登录或创建 GitHub 账号，提交学校邮箱和/或带日期的官方在读证明申请验证；通过后查看 Student Developer Pack 中可领取的权益。",
+            "impact": "可在私有仓库管理课程项目、用 Actions 自动运行测试，并通过 Codespaces 进行云端开发；使用前核对每月额度和合作伙伴各自条件。",
+            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需通过验证。页面列出上述月度额度；地区范围、申请截止日期及合作伙伴权益细则官方未说明。",
+            "category": "学生权益 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方学生权益页",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Claude Free：免费网页、桌面和移动端学习助手",
+            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和移动端聊天、搜索网页、创建文件、运行代码及制作 Artifacts。",
+            "howTo": "从 Claude 官方价格页进入 Free 方案并登录；可上传自己的课堂资料，请它整理提纲、生成自测题或解释代码，再对照原文核实。",
+            "impact": "可用于起草复习问题、梳理自有资料或试做简单代码；重要结论仍应回查课程材料，避免把生成内容当作未经核验的事实。",
+            "free": "价格页标价每月 0 美元，免费用量每 5 小时及每周均有限，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
+            "category": "免费 AI 应用 / 学习助手",
+            "source": {
+              "name": "Claude 官方价格页",
+              "published": "官方未说明",
+              "url": "https://claude.com/pricing"
+            }
+          },
+          {
+            "event": "DeepL 免费版：文本翻译及小型文件翻译额度",
+            "summary": "DeepL 官方计划对比页列出免费版每用户每月 50,000 个文本字符额度，并支持文件翻译和保存一条译文；文件大小上限为 5 MB。",
+            "howTo": "打开 DeepL 官方翻译页，粘贴短文或上传不超过 5 MB 的文件；对照原文检查术语、语气和专有名词，不直接把机器译文当作定稿。",
+            "impact": "适合快速理解英文资料、对照自己写的译文或处理小型文档；学术引用和关键术语仍应回看原文。",
+            "free": "免费版列出每月 50,000 个文本字符、1 次文件翻译、单文件最多 5 MB 和 1 条保存译文。具体地区及账号要求官方未说明。",
+            "category": "免费翻译工具",
+            "source": {
+              "name": "DeepL 官方方案页",
+              "published": "官方未说明",
+              "url": "https://www.deepl.com/en/pro"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费的数据科学与机器学习短课程",
+            "summary": "Kaggle 将 Learn 课程标为 no-cost，提供 Python、数据可视化、Pandas 等实用数据技能课程。",
+            "howTo": "打开 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按章节完成教程与练习；可将代码迁移到自己的课程笔记本中复测。",
+            "impact": "适合补充数据分析与机器学习基础，利用短练习巩固编程概念并为课程项目准备数据处理技能。",
+            "free": "官方页面将课程标为免费；账号、地区、课程数量和完成额度官方未说明。",
+            "category": "免费课程 / 数据科学",
+            "source": {
+              "name": "Kaggle 官方 Learn 课程页",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "Qwen3-ASR-0.6B：Apache-2.0 许可的开源语音识别权重",
+            "summary": "Qwen 官方模型卡提供 Qwen3-ASR 开放模型权重；0.6B 版本支持语音识别和语言识别，模型卡列出中文、英语等语言及方言，并提供本地推理示例。",
+            "howTo": "从 Qwen 官方模型卡下载 Qwen3-ASR-0.6B 权重，按示例安装 qwen-asr 并在本地传入音频路径或文件；先用短录音测试识别结果。",
+            "impact": "可用于转录自己的访谈、课堂录音或多语种听力练习，并尝试比较机器转录与人工听写；部署需要兼容设备和本地算力。",
+            "free": "模型卡标注 Apache-2.0 并提供可下载权重；模型下载、账号、地区及运行硬件要求的统一限制官方未说明，运行需自备设备和算力。",
+            "category": "开放模型 / 语音转写",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "New Mexico wanted free childcare for all. This is what's worked — and what hasn't",
+            "source": "NPR",
+            "published": "2026-11-15",
+            "url": "https://www.npr.org/2026/11/15/nx-s1-6040194/new-mexico-free-universal-childcare-families",
+            "readingTime": "约 12 分钟（估算）",
+            "topic": "社会政策与教育 / 普惠托育的效果、容量与财政取舍",
+            "summary": "NPR 回顾新墨西哥州实施普惠托育一周年：符合条件的州内家庭不论收入均可申请，家长称免费托育帮助他们工作、照顾家庭并继续求学。报道用家庭经历、州级统计和政策访谈呈现成效，也指出服务供给不足——部分中心候补名单很长，州内仍有儿童未能进入公共托育。文章随后追溯政策资金来源，解释通胀触发的高收入家庭共付机制，并呈现议员对预算压力的质疑。结尾比较纽约市逐步扩容的路径，指出托育政策既能扩大就业与教育机会，也受制于从业者、名额和财政设计；单纯宣布普惠并不能消除等待。",
+            "reason": [
+              "主题将儿童照护、家庭就业、教育机会和公共预算联系起来，适合讨论福利政策的公平性与可持续性。",
+              "文章从家庭经历切入，继而呈现州级数据、资金机制和不同政治立场，最后比较纽约的渐进方案。",
+              "适合考查案例与统计的论证功能、政策资格条件、对立观点，以及作者如何在成效与执行瓶颈之间保持平衡。",
+              "可积累 eligible、capacity、waitlist、copayment、provider 等社会政策与教育词汇。",
+              "写作可借鉴“政策目标—实际受益—执行瓶颈—财政约束—替代方案”的论证框架，避免把普惠政策简单等同于人人即时可及。"
+            ],
+            "vocabulary": [
+              {
+                "word": "eligible",
+                "phonetic": "/ˈelɪdʒəbəl/",
+                "part": "adj.",
+                "translation": "符合条件的"
+              },
+              {
+                "word": "capacity",
+                "phonetic": "/kəˈpæsəti/",
+                "part": "n.",
+                "translation": "接纳能力；容量"
+              },
+              {
+                "word": "waitlist",
+                "phonetic": "/ˈweɪtˌlɪst/",
+                "part": "n.",
+                "translation": "候补名单"
+              },
+              {
+                "word": "rollout",
+                "phonetic": "/ˈroʊlˌaʊt/",
+                "part": "n.",
+                "translation": "逐步实施；推出"
+              },
+              {
+                "word": "reimbursement",
+                "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
+                "part": "n.",
+                "translation": "补偿款；报销款"
+              },
+              {
+                "word": "safeguard",
+                "phonetic": "/ˈseɪfˌɡɑːrd/",
+                "part": "n.",
+                "translation": "保障措施"
+              },
+              {
+                "word": "copayment",
+                "phonetic": "/ˈkoʊˌpeɪmənt/",
+                "part": "n.",
+                "translation": "共同支付额；自付额"
+              },
+              {
+                "word": "infrastructure",
+                "phonetic": "/ˈɪnfrəˌstrʌktʃər/",
+                "part": "n.",
+                "translation": "基础设施；体系"
+              },
+              {
+                "word": "provider",
+                "phonetic": "/prəˈvaɪdər/",
+                "part": "n.",
+                "translation": "服务提供者"
+              },
+              {
+                "word": "enrollment",
+                "phonetic": "/ɪnˈroʊlmənt/",
+                "part": "n.",
+                "translation": "登记；入学；注册"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "\"It's not a lack of funding, it's a lack of providers.\"",
+                "analysis": [
+                  "两个并列分句的核心都是 it is，后半句省略了重复主语 it。",
+                  "not a lack of funding 与 a lack of providers 构成否定后纠正，突出问题不在资金而在供给。",
+                  "of providers 修饰 lack，具体说明短缺对象；句子是受访者对前文容量问题的概括。",
+                  "可迁移结构 not A, but B 的对比思路；原句用重复句式强化纠偏。"
+                ],
+                "translation": "问题不是缺少资金，而是缺少服务提供者。"
+              },
+              {
+                "original": "\"The childcare help has opened other doors for her, too.\"",
+                "analysis": [
+                  "主干是 The childcare help has opened doors，使用现在完成时连接过去政策与当前影响。",
+                  "other 修饰 doors，表示托育帮助带来原有主要作用之外的新机会。",
+                  "for her 指明受益者；句末 too 补充前文所述的工作支持。",
+                  "open doors 是“打开机会”的隐喻，可用于表达政策或教育带来的机会扩展。"
+                ],
+                "translation": "托育帮助也为她打开了其他机会。"
+              },
+              {
+                "original": "\"I'm trying to get my bachelor's.\"",
+                "analysis": [
+                  "主干是 I'm trying，主语为 I，am trying 使用现在进行时。",
+                  "to get my bachelor's 是 try 后的不定式补足语，说明努力的目标。",
+                  "my bachelor's 是 bachelor's degree 的省略表达，表示学士学位。",
+                  "try to do sth. 表示努力做某事；语境将托育条件与继续求学的可能性联系起来。"
+                ],
+                "translation": "我正在努力读完学士学位。"
+              }
+            ]
+          },
+          {
+            "title": "Who makes Sydney Sweeney's American Eagle jeans — and under what conditions?",
+            "source": "NPR",
+            "published": "2026-11-15",
+            "url": "https://www.npr.org/2026/11/15/nx-s1-6013327/sydney-sweeney-jeans-american-eagle-garment-industry",
+            "readingTime": "约 10 分钟（估算）",
+            "topic": "商业、劳动与环境 / 快时尚供应链中的工人权益和高温风险",
+            "summary": "NPR 从一则引发争议的牛仔裤广告切入，把讨论从名人营销转向服装生产者：记者采访了巴基斯坦和孟加拉国约 20 名工人，追踪多个工厂的工资、产量目标、饮水和高温状况。工人描述低薪、加班、难以离开工位和热应激；相关企业则回应称有投诉机制、检查和供水措施，部分说法存在争议。文章接着解释快时尚品牌的高产量、短交期和薄利润如何影响供应商，并把车间高温与气候变化联系起来。结尾介绍孟加拉国和巴基斯坦的国际协议及拟议的热应激检查机制，指出保护工人既是劳权议题，也与供应链责任、生产率和适应高温有关。",
+            "reason": [
+              "主题结合消费文化、跨国供应链、劳动权利与气候风险，适合分析企业责任和全球化生产。",
+              "文章由广告争议转向工人证词，再呈现企业回应、供应链机制和国际协议，形成从个案到结构问题的推进。",
+              "适合考查采访证词与企业回应的对照、因果链、来源立场，以及证据如何支持对快时尚的批评。",
+              "可积累 garment、production target、hydrate、retrofit、scrutiny 等劳动与环境词汇。",
+              "写作可借鉴“消费端现象—生产端证据—结构性原因—制度回应”的展开方式，并明确区分指控、回应与已核实事实。"
+            ],
+            "vocabulary": [
+              {
+                "word": "garment",
+                "phonetic": "/ˈɡɑːrmənt/",
+                "part": "n.",
+                "translation": "服装；衣物"
+              },
+              {
+                "word": "workstation",
+                "phonetic": "/ˈwɜːrkˌsteɪʃən/",
+                "part": "n.",
+                "translation": "工作岗位；工位"
+              },
+              {
+                "word": "production target",
+                "phonetic": "/prəˈdʌkʃən ˈtɑːrɡɪt/",
+                "part": "n. phr.",
+                "translation": "生产指标"
+              },
+              {
+                "word": "hydrate",
+                "phonetic": "/ˈhaɪdreɪt/",
+                "part": "v.",
+                "translation": "补充水分"
+              },
+              {
+                "word": "retrofit",
+                "phonetic": "/ˈretroʊfɪt/",
+                "part": "v.",
+                "translation": "改造；加装新设备"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "仔细审查；严格监督"
+              },
+              {
+                "word": "enforceable",
+                "phonetic": "/ɪnˈfɔːrsəbəl/",
+                "part": "adj.",
+                "translation": "可强制执行的"
+              },
+              {
+                "word": "supplier",
+                "phonetic": "/səˈplaɪər/",
+                "part": "n.",
+                "translation": "供应商"
+              },
+              {
+                "word": "overtime",
+                "phonetic": "/ˈoʊvərˌtaɪm/",
+                "part": "n.",
+                "translation": "加班；加班时间"
+              },
+              {
+                "word": "margin",
+                "phonetic": "/ˈmɑːrdʒɪn/",
+                "part": "n.",
+                "translation": "利润空间；差额"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "\"If you raise your voice, they'll push you out.\"",
+                "analysis": [
+                  "主句是 they'll push you out，if 引导的条件状语从句是 you raise your voice。",
+                  "一般现在时从句与 will 缩写形式 they'll 构成真实条件句，表达受访者描述的可能后果。",
+                  "push you out 是动词加宾语加方向补语，意为把某人排挤出去；代词 you 泛指发声的工人。",
+                  "条件与结果的因果关系呈现工人不敢申诉的压力，适合分析证词如何解释沉默。"
+                ],
+                "translation": "“如果你发声，他们就会把你排挤出去。”"
+              },
+              {
+                "original": "\"Workers are not choosing to take these risks.\"",
+                "analysis": [
+                  "句子主干为 Workers are not choosing，使用现在进行时描述当前处境。",
+                  "to take these risks 是 choose 的不定式补足语，说明被否定的选择内容。",
+                  "these risks 回指前文提及的高温、健康与工作安全风险。",
+                  "not choosing 将风险归因从个人偏好转向外部压力，体现文章的结构性劳动论点。"
+                ],
+                "translation": "“工人并不是自愿选择承担这些风险。”"
+              },
+              {
+                "original": "\"You've got all those bodies, all that material, all that machinery putting off heat.\"",
+                "analysis": [
+                  "口语主干是 You've got...，相当于“这里有／存在”，后接三个并列名词短语。",
+                  "all those bodies、all that material 和 all that machinery 由 all 加指示限定词构成排比。",
+                  "putting off heat 是现在分词短语，补充说明这些人、材料和机器都在散热。",
+                  "并列累积加上因果语境，解释工厂内部为何比室外更热；put off 在此意为散发。"
+                ],
+                "translation": "“那么多工人、材料和机器都在散热。”"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-15",
       "status": "ready",
@@ -2011,332 +2363,6 @@ window.BRIEFING_DATA = {
                   "might mean 降低因果断言强度；eggs, larvae and pupae 列举 brood 的组成阶段。"
                 ],
                 "translation": "冬季气温较暖可能意味着蜂群会繁育出更多卵、幼虫和蛹。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-09",
-      "status": "ready",
-      "ai": {
-        "intro": "本期聚焦 GitHub Copilot 在 Xcode、JetBrains Air 和 Slack/Teams 的新入口；另整理学生开发权益、免费算力、开放模型与 Mistral 免费方案。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 接入 Xcode 内置编程助手",
-            "summary": "GitHub Copilot 现可直接用于 Xcode 内置 coding assistant，作为既有 Copilot for Xcode 扩展之外的另一种工作方式；目前为公开预览，要求 Xcode 27.3 beta。",
-            "howTo": "在运行 macOS Tahoe 26.6 或更高版本的 Mac 上安装 Xcode 27.3 beta，打开 Xcode > Settings > Intelligence 配置 GitHub Copilot；随后可在 iOS 课程项目中让它解释报错或提出代码修改建议，并逐项检查结果。",
-            "impact": "做 Swift 或 iOS 项目时，可在 Xcode 原生编程助手中试用 Copilot，减少切换编辑器的需要；改动仍应由学生检查并运行测试。",
-            "free": "官方公告称所有 Copilot 计划均受支持，并标注为公开预览；未说明地区、单独配额或该预览功能的额外收费规则。",
-            "category": "编程助手 / Xcode",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-04",
-              "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 在 JetBrains Air 中支持本地与云端编码任务",
-            "summary": "GitHub 将 Copilot 带入 JetBrains Air，用户可委派编码任务、引导执行并审查结果；集成基于 Agent Client Protocol，可在 IDE 本地或云端运行，并支持并行会话。",
-            "howTo": "本地使用时，在 JetBrains IDE 安装 Air 插件，选择 GitHub Copilot 并连接 GitHub 账号；云端使用需在 Air Teams 启用的组织中由管理员开放 Copilot，再从浏览器或 IDE 创建任务并选择仓库和分支。",
-            "impact": "课程小组可把独立的修复或测试任务交给不同会话，再在 IDE 中对照代码审查结果；云端任务隔离运行，仍需检查生成的改动。",
-            "free": "官方说明本地集成使用现有 Copilot 订阅；云端还要求 Air Teams 企业组织和管理员启用。免费计划是否覆盖各项 Air 功能、地区及具体额度官方未说明。",
-            "category": "编程助手 / JetBrains",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-03",
-              "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air"
-            }
-          },
-          {
-            "event": "@GitHub 在 Slack 和 Microsoft Teams 正式开放",
-            "summary": "GitHub 宣布 Slack 与 Teams 中的 @GitHub 正式可用，可在对话中调查 bug、创建 issue、实现改动并发起 pull request；Teams 还可通过 Canvas 一起查看计划、代码改动和预览。",
-            "howTo": "在 Slack 或 Teams 中启用 GitHub 应用后，在讨论里提及 @GitHub，描述一个具体的课程项目问题；收到 issue、代码或 PR 后，与组员在原对话中检查并反馈。",
-            "impact": "小组可以把讨论中的待办转成可追踪的 issue 或 PR，并在 Teams Canvas 中共同审阅方案；它能辅助协作，不替代同伴审查。",
-            "free": "公告确认功能已正式开放，但没有说明所需账号计划、地区、免费额度或调用配额；相关限制官方未说明。",
-            "category": "编程助手 / 团队协作",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-06",
-              "url": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Student Developer Pack：验证学生身份可领开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro 账户，并列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储；Pack 还汇集合作伙伴权益。",
-            "howTo": "打开 GitHub Education 学生页面并申请验证，按页面要求提交学校邮箱和/或带日期的在读证明；通过后查看 Student Developer Pack 中当前可领取的合作权益。",
-            "impact": "可用私有仓库协作课程代码，在 Codespaces 中开展云端开发，并用 Actions 自动运行项目检查；提交前核对实际剩余额度。",
-            "free": "需年满 13 岁并就读于授予学位或文凭的课程；验证材料为学校邮箱和/或官方在读证明。页面列出上述月度额度，但未说明地区范围和申请截止日期；合作权益依各伙伴条款而定。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Google Colab：免费使用托管 Jupyter 与部分 GPU/TPU 算力",
-            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本，官方说明免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
-            "howTo": "登录后打开 Colab，新建或上传 .ipynb 笔记本，在代码单元运行课程示例；需要加速时查看 Runtime 设置中的硬件选项，并保存重要文件到 Drive 或下载笔记本。",
-            "impact": "可用来练习 Python 数据分析、运行小型机器学习课程实验，或复现教材代码，而不必先配置本地环境。",
-            "free": "官方确认免费使用，但资源不保证且不无限，使用限制会变化；免费托管运行时有活动限制，具体配额、地区和账号申请条件官方未说明。",
-            "category": "免费算力 / 学习环境",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Microsoft Phi-4-mini-instruct：MIT 许可的可下载模型权重",
-            "summary": "Microsoft 官方模型卡提供 Phi-4-mini-instruct 开放模型，参数量为 3.8B，支持 128K 上下文；同一模型仓库的 LICENSE 文件采用 MIT 许可。它适合本地试验指令跟随、数学和逻辑任务，但模型卡提醒其事实知识受模型规模限制。",
-            "howTo": "打开 Hugging Face 模型卡的 Files and versions 下载文件，按 Usage 示例安装 Transformers 并加载 `microsoft/Phi-4-mini-instruct`；用已知答案的课程题测试输出，再与教材或可靠资料核对。",
-            "impact": "学生可在课程项目中试验小型指令模型或比较本地推理输出；它可能出错，不应直接充当论文引用或事实来源。",
-            "free": "模型仓库提供可下载权重，LICENSE 为 MIT；官方未说明推理所需硬件、运行成本、地区或账号限制，实际算力仍取决于设备和部署方式。",
-            "category": "开放模型 / 本地实验",
-            "source": {
-              "name": "Microsoft 官方 Hugging Face 模型卡与仓库许可",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
-            }
-          },
-          {
-            "event": "Mistral Vibe Free：网页和移动端的免费个人 AI 助手",
-            "summary": "Mistral 官方价格页列出 Free 方案，可在网页和移动端使用，包含有限消息、网页搜索和编码会话，以及基础图像生成与编辑。",
-            "howTo": "从 Mistral 价格页进入 Free 方案并打开网页或移动端服务；可粘贴自己的课堂笔记，请它提炼要点或生成复习问题，再逐条对照原文修订。",
-            "impact": "适合快速整理自有笔记、拟定复习提纲或尝试基础图像任务；复杂任务和较高使用量可能受到免费方案限制。",
-            "free": "官方价格页列出 Free 方案，但仅描述消息、搜索和编码次数有限，未给出具体额度；页面当前显示 France 地区，其他地区是否可用、账号要求及限制重置周期官方未说明。",
-            "category": "免费 AI 助手 / 学习整理",
-            "source": {
-              "name": "Mistral 官方价格页",
-              "published": "官方未说明",
-              "url": "https://mistral.ai/pricing/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "How climate change transforms the colors of our world",
-            "source": "NPR",
-            "published": "2026-11-08",
-            "url": "https://apps.npr.org/color-climate-change-coral-lakes/",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境 / 气候变化如何重塑自然色彩",
-            "summary": "这篇图文报道指出，气候变化正在改变北极地貌、湖泊、动物和珊瑚的颜色；这种变化并非单纯审美现象，也可能反映生态压力。文章先解释黑碳覆盖积雪后吸热、冻土融化推动植被扩张，再以卫星观测和研究说明湖水颜色变化，继而讨论动物伪装、昆虫色彩与珊瑚白化。报道援引研究数据，例如北极部分观测点出现植被变绿、数十万湖泊的绿光波长变化，并通过研究者访谈补充机制和不确定性。结尾回到颜色作为观察环境变化的线索：一些色彩转变伴随物种和栖息地风险，但其原因与后果并非在每个案例中都已厘清。",
-            "reason": [
-              "主题连接气候变化、生物多样性与环境监测，适合讨论科学证据如何转化为公共议题。",
-              "篇章按北极、湖泊、动物和珊瑚分节，以现象、研究数据和专家解释逐层扩展，再回到颜色的象征意义。",
-              "适合考查段落主旨、例证功能、因果推断，以及作者如何处理“相关变化”与机制尚不确定的区别。",
-              "可学习环境与生态类词汇，如 permafrost、sentinel、pollinator 和 exacerbate。",
-              "写作时可借鉴“可观察指标—研究证据—生态后果—不确定性”的论证链，避免把复杂生态变化简化为单一因果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "exacerbate",
-                "phonetic": "/ɪɡˈzæsərbeɪt/",
-                "part": "v.",
-                "translation": "加剧；使恶化"
-              },
-              {
-                "word": "swath",
-                "phonetic": "/swɑːθ/",
-                "part": "n.",
-                "translation": "大片区域；带状地带"
-              },
-              {
-                "word": "permafrost",
-                "phonetic": "/ˈpɜːrməfrɔːst/",
-                "part": "n.",
-                "translation": "永久冻土"
-              },
-              {
-                "word": "foothold",
-                "phonetic": "/ˈfʊthoʊld/",
-                "part": "n.",
-                "translation": "立足点；稳固位置"
-              },
-              {
-                "word": "sentinel",
-                "phonetic": "/ˈsentɪnəl/",
-                "part": "n.",
-                "translation": "哨兵；预警指标"
-              },
-              {
-                "word": "biogeochemistry",
-                "phonetic": "/ˌbaɪoʊˌdʒiːoʊˈkemɪstri/",
-                "part": "n.",
-                "translation": "生物地球化学"
-              },
-              {
-                "word": "disrupt",
-                "phonetic": "/dɪsˈrʌpt/",
-                "part": "v.",
-                "translation": "扰乱；破坏"
-              },
-              {
-                "word": "vulnerable",
-                "phonetic": "/ˈvʌlnərəbəl/",
-                "part": "adj.",
-                "translation": "易受伤害的；脆弱的"
-              },
-              {
-                "word": "pollinator",
-                "phonetic": "/ˈpɑːləneɪtər/",
-                "part": "n.",
-                "translation": "传粉者"
-              },
-              {
-                "word": "fleeting",
-                "phonetic": "/ˈfliːtɪŋ/",
-                "part": "adj.",
-                "translation": "短暂的；转瞬即逝的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "This change of color isn’t just aesthetic.",
-                "analysis": [
-                  "主干是 This change of color is aesthetic，句中 isn’t 对表语作否定。",
-                  "This 指回前文珊瑚颜色变淡的现象，连接上一句的具体例子。",
-                  "not just 表示“并非仅仅”，暗示颜色变化还会带来生态影响。",
-                  "可迁移结构 not just A：先否定狭义理解，再引出更重要的层面。"
-                ],
-                "translation": "这种颜色变化并不只是审美层面的事。"
-              },
-              {
-                "original": "Lakes react quickly to changes in the environment, so measuring lake color through satellite monitoring can help quantify those changes.",
-                "analysis": [
-                  "前半句主干是 Lakes react，quickly 说明湖泊对环境变化反应迅速。",
-                  "so 引出由前一事实支持的推论：测量湖色有助于量化变化。",
-                  "measuring lake color 是后半句的动名词短语主语，谓语为 can help quantify。",
-                  "through satellite monitoring 表示测量手段；those changes 回指前文环境变化。"
-                ],
-                "translation": "湖泊会迅速响应环境变化，因此通过卫星监测测量湖泊颜色有助于量化这些变化。"
-              },
-              {
-                "original": "The darker a lake is, the longer it stays warm after the summer.",
-                "analysis": [
-                  "句子采用 the + 比较级..., the + 比较级... 结构，表达两项程度同步变化。",
-                  "第一分句以 a lake 为主语，darker 是表语，is 为系动词。",
-                  "第二分句主干是 it stays warm，it 指代 lake，longer 修饰持续时间。",
-                  "after the summer 是时间状语；此处比较结构呈现湖色变暗与保温时间延长的联系。"
-                ],
-                "translation": "湖泊颜色越暗，夏季过后保持温暖的时间就越长。"
-              }
-            ]
-          },
-          {
-            "title": "Society needs to act to help white working-class pupils, inquiry says",
-            "source": "BBC",
-            "published": "2026-11-09",
-            "url": "https://www.bbc.co.uk/news/articles/cmwyqql26xe8o",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "教育与社会 / 阶层差异和学习机会",
-            "summary": "报道介绍一项关于英格兰白人工人阶级学生教育结果的独立调查进入新阶段。调查上一份报告认为教育体系未能充分服务相关学生；新阶段将关注幼儿教育及 14 至 19 岁青少年的学习与就业路径，并为政府、学校和社区组织提出实际建议。报道交代了调查证据来源：研究者访问数千名年轻人及其家长、数百名教师，并分析 125 万名领取免费校餐的白人英国学生相关数据。调查也承认，这一数据口径没有涵盖收入较低但未领取免费校餐的家庭，因此所呈现的不利状况可能被低估。文章以教育部门支持调查、以及建立更清晰升学和就业路径的计划收束。",
-            "reason": [
-              "主题涉及教育公平、贫困与社会流动，符合研究生英语阅读常见的公共政策议题。",
-              "结构从调查提出的问题，转向既有报告和证据来源，再说明新阶段的年龄范围与政策建议。",
-              "适合考查调查对象、数据口径、代词指代，以及作者如何用具体证据说明政策问题。",
-              "可积累 inquiry、barrier、eligible、pathway 和 substantially 等教育与社会政策词汇。",
-              "写作可借鉴其“结论—样本—局限—行动方案”结构，并注意区分调查方观点与已经实施的政策。"
-            ],
-            "vocabulary": [
-              {
-                "word": "co-chair",
-                "phonetic": "/ˌkoʊ ˈtʃer/",
-                "part": "n.",
-                "translation": "联合主席"
-              },
-              {
-                "word": "once-in-a-generation",
-                "phonetic": "/ˌwʌns ɪn ə ˌdʒenəˈreɪʃən/",
-                "part": "adj.",
-                "translation": "一代人一次的；极为罕见的"
-              },
-              {
-                "word": "inquiry",
-                "phonetic": "/ɪnˈkwaɪəri/",
-                "part": "n.",
-                "translation": "调查；正式审查"
-              },
-              {
-                "word": "barrier",
-                "phonetic": "/ˈbæriər/",
-                "part": "n.",
-                "translation": "障碍；阻碍因素"
-              },
-              {
-                "word": "commission",
-                "phonetic": "/kəˈmɪʃən/",
-                "part": "v.",
-                "translation": "委托（开展调查或研究）"
-              },
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合资格的"
-              },
-              {
-                "word": "substantially",
-                "phonetic": "/səbˈstænʃəli/",
-                "part": "adv.",
-                "translation": "大幅度地；实质上"
-              },
-              {
-                "word": "pathway",
-                "phonetic": "/ˈpæθweɪ/",
-                "part": "n.",
-                "translation": "途径；发展路径"
-              },
-              {
-                "word": "transition",
-                "phonetic": "/trænˈzɪʃən/",
-                "part": "n.",
-                "translation": "过渡；转变"
-              },
-              {
-                "word": "interim",
-                "phonetic": "/ˈɪntərɪm/",
-                "part": "adj.",
-                "translation": "临时的；阶段性的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Action from “across society” is needed to help improve the educational outcomes of white working-class children.",
-                "analysis": [
-                  "主干为 Action is needed，使用被动语态突出“需要采取行动”，而非行动者。",
-                  "from “across society” 补充行动应来自哪里，扩大责任主体范围。",
-                  "to help improve the educational outcomes... 是目的不定式，说明行动的目标。",
-                  "across society 是概括性表达，可用于讨论教育问题的多方责任。"
-                ],
-                "translation": "需要社会各界采取行动，帮助改善白人工人阶级儿童的教育成果。"
-              },
-              {
-                "original": "It spoke to thousands of young people and their parents, as well as hundreds of teachers.",
-                "analysis": [
-                  "主干是 It spoke to...，It 指前文的调查。",
-                  "to 后并列列出年轻人及其家长，说明调查的访谈对象。",
-                  "as well as 再补充教师群体，表示“以及”，但不改变主句结构。",
-                  "thousands 和 hundreds 提供样本规模信息，阅读时应区分访谈人数与数据分析人数。"
-                ],
-                "translation": "调查访问了数千名年轻人及其家长，也访问了数百名教师。"
-              },
-              {
-                "original": "The inquiry found a growing belief among white working-class families that the current education system does not guarantee future success.",
-                "analysis": [
-                  "主干为 The inquiry found a growing belief，交代调查发现的核心内容。",
-                  "among white working-class families 说明这种看法所在的群体。",
-                  "that 引导同位语从句，具体说明 belief 的内容。",
-                  "does not guarantee 使用否定表达，指“不能保证”，不等于断言学生必然失败。"
-                ],
-                "translation": "调查发现，白人工人阶级家庭中越来越多人认为，现行教育体系无法保证未来成功。"
               }
             ]
           }
