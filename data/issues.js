@@ -1,6 +1,332 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-16T10:41:24+08:00",
+  "updatedAt": "2026-11-17T12:59:50+08:00",
   "issues": [
+    {
+      "date": "2026-11-17",
+      "status": "ready",
+      "ai": {
+        "intro": "本期关注 GitHub Copilot 在 VS Code 的实验性会话管理与模型比较，以及跨语言语音输入；免费资源覆盖写作、编程和研究计算。",
+        "updates": [
+          {
+            "event": "VS Code Copilot Inbox 集中管理多个工作区的代理会话",
+            "summary": "GitHub 于 2026-11-16 在 VS Code 1.146 中推出实验性的 Inbox 模式：在 Agents 窗口的会话列表里集中查看所有工作区的代理会话，并优先显示需要处理的会话；其他会话可关闭、搁置或稍后提醒。",
+            "howTo": "在 VS Code 打开 Agents 窗口的 sessions 列表并切换到 Inbox 模式；让 Copilot 代理处理一项课程项目任务后，可在同一视图检查各工作区状态，并对暂时不处理的会话选择 hold 或 snooze。",
+            "impact": "同时维护多个课程项目或实验仓库时，可更快发现等待自己确认的代理任务，减少遗漏；该功能仍是实验版，重要代码变更仍需自行检查和测试。",
+            "free": "GitHub 将 Inbox 标为实验功能，但该公告未说明其免费或付费方案资格、地区范围和具体调用配额。",
+            "category": "编程助手 / 代理会话管理",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-16",
+              "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9"
+            }
+          },
+          {
+            "event": "Copilot 代理可在 VS Code 实验性比较模型",
+            "summary": "GitHub 于 2026-11-16 宣布，VS Code 1.146 的实验功能可让代理查找当前可用模型、发起模型比较并读取结果后总结；该能力需要启用 Compare Models 和代理工具。",
+            "howTo": "在 VS Code 设置中启用 Compare Models 和 agent tools，再给代理一个范围明确的小任务，让它比较可选模型并总结结果；逐项核对比较条件和生成内容，不把实验结果当作可靠基准。",
+            "impact": "学生可用同一项代码解释或课程练习观察不同模型的回答差异，练习比较输出的准确性与可读性；公告没有给出基准测试结论。",
+            "free": "该功能为实验版。官方公告未说明免费或付费方案资格、地区范围、调用配额或是否会产生额外费用。",
+            "category": "编程助手 / 模型比较",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-16",
+              "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9"
+            }
+          },
+          {
+            "event": "GitHub Copilot App 增加多语言语音输入",
+            "summary": "GitHub 于 2026-11-16 在 Copilot App 加入法语、西班牙语等语言的语音听写；用户可先在设置中下载多语言语音模型，再选 Auto 或指定语言。",
+            "howTo": "打开 GitHub Copilot App 的设置，下载 multilingual voice model，然后在语音输入时选择 Auto 或一种可用语言；可先口述简短的任务描述，再检查听写文本是否准确。",
+            "impact": "学生可通过口述快速记录项目问题、待办事项或代码修改思路；提交任务前校对专有名词和语音识别结果，避免错误指令。",
+            "free": "公告说明了设置步骤，但未说明此功能的方案资格、支持地区、具体语言清单或使用配额；其中明确举例法语和西班牙语。",
+            "category": "AI 助手 / 多语言语音输入",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-16",
+              "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "ChatGPT Free：可免费使用的网页与移动端学习助手",
+            "summary": "OpenAI 价格页列出 Free 方案：网页、iOS 和 Android 可用，日常文本聊天标为 unlimited；文件上传、图像生成、语音、深度研究以及记忆和上下文均为有限使用。",
+            "howTo": "在 ChatGPT 官方价格页选择 Get Free 并登录；可让它根据自己的课程笔记生成复习提纲或自测题，再回到原始材料核对答案。",
+            "impact": "适合起草复习问题、解释概念或规划写作步骤；免费工具额度有限，重要结论仍应查阅课程材料和原始来源。",
+            "free": "Free 方案无需付费；文本聊天标注为 unlimited，但受防滥用规则约束，其他列出的功能为有限使用。具体条数、地区和账号资格官方未说明。",
+            "category": "免费 AI 应用 / 学习助手",
+            "source": {
+              "name": "OpenAI 官方价格页",
+              "published": "官方未说明",
+              "url": "https://chatgpt.com/pricing/"
+            }
+          },
+          {
+            "event": "Gemini Free：Google 账号可用的免费学习与研究工具",
+            "summary": "Google Gemini 官方方案页列出每月 0 美元的 Free 方案，需 Google 账号；包括 Gemini 应用的 Flash-Lite、图像生成与编辑、Deep Research、Live、Canvas、Skills，以及 Gemini Notebook 和 15 GB 云存储。",
+            "howTo": "登录 Google 账号并打开 Gemini 应用；可用 Canvas 整理课程想法、用 Deep Research 探索主题，或在 Gemini Notebook 中辅助整理资料，之后自行核实引用和结论。",
+            "impact": "适合梳理课程主题、制作研究提纲和辅助写作；不同功能的免费使用上限不一，不能把生成回答直接当作可靠引文。",
+            "free": "官方方案页标注每月 0 美元并要求 Google 账号。该页当前展示美国地区方案；免费功能的具体配额及其他地区资格官方未说明。",
+            "category": "免费 AI 应用 / 研究与写作",
+            "source": {
+              "name": "Google Gemini 官方方案页",
+              "published": "官方未说明",
+              "url": "https://gemini.google/us/about/"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出每月 0 美元的 Copilot Free，包含每月 2,000 次代码补全，并提供有限聊天和代理使用；页面说明无需信用卡。",
+            "howTo": "从 GitHub Copilot 计划页开始使用，在支持的编辑器安装 Copilot 扩展并登录 GitHub；先用它补全一段课程代码，再运行测试并检查建议。",
+            "impact": "可帮助学生练习编程、补全重复代码或理解代码结构；免费聊天和代理用量有限，生成代码须经过测试和人工检查。",
+            "free": "官方标价每月 0 美元、每月 2,000 次代码补全且无需信用卡；聊天与代理为有限使用，具体额度、地区和账号资格官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 笔记本与计算资源",
+            "summary": "Google Colab 官方 FAQ 说明，Colab 是无需安装的托管 Jupyter Notebook 服务，可免费使用计算资源，包括 GPU 和 TPU；免费资源不保证且不无限，使用限制会变化。",
+            "howTo": "打开 Colab 并登录 Google 账号，创建笔记本或从 File 菜单上传现有 Jupyter notebook；在笔记本中运行课程代码，保存前检查输出中是否含个人或敏感信息。",
+            "impact": "适合在浏览器中完成 Python、数据科学或机器学习课程练习，不必先配置本地环境；免费 GPU/TPU 不保证随时可用，空闲虚拟机也会被回收。",
+            "free": "官方确认 Colab 免费，并说明可提供 GPU/TPU；资源不保证、不无限，使用上限会变化，官方未公布固定免费额度或地区范围。",
+            "category": "免费学习 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "We couldn't afford a house alone, so we bought one with strangers",
+            "source": "BBC",
+            "published": "2026-11-17",
+            "url": "https://www.bbc.co.uk/news/articles/c5742lwdyzglo",
+            "readingTime": "约 5 分钟（估算）",
+            "topic": "经济与社会 / 高房价下的共同购房与居住安排",
+            "summary": "报道从温哥华两户家庭因预算不足而决定与陌生人共同买房的经历切入：他们在相识两年后共同购买六居室住房，分摊首付、月供和日常开支，并称因此省下数万。文章接着介绍多伦多一个连接潜在共同购房者的平台，以及另一组共同持有住房者如何按收入分摊成本、定期商议家务和财务；报道也指出目前没有这类购房人数的官方统计，英国案例仍属少见。结尾强调共同居住需要公开沟通和具有法律约束力的退出安排，呈现这种住房应对方式的实际好处与协作风险。",
+            "reason": [
+              "文章以高房价和住房可负担性为切口，关联年轻家庭、资产获取和共享经济等常见社会经济议题。",
+              "结构由温哥华个案展开，补充多伦多平台及另一共同持有者的经验，再以法律协议和沟通总结条件。",
+              "适合练习识别个案证据与普遍趋势的区别，考查转述、数据缺失说明和末段建议。",
+              "可学习 afford、mortgage、co-own、legally binding 等住房与金融词汇，以及人物引语如何支撑报道。",
+              "写作可借鉴“生活压力—替代方案—实践成本与治理—适用边界”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "afford",
+                "phonetic": "/əˈfɔːrd/",
+                "part": "v.",
+                "translation": "负担得起"
+              },
+              {
+                "word": "go halves",
+                "phonetic": "/ɡoʊ hælvz/",
+                "part": "phr.",
+                "translation": "平分；各承担一半"
+              },
+              {
+                "word": "deposit",
+                "phonetic": "/dɪˈpɑːzɪt/",
+                "part": "n.",
+                "translation": "首付款；定金"
+              },
+              {
+                "word": "mortgage",
+                "phonetic": "/ˈmɔːrɡɪdʒ/",
+                "part": "n.",
+                "translation": "抵押贷款；房贷"
+              },
+              {
+                "word": "pool resources",
+                "phonetic": "/puːl rɪˈsɔːrsɪz/",
+                "part": "phr.",
+                "translation": "集中资源；共同出资"
+              },
+              {
+                "word": "co-own",
+                "phonetic": "/ˌkoʊˈoʊn/",
+                "part": "v.",
+                "translation": "共同拥有"
+              },
+              {
+                "word": "niche",
+                "phonetic": "/nɪtʃ/",
+                "part": "adj.",
+                "translation": "小众的；仅适用于特定群体的"
+              },
+              {
+                "word": "dispute",
+                "phonetic": "/dɪˈspjuːt/",
+                "part": "n.",
+                "translation": "争议；纠纷"
+              },
+              {
+                "word": "housemate",
+                "phonetic": "/ˈhaʊsmeɪt/",
+                "part": "n.",
+                "translation": "合住者"
+              },
+              {
+                "word": "legally binding",
+                "phonetic": "/ˈliːɡəli ˈbaɪndɪŋ/",
+                "part": "adj.phr.",
+                "translation": "具有法律约束力的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "They'd find another couple with young kids, complete strangers to them, and propose that they go halves on a property and all move in together.",
+                "analysis": [
+                  "主干由 They'd find ... and propose ... 两个并列谓语构成，交代两户人家提出的做法。",
+                  "They'd 是 they would 的缩写，结合前文表示设想中的行动，而非已经完成的事实。",
+                  "with young kids 和 complete strangers to them 补充说明另一对夫妇的家庭情况及双方原先并不相识。",
+                  "that 引导 propose 的宾语从句；go halves on 表示共同分担，and 连接共同购房与搬入的安排。"
+                ],
+                "translation": "他们打算找另一对有年幼孩子、此前完全陌生的夫妇，提议共同购买一处房产并一起搬进去住。"
+              },
+              {
+                "original": "Three years on, the Wilcoxes and the Pullmans say their living arrangement is still working out.",
+                "analysis": [
+                  "Three years on 是时间状语，表示从共同购房至报道时已过去三年。",
+                  "主句主干是 the Wilcoxes and the Pullmans say，明确这是两家人的说法。",
+                  "their living arrangement is still working out 是 say 后的宾语从句，that 被省略。",
+                  "still working out 表示安排目前仍在顺利进行；引语归属提醒读者这是当事人经验，而非普遍结论。"
+                ],
+                "translation": "三年过去后，Wilcox 家和 Pullman 家说，他们的共同居住安排目前仍然顺利。"
+              },
+              {
+                "original": "They have regular house meetings where they discuss chores, financial issues, birthday celebrations, and any disagreements.",
+                "analysis": [
+                  "主句主干是 They have regular house meetings，说明他们定期举行家庭会议。",
+                  "where 引导定语从句，修饰 meetings，交代会议讨论的内容。",
+                  "chores、financial issues、birthday celebrations 和 disagreements 构成并列清单，体现议题从日常事务延伸到冲突处理。",
+                  "regular 表示反复、规律地发生，可用于描述制度化沟通如何帮助共同生活。"
+                ],
+                "translation": "他们定期召开家庭会议，讨论家务、财务问题、生日庆祝以及任何分歧。"
+              }
+            ]
+          },
+          {
+            "title": "Eurovision Asia: a diverse and spectacular showcase of Asian pop",
+            "source": "The Conversation",
+            "published": "2026-11-15",
+            "url": "https://theconversation.com/eurovision-asia-a-diverse-and-spectacular-showcase-of-asian-pop-294346",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "文化与社会 / 亚洲流行音乐、文化表达与国际传播",
+            "summary": "文章评述首届 Eurovision Asia：来自 11 个国家的表演者在熟悉的比赛形式中呈现不同地区的音乐、服饰和语言；报道指出多数歌曲使用本国语言或与英语混合，展示赛事与欧洲版本不同的区域特色。作者随后从菲律宾歌手夺冠、赛事品牌如何扩展到亚洲，讨论它作为文化传播和软实力平台的潜力；文章同时指出中国、日本、印度等大国缺席、未来参赛范围、广播机构的价值观差异等现实障碍。结尾认为该赛事有机会为亚洲流行文化提供更广泛的国际舞台，但其长期影响取决于能否扩大参与并容纳地区多样性。",
+            "reason": [
+              "文章连接流行文化、语言多样性、区域身份和文化外交，适合讨论文化全球化与软实力。",
+              "结构先介绍赛事形式及表演特点，再分析品牌扩展与参与障碍，最后回到亚洲流行文化的传播价值。",
+              "适合考查转折、让步、例证和作者对未来发展的审慎判断，也可区分事实描述与评论。",
+              "inaugural、regional inflection、longevity、franchise 等词汇有助于理解文化活动与品牌延展。",
+              "写作可借鉴“新现象—文化特色—发展机会—参与限制—条件性结论”的层次安排。"
+            ],
+            "vocabulary": [
+              {
+                "word": "inaugural",
+                "phonetic": "/ɪˈnɔːɡjərəl/",
+                "part": "adj.",
+                "translation": "首届的；开创性的"
+              },
+              {
+                "word": "distinct",
+                "phonetic": "/dɪˈstɪŋkt/",
+                "part": "adj.",
+                "translation": "明显不同的；鲜明的"
+              },
+              {
+                "word": "inflection",
+                "phonetic": "/ɪnˈflekʃən/",
+                "part": "n.",
+                "translation": "特色；变化（此处指区域特色）"
+              },
+              {
+                "word": "encompass",
+                "phonetic": "/ɪnˈkʌmpəs/",
+                "part": "v.",
+                "translation": "包括；涵盖"
+              },
+              {
+                "word": "unapologetic",
+                "phonetic": "/ˌʌnəˌpɑːləˈdʒetɪk/",
+                "part": "adj.",
+                "translation": "坦然坚定的；不感到抱歉的"
+              },
+              {
+                "word": "longevity",
+                "phonetic": "/lɑːnˈdʒevəti/",
+                "part": "n.",
+                "translation": "持久；长期存续"
+              },
+              {
+                "word": "franchise",
+                "phonetic": "/ˈfræntʃaɪz/",
+                "part": "n.",
+                "translation": "系列品牌；特许经营权"
+              },
+              {
+                "word": "broadcaster",
+                "phonetic": "/ˈbrɔːdkæstər/",
+                "part": "n.",
+                "translation": "广播电视机构"
+              },
+              {
+                "word": "draw in",
+                "phonetic": "/drɔː ɪn/",
+                "part": "phr.v.",
+                "translation": "吸引；招徕"
+              },
+              {
+                "word": "soft power",
+                "phonetic": "/ˌsɔːft ˈpaʊər/",
+                "part": "n.phr.",
+                "translation": "软实力"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Notably absent this first year were most of the continent’s most populous nations: China, India, Japan, Pakistan and Indonesia.",
+                "analysis": [
+                  "句子采用表语前置结构，Notably absent this first year 位于句首，主语是 most of the continent’s most populous nations。",
+                  "were 是系动词，后置主语与前置表语形成倒装，突出缺席这一事实。",
+                  "冒号后列出具体国家，对前面的 nations 作解释说明。",
+                  "most populous 是最高级含义的修饰语；该句以缺席名单引出赛事代表性和未来扩展的问题。"
+                ],
+                "translation": "首届赛事中，亚洲人口最多的几个国家大多明显缺席：中国、印度、日本、巴基斯坦和印度尼西亚。"
+              },
+              {
+                "original": "But there was a distinct regional inflection in the staging, costuming and language choices.",
+                "analysis": [
+                  "But 作为句首转折词，与前文“比赛形式熟悉”形成对照。",
+                  "主干是 there was a distinct regional inflection，there be 结构引出一种鲜明的区域特色。",
+                  "in the staging, costuming and language choices 说明这种特色体现在哪些方面，三个名词并列。",
+                  "distinct regional inflection 可用于概括某种全球化形式在本地呈现出的独特风格。"
+                ],
+                "translation": "然而，舞台呈现、服装设计和语言选择都带有鲜明的区域特色。"
+              },
+              {
+                "original": "Staging the inaugural competition is one thing, but securing the longevity of the franchise in Asia is another matter.",
+                "analysis": [
+                  "主语由两个动名词短语构成：Staging the inaugural competition 与 securing the longevity of the franchise。",
+                  "is one thing, but ... is another matter 构成对照，强调办成首届赛事与确保长期发展并非同一难题。",
+                  "of the franchise 修饰 longevity，说明要维持的是赛事品牌在亚洲的长期存续。",
+                  "该句将短期成果与长期可持续性区分开来，可用于提出政策或项目评估中的后续挑战。"
+                ],
+                "translation": "举办首届赛事是一回事，但确保这一赛事品牌在亚洲长久发展则是另一回事。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-16",
       "status": "ready",
@@ -2369,5 +2695,5 @@ window.BRIEFING_DATA = {
         ]
       }
     }
-  ]
+  ].slice(0, 7)
 };
