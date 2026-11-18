@@ -1,6 +1,251 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-17T12:59:50+08:00",
+  "updatedAt": "2026-11-18T12:08:03+08:00",
   "issues": [
+    {
+      "date": "2026-11-18",
+      "status": "ready",
+      "ai": {
+        "intro": "今日重点关注 GitHub Copilot 在浏览器、代码评审和多模型选择上的新能力，并复核可长期或免费试用的学习资源。",
+        "updates": [
+          {
+            "event": "GPT-6.2 Astra 与 GPT-6.2 Sol 在 GitHub Copilot 正式上线",
+            "summary": "GitHub 于 2026-11-17 宣布 OpenAI 的 GPT-6.2 Astra 和 GPT-6.2 Sol 已在 Copilot 普通可用；两者面向代理式编程和代码评审，并声称在早期测试中发现更多问题或使用更少令牌。",
+            "howTo": "在 Copilot 模型选择器中找到 GPT-6.2 Astra 或 GPT-6.2 Sol；分别用于终端代理、复杂开发任务或代码评审。若尚未出现，官方说明该能力为渐进式上线，需等待发布。",
+            "impact": "学生可用 Astra 处理多步骤编程任务，用 Sol 对较复杂补丁做深度评审；仍应运行测试并人工核对，不能把早期内部测试结果视为稳定基准。",
+            "free": "可用于 Pro+、Max、Business 和 Enterprise；按用量计费并采用供应商定价。官方未说明 Free 或 Pro 是否可用、地区范围或固定配额。",
+            "category": "编程助手 / 新模型",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-17",
+              "url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
+            }
+          },
+          {
+            "event": "MAI Code 2 与 MAI Code 2 Flash 接入 GitHub Copilot",
+            "summary": "GitHub 于 2026-11-17 发布 Microsoft 的 MAI Code 2 和 MAI Code 2 Flash：前者面向深度调试、跨文件实现和仓库级推理，后者面向解释、定向修改和日常迭代。",
+            "howTo": "打开支持 Copilot 的编辑器、CLI、App 或 github.com 的模型选择器；选择 MAI Code 2 处理复杂任务，或用 MAI Code 2 Flash 做例行编辑；企业和组织管理员可在模型策略中管理。",
+            "impact": "学生可按任务复杂度选择轻量或深度模型，例如用 Flash 解释一段代码，用 MAI Code 2 重构课程项目；生成结果仍需编译、测试和人工审查。",
+            "free": "MAI Code 2 Flash 可用于 Copilot Free、Student、Pro、Pro+、Max、Business 和 Enterprise；MAI Code 2 可用于 Pro、Pro+、Max、Business 和 Enterprise。二者按用量计费；具体聊天、代理配额与地区官方未说明。",
+            "category": "编程助手 / 新模型",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-17",
+              "url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot"
+            }
+          },
+          {
+            "event": "GitHub Copilot 公测浏览器操作",
+            "summary": "GitHub 于 2026-11-17 宣布 Copilot 可在 Chromium 浏览器中执行公测版浏览器操作，可配合 Chrome 或 Copilot App/CLI/VS Code/JetBrains 完成表单填写、网页信息提取和实时调试。",
+            "howTo": "安装 GitHub Copilot Chrome 扩展并确保状态为 Connected；在 Copilot CLI 用 /plugin 启用浏览器，或在 App 的 Settings > Computer Use 启用浏览器操作；也可在 VS Code 或 JetBrains 设置中启用，并明确授权。",
+            "impact": "学生可让代理填写重复表单、打开课程网页验证内容或自动执行浏览器测试，但涉及登录、提交作业或购买时应先确认权限并检查操作结果。",
+            "free": "浏览器操作现为公测功能；官方未说明免费或付费方案资格、地区范围、额度或是否额外消耗 AI Credits。",
+            "category": "AI 助手 / 浏览器代理",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-17",
+              "url": "https://github.blog/changelog/2026-11-17-let-github-copilot-interact-with-your-browser"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次补全",
+            "summary": "GitHub 官方价格页提供 0 美元 Copilot Free，包含每月 2,000 次补全、社区支持、基础模型选择和 Copilot Fusion Standard；无需信用卡。",
+            "howTo": "登录 GitHub Copilot 计划页并选择 Free，在 VS Code、Visual Studio、JetBrains、CLI 或其他支持环境中安装对应客户端；先用补全和日常对话完成课程代码练习。",
+            "impact": "适合编程入门、代码补全和小型项目代理；超出固定补全后应以人工编写和测试为主。",
+            "free": "价格为每月 0 美元、每月 2,000 次补全且无需信用卡；聊天和代理用量仅为有限使用。地区、账号资格和受支持模型的精确配额官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "GitHub Education：经验证学生可获得免费开发资源",
+            "summary": "GitHub Education 面向符合资格的学生提供 GitHub Pro、无限私人仓库、每月 3K Actions 分钟和 180 Codespaces 小时等资源，并包含 Student Developer Pack 的合作工具。",
+            "howTo": "打开 GitHub Education 页面完成学生身份验证，再在权益页面领取 Free GitHub Pro 和 Partner offers；申请时准备学校邮箱或可验证的在学证明。",
+            "impact": "可用于课程仓库协作、云端编程、自动化测试和学习各类开发工具；实际合作权益期限和个人配额可能因供应商而异。",
+            "free": "免费面向年满 13 岁且就读学位或文凭课程的学生，需学校邮箱或官方在学证明；精确地区与部分合作优惠期限官方未说明。Actions 和 Codespaces 配额具体如页面所列。",
+            "category": "已认证学生 / 开发教育",
+            "source": {
+              "name": "GitHub Education 官方页面",
+              "published": "官方未说明",
+              "url": "https://github.com/education/students"
+            }
+          },
+          {
+            "event": "Google Colab：浏览器中的免费 Jupyter 与云计算",
+            "summary": "Google Colab 官方 FAQ 说明其托管 Jupyter Notebook 服务无需本地安装，可免费使用资源并支持 GPU 或 TPU；免费资源不保证固定可用。",
+            "howTo": "登录 Google 账号并打开 Colab，创建 Python notebook 或上传现有 .ipynb；在 Runtime 菜单选择硬件加速器，运行课程数据或机器学习代码。",
+            "impact": "适合快速运行数据分析、Python 作业和模型实验，不必配置本地环境；虚拟机会因空闲回收，免费 GPU 和 TPU 并不保证随时可用。",
+            "free": "官方确认免费提供计算资源，但不保证资源或指出固定配额；地区、账号资格和 GPU/TPU 上限官方未说明。",
+            "category": "免费学习 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费交互式课程与实践",
+            "summary": "Kaggle 官方课程目录提供不收费的短课程，涵盖 Python、机器学习、数据可视化和 SQL，并在浏览器中提供代码练习。",
+            "howTo": "登录 Kaggle 后进入 Learn，从 Python 或数据可视化课程开始；在互动代码环境完成练习并保存课程进度。",
+            "impact": "适合学生每天花短时间补齐数据分析、机器学习或 SQL 基础；课程证书和高级能力是否免费以页面/课程条款为准。",
+            "free": "官方课程可免费学习；具体证书资格、地区限制、账号要求和课程是否永久免费官方未说明。",
+            "category": "免费学习 / 数据与编程",
+            "source": {
+              "name": "Kaggle 官方学习中心",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "Qwen3-ASR 可下载开源语音识别模型",
+            "summary": "Qwen 官方模型卡发布 Qwen3-ASR-0.6B 与相关 ASR 模型，支持离线和流式识别、52 种语言和方言，并提供本地推理工具。",
+            "howTo": "在支持 CUDA 的环境安装 qwen-asr 包，使用 from_pretrained 加载 Qwen/Qwen3-ASR-0.6B；也可通过 Hugging Face CLI 或 ModelScope 下载权重后离线运行。",
+            "impact": "可用于课程讲座转录、英语听力听写和多语言语音数据处理；应先用公开文件测试识别准确度，再对个人数据自行控制存储。",
+            "free": "模型权重可下载使用，官方未说明云端配额或地区限制；具体商业用途许可以模型仓库的许可证条款为准，页面未单独列出固定免费调用额度。",
+            "category": "开源模型 / 语音识别",
+            "source": {
+              "name": "Hugging Face Qwen 官方模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Sleeve checks and no smartglasses: South Korea races to protect all-important university exams against AI",
+            "source": "The Guardian",
+            "published": "2026-11-17",
+            "url": "https://www.theguardian.com/world/2026/nov/18/south-korea-university-entrace-exams-ai-cheating-measures",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "教育与科技 / 高考安全、AI 作弊与制度应对",
+            "summary": "文章围绕韩国高风险大学入学考试遭遇新型 AI 作弊展开。首段通过近期税务考试最高分考生承认使用隐蔽摄像头和 AI 作答，说明考试诚信受到冲击；中段详细描述韩国为下周 suneung 采取的运输、噪音、通信和考场安检措施，包括检查衣领袖口、关闭或追踪无线设备以及增加监考。随后报道指出，智能眼镜和微型摄像头使传统肉眼检查难以完全防范，教育部长承认无法完美识别新型号，教师工会调查也显示多数教师不能确信现行程序有效。文章最后以考试主办方拒绝延期、考生改戴隐形眼镜等细节收束，呈现国家在技术风险下维持既定考试时点的现实张力。",
+            "reason": [
+              "主题涉及教育公平、AI 监管和考试安全，贴近研究生英语中科技对社会治理的常见题目。",
+              "结构先以个案建立问题，再列举国家级防护措施，继而分析技术限制与教师反馈，形成事实—措施—质疑的递进。",
+              "适合练习因果、让步和数据支持等阅读题型，尤其区分政府承诺与实际执行能力。",
+              "文中 concealed、deploy、validity、inconvenience 等词可用于讨论高科技监控和制度信任。",
+              "写作可借鉴先陈述具体事件，再分列制度措施、技术边界、公众争议与审慎结论的完整论证框架。"
+            ],
+            "vocabulary": [
+              {"word":"grueling","phonetic":"/ˈɡruːəlɪŋ/","part":"adj.","translation":"艰苦的；费力的"},
+              {"word":"integrity","phonetic":"/ɪnˈteɡrəti/","part":"n.","translation":"完整性；诚信"},
+              {"word":"validity","phonetic":"/vəˈlɪdəti/","part":"n.","translation":"有效性；正当性"},
+              {"word":"concealed","phonetic":"/kənˈsiːld/","part":"adj.","translation":"隐蔽的；隐藏的"},
+              {"word":"deploy","phonetic":"/dɪˈplɔːɪ/","part":"v.","translation":"部署；调配"},
+              {"word":"invigilator","phonetic":"/ɪnˈvɪdʒɪleɪtər/","part":"n.","translation":"监考人员"},
+              {"word":"scrutiny","phonetic":"/ˈskruːtəni/","part":"n.","translation":"仔细检查；审视"},
+              {"word":"belated","phonetic":"/bɪˈleɪtɪd/","part":"adj.","translation":"来得太晚的；延误的"},
+              {"word":"legitimate","phonetic":"/lɪˈdʒɪtɪmət/","part":"adj.","translation":"合法的；正当的"},
+              {"word":"inconvenience","phonetic":"/ˌɪnkənˈviːniəns/","part":"n.","translation":"不便；麻烦"}
+            ],
+            "sentences": [
+              {
+                "original": "The integrity of South Korea’s career-defining university entrance exam has been thrown into doubt.",
+                "analysis":[
+                  "句子主干是 The integrity has been thrown into doubt，采用被动语态强调考试诚信受到质疑。",
+                  "of 介词短语说明 integrity 的所属对象，即韩国职业生涯导向型大学入学考试。",
+                  "career-defining 是复合形容词，修饰 university entrance exam，说明考试后果重大。",
+                  "has been thrown into doubt 可改写为 has become doubtful，是概括性学术表达。",
+                  "该句为报道主题句，为后文个案和防护措施提供论证框架。"
+                ],
+                "translation":"韩国这种决定职业前途的大学入学考试，其公信力受到了质疑。"
+              },
+              {
+                "original": "But in recent days, exam organisers have faced a renewed threat to the validity of the entire exercise.",
+                "analysis":[
+                  "But 表示转折，说明前文宏观防护措施之后出现新的问题。",
+                  "主语是 exam organisers，谓语为 have faced，a renewed threat 是直接宾语。",
+                  "to the validity of the entire exercise 是介词短语，说明威胁针对整个考试制度的有效性。",
+                  "renewed 表示威胁在已有防护基础上再次增强，提示问题具有连续性。",
+                  "But 的转折可用于摘要中连接制度措施和突发事件。"
+                ],
+                "translation":"但近几日，考试组织者又面临对整个考试活动有效性的新的威胁。"
+              },
+              {
+                "original": "Newer variants could not be dealt with perfectly, the education minister said.",
+                "analysis":[
+                  "主句核心是 newer variants could not be dealt with，表达无法完美处理新型智能眼镜。",
+                  "could not 表达能力或现实限制；perfectly 是程度副词，强调防控并非绝对有效。",
+                  "变体 variants 指前文列举的智能眼镜型号，由前文语境可知。",
+                  "the education minister said 是倒装式引述，归属在后有助于区分官方说法。",
+                  "该句体现谨慎措辞，可用于让步式论证：承认措施而保留其局限。"
+                ],
+                "translation":"教育部长表示，新型智能眼镜无法被完美识别和处理。"
+              }
+            ]
+          },
+          {
+            "title": "US loses measles elimination status amid worst outbreak since 1991",
+            "source": "The Guardian",
+            "published": "2026-11-17",
+            "url": "https://www.theguardian.com/us-news/2026/nov/17/us-measles-outbreak-elimination-status",
+            "readingTime": "约 9 分钟（估算）",
+            "topic": "公共卫生 / 疫苗接种、误信息与传染病治理",
+            "summary": "文章报道美国失去世界卫生组织区域体系认可的麻疹消除状态。报道引用泛美卫生组织数据，说明2026年美国已有超过5400例麻疹和8人死亡，疫情已实现持续本土传播；自称消除26年后，这项状态被重新判定为地方性流行。文章分析接种率下降、疫苗误信息、政府官员公开争议以及跨国疫情等原因，并援引流行病学者强调至少95%的社区接种率、综合公共卫生计划和官方信任恢复的重要性。结尾指出消除状态不仅是名义变化，还会增加旅行、隔离和公共卫生资源压力。",
+            "reason":[
+              "文章将公共卫生指标、疫苗接种和政治沟通结合，适合讨论科学决策、公众信任与媒体误信息。",
+              "结构由官方判定切入，随后用案例、专家和反驳组织论证，并以恢复消除状态所需措施收束。",
+              "适合练习数字证据、权威引述、因果关系和让步结构；可区分作者观点与被引用专家观点。",
+              "elimination、endemic、outbreak、misinformation 等词汇适用于健康与社会议题写作。",
+              "写作可借鉴先给出官方结论，再列证据、原因、反驳和可行对策的段落安排。"
+            ],
+            "vocabulary":[
+              {"word":"elimination","phonetic":"/ɪˌlɪməˈneɪʃən/","part":"n.","translation":"消除；根除"},
+              {"word":"endemic","phonetic":"/enˈdemɪk/","part":"adj.","translation":"地方性流行的"},
+              {"word":"outbreak","phonetic":"/ˈaʊtbreɪk/","part":"n.","translation":"（疾病）爆发"},
+              {"word":"surveillance","phonetic":"/sərˈveɪləns/","part":"n.","translation":"监测；观察"},
+              {"word":"contagious","phonetic":"/kənˈteɪdʒəs/","part":"adj.","translation":"有传染性的"},
+              {"word":"misinformation","phonetic":"/ˌmɪsɪnfərˈmeɪʃən/","part":"n.","translation":"误传；错误信息"},
+              {"word":"preventable","phonetic":"/prɪˈventəbəl/","part":"adj.","translation":"可预防的"},
+              {"word":"pandemic-era","phonetic":"/pænˈdemɪk ˈɪrə/","part":"adj.","translation":"疫情时期的"},
+              {"word":"vaccination","phonetic":"/ˌvæksɪˈneɪʃən/","part":"n.","translation":"疫苗接种"},
+              {"word":"re-establish","phonetic":"/ˌriːɪˈstæblɪʃ/","part":"v.","translation":"重新建立；恢复"}
+            ],
+            "sentences":[
+              {
+                "original":"The US has lost its measles elimination status, global health authorities announced.",
+                "analysis":[
+                  "主句是 global health authorities announced，采用倒装式主谓结构强调官方公告。",
+                  "its measles elimination status 是名词所有结构，说明美国此前的麻疹消除认证已被撤销。",
+                  "lost 是过去时动态动词，体现认证状态的变化而非疾病本身突然出现。",
+                  "the US 是唯一主语；全球卫生机构是 announcement 的来源。",
+                  "该句适合作为新闻摘要的事实句，可配合数据和来源进行改写。"
+                ],
+                "translation":"全球卫生机构宣布，美国已失去麻疹消除状态。"
+              },
+              {
+                "original":"Measles is resurging globally amid persistent gaps in vaccination coverage.",
+                "analysis":[
+                  "主干为 Measles is resurging，进行时态表示麻疹疫情正在复苏。",
+                  "globally 是范围副词，说明这是跨地区现象而非单一国家问题。",
+                  "amid 引导伴随状况，强调在持续接种覆盖缺口中疫情重新增长。",
+                  "persistent gaps in vaccination coverage 是病因或制度性条件，而非单一个人行为。",
+                  "该句可用于写作中连接全球趋势与接种率这一系统性因素。"
+                ],
+                "translation":"在疫苗接种覆盖率持续存在缺口的情况下，麻疹正在全球范围内重新抬头。"
+              },
+              {
+                "original":"Re-establishing elimination status will require a national plan to eliminate measles again.",
+                "analysis":[
+                  "主语是动名词短语 Re-establishing elimination status，表示恢复消除状态这一行动。",
+                  "will require 是将来时主谓结构，说明恢复状态需要持续投入。",
+                  "to eliminate measles again 是目的或内容性不定式，说明计划目标。",
+                  "national plan 强调跨层级协调，不能只依赖个别社区或短期运动。",
+                  "该句适合总结问题解决方案，常用于阅读理解的主旨或作者态度题。"
+                ],
+                "translation":"重新获得消除状态需要一项再次消除麻疹的国家计划。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-17",
       "status": "ready",
