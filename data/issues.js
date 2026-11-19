@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-18T12:08:03+08:00",
+  "updatedAt": "2026-11-19T12:05:52+08:00",
   "issues": [
+    {
+      "date": "2026-11-19",
+      "status": "ready",
+      "ai": {
+        "intro": "今日关注 Gemini 新模型与低内存设备支持、GitHub Copilot 连接器更新，并复核可实际使用的免费模型与学习资源。",
+        "updates": [
+          {
+            "event": "Gemini 4 Neon 面向复杂任务推出",
+            "summary": "Google 于 2026-11-18 发布 Gemini 4 Neon，面向长流程编程、知识工作和科学任务；支持最长 100 万 token 上下文，并在 Gemini API、Gemini 应用和 Google Antigravity 等渠道逐步开放。",
+            "howTo": "在 Google AI Studio 选择 Gemini 4 Neon 使用 API；Gemini 应用和 Antigravity 需使用 Google AI Pro 或 Ultra。GitHub Copilot Pro+、Max、Business、Enterprise 用户也可在模型选择器中查找 Neon。",
+            "impact": "学生可让它梳理长篇资料、分析表格或协助跨文件调试；先明确任务、核对引用和代码，再按 API 计费或确认所用订阅权限。",
+            "free": "Google 列出的 API 价格为每百万输入 token 3 美元、缓存输入 0.15 美元、输出 15 美元；Gemini 应用和 Antigravity 需要 Pro/Ultra，Copilot 需 Pro+、Max、Business 或 Enterprise，Copilot 按供应商标价用量计费。免费资格、地区和固定配额未由发布公告说明；模型仍在渐进式推出。",
+            "category": "生成式 AI / 新模型",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-18",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+            }
+          },
+          {
+            "event": "Gemini 应用扩展至低内存 Android Go 设备",
+            "summary": "Google 于 2026-11-18 宣布，经过重新架构的 Gemini 应用开始支持符合条件的 Android Go 设备；可使用 Gemini Live 对话、相机识别笔记或表格，以及 Nano Banana 图像生成功能。",
+            "howTo": "在符合条件的 Android Go 手机上从 Google Play 下载 Gemini；也可长按电源键启动，或在合作伙伴的新设备上使用预装版本。",
+            "impact": "使用入门级手机的学生可直接口述练习面试、识别课堂笔记或制作简单宣传图，不必先换用高内存设备；重要信息仍应自行核对。",
+            "free": "官方确认面向符合条件的 Android Go 设备推出，但未说明价格、账号资格、具体地区、免费功能额度或上线完成时间。",
+            "category": "AI 助手 / 移动端",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-18",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/"
+            }
+          },
+          {
+            "event": "GitHub Copilot 公测新增八种服务连接器",
+            "summary": "GitHub 于 2026-11-18 为 Copilot 公测新增 Box、Buildkite、Calendly、ClickUp、Mixpanel、Supabase、Webflow 和 Wix 连接器；连接后可在 Copilot 中调用这些服务的信息或执行相应工作。",
+            "howTo": "在 Copilot App 的 Customize、Copilot CLI 的 /mcp > Connectors、VS Code Agents > Customizations，或 github.com 的 Copilot customization 页面选择 Connect；组织版可能需要管理员启用预览策略及对应白名单。",
+            "impact": "学生团队可让 Copilot 查询 Supabase 项目结构后起草迁移，或检查 Buildkite 构建失败原因，减少在课程项目工具间来回切换；执行前应确认连接权限和操作内容。",
+            "free": "连接器公测适用于所有 Copilot 计划；Business/Enterprise 需管理员允许 Editor preview features，个别服务还需服务端授权。官方未说明地区或调用配额。",
+            "category": "AI 助手 / 工具连接",
+            "source": {
+              "name": "GitHub 官方变更日志",
+              "published": "2026-11-18",
+              "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google AI Studio：Gemini API 免费层",
+            "summary": "Google 官方定价页提供 Gemini API 免费层，含部分模型的免费输入与输出 token 以及 AI Studio 使用权；模型范围和速率有限，不能据此推断所有模型均免费。",
+            "howTo": "打开 AI Studio，选择支持免费层的模型并创建 API key；用小规模提示词测试后，再到官方定价页核对该模型的免费额度和速率。",
+            "impact": "适合学生练习调用大模型、构建课程原型或比较提示词，不必一开始购买 API；免费层内容可能被用于改进 Google 产品，勿提交敏感资料。",
+            "free": "官方列明特定模型有免费输入与输出 token，但没有在该总览中列出具体配额、地区或账号限制；免费层内容可用于改进产品。",
+            "category": "免费 API / 模型试用",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Gemini Tasks：多地区免费试用代理任务",
+            "summary": "Google 于 2026-11-17 表示，Gemini Tasks 正向美国、日本、韩国、加拿大、澳大利亚和印度的用户免费推出，可协助处理日常网页任务、日程和应用操作；部分高级功能先在美国推出。",
+            "howTo": "打开 Gemini 应用，将首页模式从 Chat 切换到 Task，再说明要处理的任务；代理可能在购买等关键操作前暂停并请求确认。",
+            "impact": "学生可让它整理课程邮件中的日期、拟定日程或查找出行选项，把时间留给复习；提交、付款等关键步骤应亲自检查。",
+            "free": "官方称该更新在美国、日本、韩国、加拿大、澳大利亚和印度免费推出，采用逐步 rollout，未给出截止日、个人额度或所有功能的地区范围；部分高级功能从美国开始。",
+            "category": "免费 AI 助手 / 任务代理",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-17",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页列出每月 2,000 次代码补全、社区支持和 Copilot Fusion Standard，价格为每月 0 美元且无需信用卡；聊天与代理用量有限。",
+            "howTo": "在 GitHub Copilot 计划页启用 Free，再于 VS Code 或其他受支持编辑器安装 Copilot；查看账户计划和用量后，用于代码补全或小型练习。",
+            "impact": "适合初学者练习 Python、调试课程作业或完成小型项目；将有限补全额度留给重复性编码，并自行运行测试。",
+            "free": "每月 0 美元、2,000 次补全且无需信用卡；聊天及代理仅限量使用，精确额度和地区限制官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Google Colab：免费云端 Jupyter 与计算资源",
+            "summary": "Google Colab 官方 FAQ 确认其托管 Jupyter Notebook 服务可免费使用，并提供包括 GPU、TPU 在内的计算资源，适用于机器学习、数据科学和教育。",
+            "howTo": "打开 Colab，新建 notebook 或从 GitHub/Google Drive 加载 .ipynb；在笔记本中运行 Python 作业，并按需选择运行时硬件。",
+            "impact": "可用于数据分析课程、Python 实验或小规模机器学习练习，省去本地环境配置；应保存代码并准备资源中断后的替代方案。",
+            "free": "服务免费，但资源不保证且不无限，使用限制会波动；官方未给出固定 GPU/TPU 配额、地区或账号资格说明。",
+            "category": "免费学习 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费数据技能短课程",
+            "summary": "Kaggle Learn 官方课程目录标注为 no-cost courses，提供 Python、数据可视化、Pandas 等实用数据技能课程。",
+            "howTo": "访问 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按课程页面的交互练习逐节完成。",
+            "impact": "适合用短练习补足数据处理与编程基础，也可将所学用于课程数据项目；课程目录可先免费浏览和学习。",
+            "free": "官方页面称课程为免费课程；账号资格、地区限制、课程是否永久免费及证书费用官方未说明。",
+            "category": "免费学习 / 数据与编程",
+            "source": {
+              "name": "Kaggle 官方学习中心",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "European Commission accused of sugarcoating figures to release funds to Egypt",
+            "source": "The Guardian",
+            "published": "2026-11-18",
+            "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
+            "readingTime": "约 6 分钟（估算）",
+            "topic": "经济与社会 / 对外援助、福利条件与公共问责",
+            "summary": "文章从欧盟委员会被指淡化埃及福利数据切入，说明2024年承诺的74亿欧元伙伴协议中，50亿欧元软贷款附有改革与福利条件。报道依据泄露的欧盟内部文件、埃及政府一度公开后删除的数据及专家测算指出，2024至2026年福利项目受益家庭净减少85,734户，尽管欧盟称有关条件已“基本完成”或“完成”，仍放出合计25亿欧元贷款。文章随后解释Takaful现金补助与Karama福利的对象，呈现新增名单数量与净受益家庭变化之间的口径差异，并引述欧洲议员、人权团体及欧盟委员会的不同回应；结尾指出剩余15亿欧元仍取决于24项经济条件、IMF项目及民主法治承诺，凸显战略合作与问责标准之间的张力。",
+            "reason": [
+              "主题把对外贷款、社会福利和公共资金问责相连，适合练习经济发展与社会公平类论述。",
+              "文章先提出调查指控，再交代协议背景、援助数据和福利项目，随后并列批评者与欧盟回应，最后回到尚待满足的条件。",
+              "可练习识别数字证据、来源归属和转折关系，并区分受益家庭新增人数与净增人数。",
+              "landmark pact、instalment、beneficiary、conditionality 等表达适合经济与公共政策类阅读。",
+              "写作可借鉴“政策目标—执行数据—利益相关方回应—问责结论”的论证框架。"
+            ],
+            "vocabulary": [
+              {
+                "word": "sugarcoating",
+                "phonetic": "/ˈʃʊɡərˌkoʊtɪŋ/",
+                "part": "n.",
+                "translation": "粉饰；淡化问题"
+              },
+              {
+                "word": "landmark",
+                "phonetic": "/ˈlændmɑːrk/",
+                "part": "adj.",
+                "translation": "具有里程碑意义的"
+              },
+              {
+                "word": "bolster",
+                "phonetic": "/ˈboʊlstər/",
+                "part": "v.",
+                "translation": "支持；增强"
+              },
+              {
+                "word": "instalment",
+                "phonetic": "/ɪnˈstɔːlmənt/",
+                "part": "n.",
+                "translation": "分期款；一期款项"
+              },
+              {
+                "word": "beneficiary",
+                "phonetic": "/ˌbenɪˈfɪʃəri/",
+                "part": "n.",
+                "translation": "受益人"
+              },
+              {
+                "word": "recertification",
+                "phonetic": "/ˌriːsɜːrtɪfɪˈkeɪʃən/",
+                "part": "n.",
+                "translation": "重新认证"
+              },
+              {
+                "word": "conditionality",
+                "phonetic": "/kənˌdɪʃəˈnæləti/",
+                "part": "n.",
+                "translation": "附带条件；条件性"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "仔细审查；监督"
+              },
+              {
+                "word": "ineligible",
+                "phonetic": "/ɪnˈelɪdʒəbəl/",
+                "part": "adj.",
+                "translation": "不符合资格的"
+              },
+              {
+                "word": "clarification",
+                "phonetic": "/ˌklærɪfɪˈkeɪʃən/",
+                "part": "n.",
+                "translation": "澄清；说明"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The spotlight is on €5bn in EU “soft” loans to Egypt.",
+                "analysis": [
+                  "主干是 The spotlight is on...，以“聚光灯”隐喻把读者注意力引向特定议题。",
+                  "€5bn in EU “soft” loans 是介词 on 的宾语，说明被关注的是欧盟对埃及的50亿欧元优惠贷款。",
+                  "to Egypt 作后置修饰，限定贷款的接受方；引号中的 soft 提醒读者这是政策语境中的术语。",
+                  "该句承接前文的调查结果，将宏观协议聚焦到文章接下来逐项审视的贷款条件。",
+                  "写作可用 “The spotlight is on...” 引出某项政策的关键争议。"
+                ],
+                "translation": "焦点集中在欧盟向埃及提供的50亿欧元“优惠”贷款上。"
+              },
+              {
+                "original": "Some beneficiaries were added to the list but a larger number were removed because they were deemed ineligible.",
+                "analysis": [
+                  "but 连接两个并列分句，形成“有人新增、更多人被移除”的对照。",
+                  "前一分句 Some beneficiaries were added 使用一般过去时被动语态，突出受益人名单的变化。",
+                  "后一分句以 a larger number 作主语并使用 were removed，比较数量而非具体执行者。",
+                  "because 引导原因状语从句；they 指被移除的受益人，were deemed ineligible 再次使用被动语态表达资格判定。",
+                  "此句展示如何用对照和原因结构解释“新增数”不等于“净增加”。"
+                ],
+                "translation": "有些受益人被加入名单，但更多人被移除，因为他们被认定不符合资格。"
+              },
+              {
+                "original": "The EU announced the release of the €1.5bn payment in July 2026.",
+                "analysis": [
+                  "句子主干为 The EU announced the release，主语和谓语直接交代发布消息的一方及其行动。",
+                  "the release of the €1.5bn payment 是 announce 的名词性宾语，of 短语说明款项金额。",
+                  "in July 2026 是时间状语，限定宣布放款的时间。",
+                  "release 在此表示资金拨付，而非一般意义上的“释放”；结合上下文可知这是第二期贷款。",
+                  "新闻写作常用 “announce the release of...” 简洁呈现资金或政策决定。"
+                ],
+                "translation": "欧盟于2026年7月宣布拨付这笔15亿欧元款项。"
+              }
+            ]
+          },
+          {
+            "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+            "source": "BBC",
+            "published": "2026-11-19",
+            "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo",
+            "readingTime": "约 3 分钟（估算）",
+            "topic": "文化 / 艺术品交易、历史来源与返还争议",
+            "summary": "文章报道梵高1890年作品《花开栗树》在纽约以1.904亿美元成交，刷新画家此前1.172亿美元的拍卖纪录。拍卖前，作品曾被指在纳粹崛起时期因压力而出售；布莱基耶-阿列塔家族与原德国所有者费舍尔家族的继承人最终在拍卖前达成协议。报道梳理作品自1909年进入费舍尔家族、经阿姆斯特丹和巴黎易手、到1975年由现卖家家族购入的来源链，同时指出买家尚未确定。全文以成交价呈现艺术市场事件，再追溯争议和所有权记录，强调历史背景如何影响一件名画的交易。",
+            "reason": [
+              "艺术品流转与纳粹时期财产争议连接文化、历史记忆和产权问题，是适合拓展文化类话题的材料。",
+              "文章先报成交价及纪录，再回溯拍卖前和解、争议来源，最后按时间顺序说明作品流转。",
+              "可练习理解时间线、被动语态和间接疑问句，并区分已确认事实与仍未确定的买家身份。",
+              "provenance、duress、heir、dispute 等词汇可用于艺术品来源、历史产权及法律争议写作。",
+              "写作可借鉴以最新事件引入，再用历史证据解释背景，最后指出尚未解决信息的结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "record",
+                "phonetic": "/ˈrekərd/",
+                "part": "n.",
+                "translation": "纪录；最高纪录"
+              },
+              {
+                "word": "row",
+                "phonetic": "/raʊ/",
+                "part": "n.",
+                "translation": "争论；纠纷"
+              },
+              {
+                "word": "duress",
+                "phonetic": "/duˈres/",
+                "part": "n.",
+                "translation": "胁迫；强迫"
+              },
+              {
+                "word": "eleventh-hour",
+                "phonetic": "/ɪˌlevənθ ˈaʊər/",
+                "part": "adj.",
+                "translation": "最后一刻的"
+              },
+              {
+                "word": "provenance",
+                "phonetic": "/ˈprɑːvənəns/",
+                "part": "n.",
+                "translation": "来源；出处（尤指艺术品）"
+              },
+              {
+                "word": "heir",
+                "phonetic": "/er/",
+                "part": "n.",
+                "translation": "继承人"
+              },
+              {
+                "word": "dispute",
+                "phonetic": "/dɪˈspjuːt/",
+                "part": "n.",
+                "translation": "争议；纠纷"
+              },
+              {
+                "word": "acquire",
+                "phonetic": "/əˈkwaɪər/",
+                "part": "v.",
+                "translation": "购得；获得"
+              },
+              {
+                "word": "resolve",
+                "phonetic": "/rɪˈzɑːlv/",
+                "part": "v.",
+                "translation": "解决；化解"
+              },
+              {
+                "word": "private hands",
+                "phonetic": "/ˈpraɪvət hændz/",
+                "part": "phr.",
+                "translation": "私人所有；私人收藏"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "It was not immediately clear who purchased the painting.",
+                "analysis": [
+                  "主句使用形式主语 It，真正的信息焦点是后面的 who purchased the painting。",
+                  "was not clear 是系表结构，not immediately 修饰 clear，表示当时尚不能确定。",
+                  "who 引导间接疑问句并在从句中作 purchased 的主语，因此从句采用陈述语序。",
+                  "the painting 是 purchased 的宾语，回指前文所述的梵高作品。",
+                  "该句体现新闻对未知信息的谨慎表达，可与已确认成交价形成对照。"
+                ],
+                "translation": "当时还不清楚是谁买下了这幅画。"
+              },
+              {
+                "original": "The BBC has contacted Sotheby’s for comment.",
+                "analysis": [
+                  "主干为 The BBC has contacted Sotheby’s，主语、现在完成时谓语和宾语完整。",
+                  "现在完成时表示媒体已采取联系行动，其结果与当前报道相关。",
+                  "for comment 是目的状语，说明联系拍卖行是为获得回应。",
+                  "专有名词 Sotheby’s 指文中拍卖机构，所有格形式属于机构名称的一部分。",
+                  "这是新闻报道交代求证过程的常见表达，有助于区分报道事实和未获回应的信息。"
+                ],
+                "translation": "英国广播公司已联系苏富比征求回应。"
+              },
+              {
+                "original": "It is considered one of the most important works of art from that period to remain in private hands, according to Sotheby’s.",
+                "analysis": [
+                  "主干是 It is considered one of the most important works of art，使用被动语态突出作品受到的评价。",
+                  "one of the most important works 是 consider 的补足语，最高级结构表示其重要性。",
+                  "from that period 后置修饰 works of art，限定作品所属的艺术时期。",
+                  "to remain in private hands 是不定式短语，说明这类重要作品中仍由私人持有的作品。",
+                  "according to Sotheby’s 标明判断来源，避免把拍卖行的说法写成无来源的客观结论。"
+                ],
+                "translation": "据苏富比称，它被认为是那个时期仍由私人持有的最重要艺术品之一。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-18",
       "status": "ready",
@@ -133,50 +478,100 @@ window.BRIEFING_DATA = {
               "写作可借鉴先陈述具体事件，再分列制度措施、技术边界、公众争议与审慎结论的完整论证框架。"
             ],
             "vocabulary": [
-              {"word":"grueling","phonetic":"/ˈɡruːəlɪŋ/","part":"adj.","translation":"艰苦的；费力的"},
-              {"word":"integrity","phonetic":"/ɪnˈteɡrəti/","part":"n.","translation":"完整性；诚信"},
-              {"word":"validity","phonetic":"/vəˈlɪdəti/","part":"n.","translation":"有效性；正当性"},
-              {"word":"concealed","phonetic":"/kənˈsiːld/","part":"adj.","translation":"隐蔽的；隐藏的"},
-              {"word":"deploy","phonetic":"/dɪˈplɔːɪ/","part":"v.","translation":"部署；调配"},
-              {"word":"invigilator","phonetic":"/ɪnˈvɪdʒɪleɪtər/","part":"n.","translation":"监考人员"},
-              {"word":"scrutiny","phonetic":"/ˈskruːtəni/","part":"n.","translation":"仔细检查；审视"},
-              {"word":"belated","phonetic":"/bɪˈleɪtɪd/","part":"adj.","translation":"来得太晚的；延误的"},
-              {"word":"legitimate","phonetic":"/lɪˈdʒɪtɪmət/","part":"adj.","translation":"合法的；正当的"},
-              {"word":"inconvenience","phonetic":"/ˌɪnkənˈviːniəns/","part":"n.","translation":"不便；麻烦"}
+              {
+                "word": "grueling",
+                "phonetic": "/ˈɡruːəlɪŋ/",
+                "part": "adj.",
+                "translation": "艰苦的；费力的"
+              },
+              {
+                "word": "integrity",
+                "phonetic": "/ɪnˈteɡrəti/",
+                "part": "n.",
+                "translation": "完整性；诚信"
+              },
+              {
+                "word": "validity",
+                "phonetic": "/vəˈlɪdəti/",
+                "part": "n.",
+                "translation": "有效性；正当性"
+              },
+              {
+                "word": "concealed",
+                "phonetic": "/kənˈsiːld/",
+                "part": "adj.",
+                "translation": "隐蔽的；隐藏的"
+              },
+              {
+                "word": "deploy",
+                "phonetic": "/dɪˈplɔːɪ/",
+                "part": "v.",
+                "translation": "部署；调配"
+              },
+              {
+                "word": "invigilator",
+                "phonetic": "/ɪnˈvɪdʒɪleɪtər/",
+                "part": "n.",
+                "translation": "监考人员"
+              },
+              {
+                "word": "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "仔细检查；审视"
+              },
+              {
+                "word": "belated",
+                "phonetic": "/bɪˈleɪtɪd/",
+                "part": "adj.",
+                "translation": "来得太晚的；延误的"
+              },
+              {
+                "word": "legitimate",
+                "phonetic": "/lɪˈdʒɪtɪmət/",
+                "part": "adj.",
+                "translation": "合法的；正当的"
+              },
+              {
+                "word": "inconvenience",
+                "phonetic": "/ˌɪnkənˈviːniəns/",
+                "part": "n.",
+                "translation": "不便；麻烦"
+              }
             ],
             "sentences": [
               {
                 "original": "The integrity of South Korea’s career-defining university entrance exam has been thrown into doubt.",
-                "analysis":[
+                "analysis": [
                   "句子主干是 The integrity has been thrown into doubt，采用被动语态强调考试诚信受到质疑。",
                   "of 介词短语说明 integrity 的所属对象，即韩国职业生涯导向型大学入学考试。",
                   "career-defining 是复合形容词，修饰 university entrance exam，说明考试后果重大。",
                   "has been thrown into doubt 可改写为 has become doubtful，是概括性学术表达。",
                   "该句为报道主题句，为后文个案和防护措施提供论证框架。"
                 ],
-                "translation":"韩国这种决定职业前途的大学入学考试，其公信力受到了质疑。"
+                "translation": "韩国这种决定职业前途的大学入学考试，其公信力受到了质疑。"
               },
               {
                 "original": "But in recent days, exam organisers have faced a renewed threat to the validity of the entire exercise.",
-                "analysis":[
+                "analysis": [
                   "But 表示转折，说明前文宏观防护措施之后出现新的问题。",
                   "主语是 exam organisers，谓语为 have faced，a renewed threat 是直接宾语。",
                   "to the validity of the entire exercise 是介词短语，说明威胁针对整个考试制度的有效性。",
                   "renewed 表示威胁在已有防护基础上再次增强，提示问题具有连续性。",
                   "But 的转折可用于摘要中连接制度措施和突发事件。"
                 ],
-                "translation":"但近几日，考试组织者又面临对整个考试活动有效性的新的威胁。"
+                "translation": "但近几日，考试组织者又面临对整个考试活动有效性的新的威胁。"
               },
               {
                 "original": "Newer variants could not be dealt with perfectly, the education minister said.",
-                "analysis":[
+                "analysis": [
                   "主句核心是 newer variants could not be dealt with，表达无法完美处理新型智能眼镜。",
                   "could not 表达能力或现实限制；perfectly 是程度副词，强调防控并非绝对有效。",
                   "变体 variants 指前文列举的智能眼镜型号，由前文语境可知。",
                   "the education minister said 是倒装式引述，归属在后有助于区分官方说法。",
                   "该句体现谨慎措辞，可用于让步式论证：承认措施而保留其局限。"
                 ],
-                "translation":"教育部长表示，新型智能眼镜无法被完美识别和处理。"
+                "translation": "教育部长表示，新型智能眼镜无法被完美识别和处理。"
               }
             ]
           },
@@ -188,58 +583,108 @@ window.BRIEFING_DATA = {
             "readingTime": "约 9 分钟（估算）",
             "topic": "公共卫生 / 疫苗接种、误信息与传染病治理",
             "summary": "文章报道美国失去世界卫生组织区域体系认可的麻疹消除状态。报道引用泛美卫生组织数据，说明2026年美国已有超过5400例麻疹和8人死亡，疫情已实现持续本土传播；自称消除26年后，这项状态被重新判定为地方性流行。文章分析接种率下降、疫苗误信息、政府官员公开争议以及跨国疫情等原因，并援引流行病学者强调至少95%的社区接种率、综合公共卫生计划和官方信任恢复的重要性。结尾指出消除状态不仅是名义变化，还会增加旅行、隔离和公共卫生资源压力。",
-            "reason":[
+            "reason": [
               "文章将公共卫生指标、疫苗接种和政治沟通结合，适合讨论科学决策、公众信任与媒体误信息。",
               "结构由官方判定切入，随后用案例、专家和反驳组织论证，并以恢复消除状态所需措施收束。",
               "适合练习数字证据、权威引述、因果关系和让步结构；可区分作者观点与被引用专家观点。",
               "elimination、endemic、outbreak、misinformation 等词汇适用于健康与社会议题写作。",
               "写作可借鉴先给出官方结论，再列证据、原因、反驳和可行对策的段落安排。"
             ],
-            "vocabulary":[
-              {"word":"elimination","phonetic":"/ɪˌlɪməˈneɪʃən/","part":"n.","translation":"消除；根除"},
-              {"word":"endemic","phonetic":"/enˈdemɪk/","part":"adj.","translation":"地方性流行的"},
-              {"word":"outbreak","phonetic":"/ˈaʊtbreɪk/","part":"n.","translation":"（疾病）爆发"},
-              {"word":"surveillance","phonetic":"/sərˈveɪləns/","part":"n.","translation":"监测；观察"},
-              {"word":"contagious","phonetic":"/kənˈteɪdʒəs/","part":"adj.","translation":"有传染性的"},
-              {"word":"misinformation","phonetic":"/ˌmɪsɪnfərˈmeɪʃən/","part":"n.","translation":"误传；错误信息"},
-              {"word":"preventable","phonetic":"/prɪˈventəbəl/","part":"adj.","translation":"可预防的"},
-              {"word":"pandemic-era","phonetic":"/pænˈdemɪk ˈɪrə/","part":"adj.","translation":"疫情时期的"},
-              {"word":"vaccination","phonetic":"/ˌvæksɪˈneɪʃən/","part":"n.","translation":"疫苗接种"},
-              {"word":"re-establish","phonetic":"/ˌriːɪˈstæblɪʃ/","part":"v.","translation":"重新建立；恢复"}
-            ],
-            "sentences":[
+            "vocabulary": [
               {
-                "original":"The US has lost its measles elimination status, global health authorities announced.",
-                "analysis":[
+                "word": "elimination",
+                "phonetic": "/ɪˌlɪməˈneɪʃən/",
+                "part": "n.",
+                "translation": "消除；根除"
+              },
+              {
+                "word": "endemic",
+                "phonetic": "/enˈdemɪk/",
+                "part": "adj.",
+                "translation": "地方性流行的"
+              },
+              {
+                "word": "outbreak",
+                "phonetic": "/ˈaʊtbreɪk/",
+                "part": "n.",
+                "translation": "（疾病）爆发"
+              },
+              {
+                "word": "surveillance",
+                "phonetic": "/sərˈveɪləns/",
+                "part": "n.",
+                "translation": "监测；观察"
+              },
+              {
+                "word": "contagious",
+                "phonetic": "/kənˈteɪdʒəs/",
+                "part": "adj.",
+                "translation": "有传染性的"
+              },
+              {
+                "word": "misinformation",
+                "phonetic": "/ˌmɪsɪnfərˈmeɪʃən/",
+                "part": "n.",
+                "translation": "误传；错误信息"
+              },
+              {
+                "word": "preventable",
+                "phonetic": "/prɪˈventəbəl/",
+                "part": "adj.",
+                "translation": "可预防的"
+              },
+              {
+                "word": "pandemic-era",
+                "phonetic": "/pænˈdemɪk ˈɪrə/",
+                "part": "adj.",
+                "translation": "疫情时期的"
+              },
+              {
+                "word": "vaccination",
+                "phonetic": "/ˌvæksɪˈneɪʃən/",
+                "part": "n.",
+                "translation": "疫苗接种"
+              },
+              {
+                "word": "re-establish",
+                "phonetic": "/ˌriːɪˈstæblɪʃ/",
+                "part": "v.",
+                "translation": "重新建立；恢复"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The US has lost its measles elimination status, global health authorities announced.",
+                "analysis": [
                   "主句是 global health authorities announced，采用倒装式主谓结构强调官方公告。",
                   "its measles elimination status 是名词所有结构，说明美国此前的麻疹消除认证已被撤销。",
                   "lost 是过去时动态动词，体现认证状态的变化而非疾病本身突然出现。",
                   "the US 是唯一主语；全球卫生机构是 announcement 的来源。",
                   "该句适合作为新闻摘要的事实句，可配合数据和来源进行改写。"
                 ],
-                "translation":"全球卫生机构宣布，美国已失去麻疹消除状态。"
+                "translation": "全球卫生机构宣布，美国已失去麻疹消除状态。"
               },
               {
-                "original":"Measles is resurging globally amid persistent gaps in vaccination coverage.",
-                "analysis":[
+                "original": "Measles is resurging globally amid persistent gaps in vaccination coverage.",
+                "analysis": [
                   "主干为 Measles is resurging，进行时态表示麻疹疫情正在复苏。",
                   "globally 是范围副词，说明这是跨地区现象而非单一国家问题。",
                   "amid 引导伴随状况，强调在持续接种覆盖缺口中疫情重新增长。",
                   "persistent gaps in vaccination coverage 是病因或制度性条件，而非单一个人行为。",
                   "该句可用于写作中连接全球趋势与接种率这一系统性因素。"
                 ],
-                "translation":"在疫苗接种覆盖率持续存在缺口的情况下，麻疹正在全球范围内重新抬头。"
+                "translation": "在疫苗接种覆盖率持续存在缺口的情况下，麻疹正在全球范围内重新抬头。"
               },
               {
-                "original":"Re-establishing elimination status will require a national plan to eliminate measles again.",
-                "analysis":[
+                "original": "Re-establishing elimination status will require a national plan to eliminate measles again.",
+                "analysis": [
                   "主语是动名词短语 Re-establishing elimination status，表示恢复消除状态这一行动。",
                   "will require 是将来时主谓结构，说明恢复状态需要持续投入。",
                   "to eliminate measles again 是目的或内容性不定式，说明计划目标。",
                   "national plan 强调跨层级协调，不能只依赖个别社区或短期运动。",
                   "该句适合总结问题解决方案，常用于阅读理解的主旨或作者态度题。"
                 ],
-                "translation":"重新获得消除状态需要一项再次消除麻疹的国家计划。"
+                "translation": "重新获得消除状态需要一项再次消除麻疹的国家计划。"
               }
             ]
           }
@@ -1921,1024 +2366,6 @@ window.BRIEFING_DATA = {
           }
         ]
       }
-    },
-    {
-      "date": "2026-11-12",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 AlphaGenome 2 的细胞类型预测、Gemini Robotics 2.5 的实体操作能力和 Gemini 4 Carbon 接入 Copilot；另复核学生可用的免费开发与学习工具。",
-        "updates": [
-          {
-            "event": "AlphaGenome 2：按细胞类型预测 DNA 变异影响",
-            "summary": "Google DeepMind 于 11 月 11 日发布 AlphaGenome 2，可在输入 DNA 序列的同时指定组织、细胞类型或细胞状态，预测变异对基因调控的影响。模型使用逾 1 亿个单细胞数据训练，并可对新单细胞实验中的细胞状态作预测；非商业研究可通过 API 使用，商业研究为私测。",
-            "howTo": "打开官方 AlphaGenome API 文档，申请 API key，并按 Getting started 与 Colab 教程提交 DNA 序列和目标细胞条件；先用公开研究数据验证预测，再对照实验资料解释结果。",
-            "impact": "生物学、遗传学和计算生物学学生可用它筛选候选变异、比较不同细胞环境下的调控预测，帮助确定后续实验方向；预测不能替代实验验证或临床诊断。",
-            "free": "官方公告说明非商业研究可通过 AlphaGenome API 使用，商业研究处于私测；官方 API 文档（https://www.alphagenomedocs.com/）说明非商业用途免费，但查询速率随需求变化。公告未说明固定配额、支持地区或账户资格。",
-            "category": "科研 AI / 基因组学",
-            "source": {
-              "name": "Google DeepMind 官方博客",
-              "published": "2026-11-11",
-              "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
-            }
-          },
-          {
-            "event": "Gemini Robotics 2.5 面向机器人推出新一代视觉-语言-动作模型",
-            "summary": "Google DeepMind 于 11 月 10 日发布 Gemini Robotics 2.5，改进机器人执行灵巧操作、适应任务和安全避障的能力，目标是让机器人应对更复杂的真实环境。目前正向机器人合作伙伴开放。",
-            "howTo": "访问官方 Gemini Robotics 2.5 页面提交 early-access waitlist；若所在实验室获准接入，再按官方合作方流程配置支持的机器人并设计受控操作测试。公开页面目前仅提供申请入口。",
-            "impact": "机器人与具身智能方向的学生可关注模型如何把视觉和语言指令转成实体动作，并在实验室中评估精细操作和安全避障；普通用户目前不能直接把它当作通用聊天模型试用。",
-            "free": "官方公告称模型正向机器人合作伙伴逐步开放，产品页提供 early-access waitlist；是否获批、价格、账号要求、地区和调用配额均未说明，提交申请不代表已获得访问权限。",
-            "category": "具身智能 / 机器人模型",
-            "source": {
-              "name": "Google DeepMind 官方博客",
-              "published": "2026-11-10",
-              "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
-            }
-          },
-          {
-            "event": "Gemini 4 Carbon 加入 GitHub Copilot",
-            "summary": "GitHub 于 11 月 10 日宣布 Gemini 4 Carbon 在 Copilot 中正式可用，面向复杂编程、agent 工作流和推理任务。用户可在支持的 IDE、Copilot CLI、GitHub 网站及移动端的模型选择器中切换；功能分批开放。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI 或其他受支持客户端打开模型选择器并选择 Gemini 4 Carbon；若尚未出现，稍后再检查。Business 与 Enterprise 组织用户还需管理员在 Copilot 设置中允许该模型。",
-            "impact": "适合已有相应 Copilot 计划的学生开发者尝试多文件调试、复杂代码任务和代码审查；先让模型说明改动方案，再用测试和人工检查验证结果。",
-            "free": "仅列于 Copilot Pro+、Max、Business 和 Enterprise 计划，且分阶段开放；使用按模型提供方的标价计费。免费计划不在公告列出的可用计划中；具体 token 价格见 GitHub 官方计费表，公告未说明地区限制或固定用量配额。",
-            "category": "编程助手 / 模型接入",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-10",
-              "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Student Developer Pack：验证学生身份领取开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro；官方页面列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并提供免费的合作伙伴开发权益。",
-            "howTo": "进入 GitHub Education 学生权益页申请验证，按提示提交学校邮箱和/或带日期的官方在读证明；通过后在 Student Developer Pack 查看当前可领取的合作权益。",
-            "impact": "可用私有仓库协作课程代码，在 Codespaces 中远程开发，并以 Actions 自动运行项目检查；申请前确认课程和证明材料符合资格。",
-            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需学校邮箱和/或官方在读证明。官方列出上述月度额度；地区范围和申请截止日期官方未说明，合作伙伴权益依各自条款。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Jupyter 与部分 GPU/TPU 算力",
-            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方 FAQ 确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
-            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看运行时硬件选项，重要文件保存到 Drive 或下载笔记本。",
-            "impact": "适合练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，无需先配置本地开发环境。",
-            "free": "官方确认免费使用；资源不保证且不无限，使用限制会变化，托管运行时还可能提前终止。具体配额、地区与账号条件官方未说明。",
-            "category": "免费算力 / 学习环境",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini Notebook：Gmail 用户可免费使用基础版",
-            "summary": "Google 帮助页说明可用 Gmail 账号免费注册 Gemini Notebook。基础版每位用户最多 100 个笔记本；每个笔记本最多 50 个非笔记类来源，另有每本 500 个 notes 来源的额度。",
-            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建课程笔记本并添加讲义或公开文章；围绕已添加来源提问，再回到原文核对回答和出处。",
-            "impact": "可按课程或论文主题整理材料、生成复习问题；来源数量有上限，模型生成内容仍应对照原始资料。",
-            "free": "可免费注册；浏览器版仅向官方支持国家/地区中达到当地同意年龄的用户提供。基础版为每用户 100 个笔记本、每本 50 个非笔记来源及 500 个 notes 来源；地区与年龄要求以官方页面为准。",
-            "category": "免费学习工具 / 资料整理",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助页",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面和手机端的免费使用层",
-            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和手机端聊天、搜索网页、创建文件和运行代码；使用量受每 5 小时及每周限制。",
-            "howTo": "打开 Claude 官方免费方案入口并登录，在网页、桌面或手机端选择课程文本任务；可试用网页搜索、文件创建或代码运行，接近限制时缩小任务并保存结果。",
-            "impact": "适合低成本练习文本概括、网页资料初筛、生成学习文件或运行小段代码；复杂任务和较长对话可能更快触及用量限制。",
-            "free": "官方标价每月 0 美元，免费方案每 5 小时及每周均有使用限制，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
-            "category": "免费 AI 应用 / 学习助手",
-            "source": {
-              "name": "Claude 官方价格页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：免费代码补全和有限聊天",
-            "summary": "GitHub 官方计划页列出每月 2,000 次代码补全、Copilot CLI 和有限的聊天及 agent 使用；Free 计划无需信用卡。",
-            "howTo": "进入 GitHub Copilot Free 计划并启用相应 IDE 扩展，在 VS Code 等支持环境中使用代码补全；需要聊天或 agent 功能时按官方页面的 Free 计划说明查看可用额度。",
-            "impact": "可用于课程代码的行内补全、解释和小规模调试练习；应检查生成代码并运行测试，聊天与 agent 使用量受限。",
-            "free": "官方标价 0 美元、无需信用卡，每月 2,000 次代码补全；聊天和 agent 使用受限但未公布固定额度。账户条件和地区范围官方未说明。",
-            "category": "免费编程助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "DeepL 免费版：文本翻译与小型文件翻译额度",
-            "summary": "DeepL 官方计划对比页列出免费版本每月最多翻译 50,000 个字符，并支持单个不超过 5 MB 的文件翻译，可用于阅读外文资料和核对译文。",
-            "howTo": "打开 DeepL 翻译器，将课程段落粘贴到文本框，或上传不超过 5 MB 的文件；对专业术语和关键句回看原文，不直接把机器译文当作定稿。",
-            "impact": "适合快速理解外文文献、对照中英术语和初步翻译短材料；免费版额度有限，译文仍需人工校对。",
-            "free": "官方计划页列出免费版每月 50,000 字符和每月 1 次文件翻译、单文件最多 5 MB；免费版本的地区、账号要求官方未说明。",
-            "category": "免费翻译工具",
-            "source": {
-              "name": "DeepL 官方计划页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Some under-25s should get less benefits, Milburn review to say",
-            "source": "BBC",
-            "published": "2026-11-12",
-            "url": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "社会与福利政策 / 青年就业与保障",
-            "summary": "BBC 报道一项尚未公布的政府委托评估：Alan Milburn 预计建议 25 岁以下人士不再领取 Universal Credit 的健康津贴或个人独立支付，改为基本津贴，部分人可另领疾病相关费用补贴；重度残障且无法工作者则可能获得较高的新福利。评估也预计建议增加就业支持资金、岗位补贴和个人顾问，但部分申领者可能因此少领福利，且若落实，财政节省或需近十年才出现。报道以就业扶持与短期收入保障的取舍呈现争议；这些仍是预计建议，并非已生效政策。",
-            "reason": [
-              "青年福利、就业支持与公共财政是社会政策类阅读常见主题，文章同时呈现受益者保障和就业激励两种目标。",
-              "行文先交代评估建议，再说明不同群体待遇、就业措施和可能的财政影响，最后引入争议与政府表态。",
-              "适合考查提案与现行政策的区别、不同青年群体将受何影响，以及作者如何用条件句和引语呈现尚未定案的变化。",
-              "可积累 entitlement、claimant、allowance、subsidy 等福利政策词汇，并注意 could、would、expected 等表示不确定性的用法。",
-              "写作可借鉴“政策目标—群体影响—短长期权衡—执行争议”的结构，论证时也应区分建议、预测和已通过的法律。"
-            ],
-            "vocabulary": [
-              {
-                "word": "overhaul",
-                "phonetic": "/ˌoʊvərˈhɔːl/",
-                "part": "n.",
-                "translation": "全面改革"
-              },
-              {
-                "word": "entitled",
-                "phonetic": "/ɪnˈtaɪtld/",
-                "part": "adj.",
-                "translation": "有资格获得的；应得的"
-              },
-              {
-                "word": "claimant",
-                "phonetic": "/ˈkleɪmənt/",
-                "part": "n.",
-                "translation": "申领者；索赔人"
-              },
-              {
-                "word": "allowance",
-                "phonetic": "/əˈlaʊəns/",
-                "part": "n.",
-                "translation": "津贴；补助"
-              },
-              {
-                "word": "placement",
-                "phonetic": "/ˈpleɪsmənt/",
-                "part": "n.",
-                "translation": "安置；实习岗位"
-              },
-              {
-                "word": "subsidy",
-                "phonetic": "/ˈsʌbsədi/",
-                "part": "n.",
-                "translation": "补贴；津贴"
-              },
-              {
-                "word": "legislation",
-                "phonetic": "/ˌledʒɪsˈleɪʃn/",
-                "part": "n.",
-                "translation": "立法；法律"
-              },
-              {
-                "word": "controversial",
-                "phonetic": "/ˌkɑːntrəˈvɜːrʃl/",
-                "part": "adj.",
-                "translation": "有争议的"
-              },
-              {
-                "word": "monetary",
-                "phonetic": "/ˈmɑːnəteri/",
-                "part": "adj.",
-                "translation": "货币的；财政的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Some could be eligible for a new “additional cost allowance” to cover day-to-day costs related to their conditions.",
-                "analysis": [
-                  "主干是 Some could be eligible for an allowance，说明部分人可能符合领取津贴的资格。",
-                  "to cover day-to-day costs 是目的不定式，说明该津贴拟用于覆盖什么支出。",
-                  "related to their conditions 是过去分词短语，后置修饰 costs，限定费用与健康状况有关。",
-                  "could 表示可能性而非确定承诺；Some 也与上下文中的 many claimants 形成范围对照。",
-                  "可借鉴 be eligible for ... to cover ... 表达资格和政策用途。"
-                ],
-                "translation": "部分人可能有资格领取一项新的“额外费用津贴”，以支付与自身健康状况有关的日常开销。"
-              },
-              {
-                "original": "But many claimants would receive less under the plans, which the government is set to take forward into legislation in the new year.",
-                "analysis": [
-                  "主句核心是 many claimants would receive less，指出计划下不少申领者会少领福利。",
-                  "But 连接前后对照，转折出就业支持方案可能带来的收入损失。",
-                  "which 引导非限制性定语从句，补充说明政府拟如何推进这些计划。",
-                  "is set to 表示预期或安排；would 和 in the new year 共同体现未来性，不能误读为已经立法。",
-                  "可借鉴 But ... , which ... 先提出限制，再补充政策进程。"
-                ],
-                "translation": "但在这些计划下，许多申领者将会少领福利；政府准备在新年将计划推进为立法。"
-              },
-              {
-                "original": "If Milburn's recommendations were approved, it could take almost a decade for the British state to see monetary savings.",
-                "analysis": [
-                  "句子以 If 引导条件从句，主句为 it could take almost a decade。",
-                  "were approved 是虚拟语气的被动形式，表示建议尚未获批。",
-                  "for the British state to see monetary savings 说明时间所对应的结果，即国家实现财政节省。",
-                  "almost a decade 强调政策成本收益出现得较晚，支撑文章对短期与长期效果的权衡。",
-                  "可借鉴 If ... were approved, it could take ... for ... to ... 表达有条件的政策预测。"
-                ],
-                "translation": "如果 Milburn 的建议获批，英国政府可能要近十年才能看到财政节省。"
-              }
-            ]
-          },
-          {
-            "title": "Historic US ocean liner sinks near Florida to become world’s largest artificial reef",
-            "source": "The Guardian",
-            "published": "2026-11-11",
-            "url": "https://www.theguardian.com/us-news/2026/nov/11/ss-united-states-sinks-florida-reef",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "文化与环境 / 历史船舶改造为人工鱼礁",
-            "summary": "文章报道远洋客轮 SS United States 在佛罗里达州 Destin 外海沉没，转作人工鱼礁。该船 1952 年下水，处女航创下横渡大西洋速度纪录，服役 17 年后于 1969 年退役；长期停泊费和维护成本使保存计划难以为继。Okaloosa County 于 2024 年以 100 万美元购入，并把船体改造后沉放于墨西哥湾海床。当地官员预计礁体将成为鱼类栖息地和潜水目的地，文章由此串联船只的历史价值、保存成本与新的旅游和生态用途。",
-            "reason": [
-              "文章把交通史、文化遗产保护和人工鱼礁结合起来，适合练习分析旧设施再利用所涉及的成本与公共价值。",
-              "叙述从沉船事件回溯其航海纪录和退役经历，再解释保存困难、地方政府购入与改造计划，结构清晰。",
-              "适合考查时间线、数字信息、转折关系，以及 distinguish 已发生的沉船事实与官员对生态效益的预期。",
-              "可学习 ocean liner、maiden voyage、dockage fee、habitat 等历史和环境词汇，以及过去分词短语的压缩表达。",
-              "写作可借鉴“历史背景—现实困境—替代方案—预期收益”的案例论证框架，并对预测性结论保留限定。"
-            ],
-            "vocabulary": [
-              {
-                "word": "ocean liner",
-                "phonetic": "/ˈoʊʃən ˌlaɪnər/",
-                "part": "n. phr.",
-                "translation": "远洋客轮"
-              },
-              {
-                "word": "maiden voyage",
-                "phonetic": "/ˌmeɪdn ˈvɔɪɪdʒ/",
-                "part": "n. phr.",
-                "translation": "处女航；首次航行"
-              },
-              {
-                "word": "transatlantic",
-                "phonetic": "/ˌtrænzətˈlæntɪk/",
-                "part": "adj.",
-                "translation": "横渡大西洋的"
-              },
-              {
-                "word": "deployed",
-                "phonetic": "/dɪˈplɔɪd/",
-                "part": "v.",
-                "translation": "被投放；被部署"
-              },
-              {
-                "word": "hull",
-                "phonetic": "/hʌl/",
-                "part": "n.",
-                "translation": "船体；船壳"
-              },
-              {
-                "word": "dockage fee",
-                "phonetic": "/ˈdɑːkɪdʒ fiː/",
-                "part": "n. phr.",
-                "translation": "停泊费"
-              },
-              {
-                "word": "conservancy",
-                "phonetic": "/kənˈsɜːrvənsi/",
-                "part": "n.",
-                "translation": "保护协会；资源保护组织"
-              },
-              {
-                "word": "artificial reef",
-                "phonetic": "/ˌɑːrtɪˈfɪʃl riːf/",
-                "part": "n. phr.",
-                "translation": "人工鱼礁"
-              },
-              {
-                "word": "habitat",
-                "phonetic": "/ˈhæbɪtæt/",
-                "part": "n.",
-                "translation": "栖息地"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The ship carried thousands of passengers across the Atlantic over 17 years of operation before being retired in 1969.",
-                "analysis": [
-                  "主干是 The ship carried thousands of passengers，说明客轮运送了大量乘客。",
-                  "across the Atlantic 补充航行范围，over 17 years of operation 交代持续时间。",
-                  "before being retired 是被动动名词短语，表示服役结束后退役的时间顺序。",
-                  "句子用时间和数量把抽象的航运历史具体化，服务于后文的历史价值说明。",
-                  "可借鉴 over ... years ... before being ... 压缩叙述经历与后续变化。"
-                ],
-                "translation": "这艘船在 17 年运营期间横渡大西洋，载运了数千名乘客，之后于 1969 年退役。"
-              },
-              {
-                "original": "For years, the SS United States remained docked in Philadelphia, as various owners attempted to save and restore it.",
-                "analysis": [
-                  "主句核心是 the SS United States remained docked，说明船只长期停泊在费城。",
-                  "For years 前置强调持续时间，地点状语 in Philadelphia 补充停泊地点。",
-                  "as 引导从句，说明船只停泊期间不同所有者一直试图挽救并修复它。",
-                  "主从句构成“长期停泊—持续尝试”的背景关系，为后文转作人工鱼礁的方案作铺垫。",
-                  "可借鉴 remain ... as ... attempted to ... 描写困境与并行努力。"
-                ],
-                "translation": "多年来，SS United States 一直停泊在费城，不同所有者曾试图挽救并修复它。"
-              },
-              {
-                "original": "On Wednesday, the ship was deployed at approximately 2.40pm ET, with the sinking process beginning shortly before 5pm.",
-                "analysis": [
-                  "主干是 the ship was deployed，采用一般过去时被动语态突出船只被投放这一事件。",
-                  "On Wednesday 和 at approximately 2.40pm ET 分别标明日期和大致时间。",
-                  "with the sinking process beginning ... 是 with 复合结构，补充后续沉船过程的开始时间。",
-                  "approximately 与 shortly before 都是限定表达，表明文中时间为近似值而非精确测量。",
-                  "可借鉴 with + 名词 + -ing 补充同时或随后发生的背景事件。"
-                ],
-                "translation": "周三约美国东部时间下午 2 点 40 分，船只被投放入海；沉船过程在下午 5 点前不久开始。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-11",
-      "status": "ready",
-      "ai": {
-        "intro": "本期核对 Gemini 4 Carbon 面向开发者与 Ultra 用户开放、Pixel 11 月功能更新及 Copilot 企业席位 API 变化，并复查学生可用的免费工具和模型。",
-        "updates": [
-          {
-            "event": "Gemini 4 Carbon 开始面向开发者、企业、科研人员和消费者提供",
-            "summary": "Google 于 11 月 10 日宣布 Gemini 4 Carbon 可用。API 面向付费开发者和企业；Google AI Ultra 订阅用户也开始在 Gemini 应用、AI Mode 和 Google Antigravity 中获得该模型。",
-            "howTo": "开发者可在 Google AI Studio 的 Gemini 4 Carbon 模型入口创建 API key 并调用模型；已有 Google AI Ultra 订阅的用户可在 Gemini 应用、AI Mode 或 Antigravity 中查看是否已开放。先用公开课程材料试做多步代码、数据分析或文献整理，再逐项核对结果。",
-            "impact": "可用于需要多步推理的课程编程、数据整理和研究资料初筛；API 需付费，输出应回到原始数据或文献核验，不应把模型结论当作研究证据。",
-            "free": "官方公告说明 API 面向付费开发者/企业，介绍期价格为每百万输入 token 2 美元、输出 token 10 美元；介绍期结束后为 4/20 美元。Gemini 应用、AI Mode 和 Antigravity 面向 Google AI Ultra 订阅用户逐步开放。官方未说明地区、API 免费额度或具体配额。",
-            "category": "生成式 AI / Gemini 模型",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-10",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
-            }
-          },
-          {
-            "event": "Pixel 11 月更新加入 Gemini Intelligence 功能",
-            "summary": "Google 于 11 月 10 日公布 Pixel 11 月功能更新：Pixel 10（不含 10a）及更新机型将获得 Gemini Intelligence，包括可整理语音输入的 Rambler、个性化建议和多步任务；部分设备还可制作自定义主屏 widget。更新分阶段推送。",
-            "howTo": "兼容 Pixel 收到本月系统更新后，在语音输入时自然口述并检查 Rambler 整理后的文字；也可在 Gemini 中尝试多步任务，或按页面所述创建支出追踪等自定义 widget。先检查手机型号和所在地区的功能可用性。",
-            "impact": "适合用语音快速整理课堂消息或待办，并把课程/生活进度放到主屏 widget；多步任务功能目前仅在日本、英国和印度提供，其他功能也受机型、市场和语言限制。",
-            "free": "公告列出 Pixel 10（不含 10a）及更新设备等适用条件，功能随更新逐步推送且按市场、语言有差异；多步任务列出的地区为日本、英国和印度。官方未说明额外订阅费、账户要求或配额。",
-            "category": "移动 AI / Google Pixel",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-10",
-              "url": "https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop/"
-            }
-          },
-          {
-            "event": "GitHub Apps 可通过 API 管理 Enterprise Copilot 席位",
-            "summary": "GitHub 在 11 月 10 日更新 Enterprise Copilot 席位管理能力：Enterprise GitHub Apps 可调用企业级 Copilot seat-management API，为用户和企业团队分配席位；调用需要新增的细粒度权限 Enterprise Copilot license management。",
-            "howTo": "企业管理员可为 Enterprise GitHub App 授予 Enterprise Copilot license management 权限，再按 GitHub 文档调用企业级席位管理 API，管理用户或团队的席位分配。普通个人账号不能仅凭 Copilot 客户端使用这项管理能力。",
-            "impact": "高校实验室或课程项目若由企业 GitHub 组织统一管理 Copilot，可把成员入组、席位分配和回收接入既有 GitHub App 流程；普通学生使用者无需操作 API，但应确认席位是否由组织管理员管理。",
-            "free": "仅面向具备企业级 Copilot 席位管理权限的 Enterprise GitHub Apps；需要企业级 Copilot 组织和相应权限。公告没有说明价格、地区、调用配额或普通个人计划是否适用，相关信息官方未说明。",
-            "category": "编程助手 / 企业管理 API",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-10",
-              "url": "https://github.blog/changelog/2026-11-11-github-app-support-for-enterprise-copilot-seat-management/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Student Developer Pack：验证学生身份领取开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro；官方页面列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并提供免费的合作伙伴开发权益。",
-            "howTo": "进入 GitHub Education 学生权益页申请验证，按提示提交学校邮箱和/或带日期的官方在读证明；通过后在 Student Developer Pack 查看当前可领取的合作权益。",
-            "impact": "可用私有仓库协作课程代码，在 Codespaces 中远程开发，并以 Actions 自动运行项目检查；申请前确认课程和证明材料符合资格。",
-            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需学校邮箱和/或官方在读证明。官方列出上述月度额度；地区范围和申请截止日期官方未说明，合作伙伴权益依各自条款。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Jupyter 与部分 GPU/TPU 算力",
-            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方 FAQ 确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
-            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看运行时硬件选项，重要文件保存到 Drive 或下载笔记本。",
-            "impact": "适合练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，无需先配置本地开发环境。",
-            "free": "官方确认免费使用；资源不保证且不无限，使用限制会变化，托管运行时还可能提前终止。具体配额、地区与账号条件官方未说明。",
-            "category": "免费算力 / 学习环境",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini Notebook：Gmail 用户可免费使用基础版",
-            "summary": "Google 帮助页说明可用 Gmail 账号免费注册 Gemini Notebook。基础版每位用户最多 100 个笔记本；每个笔记本最多 50 个非笔记类来源，另有每本 500 个 notes 来源的额度。",
-            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建课程笔记本并添加讲义或公开文章；围绕已添加来源提问，再回到原文核对回答和出处。",
-            "impact": "可按课程或论文主题整理材料、生成复习问题；来源数量有上限，模型生成内容仍应对照原始资料。",
-            "free": "可免费注册；浏览器版仅向官方支持国家/地区中达到当地同意年龄的用户提供。基础版为每用户 100 个笔记本、每本 50 个非笔记来源及 500 个 notes 来源；地区与年龄要求以官方页面为准。",
-            "category": "免费学习工具 / 资料整理",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助页",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面和手机端的免费使用层",
-            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和手机端聊天、搜索网页、创建文件和运行代码；使用量受每 5 小时及每周限制。",
-            "howTo": "打开 Claude 官方免费方案入口并登录，在网页、桌面或手机端选择课程文本任务；可试用网页搜索、文件创建或代码运行，接近限制时缩小任务并保存结果。",
-            "impact": "适合低成本练习文本概括、网页资料初筛、生成学习文件或运行小段代码；复杂任务和较长对话可能更快触及用量限制。",
-            "free": "官方标价每月 0 美元，免费方案每 5 小时及每周均有使用限制，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
-            "category": "免费 AI 应用 / 学习助手",
-            "source": {
-              "name": "Claude 官方价格页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "Qwen3-ASR-0.6B：Apache-2.0 许可的多语言语音识别模型",
-            "summary": "Qwen 官方仓库提供可下载的 Qwen3-ASR 开源语音识别系列；0.6B 模型支持语种识别和语音转写，模型家族支持 30 种语言及 22 种中文方言，仓库标注 Apache-2.0 许可。",
-            "howTo": "打开官方 Hugging Face 模型卡下载 Qwen/Qwen3-ASR-0.6B，按 Qwen3-ASR 仓库说明安装 `qwen-asr`，再用课程录音片段试做转写并人工校对专有名词。",
-            "impact": "可本地尝试把讲座或访谈音频转为文字，用于复习、检索和英语听力校对；识别结果可能出错，音频隐私和本地硬件需求需自行考虑。",
-            "free": "官方仓库将代码和模型系列标为 Apache-2.0，并提供 Hugging Face/ModelScope 下载入口；权重无需付费领取，运行需自备兼容设备并承担本地算力成本。地区和账号限制官方未说明。",
-            "category": "开放模型 / 语音转写",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "AI use is now universal in higher education. Why are universities failing to adapt?",
-            "source": "The Conversation",
-            "published": "2026-11-09",
-            "url": "https://theconversation.com/ai-use-is-now-universal-in-higher-education-why-are-universities-failing-to-adapt-294137",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "教育与科技 / 高校如何适应生成式 AI",
-            "summary": "文章以大学生使用 AI 已在许多国家接近普遍、但一年前 UNESCO 对 90 国高校的调查中不足五分之一设有正式 AI 政策这一落差提出问题。作者再以澳大利亚 39 所教授 ICT 的大学政策研究为例：规定分散且常含糊，只有一所发布具体指导、七所设有协调应对的机构；检测工具的准确性问题也促使高校转向评估改革。文章区分两项任务：既要确认学生真实掌握知识，也要培养其在 AI 普及环境中独立判断、批判评估和自主学习的能力。由于单纯的 AI 素养容易随工具变化过时，作者最后主张高校协作并建立全国性支持机制，同时承认大学自主权、资金和政策跟不上技术的现实障碍。",
-            "reason": [
-              "高校如何处理生成式 AI、学术诚信与学习质量，是教育改革和科技伦理的交叉议题，适合练习辨析“禁止使用”与“重设学习评价”的区别。",
-              "文章从使用普及与政策缺位的反差切入，依次讨论高校困难、澳大利亚调查、评估改革、国际做法，最后提出全国协作方案并承认其约束。",
-              "适合考查调查数字对应的论点、作者如何用案例支撑判断、转折词 Still/However 的功能，以及建议与事实的区分。",
-              "可学习 universal、assessment、integrity、offload、autonomy 等教育和论证词汇，并注意作者对研究范围的限定。",
-              "写作可借鉴“现状差距—具体证据—方案比较—实施障碍—政策建议”的论证框架，避免把澳大利亚样本直接概括为全球结论。"
-            ],
-            "vocabulary": [
-              {
-                "word": "universal",
-                "phonetic": "/ˌjuːnɪˈvɜːrsəl/",
-                "part": "adj.",
-                "translation": "普遍的；广泛存在的"
-              },
-              {
-                "word": "assessment",
-                "phonetic": "/əˈsesmənt/",
-                "part": "n.",
-                "translation": "评估；考核"
-              },
-              {
-                "word": "integrity",
-                "phonetic": "/ɪnˈteɡrəti/",
-                "part": "n.",
-                "translation": "诚信；正直"
-              },
-              {
-                "word": "vague",
-                "phonetic": "/veɪɡ/",
-                "part": "adj.",
-                "translation": "含糊的；不明确的"
-              },
-              {
-                "word": "offload",
-                "phonetic": "/ˈɔːfloʊd/",
-                "part": "v.",
-                "translation": "转移（任务或负担）"
-              },
-              {
-                "word": "ubiquitous",
-                "phonetic": "/juːˈbɪkwɪtəs/",
-                "part": "adj.",
-                "translation": "无处不在的"
-              },
-              {
-                "word": "autonomy",
-                "phonetic": "/ɔːˈtɑːnəmi/",
-                "part": "n.",
-                "translation": "自主权；自主性"
-              },
-              {
-                "word": "framework",
-                "phonetic": "/ˈfreɪmwɜːrk/",
-                "part": "n.",
-                "translation": "框架；体系"
-              },
-              {
-                "word": "redundant",
-                "phonetic": "/rɪˈdʌndənt/",
-                "part": "adj.",
-                "translation": "多余的；不再必要的"
-              },
-              {
-                "word": "coordinator",
-                "phonetic": "/koʊˈɔːrdɪneɪtər/",
-                "part": "n.",
-                "translation": "协调人；协调者"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Out of the 39 unis, only one had published specific guidance around AI.",
-                "analysis": [
-                  "主干是 only one had published specific guidance，only one 突出样本中明确指导的稀少。",
-                  "句首 Out of the 39 unis 限定统计范围，避免将这个澳大利亚高校样本误读成全球普查。",
-                  "had published 是过去完成时，表示发布指导发生在文章回顾的调查时点之前。",
-                  "可借鉴 “Out of + 数量/群体, only ...” 先交代样本再报告比例或例外。"
-                ],
-                "translation": "在这 39 所大学中，只有一所发布了关于 AI 的具体指导。"
-              },
-              {
-                "original": "Students cannot be forced to learn through a policy.",
-                "analysis": [
-                  "句子主干为 Students cannot be forced，cannot 表示制度或现实上的限制。",
-                  "be forced 是情态动词后的被动结构，强调学生作为承受者而非施动者。",
-                  "to learn 是不定式补足 forced，through a policy 表示试图借助政策实现的途径。",
-                  "该句从规则转向学习效果，说明政策能规范行为，却不能单独保证真实学习。"
-                ],
-                "translation": "不能靠一项政策强迫学生真正学会。"
-              },
-              {
-                "original": "Still, unis must engage deeply and collaboratively with this debate about how to adapt to AI.",
-                "analysis": [
-                  "句首 Still 承接前文的实施困难，表达“即便如此仍应行动”的让步转折。",
-                  "主干是 unis must engage with this debate，must 表示作者提出的必要性判断。",
-                  "deeply 与 collaboratively 并列修饰 engage，分别强调讨论深度和协作方式。",
-                  "about how to adapt to AI 是介词 about 的补足语，其中 how to adapt 为嵌入式疑问不定式。"
-                ],
-                "translation": "尽管如此，各大学仍必须深入且协作地参与这场关于如何适应 AI 的讨论。"
-              }
-            ]
-          },
-          {
-            "title": "Acorns—not deer—can predict a rise in Lyme-spreading ticks",
-            "source": "Scientific American",
-            "published": "2026-11-08",
-            "url": "https://www.scientificamerican.com/article/acorns-not-deer-can-predict-a-rise-in-lyme-spreading-ticks/",
-            "readingTime": "2 分钟",
-            "topic": "环境与健康 / 橡子、啮齿动物与蜱传莱姆病",
-            "summary": "报道介绍纽约州一项持续 35 年的森林研究：秋季红橡树橡子丰收，使更多白足鼠有食物越冬，随后鼠群增长；蜱幼虫以这些鼠为宿主后更容易存活到若蜱阶段，而鼠也更有效地把莱姆病菌传给蜱，因此橡子量可帮助提前近两年判断蜱虫风险。文章同时提醒，鹿仍是成年蜱繁殖的重要宿主，减少或增加少量鹿未必改变蜱量；研究显示若蜱增加也不等于携菌蜱同比增加。结尾指出暖冬对鼠群与蜱的影响可能方向相反，气候变暖对莱姆病总体风险的净效应仍不确定。",
-            "reason": [
-              "环境变化与传染病风险兼具生态和公共健康意义，适合练习从食物链机制理解社会影响，而非只记单一结论。",
-              "文章先修正“鹿决定风险”的直觉，再按橡子—白足鼠—若蜱—人类感染的时间链解释研究发现，最后列出鹿与气温等限制。",
-              "可考查研究对象和因果链定位、引语归属、however/but 等让步转折，以及“预测蜱数量”不等于“确定感染率”的推断边界。",
-              "可学习 abundant、host、nymph、transmit、net effect 等生态与健康词汇，注意 tick 与 nymph 的生命阶段区别。",
-              "写作可借鉴“反直觉发现—机制解释—外部专家补充—证据限制—谨慎结论”的结构，避免把相关链条写成确定因果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "acorn",
-                "phonetic": "/ˈeɪkɔːrn/",
-                "part": "n.",
-                "translation": "橡子"
-              },
-              {
-                "word": "nymph",
-                "phonetic": "/nɪmf/",
-                "part": "n.",
-                "translation": "若蜱；蜱的若虫阶段"
-              },
-              {
-                "word": "host",
-                "phonetic": "/hoʊst/",
-                "part": "n.",
-                "translation": "宿主"
-              },
-              {
-                "word": "abundant",
-                "phonetic": "/əˈbʌndənt/",
-                "part": "adj.",
-                "translation": "丰富的；充足的"
-              },
-              {
-                "word": "transmit",
-                "phonetic": "/trænzˈmɪt/",
-                "part": "v.",
-                "translation": "传播；传递"
-              },
-              {
-                "word": "boom",
-                "phonetic": "/buːm/",
-                "part": "v.",
-                "translation": "迅速增长；激增"
-              },
-              {
-                "word": "lipid reserve",
-                "phonetic": "/ˈlɪpɪd rɪˈzɜːrv/",
-                "part": "n. phr.",
-                "translation": "脂质储备"
-              },
-              {
-                "word": "wrinkle",
-                "phonetic": "/ˈrɪŋkəl/",
-                "part": "n.",
-                "translation": "复杂因素；意外转折"
-              },
-              {
-                "word": "net effect",
-                "phonetic": "/net ɪˈfekt/",
-                "part": "n. phr.",
-                "translation": "总体影响；净效应"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "If you hear “deer tick,” chances are you think “Lyme disease.”",
-                "analysis": [
-                  "句子由 If 引导的条件状语从句和主句 chances are ... 构成，先设定读者熟悉的联想。",
-                  "主句省略了 that：chances are (that) you think ...，that 从句说明这种联想的内容。",
-                  "两个引号短语点出大众熟悉的标签和疾病名，为后文反转“看橡子而非鹿”搭桥。",
-                  "可借鉴 “If ..., chances are (that) ...” 表达基于常见经验的可能判断，而非绝对事实。"
-                ],
-                "translation": "如果你听到“鹿蜱”，很可能就会想到“莱姆病”。"
-              },
-              {
-                "original": "But if you want to predict the risk of Lyme disease, don’t look at the deer—count acorns instead.",
-                "analysis": [
-                  "But 与前句的直觉形成转折，if 从句提出目标，主句给出相反于直觉的建议。",
-                  "主句用 don’t look 与 count 两个并列祈使结构形成“不要……而要……”的对照。",
-                  "instead 明确标记替代关系；破折号加强“鹿”与“橡子”的信息重心转换。",
-                  "risk of Lyme disease 是 predict 的宾语，说明研究关注的是风险预测而非确定诊断。"
-                ],
-                "translation": "但如果你想预测莱姆病风险，就别盯着鹿，改数橡子。"
-              },
-              {
-                "original": "For now, climate change’s net effect on Lyme disease risk is still unclear.",
-                "analysis": [
-                  "For now 作句首范围状语，把判断限定在当前证据阶段，而非宣称永远无法判断。",
-                  "主干为 climate change’s net effect ... is unclear，所有格短语是主语核心。",
-                  "on Lyme disease risk 限定“总体影响”的对象，still 表示不确定状态持续至今。",
-                  "作者以 is unclear 保留不确定性，避免把局部升温机制扩写成气候变化的单一结论。"
-                ],
-                "translation": "目前，气候变化对莱姆病风险的总体影响仍不明确。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-10",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Claude Fable 5.2 发布及其进入 Copilot、Google Research 的多语言互动工具；另核查学生开发权益、免费算力、模型 API 与开放模型。",
-        "updates": [
-          {
-            "event": "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2",
-            "summary": "Anthropic 发布 Fable 5.2 和 Mythos 5.2，称新版本在编码、推理与视觉等方面改进，输出速度最高较前代快 30%，并公布 API 输入每百万 token 8 美元、输出 40 美元的价格。Fable 与 Mythos 基于同一模型，但 Fable 配有网络安全和生物学安全防护。",
-            "howTo": "在 Claude Code 的模型选择界面查找 Claude Fable 5.2，给它一个范围明确的课程代码或资料整理任务；逐项检查其方案和结果，再运行测试或对照原始文献。",
-            "impact": "适合试做跨文件代码修改、复杂推理或资料分析；完成时间和输出质量仍需人工核验，模型不应替代课程资料与测试。",
-            "free": "官方列出的 API 价格为每百万输入 token 8 美元、输出 40 美元；可选快速模式为 16/80 美元。官方未说明地区、Claude 应用账户计划及具体免费额度或配额。",
-            "category": "生成式 AI / 编程与研究",
-            "source": {
-              "name": "Anthropic 官方产品公告",
-              "published": "2026-11-09",
-              "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-            }
-          },
-          {
-            "event": "Claude Fable 5.2 进入 GitHub Copilot",
-            "summary": "GitHub 宣布 Claude Fable 5.2 已在 Copilot 中正式可用，可用于大型代码库的复杂多步骤编程任务。该模型默认需要数据保留以运行 Anthropic 安全分类器；特定符合条件的企业客户可申请零数据保留访问。",
-            "howTo": "在 VS Code 或 Copilot CLI 打开模型选择器并选择 Claude Fable 5.2；Copilot Business/Enterprise 组织需由管理员先在 Copilot 设置中启用该策略。用课程仓库中的小任务试跑并审阅所有改动。",
-            "impact": "使用 Copilot 的项目组可以尝试把复杂任务拆解后交由模型辅助完成；使用前应确认组织的数据保留要求，并人工审查生成的代码。",
-            "free": "仅 Copilot Pro+、Max、Business 和 Enterprise 计划可用，且按供应商标价进行用量计费；Business/Enterprise 需管理员启用，逐步开放。默认保留提示与输出；零数据保留仅面向符合条件的企业客户。免费计划、地区及个人配额官方未说明。",
-            "category": "编程助手 / GitHub Copilot",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-09",
-              "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/"
-            }
-          },
-          {
-            "event": "Google Research 推出 Language Explorer 多语言互动网站",
-            "summary": "Google Research 发布 Language Explorer 在线平台，以可视化和数据呈现全球语言多样性；页面展示语言、人口、国家或地区与文字系统等信息，底层数据包括 Google Research 的 LinguaMeta 开源数据集。它是语言探索工具，不是对话模型。",
-            "howTo": "打开 Google Research Language Explorer，浏览世界概览、语言、人口、国家或地区及文字系统视图；选一个课程主题涉及的语言或地区，比较页面数据并记录来源，再用于课堂展示或研究选题。",
-            "impact": "可用于语言学、教育或跨文化课程的选题探索，帮助学生把语言分布与地区、人口和文字系统联系起来；页面数据适合作为发现线索，引用前应回查相关资料。",
-            "free": "官方提供可直接打开的互动网页；公告没有说明价格、账户要求、地区限制或使用配额，相关信息官方未说明。",
-            "category": "多语言研究 / 互动工具",
-            "source": {
-              "name": "Google Research 官方博客",
-              "published": "2026-11-09",
-              "url": "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Student Developer Pack：验证学生身份可领开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro，列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储；Pack 还提供合作伙伴工具权益。",
-            "howTo": "打开 GitHub Education 学生页面并申请验证，按要求提交学校邮箱和/或带日期的官方在读证明；通过后查看 Student Developer Pack 中当前可领取的合作权益。",
-            "impact": "可用私有仓库协作课程代码，在 Codespaces 中开展云端开发，并用 Actions 自动运行项目检查；提交前核对实际额度。",
-            "free": "需年满 13 岁并就读于授予学位或文凭的课程；验证材料为学校邮箱和/或官方在读证明。页面列出上述月度额度，但未说明地区范围和申请截止日期；合作权益依各伙伴条款而定。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Google Colab：免费使用托管 Jupyter 与部分 GPU/TPU 算力",
-            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
-            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看 Runtime 的硬件选项，重要文件保存到 Drive 或下载笔记本。",
-            "impact": "可练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，而不必先配置本地环境。",
-            "free": "官方确认免费使用，但资源不保证且不无限，使用限制会变化；免费托管运行时还受活动限制。具体配额、地区与账号申请条件官方未说明。",
-            "category": "免费算力 / 学习环境",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Gemini Developer API：特定模型提供免费层级",
-            "summary": "Google AI Studio 官方价格页列出 Gemini API Free 层级，包含对部分模型的有限访问、免费输入与输出 token，以及 AI Studio 使用权限；免费层内容会用于改进 Google 产品。",
-            "howTo": "登录 Google AI Studio，在官方价格页确认某个模型标有 Free 后选择它，尝试处理不含个人或保密内容的课程文本；先核对该模型的速率限制和数据使用说明。",
-            "impact": "可用于小规模练习提示设计、文本处理或课程原型，不必先承诺付费；敏感笔记和未发表研究数据不应提交到免费层。",
-            "free": "仅价格页列出的特定模型提供免费层，模型访问和速率有限；官方说明免费层内容会用于改进产品。不同模型的具体额度需查对应价格表；地区、账户资格及统一配额官方未说明。",
-            "category": "免费 API / 模型试用",
-            "source": {
-              "name": "Google AI for Developers 官方价格表",
-              "published": "官方未说明",
-              "url": "https://aistudio.google.com/docs/pricing"
-            }
-          },
-          {
-            "event": "Gemini Notebook（原 NotebookLM）：免费浏览器使用",
-            "summary": "Google 帮助页说明可用 Gmail 账号免费注册 Gemini Notebook；免费方案每位用户最多 100 个笔记本，每个笔记本最多 50 个来源（笔记来源另计）。",
-            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建笔记本并添加课程讲义或公开文章；围绕来源提问后回到原文核对回答和出处。",
-            "impact": "适合按课程或论文主题整理阅读材料、生成复习问题；来源数量有上限，且模型生成内容仍应对照原始资料。",
-            "free": "可免费注册；浏览器服务仅在官方列出的支持国家和地区向达到当地同意年龄的用户提供。免费版上限为 100 个笔记本/用户、50 个来源/笔记本；地区清单和年龄规则以官方页面为准。",
-            "category": "免费学习工具 / 资料整理",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助页",
-              "published": "官方未说明",
-              "url": "https://support.google.com/notebooklm/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "Qwen3-Embedding-0.6B：Apache-2.0 许可的多语言嵌入模型",
-            "summary": "Qwen 官方模型卡提供可下载的 0.6B 文本嵌入模型，标注支持 100 多种语言、32K 上下文，模型仓库采用 Apache-2.0 许可。它用于文本检索、分类和聚类，不是对话模型。",
-            "howTo": "打开 Qwen 官方模型卡，按示例安装 Sentence Transformers 并加载 `Qwen/Qwen3-Embedding-0.6B`；将课程笔记和查询句编码后比较相似度，找出相关段落并回读原文。",
-            "impact": "可制作小型课程资料语义检索实验，或比较中英文笔记的关联；相似度仅表示文本相关性，不代表事实核验。",
-            "free": "权重可从官方模型仓库下载，许可证为 Apache-2.0；无需申请访问许可。硬件要求、运行成本、地区和账号限制官方未说明。",
-            "category": "开放模型 / 文本检索",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "California voters defeat billionaire tax proposal that divided Democrats",
-            "source": "NPR",
-            "published": "2026-11-09",
-            "url": "https://www.npr.org/2026/11/09/g-s1-151625/california-billionaire-tax-referendum",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "经济与社会 / 财富税、医疗筹资与党内分歧",
-            "summary": "报道首先交代加州选民否决一项一次性向亿万富翁征收 5% 财富税的提案。支持者称该税可能筹得 1,000 亿美元用于医疗，认为联邦削减医疗项目后州内富人应补足资金；反对者则警告富人迁出会损害税收与经济。文章随后呈现提案如何造成民主党内部的分歧：州党和部分政治人物支持，州长及州长候选人反对，教师工会也质疑拨给学校的比例。报道还以竞选资金差距、科技企业家参与反对运动及配套选票提案说明利益集团的影响，最后回到选举结果，呈现公共服务筹资与财富流动担忧之间的政策冲突。",
-            "reason": [
-              "财富税、医疗筹资与公共服务分配是经济政策和社会公平类阅读常见主题，可练习识别政策目标与潜在代价。",
-              "文章先报投票结果，再交代提案内容与双方论点，继而呈现党内分歧、工会立场和竞选资源，层层补充背景。",
-              "适合考查支持者与反对者观点归属、细节定位、因果主张以及 But 等转折标记的作用。",
-              "可学习 proposal、proponent、revenue、oppose、ballot 等政策与选举词汇，并注意 could raise 表示预测而非已实现收入。",
-              "写作可借鉴“政策目的—支持理由—反对风险—政治背景—结果”的平衡论述框架，避免把倡议方估算写成实际效果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "proposal",
-                "phonetic": "/prəˈpoʊzəl/",
-                "part": "n.",
-                "translation": "提议；方案"
-              },
-              {
-                "word": "one-time",
-                "phonetic": "/ˌwʌn ˈtaɪm/",
-                "part": "adj.",
-                "translation": "一次性的"
-              },
-              {
-                "word": "wealth",
-                "phonetic": "/welθ/",
-                "part": "n.",
-                "translation": "财富；资产"
-              },
-              {
-                "word": "proponent",
-                "phonetic": "/prəˈpoʊnənt/",
-                "part": "n.",
-                "translation": "倡议者；支持者"
-              },
-              {
-                "word": "revenue",
-                "phonetic": "/ˈrevənuː/",
-                "part": "n.",
-                "translation": "收入；财政收入"
-              },
-              {
-                "word": "oppose",
-                "phonetic": "/əˈpoʊz/",
-                "part": "v.",
-                "translation": "反对"
-              },
-              {
-                "word": "divide",
-                "phonetic": "/dɪˈvaɪd/",
-                "part": "v.",
-                "translation": "使产生分歧"
-              },
-              {
-                "word": "surge",
-                "phonetic": "/sɜːrdʒ/",
-                "part": "n.",
-                "translation": "激增；涌现"
-              },
-              {
-                "word": "ballot",
-                "phonetic": "/ˈbælət/",
-                "part": "n.",
-                "translation": "选票；投票"
-              },
-              {
-                "word": "set aside",
-                "phonetic": "/set əˈsaɪd/",
-                "part": "phr.v.",
-                "translation": "留出；拨出"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The novel proposal would have charged billionaires a one-time 5% tax on most of their overall wealth, including their ownership in companies.",
-                "analysis": [
-                  "主干是 The proposal would have charged billionaires a tax，说明提案拟向亿万富翁征税。",
-                  "would have charged 表示对未获通过方案的假设性描述，不是已经征收的事实。",
-                  "a one-time 5% tax 交代税率和一次性特征，on most of their overall wealth 补充计税对象。",
-                  "including 引出补充范围，说明财富还包括公司持股；可用 including 引入具体例证。"
-                ],
-                "translation": "这项新提案原本会对亿万富翁的大部分总财富征收一次性 5% 的税，其中包括他们持有的公司股权。"
-              },
-              {
-                "original": "Proponents said the tax could raise $100 billion for healthcare.",
-                "analysis": [
-                  "主句主干是 Proponents said，交代这是支持者提出的说法。",
-                  "the tax could raise $100 billion 是 said 后的宾语从句，that 被省略。",
-                  "could 表示可能性或预期，不能据此认定税款已筹得。",
-                  "for healthcare 表示资金用途，可借此结构概括政策收入的指定去向。"
-                ],
-                "translation": "支持者称，这项税收可能为医疗筹集 1,000 亿美元。"
-              },
-              {
-                "original": "But the measure divided Democrats in a state where they heavily outnumber Republicans.",
-                "analysis": [
-                  "But 承接前文并引出转折，提示读者从支持理由转向政治分歧。",
-                  "主句主干是 the measure divided Democrats，measure 指前文税收提案。",
-                  "where 引导定语从句修饰 a state，补充加州两党人数背景。",
-                  "heavily outnumber 表示人数上显著多于；该句说明党派优势并未消除内部意见分化。"
-                ],
-                "translation": "然而，这项提案在民主党人数远超共和党的加州引发了党内分歧。"
-              }
-            ]
-          },
-          {
-            "title": "Auckland hit by swarms of bees after milder than usual New Zealand winter",
-            "source": "The Guardian",
-            "published": "2026-11-09",
-            "url": "https://www.theguardian.com/environment/2026/nov/10/bee-swarm-nz-auckland-swarming-bees-new-zealand",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "环境与社会 / 暖冬、蜂群行为与城市生态",
-            "summary": "报道从奥克兰蜂群数量异常增加切入：当地养蜂协会称每天接到约五至十通移除蜂群的求助电话，较往年每天不到五通增加，累计已有至少百次出勤。文章先解释春夏分蜂是蜂群扩张后寻找新巢或食物的自然过程，再引述养蜂人和生态学者讨论较温和的冬季、春季提前可能使蜂群更早、更大规模分出；新西兰 2026 年冬季为有记录以来第三暖。报道也指出未管理的蜂群若携带瓦螨可能威胁其他蜂类，同时蜂群较早增殖也可能是今年蜂群状况良好的信号。结尾保留不同影响并存的判断，没有把单一暖冬简单定为已证实的唯一原因。",
-            "reason": [
-              "文章连接气候异常、城市生活和传粉昆虫，适合讨论气候变化如何通过生态过程影响社区。",
-              "结构由奥克兰求助电话增加的新闻切入，解释分蜂机制，再引述养蜂人和生态学者，最后呈现风险与潜在积极信号。",
-              "适合考查数据比较、专家观点归属、因果推断以及末段如何修正前文的单一负面印象。",
-              "可学习 swarm、colony、brood、exacerbate、unpredictable 等生态与变化类表达，并辨析 might 表示推测而非确定因果。",
-              "写作可借鉴“可观察现象—机制解释—风险—另一种可能结果”的结构，论证环境议题时保留证据边界。"
-            ],
-            "vocabulary": [
-              {
-                "word": "swarming",
-                "phonetic": "/ˈswɔːrmɪŋ/",
-                "part": "n.",
-                "translation": "蜂群分蜂；蜂群聚集"
-              },
-              {
-                "word": "exacerbate",
-                "phonetic": "/ɪɡˈzæsərbeɪt/",
-                "part": "v.",
-                "translation": "加剧；使恶化"
-              },
-              {
-                "word": "field (calls)",
-                "phonetic": "/fiːld/",
-                "part": "v.",
-                "translation": "接听；处理（来电或问题）"
-              },
-              {
-                "word": "call-out",
-                "phonetic": "/ˈkɔːl aʊt/",
-                "part": "n.",
-                "translation": "出勤处理；上门服务"
-              },
-              {
-                "word": "colony",
-                "phonetic": "/ˈkɑːləni/",
-                "part": "n.",
-                "translation": "蜂群；群体"
-              },
-              {
-                "word": "hive",
-                "phonetic": "/haɪv/",
-                "part": "n.",
-                "translation": "蜂巢；蜂箱"
-              },
-              {
-                "word": "brood",
-                "phonetic": "/bruːd/",
-                "part": "n.",
-                "translation": "（蜂的）幼虫群"
-              },
-              {
-                "word": "placid",
-                "phonetic": "/ˈplæsɪd/",
-                "part": "adj.",
-                "translation": "温顺的；平静的"
-              },
-              {
-                "word": "unmanaged",
-                "phonetic": "/ˌʌnˈmænɪdʒd/",
-                "part": "adj.",
-                "translation": "未受管理的"
-              },
-              {
-                "word": "unpredictable",
-                "phonetic": "/ˌʌnprɪˈdɪktəbəl/",
-                "part": "adj.",
-                "translation": "难以预测的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "In past years, it was under five a day.",
-                "analysis": [
-                  "主干是 it was under five，it 指前文协会每天接到的求助电话数。",
-                  "In past years 是时间状语，限定比较的历史时期。",
-                  "under five a day 是省略表达，完整含义为每天少于五通电话。",
-                  "该句与紧邻的 five to 10 calls a day 构成数量对比，可用于概括趋势证据。"
-                ],
-                "translation": "往年每天不到五通。"
-              },
-              {
-                "original": "New Zealand experienced its third warmest winter on record in 2026, according to Earth Sciences NZ.",
-                "analysis": [
-                  "主干是 New Zealand experienced its third warmest winter，说明当年冬季的记录排名。",
-                  "on record 限定比较范围，意为“有记录以来”。",
-                  "in 2026 是时间状语；third warmest 表示第三暖，而非最暖。",
-                  "according to Earth Sciences NZ 标明信息来源，写作时可用该结构区分报道依据和作者判断。"
-                ],
-                "translation": "据新西兰地球科学机构称，新西兰 2026 年的冬季为有记录以来第三暖。"
-              },
-              {
-                "original": "Milder temperatures over winter might mean a colony develops a larger brood of eggs, larvae and pupae.",
-                "analysis": [
-                  "主干为 Milder temperatures might mean...，提出一种可能的解释。",
-                  "over winter 作时间状语，说明温度变化发生在冬季期间。",
-                  "a colony develops a larger brood 是 mean 的宾语从句，that 被省略。",
-                  "might mean 降低因果断言强度；eggs, larvae and pupae 列举 brood 的组成阶段。"
-                ],
-                "translation": "冬季气温较暖可能意味着蜂群会繁育出更多卵、幼虫和蛹。"
-              }
-            ]
-          }
-        ]
-      }
     }
-  ].slice(0, 7)
+  ]
 };
