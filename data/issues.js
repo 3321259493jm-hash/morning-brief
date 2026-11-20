@@ -1,6 +1,351 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-19T12:05:52+08:00",
+  "updatedAt": "2026-11-20T11:55:07+08:00",
   "issues": [
+    {
+      "date": "2026-11-20",
+      "status": "ready",
+      "ai": {
+        "intro": "今日关注 Gemini 迁移聊天记录、Mac 后台执行任务及 Genie 4 创作世界等更新，并复核可长期或免费使用的 AI 学习资源。",
+        "updates": [
+          {
+            "event": "Gemini 可迁移其他 AI 应用的偏好与聊天记录",
+            "summary": "Google 于 2026-11-19 推出 Gemini 导入流程，可通过提示词把原 AI 工具的偏好与摘要带入 Gemini，并上传原供应商导出的聊天记录 ZIP，减少换平台后的上下文丢失。",
+            "howTo": "先在 Gemini 导入设置复制官方提示词，再粘贴到原 AI 工具生成偏好摘要；随后从原供应商导出聊天记录并在 Gemini 设置上传 ZIP。",
+            "impact": "学生更换助手时可保留考试计划、项目约定或常用写作偏好，不必反复粘贴背景；上传前应删除不必要的敏感记录并核对摘要。",
+            "free": "官方称可在 Gemini App 使用，但未说明账户级免费资格、地区、导入次数、ZIP 大小或聊天记录保留期限。",
+            "category": "AI 助手 / 数据迁移",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/"
+            }
+          },
+          {
+            "event": "Gemini App 可在 Mac 后台操作桌面与网站",
+            "summary": "Google 于 2026-11-19 为美国英语版本的 Gemini App Mac 功能推出 computer use：可在隔离窗口跨本地文件、桌面应用和网页执行表单填写、数据整理和演示文稿等多步骤任务。",
+            "howTo": "在符合要求的 Apple Silicon Mac 上下载 gemini.google/mac，然后描述跨应用流程；在实时预览中查看步骤，并为每项关键操作批准或暂停。",
+            "impact": "学生可批量整理 PDF 地址、生成课程汇报或按文件清单完成重复操作，但仍应逐项核对付款、提交、删除和共享等不可逆动作。",
+            "free": "目前在美国以英语推出，需 Apple Silicon Mac、macOS Sequoia 15.0+、18 岁以上个人 Google 账户，并订阅 Google AI Plus、Pro 或 Ultra；官方未说明使用配额或固定到期日。",
+            "category": "AI 助手 / 电脑代理",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+            }
+          },
+          {
+            "event": "Project Genie 正式开放 Genie 4 并升级创作功能",
+            "summary": "Google 于 2026-11-18 将 Genie 4 和 Project Genie agent 推向合格的 Google AI Ultra 用户，可实时改环境、加入原生音频，并发布到社区画廊；Genie 3 同时支持更长会话、全景图片定锚和世界串联。",
+            "howTo": "访问 Project Genie；Ultra 用户可直接体验 Genie 4 与画廊，Pro 用户可加入候补。可用自然语言修改天气、角色或场景，并把多个世界串成更长体验。",
+            "impact": "学生可快速制作场景原型、可视化历史或地理概念、演示交互叙事；公共画廊作品仍需检查版权、事实和模型生成内容的准确性。",
+            "free": "官方面向合格 Google AI Ultra 用户开放，Pro 用户可加入候补；价格、地区、等待时间、生成配额和免费试用期限均未说明。",
+            "category": "生成式 AI / 世界建模",
+            "source": {
+              "name": "Google DeepMind 官方博客",
+              "published": "2026-11-18",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "Google AI Studio：Gemini API 免费层",
+            "summary": "Google 官方定价页列出可用免费层的 Gemini 模型、免费输入输出用量及相关速率限制；AI Studio 适合以小规模项目验证提示词和 API 调用。",
+            "howTo": "打开 AI Studio，核对目标模型是否标有免费层，创建 API Key 后在官方 playground 或自身代码中测试。",
+            "impact": "学生可用小型数据集练习分类、摘要或问答原型，并在付费前比较不同模型；不要把私密材料上传到免费测试环境。",
+            "free": "官方提供特定模型的免费层及速率限制；具体免费额度、地区、账户资格、重置周期和到期日官方未统一说明，须按所选模型逐项核对。",
+            "category": "免费 API / 模型试用",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "GitHub Copilot Free：长期免费编程助手",
+            "summary": "GitHub 官方计划页提供无需信用卡的 Copilot Free，包含每月代码补全及有限的聊天与代理使用。",
+            "howTo": "在 GitHub 的 Copilot plans 页面启用 Free，再于受支持编辑器安装并登录 GitHub Copilot。",
+            "impact": "可用于 Python、前端课程作业和小型项目的补全与调试；运行测试并审查生成代码，不要将补全额度视为无限。",
+            "free": "官方列明每月 2,000 次代码补全、$0 月费且无需信用卡；聊天和代理用量有限。具体聊天配额、地区限制和续费规则官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Python 与 Jupyter 运行时",
+            "summary": "Google 官方 FAQ 将 Colab 描述为免费托管 Jupyter Notebook 服务，可连接计算资源并运行 Python、数据科学和机器学习工作负载。",
+            "howTo": "访问 Colab，新建 notebook 或导入 .ipynb，再按课程或项目运行 Python；需要时从运行时菜单选择可用硬件。",
+            "impact": "适合做数据清洗、统计、可视化和小规模模型实验，免于本地环境配置；保存到 GitHub 或 Drive，并准备资源中断时的恢复方案。",
+            "free": "官方称可免费使用；资源不保证、限制可能变化，固定 GPU/TPU 配额、地区和账户资格官方未说明。",
+            "category": "免费学习 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费数据技能课程",
+            "summary": "Kaggle 官方学习目录提供无需付费即可进入的短课程，涵盖 Python、Pandas、SQL、机器学习及数据可视化等主题。",
+            "howTo": "进入 Kaggle Learn，选择课程并完成交互式笔记本练习；可在 Kaggle Notebook 中直接运行示例代码。",
+            "impact": "适合在短时间补足数据分析与编程基础，并把练习迁移到课程项目或论文的数据处理流程。",
+            "free": "官方将目录标为 no-cost courses；账号资格、地区限制、证书费用及课程是否长期免费官方未说明。",
+            "category": "免费学习 / 数据与编程",
+            "source": {
+              "name": "Kaggle 官方学习中心",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "NotebookLM：免费网页版文档与音频学习工作台",
+            "summary": "Google 官方 NotebookLM 可让用户上传或链接来源，生成摘要、问答和音频概览，适合整理课程材料和长篇资料。",
+            "howTo": "打开 NotebookLM，创建 Notebook，上传 PDF、文档或粘贴来源链接，再提问或生成 Audio Overview。",
+            "impact": "学生可让文档交叉对证、快速生成复习提纲或听取资料概览；回答仍需回到原文核实出处和事实。",
+            "free": "官方页面提供可直接使用的网页版入口；免费额度、地区、账号资格、源文档数量限制和到期日官方未说明。",
+            "category": "免费学习 / 文档研究",
+            "source": {
+              "name": "Google NotebookLM 官方应用页",
+              "published": "官方未说明",
+              "url": "https://notebooklm.google.com/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Race to replant five South African baobabs after export blocked",
+            "source": "The Guardian",
+            "published": "2026-11-19",
+            "url": "https://www.theguardian.com/environment/2026/nov/19/baobab-five-trees-south-africa-dug-up-export-blocked-georgia-aoe",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "环境 / 生物多样性、野生植物贸易与文化保护",
+            "summary": "文章报道五棵南非猴面包树在运往格鲁吉亚前被当局拦截，随后被送往自然保护区抢救。作者先交代这些树有200至300年树龄、重量达19至29吨及已被非法采运，随后说明重新种植需要快速、特殊运输和电围栏保护，并引述专家对存活概率、生态价值和文化意义的判断。报道还对比肯尼亚曾发生的类似出口争议，解释此类交易虽罕见，却可能以观赏植物名义绕过保护；结论是，单棵猴面包树既是生态系统也是文化与历史载体，因此拦截非法出口和成功再植都关系到长期生物与社会成本。",
+            "reason": [
+              "主题涉及濒危生态、跨国贸易、法律管制和文化遗产，适合环境保护和国际责任类考研英语阅读。",
+              "文章采用问题—抢救行动—专家证据—法律和生态意义的清晰结构，便于练习因果与例证关系。",
+              "可训练标题判断、数字细节定位、代词指代以及对“rare”“allegedly”等语气词的理解。",
+              "本文含 permit、re-establish、biodiversity anchor、sacred 等抽象词汇，适合环境和文化类写作。",
+              "写作可借鉴先描述具体事件，再比较跨国案例，最后提升到生态与人文价值的论证方式。"
+            ],
+            "vocabulary": [
+              {
+                "word": "replant",
+                "phonetic": "/riːˈplɑːnt/",
+                "part": "v.",
+                "translation": "重新种植；移栽"
+              },
+              {
+                "word": "permission",
+                "phonetic": "/pərˈmɪʃən/",
+                "part": "n.",
+                "translation": "许可；允许"
+              },
+              {
+                "word": "ornamental",
+                "phonetic": "/ˌɔːrnəˈmentəl/",
+                "part": "adj.",
+                "translation": "观赏用的；装饰性的"
+              },
+              {
+                "word": "re-establish",
+                "phonetic": "/ˌriːɪˈstæblɪʃ/",
+                "part": "v.",
+                "translation": "重新建立；重新存活"
+              },
+              {
+                "word": "dormant",
+                "phonetic": "/ˈdɔːrmənt/",
+                "part": "adj.",
+                "translation": "休眠的；静止的"
+              },
+              {
+                "word": "biodiversity",
+                "phonetic": "/ˌbaɪoʊdaɪˈvɜːrsəti/",
+                "part": "n.",
+                "translation": "生物多样性"
+              },
+              {
+                "word": "sacred",
+                "phonetic": "/ˈseɪkrɪd/",
+                "part": "adj.",
+                "translation": "神圣的；受尊崇的"
+              },
+              {
+                "word": "anchor",
+                "phonetic": "/ˈæŋkər/",
+                "part": "n.",
+                "translation": "支柱；核心基础"
+              },
+              {
+                "word": "intercept",
+                "phonetic": "/ˌɪntərˈsept/",
+                "part": "v.",
+                "translation": "拦截；中途阻止"
+              },
+              {
+                "word": "harvesting",
+                "phonetic": "/ˈhɑːrvəstɪŋ/",
+                "part": "n.",
+                "translation": "采收；采伐"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The baobabs arrived at a reserve in Timbavati, in north-eastern South Africa, on Wednesday.",
+                "analysis": [
+                  "句子主干是 The baobabs arrived，arrived 表示树木已经抵达抢救地点。",
+                  "介词短语 at a reserve in Timbavati 说明抵达地点，in north-eastern South Africa进一步限定保护区位置。",
+                  "on Wednesday 作为时间状语交代抵达日期，与报道中的抢救行动形成时间线。",
+                  "逗号隔开的地理插入语补充信息，但不改变句子核心主谓关系。",
+                  "该句可作为新闻写作中“介词短语逐层限定地点”的范例。"
+                ],
+                "translation": "这些猴面包树于周三抵达南非东北部廷巴瓦蒂的一处保护区。"
+              },
+              {
+                "original": "A baobab isn’t just part of an ecosystem, it is an ecosystem in itself.",
+                "analysis": [
+                  "句子主干使用 it is an ecosystem in itself，以单个树木为核心作强调陈述。",
+                  "前半句通过否定 just part ... 引出反对和纠正；后半句用整体判断提升强度。",
+                  "逗号连接两个独立分句，形成对比式强调，逻辑上由“部分”推进到“整体”。",
+                  "in itself 表示就其自身而言，强调不可简化为环境中的普通组成部分。",
+                  "可借鉴这一结构写成“X isn’t just…; it is…”以加强论点。"
+                ],
+                "translation": "猴面包树不仅是生态系统的一部分，单棵树本身就是一个生态系统。"
+              },
+              {
+                "original": "The trees are thought to be between 200 and 300 years old.",
+                "analysis": [
+                  "主干是 The trees are thought to be old，采用系表结构与被动语态。",
+                  "are thought 交代这是专家或报道方的估计，而非绝对事实。",
+                  "不定式 to be between 200 and 300 years old 补充“被认为”的具体内容和年龄区间。",
+                  "介词短语 between... 既限制数值，又使报道显得更克制。",
+                  "这一句可用于表达科学估计和不确定信息。"
+                ],
+                "translation": "据信这些树已有200至300年历史。"
+              }
+            ]
+          },
+          {
+            "title": "World Toilet Day is a funny idea with a serious goal: A world awash in toilets",
+            "source": "NPR",
+            "published": "2026-11-19",
+            "url": "https://www.npr.org/2026/11/19/g-s1-154159/world-toilet-day-gender-equality-menstruation",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "健康与社会 / 卫生、性别平等与公共政策",
+            "summary": "文章以“厕所日兼具幽默与严肃意义”为主线，解释世界厕所日从1998年的倡议发展到2013年成为联合国正式纪念日。作者引用卫生专家指出，安全厕所不仅关乎隐私和尊严，也能阻断霍乱、脊髓灰质炎等经粪便传播疾病；文章进一步用月经卫生说明教育和职场中的性别差异，并强调缺少安全厕所会让女性和女孩面临被骚扰或暴力的风险。报道援引联合国的人权表述和自2015年以来12亿人口获得安全管理卫生设施的数据，最后主张政府支持社区自下而上提出方案，而不能只依赖高层单向设计。",
+            "reason": [
+              "主题把公共卫生、性别平等等与可持续发展目标相连，适合社会政策和健康类考研英语写作。",
+              "文章先用幽默故事引入，再用专家观点和数字证据展开，最后回到社区治理结论，结构完整。",
+              "可练习区分主旨、例证和因果关系，并识别 World Toilet Day、sanitation、gender equality 等命题词。",
+              "taboo、conveyance、harassment、human right 等词汇适合讨论公共设施和社会公平。",
+              "写作可借鉴“幽默表象—严肃现实—制度责任—社区解决方案”的递进论证。"
+            ],
+            "vocabulary": [
+              {
+                "word": "sanitary",
+                "phonetic": "/ˈsænəteri/",
+                "part": "adj.",
+                "translation": "卫生的；清洁的"
+              },
+              {
+                "word": "taboo",
+                "phonetic": "/təˈbuː/",
+                "part": "n./adj.",
+                "translation": "禁忌；避讳的"
+              },
+              {
+                "word": "conveyance",
+                "phonetic": "/kənˈveɪəns/",
+                "part": "n.",
+                "translation": "运送；输送"
+              },
+              {
+                "word": "sewage",
+                "phonetic": "/ˈsuːɪdʒ/",
+                "part": "n.",
+                "translation": "污水；下水道污物"
+              },
+              {
+                "word": "menstrual",
+                "phonetic": "/ˈmenstruəl/",
+                "part": "adj.",
+                "translation": "月经的"
+              },
+              {
+                "word": "harassment",
+                "phonetic": "/həˈræsmənt/",
+                "part": "n.",
+                "translation": "骚扰；折磨"
+              },
+              {
+                "word": "sanitation",
+                "phonetic": "/ˌsænɪˈteɪʃən/",
+                "part": "n.",
+                "translation": "卫生设施；环境卫生"
+              },
+              {
+                "word": "contaminant",
+                "phonetic": "/kənˈtæmɪnənt/",
+                "part": "n.",
+                "translation": "污染物"
+              },
+              {
+                "word": "flop",
+                "phonetic": "/flɑːp/",
+                "part": "n.",
+                "translation": "失败；失策"
+              },
+              {
+                "word": "plentiful",
+                "phonetic": "/ˈplentɪfəl/",
+                "part": "adj.",
+                "translation": "大量的；充足的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Even though everyone suffers when they can’t find a toilet, the menstrual cycle creates additional complications.",
+                "analysis": [
+                  "句子由 Even though 引导让步状语从句，承认所有人都会因厕所不足而受影响。",
+                  "主句主干是 the menstrual cycle creates complications，转向月经周期带来的额外困难。",
+                  "everyone 和 additional complications 形成普遍性与特殊性的对照。",
+                  "they 指代所有需要厕所的人，指代关系清楚且重复以保持句子自然。",
+                  "该句可借鉴“Even though...，X creates additional...”表达一般问题之外的特殊性。"
+                ],
+                "translation": "即便找不到厕所会让所有人受苦，月经周期仍会带来额外的复杂问题。"
+              },
+              {
+                "original": "If schools or offices lack a safe and sanitary place to attend to period needs and to dispose of period products, girls and women may opt to stay home.",
+                "analysis": [
+                  "句子以 If 引导条件状语从句，前置学校和办公室缺乏安全卫生设施的条件。",
+                  "并列不定式 to attend to period needs 和 to dispose of period products 分别说明隐私需求和废弃物处理。",
+                  "主句主干是 girls and women may opt to stay home，may 表示可能性而非必然结果。",
+                  "句子用“设施不足—行为选择”建立因果关系，体现教育或就业机会被影响。",
+                  "可借鉴 If + 缺口，主语 may opt to ... 结构写政策对行为的潜在影响。"
+                ],
+                "translation": "如果学校或办公室没有安全卫生的地方供人处理经期需求和弃置卫生用品，女孩和妇女可能选择待在家中。"
+              },
+              {
+                "original": "Governments should be a force for change but that shouldn’t be top down. It should also be … bottom up.",
+                "analysis": [
+                  "前句主干是 governments should be a force for change，明确政府应推动变革。",
+                  "but 引出转折，否定 only top down 的单向治理方式，强调执行方式同样重要。",
+                  "后一句以 It should also be 对“bottom up”作补充，形成政策过程中的多主体主张。",
+                  "省略号和口语化省略表示演讲者刻意替代读者熟悉的“bottom up”，增强修辞效果。",
+                  "可借鉴 should be ..., but not top down; should be bottom up 的对比结构。"
+                ],
+                "translation": "政府应成为变革的推动力量，但这种推动不应是自上而下的，也应由下而上。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-19",
       "status": "ready",
@@ -2015,352 +2360,6 @@ window.BRIEFING_DATA = {
                   "这一结构把讨论重点从“是否有效”转向“如何让所有人都能受益”，适合提出政策实施难题。"
                 ],
                 "translation": "真正的挑战在于确保每个人都有机会享受到这些益处。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-13",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Gemini 4 Hydrogen 进入 Gemini 与 Search、Google Flow 新增创作工具，并复核学生可用的免费模型、算力和学习服务。",
-        "updates": [
-          {
-            "event": "Gemini 4 Hydrogen 上线 Gemini 应用、Search 与开发平台",
-            "summary": "Google 于 11 月 12 日发布 Gemini 4 Hydrogen，定位为面向日常编码和 agent 工作流的快速模型，提供四档思考级别。模型开始全球上线至 Gemini 应用、Google Search、AI Studio、Gemini API 等；免费 Gemini 用户通过自动模型选择，在系统判断合适时可用 Hydrogen。",
-            "howTo": "在 Gemini 应用保留自动模型选择并提出需要多步推理的课程或编程问题；也可直接用 Google Search 提问，比较答案中的来源链接。开发者可在 AI Studio 的 Hydrogen 模型页试用，API 调用先查看价格和额度。",
-            "impact": "学生可让它协助拆解编程任务、解释复杂概念、整理长资料或起草学习提纲；用 Search 初筛资料时仍要打开原始链接核对，代码和事实结论也应自行验证。",
-            "free": "Google 公告称全球上线；Gemini 免费用户通过自动模型选择，在系统认为适合时可使用 Hydrogen，并非承诺每次提问都调用该模型。Gemini API 公布标准输入每百万 token 1.50 美元、输出 7.50 美元；Antigravity 和 Sheets 中的 Hydrogen 需 Google AI Pro 或 Ultra。API 免费资格、配额和账号条件未在公告中说明。",
-            "category": "生成式 AI / Gemini 模型",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-12",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
-            }
-          },
-          {
-            "event": "Google Search 全球接入 Gemini 4 Hydrogen",
-            "summary": "Google 于 11 月 12 日宣布 Search 开始使用 Gemini 4 Hydrogen。更新强调更能理解多部分、自然表达或有拼写错误的问题，改进并行扩展相关查询与链接发现，并提供更适配问题的图像、结构化答复、比较表和工具；支持的 AI Mode 语言也获得更细致的语言理解。",
-            "howTo": "打开 Google Search，用自然语言提出含多个条件的问题，例如比较两种复习方案并要求列出证据；检查返回的结构化内容，再逐个打开引用链接核实关键结论。",
-            "impact": "适合学生为论文选题找不同角度、比较课程资料或拆分复杂检索问题；结果中的摘要和链接可作为检索起点，不能代替阅读原始材料和引用来源。",
-            "free": "官方称 Hydrogen 已在 Google Search 全球面向所有用户提供；公告没有具体说明费用、账号要求、各地区逐步开放节奏或查询配额，相关限制官方未说明。",
-            "category": "搜索与研究 / AI 搜索",
-            "source": {
-              "name": "Google 官方博客（Search）",
-              "published": "2026-11-12",
-              "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
-            }
-          },
-          {
-            "event": "Google Flow 新增 5 款创作者设计的 AI 影像工具",
-            "summary": "Google 于 11 月 12 日为 Flow 发布五款由视觉创作者设计的工具：Character Poster 将故事概念转为海报；Character Arc 展示角色跨年龄变化；Pixel Machine 生成像素、ASCII、CRT 等视觉效果；Lucid Glass 模拟折射与光晕；Pocket Studio 将手机拍摄素材生成多机位效果并提升画面质感。",
-            "howTo": "打开 Google Flow 公告中对应的工具入口，按页面提示尝试 Character Poster、Character Arc、Pixel Machine、Lucid Glass 或 Pocket Studio；生成视觉草案后检查人物连续性和素材使用权。",
-            "impact": "可用于课程短片分镜、角色设定、海报和视频效果的低成本草稿，帮助创意项目快速比较视觉方向；生成内容应标注并核实素材与肖像授权。",
-            "free": "官方页面介绍了五款工具并提供 Flow 入口，但未说明价格、账户和地区资格、分批开放安排或免费生成配额；相关限制官方未说明。",
-            "category": "创意 AI / 影像制作",
-            "source": {
-              "name": "Google 官方博客（Google Labs）",
-              "published": "2026-11-12",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Student Developer Pack：验证学生身份领取开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro；官方页面列出每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 与 20 GB Codespaces 存储，并提供免费的合作伙伴开发权益。",
-            "howTo": "进入 GitHub Education 学生权益页申请验证，按提示提交学校邮箱和/或带日期的官方在读证明；通过后在 Student Developer Pack 查看当前可领取的合作权益。",
-            "impact": "可用私有仓库协作课程代码，在 Codespaces 中远程开发，并以 Actions 自动运行项目检查；申请前确认课程和证明材料符合资格。",
-            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需学校邮箱和/或官方在读证明。官方列出上述月度额度；地区范围和申请截止日期官方未说明，合作伙伴权益依各自条款。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Jupyter 与部分 GPU/TPU 算力",
-            "summary": "Google Colab 无需本地安装即可运行 Jupyter 笔记本；官方 FAQ 确认免费方案提供计算资源，包括 GPU 和 TPU，适用于机器学习、数据科学与教育。",
-            "howTo": "打开 Colab，新建或上传 .ipynb 笔记本并运行课程代码；需要加速时查看运行时硬件选项，重要文件保存到 Drive 或下载笔记本。",
-            "impact": "适合练习 Python 数据分析、运行小型机器学习课程实验或复现教材代码，无需先配置本地开发环境。",
-            "free": "官方确认免费使用并提供 GPU/TPU；资源不保证且不无限，使用限制会变化，托管运行时也可能提前终止。具体配额、地区和账号条件官方未说明。",
-            "category": "免费算力 / 学习环境",
-            "source": {
-              "name": "Google Colab 官方常见问题",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Claude Free：网页、桌面和手机端的免费学习助手",
-            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和手机端聊天、搜索网页、创建文件和运行代码；使用量受每 5 小时及每周限制。",
-            "howTo": "打开 Claude 官方免费方案入口并登录，在网页、桌面或手机端尝试概括课程文本、搜索背景资料、创建学习文件或运行小段代码；接近限制时缩小任务并保存结果。",
-            "impact": "适合低成本练习文本概括、网页资料初筛、生成学习文件或运行小段代码；较长对话和复杂任务可能更快触及用量限制。",
-            "free": "官方标价每月 0 美元，免费方案每 5 小时及每周均有使用限制，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
-            "category": "免费 AI 应用 / 学习助手",
-            "source": {
-              "name": "Claude 官方价格页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "DeepL 免费版：文本翻译与小型文件翻译额度",
-            "summary": "DeepL 官方计划对比页列出免费版本每月最多翻译 50,000 个字符，并提供 1 次文件翻译额度，单个文件不超过 5 MB，可用于阅读外文资料和核对译文。",
-            "howTo": "打开 DeepL 翻译器，将课程段落粘贴到文本框，或上传不超过 5 MB 的文件；对专业术语和关键句回看原文，不直接把机器译文当作定稿。",
-            "impact": "适合快速理解外文文献、对照中英术语和初步翻译短材料；免费版额度有限，译文仍需人工校对。",
-            "free": "官方计划页列出免费版每月 50,000 字符、1 次文件翻译及单文件最多 5 MB；文件翻译额度周期、地区和账号要求官方未说明。",
-            "category": "免费翻译工具",
-            "source": {
-              "name": "DeepL 官方计划页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "Gemini 免费用户可自动获得 Gemini 4 Hydrogen",
-            "summary": "Google 官方发布说明称，Gemini 应用免费用户会在自动模型选择判断合适时使用 Gemini 4 Hydrogen；该模型于 11 月 12 日开始全球上线。",
-            "howTo": "打开 Gemini 应用并保留自动模型选择，提出需要多步推理的学习问题；若要确认本次使用的模型，可查看应用模型选择说明。",
-            "impact": "学生可尝试让模型分解复杂概念、按要求整理提纲或起草代码练习，随后用教材、课程资料和测试检查内容。",
-            "free": "官方说明免费用户通过自动模型选择、在系统判断合适时可获得 Hydrogen，并称模型全球上线；未说明账号资格细节、手动选择权限、固定使用配额或各地区开放时间。",
-            "category": "免费 AI 应用 / Gemini",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-12",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
-            }
-          },
-          {
-            "event": "OpenAI Whisper：MIT 许可的本地语音识别与转写模型",
-            "summary": "OpenAI 官方 Whisper 仓库将代码和模型权重以 MIT License 发布；模型支持多语言语音识别、语音翻译和语言识别，可下载权重并在本机运行。",
-            "howTo": "按仓库说明安装 Python 依赖和 ffmpeg，再运行 `pip install -U openai-whisper`；用 `whisper lecture.mp3 --model small` 转写课程录音，并人工校对专有名词。",
-            "impact": "适合把访谈、讲座或外语听力转成文字，便于检索和复习；本地运行能减少上传音频的需要，但识别表现会因语言、语速和硬件而异。",
-            "free": "官方仓库说明代码和模型权重均采用 MIT License，可免费取得；运行需要自备兼容设备、存储和本地算力，设备规格、账号与地区限制官方未说明。",
-            "category": "开放模型 / 语音转写",
-            "source": {
-              "name": "OpenAI 官方 GitHub 仓库",
-              "published": "官方未说明",
-              "url": "https://github.com/openai/whisper"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "'Punch in the gut': Homes sales fall to their lowest in 16 years",
-            "source": "NPR",
-            "published": "2026-11-12",
-            "url": "https://www.npr.org/2026/11/12/nx-s1-6038940/punch-in-the-gut-homes-sales-fall-to-their-lowest-in-16-years",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "经济与商业 / 美国住房市场与利率",
-            "summary": "NPR 报道美国 10 月成屋销售降至年化 375 万套，较上年同期下降 8.8%，创 2010 年以来低位。文章先用房地产市场长期停滞后再度下滑引出问题，再把高按揭利率（30 年期固定利率一度达 7.40%）列为主要原因；随后解释通胀和债券收益率推高借贷成本，并联系美联储为抑制通胀而提高基准利率的政策逻辑。报道最后指出，进一步加息可能继续压低房市和其他消费活动，呈现稳定物价与住房需求之间的短期取舍。",
-            "reason": [
-              "住房可负担性、借贷成本和通胀治理都是经济类阅读的常见主题，文章用房屋销售把宏观利率政策落到家庭决策。",
-              "结构从销售数据和历史低位切入，解释按揭利率，再追溯美联储政策目标，最后说明潜在的后续影响。",
-              "适合考查数字与比较对象、因果链条、政策意图，以及作者如何通过专家引语呈现市场预期。",
-              "可积累 mortgage、benchmark、borrowing、inflation 等金融与宏观经济词汇，并区分 sales、rates 与 economic activity 的关系。",
-              "写作可借鉴“现象数据—直接原因—政策背景—预期代价”的论证顺序，避免把相关性直接写成单一因果。"
-            ],
-            "vocabulary": [
-              {
-                "word": "stagnant",
-                "phonetic": "/ˈstæɡnənt/",
-                "part": "adj.",
-                "translation": "停滞的；不景气的"
-              },
-              {
-                "word": "holding pattern",
-                "phonetic": "/ˈhoʊldɪŋ ˌpætərn/",
-                "part": "n. phr.",
-                "translation": "停滞状态；维持现状"
-              },
-              {
-                "word": "mortgage",
-                "phonetic": "/ˈmɔːrɡɪdʒ/",
-                "part": "n.",
-                "translation": "抵押贷款；房贷"
-              },
-              {
-                "word": "benchmark",
-                "phonetic": "/ˈbentʃmɑːrk/",
-                "part": "n.",
-                "translation": "基准；衡量标准"
-              },
-              {
-                "word": "borrowing",
-                "phonetic": "/ˈbɑːroʊɪŋ/",
-                "part": "n.",
-                "translation": "借款；借贷"
-              },
-              {
-                "word": "inflation",
-                "phonetic": "/ɪnˈfleɪʃn/",
-                "part": "n.",
-                "translation": "通货膨胀"
-              },
-              {
-                "word": "policymaker",
-                "phonetic": "/ˈpɑːləsimeɪkər/",
-                "part": "n.",
-                "translation": "政策制定者"
-              },
-              {
-                "word": "signal",
-                "phonetic": "/ˈsɪɡnəl/",
-                "part": "v.",
-                "translation": "表明；发出信号"
-              },
-              {
-                "word": "slowdown",
-                "phonetic": "/ˈsloʊdaʊn/",
-                "part": "n.",
-                "translation": "放缓；减速"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Existing home sales in October fell to 3.75 million, making an 8.8% decline in sales from a year earlier.",
-                "analysis": [
-                  "主干是 Existing home sales fell，先交代美国成屋销售下滑这一核心事实。",
-                  "in October 和 to 3.75 million 分别补充时间与结果数值，from a year earlier 给出同比参照。",
-                  "making an 8.8% decline 是现在分词短语，补充解释这一销量所对应的同比变化。",
-                  "数字与时间比较共同构成证据，适合用于说明经济趋势而不只作抽象判断。",
-                  "可借鉴“数据变化 + making + 名词短语”压缩表达指标及其含义。"
-                ],
-                "translation": "10 月美国成屋销售降至 375 万套，较一年前下降 8.8%。"
-              },
-              {
-                "original": "The drop is mainly due to high mortgage rates.",
-                "analysis": [
-                  "主干为 The drop is due to rates，直接把销售下滑与按揭利率联系起来。",
-                  "mainly 限定原因的重要程度，表示主要原因而非唯一原因。",
-                  "high 修饰 mortgage rates，说明文章所指的是较高的借贷成本。",
-                  "此句承接数据并引出后文的利率机制，是简洁的因果主题句。",
-                  "可借鉴 be mainly due to ... 表述主要原因，同时避免过度断言唯一成因。"
-                ],
-                "translation": "销售下滑主要是由于按揭利率高。"
-              },
-              {
-                "original": "Fewer home sales and other purchases mean less economic activity, which the Fed wants in order to reach its goal of lowering inflation.",
-                "analysis": [
-                  "主句核心是 Fewer ... purchases mean less economic activity，解释消费减少与经济活动放缓的关系。",
-                  "which 引导非限制性定语从句，指代前面的 less economic activity，并说明这是美联储希望实现的结果。",
-                  "in order to reach its goal 是目的状语，后接 of lowering inflation 说明目标内容。",
-                  "逻辑链为减少购买—放缓经济—降低通胀，展示政策目标及其传导机制。",
-                  "可借鉴 mean + 名词短语、which 补充评价和 in order to + 动词的层次组合。"
-                ],
-                "translation": "房屋销售和其他购买减少意味着经济活动减弱，而这正是美联储为实现降低通胀目标所希望看到的。"
-              }
-            ]
-          },
-          {
-            "title": "Time running out for young people to receive meningitis B vaccines in UK",
-            "source": "The Guardian",
-            "published": "2026-11-12",
-            "url": "https://www.theguardian.com/society/2026/nov/12/time-running-out-young-people-meningitis-b-vaccines-uk",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "健康与社会 / 青年疫苗接种与公共卫生",
-            "summary": "《卫报》报道英国面向部分青年推出的一次性、限时 MenB 疫苗计划接种率偏低：18 至 19 岁符合条件者中只有 28.2% 接种了第一剂。文章回顾年内肯特等地的疫情及后续计划，说明两剂需至少间隔 28 天，符合条件者包括特定出生年份的青年，以及当年首次进入大学或寄宿制继续教育机构、未满 25 岁者。卫生部门提醒第一剂需在 12 月 31 日前接种，第二剂可安排至 2027 年 3 月底；公共卫生专家担心低接种率赶不上冬季高发期，也提出延长宣传、改为年度接种安排或纳入常规青少年免疫计划。文章由此讨论限时疫苗政策的成本效果与覆盖面之间的张力。",
-            "reason": [
-              "疫苗接种、青年健康和公共卫生覆盖率是健康与社会议题的常见考点，文章用真实接种数据呈现政策执行问题。",
-              "文章先提出接种时间紧迫，再回顾疫情背景和计划规则，继而呈现接种率与专家建议，最后讨论是否转为常规安排。",
-              "适合考查数据比例、政策资格条件、截止日期，以及专家观点与官方安排之间的区别。",
-              "可积累 eligible、uptake、one-off、booster、invasive 等公共卫生词汇，注意 uptake 表示实际参与或接种情况。",
-              "写作可借鉴“风险背景—干预方案—覆盖不足—改进建议”的结构，论证时区分个体选择和群体免疫目标。"
-            ],
-            "vocabulary": [
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合资格的"
-              },
-              {
-                "word": "one-off",
-                "phonetic": "/ˌwʌn ˈɔːf/",
-                "part": "adj.",
-                "translation": "一次性的"
-              },
-              {
-                "word": "time-limited",
-                "phonetic": "/ˌtaɪm ˈlɪmɪtɪd/",
-                "part": "adj.",
-                "translation": "有时间限制的"
-              },
-              {
-                "word": "uptake",
-                "phonetic": "/ˈʌpteɪk/",
-                "part": "n.",
-                "translation": "采用率；接种率"
-              },
-              {
-                "word": "strain",
-                "phonetic": "/streɪn/",
-                "part": "n.",
-                "translation": "菌株；毒株"
-              },
-              {
-                "word": "outbreak",
-                "phonetic": "/ˈaʊtbreɪk/",
-                "part": "n.",
-                "translation": "疫情暴发；疾病暴发"
-              },
-              {
-                "word": "booster",
-                "phonetic": "/ˈbuːstər/",
-                "part": "n.",
-                "translation": "加强针；加强剂"
-              },
-              {
-                "word": "invasive",
-                "phonetic": "/ɪnˈveɪsɪv/",
-                "part": "adj.",
-                "translation": "侵袭性的"
-              },
-              {
-                "word": "routine",
-                "phonetic": "/ruːˈtiːn/",
-                "part": "adj.",
-                "translation": "常规的；例行的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The clock is ticking for young people in the UK to receive vaccinations to protect against meningitis B, ...",
-                "analysis": [
-                  "主干是 The clock is ticking，使用“时钟在走”这一隐喻表达时间紧迫。",
-                  "for young people in the UK 指出需要行动的群体，to receive vaccinations 说明其具体行动。",
-                  "to protect against meningitis B 是目的不定式，解释接种的保护目标。",
-                  "句子以紧迫性引出公共卫生问题，随后用接种比例和截止日提供证据。",
-                  "可借鉴 the clock is ticking for sb. to do sth. 表达某项行动的时间窗口正在收窄。"
-                ],
-                "translation": "英国年轻人接种疫苗以预防 B 型脑膜炎的时间已经不多了。"
-              },
-              {
-                "original": "But figures from the UK Health Security Agency have revealed just 28.2% of 18- and 19-year-olds have received a first dose.",
-                "analysis": [
-                  "主句主干是 figures have revealed，数据作为主语，突出统计结果而非个人判断。",
-                  "from the UK Health Security Agency 后置修饰 figures，交代数据来源。",
-                  "just 28.2% 强调比例偏低；of 18- and 19-year-olds 限定百分比的适用群体。",
-                  "have received a first dose 使用现在完成时，强调截至报道时的接种进展。",
-                  "可借鉴 figures reveal + 比例/事实来引入调查数据，并用 just 表示低于预期。"
-                ],
-                "translation": "但英国卫生安全局的数据表明，18 至 19 岁人群中仅有 28.2% 接种了第一剂。"
-              },
-              {
-                "original": "Two doses of the vaccine, given at least 28 days apart, are needed for protection, and UKHSA says second doses will be available until 31 March 2027.",
-                "analysis": [
-                  "并列结构前半句的主干为 Two doses are needed，明确获得保护所需的剂次数量；后半句说明第二剂的可接种期限。",
-                  "of the vaccine 修饰 doses，说明剂次所属的疫苗。",
-                  "given at least 28 days apart 是过去分词短语，补充两剂之间的最短间隔。",
-                  "for protection 表示目的或所需结果，说明方案要求与免疫保护之间的关系。",
-                  "可借鉴“名词 + 过去分词短语”补充条件，以及 be needed for ... 表达必要性。"
-                ],
-                "translation": "要获得保护需要接种两剂疫苗，两剂至少间隔 28 天。"
               }
             ]
           }
