@@ -1,6 +1,364 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-20T11:55:07+08:00",
+  "updatedAt": "2026-11-21T03:52:04+08:00",
   "issues": [
+    {
+      "date": "2026-11-21",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦 GitHub Copilot 的 MCP 连接、Gemini 4 Neon 与 GPT-6.2 编程模型，并复核适合学生长期使用的免费 AI 与学习资源。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 增加八个 MCP 连接器",
+            "summary": "GitHub 于 2026-11-18 宣布，Copilot 公测版可连接 Supabase、Box、Calendly、Webflow、Wix、Buildkite、ClickUp 和 Mixpanel；用户可在同一会话中查询项目、检查数据库或处理工作流。",
+            "howTo": "在 Copilot app 的 Customize、CLI 的 /mcp、VS Code 的 Agents/Customizations 或 github.com 的 Copilot customization 页面中选择 Connect；接入后可直接向 Copilot 描述跨服务任务。",
+            "impact": "学生可让助手核对 Supabase schema、整理项目资料或查看构建失败原因；涉及修改、发布或共享数据时仍应逐项确认并检查组织权限。",
+            "free": "官方称连接器面向所有 Copilot 计划开放公测；Business 或 Enterprise 管理员需启用相关策略，部分服务还需站内管理员开通。地区、配额、单个连接器的额外收费和公测期限官方未说明。",
+            "category": "编程助手 / MCP 连接",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-18",
+              "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot"
+            }
+          },
+          {
+            "event": "Gemini 4 Neon 正式进入 GitHub Copilot",
+            "summary": "GitHub 于 2026-11-18 正式在 Copilot 中上线 Gemini 4 Neon；该模型面向代理编码、多步骤工具调用和知识工作，官方称响应更快、代码意外修改更少。",
+            "howTo": "在支持 Copilot 的编辑器、CLI、编码代理、GitHub 网页或移动端打开模型选择器，选用 Gemini 4 Neon；若尚未出现，官方提示可能处于渐进式发布。",
+            "impact": "学生可用它规划多步骤编程任务、审查代码和调用工具；应通过测试、差异检查和原始资料核验避免接受无法复现的结论。",
+            "free": "可用于 Copilot Pro+、Max、Business 和 Enterprise；按供应商列表定价计费，配额、地区限制、企业策略和具体价格官方未统一说明。",
+            "category": "AI 编程 / 模型更新",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-18",
+              "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot"
+            }
+          },
+          {
+            "event": "OpenAI GPT-6.2 Astra 与 Sol 进入 GitHub Copilot",
+            "summary": "GitHub 于 2026-11-17 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 在 Copilot 中普遍可用；Astra 面向代理编码与终端工作，Sol 面向复杂代理任务和深入代码审查。",
+            "howTo": "在 Copilot 支持的编辑器、CLI、编码代理、GitHub 网页或移动端打开模型选择器并选择 GPT-6.2 Astra 或 Sol；若未显示，需等待渐进式发布或确认企业策略。",
+            "impact": "适合把课程项目拆成可执行步骤、补充终端脚本或进行代码审查；自动修复前应运行测试、检查依赖变化并审阅最终差异。",
+            "free": "Copilot Pro+、Max、Business 和 Enterprise 可选这两个模型并按供应商列表定价计费；具体地区、配额、月度抵扣和到期日官方未说明。",
+            "category": "AI 编程 / 模型更新",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-17",
+              "url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月免费补全",
+            "summary": "GitHub 官方计划页提供无需信用卡的 Copilot Free，包含每月代码补全及有限的聊天与代理使用。",
+            "howTo": "访问 GitHub Copilot plans，启用 Free；再在受支持编辑器、GitHub 网页或 CLI 中登录并使用 Copilot。",
+            "impact": "可用于课程项目中的代码补全、调试和多文件修改练习；始终运行测试并审查生成差异。",
+            "free": "官方列明每月 2,000 次代码补全、$0 月费且无需信用卡；聊天与代理用量有限，地区、具体重置规则和配额官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack：学生开发权益包",
+            "summary": "GitHub Education 面向已验证学生提供工具与合作伙伴权益，包括学习资源、开发工具和云端服务；具体权益会随合作伙伴和地区变化。",
+            "howTo": "登录 GitHub，前往 education.github.com/pack，按页面要求提交在校证明并等待验证；通过后在 Student Developer Pack 中逐项领取权益。",
+            "impact": "可用于搭建课程网站、完成开源项目或获取编程认证训练；领取前应核对每项合作伙伴的本人资格和到期条件。",
+            "free": "官方面向学生提供 Developer Pack，但没有统一列出所有权益的价格、地区、配额或截止日；具体项目须以领取页和合作伙伴条款为准。",
+            "category": "学生教育 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方页面",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Gemini API 免费层",
+            "summary": "Google AI Studio 定价页提供有限模型的免费输入输出 token、免费额度和 AI Studio 访问；适合搭建小型原型并比较模型。",
+            "howTo": "打开 AI Studio，核对目标模型是否支持 Free，再创建 API Key；在 Playground 或自己的代码中进行小规模测试。",
+            "impact": "学生可练习摘要、分类、问答和文档处理原型；不要上传敏感或受限资料，并按官方模型页核对免费层。",
+            "free": "官方提供“免费”与“付费”两档；个别模型的免费额度、速率限制、地区、账户资格和重置周期官方未统一说明，须逐项核对。",
+            "category": "免费 API / 模型试用",
+            "source": {
+              "name": "Google Gemini API 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Kaggle Learn：无成本数据课程",
+            "summary": "Kaggle 官方学习目录提供 Python、Pandas、SQL、机器学习和数据可视化等无成本课程，可直接在 Notebook 中练习。",
+            "howTo": "登录 Kaggle 后打开 Kaggle Learn，选择课程并完成交互式 Notebook；可把练习保存到个人工作区。",
+            "impact": "适合补足论文数据清洗、统计和可视化技能，并把课程代码迁移到科研或课程项目。",
+            "free": "官方页面明确标为 no-cost courses；账号资格、地区、证书费用和长期有效性官方未说明。",
+            "category": "免费学习 / 数据与编程",
+            "source": {
+              "name": "Kaggle 官方学习中心",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 运行时",
+            "summary": "Google Colab 官方提供免费托管 Jupyter Notebook，可运行 Python、数据分析和小规模机器学习工作负载。",
+            "howTo": "访问 Colab，新建或导入 .ipynb，运行 Python；必要时在运行时菜单选择可用硬件并保存到 Drive 或 GitHub。",
+            "impact": "适合快速配置课程实验、绘图和小规模模型训练；保存中间结果，注意运行时资源和任务可能中断。",
+            "free": "官方称可免费使用；资源不保证，固定 GPU/TPU 配额、地区、账户资格、配额和到期日官方未说明。",
+            "category": "免费学习 / 云端计算",
+            "source": {
+              "name": "Google Colab 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Qwen3-8B：可下载并本地运行的开源权重",
+            "summary": "Qwen 官方在 Hugging Face 发布 Qwen3-8B 模型权重，支持思考与非思考模式、工具调用、多语言和本地部署；模型卡标注 Apache 2.0。",
+            "howTo": "在 Hugging Face 打开 Qwen/Qwen3-8B，按官方 Transformers、SGLang 或 vLLM 示例下载权重并在本机运行；硬件不足时可用兼容的托管运行方式。",
+            "impact": "学生可离线或本地搭建多语言问答、翻译、编程和代理练习环境；部署前应核对硬件、依赖、许可证与数据隐私要求。",
+            "free": "模型权重可下载；Apache 2.0 已在官方模型卡和模型元数据中标注。硬件成本、地区限制、配额、服务期限和商业用途附加条件官方未统一说明。",
+            "category": "开源权重 / 本地模型",
+            "source": {
+              "name": "Qwen 官方 Hugging Face 模型卡",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/Qwen/Qwen3-8B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "California’s coastal communities on alert as biggest waves in years hit state",
+            "source": "The Guardian",
+            "published": "2026-11-20",
+            "url": "https://www.theguardian.com/us-news/2026/nov/20/california-coastal-communities-alert-big-waves-hit-state",
+            "readingTime": "约 4 分钟（估算）",
+            "topic": "环境 / 极端天气、海岸风险与公共预警",
+            "summary": "文章报道加州沿海社区因低压系统形成的持续强浪而进入防灾状态。作者先列出监测浮标记录的超9米浪高和海滩、码头关闭措施，再说明警报可能影响圣路易斯奥比斯波县、圣巴巴拉县等地，并展示暴雨、山地降雪和大风形成的复合型天气风险。文章随后将视野扩展到印度东方海岸的气旋、南非暴雨和洪灾，形成跨区域的极端天气比较；结论暗示，沿海管理需要把精确预警、基础设施韧性和跨地区气象监测结合起来，而不能只关注单次天气事件。",
+            "reason": [
+              "主题围绕气候、极端天气与公共安全，适合环境治理和灾害防范类考研英语阅读。",
+              "文章以美国加州具体事件为主线，再用印度和南非案例补充，便于练习主旨概括与跨段例证。",
+              "可重点训练数字、地名、被动语态和“could”“expected”等风险预测措辞。",
+              "vocabulary 涉及 swell、buoy、evacuate、torrential 等环境类高频词，适合写作积累。",
+              "写作可借鉴先描述影响，再列出数据，最后提升到跨区域协调的结构。"
+            ],
+            "vocabulary": [
+              {
+                "word": "swells",
+                "phonetic": "/swelz/",
+                "part": "n.",
+                "translation": "涌浪；海浪"
+              },
+              {
+                "word": "buoy",
+                "phonetic": "/bɔːi/",
+                "part": "n.",
+                "translation": "浮标"
+              },
+              {
+                "word": "coastal",
+                "phonetic": "/ˈkoʊstəl/",
+                "part": "adj.",
+                "translation": "沿海的"
+              },
+              {
+                "word": "evacuate",
+                "phonetic": "/ɪˈvækjueɪt/",
+                "part": "v.",
+                "translation": "疏散；撤离"
+              },
+              {
+                "word": "torrential",
+                "phonetic": "/təˈrenʃəl/",
+                "part": "adj.",
+                "translation": "暴雨的；猛烈的"
+              },
+              {
+                "word": "infrastructure",
+                "phonetic": "/ˈɪnfrəstrʌktʃər/",
+                "part": "n.",
+                "translation": "基础设施"
+              },
+              {
+                "word": "forecast",
+                "phonetic": "/ˈfɔːrkæst/",
+                "part": "n./v.",
+                "translation": "预测；预报"
+              },
+              {
+                "word": "successive",
+                "phonetic": "/səkˈsesɪv/",
+                "part": "adj.",
+                "translation": "连续的；接连的"
+              },
+              {
+                "word": "landfall",
+                "phonetic": "/ˈlændfɔːl/",
+                "part": "n.",
+                "translation": "(飓风等)登陆"
+              },
+              {
+                "word": "hazard",
+                "phonetic": "/ˈhæzərd/",
+                "part": "n.",
+                "translation": "危险；危害"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Multiple coastal hazard warnings were issued this week as successive areas of low pressure generated powerful swells and large breaking waves.",
+                "analysis": [
+                  "句子主干是 Multiple coastal hazard warnings were issued，warnngs 是被动语态中的主语。",
+                  "were issued 表示多项沿海警报由官方发布，强调被动发生的动作。",
+                  "介词短语 this week 交代时间范围，限定警报发布期。",
+                  "as 引导原因或伴随状语从句，说明连续低压系统生成强浪的因果关系。",
+                  "该句可用于新闻报道中“被动语态交代措施 + as 从句说明原因”的结构。"
+                ],
+                "translation": "本周发布了多项沿海危险警报，因为连续的低压区域产生了强劲涌浪和巨大的破碎浪。"
+              },
+              {
+                "original": "The Monterey, California, buoy recorded a wave height of 34.1ft, which would make it the highest reading in 30 years.",
+                "analysis": [
+                  "句子主干是 the buoy recorded a wave height，buoy 作主语。",
+                  "逗号中的 California 为 Monterey 增加地点限定。",
+                  "which 引导非限制性定语从句，指代前面的34.1英尺记录。",
+                  "would make it 表示推测性结论，不是绝对断言。",
+                  "该句适合在技术性新闻中组合精确数字、地点和历史比较。"
+                ],
+                "translation": "加州蒙特雷的浮标记录到34.1英尺的浪高，这可能使该数据成为30年来最高记录。"
+              },
+              {
+                "original": "Nearly 72,000 people have been evacuated from areas of Odisha in eastern India as Tropical Cyclone Akvan approaches land.",
+                "analysis": [
+                  "句子主干是 72,000 people have been evacuated，使用现在完成时被动式强调疏散状态。",
+                  "介词短语 from areas of Odisha 和 in eastern India逐层限定疏散地点。",
+                  "as 引导时间状语从句，表达疏散与气旋逼近同时发生。",
+                  "Nearly 修饰具体数字，使报道保留估计口吻。",
+                  "该句可用于描述应急措施和自然灾害逼近之间的同步关系。"
+                ],
+                "translation": "随着热带气旋阿克万逼近登陆，印度东部奥迪沙地区已有近7.2万人撤离。"
+              }
+            ]
+          },
+          {
+            "title": "Faisal Islam: This cost-cutting UK-EU deal doesn’t mean lower prices will follow",
+            "source": "BBC News",
+            "published": "2026-11-20",
+            "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "经济 / 国际贸易、监管与消费者物价",
+            "summary": "文章先指出英国政府宣称新UK-EU协议能降低企业和消费者成本，但零售商并未承诺由此直接降价。作者解释协议通过减少食品出口文件、边检和人为延误来减少企业成本，却强调成本节省是否传导到超市货架仍取决于能源冲击、国际市场和价格谈判等多重因素。文章接着比较预计的贸易、经济和就业收益，也指出必须遵守欧盟法规、为欧盟市场让出部分监管自由并承担潜合约成本；结论不是否认协议的潜在增长，而是提醒读者区分宏观收益、企业成本和消费者实际价格。",
+            "reason": [
+              "主题涉及国际贸易、监管成本和生活物价，适合商业与经济类考研英语阅读。",
+              "文章采用“政府宣传—企业反应—机制分析—条件限制—总体判断”的完整论证结构。",
+              "可训练因果链、转折词、数字细节和“benefit”“cost”“gain”之间的区分。",
+              "vocabulary 包括 red tape、quid pro quo、perishable、regulatory freedom 等抽象商经词汇。",
+              "写作可借鉴先质疑一项政策承诺，再拆解成本传导与长期收益的论证方法。"
+            ],
+            "vocabulary": [
+              {
+                "word": "bureaucracy",
+                "phonetic": "/bjʊəˈrɑːkrəsi/",
+                "part": "n.",
+                "translation": "官僚制度；行政程序"
+              },
+              {
+                "word": "perishable",
+                "phonetic": "/ˈperɪʃəbəl/",
+                "part": "adj.",
+                "translation": "易腐坏的"
+              },
+              {
+                "word": "red tape",
+                "phonetic": "/red teɪp/",
+                "part": "phr.",
+                "translation": "繁文缛节；行政手续"
+              },
+              {
+                "word": "quid pro quo",
+                "phonetic": "/kwɪd proʊ kwoʊ/",
+                "part": "phr.",
+                "translation": "交换条件；互惠交换"
+              },
+              {
+                "word": "regulatory",
+                "phonetic": "/ˈreɡjələtəri/",
+                "part": "adj.",
+                "translation": "监管的；规范的"
+              },
+              {
+                "word": "autonomy",
+                "phonetic": "/ɔːˈtɑːnəmi/",
+                "part": "n.",
+                "translation": "自主权；自治"
+              },
+              {
+                "word": "forecast",
+                "phonetic": "/ˈfɔːrkæst/",
+                "part": "n./v.",
+                "translation": "预测；预报"
+              },
+              {
+                "word": "trade-off",
+                "phonetic": "/ˈtreɪd ɔːf/",
+                "part": "n.",
+                "translation": "权衡；取舍"
+              },
+              {
+                "word": "agrifood",
+                "phonetic": "/ˈæɡri fuːd/",
+                "part": "n./adj.",
+                "translation": "农业食品；农产品食品"
+              },
+              {
+                "word": "compliance",
+                "phonetic": "/kəmˈplaɪəns/",
+                "part": "n.",
+                "translation": "遵守；合规"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "This deal will matter for food exporters - it may not have a clear visible impact at the checkout.",
+                "analysis": [
+                  "句子分为破折号前后的两个独立判断，形成让步式对照。",
+                  "主语 This deal 和 it 分别指协议及其潜在影响，指代关系清楚。",
+                  "matter for food exporters 表示出口企业会受到实质影响。",
+                  "may not否定的是消费者在收银处看到的直接效果，而非全部收益。",
+                  "破折号强调宏观供给成本与微观物价之间的分离，可借鉴于政策分析。"
+                ],
+                "translation": "这项协议对食品出口商很重要——但它未必会在收银台上产生明显影响。"
+              },
+              {
+                "original": "It is more a hope than will at this stage.",
+                "analysis": [
+                  "句子主干使用 It is，比较对象由 hope 与 will 构成。",
+                  "more A than B 的结构强调当前更多是希望而不是确定的意愿或行动。",
+                  "at this stage 限定作者对现阶段结果的判断。",
+                  "省略了重复信息，使句子简洁且带有批评语气。",
+                  "该句适合表达政策承诺尚未成为可验证现实的克制判断。"
+                ],
+                "translation": "现阶段，这与其说是现实意愿，不如说只是一个希望。"
+              },
+              {
+                "original": "The bigger point is whether this logic will now apply elsewhere.",
+                "analysis": [
+                  "主句是 The bigger point is whether，引出以 whether 开头的名词性从句。",
+                  "从句保留疑问含义但按陈述语序排列，适合学术议论文。",
+                  "this logic 指前文以食品开放换取监管对接的模式。",
+                  "now 表示将这一模式推广到其他领域的时间敏感性。",
+                  "该句可作为提炼争论核心、引出更高层问题的范例。"
+                ],
+                "translation": "更大的问题是，这套逻辑现在是否会适用于其他领域。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-20",
       "status": "ready",
@@ -2034,332 +2392,6 @@ window.BRIEFING_DATA = {
                   "重复 cannot 构成简洁有力的平行结构；可用于概括证据、认知与治理行动之间的关系。"
                 ],
                 "translation": "我们无法保护自己看不见或不了解的事物。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-14",
-      "status": "ready",
-      "ai": {
-        "intro": "本期核验 Gemini 的多模态判定 API、Gemini 4 Carbon 和 Android 端新功能，并整理可免费学习、试用或下载的资源。",
-        "updates": [
-          {
-            "event": "Gemini Decisions API：一次请求完成多项多模态判定",
-            "summary": "Google 于 2026-11-11 发布 Gemini Decisions API 和 Gemini Decision 1。它可处理文本、图像、音频、视频和 PDF，在单次请求中评估至多 1,000 个是/否、选项或量表问题，并返回概率及置信度；AI Studio 提供用于原型开发的免费层。",
-            "howTo": "在 Google AI Studio 创建 API key，打开 Decisions API 文档，使用 Python、JavaScript 或 REST 指南调用 `gemini-decision-1`；为同一输入设置是/否、选择题或评分标准，并查看返回的置信度。",
-            "impact": "可用于课程项目中给资料片段分类、按自定义量表初筛文本，或对图片做有限选项判断；将低置信度结果交由人工复核，不把分类分数当作事实结论。",
-            "free": "Google 称 API 有免费层可用于原型；付费价格为每百万输入 token 0.10 美元、输出 token 0 美元。免费层的具体配额、地区资格、账号条件及开放节奏官方未说明；调用需在 AI Studio 创建 API key。",
-            "category": "生成式 AI / 多模态 API",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-11",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
-            }
-          },
-          {
-            "event": "Gemini 4 Carbon 开放给付费开发者与 Ultra 用户",
-            "summary": "Google 于 2026-11-10 宣布 Gemini 4 Carbon 面向付费开发者、企业及消费者开放，重点面向长流程、多步骤编码、知识工作和科学推理；消费者端通过 Google AI Ultra 分批获得 Gemini 应用、Search AI Mode 与 Antigravity 使用权限。",
-            "howTo": "开发者可在 Google AI Studio 选择 `gemini-4-carbon` 并按 API 文档调用；持有 Google AI Ultra 的用户可在开放后到 Gemini 应用、Search AI Mode 或 Antigravity 试用。",
-            "impact": "适合学生在复杂编程作业中让模型协助分解调试步骤，或先整理多份资料形成研究草稿；代码、引用和推理仍需用课程材料或测试核对。",
-            "free": "官方列出的 API 价格为每百万输入 token 2 美元、输出 token 10 美元，API 面向付费开发者和企业；Gemini 应用、Search AI Mode 和 Antigravity 正向 Google AI Ultra 订阅者开放。免费使用资格、配额、地区和完整 rollout 时间官方未说明。",
-            "category": "生成式 AI / Gemini 模型",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-10",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
-            }
-          },
-          {
-            "event": "Gemini Intelligence 扩展至更多 Android 设备并增加小组件功能",
-            "summary": "Google 于 2026-11-10 公布 Android 端 Gemini Intelligence 新功能并扩展设备支持：Pixel 10 系列获得相关能力，Motorola signature 27 将加入；Create My Widget 可按文字描述生成个性化小组件并读取 Gmail、Calendar 和 Search 信息，另有设备协助功能及扩展至英国、印度、日本的任务自动化。",
-            "howTo": "在符合条件的 Pixel 10 或其他支持设备上留意 Gemini Intelligence 更新；Create My Widget 将分批推出，开放后用自然语言描述所需的小组件。任务自动化可在 Gemini 应用中检查地区可用性。",
-            "impact": "学生可尝试把课程日程、邮件和搜索信息汇总到主屏小组件，也可让设备协助完成手机设置；使用前检查数据权限，并确认功能已在自己的设备和地区开放。",
-            "free": "官方称部分功能仅在指定国家和语言提供，部分仅限 18 岁以上；设备、语言和地区会影响可用性，部分功能高用量可能需要订阅。Create My Widget 预计数周内分批推出；具体费用、固定配额、完整地区清单和账号资格官方未说明。",
-            "category": "生成式 AI / Android 助手",
-            "source": {
-              "name": "Google 官方博客（Android）",
-              "published": "2026-11-10",
-              "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Kaggle Learn：免费数据科学与机器学习短课程",
-            "summary": "Kaggle Learn 官方课程页提供无费用的实用课程，涵盖 Python、数据可视化、Pandas 等数据技能，适合按短课逐步练习。",
-            "howTo": "打开 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按课程单元阅读说明并完成练习。",
-            "impact": "可用来补齐数据处理基础，再把课程方法用于论文数据清理、图表制作或入门机器学习练习。",
-            "free": "官方将这些课程标为 no-cost；课程数量、账号或注册要求、地区限制及完成额度官方未说明。",
-            "category": "免费课程 / 数据科学",
-            "source": {
-              "name": "Kaggle 官方 Learn 课程页",
-              "published": "官方未说明",
-              "url": "https://www.kaggle.com/learn"
-            }
-          },
-          {
-            "event": "AWS Educate：免费云计算与 AI 学习路径和动手实验",
-            "summary": "AWS Educate 面向个人免费提供自定进度的云计算与 AI 学习资源，包含存储、计算、网络、数据库和云运维等实践课程及数字徽章。",
-            "howTo": "进入 AWS Educate 注册页面，用电子邮箱创建学习者账号，再从课程目录选择云计算或 AI 相关学习路径和实验。",
-            "impact": "适合为云服务、数据库和 AI 应用课程建立入门概念，并通过实验练习基础的云端操作；开始前确认实验内容不会要求额外付费的 AWS 服务。",
-            "free": "官方说明年满 13 岁的学习者可用电子邮箱注册，无需信用卡，并可使用免费课程和动手实验；地区、实验配额和截止日期官方未说明。",
-            "category": "免费 AI 学习 / 云计算教育",
-            "source": {
-              "name": "AWS 官方教育项目页",
-              "published": "官方未说明",
-              "url": "https://aws.amazon.com/education/awseducate/"
-            }
-          },
-          {
-            "event": "Qwen3-Next-80B-A3B-Instruct：Apache 2.0 开放模型权重",
-            "summary": "Qwen 官方 Hugging Face 模型卡提供 Qwen3-Next-80B-A3B-Instruct 的模型文件和 Transformers 使用示例；仓库元数据显示模型采用 Apache-2.0 许可证。模型总参数量为 80B，卡片说明其原生上下文长度为 262,144 tokens。",
-            "howTo": "从模型卡的 Files and versions 获取文件，或按 Quickstart 安装最新版 Transformers 并加载 `Qwen/Qwen3-Next-80B-A3B-Instruct`；本地部署前先确认可用存储和算力。",
-            "impact": "可在课程项目或本地实验中测试开放模型的文本生成与长文档处理，并比较不同模型的输出；80B 总参数模型对本地设备要求高，实际部署需自行评估。",
-            "free": "模型仓库提供可下载权重，许可证为 Apache-2.0；模型文件下载配额、账号和地区要求及最低运行硬件官方未说明，运行所需设备和算力需自备。",
-            "category": "开放模型 / 下载权重",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct"
-            }
-          },
-          {
-            "event": "Gemini Decisions API：AI Studio 免费层可用于原型开发",
-            "summary": "Gemini Decisions API 官方发布页确认 API 提供无费用层，可在 Google AI Studio 用于原型；该端点可对多模态输入执行是/否、选项和评分判定。",
-            "howTo": "在 Google AI Studio 打开 Decisions API Playground 体验示例，或创建 API key 后依官方文档将输入和判定问题提交给 `gemini-decision-1`。",
-            "impact": "可低成本验证课程项目中的文本分类、图像核验或量表评分流程，再决定是否扩展为正式应用。",
-            "free": "官方称 API 有免费层用于原型，付费价为每百万输入 token 0.10 美元、输出 token 0 美元；免费额度、地区和账号资格官方未说明。",
-            "category": "免费 API / 多模态判定",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-11",
-              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Vanessa delivers pizza after work to pay rent. Many Australians are ‘scrambling’ as cracks appear in the economy",
-            "source": "The Guardian",
-            "published": "2026-11-13",
-            "url": "https://www.theguardian.com/australia-news/2026/nov/14/vanessa-delivers-pizza-after-work-to-pay-rent-many-australians-are-scrambling-as-cracks-appear-in-the-economy",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "经济与社会 / 澳大利亚生活成本、就业与住房压力",
-            "summary": "文章以悉尼白领 Vanessa Freitas 下班后兼职送披萨、仍无力购房的经历切入，呈现高房租与家庭预算压力。随后将个人故事扩展到宏观背景：近期利率上升、物价持续走高和裁员使公众对经济更悲观，求助热线接到创纪录的来电，部分家庭开始拖欠贷款、削减医疗和日常开支。报道再并置不同指标：消费和部分经济活动仍有韧性，但消费者信心接近衰退时期水平，失业率上行、企业裁员也加剧担忧。结尾引用专家判断澳大利亚可能避免衰退和大规模失业，却仍会面临求职时间拉长、工资增长放缓；由此突出宏观数据稳定与家庭切身压力并存。",
-            "reason": [
-              "住房负担、通胀、利率与就业是经济类阅读常见主题，文章用个人生活讲述引出宏观指标和社会影响。",
-              "论述依次采用人物故事、求助数据、信心与就业指标、专家预测，体现由个案到整体再回到前景判断的结构。",
-              "适合考查细节与数据对应、转折关系、引语功能，以及“经济并未衰退”与“家庭感受恶化”如何并置。",
-              "可学习 optimistic、arrears、deteriorate、cohesion 等表达，区分经济指标、情绪和家庭财务状况。",
-              "写作可借鉴以具体人物导入议题，再用多类证据补充、对照并以审慎预测收束的方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "optimistic",
-                "phonetic": "/ˌɑːptɪˈmɪstɪk/",
-                "part": "adj.",
-                "translation": "乐观的"
-              },
-              {
-                "word": "white-collar",
-                "phonetic": "/ˌwaɪt ˈkɑːlər/",
-                "part": "adj.",
-                "translation": "白领的；办公室工作的"
-              },
-              {
-                "word": "barely",
-                "phonetic": "/ˈberli/",
-                "part": "adv.",
-                "translation": "几乎不；勉强"
-              },
-              {
-                "word": "fuel",
-                "phonetic": "/ˈfjuːəl/",
-                "part": "v.",
-                "translation": "加剧；助长"
-              },
-              {
-                "word": "slump",
-                "phonetic": "/slʌmp/",
-                "part": "v.",
-                "translation": "骤降；大幅下滑"
-              },
-              {
-                "word": "helpline",
-                "phonetic": "/ˈhelplaɪn/",
-                "part": "n.",
-                "translation": "求助热线"
-              },
-              {
-                "word": "deteriorate",
-                "phonetic": "/dɪˈtɪriəreɪt/",
-                "part": "v.",
-                "translation": "恶化；变差"
-              },
-              {
-                "word": "arrears",
-                "phonetic": "/əˈrɪrz/",
-                "part": "n.",
-                "translation": "欠款；逾期款项"
-              },
-              {
-                "word": "cohesion",
-                "phonetic": "/koʊˈhiːʒən/",
-                "part": "n.",
-                "translation": "凝聚力；团结"
-              },
-              {
-                "word": "redundancy",
-                "phonetic": "/rɪˈdʌndənsi/",
-                "part": "n.",
-                "translation": "裁员；冗余"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "“We are both on wages that should be enough, right?”",
-                "analysis": [
-                  "句子主干是 We are on wages；both 表示说话者和伴侣两人都处于这一收入状况。",
-                  "that should be enough 是定语从句，修饰 wages，说明这份工资按理应足够生活。",
-                  "right? 是附加疑问式的确认请求，表现说话者对现实与预期落差的困惑。",
-                  "should be enough 将“合理预期”与下文经济吃紧形成对照，可用于表达预期落空。"
-                ],
-                "translation": "“我们两个人的工资按理都该够用，对吧？”"
-              },
-              {
-                "original": "With a long wait ahead, households are starting to ask how much worse it will get.",
-                "analysis": [
-                  "主句主干是 households are starting to ask，households 是主语，are starting to ask 是谓语。",
-                  "句首 With a long wait ahead 是介词短语，交代未来仍需等待这一背景。",
-                  "how much worse it will get 是 ask 的宾语从句，疑问词 how much 修饰比较级 worse。",
-                  "背景状语与间接疑问结合，呈现不确定感，可用于引出趋势和公众担忧。"
-                ],
-                "translation": "在还要等待很久的情况下，家庭开始追问，情况还会恶化到什么程度。"
-              },
-              {
-                "original": "The RBA expects the economy to grow by at least 1% next year, helped by steady spending.",
-                "analysis": [
-                  "主句主干是 The RBA expects the economy to grow，expect 后接宾语 economy 和不定式补语 to grow。",
-                  "by at least 1% next year 补充增长幅度与时间，at least 表示最低预期。",
-                  "helped by steady spending 是过去分词短语，补充说明预期增长的支撑因素。",
-                  "该句先陈述预测、再交代原因，适合练习“观点/预测 + 依据”的经济报道句式。"
-                ],
-                "translation": "澳大利亚储备银行预计，受稳定消费支撑，经济明年将至少增长 1%。"
-              }
-            ]
-          },
-          {
-            "title": "GPs are now ‘prescribing’ time in nature. Is it likely to improve your health?",
-            "source": "The Conversation",
-            "published": "2026-11-12",
-            "url": "https://theconversation.com/gps-are-now-prescribing-time-in-nature-is-it-likely-to-improve-your-health-296469",
-            "readingTime": "约 5 分钟（估算）",
-            "topic": "健康与社会 / 自然接触、公共卫生与健康公平",
-            "summary": "文章介绍澳大利亚全科医生组织认可自然处方资源，建议人们每天花约 20 分钟留意自然环境，并追问这种建议是否真能改善健康。作者先梳理研究证据：一项涵盖 47 项试验的综述中，部分研究发现心理健康改善；森林活动研究也观察到血压、心率变异性和压力激素方面的变化，但不同指标结果不一。文章随后区分“接触自然与健康相关”与“医生开出自然处方能带来因果改善”：每周两小时的建议主要来自观察性研究，不能证明时间本身导致健康变好；处方项目的实施方式和测量标准也不一致。结尾指出安全绿地、时间、健康状况和当地活动资源影响参与机会，因此自然处方可能有益，但仍需更严格研究、个性化转介和更公平的环境支持。",
-            "reason": [
-              "文章讨论健康促进、预防医学与环境公平，兼具社会政策和日常生活主题，适合健康类议论文阅读。",
-              "结构从新做法提出问题，回顾研究证据，再辨析相关与因果，最后讨论可及性并给出审慎结论。",
-              "适合考查研究结果与作者结论的区别、让步转折、数据证据边界，以及作者如何限定主张。",
-              "可积累 endorse、rigorous、observational、exposure 和 referral 等学术健康词汇。",
-              "写作可借鉴“呈现潜在益处—说明证据限制—讨论实施条件—提出公平性要求”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "endorse",
-                "phonetic": "/ɪnˈdɔːrs/",
-                "part": "v.",
-                "translation": "认可；支持"
-              },
-              {
-                "word": "wellbeing",
-                "phonetic": "/ˌwelˈbiːɪŋ/",
-                "part": "n.",
-                "translation": "身心健康；幸福感"
-              },
-              {
-                "word": "rigorous",
-                "phonetic": "/ˈrɪɡərəs/",
-                "part": "adj.",
-                "translation": "严谨的；严格的"
-              },
-              {
-                "word": "consistent",
-                "phonetic": "/kənˈsɪstənt/",
-                "part": "adj.",
-                "translation": "一致的；稳定的"
-              },
-              {
-                "word": "observational",
-                "phonetic": "/ˌɑːbzərˈveɪʃənəl/",
-                "part": "adj.",
-                "translation": "观察性的"
-              },
-              {
-                "word": "exposure",
-                "phonetic": "/ɪkˈspoʊʒər/",
-                "part": "n.",
-                "translation": "接触；暴露"
-              },
-              {
-                "word": "association",
-                "phonetic": "/əˌsoʊsiˈeɪʃən/",
-                "part": "n.",
-                "translation": "关联；联系"
-              },
-              {
-                "word": "prescribing",
-                "phonetic": "/prɪˈskraɪbɪŋ/",
-                "part": "n./gerund",
-                "translation": "开具处方；建议采用"
-              },
-              {
-                "word": "accessible",
-                "phonetic": "/əkˈsesəbəl/",
-                "part": "adj.",
-                "translation": "可获得的；易到达的"
-              },
-              {
-                "word": "referral",
-                "phonetic": "/rɪˈfɜːrəl/",
-                "part": "n.",
-                "translation": "转介；转诊"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The strength of evidence varies depending on the activity and health outcome being measured.",
-                "analysis": [
-                  "句子主干是 The strength of evidence varies，主语为 evidence 的 strength，谓语为 varies。",
-                  "depending on the activity and health outcome 是现在分词短语，补充说明证据强弱取决于什么。",
-                  "being measured 是现在分词被动结构，修饰 activity and health outcome，强调被评估的对象。",
-                  "该句以限定语避免一概而论，可借 varies depending on 表达结论受条件影响。"
-                ],
-                "translation": "证据的强弱会因所考察的活动和健康结果而有所不同。"
-              },
-              {
-                "original": "However, this was an observational study.",
-                "analysis": [
-                  "主干为 this was an observational study，this 指代前文提及的每周两小时与健康状况相关的研究结果。",
-                  "However 是句首转折副词，提示读者重新评估前文看似明确的发现。",
-                  "observational 作定语限定 study 的研究设计类型，暗示证据可以显示关联而非直接证明因果。",
-                  "短句独立成句形成强调，可用于引出研究局限或对前述证据作审慎限定。"
-                ],
-                "translation": "然而，这是一项观察性研究。"
-              },
-              {
-                "original": "The challenge is ensuring everyone has opportunities to enjoy the benefits.",
-                "analysis": [
-                  "句子主干是 The challenge is ensuring...，主语为 The challenge，系动词 is 后接动名词短语作表语。",
-                  "everyone has opportunities to enjoy the benefits 是 ensuring 的宾语从句，说明需要确保的具体内容。",
-                  "to enjoy the benefits 是不定式，作 opportunities 的补足成分，表达机会所指向的行动。",
-                  "这一结构把讨论重点从“是否有效”转向“如何让所有人都能受益”，适合提出政策实施难题。"
-                ],
-                "translation": "真正的挑战在于确保每个人都有机会享受到这些益处。"
               }
             ]
           }
