@@ -1,6 +1,371 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-21T03:52:04+08:00",
+  "updatedAt": "2026-11-22T10:56:04+08:00",
   "issues": [
+    {
+      "date": "2026-11-22",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦 Gemini 在 Mac、跨 AI 聊天迁移和连接应用方面的新增能力，以及 OpenAI 面向药物发现研究的新基准。",
+        "updates": [
+          {
+            "event": "Gemini app for Mac 增加 Computer Use 自动操作",
+            "summary": "Google 于 2026-11-19 宣布，Gemini app for Mac 可在隔离窗口中跨本地文件、桌面应用和网页执行自动化任务；用户可描述复杂流程，由 Gemini 处理点击、输入和表单填写。",
+            "howTo": "在 Mac 上下载 Gemini app；打开功能后选择需要处理的本地文件、应用或网页任务，授予权限并实时查看预览；敏感操作仍需由用户确认。",
+            "impact": "学生可尝试整理下载目录、填写重复表格或在多个网页间收集课程资料，并应先用副本和测试账号验证操作，避免误删文件或提交错误表单。",
+            "free": "官方说明该能力已随 Gemini app for Mac 推出；地区、账号层级、使用配额、是否免费或需要付费计划均未统一说明。",
+            "category": "AI 桌面 / 自动化",
+            "source": {
+              "name": "Google Gemini 官方博客",
+              "published": "2026-11-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+            }
+          },
+          {
+            "event": "Gemini 支持导入其他 AI 应用的聊天记录",
+            "summary": "Google 于 2026-11-19 推出将其他 AI 应用聊天历史转入 Gemini 的能力，目的是保留上下文，减少重新解释偏好和过往讨论的工作。",
+            "howTo": "在支持的 Gemini 页面或 app 中找到“转移聊天记录”或相关迁移入口，按官方提示导出并上传原平台允许导出的历史；迁移前应检查隐私设置并删除敏感聊天。",
+            "impact": "学生可把已整理的选题讨论、复习计划或项目需求带入 Gemini，但应核对迁移后的时间顺序、事实和个人信息，不能默认原聊天中的结论仍然准确。",
+            "free": "官方未说明迁移功能的地区范围、账号层级、配额、保存期限或费用限制。",
+            "category": "Gemini / 数据迁移",
+            "source": {
+              "name": "Google Gemini 官方博客",
+              "published": "2026-11-19",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/"
+            }
+          },
+          {
+            "event": "Gemini Connected Apps 面向假期任务联动",
+            "summary": "Google 于 2026-11-20 介绍 Gemini 的 Connected Apps 新场景，可把日历、邮箱等个人数据连接到搜索与任务流程中，协助完成行程、礼物和日常安排。",
+            "howTo": "在 Gemini 或 Google 产品的 Connected Apps 设置中查看可接入的应用，逐项授权，并用自然语言描述需要检索或执行的任务；先在预览中确认将读取或发送的数据。",
+            "impact": "学生可用于整理考试日程、校内活动和旅行清单，但应限制不必要的数据范围，并对任何支付、通知或日历修改进行人工确认。",
+            "free": "官方未说明所有 Connected Apps 的地区、账号、配额和付费限制；具体能力以相应应用设置和可用性为准。",
+            "category": "Gemini / 个人助手",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-20",
+              "url": "https://blog.google/products-and-platforms/products/search/connected-apps-holiday-errands/"
+            }
+          },
+          {
+            "event": "OpenAI 发布 MedChemBench 药物发现基准",
+            "summary": "OpenAI 于 2026-11-20 发布 MedChemBench，用于评估 AI 模型是否能理解分子结构、从实验证据推理并选择早期药物候选。",
+            "howTo": "访问 OpenAI 官方页面查看任务与评测说明；研究者可先阅读公开任务设计，在自己的模型评测流水线中复现对应场景，重点核对化学结构和证据来源。",
+            "impact": "化学、生命科学和计算机专业学生可借此理解分子推理、证据检索和模型评测的基本要求；不能据此替代实验验证、医学判断或受监管的药物筛选流程。",
+            "free": "官方页面是公开阅读与研究资料；是否开放基准运行、所需 API、地区、配额和费用均未说明。",
+            "category": "AI 研究 / 科学评测",
+            "source": {
+              "name": "OpenAI 官方研究页",
+              "published": "2026-11-20",
+              "url": "https://openai.com/index/introducing-medchembench"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月免费补全",
+            "summary": "GitHub 官方计划页提供无需信用卡的 Copilot Free，包含每月代码补全及有限的聊天与代理使用。",
+            "howTo": "访问 GitHub Copilot plans，选择或启用 Free，再在受支持编辑器、GitHub 网页或 CLI 中登录使用。",
+            "impact": "可用于课程项目中的代码补全、调试和多文件修改练习；应运行测试并审查生成差异。",
+            "free": "官方列明每月 2,000 次代码补全、月费为 $0 且无需信用卡；聊天与代理配额、地区、重置规则和到期限制官方未统一说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack：学生开发权益包",
+            "summary": "GitHub Education 面向已验证学生提供工具与合作伙伴权益，包括学习资源、开发工具和云端服务；具体权益随合作伙伴和地区变化。",
+            "howTo": "登录 GitHub，前往 education.github.com/pack，提交在校证明并等待验证；通过后逐项领取并阅读合作伙伴条款。",
+            "impact": "可用于搭建课程网站、完成开源项目或获取开发工具；领取前应核对资格、地区、配额和到期条件。",
+            "free": "官方面向学生提供 Developer Pack，但未统一列出所有权益价格、配额、地区或截止日。",
+            "category": "学生教育 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方页面",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Gemini API 免费层",
+            "summary": "Google AI Studio 定价页列出部分模型的免费输入输出额度，适合搭建小型原型和模型实验。",
+            "howTo": "打开 AI Studio，核对目标模型是否支持 Free，再创建 API Key；先在 Playground 小规模测试，再将调用写入课程项目。",
+            "impact": "可用于文本摘要、问答原型和 API 调用练习；应检查项目中的隐私数据、速率限制和付费触发条件。",
+            "free": "官方列出各模型不同的免费额度、速率和付费档位；地区、资格、配额和到期规则以定价页与账号所示数据为准。",
+            "category": "免费 API",
+            "source": {
+              "name": "Google AI for Developers 官方定价页",
+              "published": "官方未说明",
+              "url": "https://ai.google.dev/gemini-api/docs/pricing"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费课程与练习",
+            "summary": "Kaggle 官方提供可在线完成的免费数据科学微课程和编程练习，不需购买课程来开始学习。",
+            "howTo": "登录 Kaggle，进入 Courses/Learn，选择课程并完成互动代码练习；可在浏览器中运行示例，保存 Notebook 作为作品集。",
+            "impact": "适合补足 Python、数据清洗、机器学习和可视化基础，并为课程作业或竞赛准备可复现案例。",
+            "free": "官方提供免费课程入口；具体证书、地区、账号和配额限制官方未说明。",
+            "category": "免费课程 / 练习",
+            "source": {
+              "name": "Kaggle 官方 Learn 页面",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 运行时",
+            "summary": "Google 官方提供免费的浏览器内 Colab Notebook，用于运行 Python、安装包、编辑文档并连接云端资源。",
+            "howTo": "访问 Colab，创建 Notebook，按需选择运行时并上传数据；编程前先保存副本并检查共享权限。",
+            "impact": "适合做数据分析、机器学习和课程演示，无需本地配置深度学习环境；大量计算或持续运行仍需留意资源限制。",
+            "free": "官方说明免费运行时和资源可用性会受限制；具体配额、地区、加速器类型、保留时长和付费升级官方未统一说明。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "Google Colaboratory 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Microsoft Copilot：Microsoft 账户免费网页入口",
+            "summary": "Microsoft 官方表示 Copilot 可通过已登录 Microsoft 账户免费使用，并提供研究、回答和内容创建能力；部分高级能力受账号或用量限制。",
+            "howTo": "访问 copilot.microsoft.com，使用 Microsoft 账户登录或按页面选择免费入口；先从网页摘要、检索和文本草稿开始，再核对来源。",
+            "impact": "可用于文献检索、课程问答和演示稿大纲，但应保存原始链接、核对事实并避免上传未经许可的个人或考试材料。",
+            "free": "官方明确提供免费 Microsoft 账户入口；具体地区、配额、高级功能、会话限制和到期规则官方未统一说明。",
+            "category": "免费通用助手",
+            "source": {
+              "name": "Microsoft Copilot 官方页面",
+              "published": "官方未说明",
+              "url": "https://copilot.microsoft.com/"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Scientists sequenced a whale's entire genome using drones and whale snot",
+            "source": "NPR",
+            "published": "2026-11-21",
+            "url": "https://www.npr.org/2026/11/21/nx-s1-6044816/scientists-sequenced-a-whales-entire-genome-using-drones-and-whale-snot",
+            "readingTime": 5,
+            "topic": "environment",
+            "summary": "文章报道了科学家利用无人机和专用培养皂盘收集鲸鱼呼气中的生物样本，并由多份单体鲸鱼样本拼合出完整基因组。主张是，这种“吹气采样”相较于传统的穿刺活检侵入性更低：它可获得细菌、病毒、病原体、化学物质、细胞和 DNA 片段，并用于监测个体和种群健康。报道先交代技术方法，再引用海洋哺乳动物生态学家的操作细节，随后请未参与研究的 Woods Hole 科学家评价其意义，并以“打开更安全研究之门”收束全文。结论是方法虽不能完全取代传统验证，却让无创或低侵入式生态研究变得更可行。",
+            "reason": [
+              "主题属于环境、海洋保护与科研技术，贴近考研英语 II 对环境治理和科学创新的跨学科议题。",
+              "正文采用问题—方法—证据—专家评价—结论的清晰叙事结构，适合训练主旨和细节定位。",
+              "可能考查无创采样、基因测序和传统活检之间的比较，以及代词、转折和因果关系。",
+              "文章含环境研究、健康监测和方法创新等实用词汇，可训练学术阅读中的名词化和动词搭配。",
+              "可用于写作中论证新技术如何降低动物保护成本、提高数据质量或平衡科研与伦理。"
+            ],
+            "vocabulary": [
+              {
+                "word": "sequence",
+                "phonetic": "/ˈsiːkwəns/",
+                "part": "v.",
+                "translation": "测定序列；排列"
+              },
+              {
+                "word": "genome",
+                "phonetic": "/ˈdʒiːnoʊm/",
+                "part": "n.",
+                "translation": "基因组"
+              },
+              {
+                "word": "sample",
+                "phonetic": "/ˈsɑːmpl/",
+                "part": "n./v.",
+                "translation": "样本；采样"
+              },
+              {
+                "word": "respiratory tract",
+                "phonetic": "/rəˈspɪrətri trækt/",
+                "part": "n.",
+                "translation": "呼吸道"
+              },
+              {
+                "word": "representative",
+                "phonetic": "/ˌreprɪˈzentətɪv/",
+                "part": "adj.",
+                "translation": "具有代表性的"
+              },
+              {
+                "word": "broader",
+                "phonetic": "/ˈbrɔːdə(r)/",
+                "part": "adj.",
+                "translation": "更广泛的"
+              },
+              {
+                "word": "invasive",
+                "phonetic": "/ɪnˈveɪsɪv/",
+                "part": "adj.",
+                "translation": "侵入性的"
+              },
+              {
+                "word": "ground truth",
+                "phonetic": "/ˈɡraʊnd truːθ/",
+                "part": "n.",
+                "translation": "基准事实；实测核验"
+              },
+              {
+                "word": "stressors",
+                "phonetic": "/ˈstresərz/",
+                "part": "n.",
+                "translation": "压力源"
+              },
+              {
+                "word": "albeit",
+                "phonetic": "/ɔːlˈbiːɪt/",
+                "part": "conj.",
+                "translation": "尽管；虽然"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Scientists were able to sequence the entire genome of a whale using samples of its snot.",
+                "analysis": [
+                  "句子主干是 Scientists were able to sequence the entire genome。",
+                  "of a whale 限定基因组所属对象，using 引导方式状语。",
+                  "entire 是名词 genome 前的修饰语，强调完整测序。",
+                  "be able to 表达能力，适合改写为“借助……能够完成……”。"
+                ],
+                "translation": "科学家能够利用鲸鱼鼻涕样本测定其完整基因组。"
+              },
+              {
+                "original": "The drones have got sterile petri dishes attached to them, literally Velcroed on.",
+                "analysis": [
+                  "主干是 The drones have got dishes attached to them。",
+                  "attached to them 是过去分词短语作结果补足，说明培养皂盘与无人机的关系。",
+                  "literally 为插入式强调，后接 Velcroed on，补充固定方式。",
+                  "该句体现 have got+宾语+过去分词的完成式结构，可用于描述设备或系统配置。"
+                ],
+                "translation": "无人机上装有无菌培养皂盘，而且是用魔术贴实实地粘在机身上的。"
+              },
+              {
+                "original": "This just opens the door.",
+                "analysis": [
+                  "This 指代前文的低侵入式基因采样方法。",
+                  "opens the door 是隐喻式主谓结构，表示开启新的可能性。",
+                  "just 在此弱化夸张，表达“不过是提供一个起点”。",
+                  "短句可与后文“shows how much information”形成递进，适合写作中的简洁结论。"
+                ],
+                "translation": "这只是打开了一扇门。"
+              }
+            ]
+          },
+          {
+            "title": "New research gives insight to where your brain plans out your speech",
+            "source": "NPR",
+            "published": "2026-11-20",
+            "url": "https://www.npr.org/2026/11/20/nx-s1-6047695/new-research-gives-insight-to-where-your-brain-plans-out-your-speech",
+            "readingTime": 6,
+            "topic": "health",
+            "summary": "文章介绍加州大学旧金山分校团队对 Wernicke 区功能的新发现：该区域不仅感知和理解语言，还会在说话前几瞬间为肌肉运动准备词序和发声序列。报道先指出传统教科书把该区域主要描述为语言理解区，再以 28 名癫痫手术患者的神经活动监测为证据，说明它同时承担听觉与口语规划功能。文章进一步讨论这种发现对儿童语言学习、自闭症、中风康复及脑机接口的意义，并指出教科书和神经科学理解需要持续更新。核心结论是，语言功能由多个脑区协作完成，单一“理解区”或“产生区”的模型过于简单。",
+            "reason": [
+              "主题涉及健康、神经科学、教育与康复，属于考研英语常见的人类能力与医学进展议题。",
+              "文章先提出反常观察，再用研究证据和专家评价展开，适合训练论证链条识别。",
+              "可能考查实验对象、因果机制、功能重划和专业术语等细节题。",
+              "文本包含 has a function for、especially、in addition to 等高频学术表达，有较好的仿写价值。",
+              "可用于写作中讨论教材更新、跨学科研究、康复技术与传统认知局限。"
+            ],
+            "vocabulary": [
+              {
+                "word": "syllable",
+                "phonetic": "/ˈsɪləbl/",
+                "part": "n.",
+                "translation": "音节"
+              },
+              {
+                "word": "longstanding",
+                "phonetic": "/ˈlɔːŋstændɪŋ/",
+                "part": "adj.",
+                "translation": "长期存在的"
+              },
+              {
+                "word": "comprehend",
+                "phonetic": "/ˌkɔmprɪˈhend/",
+                "part": "v.",
+                "translation": "理解；领会"
+              },
+              {
+                "word": "puzzled",
+                "phonetic": "/ˈpʌzld/",
+                "part": "adj.",
+                "translation": "困惑的；不解的"
+              },
+              {
+                "word": "alternately",
+                "phonetic": "/ˈɔːltərnətli/",
+                "part": "adv.",
+                "translation": "交替地"
+              },
+              {
+                "word": "neurons",
+                "phonetic": "/ˈnʊrɑːnz/",
+                "part": "n.",
+                "translation": "神经元"
+              },
+              {
+                "word": "critical",
+                "phonetic": "/ˈkrɪtɪkl/",
+                "part": "adj.",
+                "translation": "关键的；至关重要的"
+              },
+              {
+                "word": "rehabilitation",
+                "phonetic": "/ˌriːəˌbɪlɪˈteɪʃn/",
+                "part": "n.",
+                "translation": "康复；恢复训练"
+              },
+              {
+                "word": "paralysis",
+                "phonetic": "/pəˈræləsɪs/",
+                "part": "n.",
+                "translation": "瘫痪"
+              },
+              {
+                "word": "complex",
+                "phonetic": "/ˈkɔmpleks/",
+                "part": "adj.",
+                "translation": "复杂的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "In order to say a word like Mississippi or hippopotamus, the brain has to do a lot of planning.",
+                "analysis": [
+                  "主句主干是 the brain has to do a lot of planning。",
+                  "In order to 引导目的状语，说明发出复杂词语需要提前规划。",
+                  "like Mississippi or hippopotamus 以例子说明长词的多个音节需要排列。",
+                  "句子把普通表达和神学科问题相连，是典型的通俗引入专业主题结构。"
+                ],
+                "translation": "为了说出密西西比或河马这类词，大脑必须进行大量规划。"
+              },
+              {
+                "original": "In addition to the listening function, it also has a function for planning the words that we're about to say next.",
+                "analysis": [
+                  "主干是 it also has a function for planning。",
+                  "In addition to the listening function 是介词短语，强调研究发现的新增功能。",
+                  "that 引导定语从句修饰 the words，说明规划对象是即将说出的词语。",
+                  "also 和 In addition to 形成双重并列，可用于比较事物具有的两种功能。"
+                ],
+                "translation": "除了听觉功能之外，它还具有规划我们下一步要说的词语的功能。"
+              },
+              {
+                "original": "A structure that scientists say they're only beginning to understand.",
+                "analysis": [
+                  "句首 A structure 是名词短语，指代前文的复杂脑区结构。",
+                  "that 引导定语从句，说明科学家对该结构的认知状态。",
+                  "only beginning to understand 表示当前认知仍处于起始阶段。",
+                  "该句用无动词主句式收束段落，适合概括研究仍存在的局限和未知。"
+                ],
+                "translation": "这是一种科学家们才刚刚开始了解的结构。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-21",
       "status": "ready",
@@ -2066,332 +2431,6 @@ window.BRIEFING_DATA = {
                   "并列累积加上因果语境，解释工厂内部为何比室外更热；put off 在此意为散发。"
                 ],
                 "translation": "“那么多工人、材料和机器都在散热。”"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-15",
-      "status": "ready",
-      "ai": {
-        "intro": "本期核验 GitHub Copilot 的新模型、模型退役安排与企业服务器连接方式，并复核可免费用于学习、写作和编程的资源。",
-        "updates": [
-          {
-            "event": "Gemini 4 Hydrogen 上线 GitHub Copilot",
-            "summary": "GitHub 于 2026-11-13 宣布，Google 的 Gemini 4 Hydrogen Flash 模型已在 Copilot 中正式提供，面向快速、有效率的代理式编码、工具使用和多步骤工作流，并改进了相较 Gemini 3.8 Flash 的指令遵循。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI、github.com 等已支持的 Copilot 端打开模型选择器，选 Gemini 4 Hydrogen 后用小型课程代码任务测试；若尚未出现，官方说明正在逐步开放，可稍后再检查。",
-            "impact": "可让它先拆解课程项目的多步骤编码任务、调用工具或协助定位问题；把它生成的代码放进本地测试，并检查每一步，不要直接提交未经验证的改动。",
-            "free": "公告列出的可用计划为 Copilot Pro、Pro+、Max、Business 和 Enterprise，未列 Free 计划；按模型供应商公开价格计费，具体价格见 Copilot 模型计费页。需要相应 Copilot 账户，地区资格官方未说明，功能逐步开放。",
-            "category": "编程助手 / 模型更新",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-13",
-              "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 将于 12 月 14 日下架指定模型",
-            "summary": "GitHub 于 2026-11-13 公布，2026-12-14 起在 Copilot 各体验中退役 Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6 和 Kimi K3，并为前五者分别列出替代模型；Kimi K3 的替代项尚待公布。年度订阅个人用户仍可使用 Claude Haiku 4.5。",
-            "howTo": "如果课程项目或编辑器设置仍选用上述模型，先查看 Copilot Chat、内联编辑、代理模式和代码补全的模型配置，再按公告切换到建议的替代模型；Kimi K3 用户需等待官方后续通知。",
-            "impact": "提前切换可避免 12 月 14 日后课程仓库脚本、提示词或个人开发流程因模型不可用而中断；保留一份模型无关的任务说明，便于切换时复测结果。",
-            "free": "公告给出的退役日期为 2026-12-14；除年度订阅个人用户的 Claude Haiku 4.5 例外外，调整覆盖 Copilot 各体验。具体免费计划、地区和调用额度未在公告中说明。",
-            "category": "编程助手 / 模型生命周期",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-13",
-              "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december/"
-            }
-          },
-          {
-            "event": "Copilot 应用正式支持连接 GitHub Enterprise Server",
-            "summary": "GitHub 于 2026-11-13 将 Copilot 应用连接 GitHub Enterprise Server（GHES）的功能从选择加入预览版转为正式可用；连接后可在应用中处理 GHES 远程仓库、议题和拉取请求。",
-            "howTo": "先用 GitHub.com 或 GHE.com 账户登录 Copilot 应用，再进入 Settings > Accounts > Add account，选择 GitHub Enterprise Server 并添加服务器账户；确认应用版本为 1.2.0 或更高。",
-            "impact": "如果学校实验室或团队把课程仓库托管在 GHES，学生可在 Copilot 应用里查看并处理相关仓库、议题和 PR；需注意官方明确说明 GHES 云端会话不可用。",
-            "free": "变更日志未说明该功能的价格、免费计划资格、地区或额度；需先登录 GitHub.com 或 GHE.com 账户，且要求 Copilot 应用 1.2.0+。GHES 云端会话不可用。",
-            "category": "编程助手 / 企业仓库协作",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-13",
-              "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "ChatGPT Free：免费日常问答与有限工具使用",
-            "summary": "OpenAI 的个人 Free 方案标价为每月 0 美元，提供日常文字对话；文件上传、图像生成、语音、深度研究、记忆与上下文、Codex 等功能有使用限制。",
-            "howTo": "打开 ChatGPT 定价页，选择 Get Free 并按页面提示进入账户；可用它梳理课程概念、列出论文提纲或解释英文段落，再回到教材和原文核对。",
-            "impact": "适合先做低成本的概念问答、写作结构练习和复习计划；遇到上传或研究额度限制时，改用分段提问并保留原始资料核验答案。",
-            "free": "Free 方案为 0 美元/月；文字对话标为不限量但受滥用防护约束，文件、图片、语音、深度研究等为有限使用。此定价页未说明免费账号的地区名单、注册具体要求及各工具的准确额度。",
-            "category": "免费聊天助手 / 学习与写作",
-            "source": {
-              "name": "OpenAI ChatGPT 官方定价页",
-              "published": "官方未说明",
-              "url": "https://chatgpt.com/pricing/"
-            }
-          },
-          {
-            "event": "Gemini 免费方案：Google 账号可用的学习助手",
-            "summary": "Google 的 Gemini Free 方案为每月 0 美元，需 Google 账号；官方方案页列出 Gemini 应用、Flash-Lite、图像生成与编辑、Deep Research、Canvas、Gemini Notebook 等功能。",
-            "howTo": "打开 Gemini 官方方案页，选择 Free 后用 Google 账号进入 Gemini；可将一节课的概念、阅读提纲或学习计划拆成具体问题，并逐项核对回答。",
-            "impact": "可在不订阅付费计划的情况下进行课程概念解释、资料初步整理和图像草稿尝试；免费方案的模型与功能额度有限，重要结论仍应查阅原始材料。",
-            "free": "官方列价为 0 美元/月，要求 Google 账号；方案页说明所列功能可用，但未给出 Free 的精确用量、地区名单或功能配额。",
-            "category": "免费聊天助手 / 多模态学习",
-            "source": {
-              "name": "Google Gemini 官方方案页",
-              "published": "官方未说明",
-              "url": "https://gemini.google/subscriptions/"
-            }
-          },
-          {
-            "event": "Gemini Notebook（NotebookLM）免费研究笔记本",
-            "summary": "Google 帮助页说明，可用 Gmail 账号免费注册 Gemini Notebook（NotebookLM）；免费方案上限为每位用户 100 本笔记本、每本 50 个非笔记来源、每本 500 个笔记来源，并支持所有用户使用自定义聊天和分析功能。",
-            "howTo": "用 Gmail 账号打开 Gemini Notebook，新建课程笔记本并添加获准使用的讲义或阅读材料，再围绕材料提问、整理复习要点；确认每本来源数不超过免费方案上限。",
-            "impact": "可把多份课程阅读材料集中起来做主题比较、概念复习和论文前期梳理；上传前检查课程和版权要求，输出中的引文与事实须回到原文确认。",
-            "free": "可用 Gmail 账号免费注册；免费层为 100 本/用户、50 个非笔记来源/本、500 个笔记来源/本，额度可能变动。网页端仅在官方支持的国家和地区、达到当地同意年龄的用户可用；高级分享为付费功能。",
-            "category": "免费研究工具 / 资料问答",
-            "source": {
-              "name": "Google Gemini Notebook 官方帮助中心",
-              "published": "官方未说明",
-              "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 的 Copilot Free 方案价格为 0 美元，官方列出每月 2,000 次代码补全、有限的聊天与代理使用，并说明无需信用卡；已验证学生另可使用 GitHub Copilot Student 方案。",
-            "howTo": "用 GitHub 账号进入 Copilot 官方方案页，选择 Free，再在 VS Code 或其他支持的编辑器安装 Copilot 扩展并登录；先让它解释一段课程代码或补全小型练习，并运行测试。",
-            "impact": "可为入门编程、样板代码和报错解释提供免费辅助；把月度补全次数留给重复性编码，聊天和代理额度有限，生成代码须逐行理解并测试。",
-            "free": "Free 为 0 美元且无需信用卡；每月 2,000 次代码补全，聊天与代理使用有限。GitHub 表示已验证学生可使用 Student 方案；Free 的地区名单和聊天/代理确切额度官方未说明。",
-            "category": "免费编程助手 / 学生权益",
-            "source": {
-              "name": "GitHub Copilot 官方方案页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
-            "source": "BBC",
-            "published": "2026-11-15",
-            "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "消费与文化 / 美妆降临日历的营销与性价比",
-            "summary": "文章以消费者 Julia 对美妆降临日历的挑选标准开篇，借近期 Skims 日历遭批评并退款的事件引出核心问题：高价礼盒是否真的划算。报道先呈现购买者视角：有人看重按小包装试用和单品折扣，有人认为多数产品不合心意；接着说明品牌的限量话术和网红开箱如何制造稀缺感与惊喜，并引用 Ipsos 数据称美妆日历约占全部降临日历销量的 15%。随后，消费者和美学专家反驳“标价总和便宜即划算”的判断，指出不需要或不会用完的商品会削弱实际价值。文章以人们交换不需要的产品收尾，整体结论是性价比取决于个人需求和实际使用，而非表面折扣。",
-            "reason": [
-              "文章讨论节日消费、营销影响和理性购物，适合消费文化与商业类阅读主题。",
-              "结构由个人购买经历引题，转向市场数据与营销策略，再并置不同消费者和专家意见，最后回到实际使用价值。",
-              "可考查人物观点匹配、数据所支持的结论、转折词作用，以及作者如何呈现正反评价。",
-              "词汇涵盖消费选择、广告策略和价值判断，可用于理解消费者行为类文章。",
-              "写作可借鉴“生活案例—市场证据—异议与专家判断—限定结论”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "appeal",
-                "phonetic": "/əˈpiːl/",
-                "part": "n.",
-                "translation": "吸引力；感染力"
-              },
-              {
-                "word": "unsentimental",
-                "phonetic": "/ˌʌnˌsentɪˈmentl/",
-                "part": "adj.",
-                "translation": "不感情用事的；务实的"
-              },
-              {
-                "word": "splurge",
-                "phonetic": "/splɜːdʒ/",
-                "part": "v.",
-                "translation": "挥霍；大手笔消费"
-              },
-              {
-                "word": "sophisticated",
-                "phonetic": "/səˈfɪstɪkeɪtɪd/",
-                "part": "adj.",
-                "translation": "复杂精细的；老练的"
-              },
-              {
-                "word": "infectious",
-                "phonetic": "/ɪnˈfekʃəs/",
-                "part": "adj.",
-                "translation": "有感染力的；易传播的"
-              },
-              {
-                "word": "savvier",
-                "phonetic": "/ˈsæviər/",
-                "part": "adj.",
-                "translation": "更精明的；更懂行的"
-              },
-              {
-                "word": "menial",
-                "phonetic": "/ˈmiːniəl/",
-                "part": "adj.",
-                "translation": "微不足道的；乏味的"
-              },
-              {
-                "word": "bombarded with",
-                "phonetic": "/bɑːmˈbɑːrdɪd wɪð/",
-                "part": "phr.",
-                "translation": "被大量……信息轰炸"
-              },
-              {
-                "word": "dwindle",
-                "phonetic": "/ˈdwɪndl/",
-                "part": "v.",
-                "translation": "逐渐减少；衰减"
-              },
-              {
-                "word": "mark-up",
-                "phonetic": "/ˈmɑːrk ʌp/",
-                "part": "n.",
-                "translation": "加价幅度；溢价"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "But she takes quite an unsentimental approach.",
-                "analysis": [
-                  "主干为 she takes an approach，主语 she、谓语 takes、宾语 an approach。",
-                  "句首 But 与前文“容易被吸引”形成转折，提示人物采取了不同于冲动消费的做法。",
-                  "quite 修饰 an unsentimental approach，unsentimental 描写其务实、不被情绪左右。",
-                  "可借鉴 take a ... approach 表达某人处理问题的方式，并用 But 引入对照。"
-                ],
-                "translation": "但她采取了相当务实、不感情用事的做法。"
-              },
-              {
-                "original": "But in the face of that tsunami of marketing, customers seem to be getting savvier.",
-                "analysis": [
-                  "主句主干是 customers seem to be getting savvier，customers 为主语，seem 为系动词性谓语。",
-                  "in the face of that tsunami of marketing 是句首介词短语，表示面对铺天盖地的营销。",
-                  "that tsunami of marketing 使用海啸比喻营销声势；getting savvier 表示消费者逐渐变得更精明。",
-                  "But 引出与营销影响力相反的趋势；seem to 表示作者谨慎判断而非绝对断言。"
-                ],
-                "translation": "然而，面对海量营销宣传，消费者似乎正变得更加精明。"
-              },
-              {
-                "original": "But it is exceptionally unlikely that you would use all the products inside them, so they're probably not worth it.",
-                "analysis": [
-                  "句子由 so 连接因果两部分：前半指出全部用完的可能性极低，后半推出“不太值得”的判断。",
-                  "前半采用形式主语 it；真正的内容由 that 引导的从句 that you would use all the products inside them 承担。",
-                  "exceptionally 修饰 unlikely，强化“极不可能”；would use 表示假设情境中的使用行为。",
-                  "so 引出结论，probably 则限制结论强度；可借鉴 it is unlikely that... 表达审慎推断。"
-                ],
-                "translation": "但你极不可能用完里面的所有产品，因此它们可能并不值得购买。"
-              }
-            ]
-          },
-          {
-            "title": "Indigenous students retrace Lewis and Clark’s historic journey: ‘We can’t protect what we cannot see’",
-            "source": "The Guardian",
-            "published": "2026-11-14",
-            "url": "https://www.theguardian.com/us-news/2026/nov/14/lewis-clark-indigenous-students",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "环境与社会 / 原住民学生、生态调查与知识主权",
-            "summary": "文章把 19 世纪 Lewis 与 Clark 探险队的自然观察放在殖民扩张背景中，指出原住民社群早已熟悉当地生态，且其在早期探险中的贡献常被淡化。随后报道 Smithsonian 与部落学院合作，以沿线相机陷阱重新调查野生动物，并让部落学生参与数据采集、解释与有薪实习。文章也呈现社群对数据外流和土地被研究者利用的担忧，说明参与者如何尝试把传统生态知识与新数据结合，以支持本地保护决策。报道接着介绍记录到的动物变化、数据缺口及 AI 识别后由志愿科学家验证的流程；项目数据完成后将开放给研究者和土地管理者。结尾回到学生的职业选择与主权意识，强调由社群参与研究不仅补充生态资料，也使其对土地与知识的决策权得到更多承认。",
-            "reason": [
-              "文章结合生物多样性、原住民知识与研究伦理，覆盖环境保护和社会公平等常见议题。",
-              "行文先回顾历史叙事，再介绍调查设计与社群顾虑，继而呈现数据发现，最后落到知识主权与保护意义。",
-              "可考查历史背景的作用、引语态度、调查方法与结论之间的关系，以及转折如何修正单一叙事。",
-              "词汇涉及生态研究、社区自治和证据可靠性，适合积累跨学科社会议题表达。",
-              "写作可借鉴“历史语境—现实项目—潜在风险—参与者收益”的层次组织，并区分数据与价值判断。"
-            ],
-            "vocabulary": [
-              {
-                "word": "dispatch",
-                "phonetic": "/dɪˈspætʃ/",
-                "part": "v.",
-                "translation": "派遣；派出"
-              },
-              {
-                "word": "ardent",
-                "phonetic": "/ˈɑːdənt/",
-                "part": "adj.",
-                "translation": "热情的；热切的"
-              },
-              {
-                "word": "meticulous",
-                "phonetic": "/məˈtɪkjələs/",
-                "part": "adj.",
-                "translation": "一丝不苟的；极仔细的"
-              },
-              {
-                "word": "pivotal",
-                "phonetic": "/ˈpɪvətl/",
-                "part": "adj.",
-                "translation": "关键的；核心的"
-              },
-              {
-                "word": "invasion",
-                "phonetic": "/ɪnˈveɪʒn/",
-                "part": "n.",
-                "translation": "入侵；侵略"
-              },
-              {
-                "word": "downplay",
-                "phonetic": "/ˌdaʊnˈpleɪ/",
-                "part": "v.",
-                "translation": "淡化；轻描淡写"
-              },
-              {
-                "word": "stipend",
-                "phonetic": "/ˈstaɪpend/",
-                "part": "n.",
-                "translation": "津贴；实习补助"
-              },
-              {
-                "word": "integral",
-                "phonetic": "/ɪnˈteɡrəl/",
-                "part": "adj.",
-                "translation": "不可或缺的；构成整体的"
-              },
-              {
-                "word": "sovereignty",
-                "phonetic": "/ˈsɒvrənti/",
-                "part": "n.",
-                "translation": "主权；自主权"
-              },
-              {
-                "word": "overdue",
-                "phonetic": "/ˌəʊvəˈdjuː/",
-                "part": "adj.",
-                "translation": "迟来的；早该得到的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "These observations were pivotal in shaping an early understanding of North American biodiversity.",
-                "analysis": [
-                  "主干是 These observations were pivotal，These observations 为主语，were pivotal 为系表结构。",
-                  "in shaping an early understanding 是介词短语，说明这些观察在哪方面具有关键作用。",
-                  "shaping 为动名词，后接宾语 an early understanding；of North American biodiversity 补充说明理解的内容。",
-                  "句子把历史记录与知识形成相连，可借鉴 be pivotal in doing 表达某事对某过程至关重要。"
-                ],
-                "translation": "这些观察对早期形成北美生物多样性认知起到了关键作用。"
-              },
-              {
-                "original": "These “discoveries” were hardly new to the Indigenous tribes who had occupied the Great Plains and west for millennia, however.",
-                "analysis": [
-                  "主干为 These “discoveries” were hardly new，主语是带引号的 discoveries，表语为 hardly new。",
-                  "to the Indigenous tribes 是说明“对谁而言并不新鲜”的介词短语。",
-                  "who had occupied... 是修饰 tribes 的定语从句；过去完成时 had occupied 强调其长期居住先于相关探险叙事。",
-                  "hardly 表示“几乎不”，句末 however 标示转折；引号也提示作者对“发现”这一说法保持距离。"
-                ],
-                "translation": "然而，对早已在大平原和西部生活了数千年的原住民部族而言，这些所谓的“发现”并不新鲜。"
-              },
-              {
-                "original": "We cannot protect what we cannot see or don’t understand.",
-                "analysis": [
-                  "句子主干为 We cannot protect...，主语 we 和情态动词 cannot 表达集体能力或条件限制。",
-                  "what we cannot see or don’t understand 是 what 引导的自由关系从句，整体充当 protect 的宾语。",
-                  "从句内部由 or 并列 cannot see 与 don’t understand，形成“看不见/不了解”的递进式并列。",
-                  "重复 cannot 构成简洁有力的平行结构；可用于概括证据、认知与治理行动之间的关系。"
-                ],
-                "translation": "我们无法保护自己看不见或不了解的事物。"
               }
             ]
           }
