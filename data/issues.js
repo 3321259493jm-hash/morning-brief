@@ -1,6 +1,358 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-22T10:56:04+08:00",
+  "updatedAt": "2026-11-23T11:37:29+08:00",
   "issues": [
+    {
+      "date": "2026-11-23",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦 GitHub 仓库协作与桌面认证的新变化，以及可立即用于学生项目和课程练习的免费资源。",
+        "updates": [
+          {
+            "event": "GitHub 安全公告权限正式可用",
+            "summary": "GitHub 于 2026-11-20 正式开放安全公告权限，组织可通过自定义仓库角色精细授权查看、安全公告管理、私有漏洞报告和 CVE 发布等操作，无需将成员设为仓库管理员。",
+            "howTo": "组织所有者在 Enterprise Cloud 等支持自定义仓库角色的组织中创建或编辑角色，在 Security 下勾选所需权限，再只分配给具体仓库中的用户或团队。",
+            "impact": "学生可在课程团队或开源项目中按最小权限分配安全工作，练习漏洞报告、协作修复和 CVE 流程，但合并临时私有分支仍需管理员或安全管理员。",
+            "free": "官方称该能力适用于支持自定义仓库角色的计划（包括 GitHub Enterprise Cloud）；是否可用于个人账户、地区限制、配额和额外费用官方未说明。",
+            "category": "仓库安全 / 权限",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-20",
+              "url": "https://github.blog/changelog/2026-11-20-security-advisory-permissions-are-now-generally-available"
+            }
+          },
+          {
+            "event": "GitHub 仪表盘支持固定常用仓库",
+            "summary": "GitHub 于 2026-11-20 为仪表盘新增 Favorite repositories 区域，可搜索、选择、保存和取消常用仓库，并与 GitHub Mobile 的固定仓库同步。",
+            "howTo": "在启用新版仪表盘的 GitHub 页面中打开 Dashboard，选择 Edit 或 Add repositories，搜索并勾选仓库后保存；修改也会同步到 GitHub Mobile。",
+            "impact": "学生可把课程项目、复现仓库和作业仓库固定在一起，减少在大型组织或多仓库环境中的切换成本；最多可跨页面和移动端固定 25 个仓库。",
+            "free": "官方未说明该功能是否覆盖全部账号类型、地区和计划；保存上限为 25 个仓库，是否产生费用官方未说明。",
+            "category": "协作效率",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-20",
+              "url": "https://github.blog/changelog/2026-11-20-pin-your-favorite-repositories-to-your-dashboard"
+            }
+          },
+          {
+            "event": "GitHub Desktop 支持同一主机登录多个账户",
+            "summary": "GitHub 于 2026-11-19 发布 GitHub Desktop 3.7.0，允许在同一主机上为 GitHub.com、GitHub Enterprise Server 和 GHE.com 管理多个账户，并将仓库与指定账户关联。",
+            "howTo": "下载 GitHub Desktop 3.7.0，进入 Settings/Options > Accounts 添加账户；克隆、发布或查看仓库时在账户选择器中指定身份，也可在仓库设置或右键菜单中更改关联。",
+            "impact": "学生可将个人学习仓库和学校或组织账户分开，避免提交到错误账户或仓库；应在提交前检查远程地址、作者信息和当前账户关联。",
+            "free": "官方未说明是否存在地区限制、配额或计划限制；桌面端支持无固定账户数量上限，具体托管主机与账号权限以实际登录结果为准。",
+            "category": "开发工具 / 多账户",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-19",
+              "url": "https://github.blog/changelog/2026-11-19-github-desktop-now-supports-multiple-accounts-per-host"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
+            "summary": "GitHub 官方计划页提供 Copilot Free；个人用户无需信用卡，可获得每月 2,000 次代码补全以及有限聊天和代理使用。",
+            "howTo": "打开 GitHub Copilot 计划页选择 Free，再在 GitHub 网页、支持的编辑器或 CLI 中登录并启用 Copilot。",
+            "impact": "可用于课程项目中的代码补全、调试和代理式修改练习；应运行测试并审查生成差异。",
+            "free": "官方列明 $0 月费、无需信用卡、每月 2,000 次代码补全；聊天与代理配额、地区限制和重置规则官方未统一说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "GitHub Codespaces：个人账户每月 60 小时免费运行",
+            "summary": "GitHub 官方提供个人账户免费云端开发环境；免费额度包含每月 120 核心小时和 15 GB 存储，按 2 核环境折算为约 60 小时运行时间。",
+            "howTo": "登录个人 GitHub 账户，在仓库或模板中选择 Code > Codespaces > Create codespace；个人账户默认可用，组织须由管理员启用且可能单独计费。",
+            "impact": "适合在浏览器或本地 VS Code 中完成课程项目、打开拉取请求和准备统一开发环境，避免逐台配置依赖。",
+            "free": "官方列明个人账户每月 120 核心小时、按 2 核折算约 60 小时及 15 GB 存储；地区和其他运行时限制官方未统一说明，超额可能产生组织或个人用量费用。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "GitHub Codespaces 官方页面",
+              "published": "官方未说明",
+              "url": "https://github.com/features/codespaces"
+            }
+          },
+          {
+            "event": "Hugging Face Static/CPU Basic 空间长期免费入口",
+            "summary": "Hugging Face 官方说明 Static Spaces 对所有人免费；默认 CPU Basic 为 2 vCPU、16 GB 内存、50 GB 临时磁盘且标价为 $0，适合部署静态或轻量演示。",
+            "howTo": "登录 Hugging Face，打开 Spaces 页面并创建 Space；Static 项目可直接免费使用，轻量 Gradio 或 Docker 演示需确认当前账号和 ZeroGPU 条款。",
+            "impact": "可用于展示课程模型、论文可视化或翻译和生成工具原型，并能让他人通过公开链接直接试用。",
+            "free": "官方列明 CPU Basic 免费且资源为 2 CPU、16 GB 内存、50 GB 磁盘；Gradio 或 Docker 在不符合 ZeroGPU 免费例外时需付费计划，地区、休眠规则和配额官方未统一说明。",
+            "category": "免费应用 / 模型演示",
+            "source": {
+              "name": "Hugging Face 官方 Spaces 文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/hub/spaces-overview"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack：学生工具权益包",
+            "summary": "GitHub Education 面向已验证学生提供工具和合作伙伴权益，包含开发、云资源、课程及 Copilot/Codespaces 等学习入口；具体合作项目会变化。",
+            "howTo": "登录 GitHub，访问 Student Developer Pack 页面提交在校证明并完成验证；通过后逐项领取并阅读合作伙伴资格、地区和到期条款。",
+            "impact": "可用于搭建课程网站、完成开源项目和练习云端部署；领取前应核对实际权益、本人资格和合作方剩余期限。",
+            "free": "官方未统一列出所有权益的价格、配额、地区或截止日；具体资格和限制以各领取页及合作伙伴条款为准。",
+            "category": "学生教育 / 开发工具",
+            "source": {
+              "name": "GitHub Education 官方页面",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          },
+          {
+            "event": "Google Colab：免费托管 Jupyter 运行时",
+            "summary": "Google 官方提供无需本地配置的免费 Colab Notebook，支持 Python、GPU 或 TPU 资源以及与 Google Drive、GitHub 的连接。",
+            "howTo": "在 colab.research.google.com 创建或上传 Notebook，选择所需运行时并保存副本；先用浏览器运行课程代码，再按需挂载 Drive 或导入 GitHub。",
+            "impact": "适合数据分析、机器学习和可复现作业，尤其适合没有高性能本机的学生；应避免长时间占用和不合政策的计算任务。",
+            "free": "官方明确免费提供托管 Notebook 和部分计算资源，但资源不保证、不无限制且配额可能波动；地区、GPU/TPU 可用性和运行时上限官方未统一说明。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "Google Colaboratory 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Kaggle Learn：免费课程与实践练习",
+            "summary": "Kaggle 官方课程页面提供面向 Python、数据可视化、Pandas 等主题的免费、交互式课程和即时练习。",
+            "howTo": "登录 Kaggle，进入 Learn 页面选择课程，在浏览器 Notebook 中完成教程和练习；可保存作品并用于课程或竞赛项目。",
+            "impact": "适合补足编程、数据清洗、机器学习和可视化基础，并以可复现案例为作品集。",
+            "free": "官方页面称课程无成本；具体证书、地区、账号要求、配额和截止日官方未说明。",
+            "category": "免费课程 / 练习",
+            "source": {
+              "name": "Kaggle 官方 Learn 页面",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "COP31 fails to reach major climate deal as talks expose deep divisions",
+            "source": "BBC News",
+            "published": "2026-11-22",
+            "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo",
+            "readingTime": 8,
+            "topic": "environment",
+            "summary": "这篇报道以 COP31 谈判未能达成主要气候协议为核心，说明分歧集中在是否明确提及化石燃料，以及富裕国家如何向较贫穷国家提供适应气候变化的资金。文章先交代谈判超时与各方否决，再呈现欧盟、太平洋岛国、石油生产国和联合国秘书长的不同立场，随后分析此前退出化石燃料承诺、资金承诺缺乏具体数字以及全球升温目标可能被突破等背景。它指出，即使主协议破裂，各方仍在公正转型机制和清洁能源目标上取得有限进展，但联合国气候进程因须达成共识而面临改革压力。结论是气候谈判不仅是技术方案问题，也涉及历史排放责任、经济利益和地缘政治博弈。",
+            "reason": [
+              "主题属于环境治理、国际合作与气候经济，贴近考研英语常见的全球挑战和政策协调议题。",
+              "全文采用问题—分歧—证据—影响—展望结构，适合训练主旨、态度和篇章衔接题。",
+              "可能考查化石燃料、气候融资、共识机制及温升目标之间的因果关系，以及代词和转折词的指代。",
+              "文章包含 unconscionable、baseline、overshoot、ambitious ramping up 等抽象词汇，适合积累议论文表达。",
+              "可用于写作中论证国际治理需要共同责任、可核验承诺和更具包容性的利益协调。"
+            ],
+            "vocabulary": [
+              {
+                "word": "division",
+                "phonetic": "/dɪˈvɪʒn/",
+                "part": "n.",
+                "translation": "分歧；分裂"
+              },
+              {
+                "word": "negotiation",
+                "phonetic": "/nɪˌɡoʊʃiˈeɪʃn/",
+                "part": "n.",
+                "translation": "谈判；协商"
+              },
+              {
+                "word": "unacceptable",
+                "phonetic": "/ˌʌnəkˈseptəbl/",
+                "part": "adj.",
+                "translation": "不可接受的"
+              },
+              {
+                "word": "commitment",
+                "phonetic": "/kəˈmɪtmənt/",
+                "part": "n.",
+                "translation": "承诺；保证"
+              },
+              {
+                "word": "ambition",
+                "phonetic": "/æmˈbɪʃn/",
+                "part": "n.",
+                "translation": "雄心；抱负；行动目标"
+              },
+              {
+                "word": "baseline",
+                "phonetic": "/ˈbeɪslaɪn/",
+                "part": "n.",
+                "translation": "基线；参照标准"
+              },
+              {
+                "word": "overshoot",
+                "phonetic": "/ˌoʊvəˈʃuːt/",
+                "part": "v.",
+                "translation": "超过；越过"
+              },
+              {
+                "word": "geopolitical",
+                "phonetic": "/ˌdʒiːoʊpəˈlɪtɪkl/",
+                "part": "adj.",
+                "translation": "地缘政治的"
+              },
+              {
+                "word": "consensus",
+                "phonetic": "/kənˈsensəs/",
+                "part": "n.",
+                "translation": "共识；一致意见"
+              },
+              {
+                "word": "mechanism",
+                "phonetic": "/ˈmekənɪzəm/",
+                "part": "n.",
+                "translation": "机制；装置"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The final deal proved unacceptable to the EU, Pacific island nations and others because it failed to directly mention fossil fuels.",
+                "analysis": [
+                  "句子主干是 The final deal proved unacceptable to the EU, Pacific island nations and others。",
+                  "prove 在此为系动词，表示最终协议被证明是不可接受的。",
+                  "to 引出不接受协议的对象，构成较清晰的态度宾语。",
+                  "because 引导原因从句，核心理由是不直接提及化石燃料。"
+                ],
+                "translation": "最终协议被欧盟、太平洋岛国及其他国家认为不可接受，因为它没有直接提及化石燃料。"
+              },
+              {
+                "original": "Another major sticking point has been money for poorer countries to adapt to the impacts of climate change.",
+                "analysis": [
+                  "句子主干是 another major sticking point has been money。",
+                  "present perfect 表明资金问题在谈判过程中的持续性和当前重要性。",
+                  "for 引出资金所服务的对象，to adapt to 说明资金用途。",
+                  "sticking point 是常用名词短语，可用于概括谈判僵局和争议焦点。"
+                ],
+                "translation": "另一个主要症结一直是向较贫穷国家提供适应气候变化影响的资金。"
+              },
+              {
+                "original": "The UN climate process has suffered setbacks before and come back stronger.",
+                "analysis": [
+                  "主语是 the UN climate process，谓语由 has suffered 和 come back 两部分构成。",
+                  "before 表示过去已有挫折，come back stronger 与 have suffered 形成对比性并列。",
+                  "before and come back 构成先后关系，也可概括机构面临危机后的恢复能力。",
+                  "stronger 为形容词比较级，暗示挫折可能促成制度改进。"
+                ],
+                "translation": "联合国气候进程此前也曾遭遇挫折，并且后来变得更强。"
+              }
+            ]
+          },
+          {
+            "title": "Meet the young authors! A literacy program inspires kids in South Africa",
+            "source": "NPR",
+            "published": "2026-11-22",
+            "url": "https://www.npr.org/2026/11/22/g-s1-154387/books-children-authors-south-africa-literacy",
+            "readingTime": 9,
+            "topic": "education",
+            "summary": "文章报道约翰内斯堡亚历克斯镇的 Read Alex 课外阅读计划如何将儿童从阅读不足引向自主写作和出版。报道首先介绍南非约 81%的 10 岁儿童不能阅读以获取意义这一严峻背景，再描述参与者每周阅读、演讲、拼写和带走图书的活动，随后以 13 岁作者菲奥娜的家庭困境故事说明写作如何提供表达和自我效能。文章还引用儿童、协调员、教师和教育部长，说明社区组织、早期教育投入和政府政策共同构成识字改善的基础。结尾强调，尽管贫困和公共服务不足依然存在，叙事传统、社区支持和可及的阅读空间能够让孩子获得更大的发言权。",
+            "reason": [
+              "主题属于教育公平、儿童识字、社区治理，贴近考研英语 II 对教育资源和社会支持的常见考查。",
+              "文章采用宏观统计、个人案例、专家观点与项目成效的递进结构，适合主旨和例证题。",
+              "可能考查研究数据、计划内容、人物态度、因果关系及社区支持的作用。",
+              "文本含 literacy crisis、functioning library、grassroots program 和 self-published 等实用学术表达。",
+              "可用于写作中论证教育投入、社区参与和个体叙事如何共同减少不平等。"
+            ],
+            "vocabulary": [
+              {
+                "word": "literacy",
+                "phonetic": "/ˈlɪtərəsi/",
+                "part": "n.",
+                "translation": "识字；读写能力"
+              },
+              {
+                "word": "township",
+                "phonetic": "/ˈtaʊnʃɪp/",
+                "part": "n.",
+                "translation": "城镇；（南非）黑人居民区"
+              },
+              {
+                "word": "grassroots",
+                "phonetic": "/ˈgræsruːts/",
+                "part": "adj.",
+                "translation": "基层的；草根的"
+              },
+              {
+                "word": "instill",
+                "phonetic": "/ɪnˈstɪl/",
+                "part": "v.",
+                "translation": "逐渐灌输"
+              },
+              {
+                "word": "anthology",
+                "phonetic": "/ænˈθɑːlədʒi/",
+                "part": "n.",
+                "translation": "选集；文选"
+              },
+              {
+                "word": "palpable",
+                "phonetic": "/ˈpælpəbl/",
+                "part": "adj.",
+                "translation": "明显的；可感知的"
+              },
+              {
+                "word": "maturity",
+                "phonetic": "/məˈtjʊərəti/",
+                "part": "n.",
+                "translation": "成熟；完善"
+              },
+              {
+                "word": "community",
+                "phonetic": "/kəˈmjuːnəti/",
+                "part": "n.",
+                "translation": "社区；共同体"
+              },
+              {
+                "word": "functioning",
+                "phonetic": "/ˈfʌŋkʃənɪŋ/",
+                "part": "adj.",
+                "translation": "正常运作的"
+              },
+              {
+                "word": "foundations",
+                "phonetic": "/faʊnˈdeɪʃnz/",
+                "part": "n.",
+                "translation": "基础；根基"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "South Africa is in the midst of a literacy crisis.",
+                "analysis": [
+                  "主干是 South Africa is in the midst of a literacy crisis。",
+                  "in the midst of 表示正处于某种状态或危机之中。",
+                  "a literacy crisis 是抽象名词短语，可用于概括教育或社会问题。",
+                  "句子位置靠前，起到以宏观问题引出具体项目的作用。"
+                ],
+                "translation": "南非正处于一场识字危机之中。"
+              },
+              {
+                "original": "The grassroots program has been trying to change this, offering a weekend reading club.",
+                "analysis": [
+                  "主干是 the grassroots program has been trying to change this。",
+                  "present perfect progressive 表示基层项目持续开展而未必宣称已经解决问题。",
+                  "offering 引导现在分词补充说明具体干预方式。",
+                  "this 回指前文的识字危机，是典型的代词指代结构。"
+                ],
+                "translation": "这个基层项目一直在努力改变这种状况，并提供了一个周末阅读俱乐部。"
+              },
+              {
+                "original": "They notice a lot more than they think they do.",
+                "analysis": [
+                  "主句是 they notice a lot more；than 引出比较对象。",
+                  "more 与 they think they do 形成隐含比较，强调儿童观察能力被低估。",
+                  "两个 they 的先后指代需结合上下文区分孩子和成人的认知。",
+                  "句式适合改写为“人们常低估……所能观察或理解的程度”。"
+                ],
+                "translation": "他们注意到的东西比他们自己以为的要多得多。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-22",
       "status": "ready",
@@ -2079,358 +2431,6 @@ window.BRIEFING_DATA = {
                   "该句将短期成果与长期可持续性区分开来，可用于提出政策或项目评估中的后续挑战。"
                 ],
                 "translation": "举办首届赛事是一回事，但确保这一赛事品牌在亚洲长久发展则是另一回事。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-16",
-      "status": "ready",
-      "ai": {
-        "intro": "本期关注 Claude Meetings 会议协作与 GitHub Copilot 的模型更新，并筛选可用于学习、转录和开发的免费资源。",
-        "updates": [
-          {
-            "event": "Claude Meetings 开始测试：可加入 Google Meet 会议",
-            "summary": "Anthropic 于 2026-11-12 宣布，Claude Meetings 在 Claude 和 Claude Desktop 的 Team、Enterprise 方案中开启 beta：作为可见参会者加入 Google Meet，实时记录、回答问题并制作文档、白板和幻灯片；会后可查看摘要、行动项和文字稿。",
-            "howTo": "在 Claude 的 Meetings 页面连接 Google Calendar，选中日历中的会议并点 Add Claude；组织所有者需先启用 Google Calendar。使用自动加入前，先征得所有参会者同意转录。",
-            "impact": "小组讨论课程项目或线上研讨时，可让 Claude 整理讨论要点、行动清单和共享文档；参会者都能看到它加入，仍应检查纪要并避免未经同意转录。",
-            "free": "目前仅向 Team 和 Enterprise 组织 beta 开放，部分启用零数据保留、HIPAA 配置或客户管理加密密钥的组织不可用；地区和调用配额官方未说明。会议笔记、文字稿及不调用连接器的回答包含在这两类方案中；会议文档和白板免费至 2027-02-10，连接工具可能产生组织费用。",
-            "category": "AI 协作 / 会议记录",
-            "source": {
-              "name": "Claude 官方发布说明",
-              "published": "2026-11-12",
-              "url": "https://support.claude.com/en/articles/12138966-release-notes"
-            }
-          },
-          {
-            "event": "Gemini 4 Carbon 上线 GitHub Copilot",
-            "summary": "GitHub 于 2026-11-10 宣布，Gemini 4 Carbon 已在 GitHub Copilot 正式提供，面向复杂编码、代理任务和推理，并强调安全代码生成。",
-            "howTo": "在 VS Code、Visual Studio、Copilot CLI、JetBrains、Xcode、github.com 等支持的 Copilot 端打开模型选择器并选 Gemini 4 Carbon；用一项可测试的小型课程代码任务比较输出。",
-            "impact": "可让它协助拆解多文件编程任务、解释代码或检查安全相关实现；把建议放进本地测试和代码审查流程，不要直接采纳未经验证的改动。",
-            "free": "公告列出的方案为 Copilot Pro+、Max、Business 和 Enterprise；按模型供应商价格进行用量计费。免费方案资格、具体价格、调用配额及地区官方未说明；正在逐步开放，企业管理员可管理模型策略。",
-            "category": "编程助手 / 模型更新",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-10",
-              "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot/"
-            }
-          },
-          {
-            "event": "Claude Fable 5.2 在 GitHub Copilot 正式开放",
-            "summary": "GitHub 于 2026-11-09 将 Anthropic Claude Fable 5.2 加入 Copilot，面向大型代码库中的复杂、多步骤编码任务；使用该模型时，Anthropic 默认会保留提示词和输出以运行安全分类器，官方称这些保留数据不用于训练模型。",
-            "howTo": "在 Copilot 支持的 IDE、命令行或网页端模型选择器中选择 Claude Fable 5.2；Business 与 Enterprise 组织需由管理员在 Copilot 设置中启用该模型策略。",
-            "impact": "可以让它先规划跨文件的课程项目修改，再逐步检查补丁、测试和解释；若处理课程或团队的非公开代码，先确认组织的数据保留要求。",
-            "free": "限 Copilot Pro+、Max、Business 和 Enterprise 方案，按供应商公开价格进行用量计费，逐步开放。该模型默认要求数据保留；符合条件的企业可申请限时零数据保留豁免，至 2026 年底，其他地区和具体调用额度官方未说明。",
-            "category": "编程助手 / 模型更新",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-09",
-              "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "AWS Educate：免费云计算与 AI 学习路径和动手实验",
-            "summary": "AWS Educate 为个人提供免费的自定进度云技能课程及动手实验，主题包括存储、计算、网络、数据库和云运维；部分课程提供可分享的数字徽章。",
-            "howTo": "打开 AWS Educate 官方页面并用电子邮箱注册，进入学习路径；可从存储、计算或数据库实验开始，按步骤完成课程练习。",
-            "impact": "适合练习云计算基础、理解云端部署与网络配置，或通过实验熟悉 AI 相关云技能；开始前确认实验内容不会创建额外付费资源。",
-            "free": "课程和动手实验免费；年满 13 岁可仅用电子邮箱注册且无需信用卡。官方未说明地区限制、具体实验配额或截止日期。",
-            "category": "免费学习 / 云计算与 AI",
-            "source": {
-              "name": "AWS 官方 Educate 项目页",
-              "published": "官方未说明",
-              "url": "https://aws.amazon.com/education/awseducate/"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack：验证学生可领开发权益",
-            "summary": "GitHub Education 为通过验证的学生提供免费 GitHub Pro，含私有仓库、每月 3,000 分钟 Actions、180 小时 Codespaces、2 GB Packages 和 20 GB Codespaces 存储，并可申请 Student Developer Pack 合作伙伴权益。",
-            "howTo": "访问 GitHub Education 学生页面并登录或创建 GitHub 账号，提交学校邮箱和/或带日期的官方在读证明申请验证；通过后查看 Student Developer Pack 中可领取的权益。",
-            "impact": "可在私有仓库管理课程项目、用 Actions 自动运行测试，并通过 Codespaces 进行云端开发；使用前核对每月额度和合作伙伴各自条件。",
-            "free": "适用于年满 13 岁、就读于授予学位或文凭课程的学生，需通过验证。页面列出上述月度额度；地区范围、申请截止日期及合作伙伴权益细则官方未说明。",
-            "category": "学生权益 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方学生权益页",
-              "published": "官方未说明",
-              "url": "https://github.com/education/students"
-            }
-          },
-          {
-            "event": "Claude Free：免费网页、桌面和移动端学习助手",
-            "summary": "Claude 官方价格页列出每月 0 美元的 Free 方案，可在网页、桌面和移动端聊天、搜索网页、创建文件、运行代码及制作 Artifacts。",
-            "howTo": "从 Claude 官方价格页进入 Free 方案并登录；可上传自己的课堂资料，请它整理提纲、生成自测题或解释代码，再对照原文核实。",
-            "impact": "可用于起草复习问题、梳理自有资料或试做简单代码；重要结论仍应回查课程材料，避免把生成内容当作未经核验的事实。",
-            "free": "价格页标价每月 0 美元，免费用量每 5 小时及每周均有限，但未公布固定条数或 token 配额；地区和账号资格官方未说明。",
-            "category": "免费 AI 应用 / 学习助手",
-            "source": {
-              "name": "Claude 官方价格页",
-              "published": "官方未说明",
-              "url": "https://claude.com/pricing"
-            }
-          },
-          {
-            "event": "DeepL 免费版：文本翻译及小型文件翻译额度",
-            "summary": "DeepL 官方计划对比页列出免费版每用户每月 50,000 个文本字符额度，并支持文件翻译和保存一条译文；文件大小上限为 5 MB。",
-            "howTo": "打开 DeepL 官方翻译页，粘贴短文或上传不超过 5 MB 的文件；对照原文检查术语、语气和专有名词，不直接把机器译文当作定稿。",
-            "impact": "适合快速理解英文资料、对照自己写的译文或处理小型文档；学术引用和关键术语仍应回看原文。",
-            "free": "免费版列出每月 50,000 个文本字符、1 次文件翻译、单文件最多 5 MB 和 1 条保存译文。具体地区及账号要求官方未说明。",
-            "category": "免费翻译工具",
-            "source": {
-              "name": "DeepL 官方方案页",
-              "published": "官方未说明",
-              "url": "https://www.deepl.com/en/pro"
-            }
-          },
-          {
-            "event": "Kaggle Learn：免费的数据科学与机器学习短课程",
-            "summary": "Kaggle 将 Learn 课程标为 no-cost，提供 Python、数据可视化、Pandas 等实用数据技能课程。",
-            "howTo": "打开 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按章节完成教程与练习；可将代码迁移到自己的课程笔记本中复测。",
-            "impact": "适合补充数据分析与机器学习基础，利用短练习巩固编程概念并为课程项目准备数据处理技能。",
-            "free": "官方页面将课程标为免费；账号、地区、课程数量和完成额度官方未说明。",
-            "category": "免费课程 / 数据科学",
-            "source": {
-              "name": "Kaggle 官方 Learn 课程页",
-              "published": "官方未说明",
-              "url": "https://www.kaggle.com/learn"
-            }
-          },
-          {
-            "event": "Qwen3-ASR-0.6B：Apache-2.0 许可的开源语音识别权重",
-            "summary": "Qwen 官方模型卡提供 Qwen3-ASR 开放模型权重；0.6B 版本支持语音识别和语言识别，模型卡列出中文、英语等语言及方言，并提供本地推理示例。",
-            "howTo": "从 Qwen 官方模型卡下载 Qwen3-ASR-0.6B 权重，按示例安装 qwen-asr 并在本地传入音频路径或文件；先用短录音测试识别结果。",
-            "impact": "可用于转录自己的访谈、课堂录音或多语种听力练习，并尝试比较机器转录与人工听写；部署需要兼容设备和本地算力。",
-            "free": "模型卡标注 Apache-2.0 并提供可下载权重；模型下载、账号、地区及运行硬件要求的统一限制官方未说明，运行需自备设备和算力。",
-            "category": "开放模型 / 语音转写",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "New Mexico wanted free childcare for all. This is what's worked — and what hasn't",
-            "source": "NPR",
-            "published": "2026-11-15",
-            "url": "https://www.npr.org/2026/11/15/nx-s1-6040194/new-mexico-free-universal-childcare-families",
-            "readingTime": "约 12 分钟（估算）",
-            "topic": "社会政策与教育 / 普惠托育的效果、容量与财政取舍",
-            "summary": "NPR 回顾新墨西哥州实施普惠托育一周年：符合条件的州内家庭不论收入均可申请，家长称免费托育帮助他们工作、照顾家庭并继续求学。报道用家庭经历、州级统计和政策访谈呈现成效，也指出服务供给不足——部分中心候补名单很长，州内仍有儿童未能进入公共托育。文章随后追溯政策资金来源，解释通胀触发的高收入家庭共付机制，并呈现议员对预算压力的质疑。结尾比较纽约市逐步扩容的路径，指出托育政策既能扩大就业与教育机会，也受制于从业者、名额和财政设计；单纯宣布普惠并不能消除等待。",
-            "reason": [
-              "主题将儿童照护、家庭就业、教育机会和公共预算联系起来，适合讨论福利政策的公平性与可持续性。",
-              "文章从家庭经历切入，继而呈现州级数据、资金机制和不同政治立场，最后比较纽约的渐进方案。",
-              "适合考查案例与统计的论证功能、政策资格条件、对立观点，以及作者如何在成效与执行瓶颈之间保持平衡。",
-              "可积累 eligible、capacity、waitlist、copayment、provider 等社会政策与教育词汇。",
-              "写作可借鉴“政策目标—实际受益—执行瓶颈—财政约束—替代方案”的论证框架，避免把普惠政策简单等同于人人即时可及。"
-            ],
-            "vocabulary": [
-              {
-                "word": "eligible",
-                "phonetic": "/ˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "符合条件的"
-              },
-              {
-                "word": "capacity",
-                "phonetic": "/kəˈpæsəti/",
-                "part": "n.",
-                "translation": "接纳能力；容量"
-              },
-              {
-                "word": "waitlist",
-                "phonetic": "/ˈweɪtˌlɪst/",
-                "part": "n.",
-                "translation": "候补名单"
-              },
-              {
-                "word": "rollout",
-                "phonetic": "/ˈroʊlˌaʊt/",
-                "part": "n.",
-                "translation": "逐步实施；推出"
-              },
-              {
-                "word": "reimbursement",
-                "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
-                "part": "n.",
-                "translation": "补偿款；报销款"
-              },
-              {
-                "word": "safeguard",
-                "phonetic": "/ˈseɪfˌɡɑːrd/",
-                "part": "n.",
-                "translation": "保障措施"
-              },
-              {
-                "word": "copayment",
-                "phonetic": "/ˈkoʊˌpeɪmənt/",
-                "part": "n.",
-                "translation": "共同支付额；自付额"
-              },
-              {
-                "word": "infrastructure",
-                "phonetic": "/ˈɪnfrəˌstrʌktʃər/",
-                "part": "n.",
-                "translation": "基础设施；体系"
-              },
-              {
-                "word": "provider",
-                "phonetic": "/prəˈvaɪdər/",
-                "part": "n.",
-                "translation": "服务提供者"
-              },
-              {
-                "word": "enrollment",
-                "phonetic": "/ɪnˈroʊlmənt/",
-                "part": "n.",
-                "translation": "登记；入学；注册"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "\"It's not a lack of funding, it's a lack of providers.\"",
-                "analysis": [
-                  "两个并列分句的核心都是 it is，后半句省略了重复主语 it。",
-                  "not a lack of funding 与 a lack of providers 构成否定后纠正，突出问题不在资金而在供给。",
-                  "of providers 修饰 lack，具体说明短缺对象；句子是受访者对前文容量问题的概括。",
-                  "可迁移结构 not A, but B 的对比思路；原句用重复句式强化纠偏。"
-                ],
-                "translation": "问题不是缺少资金，而是缺少服务提供者。"
-              },
-              {
-                "original": "\"The childcare help has opened other doors for her, too.\"",
-                "analysis": [
-                  "主干是 The childcare help has opened doors，使用现在完成时连接过去政策与当前影响。",
-                  "other 修饰 doors，表示托育帮助带来原有主要作用之外的新机会。",
-                  "for her 指明受益者；句末 too 补充前文所述的工作支持。",
-                  "open doors 是“打开机会”的隐喻，可用于表达政策或教育带来的机会扩展。"
-                ],
-                "translation": "托育帮助也为她打开了其他机会。"
-              },
-              {
-                "original": "\"I'm trying to get my bachelor's.\"",
-                "analysis": [
-                  "主干是 I'm trying，主语为 I，am trying 使用现在进行时。",
-                  "to get my bachelor's 是 try 后的不定式补足语，说明努力的目标。",
-                  "my bachelor's 是 bachelor's degree 的省略表达，表示学士学位。",
-                  "try to do sth. 表示努力做某事；语境将托育条件与继续求学的可能性联系起来。"
-                ],
-                "translation": "我正在努力读完学士学位。"
-              }
-            ]
-          },
-          {
-            "title": "Who makes Sydney Sweeney's American Eagle jeans — and under what conditions?",
-            "source": "NPR",
-            "published": "2026-11-15",
-            "url": "https://www.npr.org/2026/11/15/nx-s1-6013327/sydney-sweeney-jeans-american-eagle-garment-industry",
-            "readingTime": "约 10 分钟（估算）",
-            "topic": "商业、劳动与环境 / 快时尚供应链中的工人权益和高温风险",
-            "summary": "NPR 从一则引发争议的牛仔裤广告切入，把讨论从名人营销转向服装生产者：记者采访了巴基斯坦和孟加拉国约 20 名工人，追踪多个工厂的工资、产量目标、饮水和高温状况。工人描述低薪、加班、难以离开工位和热应激；相关企业则回应称有投诉机制、检查和供水措施，部分说法存在争议。文章接着解释快时尚品牌的高产量、短交期和薄利润如何影响供应商，并把车间高温与气候变化联系起来。结尾介绍孟加拉国和巴基斯坦的国际协议及拟议的热应激检查机制，指出保护工人既是劳权议题，也与供应链责任、生产率和适应高温有关。",
-            "reason": [
-              "主题结合消费文化、跨国供应链、劳动权利与气候风险，适合分析企业责任和全球化生产。",
-              "文章由广告争议转向工人证词，再呈现企业回应、供应链机制和国际协议，形成从个案到结构问题的推进。",
-              "适合考查采访证词与企业回应的对照、因果链、来源立场，以及证据如何支持对快时尚的批评。",
-              "可积累 garment、production target、hydrate、retrofit、scrutiny 等劳动与环境词汇。",
-              "写作可借鉴“消费端现象—生产端证据—结构性原因—制度回应”的展开方式，并明确区分指控、回应与已核实事实。"
-            ],
-            "vocabulary": [
-              {
-                "word": "garment",
-                "phonetic": "/ˈɡɑːrmənt/",
-                "part": "n.",
-                "translation": "服装；衣物"
-              },
-              {
-                "word": "workstation",
-                "phonetic": "/ˈwɜːrkˌsteɪʃən/",
-                "part": "n.",
-                "translation": "工作岗位；工位"
-              },
-              {
-                "word": "production target",
-                "phonetic": "/prəˈdʌkʃən ˈtɑːrɡɪt/",
-                "part": "n. phr.",
-                "translation": "生产指标"
-              },
-              {
-                "word": "hydrate",
-                "phonetic": "/ˈhaɪdreɪt/",
-                "part": "v.",
-                "translation": "补充水分"
-              },
-              {
-                "word": "retrofit",
-                "phonetic": "/ˈretroʊfɪt/",
-                "part": "v.",
-                "translation": "改造；加装新设备"
-              },
-              {
-                "word": "scrutiny",
-                "phonetic": "/ˈskruːtəni/",
-                "part": "n.",
-                "translation": "仔细审查；严格监督"
-              },
-              {
-                "word": "enforceable",
-                "phonetic": "/ɪnˈfɔːrsəbəl/",
-                "part": "adj.",
-                "translation": "可强制执行的"
-              },
-              {
-                "word": "supplier",
-                "phonetic": "/səˈplaɪər/",
-                "part": "n.",
-                "translation": "供应商"
-              },
-              {
-                "word": "overtime",
-                "phonetic": "/ˈoʊvərˌtaɪm/",
-                "part": "n.",
-                "translation": "加班；加班时间"
-              },
-              {
-                "word": "margin",
-                "phonetic": "/ˈmɑːrdʒɪn/",
-                "part": "n.",
-                "translation": "利润空间；差额"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "\"If you raise your voice, they'll push you out.\"",
-                "analysis": [
-                  "主句是 they'll push you out，if 引导的条件状语从句是 you raise your voice。",
-                  "一般现在时从句与 will 缩写形式 they'll 构成真实条件句，表达受访者描述的可能后果。",
-                  "push you out 是动词加宾语加方向补语，意为把某人排挤出去；代词 you 泛指发声的工人。",
-                  "条件与结果的因果关系呈现工人不敢申诉的压力，适合分析证词如何解释沉默。"
-                ],
-                "translation": "“如果你发声，他们就会把你排挤出去。”"
-              },
-              {
-                "original": "\"Workers are not choosing to take these risks.\"",
-                "analysis": [
-                  "句子主干为 Workers are not choosing，使用现在进行时描述当前处境。",
-                  "to take these risks 是 choose 的不定式补足语，说明被否定的选择内容。",
-                  "these risks 回指前文提及的高温、健康与工作安全风险。",
-                  "not choosing 将风险归因从个人偏好转向外部压力，体现文章的结构性劳动论点。"
-                ],
-                "translation": "“工人并不是自愿选择承担这些风险。”"
-              },
-              {
-                "original": "\"You've got all those bodies, all that material, all that machinery putting off heat.\"",
-                "analysis": [
-                  "口语主干是 You've got...，相当于“这里有／存在”，后接三个并列名词短语。",
-                  "all those bodies、all that material 和 all that machinery 由 all 加指示限定词构成排比。",
-                  "putting off heat 是现在分词短语，补充说明这些人、材料和机器都在散热。",
-                  "并列累积加上因果语境，解释工厂内部为何比室外更热；put off 在此意为散发。"
-                ],
-                "translation": "“那么多工人、材料和机器都在散热。”"
               }
             ]
           }
