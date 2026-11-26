@@ -1,6 +1,364 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-25T13:19:23+08:00",
+  "updatedAt": "2026-11-26T12:52:47+08:00",
   "issues": [
+    {
+      "date": "2026-11-26",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦可实际尝试的 AI 工具变化、官方免费额度与学生可用资源，并以官方来源标注真实发布日期。",
+        "updates": [
+          {
+            "event": "GitHub Copilot 代码审查计费规则调整",
+            "summary": "GitHub 于 2026-11-25 宣布：若组织或企业未选择 Copilot 代码审查账单归属，2026-12-30 起默认由持有仓库的组织承担 AI Credits；已选择 Member 或 Organization 的设置不变。",
+            "howTo": "仓库所属组织或企业管理员可在 Copilot 策略设置中选择 Member 或 Organization；12 月 30 日前检查未设值项，避免组织产生意外付费。",
+            "impact": "课程团队和学生社团若使用组织账号，应确认代码审查由成员额度还是组织额度承担，并在合并请求流程中估算审查成本。",
+            "free": "仅适用于带 Copilot 许可证成员的 Copilot Business 或 Enterprise 组织和企业；未启用付费 AI Credits、账单锁定或无可结算客户的账号仍设为 Member。个人计划配额、地区限制及统一免费额度官方未说明。",
+            "category": "代码协作 / 计费",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-25",
+              "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization"
+            }
+          },
+          {
+            "event": "OpenAI GPT-6 具备蛋白质设计能力",
+            "summary": "OpenAI 于 2026-11-24 发布研究，称 GPT-6 系列可用推理与代码直接设计蛋白质结构和氨基酸序列；实验中部分模型设计与重设计蛋白对五个目标显示结合证据。",
+            "howTo": "阅读 OpenAI 官方文章和公开论文，查看三维结构、序列设计、候选筛选与实验流程；普通用户可先用公开案例学习提示与验证方法，不应假设该能力已开放为产品功能。",
+            "impact": "生物、化学与计算机学生可分析通用模型如何替代或配合专用蛋白模型，比较计算命中率和实验验证，并讨论局限、安全与可复现性。",
+            "free": "官方未说明普通用户能否直接使用、是否免费、支持哪些地区，以及有无调用配额或产品开放计划。",
+            "category": "科研 / 跨学科",
+            "source": {
+              "name": "OpenAI",
+              "published": "2026-11-24",
+              "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+            }
+          },
+          {
+            "event": "Gemini 扩展至 Golden State 体育与运营场景",
+            "summary": "Google 于 2026-11-24 宣布将 Gemini 定位为 Golden State Warriors、WNBA Valkyries 和 Chase Center 的 AI 与企业大模型合作伙伴，覆盖球迷互动、场馆屏幕和后台定制代理。",
+            "howTo": "关注官方合作案例中的交互展示；学生可对照 Gemini 的自定义代理、企业知识和数字渠道能力，设计一个班级活动或校园场馆的可行原型。",
+            "impact": "适合体育运营、市场营销、用户体验和智能代理课程：可分析多渠道互动与后台流程的分工，但不要把商业合作案例直接等同于公开平台能力。",
+            "free": "官方未说明用户是否可获得对应功能、是否免费、哪些地区可用，以及配额、账号和使用期限。",
+            "category": "企业应用 / 代理",
+            "source": {
+              "name": "Google 官方博客",
+              "published": "2026-11-24",
+              "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free",
+            "summary": "GitHub 官方提供 $0 的 Copilot Free，个人用户无需信用卡，可每月获得 2,000 次代码补全和有限聊天、Agent 使用。",
+            "howTo": "打开 GitHub Copilot 计划页选择 Free 并登录，在 VS Code、GitHub 网页、CLI 或受支持编辑器中启用；先在小型课程项目中查看补全和 Agent 用量。",
+            "impact": "适合代码补全、调试解释和简单代理式修改；生成代码仍需运行测试并审查依赖、安全和许可证。",
+            "free": "官方列明 $0、无需信用卡、每月 2,000 次补全；聊天和 Agent 配额、地区限制与重置规则官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Gemini API 免费层",
+            "summary": "Google AI Studio 官方定价页提供部分 Gemini 模型的免费层，部分高级模型明确不支持 Free tier。",
+            "howTo": "登录 AI Studio 取得 API Key，在定价页确认所选模型的 Free Tier 与限制，再用小规模脚本测试文本、搜索或工具调用并监控配额。",
+            "impact": "适合课程原型、数据处理和小型应用；应检查数据使用政策、地区、RPM/TPM/RPD 和模型是否随时调整。",
+            "free": "官方说明部分模型免费且部分高级模型不在免费层；具体模型配额、地区资格和重置规则以定价页逐项说明为准，官方未统一给出固定配额。",
+            "category": "免费 API / 开发原型",
+            "source": {
+              "name": "Google AI Studio 官方定价页",
+              "published": "官方未说明",
+              "url": "https://aistudio.google.com/docs/pricing"
+            }
+          },
+          {
+            "event": "Notion Education Plan",
+            "summary": "Notion 面向符合认证的高校学生和教师提供免费 Education Plan，包含无限页面和块、文件上传、更多站点功能与更长版本历史。",
+            "howTo": "用学校邮箱注册并在 Notion 的 Settings > Upgrade plan 中选择 Get free education plan；首次认证后每年重新验证一次。",
+            "impact": "可用于课程笔记、论文资料库、项目看板和个人网站；免费权益应仅用于合格工作区，学生组织规则另行查看。",
+            "free": "官方列明无固定结束日、一次性为一个工作区领取，每年用学校邮箱验证一次；不接受个人邮箱或部分未获认证机构，具体地区及存储细节官方未统一说明。",
+            "category": "学生教育 / 知识管理",
+            "source": {
+              "name": "Notion 官方 Education 页面",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/product/notion-for-education"
+            }
+          },
+          {
+            "event": "Google Colab 免费托管 Notebook",
+            "summary": "Google 官方提供无需本地配置的免费 Colab Jupyter Notebook，可连接 Google Drive 与 GitHub，并可申请受限 GPU 或 TPU。",
+            "howTo": "访问 colab.research.google.com，新建或上传 Notebook，在 Runtime 菜单选择可用运行时并保存到 Drive 或 GitHub。",
+            "impact": "适合数据分析、机器学习和可复现作业；可先用 CPU 完成，小规模 GPU/TPU 任务应避免占用和绕过限制。",
+            "free": "官方明确免费；资源不保证、不无限制，运行时配额和硬件可用性会波动；地区、最大运行时和配额官方未说明。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "Google Colaboratory 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Kaggle Learn 无成本课程",
+            "summary": "Kaggle 官方提供无需付费的交互课程，涵盖 Python、数据可视化、Pandas、机器学习等主题。",
+            "howTo": "登录 Kaggle，进入 Learn 页面选择课程，在浏览器 Notebook 完成教程与练习，并保存作品。",
+            "impact": "适合补足数据清洗、可视化、机器学习和 Python 基础，并形成可复现课程项目。",
+            "free": "官方明确课程为 no-cost；证书、配额、地区和截止日官方未统一说明。",
+            "category": "免费课程 / 练习",
+            "source": {
+              "name": "Kaggle 官方 Learn 页面",
+              "published": "官方未说明",
+              "url": "https://www.kaggle.com/learn"
+            }
+          },
+          {
+            "event": "DeepSeek-R1 蒸馏模型权重",
+            "summary": "DeepSeek 官方在 Hugging Face 发布 1.5B 等蒸馏推理模型权重，官方模型卡列明 MIT License。",
+            "howTo": "在 Hugging Face DeepSeek 官方模型页查看许可证和运行要求，用 Transformers 下载权重；先在小规模环境测试推理和资源占用。",
+            "impact": "适合本地或服务器实验推理模型、微调流程和可复现作业；部署前应核对衍生权重及底座模型的许可证义务。",
+            "free": "官方模型卡公开下载并标注 MIT License；地区限制、运行配额、硬件成本和各衍生权重的额外约束官方未统一说明。",
+            "category": "开源模型权重",
+            "source": {
+              "name": "Hugging Face — DeepSeek 官方组织",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Poundland collapses putting 11,000 jobs at risk",
+            "source": "BBC News",
+            "published": "2026-11-25",
+            "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o",
+            "readingTime": 9,
+            "topic": "economics",
+            "summary": "文章报道英国折扣零售连锁 Poundland 进入破产管理，约 11,000 个岗位面临风险。作者先说明美国所有者未能找到保全业务的买家，门店和配送中心仍在临时运营，并可能分拆出售；随后引用管理方、员工和政府的反应，呈现消费者、供应商与职工的不同利益。中段集中分析最大阻碍：所有者 Gordon Brothers 拒绝了不同买家对公司和股东贷款的支付方案，限制日常运营资金并影响节前补货。文章同时介绍批评者指控所有者通过清算资产获利，以及所有者的否认和过往援助事实。结论没有把危机简单归因于高管贪婪，而是将所有者融资、股东贷款、通胀、销售额下滑和节日旺季的资金压力并置。",
+            "reason": [
+              "主题涉及零售萧条、破产管理、就业和所有者责任，贴近考研英语的经济与社会议题。",
+              "文章采用核心事实、个体证言、各方立场、交易细节和政策反应的递进结构，适合主旨、态度和例证题。",
+              "可考查 administration、solvent、going concern、turnaround 和 shareholder loan 等在企业危机中的含义与逻辑关系。",
+              "sincere sadness、stumbling block、ripping out、vulnerable 等词句体现新闻报道中的正式措辞与情绪对比。",
+              "写作可借鉴先呈现量化影响，再平衡公司、员工、政府和所有者观点，避免以单一动机解释复杂失败。"
+            ],
+            "vocabulary": [
+              {
+                "word": "collapse",
+                "phonetic": "/kəˈlæps/",
+                "part": "v./n.",
+                "translation": "倒闭；崩塌"
+              },
+              {
+                "word": "administration",
+                "phonetic": "/ədˌmɪnɪˈstreɪʃn/",
+                "part": "n.",
+                "translation": "破产管理；接管管理"
+              },
+              {
+                "word": "solvent",
+                "phonetic": "/ˈsɑːlvənt/",
+                "part": "adj.",
+                "translation": "有偿债能力的"
+              },
+              {
+                "word": "going concern",
+                "phonetic": "/ˌɡoʊɪŋ kənˈsɜːrn/",
+                "part": "n.",
+                "translation": "持续经营企业"
+              },
+              {
+                "word": "turnaround",
+                "phonetic": "/ˈtɜːrnəraʊnd/",
+                "part": "n.",
+                "translation": "扭亏；经营好转"
+              },
+              {
+                "word": "shareholder loan",
+                "phonetic": "/ˈʃerhoʊldər loʊn/",
+                "part": "n.",
+                "translation": "股东贷款"
+              },
+              {
+                "word": "stumbling block",
+                "phonetic": "/ˈstʌmblɪŋ blɑːk/",
+                "part": "n.",
+                "translation": "障碍；绊脚石"
+              },
+              {
+                "word": "replenish",
+                "phonetic": "/rɪˈplenɪʃ/",
+                "part": "v.",
+                "translation": "补充；重新备货"
+              },
+              {
+                "word": "turnover",
+                "phonetic": "/ˈtɜːrnˌoʊvər/",
+                "part": "n.",
+                "translation": "营业额；人员流动"
+              },
+              {
+                "word": "liquidate",
+                "phonetic": "/ˈlɪkwɪdeɪt/",
+                "part": "v.",
+                "translation": "清算；变卖"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Poundland has collapsed into administration, putting 11,000 jobs at risk, after its owners failed to find a buyer to keep it in business.",
+                "analysis": [
+                  "句子主干是 Poundland has collapsed into administration，采用现在完成时表示已发生的经营状态变化。",
+                  "putting 11,000 jobs at risk 是现在分词短语作结果状语，说明倒闭对就业的直接影响。",
+                  "after 引出时间和因果从句，指出所有者未能找到买家是事件发生的前提。",
+                  "to keep it in business 是目的性不定式，强调买家本应继续维持运营。",
+                  "该句适合改写为开篇摘要，把公司状态、就业规模和失败原因压缩在一个完整句中。"
+                ],
+                "translation": "Poundland 已进入破产管理，约 11,000 个岗位面临风险，原因是所有者未能找到可以继续经营公司的买家。"
+              },
+              {
+                "original": "Under these circumstances, it is impossible for the board of directors to see how Poundland can continue to operate as a going concern.",
+                "analysis": [
+                  "主干是 it is impossible for the board...，it 是形式主语，真正主语是不定式结构。",
+                  "Under these circumstances 是条件状语，限定董事会判断成立的前提。",
+                  "how Poundland can continue to operate 是疑问词名词性从句，表达董事会无法判断未来经营方式。",
+                  "to operate as a going concern 是持续经营概念，关系到企业能否正常履行债务和业务。",
+                  "该句适合说明管理方如何以正式措辞向公众交代破产依据。"
+                ],
+                "translation": "在这些情况下，董事会无法判断 Poundland 如何才能继续作为持续经营企业运营。"
+              },
+              {
+                "original": "The crisis at Poundland really came to a head over the past few weeks after Gordon Brothers restricted access to funds for day-to-day operations.",
+                "analysis": [
+                  "主干是 the crisis came to a head，采用形象表达表示危机集中爆发。",
+                  "over the past few weeks 是时间状语，强调这是近期急剧恶化的结果。",
+                  "after 引导限制资金这一先行事件，形成资金不足与危机爆发的因果关系。",
+                  "for day-to-day operations限定资金用途，突出日常采购和支付能力受损。",
+                  "该句可用于分析企业危机如何由现金流而非单一经营指标触发。"
+                ],
+                "translation": "过去几周，Gordon Brothers 限制了用于日常运营的资金，Poundland 的危机因此真正爆发。"
+              }
+            ]
+          },
+          {
+            "title": "At this Little Free Bakery in Austin, neighbors come for the pastries and stay for community connection",
+            "source": "NPR",
+            "published": "2026-11-25",
+            "url": "https://www.npr.org/2026/11/25/nx-s1-6005522/little-free-bakery-austin-community-connection",
+            "readingTime": 8,
+            "topic": "culture",
+            "summary": "文章介绍奥斯汀和西雅图的“小免费面包店”运动：烘焙者定期免费分发自制糕点，邻居不仅领取甜点，也逐渐留下聊天、分享新闻与建立长期联系。作者先以奥斯汀 Sarah Mason 的公园活动为例，说明第一批 150 件糕点因社交媒体迅速吸引排队人群，但面包店意外演变成社区聚会。随后追溯西雅图创始人 Lanne Stauffer：她在疫情期间受门口鲜花启发，用烘焙代替鲜花表达关怀，并用 Little Free Library 的分享模式建立街区据点。文章以两个城市的实践、受访者的参与感和全国扩展为证据，论证免费物品若提供稳定、低门槛的公共空间，就能缓解社会分化并增加邻里归属感；结论并未夸大其替代公共服务，而是强调微型社区行动的补充价值。",
+            "reason": [
+              "主题属于社区、文化变迁与社会凝聚力，贴近考研英语关于城市生活、非营利行动和公共交往的议题。",
+              "文章采用个案引入、人物经历、志愿者动机、活动扩展和归纳结论的叙事结构，适合主旨题和细节题。",
+              "可考查 polarizing、gratitude、gathering spot、community connection 等词语在社会关系语境中的准确使用。",
+              "grab-and-go、anchor、snowball 和 share & building community 等表达兼具生活化比喻和抽象概括价值。",
+              "写作可借鉴先由具体空间场景引入，再用普通人的经历证明抽象价值，最后保持适度而非夸大结论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "pastry",
+                "phonetic": "/ˈpeɪstri/",
+                "part": "n.",
+                "translation": "糕点；油酥点心"
+              },
+              {
+                "word": "inadvertently",
+                "phonetic": "/ˌɪnədˈvɜːrtəntli/",
+                "part": "adv.",
+                "translation": "不经意地；无意地"
+              },
+              {
+                "word": "polarizing",
+                "phonetic": "/ˈpoʊləraɪzɪŋ/",
+                "part": "adj.",
+                "translation": "造成分化的"
+              },
+              {
+                "word": "gathering spot",
+                "phonetic": "/ˈɡæðərɪŋ spɑːt/",
+                "part": "n.",
+                "translation": "聚集地点"
+              },
+              {
+                "word": "hearken back",
+                "phonetic": "/ˈhɑːrkən bæk/",
+                "part": "phr.",
+                "translation": "让人回想起；追溯到"
+              },
+              {
+                "word": "anchor",
+                "phonetic": "/ˈæŋkər/",
+                "part": "n.",
+                "translation": "中心支点；稳定的核心"
+              },
+              {
+                "word": "snowball",
+                "phonetic": "/ˈsnoʊbɔːl/",
+                "part": "v.",
+                "translation": "迅速扩大；滚雪球式发展"
+              },
+              {
+                "word": "small act of kindness",
+                "phonetic": "/smɔːl ækt əv ˈkaɪndnəs/",
+                "part": "phr.",
+                "translation": "一件小小的善意行为"
+              },
+              {
+                "word": "comforted",
+                "phonetic": "/ˈkʌmfərtɪd/",
+                "part": "v.",
+                "translation": "安慰；使感到宽慰"
+              },
+              {
+                "word": "community connection",
+                "phonetic": "/kəˈmjuːnəti kəˈnekʃn/",
+                "part": "n.",
+                "translation": "社区联系；邻里关系"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Unlike other bakeries in town where a pastry can run upwards of $7, everything here is free.",
+                "analysis": [
+                  "主干是 everything here is free，核心对比是免费面包店与商营面包店。",
+                  "Unlike 引导介词短语修饰整个比较，限定对象是城中其他面包店。",
+                  "where a pastry can run upwards of $7 是关系状语从句，量化普通糕点价格。",
+                  "run upwards of 表示价格上升到某数额以上，具有口语化新闻表达特点。",
+                  "该句适合用数据和对比建立社区行动的低门槛特征。"
+                ],
+                "translation": "与城里一块糕点可能卖到七美元以上的其他面包店不同，这里的所有东西都是免费的。"
+              },
+              {
+                "original": "People love a free treat, but Mason said she is pleasantly surprised at how many people stick around and hang out.",
+                "analysis": [
+                  "主句是 people love a free treat，副句由 but 引出更出人意料的观察。",
+                  "she is pleasantly surprised 是嵌套主句，表达主办者的意外感受。",
+                  "how many people stick around and hang out 是名词性从句，突出长期停留而非只取用。",
+                  "stick around and hang out 的口语化并列强调社交互动。",
+                  "该句适合分析活动目标之外产生的社区效应。"
+                ],
+                "translation": "人们喜欢免费点心，但 Mason 惊喜地发现有这么多人会留下来闲聊。"
+              },
+              {
+                "original": "We stand around and hug each other or laugh or cry, share our fears, and it has just added another gathering spot in our neighborhood.",
+                "analysis": [
+                  "句子由 and 连接多个并列谓语，描绘邻居之间的情感交流。",
+                  "hug, laugh, cry, share fears 形成一组递进动作，体现从轻松到私密的社交层次。",
+                  "it has just added 采用现在完成时，说明长期活动累积的社区结果。",
+                  "another gathering spot 是中性名词短语，避免夸大面包店的社会功能。",
+                  "该句适合引用式改写邻里关系和公共生活的价值。"
+                ],
+                "translation": "我们围在一起拥抱、欢笑或落泪，分享彼此的恐惧，这让社区多了一个聚集地点。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-25",
       "status": "ready",
@@ -2131,351 +2489,6 @@ window.BRIEFING_DATA = {
                   "可借鉴 should be ..., but not top down; should be bottom up 的对比结构。"
                 ],
                 "translation": "政府应成为变革的推动力量，但这种推动不应是自上而下的，也应由下而上。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-19",
-      "status": "ready",
-      "ai": {
-        "intro": "今日关注 Gemini 新模型与低内存设备支持、GitHub Copilot 连接器更新，并复核可实际使用的免费模型与学习资源。",
-        "updates": [
-          {
-            "event": "Gemini 4 Neon 面向复杂任务推出",
-            "summary": "Google 于 2026-11-18 发布 Gemini 4 Neon，面向长流程编程、知识工作和科学任务；支持最长 100 万 token 上下文，并在 Gemini API、Gemini 应用和 Google Antigravity 等渠道逐步开放。",
-            "howTo": "在 Google AI Studio 选择 Gemini 4 Neon 使用 API；Gemini 应用和 Antigravity 需使用 Google AI Pro 或 Ultra。GitHub Copilot Pro+、Max、Business、Enterprise 用户也可在模型选择器中查找 Neon。",
-            "impact": "学生可让它梳理长篇资料、分析表格或协助跨文件调试；先明确任务、核对引用和代码，再按 API 计费或确认所用订阅权限。",
-            "free": "Google 列出的 API 价格为每百万输入 token 3 美元、缓存输入 0.15 美元、输出 15 美元；Gemini 应用和 Antigravity 需要 Pro/Ultra，Copilot 需 Pro+、Max、Business 或 Enterprise，Copilot 按供应商标价用量计费。免费资格、地区和固定配额未由发布公告说明；模型仍在渐进式推出。",
-            "category": "生成式 AI / 新模型",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-18",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
-            }
-          },
-          {
-            "event": "Gemini 应用扩展至低内存 Android Go 设备",
-            "summary": "Google 于 2026-11-18 宣布，经过重新架构的 Gemini 应用开始支持符合条件的 Android Go 设备；可使用 Gemini Live 对话、相机识别笔记或表格，以及 Nano Banana 图像生成功能。",
-            "howTo": "在符合条件的 Android Go 手机上从 Google Play 下载 Gemini；也可长按电源键启动，或在合作伙伴的新设备上使用预装版本。",
-            "impact": "使用入门级手机的学生可直接口述练习面试、识别课堂笔记或制作简单宣传图，不必先换用高内存设备；重要信息仍应自行核对。",
-            "free": "官方确认面向符合条件的 Android Go 设备推出，但未说明价格、账号资格、具体地区、免费功能额度或上线完成时间。",
-            "category": "AI 助手 / 移动端",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-18",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/"
-            }
-          },
-          {
-            "event": "GitHub Copilot 公测新增八种服务连接器",
-            "summary": "GitHub 于 2026-11-18 为 Copilot 公测新增 Box、Buildkite、Calendly、ClickUp、Mixpanel、Supabase、Webflow 和 Wix 连接器；连接后可在 Copilot 中调用这些服务的信息或执行相应工作。",
-            "howTo": "在 Copilot App 的 Customize、Copilot CLI 的 /mcp > Connectors、VS Code Agents > Customizations，或 github.com 的 Copilot customization 页面选择 Connect；组织版可能需要管理员启用预览策略及对应白名单。",
-            "impact": "学生团队可让 Copilot 查询 Supabase 项目结构后起草迁移，或检查 Buildkite 构建失败原因，减少在课程项目工具间来回切换；执行前应确认连接权限和操作内容。",
-            "free": "连接器公测适用于所有 Copilot 计划；Business/Enterprise 需管理员允许 Editor preview features，个别服务还需服务端授权。官方未说明地区或调用配额。",
-            "category": "AI 助手 / 工具连接",
-            "source": {
-              "name": "GitHub 官方变更日志",
-              "published": "2026-11-18",
-              "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google AI Studio：Gemini API 免费层",
-            "summary": "Google 官方定价页提供 Gemini API 免费层，含部分模型的免费输入与输出 token 以及 AI Studio 使用权；模型范围和速率有限，不能据此推断所有模型均免费。",
-            "howTo": "打开 AI Studio，选择支持免费层的模型并创建 API key；用小规模提示词测试后，再到官方定价页核对该模型的免费额度和速率。",
-            "impact": "适合学生练习调用大模型、构建课程原型或比较提示词，不必一开始购买 API；免费层内容可能被用于改进 Google 产品，勿提交敏感资料。",
-            "free": "官方列明特定模型有免费输入与输出 token，但没有在该总览中列出具体配额、地区或账号限制；免费层内容可用于改进产品。",
-            "category": "免费 API / 模型试用",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Gemini Tasks：多地区免费试用代理任务",
-            "summary": "Google 于 2026-11-17 表示，Gemini Tasks 正向美国、日本、韩国、加拿大、澳大利亚和印度的用户免费推出，可协助处理日常网页任务、日程和应用操作；部分高级功能先在美国推出。",
-            "howTo": "打开 Gemini 应用，将首页模式从 Chat 切换到 Task，再说明要处理的任务；代理可能在购买等关键操作前暂停并请求确认。",
-            "impact": "学生可让它整理课程邮件中的日期、拟定日程或查找出行选项，把时间留给复习；提交、付款等关键步骤应亲自检查。",
-            "free": "官方称该更新在美国、日本、韩国、加拿大、澳大利亚和印度免费推出，采用逐步 rollout，未给出截止日、个人额度或所有功能的地区范围；部分高级功能从美国开始。",
-            "category": "免费 AI 助手 / 任务代理",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-17",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：每月 2,000 次代码补全",
-            "summary": "GitHub 官方计划页列出每月 2,000 次代码补全、社区支持和 Copilot Fusion Standard，价格为每月 0 美元且无需信用卡；聊天与代理用量有限。",
-            "howTo": "在 GitHub Copilot 计划页启用 Free，再于 VS Code 或其他受支持编辑器安装 Copilot；查看账户计划和用量后，用于代码补全或小型练习。",
-            "impact": "适合初学者练习 Python、调试课程作业或完成小型项目；将有限补全额度留给重复性编码，并自行运行测试。",
-            "free": "每月 0 美元、2,000 次补全且无需信用卡；聊天及代理仅限量使用，精确额度和地区限制官方未说明。",
-            "category": "免费编程助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Google Colab：免费云端 Jupyter 与计算资源",
-            "summary": "Google Colab 官方 FAQ 确认其托管 Jupyter Notebook 服务可免费使用，并提供包括 GPU、TPU 在内的计算资源，适用于机器学习、数据科学和教育。",
-            "howTo": "打开 Colab，新建 notebook 或从 GitHub/Google Drive 加载 .ipynb；在笔记本中运行 Python 作业，并按需选择运行时硬件。",
-            "impact": "可用于数据分析课程、Python 实验或小规模机器学习练习，省去本地环境配置；应保存代码并准备资源中断后的替代方案。",
-            "free": "服务免费，但资源不保证且不无限，使用限制会波动；官方未给出固定 GPU/TPU 配额、地区或账号资格说明。",
-            "category": "免费学习 / 云端计算",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Kaggle Learn：免费数据技能短课程",
-            "summary": "Kaggle Learn 官方课程目录标注为 no-cost courses，提供 Python、数据可视化、Pandas 等实用数据技能课程。",
-            "howTo": "访问 Kaggle Learn，选择 Python、Pandas 或数据可视化课程，按课程页面的交互练习逐节完成。",
-            "impact": "适合用短练习补足数据处理与编程基础，也可将所学用于课程数据项目；课程目录可先免费浏览和学习。",
-            "free": "官方页面称课程为免费课程；账号资格、地区限制、课程是否永久免费及证书费用官方未说明。",
-            "category": "免费学习 / 数据与编程",
-            "source": {
-              "name": "Kaggle 官方学习中心",
-              "published": "官方未说明",
-              "url": "https://www.kaggle.com/learn"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "European Commission accused of sugarcoating figures to release funds to Egypt",
-            "source": "The Guardian",
-            "published": "2026-11-18",
-            "url": "https://www.theguardian.com/world/2026/nov/18/european-commission-accused-sugarcoating-figures-egypt-loans",
-            "readingTime": "约 6 分钟（估算）",
-            "topic": "经济与社会 / 对外援助、福利条件与公共问责",
-            "summary": "文章从欧盟委员会被指淡化埃及福利数据切入，说明2024年承诺的74亿欧元伙伴协议中，50亿欧元软贷款附有改革与福利条件。报道依据泄露的欧盟内部文件、埃及政府一度公开后删除的数据及专家测算指出，2024至2026年福利项目受益家庭净减少85,734户，尽管欧盟称有关条件已“基本完成”或“完成”，仍放出合计25亿欧元贷款。文章随后解释Takaful现金补助与Karama福利的对象，呈现新增名单数量与净受益家庭变化之间的口径差异，并引述欧洲议员、人权团体及欧盟委员会的不同回应；结尾指出剩余15亿欧元仍取决于24项经济条件、IMF项目及民主法治承诺，凸显战略合作与问责标准之间的张力。",
-            "reason": [
-              "主题把对外贷款、社会福利和公共资金问责相连，适合练习经济发展与社会公平类论述。",
-              "文章先提出调查指控，再交代协议背景、援助数据和福利项目，随后并列批评者与欧盟回应，最后回到尚待满足的条件。",
-              "可练习识别数字证据、来源归属和转折关系，并区分受益家庭新增人数与净增人数。",
-              "landmark pact、instalment、beneficiary、conditionality 等表达适合经济与公共政策类阅读。",
-              "写作可借鉴“政策目标—执行数据—利益相关方回应—问责结论”的论证框架。"
-            ],
-            "vocabulary": [
-              {
-                "word": "sugarcoating",
-                "phonetic": "/ˈʃʊɡərˌkoʊtɪŋ/",
-                "part": "n.",
-                "translation": "粉饰；淡化问题"
-              },
-              {
-                "word": "landmark",
-                "phonetic": "/ˈlændmɑːrk/",
-                "part": "adj.",
-                "translation": "具有里程碑意义的"
-              },
-              {
-                "word": "bolster",
-                "phonetic": "/ˈboʊlstər/",
-                "part": "v.",
-                "translation": "支持；增强"
-              },
-              {
-                "word": "instalment",
-                "phonetic": "/ɪnˈstɔːlmənt/",
-                "part": "n.",
-                "translation": "分期款；一期款项"
-              },
-              {
-                "word": "beneficiary",
-                "phonetic": "/ˌbenɪˈfɪʃəri/",
-                "part": "n.",
-                "translation": "受益人"
-              },
-              {
-                "word": "recertification",
-                "phonetic": "/ˌriːsɜːrtɪfɪˈkeɪʃən/",
-                "part": "n.",
-                "translation": "重新认证"
-              },
-              {
-                "word": "conditionality",
-                "phonetic": "/kənˌdɪʃəˈnæləti/",
-                "part": "n.",
-                "translation": "附带条件；条件性"
-              },
-              {
-                "word": "scrutiny",
-                "phonetic": "/ˈskruːtəni/",
-                "part": "n.",
-                "translation": "仔细审查；监督"
-              },
-              {
-                "word": "ineligible",
-                "phonetic": "/ɪnˈelɪdʒəbəl/",
-                "part": "adj.",
-                "translation": "不符合资格的"
-              },
-              {
-                "word": "clarification",
-                "phonetic": "/ˌklærɪfɪˈkeɪʃən/",
-                "part": "n.",
-                "translation": "澄清；说明"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The spotlight is on €5bn in EU “soft” loans to Egypt.",
-                "analysis": [
-                  "主干是 The spotlight is on...，以“聚光灯”隐喻把读者注意力引向特定议题。",
-                  "€5bn in EU “soft” loans 是介词 on 的宾语，说明被关注的是欧盟对埃及的50亿欧元优惠贷款。",
-                  "to Egypt 作后置修饰，限定贷款的接受方；引号中的 soft 提醒读者这是政策语境中的术语。",
-                  "该句承接前文的调查结果，将宏观协议聚焦到文章接下来逐项审视的贷款条件。",
-                  "写作可用 “The spotlight is on...” 引出某项政策的关键争议。"
-                ],
-                "translation": "焦点集中在欧盟向埃及提供的50亿欧元“优惠”贷款上。"
-              },
-              {
-                "original": "Some beneficiaries were added to the list but a larger number were removed because they were deemed ineligible.",
-                "analysis": [
-                  "but 连接两个并列分句，形成“有人新增、更多人被移除”的对照。",
-                  "前一分句 Some beneficiaries were added 使用一般过去时被动语态，突出受益人名单的变化。",
-                  "后一分句以 a larger number 作主语并使用 were removed，比较数量而非具体执行者。",
-                  "because 引导原因状语从句；they 指被移除的受益人，were deemed ineligible 再次使用被动语态表达资格判定。",
-                  "此句展示如何用对照和原因结构解释“新增数”不等于“净增加”。"
-                ],
-                "translation": "有些受益人被加入名单，但更多人被移除，因为他们被认定不符合资格。"
-              },
-              {
-                "original": "The EU announced the release of the €1.5bn payment in July 2026.",
-                "analysis": [
-                  "句子主干为 The EU announced the release，主语和谓语直接交代发布消息的一方及其行动。",
-                  "the release of the €1.5bn payment 是 announce 的名词性宾语，of 短语说明款项金额。",
-                  "in July 2026 是时间状语，限定宣布放款的时间。",
-                  "release 在此表示资金拨付，而非一般意义上的“释放”；结合上下文可知这是第二期贷款。",
-                  "新闻写作常用 “announce the release of...” 简洁呈现资金或政策决定。"
-                ],
-                "translation": "欧盟于2026年7月宣布拨付这笔15亿欧元款项。"
-              }
-            ]
-          },
-          {
-            "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
-            "source": "BBC",
-            "published": "2026-11-19",
-            "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo",
-            "readingTime": "约 3 分钟（估算）",
-            "topic": "文化 / 艺术品交易、历史来源与返还争议",
-            "summary": "文章报道梵高1890年作品《花开栗树》在纽约以1.904亿美元成交，刷新画家此前1.172亿美元的拍卖纪录。拍卖前，作品曾被指在纳粹崛起时期因压力而出售；布莱基耶-阿列塔家族与原德国所有者费舍尔家族的继承人最终在拍卖前达成协议。报道梳理作品自1909年进入费舍尔家族、经阿姆斯特丹和巴黎易手、到1975年由现卖家家族购入的来源链，同时指出买家尚未确定。全文以成交价呈现艺术市场事件，再追溯争议和所有权记录，强调历史背景如何影响一件名画的交易。",
-            "reason": [
-              "艺术品流转与纳粹时期财产争议连接文化、历史记忆和产权问题，是适合拓展文化类话题的材料。",
-              "文章先报成交价及纪录，再回溯拍卖前和解、争议来源，最后按时间顺序说明作品流转。",
-              "可练习理解时间线、被动语态和间接疑问句，并区分已确认事实与仍未确定的买家身份。",
-              "provenance、duress、heir、dispute 等词汇可用于艺术品来源、历史产权及法律争议写作。",
-              "写作可借鉴以最新事件引入，再用历史证据解释背景，最后指出尚未解决信息的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "record",
-                "phonetic": "/ˈrekərd/",
-                "part": "n.",
-                "translation": "纪录；最高纪录"
-              },
-              {
-                "word": "row",
-                "phonetic": "/raʊ/",
-                "part": "n.",
-                "translation": "争论；纠纷"
-              },
-              {
-                "word": "duress",
-                "phonetic": "/duˈres/",
-                "part": "n.",
-                "translation": "胁迫；强迫"
-              },
-              {
-                "word": "eleventh-hour",
-                "phonetic": "/ɪˌlevənθ ˈaʊər/",
-                "part": "adj.",
-                "translation": "最后一刻的"
-              },
-              {
-                "word": "provenance",
-                "phonetic": "/ˈprɑːvənəns/",
-                "part": "n.",
-                "translation": "来源；出处（尤指艺术品）"
-              },
-              {
-                "word": "heir",
-                "phonetic": "/er/",
-                "part": "n.",
-                "translation": "继承人"
-              },
-              {
-                "word": "dispute",
-                "phonetic": "/dɪˈspjuːt/",
-                "part": "n.",
-                "translation": "争议；纠纷"
-              },
-              {
-                "word": "acquire",
-                "phonetic": "/əˈkwaɪər/",
-                "part": "v.",
-                "translation": "购得；获得"
-              },
-              {
-                "word": "resolve",
-                "phonetic": "/rɪˈzɑːlv/",
-                "part": "v.",
-                "translation": "解决；化解"
-              },
-              {
-                "word": "private hands",
-                "phonetic": "/ˈpraɪvət hændz/",
-                "part": "phr.",
-                "translation": "私人所有；私人收藏"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "It was not immediately clear who purchased the painting.",
-                "analysis": [
-                  "主句使用形式主语 It，真正的信息焦点是后面的 who purchased the painting。",
-                  "was not clear 是系表结构，not immediately 修饰 clear，表示当时尚不能确定。",
-                  "who 引导间接疑问句并在从句中作 purchased 的主语，因此从句采用陈述语序。",
-                  "the painting 是 purchased 的宾语，回指前文所述的梵高作品。",
-                  "该句体现新闻对未知信息的谨慎表达，可与已确认成交价形成对照。"
-                ],
-                "translation": "当时还不清楚是谁买下了这幅画。"
-              },
-              {
-                "original": "The BBC has contacted Sotheby’s for comment.",
-                "analysis": [
-                  "主干为 The BBC has contacted Sotheby’s，主语、现在完成时谓语和宾语完整。",
-                  "现在完成时表示媒体已采取联系行动，其结果与当前报道相关。",
-                  "for comment 是目的状语，说明联系拍卖行是为获得回应。",
-                  "专有名词 Sotheby’s 指文中拍卖机构，所有格形式属于机构名称的一部分。",
-                  "这是新闻报道交代求证过程的常见表达，有助于区分报道事实和未获回应的信息。"
-                ],
-                "translation": "英国广播公司已联系苏富比征求回应。"
-              },
-              {
-                "original": "It is considered one of the most important works of art from that period to remain in private hands, according to Sotheby’s.",
-                "analysis": [
-                  "主干是 It is considered one of the most important works of art，使用被动语态突出作品受到的评价。",
-                  "one of the most important works 是 consider 的补足语，最高级结构表示其重要性。",
-                  "from that period 后置修饰 works of art，限定作品所属的艺术时期。",
-                  "to remain in private hands 是不定式短语，说明这类重要作品中仍由私人持有的作品。",
-                  "according to Sotheby’s 标明判断来源，避免把拍卖行的说法写成无来源的客观结论。"
-                ],
-                "translation": "据苏富比称，它被认为是那个时期仍由私人持有的最重要艺术品之一。"
               }
             ]
           }
