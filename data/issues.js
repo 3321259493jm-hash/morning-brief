@@ -1,6 +1,477 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-26T12:52:47+08:00",
+  "updatedAt": "2026-11-27T12:53:20+08:00",
   "issues": [
+    {
+      "date": "2026-11-27",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦可实际尝试的官方 AI 功能与免费资源，并保留真实发布时间和明确限制。",
+        "updates": [
+          {
+            "event": "OpenAI 发布 Shirudo Linux 安全运行时",
+            "summary": "OpenAI 与 Cisco 于 2026-11-23 公布开源运行时 Shirudo，目标是在 Linux 系统运行补丁期间保护正在运行的系统，不要求关闭或重启整个环境。",
+            "howTo": "从 OpenAI 官方 Shirudo 页面进入项目与仓库，阅读安装、策略和示例后，在隔离测试机部署并验证补丁与运行时保护逻辑。",
+            "impact": "系统管理、网络安全和软件工程学生可用它研究运行时加固、补丁回滚与生产环境变更；不应把开源发布直接等同于企业级可用性。",
+            "free": "官方未说明生产部署是否免费、支持的 Linux 发行版、地区限制、支持期限或配额。",
+            "category": "安全 / 开源工具",
+            "source": {
+              "name": "OpenAI",
+              "published": "2026-11-23",
+              "url": "https://openai.com/index/introducing-shirudo"
+            }
+          },
+          {
+            "event": "OpenAI 展示 Astra 辅助寻找系外行星",
+            "summary": "OpenAI 于 2026-11-24 发布案例：两位业余天文学者使用 Codex 和 Astra 分析 NASA Kepler 与 TESS 公开数据，并报告筛选出候选系外行星的工作流程。",
+            "howTo": "阅读官方案例中的提示、数据处理和候选筛选步骤；可先在公开天文数据集上复现小规模筛选，不要把候选结果当作已确认行星。",
+            "impact": "天文、数据科学和计算机学生可练习公开数据清洗、异常筛选和人工复核，并讨论模型候选与专家确认之间的差距。",
+            "free": "官方未说明 Astra 或 Codex 是否免费、可用地区、调用配额或是否随时开放。",
+            "category": "科研 / 数据分析",
+            "source": {
+              "name": "OpenAI",
+              "published": "2026-11-24",
+              "url": "https://openai.com/index/searching-for-distant-planets-with-astra"
+            }
+          },
+          {
+            "event": "GitHub 调整 Copilot 代码审查账单归属",
+            "summary": "GitHub 于 2026-11-25 宣布：2026-12-30 起，若组织或企业尚未保存 Copilot 代码审查的账单选择，持有仓库的组织将成为默认付款方；已有 Member 或 Organization 设置不变。",
+            "howTo": "在企业或组织的 Copilot 策略设置中检查代码审查账单，若希望继续使用成员额度，12 月 30 日前选择 Member。",
+            "impact": "课程团队和学生社团应核对仓库所属组织、成员许可证与 AI Credits，避免合并请求审查产生意外组织支出。",
+            "free": "只涉及已启用 Copilot Business 或 Enterprise 的组织和企业；账户如未启用付费 AI Credits、受计费锁定或没有可计费客户仍使用 Member。个人配额、地区限制和免费额度官方未说明。",
+            "category": "代码协作 / 计费",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-25",
+              "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free",
+            "summary": "GitHub 官方提供无需信用卡的 Copilot Free，个人用户可在受支持编辑器或 GitHub 网页使用代码补全、聊天等功能。",
+            "howTo": "登录 GitHub，打开 Copilot 计划页选择 Free，再在 VS Code、GitHub 网页或受支持编辑器启用。",
+            "impact": "适合课堂编程、调试解释和小型代理任务；仍应运行测试并审查安全、依赖与许可证。",
+            "free": "官方列明 $0、无需信用卡、每月 2,000 次代码补全；聊天和 Agent 配额、地区限制官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Gemini API 免费层",
+            "summary": "Google AI Studio 官方定价页列出部分 Gemini 模型的免费层，并明确部分高级模型不支持 Free tier。",
+            "howTo": "在 AI Studio 登录并创建 API Key，先在定价页核对所选模型的 Free Tier，再以小规模脚本监控额度。",
+            "impact": "可用于课程原型、文本处理和小型应用；上线前应核对模型配额和数据政策。",
+            "free": "具体 RPM、TPM、RPD、地区资格和重置规则因模型而异，官方未给出统一配额。",
+            "category": "免费 API / 原型开发",
+            "source": {
+              "name": "Google AI Studio 官方定价页",
+              "published": "官方未说明",
+              "url": "https://aistudio.google.com/docs/pricing"
+            }
+          },
+          {
+            "event": "Notion Education Plan",
+            "summary": "Notion 面向合格高校学生和教师提供免费的 Education Plan，可用于笔记、项目看板和资料库。",
+            "howTo": "使用学校邮箱注册，在工作区的升级页面申请 education plan；成功认证后按官方流程管理工作区。",
+            "impact": "适合论文资料库、课程笔记和小组协作；认证失败或不合格用户不能默认获得权益。",
+            "free": "官方列明面向合格教育用户并需认证；具体地区、存储和版本历史限制官方未统一说明。",
+            "category": "学生教育 / 知识管理",
+            "source": {
+              "name": "Notion 官方 Education 页面",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/product/notion-for-education"
+            }
+          },
+          {
+            "event": "Google Colab 免费 Notebook",
+            "summary": "Google Colaboratory 提供免费的浏览器 Jupyter Notebook，可连接 Google Drive 与 GitHub，并按可用性提供受限 CPU、GPU 或 TPU。",
+            "howTo": "访问 Colab，新建 Notebook，在 Runtime 菜单选择运行时并保存到 Drive 或 GitHub。",
+            "impact": "适合数据分析、机器学习作业和可复现实验；应为资源波动和运行时回收预留容错。",
+            "free": "官方明确免费；硬件配额、运行时上限、地区和可用性官方未保证或统一说明。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "Google Colaboratory 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Hugging Face Serverless Inference 文档",
+            "summary": "Hugging Face 官方提供由 Inference Providers 路由的模型推理文档，可通过官方 API 在多个第三方及自有服务上调用开源模型。",
+            "howTo": "登录 Hugging Face，在官方 Inference Providers 文档选择模型和 provider，用可用令牌进行小规模测试。",
+            "impact": "适合课程原型、模型对比和低成本实验；上线前应核对 provider 切换、数据和计费规则。",
+            "free": "官方未统一说明免费额度、地区资格、配额、是否需要信用卡或长期有效期。",
+            "category": "免费推理 / 模型实验",
+            "source": {
+              "name": "Hugging Face 官方文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/inference-providers/index"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack",
+            "summary": "GitHub Education 官方面向合格学生提供 Developer Pack，可从合作方获得工具、云资源或教育权益，具体由合作伙伴逐项提供。",
+            "howTo": "用 GitHub 账号访问 Education 页面，按年龄、学校身份与在读证明完成认证，再逐项领取并核对合作方条件。",
+            "impact": "适合课程项目、个人作品集和云端开发；每项权益的有效期、配额和地区可能不同。",
+            "free": "官方未说明统一免费时长或配额；每项权益的价格、资格、地区和截止日以合作方页面为准。",
+            "category": "学生教育 / 开发工具",
+            "source": {
+              "name": "GitHub Education",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "‘I’m no longer a UAE official’: UN hopeful Lana Nusseibeh tries to shake off Sudan record",
+            "source": "The Guardian",
+            "published": "2026-11-26",
+            "url": "https://www.theguardian.com/world/2026/nov/26/lana-nusseibeh-uae-sudan-un-secretary-general",
+            "readingTime": 10,
+            "topic": "society",
+            "summary": "文章报道联合国秘书长参选人 Lana Nusseibeh 为摆脱在阿联酋任职期间被关联的苏丹问题而展开游说。作者首先说明她以独立候选人的身份会见英国官员、议员和学者，但过去否认阿联酋向苏丹民兵提供武器及参与战争罪的立场仍是最大政治负担。文章随后追溯苏丹内战中的外交争议、英国等国的反对，以及候选人试图把自身描述为经验丰富、能够修复 UN 关系的调停者。证据包括她过去的公开表态、外交记录、各国立场和仍在进行的选举过程，而非任何已确认的胜算。结论是：候选人的个人形象改变了，但她能否与前任角色和前任立场切割，取决于选举国是否接受其解释。",
+            "reason": [
+              "主题涉及外交、战争责任和国际组织领导权，符合考研英语常见的国际政治与社会议题。",
+              "文章采用人物现状、争议背景、各方反应和选举前景的层次结构，可考主旨、态度和例证关系。",
+              "重点词汇包括 candidate、denial、allegation、charm offensive 和 resistance，适合理解外交语境中的弱化与推责。",
+              "句子常以转折、让步和过去事实与现在身份并置，可训练主从结构和逻辑关系分析。",
+              "写作可借鉴先陈述人物当下行动，再用证据追溯争议，最后用未决结果避免过度定论。"
+            ],
+            "vocabulary": [
+              {
+                "word": "charm offensive",
+                "phonetic": "/tʃɑːrm əˈfensɪv/",
+                "part": "n.",
+                "translation": "亲善攻势；魅力攻势"
+              },
+              {
+                "word": "shake off",
+                "phonetic": "/ʃeɪk ɒf/",
+                "part": "phr. v.",
+                "translation": "摆脱；甩掉"
+              },
+              {
+                "word": "denied",
+                "phonetic": "/dɪˈnaɪd/",
+                "part": "v.",
+                "translation": "否认"
+              },
+              {
+                "word": "alleged",
+                "phonetic": "/əˈledʒd/",
+                "part": "adj.",
+                "translation": "据称的；被指控的"
+              },
+              {
+                "word": "high-risk",
+                "phonetic": "/haɪ rɪsk/",
+                "part": "adj.",
+                "translation": "高风险的"
+              },
+              {
+                "word": "militia",
+                "phonetic": "/məˈlɪʃə/",
+                "part": "n.",
+                "translation": "民兵组织"
+              },
+              {
+                "word": "diplomatic",
+                "phonetic": "/ˌdɪpləˈmætɪk/",
+                "part": "adj.",
+                "translation": "外交的；圆通的"
+              },
+              {
+                "word": "resistance",
+                "phonetic": "/rɪˈzɪstəns/",
+                "part": "n.",
+                "translation": "反对；抵制"
+              },
+              {
+                "word": "credential",
+                "phonetic": "/krəˈdenʃəl/",
+                "part": "n.",
+                "translation": "资历；资格"
+              },
+              {
+                "word": "contender",
+                "phonetic": "/kənˈtendər/",
+                "part": "n.",
+                "translation": "竞争者；参选者"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "I’m no longer a UAE official; I’m Lana Nusseibeh, former special envoy and candidate for secretary general.",
+                "analysis": [
+                  "句子主干是 I'm no longer a UAE official, 对身份进行明确切割。",
+                  "分号连接两个完整分句，后句说明新的身份。",
+                  "former special envoy 是补充限定，强调候选人过去的外交资历。",
+                  "candidate for secretary general 指明当前角色和目标职位。",
+                  "这一句适合分析候选人如何用身份重塑消除旧角色标签。"
+                ],
+                "translation": "我不再是阿联酋的官员；我是 Lana Nusseibeh，曾任特使，也是秘书长候选人。"
+              },
+              {
+                "original": "Nusseibeh is in Britain this week, attempting to present herself as a potential future UN secretary general.",
+                "analysis": [
+                  "主干是 Nusseibeh is in Britain, 说明人物所处位置。",
+                  "attempting to present herself as... 是现在分词短语补充当下目的。",
+                  "potential future UN secretary general 是名词短语，表达尚未实现的身份。",
+                  "时间状语 this week 与正在进行的游说行动形成直接呼应。",
+                  "该句可用于将人物行动和目标身份并置。"
+                ],
+                "translation": "Nusseibeh 本周在英国，试图把自己塑造为未来可能的联合国秘书长。"
+              },
+              {
+                "original": "It is a high-risk strategy that involves meeting ministers, MPs, academics and holding a public event.",
+                "analysis": [
+                  "主干采用 It is a high-risk strategy，以形式主语引出评价。",
+                  "that 引导定语从句，说明该策略包含哪些具体行动。",
+                  "meeting... 与 holding... 是并列动名词短语，构成行动清单。",
+                  "minister、MP 和 academic 三类对象体现面向不同政治圈层的游说。",
+                  "该句适合总结行动策略及其风险。"
+                ],
+                "translation": "这是一项高风险策略，包括会见部长、议员、学者并举办公开活动。"
+              }
+            ]
+          },
+          {
+            "title": "UK to pay ‘participation’ fee to deliver EU deals",
+            "source": "BBC News",
+            "published": "2026-11-26",
+            "url": "https://www.bbc.co.uk/news/articles/ck2057x387ego",
+            "readingTime": 9,
+            "topic": "economics",
+            "summary": "BBC 报道英国政府将为获得参与若干欧盟计划的资格支付所谓 participation fee，具体金额依据新公布的法律文件和各项协议而定。文章先说明该费用并非直接购买欧盟商品，而是用于支持相关机构运行或程序参与，随后区分科学、学生、食品或其他合作领域可能面临的成本结构。报道也说明反对者担心费用削弱脱欧承诺，而支持者认为可换取长期市场、科研或人才合作机会。整体结构通过政策目标、预算细节、政治争议和后续落实并置，强调这是一项需由具体协议与收益共同判断的务实安排。",
+            "reason": [
+              "主题涉及脱欧后英国—欧盟关系、公共财政和跨国合作，贴近考研英语经济与政治议题。",
+              "文章以费用事实为起点，再平衡支持者、反对者和实施细节，适合态度题与结构题。",
+              "vocabulary 包括 participation、contribution、sovereignty、programme access 和 implementation。",
+              "复合句常用 due to、while 和 whether 引出条件与让步，可训练逻辑关系判断。",
+              "写作可借鉴先界定一个容易误解的政策，再区分直接成本与潜在收益。"
+            ],
+            "vocabulary": [
+              {
+                "word": "participation fee",
+                "phonetic": "/pɑːˌtɪsɪˈpeɪʃn fiː/",
+                "part": "n.",
+                "translation": "参与费"
+              },
+              {
+                "word": "contribution",
+                "phonetic": "/ˌkɑntrɪˈbjuːʃn/",
+                "part": "n.",
+                "translation": "资金分摊；贡献"
+              },
+              {
+                "word": "deliver",
+                "phonetic": "/dɪˈlɪvər/",
+                "part": "v.",
+                "translation": "实现；交付"
+              },
+              {
+                "word": "sovereignty",
+                "phonetic": "/ˈsɑːvrənti/",
+                "part": "n.",
+                "translation": "主权"
+              },
+              {
+                "word": "access",
+                "phonetic": "/ˈækses/",
+                "part": "n./v.",
+                "translation": "进入权；使用权"
+              },
+              {
+                "word": "scheme",
+                "phonetic": "/skiːm/",
+                "part": "n.",
+                "translation": "计划；方案"
+              },
+              {
+                "word": "obligation",
+                "phonetic": "/ˌɑːblɪˈgeɪʃn/",
+                "part": "n.",
+                "translation": "义务；责任"
+              },
+              {
+                "word": "implement",
+                "phonetic": "/ˈɪmplɪment/",
+                "part": "v.",
+                "translation": "实施；执行"
+              },
+              {
+                "word":                 "scrutiny",
+                "phonetic": "/ˈskruːtəni/",
+                "part": "n.",
+                "translation": "审查；细察"
+              },
+              {
+                "word": "trade-off",
+                "phonetic": "/ˈtreɪd ɒf/",
+                "part": "n.",
+                "translation": "权衡；取舍"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "The details of the contribution towards EU running costs have been revealed in new legal documents.",
+                "analysis": [
+                  "主干是 The details have been revealed，采用被动语态突出信息披露。",
+                  "of the contribution towards EU running costs 是名词短语，限定细节的内容。",
+                  "towards EU running costs 说明费用用途是机构运行成本。",
+                  "in new legal documents 是地点状语，说明文件来源。",
+                  "该句适合改写政策支出的公开披露方式。"
+                ],
+                "translation": "欧盟运行成本分摊费用的细节已经在新的法律文件中披露。"
+              },
+              {
+                "original": "Payment would give the UK access to specific EU programmes rather than a general role in EU institutions.",
+                "analysis": [
+                  "主干是 Payment would give the UK access。",
+                  "give someone access to 是核心搭配，表示获得具体参与权。",
+                  "specific EU programmes 是限制范围的宾语。",
+                  "rather than 引出对比，排除更广泛的制度参与。",
+                  "该句适合分析政策权衡与范围限制。"
+                ],
+                "translation": "支付费用将让英国获得参与特定欧盟项目的资格，而不是在欧盟机构中获得普遍角色。"
+              },
+              {
+                "original": "Critics argue that the fee weakens post-Brexit autonomy, while supporters emphasize practical benefits.",
+                "analysis": [
+                  "主句由 Critics argue 引导，宾语是 that 从句。",
+                  "while 引导让步或对比从句，呈现支持者与批评者的立场。",
+                  "post-Brexit autonomy 是批评方使用的政治抽象概念。",
+                  "supporters emphasize practical benefits 则强调可量化收益。",
+                  "该句适合写作中平衡两面观点。"
+                ],
+                "translation": "批评者认为该费用削弱了脱欧后的自主权，而支持者则强调实际收益。"
+              }
+            ]
+          },
+          {
+            "title": "‘Medicare for all’ is back on the drawing board. Does it stand a better chance this time?",
+            "source": "NPR",
+            "published": "2026-11-23",
+            "url": "https://www.npr.org/2026/11/23/nx-s1-6047706/health-medicare-for-all-chances",
+            "readingTime": 10,
+            "topic": "health",
+            "summary": "NPR 讨论美国新当选参议员重新推动 Medicare for All 的政治可能性。文章首先说明这项全民保险议程在竞选中再次出现，并以候选人支持、成本辩论和既有保险利益为切入点。作者比较以往提案为何难以通过：不仅涉及预算规模，也牵动雇主保险、私人市场、州政府和医疗从业者的利益。报道引用政策框架和支持者、反对者的立场，说明选举胜利未必等同于立法多数，也未解决税收、补偿和过渡安排。结论保持审慎：提案获得更多关注，但能否成为现实取决于国会结构、州际差异和是否形成可接受的折中方案。",
+            "reason": [
+              "主题是医保制度、公共财政与政治可行性，贴近考研英语健康与社会政策议题。",
+              "文章采用回顾、人物立场、政策成本、机构阻力和前景判断的递进结构。",
+              "可考查 universal coverage、drawing board、single-payer、premium 和 implementation 等核心词。",
+              "疑问句标题和让步、因果句式可训练态度判断与段落主旨概括。",
+              "写作可借鉴先重述争议，再分析支持、阻力和必要条件，避免把价值判断等同政策可行性。"
+            ],
+            "vocabulary": [
+              {
+                "word": "drawing board",
+                "phonetic": "/ˈdrɔːɪŋ bɔːrd/",
+                "part": "n.",
+                "translation": "设计阶段；重新审议阶段"
+              },
+              {
+                "word": "universal coverage",
+                "phonetic": "/ˌjuːnɪˈvɜːsəl ˈkʌvərɪdʒ/",
+                "part": "n.",
+                "translation": "全民覆盖"
+              },
+              {
+                "word": "single-payer",
+                "phonetic": "/ˈsɪŋɡl peɪər/",
+                "part": "adj./n.",
+                "translation": "单一付款人制度"
+              },
+              {
+                "word": "premium",
+                "phonetic": "/ˈpriːmiəm/",
+                "part": "n.",
+                "translation": "保险费；溢价"
+              },
+              {
+                "word": "cost-sharing",
+                "phonetic": "/kɑːst ˈʃerɪŋ/",
+                "part": "n.",
+                "translation": "费用分担"
+              },
+              {
+                "word": "reimbursement",
+                "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
+                "part": "n.",
+                "translation": "报销；补偿"
+              },
+              {
+                "word": "implementation",
+                "phonetic": "/ˌɪmplɪmenˈteɪʃn/",
+                "part": "n.",
+                "translation": "实施；落实"
+              },
+              {
+                "word": "traction",
+                "phonetic": "/ˈtrækʃn/",
+                "part": "n.",
+                "translation": "政治支持度；影响力"
+              },
+              {
+                "word": "constituency",
+                "phonetic": "/kənˈstɪtjuənsi/",
+                "part": "n.",
+                "translation": "选区；支持群体"
+              },
+              {
+                "word": "compromise",
+                "phonetic": "/ˈkɑːmprəmaɪz/",
+                "part": "n./v.",
+                "translation": "妥协；折中方案"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Several newly elected Democratic U.S. senators campaigned on Medicare for All.",
+                "analysis": [
+                  "主干是 several senators campaigned on Medicare for All。",
+                  "newly elected 是过去分词短语修饰 senators。",
+                  "Democratic U.S. 是限定名词，说明支持群体背景。",
+                  "campaigned on 表示竞选纲领中以该议题为核心。",
+                  "该句可作为政策话题回归的起点。"
+                ],
+                "translation": "几位新当选的美国民主党参议员曾以全民医保为竞选纲领。"
+              },
+              {
+                "original": "Could this be the time it actually gets traction?",
+                "analysis": [
+                  "句子采用倒装疑问句，主语是 this。",
+                  "it 指代 Medicare for All 这一议案。",
+                  "actually 表示强调现实可能性，而不是保证已经实现。",
+                  "gets traction 是隐喻，表示获得政治支持或推进动力。",
+                  "标题式疑问句适合分析作者的审慎态度。"
+                ],
+                "translation": "这次它会不会真的获得推动力？"
+              },
+              {
+                "original": "It stands to change how patients, employers and providers share the cost of care.",
+                "analysis": [
+                  "主干是 It stands to change。",
+                  "stands to 表示可能或预计产生结果。",
+                  "patients、employers 和 providers 是三类受影响主体。",
+                  "share the cost of care 是政策核心中的成本分配短语。",
+                  "该句适合概括制度改革对各方利益的影响。"
+                ],
+                "translation": "该制度可能改变患者、雇主和医疗提供者分担医疗费用的方式。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-26",
       "status": "ready",
@@ -2144,351 +2615,6 @@ window.BRIEFING_DATA = {
                   "该句可作为提炼争论核心、引出更高层问题的范例。"
                 ],
                 "translation": "更大的问题是，这套逻辑现在是否会适用于其他领域。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-20",
-      "status": "ready",
-      "ai": {
-        "intro": "今日关注 Gemini 迁移聊天记录、Mac 后台执行任务及 Genie 4 创作世界等更新，并复核可长期或免费使用的 AI 学习资源。",
-        "updates": [
-          {
-            "event": "Gemini 可迁移其他 AI 应用的偏好与聊天记录",
-            "summary": "Google 于 2026-11-19 推出 Gemini 导入流程，可通过提示词把原 AI 工具的偏好与摘要带入 Gemini，并上传原供应商导出的聊天记录 ZIP，减少换平台后的上下文丢失。",
-            "howTo": "先在 Gemini 导入设置复制官方提示词，再粘贴到原 AI 工具生成偏好摘要；随后从原供应商导出聊天记录并在 Gemini 设置上传 ZIP。",
-            "impact": "学生更换助手时可保留考试计划、项目约定或常用写作偏好，不必反复粘贴背景；上传前应删除不必要的敏感记录并核对摘要。",
-            "free": "官方称可在 Gemini App 使用，但未说明账户级免费资格、地区、导入次数、ZIP 大小或聊天记录保留期限。",
-            "category": "AI 助手 / 数据迁移",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-19",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/"
-            }
-          },
-          {
-            "event": "Gemini App 可在 Mac 后台操作桌面与网站",
-            "summary": "Google 于 2026-11-19 为美国英语版本的 Gemini App Mac 功能推出 computer use：可在隔离窗口跨本地文件、桌面应用和网页执行表单填写、数据整理和演示文稿等多步骤任务。",
-            "howTo": "在符合要求的 Apple Silicon Mac 上下载 gemini.google/mac，然后描述跨应用流程；在实时预览中查看步骤，并为每项关键操作批准或暂停。",
-            "impact": "学生可批量整理 PDF 地址、生成课程汇报或按文件清单完成重复操作，但仍应逐项核对付款、提交、删除和共享等不可逆动作。",
-            "free": "目前在美国以英语推出，需 Apple Silicon Mac、macOS Sequoia 15.0+、18 岁以上个人 Google 账户，并订阅 Google AI Plus、Pro 或 Ultra；官方未说明使用配额或固定到期日。",
-            "category": "AI 助手 / 电脑代理",
-            "source": {
-              "name": "Google 官方博客",
-              "published": "2026-11-19",
-              "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
-            }
-          },
-          {
-            "event": "Project Genie 正式开放 Genie 4 并升级创作功能",
-            "summary": "Google 于 2026-11-18 将 Genie 4 和 Project Genie agent 推向合格的 Google AI Ultra 用户，可实时改环境、加入原生音频，并发布到社区画廊；Genie 3 同时支持更长会话、全景图片定锚和世界串联。",
-            "howTo": "访问 Project Genie；Ultra 用户可直接体验 Genie 4 与画廊，Pro 用户可加入候补。可用自然语言修改天气、角色或场景，并把多个世界串成更长体验。",
-            "impact": "学生可快速制作场景原型、可视化历史或地理概念、演示交互叙事；公共画廊作品仍需检查版权、事实和模型生成内容的准确性。",
-            "free": "官方面向合格 Google AI Ultra 用户开放，Pro 用户可加入候补；价格、地区、等待时间、生成配额和免费试用期限均未说明。",
-            "category": "生成式 AI / 世界建模",
-            "source": {
-              "name": "Google DeepMind 官方博客",
-              "published": "2026-11-18",
-              "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "Google AI Studio：Gemini API 免费层",
-            "summary": "Google 官方定价页列出可用免费层的 Gemini 模型、免费输入输出用量及相关速率限制；AI Studio 适合以小规模项目验证提示词和 API 调用。",
-            "howTo": "打开 AI Studio，核对目标模型是否标有免费层，创建 API Key 后在官方 playground 或自身代码中测试。",
-            "impact": "学生可用小型数据集练习分类、摘要或问答原型，并在付费前比较不同模型；不要把私密材料上传到免费测试环境。",
-            "free": "官方提供特定模型的免费层及速率限制；具体免费额度、地区、账户资格、重置周期和到期日官方未统一说明，须按所选模型逐项核对。",
-            "category": "免费 API / 模型试用",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "GitHub Copilot Free：长期免费编程助手",
-            "summary": "GitHub 官方计划页提供无需信用卡的 Copilot Free，包含每月代码补全及有限的聊天与代理使用。",
-            "howTo": "在 GitHub 的 Copilot plans 页面启用 Free，再于受支持编辑器安装并登录 GitHub Copilot。",
-            "impact": "可用于 Python、前端课程作业和小型项目的补全与调试；运行测试并审查生成代码，不要将补全额度视为无限。",
-            "free": "官方列明每月 2,000 次代码补全、$0 月费且无需信用卡；聊天和代理用量有限。具体聊天配额、地区限制和续费规则官方未说明。",
-            "category": "免费编程助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Python 与 Jupyter 运行时",
-            "summary": "Google 官方 FAQ 将 Colab 描述为免费托管 Jupyter Notebook 服务，可连接计算资源并运行 Python、数据科学和机器学习工作负载。",
-            "howTo": "访问 Colab，新建 notebook 或导入 .ipynb，再按课程或项目运行 Python；需要时从运行时菜单选择可用硬件。",
-            "impact": "适合做数据清洗、统计、可视化和小规模模型实验，免于本地环境配置；保存到 GitHub 或 Drive，并准备资源中断时的恢复方案。",
-            "free": "官方称可免费使用；资源不保证、限制可能变化，固定 GPU/TPU 配额、地区和账户资格官方未说明。",
-            "category": "免费学习 / 云端计算",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Kaggle Learn：免费数据技能课程",
-            "summary": "Kaggle 官方学习目录提供无需付费即可进入的短课程，涵盖 Python、Pandas、SQL、机器学习及数据可视化等主题。",
-            "howTo": "进入 Kaggle Learn，选择课程并完成交互式笔记本练习；可在 Kaggle Notebook 中直接运行示例代码。",
-            "impact": "适合在短时间补足数据分析与编程基础，并把练习迁移到课程项目或论文的数据处理流程。",
-            "free": "官方将目录标为 no-cost courses；账号资格、地区限制、证书费用及课程是否长期免费官方未说明。",
-            "category": "免费学习 / 数据与编程",
-            "source": {
-              "name": "Kaggle 官方学习中心",
-              "published": "官方未说明",
-              "url": "https://www.kaggle.com/learn"
-            }
-          },
-          {
-            "event": "NotebookLM：免费网页版文档与音频学习工作台",
-            "summary": "Google 官方 NotebookLM 可让用户上传或链接来源，生成摘要、问答和音频概览，适合整理课程材料和长篇资料。",
-            "howTo": "打开 NotebookLM，创建 Notebook，上传 PDF、文档或粘贴来源链接，再提问或生成 Audio Overview。",
-            "impact": "学生可让文档交叉对证、快速生成复习提纲或听取资料概览；回答仍需回到原文核实出处和事实。",
-            "free": "官方页面提供可直接使用的网页版入口；免费额度、地区、账号资格、源文档数量限制和到期日官方未说明。",
-            "category": "免费学习 / 文档研究",
-            "source": {
-              "name": "Google NotebookLM 官方应用页",
-              "published": "官方未说明",
-              "url": "https://notebooklm.google.com/"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "Race to replant five South African baobabs after export blocked",
-            "source": "The Guardian",
-            "published": "2026-11-19",
-            "url": "https://www.theguardian.com/environment/2026/nov/19/baobab-five-trees-south-africa-dug-up-export-blocked-georgia-aoe",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "环境 / 生物多样性、野生植物贸易与文化保护",
-            "summary": "文章报道五棵南非猴面包树在运往格鲁吉亚前被当局拦截，随后被送往自然保护区抢救。作者先交代这些树有200至300年树龄、重量达19至29吨及已被非法采运，随后说明重新种植需要快速、特殊运输和电围栏保护，并引述专家对存活概率、生态价值和文化意义的判断。报道还对比肯尼亚曾发生的类似出口争议，解释此类交易虽罕见，却可能以观赏植物名义绕过保护；结论是，单棵猴面包树既是生态系统也是文化与历史载体，因此拦截非法出口和成功再植都关系到长期生物与社会成本。",
-            "reason": [
-              "主题涉及濒危生态、跨国贸易、法律管制和文化遗产，适合环境保护和国际责任类考研英语阅读。",
-              "文章采用问题—抢救行动—专家证据—法律和生态意义的清晰结构，便于练习因果与例证关系。",
-              "可训练标题判断、数字细节定位、代词指代以及对“rare”“allegedly”等语气词的理解。",
-              "本文含 permit、re-establish、biodiversity anchor、sacred 等抽象词汇，适合环境和文化类写作。",
-              "写作可借鉴先描述具体事件，再比较跨国案例，最后提升到生态与人文价值的论证方式。"
-            ],
-            "vocabulary": [
-              {
-                "word": "replant",
-                "phonetic": "/riːˈplɑːnt/",
-                "part": "v.",
-                "translation": "重新种植；移栽"
-              },
-              {
-                "word": "permission",
-                "phonetic": "/pərˈmɪʃən/",
-                "part": "n.",
-                "translation": "许可；允许"
-              },
-              {
-                "word": "ornamental",
-                "phonetic": "/ˌɔːrnəˈmentəl/",
-                "part": "adj.",
-                "translation": "观赏用的；装饰性的"
-              },
-              {
-                "word": "re-establish",
-                "phonetic": "/ˌriːɪˈstæblɪʃ/",
-                "part": "v.",
-                "translation": "重新建立；重新存活"
-              },
-              {
-                "word": "dormant",
-                "phonetic": "/ˈdɔːrmənt/",
-                "part": "adj.",
-                "translation": "休眠的；静止的"
-              },
-              {
-                "word": "biodiversity",
-                "phonetic": "/ˌbaɪoʊdaɪˈvɜːrsəti/",
-                "part": "n.",
-                "translation": "生物多样性"
-              },
-              {
-                "word": "sacred",
-                "phonetic": "/ˈseɪkrɪd/",
-                "part": "adj.",
-                "translation": "神圣的；受尊崇的"
-              },
-              {
-                "word": "anchor",
-                "phonetic": "/ˈæŋkər/",
-                "part": "n.",
-                "translation": "支柱；核心基础"
-              },
-              {
-                "word": "intercept",
-                "phonetic": "/ˌɪntərˈsept/",
-                "part": "v.",
-                "translation": "拦截；中途阻止"
-              },
-              {
-                "word": "harvesting",
-                "phonetic": "/ˈhɑːrvəstɪŋ/",
-                "part": "n.",
-                "translation": "采收；采伐"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "The baobabs arrived at a reserve in Timbavati, in north-eastern South Africa, on Wednesday.",
-                "analysis": [
-                  "句子主干是 The baobabs arrived，arrived 表示树木已经抵达抢救地点。",
-                  "介词短语 at a reserve in Timbavati 说明抵达地点，in north-eastern South Africa进一步限定保护区位置。",
-                  "on Wednesday 作为时间状语交代抵达日期，与报道中的抢救行动形成时间线。",
-                  "逗号隔开的地理插入语补充信息，但不改变句子核心主谓关系。",
-                  "该句可作为新闻写作中“介词短语逐层限定地点”的范例。"
-                ],
-                "translation": "这些猴面包树于周三抵达南非东北部廷巴瓦蒂的一处保护区。"
-              },
-              {
-                "original": "A baobab isn’t just part of an ecosystem, it is an ecosystem in itself.",
-                "analysis": [
-                  "句子主干使用 it is an ecosystem in itself，以单个树木为核心作强调陈述。",
-                  "前半句通过否定 just part ... 引出反对和纠正；后半句用整体判断提升强度。",
-                  "逗号连接两个独立分句，形成对比式强调，逻辑上由“部分”推进到“整体”。",
-                  "in itself 表示就其自身而言，强调不可简化为环境中的普通组成部分。",
-                  "可借鉴这一结构写成“X isn’t just…; it is…”以加强论点。"
-                ],
-                "translation": "猴面包树不仅是生态系统的一部分，单棵树本身就是一个生态系统。"
-              },
-              {
-                "original": "The trees are thought to be between 200 and 300 years old.",
-                "analysis": [
-                  "主干是 The trees are thought to be old，采用系表结构与被动语态。",
-                  "are thought 交代这是专家或报道方的估计，而非绝对事实。",
-                  "不定式 to be between 200 and 300 years old 补充“被认为”的具体内容和年龄区间。",
-                  "介词短语 between... 既限制数值，又使报道显得更克制。",
-                  "这一句可用于表达科学估计和不确定信息。"
-                ],
-                "translation": "据信这些树已有200至300年历史。"
-              }
-            ]
-          },
-          {
-            "title": "World Toilet Day is a funny idea with a serious goal: A world awash in toilets",
-            "source": "NPR",
-            "published": "2026-11-19",
-            "url": "https://www.npr.org/2026/11/19/g-s1-154159/world-toilet-day-gender-equality-menstruation",
-            "readingTime": "约 8 分钟（估算）",
-            "topic": "健康与社会 / 卫生、性别平等与公共政策",
-            "summary": "文章以“厕所日兼具幽默与严肃意义”为主线，解释世界厕所日从1998年的倡议发展到2013年成为联合国正式纪念日。作者引用卫生专家指出，安全厕所不仅关乎隐私和尊严，也能阻断霍乱、脊髓灰质炎等经粪便传播疾病；文章进一步用月经卫生说明教育和职场中的性别差异，并强调缺少安全厕所会让女性和女孩面临被骚扰或暴力的风险。报道援引联合国的人权表述和自2015年以来12亿人口获得安全管理卫生设施的数据，最后主张政府支持社区自下而上提出方案，而不能只依赖高层单向设计。",
-            "reason": [
-              "主题把公共卫生、性别平等等与可持续发展目标相连，适合社会政策和健康类考研英语写作。",
-              "文章先用幽默故事引入，再用专家观点和数字证据展开，最后回到社区治理结论，结构完整。",
-              "可练习区分主旨、例证和因果关系，并识别 World Toilet Day、sanitation、gender equality 等命题词。",
-              "taboo、conveyance、harassment、human right 等词汇适合讨论公共设施和社会公平。",
-              "写作可借鉴“幽默表象—严肃现实—制度责任—社区解决方案”的递进论证。"
-            ],
-            "vocabulary": [
-              {
-                "word": "sanitary",
-                "phonetic": "/ˈsænəteri/",
-                "part": "adj.",
-                "translation": "卫生的；清洁的"
-              },
-              {
-                "word": "taboo",
-                "phonetic": "/təˈbuː/",
-                "part": "n./adj.",
-                "translation": "禁忌；避讳的"
-              },
-              {
-                "word": "conveyance",
-                "phonetic": "/kənˈveɪəns/",
-                "part": "n.",
-                "translation": "运送；输送"
-              },
-              {
-                "word": "sewage",
-                "phonetic": "/ˈsuːɪdʒ/",
-                "part": "n.",
-                "translation": "污水；下水道污物"
-              },
-              {
-                "word": "menstrual",
-                "phonetic": "/ˈmenstruəl/",
-                "part": "adj.",
-                "translation": "月经的"
-              },
-              {
-                "word": "harassment",
-                "phonetic": "/həˈræsmənt/",
-                "part": "n.",
-                "translation": "骚扰；折磨"
-              },
-              {
-                "word": "sanitation",
-                "phonetic": "/ˌsænɪˈteɪʃən/",
-                "part": "n.",
-                "translation": "卫生设施；环境卫生"
-              },
-              {
-                "word": "contaminant",
-                "phonetic": "/kənˈtæmɪnənt/",
-                "part": "n.",
-                "translation": "污染物"
-              },
-              {
-                "word": "flop",
-                "phonetic": "/flɑːp/",
-                "part": "n.",
-                "translation": "失败；失策"
-              },
-              {
-                "word": "plentiful",
-                "phonetic": "/ˈplentɪfəl/",
-                "part": "adj.",
-                "translation": "大量的；充足的"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Even though everyone suffers when they can’t find a toilet, the menstrual cycle creates additional complications.",
-                "analysis": [
-                  "句子由 Even though 引导让步状语从句，承认所有人都会因厕所不足而受影响。",
-                  "主句主干是 the menstrual cycle creates complications，转向月经周期带来的额外困难。",
-                  "everyone 和 additional complications 形成普遍性与特殊性的对照。",
-                  "they 指代所有需要厕所的人，指代关系清楚且重复以保持句子自然。",
-                  "该句可借鉴“Even though...，X creates additional...”表达一般问题之外的特殊性。"
-                ],
-                "translation": "即便找不到厕所会让所有人受苦，月经周期仍会带来额外的复杂问题。"
-              },
-              {
-                "original": "If schools or offices lack a safe and sanitary place to attend to period needs and to dispose of period products, girls and women may opt to stay home.",
-                "analysis": [
-                  "句子以 If 引导条件状语从句，前置学校和办公室缺乏安全卫生设施的条件。",
-                  "并列不定式 to attend to period needs 和 to dispose of period products 分别说明隐私需求和废弃物处理。",
-                  "主句主干是 girls and women may opt to stay home，may 表示可能性而非必然结果。",
-                  "句子用“设施不足—行为选择”建立因果关系，体现教育或就业机会被影响。",
-                  "可借鉴 If + 缺口，主语 may opt to ... 结构写政策对行为的潜在影响。"
-                ],
-                "translation": "如果学校或办公室没有安全卫生的地方供人处理经期需求和弃置卫生用品，女孩和妇女可能选择待在家中。"
-              },
-              {
-                "original": "Governments should be a force for change but that shouldn’t be top down. It should also be … bottom up.",
-                "analysis": [
-                  "前句主干是 governments should be a force for change，明确政府应推动变革。",
-                  "but 引出转折，否定 only top down 的单向治理方式，强调执行方式同样重要。",
-                  "后一句以 It should also be 对“bottom up”作补充，形成政策过程中的多主体主张。",
-                  "省略号和口语化省略表示演讲者刻意替代读者熟悉的“bottom up”，增强修辞效果。",
-                  "可借鉴 should be ..., but not top down; should be bottom up 的对比结构。"
-                ],
-                "translation": "政府应成为变革的推动力量，但这种推动不应是自上而下的，也应由下而上。"
               }
             ]
           }
