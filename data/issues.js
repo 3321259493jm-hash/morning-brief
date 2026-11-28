@@ -1,6 +1,477 @@
 window.BRIEFING_DATA = {
-  "updatedAt": "2026-11-27T12:53:20+08:00",
+  "updatedAt": "2026-11-28T12:41:35+08:00",
   "issues": [
+    {
+      "date": "2026-11-28",
+      "status": "ready",
+      "ai": {
+        "intro": "今日更新聚焦可实际尝试的官方 AI 功能与免费资源，并保留真实发布时间和明确限制。",
+        "updates": [
+          {
+            "event": "GPT-6 在蛋白质结构和序列设计中展示能力",
+            "summary": "OpenAI 于 2026-11-24 发布 GPT-6 蛋白质生物学说明，称模型可结合推理与代码进行蛋白质结构和序列设计，并在实验室测试中于五个靶点发现结合证据。",
+            "howTo": "打开 OpenAI 官方文章，阅读所附蛋白质生物学论文和方法，再在合规研究环境中复现公开方法，不要直接把模型结果当作药物结论。",
+            "impact": "生物、化学和计算机学生可用公开论文理解蛋白质设计流程、模型局限和实验验证；有助于区分模型建议与湿实验证据。",
+            "free": "官方未说明 GPT-6 蛋白质功能是否可公开试用、需要何种账户、地区、配额或费用。",
+            "category": "科研 / 蛋白质设计",
+            "source": {
+              "name": "OpenAI",
+              "published": "2026-11-24",
+              "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities"
+            }
+          },
+          {
+            "event": "Codex 与 Astra 用公开数据筛选系外行星候选",
+            "summary": "OpenAI 于 2026-11-24 报道两位业余天文学者使用 Codex 和 Astra 分析 NASA Kepler 与 TESS 公开数据，筛选并报告潜在系外行星候选。",
+            "howTo": "阅读官方案例中的公开数据来源和筛选流程，再以小规模公开数据集复现清洗、特征筛选与人工复核；候选结果仍需独立验证。",
+            "impact": "天文、数据科学和编程学生可练习数据清洗、异常检测与可复现研究；也能讨论 AI 候选与专家确认的证据差距。",
+            "free": "官方未说明 Astra 或 Codex 是否免费、需要何种账户、可用地区、配额或是否持续开放。",
+            "category": "科研 / 天文数据",
+            "source": {
+              "name": "OpenAI",
+              "published": "2026-11-24",
+              "url": "https://openai.com/index/searching-for-distant-planets-with-astra"
+            }
+          },
+          {
+            "event": "GitHub Copilot 代码审查账单默认归属将变更",
+            "summary": "GitHub 于 2026-11-25 宣布：2026-12-30 起，未保存账单选择的 Copilot 代码审查将默认由持有仓库的组织支付，已有 Member 或 Organization 选择不变。",
+            "howTo": "组织或企业管理员在 Copilot 策略设置中检查代码审查账单；如需继续使用成员额度，在企业或组织中选择 Member。企业管理设置时由企业所有者决定。",
+            "impact": "课程团队和学生社团应核对仓库归属、成员许可证与组织 AI Credits，避免合并请求审查造成意外支出。",
+            "free": "变更适用于启用 Copilot Business 或 Copilot Enterprise 且未保存选择的组织和企业；账单锁定、无付费 AI Credits 或无可计费客户时仍设为 Member。个人配额和地区限制官方未说明。",
+            "category": "代码协作 / 计费",
+            "source": {
+              "name": "GitHub Changelog",
+              "published": "2026-11-25",
+              "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization"
+            }
+          }
+        ],
+        "deals": [
+          {
+            "event": "GitHub Copilot Free",
+            "summary": "GitHub 官方提供无需信用卡的 Copilot Free 计划，可在受支持编辑器或 GitHub 网页使用代码补全、聊天等功能。",
+            "howTo": "登录 GitHub，打开 Copilot 计划页选择 Free，再在 VS Code、GitHub 网页或受支持编辑器启用。",
+            "impact": "适合课堂编程、调试解释和小型代理任务；仍需运行测试并审查安全、依赖与许可证。",
+            "free": "官方列明 $0、无需信用卡、每月 2,000 次代码补全；聊天、Agent 配额、地区和其他限制官方未说明。",
+            "category": "免费编程助手",
+            "source": {
+              "name": "GitHub Copilot 官方计划页",
+              "published": "官方未说明",
+              "url": "https://github.com/features/copilot/plans"
+            }
+          },
+          {
+            "event": "Gemini API 免费层",
+            "summary": "Google AI Studio 官方定价页列出部分 Gemini 模型的免费层，并说明部分高级模型不支持 Free tier。",
+            "howTo": "登录 AI Studio 创建 API Key，先在定价页核对所选模型的 Free tier，再用小规模脚本测试并监控额度。",
+            "impact": "可用于课程原型、文本处理和小型应用；上线前应核对模型配额、数据政策与付费升级规则。",
+            "free": "具体 RPM、TPM、RPD、地区资格和重置规则因模型而异，官方未给出统一配额。",
+            "category": "免费 API / 原型开发",
+            "source": {
+              "name": "Google AI Studio 官方定价页",
+              "published": "官方未说明",
+              "url": "https://aistudio.google.com/docs/pricing"
+            }
+          },
+          {
+            "event": "Notion Education Plan",
+            "summary": "Notion 面向合格高校学生和教师提供免费的 Education Plan，可用于笔记、项目看板和资料库。",
+            "howTo": "使用学校邮箱注册，并在工作区升级页面申请 education plan；认证成功后按官方流程管理工作区。",
+            "impact": "适合论文资料库、课程笔记和小组协作；认证失败或不合格用户不能默认获得权益。",
+            "free": "官方说明面向合格教育用户且需认证；具体地区、存储、版本历史和资格限制官方未统一说明。",
+            "category": "学生教育 / 知识管理",
+            "source": {
+              "name": "Notion 官方 Education 页面",
+              "published": "官方未说明",
+              "url": "https://www.notion.com/product/notion-for-education"
+            }
+          },
+          {
+            "event": "Google Colab 免费 Notebook",
+            "summary": "Google Colaboratory 提供免费的浏览器 Jupyter Notebook，可连接 Google Drive 与 GitHub，并按可用性提供受限 CPU、GPU 或 TPU。",
+            "howTo": "访问 Colab，新建 Notebook，在 Runtime 菜单选择运行时并保存到 Drive 或 GitHub。",
+            "impact": "适合数据分析、机器学习作业和可复现实验；应为运行时回收、硬件波动和配额变化预留容错。",
+            "free": "官方明确免费；硬件配额、运行时上限、地区和可用性官方未保证或统一说明。",
+            "category": "免费云端编程",
+            "source": {
+              "name": "Google Colaboratory 官方 FAQ",
+              "published": "官方未说明",
+              "url": "https://research.google.com/colaboratory/faq.html"
+            }
+          },
+          {
+            "event": "Hugging Face 免费模型推理入口",
+            "summary": "Hugging Face 官方提供由 Inference Providers 路由的模型推理文档，可通过官方 API 在多个服务上调用开源模型。",
+            "howTo": "登录 Hugging Face，在官方文档选择模型和 provider，用可用令牌进行小规模测试。",
+            "impact": "适合课程原型、模型对比和低成本实验；上线前应核对 provider 切换、数据和计费规则。",
+            "free": "官方未统一说明免费额度、地区资格、配额、信用卡要求或长期有效期。",
+            "category": "免费推理 / 模型实验",
+            "source": {
+              "name": "Hugging Face 官方文档",
+              "published": "官方未说明",
+              "url": "https://huggingface.co/docs/inference-providers/index"
+            }
+          },
+          {
+            "event": "GitHub Student Developer Pack",
+            "summary": "GitHub Education 官方面向合格学生提供 Developer Pack，可从合作方领取工具、云资源或教育权益。",
+            "howTo": "用 GitHub 账号访问 Education 页面，按年龄、学校身份与在读证明完成认证，再逐项领取并核对合作方条件。",
+            "impact": "适合课程项目、个人作品集和云端开发；每项权益的有效期、配额和地区可能不同。",
+            "free": "官方未说明统一免费时长或配额；价格、资格、地区和截止日以合作方页面逐项说明为准。",
+            "category": "学生教育 / 开发工具",
+            "source": {
+              "name": "GitHub Education",
+              "published": "官方未说明",
+              "url": "https://education.github.com/pack"
+            }
+          }
+        ]
+      },
+      "english": {
+        "articles": [
+          {
+            "title": "Schools in England must set aside time for pupils to read for pleasure",
+            "source": "The Guardian",
+            "published": "2026-11-27",
+            "url": "https://www.theguardian.com/education/2026/nov/27/schools-in-england-must-set-aside-time-for-pupils-to-read-for-pleasure",
+            "readingTime": "约 7 分钟（估算）",
+            "topic": "education",
+            "summary": "文章报道英国拟修订国家课程，要求小学每天、中学每周数次专门安排阅读时间，并加入年 8 阅读测试，以应对儿童阅读兴趣下降和屏幕使用增加。教育大臣把阅读界定为终身学习的入口，并承诺让阅读成为享受；反对党欢迎改革，同时要求同步减少课堂屏幕使用。文章引用阅读委员会和全国调查作为证据：儿童阅读兴趣已降至二十年来最低，尤其是 11 至 16 岁男孩。结论是课程加时不足以解决问题，政策还需配套屏幕管理、学校资源和家庭支持。",
+            "reason": [
+              "主题涉及教育公平、儿童素养和政策干预。",
+              "文章以政策措施、官员论据、反对意见、调查和统计证据递进。",
+              "重点词汇包括 allocate、statutory、literacy、lifelong learning 和 chore。",
+              "句子包含目的、原因和政策对比，可训练复杂句关系。",
+              "写作可借鉴先提出教育问题，再用统计和配套措施形成解决方案。"
+            ],
+            "vocabulary": [
+              {
+                "word": "allocate",
+                "phonetic": "/ˈæləkeɪt/",
+                "part": "v.",
+                "translation": "分配；拨出"
+              },
+              {
+                "word": "statutory",
+                "phonetic": "/ˈstætjətəri/",
+                "part": "adj.",
+                "translation": "法定的"
+              },
+              {
+                "word": "tackle",
+                "phonetic": "/ˈtækəl/",
+                "part": "v.",
+                "translation": "着手处理"
+              },
+              {
+                "word": "literacy",
+                "phonetic": "/ˈlɪtərəsi/",
+                "part": "n.",
+                "translation": "读写能力"
+              },
+              {
+                "word": "lifelong",
+                "phonetic": "/ˈlaɪflɔːŋ/",
+                "part": "adj.",
+                "translation": "终身的"
+              },
+              {
+                "word": "chore",
+                "phonetic": "/tʃɔːr/",
+                "part": "n.",
+                "translation": "乏味的日常工作"
+              },
+              {
+                "word": "declining",
+                "phonetic": "/dɪˈklaɪnɪŋ/",
+                "part": "adj.",
+                "translation": "下降的"
+              },
+              {
+                "word": "guarantee",
+                "phonetic": "/ˌɡærənˈtiː/",
+                "part": "n./v.",
+                "translation": "保证"
+              },
+              {
+                "word": "stable",
+                "phonetic": "/ˈsteɪbəl/",
+                "part": "adj.",
+                "translation": "稳定的"
+              },
+              {
+                "word": "sharply",
+                "phonetic": "/ˈʃɑːrpli/",
+                "part": "adv.",
+                "translation": "急剧地"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Schools in England will have to allocate time for children to read for pleasure as part of Labour’s proposed reforms of the national curriculum.",
+                "analysis": [
+                  "主干是 Schools will have to allocate time。",
+                  "have to 表示政策义务。",
+                  "allocate time for children to read for pleasure 说明用途。",
+                  "as part of 交代在课程改革中的位置。",
+                  "该句适合概括政策动作和范围。"
+                ],
+                "translation": "作为英国工党拟议的国家课程改革的一部分，英格兰的学校将必须为儿童阅读乐趣分配时间。"
+              },
+              {
+                "original": "Across the world, we are seeing a ticking timebomb for our future generations as reading and literacy levels are falling, with too many children seeing reading as a chore or missing out altogether.",
+                "analysis": [
+                  "Across the world 限定国际范围。",
+                  "主干是 we are seeing a ticking timebomb。",
+                  "as 引出阅读能力下降的原因。",
+                  "with 短语补充两个并列结果。",
+                  "隐喻强调问题对未来一代的紧迫性。"
+                ],
+                "translation": "在全世界，我们正看到对未来几代人的定时炸弹，因为阅读和读写水平正在下降，太多儿童把阅读视为苦差事，或干脆错过阅读。"
+              },
+              {
+                "original": "While boys’ reading enjoyment fell across most age groups – particularly among those aged 11 to 16 – for girls it remained relatively stable or slightly improved.",
+                "analysis": [
+                  "While 引导男孩与女孩的对比。",
+                  "破折号限定男孩下降最明显的年龄段。",
+                  "主句使用 remained stable 或 improved。",
+                  "relatively 与 slightly 体现变化程度克制。",
+                  "该句适合分析性别与年龄交叉的统计对比。"
+                ],
+                "translation": "虽然男孩的阅读兴趣在多数年龄组中都有下降——尤其是在 11 至 16 岁这一人群中——女孩的阅读兴趣则保持相对稳定或略有改善。"
+              }
+            ]
+          },
+          {
+            "title": "Can luxury save Macy's?",
+            "source": "NPR",
+            "published": "2026-11-27",
+            "url": "https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury",
+            "readingTime": "约 8 分钟（估算）",
+            "topic": "business",
+            "summary": "文章围绕百货商 Macy’s 在长期经营压力和中产萎缩中尝试上移至奢侈零售的战略展开。作者说明 Macy’s 夹在折扣店与高端百货之间，缺乏折扣优势，也未建立稳定高端形象；疫情后业绩和股价下滑。接着文章用顾客反馈、咨询专家和通胀下的 K 型经济解释选择：低收入顾客转向沃尔玛或 Target，高收入顾客则去更高端店铺，Macy’s 中间客户受到挤压。结论是向上转型可能是规模化零售商少数可行选择，但并未保证品牌、店面、商品和客群能匹配。",
+            "reason": [
+              "主题涉及零售、消费分化和企业转型。",
+              "文章采用现状、困境、顾客行为、专家判断和前景的论证结构。",
+              "重点词汇包括 reinvention、gambit、upscale、middle tier 和 inflation。",
+              "句子包含因果、比喻和专家引语，可训练证据关系。",
+              "写作可借鉴先界定企业困境，再用结构性证据解释不确定战略。"
+            ],
+            "vocabulary": [
+              {
+                "word": "reinvent",
+                "phonetic": "/ˌriːɪnˈvent/",
+                "part": "v.",
+                "translation": "重塑"
+              },
+              {
+                "word": "gambit",
+                "phonetic": "/ˈɡæmbɪt/",
+                "part": "n.",
+                "translation": "策略"
+              },
+              {
+                "word": "upscale",
+                "phonetic": "/ˈʌpskeɪl/",
+                "part": "adj.",
+                "translation": "高档的"
+              },
+              {
+                "word": "languish",
+                "phonetic": "/ˈlæŋgwɪʃ/",
+                "part": "v.",
+                "translation": "停滞衰退"
+              },
+              {
+                "word": "inflation",
+                "phonetic": "/ɪnˈfleɪʃən/",
+                "part": "n.",
+                "translation": "通货膨胀"
+              },
+              {
+                "word": "middle tier",
+                "phonetic": "/ˈmɪdəl tɪr/",
+                "part": "phr.",
+                "translation": "中端市场"
+              },
+              {
+                "word": "forecast",
+                "phonetic": "/ˈfɔːrkæst/",
+                "part": "v./n.",
+                "translation": "预测"
+              },
+              {
+                "word": "discounter",
+                "phonetic": "/dɪsˈkaʊntər/",
+                "part": "n.",
+                "translation": "折扣零售商"
+              },
+              {
+                "word": "prospects",
+                "phonetic": "/ˈprɑːspekts/",
+                "part": "n.",
+                "translation": "前景"
+              },
+              {
+                "word": "shrinking",
+                "phonetic": "/ˈʃrɪŋkɪŋ/",
+                "part": "adj.",
+                "translation": "萎缩的"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "As Macy's this week celebrates the 100th edition of its Thanksgiving Day Parade, the department store finds itself at a turning point.",
+                "analysis": [
+                  "主句是 the department store finds itself at a turning point。",
+                  "As 引导百年游行庆典的时间背景。",
+                  "celebrates 与 finds itself形成当下情境。",
+                  "turning point 暗示关键战略选择。",
+                  "句子用传统活动与商业困境形成对照。"
+                ],
+                "translation": "当 Macy’s 本周庆祝感恩节游行第 100 次举办时，这家百货商正处于一个转折点。"
+              },
+              {
+                "original": "The retailer's gambit is to keep its old shoppers while also attracting new customers, who will perhaps pay more for real leather and upscale brands.",
+                "analysis": [
+                  "主干是 the retailer’s gambit is to keep ... while attracting ...。",
+                  "两个不定式并列保留旧客与吸引新客。",
+                  "who 引导定语从句说明支付意愿。",
+                  "real leather 和 upscale brands是高端市场策略。",
+                  "perhaps 表示判断仍不确定。"
+                ],
+                "translation": "这家零售商的策略是保留老顾客，同时吸引可能愿意为真皮和高档品牌支付更多的新顾客。"
+              },
+              {
+                "original": "If you're Macy's you say, \"We're still getting squeezed in the middle, our customer base in the U.S. is getting squeezed. Where can we go?\" And really the only answer is to go up.",
+                "analysis": [
+                  "If 引导企业决策的虚拟情境。",
+                  "引号内是内部提问和市场压力。",
+                  "getting squeezed 重复强化夹击状态。",
+                  "Where can we go 与 the only answer形成提问回答结构。",
+                  "go up 表达向上转型的判断。"
+                ],
+                "translation": "如果你是 Macy’s，你会问：“我们仍在中端市场遭受挤压，美国客户群也正在遭受挤压。我们还能去哪里？”真正的唯一答案就是向上走。"
+              }
+            ]
+          },
+          {
+            "title": "Millions of wives in South Asia unprotected from marital rape - study",
+            "source": "BBC News",
+            "published": "2026-11-27",
+            "url": "https://www.bbc.co.uk/news/articles/cw074p95ye5do",
+            "readingTime": "约 9 分钟（估算）",
+            "topic": "society",
+            "summary": "BBC 报道南亚婚内强奸法律保护不足，并引用女性权益联盟研究称八个南亚国家亲密伴侣暴力比全球平均水平高 35%。文章指出印度、阿富汗、斯里兰卡和孟加拉国仍不完全将婚内强奸入罪；尼泊尔和不丹虽已入罪，但处罚仍轻于一般强奸。作者追溯殖民时期法律例外，并援引专家说明婚姻中的性行为并不意味着永久同意。结论是法律修订和司法执行不足，受害者仍可能因豁免、较轻处罚或执法不力失去保护。",
+            "reason": [
+              "主题涉及性别平等、法律保护和社会制度。",
+              "文章以统计、国家差异、历史来源和受访者论证展开。",
+              "重点词汇包括 marital、criminalise、exemption、consent 和 intimate partner violence。",
+              "句子含数字、否定、让步和从句，可训练法律类长句切分。",
+              "写作可借鉴用立法差异和历史来源支持社会问题论证。"
+            ],
+            "vocabulary": [
+              {
+                "word": "marital",
+                "phonetic": "/ˈmærətəl/",
+                "part": "adj.",
+                "translation": "婚姻的"
+              },
+              {
+                "word": "criminalise",
+                "phonetic": "/ˈkrɪmə nəlaɪz/",
+                "part": "v.",
+                "translation": "使成为犯罪"
+              },
+              {
+                "word": "outlaw",
+                "phonetic": "/ˈaʊtlɔː/",
+                "part": "v.",
+                "translation": "宣布非法"
+              },
+              {
+                "word": "exemption",
+                "phonetic": "/ɪɡˈzempʃən/",
+                "part": "n.",
+                "translation": "豁免"
+              },
+              {
+                "word": "consent",
+                "phonetic": "/kənˈsent/",
+                "part": "n./v.",
+                "translation": "同意"
+              },
+              {
+                "word": "perpetrator",
+                "phonetic": "/ˈpɜːrpətreɪtər/",
+                "part": "n.",
+                "translation": "作案者"
+              },
+              {
+                "word": "penal",
+                "phonetic": "/ˈpiːnəl/",
+                "part": "adj.",
+                "translation": "刑事的"
+              },
+              {
+                "word": "threshold",
+                "phonetic": "/ˈθreʃhoʊld/",
+                "part": "n.",
+                "translation": "界限"
+              },
+              {
+                "word": "intimate partner",
+                "phonetic": "/ˈɪntəmət ˈpɑːrtner/",
+                "part": "phr.",
+                "translation": "亲密伴侣"
+              },
+              {
+                "word": "protection",
+                "phonetic": "/prəˈtekʃən/",
+                "part": "n.",
+                "translation": "保护"
+              }
+            ],
+            "sentences": [
+              {
+                "original": "Failure to fully criminalise marital rape leaves millions of women and girls unprotected in eight South Asian countries, where intimate partner violence is 35% higher than the global average, says a new study.",
+                "analysis": [
+                  "Failure to fully criminalise marital rape 是主语。",
+                  "leaves ... unprotected是主干。",
+                  "定语从句说明暴力率差异。",
+                  "倒装引述把来源置于句尾。",
+                  "数字和因果增强说服力。"
+                ],
+                "translation": "完全将婚内强奸定罪的失败使南亚八国数百万女性得不到保护，那里的亲密伴侣暴力比全球平均水平高 35%。"
+              },
+              {
+                "original": "Campaigners say the law is outdated and forced sex is rape, regardless of the perpetrator.",
+                "analysis": [
+                  "主句是 Campaigners say。",
+                  "and连接两个宾语判断。",
+                  "regardless of排除施害者身份例外。",
+                  "outdated指法律依据过时。",
+                  "句子适合分析绝对价值判断。"
+                ],
+                "translation": "活动人士说法律已经过时，强迫发生性关系就是强奸，无论施害者是谁。"
+              },
+              {
+                "original": "The idea comes from the belief that consent for sex is implied in marriage, that marriage is a threshold where consent ends.",
+                "analysis": [
+                  "主干是 The idea comes from the belief。",
+                  "第一个 that 是 belief的同位语从句。",
+                  "第二个 that进一步解释同意界限。",
+                  "where consent ends 是关系从句。",
+                  "句子揭示法律例外背后的社会信念。"
+                ],
+                "translation": "这种观念源于婚姻意味着性同意、婚姻是同意终止界限的信念。"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "date": "2026-11-27",
       "status": "ready",
@@ -308,7 +779,7 @@ window.BRIEFING_DATA = {
                 "translation": "实施；执行"
               },
               {
-                "word":                 "scrutiny",
+                "word": "scrutiny",
                 "phonetic": "/ˈskruːtəni/",
                 "part": "n.",
                 "translation": "审查；细察"
@@ -2257,364 +2728,6 @@ window.BRIEFING_DATA = {
                   "该句用无动词主句式收束段落，适合概括研究仍存在的局限和未知。"
                 ],
                 "translation": "这是一种科学家们才刚刚开始了解的结构。"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "date": "2026-11-21",
-      "status": "ready",
-      "ai": {
-        "intro": "今日更新聚焦 GitHub Copilot 的 MCP 连接、Gemini 4 Neon 与 GPT-6.2 编程模型，并复核适合学生长期使用的免费 AI 与学习资源。",
-        "updates": [
-          {
-            "event": "GitHub Copilot 增加八个 MCP 连接器",
-            "summary": "GitHub 于 2026-11-18 宣布，Copilot 公测版可连接 Supabase、Box、Calendly、Webflow、Wix、Buildkite、ClickUp 和 Mixpanel；用户可在同一会话中查询项目、检查数据库或处理工作流。",
-            "howTo": "在 Copilot app 的 Customize、CLI 的 /mcp、VS Code 的 Agents/Customizations 或 github.com 的 Copilot customization 页面中选择 Connect；接入后可直接向 Copilot 描述跨服务任务。",
-            "impact": "学生可让助手核对 Supabase schema、整理项目资料或查看构建失败原因；涉及修改、发布或共享数据时仍应逐项确认并检查组织权限。",
-            "free": "官方称连接器面向所有 Copilot 计划开放公测；Business 或 Enterprise 管理员需启用相关策略，部分服务还需站内管理员开通。地区、配额、单个连接器的额外收费和公测期限官方未说明。",
-            "category": "编程助手 / MCP 连接",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-11-18",
-              "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot"
-            }
-          },
-          {
-            "event": "Gemini 4 Neon 正式进入 GitHub Copilot",
-            "summary": "GitHub 于 2026-11-18 正式在 Copilot 中上线 Gemini 4 Neon；该模型面向代理编码、多步骤工具调用和知识工作，官方称响应更快、代码意外修改更少。",
-            "howTo": "在支持 Copilot 的编辑器、CLI、编码代理、GitHub 网页或移动端打开模型选择器，选用 Gemini 4 Neon；若尚未出现，官方提示可能处于渐进式发布。",
-            "impact": "学生可用它规划多步骤编程任务、审查代码和调用工具；应通过测试、差异检查和原始资料核验避免接受无法复现的结论。",
-            "free": "可用于 Copilot Pro+、Max、Business 和 Enterprise；按供应商列表定价计费，配额、地区限制、企业策略和具体价格官方未统一说明。",
-            "category": "AI 编程 / 模型更新",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-11-18",
-              "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot"
-            }
-          },
-          {
-            "event": "OpenAI GPT-6.2 Astra 与 Sol 进入 GitHub Copilot",
-            "summary": "GitHub 于 2026-11-17 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 在 Copilot 中普遍可用；Astra 面向代理编码与终端工作，Sol 面向复杂代理任务和深入代码审查。",
-            "howTo": "在 Copilot 支持的编辑器、CLI、编码代理、GitHub 网页或移动端打开模型选择器并选择 GPT-6.2 Astra 或 Sol；若未显示，需等待渐进式发布或确认企业策略。",
-            "impact": "适合把课程项目拆成可执行步骤、补充终端脚本或进行代码审查；自动修复前应运行测试、检查依赖变化并审阅最终差异。",
-            "free": "Copilot Pro+、Max、Business 和 Enterprise 可选这两个模型并按供应商列表定价计费；具体地区、配额、月度抵扣和到期日官方未说明。",
-            "category": "AI 编程 / 模型更新",
-            "source": {
-              "name": "GitHub Changelog",
-              "published": "2026-11-17",
-              "url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
-            }
-          }
-        ],
-        "deals": [
-          {
-            "event": "GitHub Copilot Free：每月免费补全",
-            "summary": "GitHub 官方计划页提供无需信用卡的 Copilot Free，包含每月代码补全及有限的聊天与代理使用。",
-            "howTo": "访问 GitHub Copilot plans，启用 Free；再在受支持编辑器、GitHub 网页或 CLI 中登录并使用 Copilot。",
-            "impact": "可用于课程项目中的代码补全、调试和多文件修改练习；始终运行测试并审查生成差异。",
-            "free": "官方列明每月 2,000 次代码补全、$0 月费且无需信用卡；聊天与代理用量有限，地区、具体重置规则和配额官方未说明。",
-            "category": "免费编程助手",
-            "source": {
-              "name": "GitHub Copilot 官方计划页",
-              "published": "官方未说明",
-              "url": "https://github.com/features/copilot/plans"
-            }
-          },
-          {
-            "event": "GitHub Student Developer Pack：学生开发权益包",
-            "summary": "GitHub Education 面向已验证学生提供工具与合作伙伴权益，包括学习资源、开发工具和云端服务；具体权益会随合作伙伴和地区变化。",
-            "howTo": "登录 GitHub，前往 education.github.com/pack，按页面要求提交在校证明并等待验证；通过后在 Student Developer Pack 中逐项领取权益。",
-            "impact": "可用于搭建课程网站、完成开源项目或获取编程认证训练；领取前应核对每项合作伙伴的本人资格和到期条件。",
-            "free": "官方面向学生提供 Developer Pack，但没有统一列出所有权益的价格、地区、配额或截止日；具体项目须以领取页和合作伙伴条款为准。",
-            "category": "学生教育 / 开发工具",
-            "source": {
-              "name": "GitHub Education 官方页面",
-              "published": "官方未说明",
-              "url": "https://education.github.com/pack"
-            }
-          },
-          {
-            "event": "Gemini API 免费层",
-            "summary": "Google AI Studio 定价页提供有限模型的免费输入输出 token、免费额度和 AI Studio 访问；适合搭建小型原型并比较模型。",
-            "howTo": "打开 AI Studio，核对目标模型是否支持 Free，再创建 API Key；在 Playground 或自己的代码中进行小规模测试。",
-            "impact": "学生可练习摘要、分类、问答和文档处理原型；不要上传敏感或受限资料，并按官方模型页核对免费层。",
-            "free": "官方提供“免费”与“付费”两档；个别模型的免费额度、速率限制、地区、账户资格和重置周期官方未统一说明，须逐项核对。",
-            "category": "免费 API / 模型试用",
-            "source": {
-              "name": "Google Gemini API 官方定价页",
-              "published": "官方未说明",
-              "url": "https://ai.google.dev/gemini-api/docs/pricing"
-            }
-          },
-          {
-            "event": "Kaggle Learn：无成本数据课程",
-            "summary": "Kaggle 官方学习目录提供 Python、Pandas、SQL、机器学习和数据可视化等无成本课程，可直接在 Notebook 中练习。",
-            "howTo": "登录 Kaggle 后打开 Kaggle Learn，选择课程并完成交互式 Notebook；可把练习保存到个人工作区。",
-            "impact": "适合补足论文数据清洗、统计和可视化技能，并把课程代码迁移到科研或课程项目。",
-            "free": "官方页面明确标为 no-cost courses；账号资格、地区、证书费用和长期有效性官方未说明。",
-            "category": "免费学习 / 数据与编程",
-            "source": {
-              "name": "Kaggle 官方学习中心",
-              "published": "官方未说明",
-              "url": "https://www.kaggle.com/learn"
-            }
-          },
-          {
-            "event": "Google Colab：免费托管 Jupyter 运行时",
-            "summary": "Google Colab 官方提供免费托管 Jupyter Notebook，可运行 Python、数据分析和小规模机器学习工作负载。",
-            "howTo": "访问 Colab，新建或导入 .ipynb，运行 Python；必要时在运行时菜单选择可用硬件并保存到 Drive 或 GitHub。",
-            "impact": "适合快速配置课程实验、绘图和小规模模型训练；保存中间结果，注意运行时资源和任务可能中断。",
-            "free": "官方称可免费使用；资源不保证，固定 GPU/TPU 配额、地区、账户资格、配额和到期日官方未说明。",
-            "category": "免费学习 / 云端计算",
-            "source": {
-              "name": "Google Colab 官方 FAQ",
-              "published": "官方未说明",
-              "url": "https://research.google.com/colaboratory/faq.html"
-            }
-          },
-          {
-            "event": "Qwen3-8B：可下载并本地运行的开源权重",
-            "summary": "Qwen 官方在 Hugging Face 发布 Qwen3-8B 模型权重，支持思考与非思考模式、工具调用、多语言和本地部署；模型卡标注 Apache 2.0。",
-            "howTo": "在 Hugging Face 打开 Qwen/Qwen3-8B，按官方 Transformers、SGLang 或 vLLM 示例下载权重并在本机运行；硬件不足时可用兼容的托管运行方式。",
-            "impact": "学生可离线或本地搭建多语言问答、翻译、编程和代理练习环境；部署前应核对硬件、依赖、许可证与数据隐私要求。",
-            "free": "模型权重可下载；Apache 2.0 已在官方模型卡和模型元数据中标注。硬件成本、地区限制、配额、服务期限和商业用途附加条件官方未统一说明。",
-            "category": "开源权重 / 本地模型",
-            "source": {
-              "name": "Qwen 官方 Hugging Face 模型卡",
-              "published": "官方未说明",
-              "url": "https://huggingface.co/Qwen/Qwen3-8B"
-            }
-          }
-        ]
-      },
-      "english": {
-        "articles": [
-          {
-            "title": "California’s coastal communities on alert as biggest waves in years hit state",
-            "source": "The Guardian",
-            "published": "2026-11-20",
-            "url": "https://www.theguardian.com/us-news/2026/nov/20/california-coastal-communities-alert-big-waves-hit-state",
-            "readingTime": "约 4 分钟（估算）",
-            "topic": "环境 / 极端天气、海岸风险与公共预警",
-            "summary": "文章报道加州沿海社区因低压系统形成的持续强浪而进入防灾状态。作者先列出监测浮标记录的超9米浪高和海滩、码头关闭措施，再说明警报可能影响圣路易斯奥比斯波县、圣巴巴拉县等地，并展示暴雨、山地降雪和大风形成的复合型天气风险。文章随后将视野扩展到印度东方海岸的气旋、南非暴雨和洪灾，形成跨区域的极端天气比较；结论暗示，沿海管理需要把精确预警、基础设施韧性和跨地区气象监测结合起来，而不能只关注单次天气事件。",
-            "reason": [
-              "主题围绕气候、极端天气与公共安全，适合环境治理和灾害防范类考研英语阅读。",
-              "文章以美国加州具体事件为主线，再用印度和南非案例补充，便于练习主旨概括与跨段例证。",
-              "可重点训练数字、地名、被动语态和“could”“expected”等风险预测措辞。",
-              "vocabulary 涉及 swell、buoy、evacuate、torrential 等环境类高频词，适合写作积累。",
-              "写作可借鉴先描述影响，再列出数据，最后提升到跨区域协调的结构。"
-            ],
-            "vocabulary": [
-              {
-                "word": "swells",
-                "phonetic": "/swelz/",
-                "part": "n.",
-                "translation": "涌浪；海浪"
-              },
-              {
-                "word": "buoy",
-                "phonetic": "/bɔːi/",
-                "part": "n.",
-                "translation": "浮标"
-              },
-              {
-                "word": "coastal",
-                "phonetic": "/ˈkoʊstəl/",
-                "part": "adj.",
-                "translation": "沿海的"
-              },
-              {
-                "word": "evacuate",
-                "phonetic": "/ɪˈvækjueɪt/",
-                "part": "v.",
-                "translation": "疏散；撤离"
-              },
-              {
-                "word": "torrential",
-                "phonetic": "/təˈrenʃəl/",
-                "part": "adj.",
-                "translation": "暴雨的；猛烈的"
-              },
-              {
-                "word": "infrastructure",
-                "phonetic": "/ˈɪnfrəstrʌktʃər/",
-                "part": "n.",
-                "translation": "基础设施"
-              },
-              {
-                "word": "forecast",
-                "phonetic": "/ˈfɔːrkæst/",
-                "part": "n./v.",
-                "translation": "预测；预报"
-              },
-              {
-                "word": "successive",
-                "phonetic": "/səkˈsesɪv/",
-                "part": "adj.",
-                "translation": "连续的；接连的"
-              },
-              {
-                "word": "landfall",
-                "phonetic": "/ˈlændfɔːl/",
-                "part": "n.",
-                "translation": "(飓风等)登陆"
-              },
-              {
-                "word": "hazard",
-                "phonetic": "/ˈhæzərd/",
-                "part": "n.",
-                "translation": "危险；危害"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "Multiple coastal hazard warnings were issued this week as successive areas of low pressure generated powerful swells and large breaking waves.",
-                "analysis": [
-                  "句子主干是 Multiple coastal hazard warnings were issued，warnngs 是被动语态中的主语。",
-                  "were issued 表示多项沿海警报由官方发布，强调被动发生的动作。",
-                  "介词短语 this week 交代时间范围，限定警报发布期。",
-                  "as 引导原因或伴随状语从句，说明连续低压系统生成强浪的因果关系。",
-                  "该句可用于新闻报道中“被动语态交代措施 + as 从句说明原因”的结构。"
-                ],
-                "translation": "本周发布了多项沿海危险警报，因为连续的低压区域产生了强劲涌浪和巨大的破碎浪。"
-              },
-              {
-                "original": "The Monterey, California, buoy recorded a wave height of 34.1ft, which would make it the highest reading in 30 years.",
-                "analysis": [
-                  "句子主干是 the buoy recorded a wave height，buoy 作主语。",
-                  "逗号中的 California 为 Monterey 增加地点限定。",
-                  "which 引导非限制性定语从句，指代前面的34.1英尺记录。",
-                  "would make it 表示推测性结论，不是绝对断言。",
-                  "该句适合在技术性新闻中组合精确数字、地点和历史比较。"
-                ],
-                "translation": "加州蒙特雷的浮标记录到34.1英尺的浪高，这可能使该数据成为30年来最高记录。"
-              },
-              {
-                "original": "Nearly 72,000 people have been evacuated from areas of Odisha in eastern India as Tropical Cyclone Akvan approaches land.",
-                "analysis": [
-                  "句子主干是 72,000 people have been evacuated，使用现在完成时被动式强调疏散状态。",
-                  "介词短语 from areas of Odisha 和 in eastern India逐层限定疏散地点。",
-                  "as 引导时间状语从句，表达疏散与气旋逼近同时发生。",
-                  "Nearly 修饰具体数字，使报道保留估计口吻。",
-                  "该句可用于描述应急措施和自然灾害逼近之间的同步关系。"
-                ],
-                "translation": "随着热带气旋阿克万逼近登陆，印度东部奥迪沙地区已有近7.2万人撤离。"
-              }
-            ]
-          },
-          {
-            "title": "Faisal Islam: This cost-cutting UK-EU deal doesn’t mean lower prices will follow",
-            "source": "BBC News",
-            "published": "2026-11-20",
-            "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo",
-            "readingTime": "约 7 分钟（估算）",
-            "topic": "经济 / 国际贸易、监管与消费者物价",
-            "summary": "文章先指出英国政府宣称新UK-EU协议能降低企业和消费者成本，但零售商并未承诺由此直接降价。作者解释协议通过减少食品出口文件、边检和人为延误来减少企业成本，却强调成本节省是否传导到超市货架仍取决于能源冲击、国际市场和价格谈判等多重因素。文章接着比较预计的贸易、经济和就业收益，也指出必须遵守欧盟法规、为欧盟市场让出部分监管自由并承担潜合约成本；结论不是否认协议的潜在增长，而是提醒读者区分宏观收益、企业成本和消费者实际价格。",
-            "reason": [
-              "主题涉及国际贸易、监管成本和生活物价，适合商业与经济类考研英语阅读。",
-              "文章采用“政府宣传—企业反应—机制分析—条件限制—总体判断”的完整论证结构。",
-              "可训练因果链、转折词、数字细节和“benefit”“cost”“gain”之间的区分。",
-              "vocabulary 包括 red tape、quid pro quo、perishable、regulatory freedom 等抽象商经词汇。",
-              "写作可借鉴先质疑一项政策承诺，再拆解成本传导与长期收益的论证方法。"
-            ],
-            "vocabulary": [
-              {
-                "word": "bureaucracy",
-                "phonetic": "/bjʊəˈrɑːkrəsi/",
-                "part": "n.",
-                "translation": "官僚制度；行政程序"
-              },
-              {
-                "word": "perishable",
-                "phonetic": "/ˈperɪʃəbəl/",
-                "part": "adj.",
-                "translation": "易腐坏的"
-              },
-              {
-                "word": "red tape",
-                "phonetic": "/red teɪp/",
-                "part": "phr.",
-                "translation": "繁文缛节；行政手续"
-              },
-              {
-                "word": "quid pro quo",
-                "phonetic": "/kwɪd proʊ kwoʊ/",
-                "part": "phr.",
-                "translation": "交换条件；互惠交换"
-              },
-              {
-                "word": "regulatory",
-                "phonetic": "/ˈreɡjələtəri/",
-                "part": "adj.",
-                "translation": "监管的；规范的"
-              },
-              {
-                "word": "autonomy",
-                "phonetic": "/ɔːˈtɑːnəmi/",
-                "part": "n.",
-                "translation": "自主权；自治"
-              },
-              {
-                "word": "forecast",
-                "phonetic": "/ˈfɔːrkæst/",
-                "part": "n./v.",
-                "translation": "预测；预报"
-              },
-              {
-                "word": "trade-off",
-                "phonetic": "/ˈtreɪd ɔːf/",
-                "part": "n.",
-                "translation": "权衡；取舍"
-              },
-              {
-                "word": "agrifood",
-                "phonetic": "/ˈæɡri fuːd/",
-                "part": "n./adj.",
-                "translation": "农业食品；农产品食品"
-              },
-              {
-                "word": "compliance",
-                "phonetic": "/kəmˈplaɪəns/",
-                "part": "n.",
-                "translation": "遵守；合规"
-              }
-            ],
-            "sentences": [
-              {
-                "original": "This deal will matter for food exporters - it may not have a clear visible impact at the checkout.",
-                "analysis": [
-                  "句子分为破折号前后的两个独立判断，形成让步式对照。",
-                  "主语 This deal 和 it 分别指协议及其潜在影响，指代关系清楚。",
-                  "matter for food exporters 表示出口企业会受到实质影响。",
-                  "may not否定的是消费者在收银处看到的直接效果，而非全部收益。",
-                  "破折号强调宏观供给成本与微观物价之间的分离，可借鉴于政策分析。"
-                ],
-                "translation": "这项协议对食品出口商很重要——但它未必会在收银台上产生明显影响。"
-              },
-              {
-                "original": "It is more a hope than will at this stage.",
-                "analysis": [
-                  "句子主干使用 It is，比较对象由 hope 与 will 构成。",
-                  "more A than B 的结构强调当前更多是希望而不是确定的意愿或行动。",
-                  "at this stage 限定作者对现阶段结果的判断。",
-                  "省略了重复信息，使句子简洁且带有批评语气。",
-                  "该句适合表达政策承诺尚未成为可验证现实的克制判断。"
-                ],
-                "translation": "现阶段，这与其说是现实意愿，不如说只是一个希望。"
-              },
-              {
-                "original": "The bigger point is whether this logic will now apply elsewhere.",
-                "analysis": [
-                  "主句是 The bigger point is whether，引出以 whether 开头的名词性从句。",
-                  "从句保留疑问含义但按陈述语序排列，适合学术议论文。",
-                  "this logic 指前文以食品开放换取监管对接的模式。",
-                  "now 表示将这一模式推广到其他领域的时间敏感性。",
-                  "该句可作为提炼争论核心、引出更高层问题的范例。"
-                ],
-                "translation": "更大的问题是，这套逻辑现在是否会适用于其他领域。"
               }
             ]
           }
